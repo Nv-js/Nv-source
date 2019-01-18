@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引导操作</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11"/>
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <!--}-->
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl: "/js/plugin_modules/",
+            requestTime: true
+        })
+        Zr.ready(function () {
+            Zr.use("./js/quickMenu", "./js/code")
+        })
+    </script>
+</head>
+
+<body>
+<article class="c-content">
+
+    <section class="c-title">
+        <p>引导操作</p>
+        <span>一个好的产品，不适合把所有功能都展示出来，对于一些高级功能，能很好的引导用户进行相关的操作，使用 “主动地发现” 来引导用户进入，会是一个不错的方式。用户不应该感到在迷宫中出不去，他们应该有一个清楚的路径出去，比如引导页面提供一个 “skip” 的按钮操作。</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>静态指引 <a href="#">#</a></p>
+        <span>有些复杂的内容，要求引导用户一步一步地完成整个流程处理。或想隐藏之前或之后的上下文，同时把用户注意力集中在多步中的一个任务上，也可以使用分页流程。分步成多页分组，可以向用户明确传达“这一步已经完成，接下来转到下一步“的意思。</span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title c-sub-title-2">
+        <p>步骤条 <a href="#">#</a></p>
+        <span>
+            <div class="c-img c-img-3">
+                <div>
+                    <img src="http://storage.jd.com/zrstatic/design/design-16-01.png" alt="">
+                </div>
+                <div class="c-title-4">步骤条示例</div>
+                <div class="c-title-6">针对简单的步骤条使用引导操作流程。</div>
+            </div>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>手势指引 <a href="#">#</a></p>
+        <span>
+            <div class="c-img c-img-3">
+                <div>
+                    <img src="http://storage.jd.com/zrstatic/design/design-16-02.png" alt="">
+                </div>
+                <div class="c-title-4">手势指引示例</div>
+                <div class="c-title-6">步骤1.当鼠标位于可推动（内容项）上方时，鼠标变成小手状，并该（内容项）会突出显示，表示可以“脱离”页面<br>步骤2.拖拽时，鼠标变为十字符号</div>
+            </div>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>交互指引 <a href="#">#</a></p>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title-2">
+        <p>查看更多内容 <a href="#">#</a></p>
+        <span>
+            <div>有两种形式：1.鼠标悬停显示内容；2.给出表示还有更多内容的提示信息，提示用户在可见区域后还有更多内容。<br>这两种形式都是引导用户顺利进入下一个交互层次的有效方式。</div>
+            <div class="zr-col-12">
+                <div class="c-img">
+                    <div>
+                        <img src="http://storage.jd.com/zrstatic/design/design-16-03.png" alt="">
+                    </div>
+                    <div class="c-title-4">鼠标悬停显示内容</div>
+                    <div class="c-title-5">通常用来显示完整信息、注释信息、辅助提示。</div>
+                </div>
+            </div>
+            <div class="zr-col-12">
+                <div class="c-img">
+                    <div>
+                        <img src="//storage.jd.com/zrstatic/design/design-16-04.png" alt="">
+                    </div>
+                    <div class="c-title-4">点击“更多”，查看全部内容</div>
+                </div>
+            </div>
+        </span>
+    </section>
+</article>
+</body>
+</html>

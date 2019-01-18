@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/js/plugin_modules/zr/css/zr.min.css"/>
+    <script type="text/javascript" src="/js/zr.js?1"></script>
+
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Tabs 标签页</p>
+        <span>
+            选项卡切换组件，用于同级别数据的分类及切换
+            
+        </span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>使用方法</p>
+        <span>
+            <ul>
+                <li><span>分隔同级别但不同属性的内容，支持用户快速切换对比</span></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>使用基础样式一定要保证结构与class按照代码展示要求布局，否则会失效,基础样式的tab是选项卡是根据位置来进行查找，<i class="c-block-inline">zr-tab</i>为最基础简单的标签页，<i class="c-block-inline">zr-tab-action</i>为默认选项，<i class="c-block-inline">zr-tab-show</i>表示内容框展示</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-tab demo-tabs">
+                <ul class="zr-tab-header">
+                    <li class="zr-tab-item ">Tab1</li>
+                    <li class="zr-tab-item">Tab2</li>
+                    <li class="zr-tab-item">Tab3</li>
+                </ul>
+                <div class="zr-tab-content">
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 1
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 2
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 3
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <div class="zr-tab demo-tabs">
+        <ul class="zr-tab-header">
+            <li class="zr-tab-item ">Tab1</li>
+            <li class="zr-tab-item">Tab2</li>
+            <li class="zr-tab-item">Tab3</li>
+        </ul>
+        <div class="zr-tab-content">
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 1
+            </div>
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 2
+            </div>
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 3
+            </div>
+        </div>
+    </div>
+    <!--Javascript-->
+    Zr.use("tab",function(zr,tab){
+        tab.init({
+              target:".demo-tabs"
+        });
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式嵌套 <a href="#">#</a></p>
+        <span>就是在某一个tab选项卡里支持层层嵌套</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-tab demo-tabs">
+                <ul class="zr-tab-header">
+                    <li class="zr-tab-item zr-tab-action">Tab1</li>
+                    <li class="zr-tab-item">Tab2</li>
+                    <li class="zr-tab-item">Tab3</li>
+                </ul>
+                <div class="zr-tab-content">
+                    <div class="zr-tab-tabpane zr-tab-show">
+                        <div class="zr-tab demo-tabs">
+                            <ul class="zr-tab-header">
+                                <li class="zr-tab-item zr-tab-action"> inner Tab1</li>
+                                <li class="zr-tab-item">inner Tab2</li>
+                                <li class="zr-tab-item">inner Tab3</li>
+                            </ul>
+                            <div class="zr-tab-content">
+                                <div class="zr-tab-tabpane">
+                                    Content of inner Tab Pane 1
+                                </div>
+                                <div class="zr-tab-tabpane">
+                                    Content of inner Tab Pane 2
+                                </div>
+                                <div class="zr-tab-tabpane">
+                                    Content of inner Tab Pane 3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 2
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        <div class="zr-tab demo-tabs">
+                            <ul class="zr-tab-header">
+                                <li class="zr-tab-item zr-tab-action"> inner Tab other 1</li>
+                                <li class="zr-tab-item">inner Tab other 2</li>
+                                <li class="zr-tab-item">inner Tab other 3</li>
+                            </ul>
+                            <div class="zr-tab-content">
+                                <div class="zr-tab-tabpane">
+                                    Content of inner other Tab Pane 1
+                                </div>
+                                <div class="zr-tab-tabpane">
+                                    Content of inner other Tab Pane 2
+                                </div>
+                                <div class="zr-tab-tabpane">
+                                    Content of inner other Tab Pane 3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <div class="zr-tab demo-tabs">
+        <ul class="zr-tab-header">
+            <li class="zr-tab-item zr-tab-action">Tab1</li>
+            <li class="zr-tab-item">Tab2</li>
+            <li class="zr-tab-item">Tab3</li>
+        </ul>
+        <div class="zr-tab-content">
+            <div class="zr-tab-tabpane zr-tab-show">
+                <div class="zr-tab demo-tabs">
+                    <ul class="zr-tab-header">
+                        <li class="zr-tab-item zr-tab-action"> inner Tab1</li>
+                        <li class="zr-tab-item">inner Tab2</li>
+                        <li class="zr-tab-item">inner Tab3</li>
+                    </ul>
+                    <div class="zr-tab-content">
+                        <div class="zr-tab-tabpane">
+                            Content of inner Tab Pane 1
+                        </div>
+                        <div class="zr-tab-tabpane">
+                            Content of inner Tab Pane 2
+                        </div>
+                        <div class="zr-tab-tabpane">
+                            Content of inner Tab Pane 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 2
+            </div>
+            <div class="zr-tab-tabpane">
+                <div class="zr-tab demo-tabs">
+                    <ul class="zr-tab-header">
+                        <li class="zr-tab-item zr-tab-action"> inner Tab other 1</li>
+                        <li class="zr-tab-item">inner Tab other 2</li>
+                        <li class="zr-tab-item">inner Tab other 3</li>
+                    </ul>
+                    <div class="zr-tab-content">
+                        <div class="zr-tab-tabpane">
+                            Content of inner other Tab Pane 1
+                        </div>
+                        <div class="zr-tab-tabpane">
+                            Content of inner other Tab Pane 2
+                        </div>
+                        <div class="zr-tab-tabpane">
+                            Content of inner other Tab Pane 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Javascript-->
+    Zr.use("tab",function(zr,tab){
+        tab.init({
+            target:".demo-tabs"
+        });
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>禁用样式 <a href="#">#</a></p>
+        <span>基于基础样式之上，在<i class="c-block-inline">zr-tab-item</i>后面添加<i class="c-block-inline">zr-tab-disable</i>属性即可,当点击到禁用选项卡时则默认选择其前一个</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-tab demo-tabs">
+                <ul class="zr-tab-header">
+                    <li class="zr-tab-item zr-tab-action">Tab1</li>
+                    <li class="zr-tab-item zr-tab-disable">Tab2</li>
+                    <li class="zr-tab-item">Tab3</li>
+                </ul>
+                <div class="zr-tab-content">
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 1
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 2
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 3
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <div class="zr-tab demo-tabs">
+        <ul class="zr-tab-header">
+            <li class="zr-tab-item zr-tab-action">Tab1</li>
+            <li class="zr-tab-item zr-tab-disable">Tab2</li>
+            <li class="zr-tab-item">Tab3</li>
+        </ul>
+        <div class="zr-tab-content">
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 1
+            </div>
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 2
+            </div>
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 3
+            </div>
+        </div>
+    </div>
+    <!--Javascript-->
+    Zr.use("tab",function(zr,tab){
+        tab.init({
+            target:".demo-tabs"
+        });
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>带图标 <a href="#">#</a></p>
+        <span>基于基础样式之上，在<i class="c-block-inline">zr-tab</i>后面加<i class="c-block-inline">zr-tab-icon</i>属性即可展示图标版本的步骤条，<i class="c-block-inline">icon</i>使用方法详情见<a href="/docs?languageCode=CN&columnUid=40ad19be535e477596a033f9fea2bf7d&directoryUid=9d30d954caf544f4a60a496a2b854771">Icon 图标</a> </span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-tab zr-tab-icon">
+                <ul class="zr-tab-header">
+                    <li class="zr-tab-item "><i class="zricon-seting-empty"></i>Tab1</li>
+                    <li class="zr-tab-item"><i class="zricon-comment-empty"></i>Tab2</li>
+                    <li class="zr-tab-item"><i class="zricon-user-empty"></i>Tab3</li>
+                </ul>
+                <div class="zr-tab-content">
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 1
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 2
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 3
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <div class="zr-tab zr-tab-icon">
+        <ul class="zr-tab-header">
+            <li class="zr-tab-item "><i class="zricon-seting-empty"></i>Tab1</li>
+            <li class="zr-tab-item"><i class="zricon-comment-empty"></i>Tab2</li>
+            <li class="zr-tab-item"><i class="zricon-user-empty"></i>Tab3</li>
+        </ul>
+        <div class="zr-tab-content">
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 1
+            </div>
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 2
+            </div>
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 3
+            </div>
+        </div>
+    </div>
+    <!--Javascript-->
+    Zr.use("tab",function(zr,tab){
+        tab.init({
+            target:".zr-tab-icon"
+        });
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>卡片式标签 <a href="#">#</a></p>
+        <span>基于基础样式之上，在<i class="c-block-inline">zr-tab</i>之后添加<i class="c-block-inline">zr-tab-card</i>属性则样式变为卡片的形式展示</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-tab zr-tab-card">
+                <ul class="zr-tab-header">
+                    <li class="zr-tab-item ">Tab1</li>
+                    <li class="zr-tab-item">Tab2</li>
+                    <li class="zr-tab-item">Tab3</li>
+                </ul>
+                <div class="zr-tab-content">
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 1
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 2
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        Content of Tab Pane 3
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <div class="zr-tab zr-tab-card">
+        <ul class="zr-tab-header">
+            <li class="zr-tab-item ">Tab1</li>
+            <li class="zr-tab-item">Tab2</li>
+            <li class="zr-tab-item">Tab3</li>
+        </ul>
+        <div class="zr-tab-content">
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 1
+            </div>
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 2
+            </div>
+            <div class="zr-tab-tabpane">
+                Content of Tab Pane 3
+            </div>
+        </div>
+    </div>
+    <!--Javascript-->
+    Zr.use("tab",function(zr,tab){
+      tab.init({
+         target:".zr-tab-card"
+      });
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>Iframe的选项卡 <a href="#">#</a></p>
+        <span>这个其实很简单，首先设置初始化type为<i class="c-block-inline">iframe</i>，然后再内容区域<i class="c-block-inline">zr-tab-tabpane</i>里面嵌套对应的iframe信息即可，不过为了提高加载性能，请使用data-src来赋值，组件检测到后会自动转化成src。如果已转化则不做任何操作。</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-tab" id="iframe">
+                <ul class="zr-tab-header">
+                    <li class="zr-tab-item ">Tab1</li>
+                    <li class="zr-tab-item">Tab2</li>
+                    <li class="zr-tab-item">Tab3</li>
+                </ul>
+                <div class="zr-tab-content">
+                    <div class="zr-tab-tabpane" style="width:100%;height:300px;">
+                       <iframe data-src="http://www.jd.com"></iframe>
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        <iframe data-src="http://www.jdwl.com"></iframe>
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        <iframe data-src="http://gongyi.jd.com"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <div class="zr-tab" id="demo-iframe">
+                <ul class="zr-tab-header">
+                    <li class="zr-tab-item ">Tab1</li>
+                    <li class="zr-tab-item">Tab2</li>
+                    <li class="zr-tab-item">Tab3</li>
+                </ul>
+                <div class="zr-tab-content">
+                    <div class="zr-tab-tabpane" style="width:100%;height:300px;">
+                        <iframe data-src="http://www.jd.com"></iframe>
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        <iframe data-src="http://www.jdwl.com"></iframe>
+                    </div>
+                    <div class="zr-tab-tabpane">
+                        <iframe data-src="http://gongyi.jd.com"></iframe>
+                    </div>
+                </div>
+            </div>
+    <!--Javascript-->
+    tab.init({
+      target: "#demo-iframe",
+      type:"iframe"
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>可编辑标签 <a href="#">#</a></p>
+        <span>编辑类的tab选项卡结构要保持,同时target必须是ID，其他选择器将会默认选取第一条；同时编辑属于高级特性，需要在初始化配置type为<i class="c-block-inline">edit</i>类型，全面支持普通模式与iframe模式，同时提供跨域解决方案，所有选项卡都有唯一ID,重复调用同一个ID只会选中相同的选项卡，使用情况请参考以下demo代码展示与Config配置</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-tab zr-tab-compile" id="edit">
+                <div class="zr-tab-overflow">
+                    <div class="zr-tab-left"><i class="zricon-arrow-left"></i></div>
+                    <div class="zr-tab-right"><i class="zricon-arrow-right"></i></div>
+                    <div class="zr-tab-add" id="tab-add"><i class="zricon-add-square-empty"></i></div>
+                    <ul class="zr-tab-header">
+                        <li class="zr-tab-item ">Tab1</li>
+                        <li class="zr-tab-item">Tab2</li>
+                    </ul>
+                </div>
+                <div class="zr-tab-content">
+                    <div class="zr-tab-tabpane" >
+                        one
+                    </div>
+                    <div class="zr-tab-tabpane" >
+                        two
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <!--HTML-->
+            <div class="zr-tab zr-tab-compile" id="demo-edit">
+                <div class="zr-tab-overflow">
+                    <div class="zr-tab-left"><i class="zricon-arrow-left"></i></div>
+                    <div class="zr-tab-right"><i class="zricon-arrow-right"></i></div>
+                    <div class="zr-tab-add" id="tab-add"><i class="zricon-add-square-empty"></i></div>
+                    <ul class="zr-tab-header">
+                        <li class="zr-tab-item ">Tab1</li>
+                        <li class="zr-tab-item">Tab2</li>
+                    </ul>
+                </div>
+                <div class="zr-tab-content">
+                    <div class="zr-tab-tabpane" >
+                        one
+                    </div>
+                    <div class="zr-tab-tabpane" >
+                        two
+                    </div>
+                </div>
+            </div>
+            <!--Javascript-->
+            //初始化
+            var items = tab.init({
+                target:"#demo-edit",
+                type:"edit",
+                isClose:true
+            })
+            //添加tab选项卡
+            items.add([{
+                id:"1009",
+                title:"新增选项卡一",
+                url:"http://www.jd.com",
+                content:"",
+                //是否默认选中
+                isSelect:true
+                },{
+                id:"1010",
+                title:"新增选项卡二",
+                content:"这里是内容"
+            }])
+            //选中选项卡
+            items.selected({
+                id:1010
+            })
+            //删除tab选项卡
+            items.delete(1010)
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title">
+        <p>options配置 <a href="#">#</a></p>
+        <span>tab.init(options)的配置选项，以下部分是type类型base和iframe的使用场景配置</span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">language</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">string (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">目前支持zh-CN(默认)和EN两种选择，可以拓展，不设置读取默认组件库配置</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">target</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">string (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">选择器，支持class、id、element,@注意：type模式为edit时候只能是id</div>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <div class="c-cell c-table-w-125">type</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">string (选填)</div>
+                    </td>
+                    <td >
+                        <div class="c-cell c-table-w-500" style="height:85px;line-height: 20px;">
+                            可选参数:<br />
+                            'base'(默认)基础类型，需要Dom结构已存在，否则无法初始化<br />
+                            'iframe' 需要初始化在iframe节点上添加data-src完成初始化配置，优化加载效率<br />
+                            'edit' 支持初始化节点和动态添加节点，同时支持iframe加载，要保证结构统一
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">eventName</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">事件名称，默认是click</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">isClose</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">boolean (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">是否开启关闭选项卡模式，此模式只有在type为edit状态才会生效，默认是false</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">isMenu</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">string (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">
+                            是否开启菜单选项卡模式，此模式只有在type为edit状态才会生效，默认是false
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">onChange</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Function (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500" style="height:85px;line-height: 20px;">
+                            1.3.3+，此为1.3.3新增功能，请及时升级<br />
+                            当发生tab选项卡切换的时候触发<br />
+                            回调参数Function(options)<br />
+                            默认里面指针指向选中tab选项卡，options为初始化配置
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</article>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl: "/js/plugin_modules/",
+        requestTime: true
+    })
+    Zr.ready(function () {
+        Zr.use("./tabs/","jquery",function(zr,tab,$){
+            tab.init({
+                target:".demo-tabs"
+            });
+            tab.init({
+                target: "#iframe",
+                type:"iframe"
+            });
+            tab.init({
+                target:".zr-tab-icon"
+            });
+            tab.init({
+                target:".zr-tab-card"
+            });
+            var items = tab.init({
+                            target:"#edit",
+                            type:"edit",
+                            isClose:true,
+                            isMenu:true
+                        })
+            //
+            setTimeout(function(){
+                items.add([{
+                    id:"1009",
+                    title:"新增选项卡一",
+                    url:"http://www.jd.com",
+                    content:"",
+                    //是否默认选中
+                    isSelect:true
+                },{
+                    id:"1010",
+                    title:"新增选项卡二",
+                    content:"这里是内容"
+                }])
+            },300)
+            //
+            var id = 10010;
+            $("#tab-add").off("click").on("click",function(){
+                id ++;
+                items.add({
+                    id:id,
+                    title:"新增内容="+id,
+                    url:"http://www.jdwl.com",
+                    isSelect:true
+                })
+            })
+            setTimeout(function(){
+                items.selected({
+                    id:"1010"
+                })
+            },3000)
+
+            setTimeout(function(){
+                items.delete(1010)
+            },7000)
+
+
+        })
+        Zr.use("./js/quickMenu", "./js/code", function (zr,a,b) {
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?4"/>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+
+    <style>
+        .c-demo>div{
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Card 卡片</p>
+        <span>
+            卡片容器，用来显示文字、列表、图文等元素。
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/card.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/20"><b>组件问题反馈和讨论</b></a>
+        </span>
+    </section>
+    <div class="c-line"></div>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>最基本面板样式，可以同时展开多个面板。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 320px">
+                <div class="zr-card">
+                    <div class="zr-card-title">
+                        <b>Title</b>
+                    </div>
+                    <div class="zr-card-content">
+                        <ul>
+                            <li>This is content…This is content…</li>
+                            <li>This is content…This is content…</li>
+                            <li>This is content…This is content…</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+<div class="zr-card">
+    <div class="zr-card-title">
+        <b>Title</b>
+    </div>
+    <div class="zr-card-content">
+        <ul>
+            <li>This is content…This is content…</li>
+            <li>This is content…This is content…</li>
+            <li>This is content…This is content…</li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>含操作的卡片 <a href="#">#</a></p>
+        <span>如果操作超过4个可以收藏在汉堡菜单中。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 320px;display: inline-block;margin-right: 16px">
+                <div class="zr-card">
+                    <div class="zr-card-title">
+                        <b>Title</b>
+                        <i class="zricon-seting-empty zr-card-operate"></i>
+                    </div>
+                    <div class="zr-card-content">
+                        <ul>
+                            <li>This is content…This is content…</li>
+                            <li>This is content…This is content…</li>
+                            <li>This is content…This is content…</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 320px;display: inline-block">
+                <div class="zr-card">
+                    <div class="zr-card-title">
+                        <b>Title</b>
+                        <div class="zr-dropdown">
+                            <i class="zricon-menu-empty zr-card-operate"></i>
+                            <ul class="zr-dropdown-menu">
+                                <li class="zr-dropdown-item">
+                                    <a target="_blank" href="#">Option 1</a>
+                                </li>
+                                <li class="zr-dropdown-item">
+                                    <a target="_blank" href="#">Option 2</a>
+                                </li>
+                                <li class="zr-dropdown-item">
+                                    Option 3
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="zr-card-content">
+                        <ul>
+                            <li>This is content…This is content…</li>
+                            <li>This is content…This is content…</li>
+                            <li>This is content…This is content…</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+<div class="zr-card">
+    <div class="zr-card-title">
+        <b>Title</b>
+        <i class="zricon-seting-empty zr-card-operate"></i>
+    </div>
+    <div class="zr-card-content">
+        <ul>
+            <li>This is content…This is content…</li>
+            <li>This is content…This is content…</li>
+            <li>This is content…This is content…</li>
+        </ul>
+    </div>
+</div>
+<div class="zr-card">
+    <div class="zr-card-title">
+        <b>Title</b>
+        <div class="zr-dropdown">
+            <i class="zricon-menu-empty zr-card-operate"></i>
+            <ul class="zr-dropdown-menu">
+                <li class="zr-dropdown-item">
+                    <a target="_blank" href="#">Option 1</a>
+                </li>
+                <li class="zr-dropdown-item">
+                    <a target="_blank" href="#">Option 2</a>
+                </li>
+                <li class="zr-dropdown-item">
+                    Option 3
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="zr-card-content">
+        <ul>
+            <li>This is content…This is content…</li>
+            <li>This is content…This is content…</li>
+            <li>This is content…This is content…</li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>无边框卡片 <a href="#">#</a></p>
+        <span>用在灰色背景色上。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 368px;background-color: #F5F5F5;padding: 24px 24px">
+                <div style="width: 320px">
+                    <div class="zr-card zr-card-noborder">
+                        <div class="zr-card-title">
+                            <b>Title</b>
+                        </div>
+                        <div class="zr-card-content">
+                            <ul>
+                                <li>This is content…This is content…</li>
+                                <li>This is content…This is content…</li>
+                                <li>This is content…This is content…</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+<div class="zr-card zr-card-noborder">
+    <div class="zr-card-title">
+        <b>Title</b>
+    </div>
+    <div class="zr-card-content">
+        <ul>
+            <li>This is content…This is content…</li>
+            <li>This is content…This is content…</li>
+            <li>This is content…This is content…</li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>简单卡片 <a href="#">#</a></p>
+        <span>只包含内容区域。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 320px">
+                <div class="zr-card">
+                    <div class="zr-card-content">
+                        <ul>
+                            <li>This is content…This is content…</li>
+                            <li>This is content…This is content…</li>
+                            <li>This is content…This is content…</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+<div class="zr-card">
+    <div class="zr-card-content">
+        <ul>
+            <li>This is content…This is content…</li>
+            <li>This is content…This is content…</li>
+            <li>This is content…This is content…</li>
+        </ul>
+    </div>
+</div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+    <!--<div class="c-block-50"></div>-->
+    <!--<section class="c-sub-title">-->
+        <!--<p>多卡片布局 <a href="#">#</a></p>-->
+        <!--<span>每个卡片都是单击的有效区域，卡片间可以拖拽移动位置。</span>-->
+    <!--</section>-->
+    <!--<section class="c-code ">-->
+        <!--&lt;!&ndash;switch code show or hide&ndash;&gt;-->
+        <!--<div class="c-code-switch">&lt;code&gt;</div>-->
+        <!--<div class="c-demo">-->
+            <!--<div style="background-color: #F5F5F5;width: 889px">-->
+                <!--<div class="zr-card-group">-->
+                    <!--<div class="zr-card">-->
+                        <!--<div class="zr-card-content">-->
+                            <!--Content-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="zr-card">-->
+                        <!--<div class="zr-card-content">-->
+                            <!--Content-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="zr-card">-->
+                        <!--<div class="zr-card-content">-->
+                            <!--Content-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="zr-card">-->
+                        <!--<div class="zr-card-content">-->
+                            <!--Content-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="zr-card">-->
+                        <!--<div class="zr-card-content">-->
+                            <!--Content-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="zr-card">-->
+                        <!--<div class="zr-card-content">-->
+                            <!--Content-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="zr-card">-->
+                        <!--<div class="zr-card-content">-->
+                            <!--Content-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="zr-card">-->
+                        <!--<div class="zr-card-content">-->
+                            <!--Content-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="c-code-inner c-code-hide">-->
+<!--<div class="zr-card-group">-->
+    <!--<div class="zr-card">-->
+        <!--<div class="zr-card-content">-->
+            <!--Content-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="zr-card">-->
+        <!--<div class="zr-card-content">-->
+            <!--Content-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="zr-card">-->
+        <!--<div class="zr-card-content">-->
+            <!--Content-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="zr-card">-->
+        <!--<div class="zr-card-content">-->
+            <!--Content-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="zr-card">-->
+        <!--<div class="zr-card-content">-->
+            <!--Content-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="zr-card">-->
+        <!--<div class="zr-card-content">-->
+            <!--Content-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="zr-card">-->
+        <!--<div class="zr-card-content">-->
+            <!--Content-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="zr-card">-->
+        <!--<div class="zr-card-content">-->
+            <!--Content-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+        <!--</div>-->
+        <!--<a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>-->
+    <!--</section>-->
+
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>带图片的卡片 <a href="#">#</a></p>
+        <span>支持图片、头像、标题和描述信息的卡片。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 200px">
+                <div class="zr-card zr-card-pic">
+                    <div class="zr-card-img">
+                        <img src="http://storage.jd.com/zrstatic/design/pic.jpg" alt="">
+                    </div>
+                    <div class="zr-card-title">
+                        <span>Title</span>
+                    </div>
+                    <div class="zr-card-content">
+                        <div class="zr-card-left">
+                            <ul>
+                                <li>This is content</li>
+                            </ul>
+                        </div>
+                        <div class="zr-card-right">
+                            <a href="#">More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+<div class="zr-card zr-card-pic">
+    <div class="zr-card-img">
+        <img src="http://storage.jd.com/zrstatic/design/pic.jpg" alt="">
+    </div>
+    <div class="zr-card-title">
+        <span>Title</span>
+    </div>
+    <div class="zr-card-content">
+        <div class="zr-card-left">
+            <ul>
+                <li>This is content</li>
+            </ul>
+        </div>
+        <div class="zr-card-right">
+            <a href="#">More</a>
+        </div>
+    </div>
+</div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+</article>
+<!--注意此段js必须第一引入在开发模式下{-->
+<script type="text/javascript" src="js/input.js"></script>
+<script type="text/javascript" src="js/select.js"></script>
+<script type="text/javascript" src="/js/zr.min.js?3"></script>
+<script type="text/javascript">
+	Zr.config({
+		baseUrl: "/js/plugin_modules/"
+	})
+	Zr.ready(function () {
+		Zr.use("./js/quickMenu", "./js/code",function (zr) {
+			zr.dom.dispatch();
+		})
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+@import "../core/index";
+@import "../modules/template";
+.circle-styles(10);
+.circle-styles(@n,@i:1) when (@i =< @n){
+  .red-bgc-@{i}{
+    background-color: color(~`colorPalette("@{red-6}", @{i})`);
+  }
+  .red-fc-@{i}{
+    color: color(~`colorPalette("@{red-6}", @{i})`);
+  }
+  .orange-bgc-@{i}{
+    background-color: color(~`colorPalette("@{orange-6}", @{i})`);
+  }
+  .orange-fc-@{i}{
+    color: color(~`colorPalette("@{orange-6}", @{i})`);
+  }
+  .yellow-bgc-@{i}{
+    background-color: color(~`colorPalette("@{yellow-6}", @{i})`);
+  }
+  .yellow-fc-@{i}{
+    color: color(~`colorPalette("@{yellow-6}", @{i})`);
+  }
+  .cyan-bgc-@{i}{
+    background-color: color(~`colorPalette("@{cyan-6}", @{i})`);
+  }
+  .cyan-fc-@{i}{
+    color: color(~`colorPalette("@{cyan-6}", @{i})`);
+  }
+  .green-bgc-@{i}{
+    background-color: color(~`colorPalette("@{green-6}", @{i})`);
+  }
+  .green-fc-@{i}{
+    color: color(~`colorPalette("@{green-6}", @{i})`);
+  }
+  .geekblue-bgc-@{i}{
+    background-color: color(~`colorPalette("@{geekblue-6}", @{i})`);
+  }
+  .geekblue-fc-@{i}{
+    color: color(~`colorPalette("@{geekblue-6}", @{i})`);
+  }
+  .blue-bgc-@{i}{
+    background-color: color(~`colorPalette("@{blue-6}", @{i})`);
+  }
+  .blue-fc-@{i}{
+    color: color(~`colorPalette("@{blue-6}", @{i})`);
+  }
+  .purple-bgc-@{i}{
+    background-color: color(~`colorPalette("@{purple-6}", @{i})`);
+  }
+  .purple-fc-@{i}{
+    color: color(~`colorPalette("@{purple-6}", @{i})`);
+  }
+  .magenta-bgc-@{i}{
+    background-color: color(~`colorPalette("@{magenta-6}", @{i})`);
+  }
+  .pink-bgc-@{i}{
+    background-color: color(~`colorPalette("@{pink-6}", @{i})`);
+  }
+  .volcano-bgc-@{i}{
+    background-color: color(~`colorPalette("@{volcano-6}", @{i})`);
+  }
+  .lime-bgc-@{i}{
+    background-color: color(~`colorPalette("@{lime-6}", @{i})`);
+  }
+  .gold-bgc-@{i}{
+    background-color: color(~`colorPalette("@{gold-6}", @{i})`);
+  }
+  .grey-bgc-@{i} when(@i = 1){
+    background-color:@grey-1;
+  }
+  .grey-bgc-@{i} when(@i = 2){
+    background-color:@grey-2;
+  }
+  .grey-bgc-@{i} when(@i = 3){
+    background-color:@grey-3;
+  }
+  .grey-bgc-@{i} when(@i = 4){
+    background-color:@grey-4;
+  }
+  .grey-bgc-@{i} when(@i = 5){
+    background-color:@grey-5;
+  }
+  .grey-bgc-@{i} when(@i = 6){
+    background-color:@grey-6;
+  }
+  .grey-bgc-@{i} when(@i = 7){
+    background-color:@grey-7;
+  }
+  .grey-bgc-@{i} when(@i = 8){
+    background-color:@grey-8;
+  }
+  .grey-bgc-@{i} when(@i = 9){
+    background-color:@grey-9;
+  }
+  .grey-bgc-@{i} when(@i = 10){
+    background-color:@grey-10;
+  }
+  .grey-fc-@{i} when(@i = 9){
+    color:@grey-9;
+  }
+  .circle-styles(@n,(@i+1));
+}

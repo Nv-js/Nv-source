@@ -1,0 +1,232 @@
+/*
+ * message 全局提示
+ */
+.zr-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+.fade.in {
+  opacity: 1;
+}
+.zr-modal-dialog {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.zr-modal-content {
+  width: 396px;
+  background: #ffffff;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.zr-modal-content > div {
+  padding: 0 24px;
+  font-family: PingFangSC-Regular;
+}
+.zr-modal-header {
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  color: rgba(0,0,0,65);
+}
+.zr-modal-close {
+  float: right;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.45;
+}
+.zr-modal-close:hover {
+  opacity: 0.65;
+}
+.zr-modal-body {
+  font-size: 14px;
+  color: rgba(0,0,0,65);
+  line-height: 21px;
+  border-top: 1px solid #F5F5F5;
+  border-bottom: 1px solid #F5F5F5;
+  zoom: 1;
+}
+.zr-modal-body:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.zr-modal-prompt .zr-modal-body,
+.zr-modal-enter .zr-modal-body {
+  min-height: 106px;
+  padding-top: 32px;
+}
+.zr-modal-prompt .zr-modal-body i,
+.zr-modal-enter .zr-modal-body i {
+  font-size: 14px;
+  margin-right: 8px;
+}
+.zr-modal-submit input[type="text"],
+.zr-modal-submit-async input[type="text"] {
+  width: 78%;
+}
+.zr-modal-submit form,
+.zr-modal-submit-async form {
+  padding: 24px 0 24px 16px;
+}
+.zr-modal-submit form > div:first-of-type,
+.zr-modal-submit-async form > div:first-of-type {
+  margin-bottom: 24px;
+}
+.zr-modal-submit label,
+.zr-modal-submit-async label {
+  margin-right: 16px;
+}
+.zr-modal-footer {
+  height: 56px;
+  line-height: 56px;
+  font-size: 0;
+  text-align: right;
+}
+.zr-modal-btn {
+  vertical-align: middle;
+  width: 77px;
+}
+.zr-modal-enter {
+  margin-left: 8px;
+}
+.zr-modal-info {
+  color: #4363f4;
+}
+.zr-modal-ok {
+  color: #6CC902;
+}
+.zr-modal-warning {
+  color: #faad14;
+}
+.zr-modal-error {
+  color: #E2231A;
+}
+.prompt_content {
+  display: inline-block;
+}
+.zr-modal-icon {
+  float: left;
+}
+.prompt-content {
+  width: 300px;
+  float: left;
+  margin-left: 10px;
+}
+.zr-modal-status .zr-modal-body {
+  border: none;
+  margin-bottom: 32px;
+}
+.zr-modal-status .zr-modal-body p {
+  line-height: 20px;
+}
+.zr-modal-status .zr-modal-body .prompt-content-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: rgba(0,0,0,65);
+}
+.zr-modal-status .zr-modal-footer {
+  height: auto;
+  line-height: 0;
+  padding-bottom: 40px;
+}
+.zr-modal-submit-async .zr-modal-loading {
+  margin-right: 5px;
+}
+.zr-modal .zr-modal-body {
+  padding: 32px 24px;
+}
+.zr-modal-footer-center {
+  text-align: center;
+}
+.zr-modal-lg .zr-modal-content {
+  width: 800px;
+}
+.zr-modal-normal .zr-modal-content {
+  width: 600px;
+}
+.zr-modal-sm .zr-modal-content {
+  width: 400px;
+}
+@media (max-width: 479px) {
+  .zr-modal .zr-modal-content {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 992px) {
+  .zr-modal .zr-modal-content {
+    width: 80%;
+  }
+}
+
+//
+.@{zr-prefix}-message{
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10000;
+}
+.@{zr-prefix}-message-notice{
+  padding: 4px;
+  text-align: center;
+}
+.@{zr-prefix}-message-custom{
+  display: inline-block;
+  padding: @padding-xs + 1px  @padding-md;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.15);
+  background: @component-background;
+  font-size: @font-size-base;
+  color: @text-color;
+  line-height: @font-size-base;
+}
+.@{zr-prefix}-message-custom > [class^="zricon-"]{
+  margin-right: @padding-xs;
+}
+.@{zr-prefix}-message-info > [class^="zricon-"]{
+  color: @info-6;
+}
+.@{zr-prefix}-message-success > [class^="zricon-"]{
+  color: @success-6;
+}
+.@{zr-prefix}-message-warning > [class^="zricon-"]{
+  color: @warning-6;
+}
+.@{zr-prefix}-message-error > [class^="zricon-"]{
+  color: @error-6;
+}
+
+
+
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-tab) {
+  //默认手机
+}
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-tab) {
+  //平板
+}
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-tab) {
+  //桌面显示器
+}
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-tab) {
+  //大桌面显示器
+}
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-tab) {
+  //大屏慕数据展示
+}

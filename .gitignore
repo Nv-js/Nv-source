@@ -1,0 +1,14 @@
+# Project names
+.DS_Store
+node_modules/
+test/
+npm-debug.log
+yarn-error.log
+
+# Editor directories and files
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+

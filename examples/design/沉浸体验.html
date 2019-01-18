@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>沉浸体验</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <!--}-->
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+		Zr.config({
+			baseUrl:"/js/plugin_modules/",
+			requestTime:true
+		})
+		Zr.ready(function(){
+			Zr.use("./js/quickMenu","./js/code")
+		})
+    </script>
+</head>
+
+<body>
+<article class="c-content">
+
+    <section class="c-title">
+        <p>沉浸体验</p>
+        <span>避免打断用户心流的操作行为，让用户沉浸在相同页面中。<br>当一些工具能很好地支持创造性的活动时，这些创造性的活动可能会引发用户的“心流”状态。这是一种全神贯注、全心投入的状态，在这个过程中，人们忽视时间的流逝，忽略其他的干扰，从而让人持续工作好几个小时--这个过程的乐趣本身就是它的回报。 </span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>对话框弹框 <a href="#">#</a></p>
+        <span>
+            有两种形式：非模态弹框、模态弹框<br>避免使用不必要的对话框，以防打断用户流程的操作行为，推荐使用非模态对话框。。
+        </span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title-2">
+        <p>非模态对话框</p>
+        <span>
+            <div class="c-img c-img-3">
+                <div>
+                    <img src="//storage.jd.com/zrstatic/design/design-14-01.png" alt="">
+                </div>
+                <div class="c-title-4">非模态对话框示例</div>
+                <div class="c-title-5">默认3s消失，可自定义时长。不要超过15个字</div>
+            </div>
+        </span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title-2">
+        <p>模态对话框</p>
+        <span>
+            <div>
+                如包括用户不能忽略的重要信息，可使用模态对话框。<br>使用弹框形式会中断用户操作流程，但针对多步操作过程，应使用弹框。如果不想因为显示对话框而遮挡页面内容，应使用嵌入层形式。
+            </div>
+            <div class="c-img">
+                <div>
+                    <img src="//storage.jd.com/zrstatic/design/design-14-02.png" alt="">
+                </div>
+                <div class="c-title-4">模态对话框示例</div>
+            </div>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>悬浮窗提示框 <a href="#">#</a></p>
+        <span>
+            <div>为用户提供了附加信息，辅助用户决策接下来怎么做，换而言之，能让用户获得满足感和支配感，提高用户体验必要因素。</div>
+            <div class="c-img">
+                <div>
+                    <img src="//storage.jd.com/zrstatic/design/design-14-03.png" alt="">
+                </div>
+                <div class="c-title-4">悬浮提示框示例</div>
+                <div class="c-title-6">当用户把鼠标悬浮在某处内容上时，显示更多的信息，移出内容区后，悬浮窗立即消失</div>
+            </div>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>列表嵌入层-折叠展开 <a href="#">#</a></p>
+        <span>
+            <div>无论把弹框放在哪里，都会遮挡下方的信息。而嵌入层通过把内容直接插入到页面的上下文中解决了这个问题。可以为用户提供位于上下文的对话框。</div>
+           <div class="c-img">
+                <div>
+                    <!--<img src="//storage.jd.com/zrstatic/design/design-14-04.png" alt="">-->
+                    <video src="//storage.jd.com/zrstatic/design/desgin-video-03.mp4" controls></video>
+                </div>
+                <div class="c-title-4">列表嵌入层示例</div>
+                <div class="c-title-6">位于上下文中，用户不必切换到另一个页面去操作，通过嵌入层直接修改并查看结果。<br>每个窗格的内容互不依赖，每次只需显示一个窗格，每个窗格都可以从逻辑上分成不同主题。，显示更多的信息，移出内容区后，悬浮窗立即消失</div>
+            </div>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>锚点 <a href="#">#</a></p>
+        <span>
+            <div>一种可以跟随滑动的标签，当页面元素过多时，可加入快速定位功能帮助用户快速跳转到指定位置，并能随时告知用户所在的位置。</div>
+           <div class="c-img">
+                <div>
+                    <img src="//storage.jd.com/zrstatic/design/design-14-05.png" alt="">
+                </div>
+                <div class="c-title-4">锚点示例</div>
+                <div class="c-title-6">避免一个页面上使用多组标签页。可把重要的内容放在第一个标签中，许多用户可能不会查看其它的标签页。</div>
+            </div>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>分页 <a href="#">#</a></p>
+        <span>
+            <div>分页是分割信息最方便最自然的方式。<br>为了让分页看起来不像页面切换，可以在切换内容的同时保持页面其他部分的稳定。分页不会导致页面刷新，而只会更新结果区域。保持上下文稳定能够创建更好的心流体验。</div>
+           <div class="c-img">
+                <div>
+                    <img src="//storage.jd.com/zrstatic/design/design-14-06.png" alt="">
+                </div>
+                <div class="c-title-4">分页示例</div>
+                <div class="c-title-6">如果内容实际上具有连续性，滚动比分页显得更自然。</div>
+            </div>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+</article>
+</body>
+</html>

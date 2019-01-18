@@ -1,0 +1,96 @@
+﻿
+
+.@{zr-prefix}-card{
+  width: 100%;
+  border: @border-width-base @border-style-base @border-color-base;
+  background-color: @component-background;
+  border-radius: @btn-border-radius-base;
+}
+.@{zr-prefix}-card-title{
+  width: 100%;
+  font-size: @font-size-base;
+  height: @input-height-lg;
+  line-height: @input-height-lg;
+  padding-left: @input-padding-vertical-base*4;
+  font-family: @font-family;
+  color:@heading-color;
+  border-bottom: @border-width-base @border-style-base @border-color-base;
+  b{
+    font-size: @font-size-base+4;
+    font-weight: @font-weight;
+  }
+  .@{zr-prefix}-card-operate{
+    float: right;
+    margin-right: @input-padding-vertical-base*4;
+    cursor: pointer;
+    opacity: .65;
+  }
+  .@{zr-prefix}-dropdown{
+    float: right;
+    .@{zr-prefix}-dropdown-menu{
+      top: 40px;
+      left: -54px;
+    }
+  }
+}
+.@{zr-prefix}-card-content{
+  padding: @input-padding-vertical-base*6 @input-padding-vertical-base*4;
+  color:@text-color;
+}
+.@{zr-prefix}-card-noborder{
+  border: none;
+}
+.@{zr-prefix}-card-pic{
+  width: 100%;
+  .@{zr-prefix}-card-img{
+    width: 100%;
+  }
+  .@{zr-prefix}-card-title{
+    height: auto;
+    line-height: 1;
+    padding-top: @input-padding-vertical-base*4;
+    border-bottom: none;
+    font-weight: normal;
+  }
+  .@{zr-prefix}-card-content{
+    padding: 0 @input-padding-vertical-base*4 @input-padding-vertical-base*6 @input-padding-vertical-base*4;
+  }
+  .@{zr-prefix}-card-left{
+    float: left;
+  }
+  .@{zr-prefix}-card-right{
+    float: right;
+  }
+}
+
+.@{zr-prefix}-card-group{
+  .@{zr-prefix}-card{
+    width: 200px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    display: inline-block;
+    margin: 16px 8px 16px 10px;
+    .@{zr-prefix}-card-content{
+      padding: 0 0;
+    }
+  }
+}
+
+
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-card) {
+  //默认手机
+}
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-card) {
+  //平板
+}
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-card) {
+  //桌面显示器
+}
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-card) {
+  //大桌面显示器
+}
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-card) {
+  //大屏慕数据展示
+}

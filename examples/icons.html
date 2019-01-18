@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ICONS</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?111" />
+    <style type="text/css">
+        .icon-ul li{
+            height:120px;
+            padding-top: 30px;
+            text-align: center;
+            border-radius:4px;
+            overflow: hidden;
+        }
+        .icon-ul li input{
+            position: absolute;
+            left:0;
+            top:-1000px;
+        }
+        .icon-ul li i{
+            font-size: 20px;
+        }
+        .icon-ul li p{
+            padding-top: 10px;
+            line-height: 20px;
+        }
+        .icon-ul li:hover{
+            background: #d8d8d8;
+        }
+        .msg{
+            position: absolute;
+            display: inline-block;
+            padding: 9px 18px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 4px;
+            left: 35px;
+            top: 30px;
+            color: #fff;
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("jquery","./js/quickMenu","./js/code",function(zr,$){
+                var text,html,$s;
+                $(".icon-ul li").each(function(){
+                    $s = $(this).find("p")
+                    text = $s.text();
+                    html = "<input type=\"text\" value=\""+text+"\" /><div class='msg'>Copied</div>";
+                    $s.after(html);
+                })
+                $(".icon-ul li").off("click").on("click",function(){
+                    $(this).find("input")[0].select();
+                    document.execCommand("Copy");
+                    var $msg = $(this).find(".msg");
+                    $msg.show();
+                    setTimeout(function(){
+                        $msg.hide();
+                    },500)
+                })
+            })
+        })
+
+    </script>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Icon 图标</p>
+        <span>字体图标，用法简便，直接使用样式名称即可</span>
+        <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/icon.md"><b>API文档</b></a>
+        <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/3"><b>组件问题反馈和讨论</b></a>
+    </section>
+    <div class="c-line"></div>
+
+    <section class="c-sub-title">
+        <p>图标命名规范 <a href="#">#</a></p>
+        <span>
+            图标有一定的命名规则，规则如下：
+            <ul>
+                <li><div>只允许出现字母、数字并且字母为小写</div></li>
+                <li><div>实现和描线图标保持同命名，用-e来区分，例如：zricon-search(实心)和zricon-search-e(空心)</div></li>
+                <li><div>命名顺序：[zricon]-[图标名]-[图标状态*]-[方向*]-[附加区分状态*]</div></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>如何使用 <a href="#">#</a></p>
+        <span>
+            将图标样式用在内联元素（推荐 <i>i</i> 标签）
+        </span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <i class="zricon-search-empty"></i>
+            <i class="zricon-seting"></i>
+            <i class="zricon-classify-empty"></i>
+            <i class="zricon-toggle-on"></i>
+        </div>
+    <div class="c-code-inner c-code-hide">
+    <i class="zricon-search-empty"></i>
+    <i class="zricon-seting"></i>
+    <i class="zricon-classify-empty"></i>
+    <i class="zricon-toggle-on"></i>
+    </div>
+    <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>图标列表 <a href="#">#</a></p>
+        <span>
+            点击复制样式名称
+        </span>
+    </section>
+    <div class="c-block-24"></div>
+    <section class="mw">
+        <ul class="zr-row-flex icon-ul">
+            <li class="zr-col-4">
+                <i class="zricon-heart"></i>
+                <p>zricon-heart</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-heart-empty"></i>
+                <p>zricon-heart-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-star"></i>
+                <p>zricon-star</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-star-empty"></i>
+                <p>zricon-star-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-seting"></i>
+                <p>zricon-seting</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-seting-empty"></i>
+                <p>zricon-seting-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-home"></i>
+                <p>zricon-home</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-home-empty"></i>
+                <p>zricon-home-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-trash"></i>
+                <p>zricon-trash</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-trash-empty"></i>
+                <p>zricon-trash-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-folder"></i>
+                <p>zricon-folder</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-folder-empty"></i>
+                <p>zricon-folder-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-folder-open"></i>
+                <p>zricon-folder-open</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-folder-open-empty"></i>
+                <p>zricon-folder-open-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-doc"></i>
+                <p>zricon-doc</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-doc-empty"></i>
+                <p>zricon-doc-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-copy"></i>
+                <p>zricon-copy</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-copy-empty"></i>
+                <p>zricon-copy-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-search"></i>
+                <p>zricon-search</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-search-empty"></i>
+                <p>zricon-search-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-comment"></i>
+                <p>zricon-comment</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-comment-empty"></i>
+                <p>zricon-comment-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-chat"></i>
+                <p>zricon-chat</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-chat-empty"></i>
+                <p>zricon-chat-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-check"></i>
+                <p>zricon-check</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-check-empty"></i>
+                <p>zricon-check-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-bookmark"></i>
+                <p>zricon-bookmark</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-bookmark-empty"></i>
+                <p>zricon-bookmark-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-classify"></i>
+                <p>zricon-classify</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-classify-empty"></i>
+                <p>zricon-classify-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-user"></i>
+                <p>zricon-user</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-user-empty"></i>
+                <p>zricon-user-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-close-circle"></i>
+                <p>zricon-close-circle</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-close-circle-empty"></i>
+                <p>zricon-close-circle-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-calendar"></i>
+                <p>zricon-calendar</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-calendar-empty"></i>
+                <p>zricon-calendar-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-help"></i>
+                <p>zricon-help</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-help-empty"></i>
+                <p>zricon-help-empty</p>
+            </li>
+            <!--<li class="zr-col-4">-->
+                <!--<i class="zricon-help-circled"></i>-->
+                <!--<p>zricon-help-circled</p>-->
+            <!--</li>-->
+            <li class="zr-col-4">
+                <i class="zricon-mail"></i>
+                <p>zricon-mail</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-mail-empty"></i>
+                <p>zricon-mail-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-edit"></i>
+                <p>zricon-edit</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-edit-empty"></i>
+                <p>zricon-edit-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-toggle-on"></i>
+                <p>zricon-toggle-on</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-toggle-off"></i>
+                <p>zricon-toggle-off</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-add-square"></i>
+                <p>zricon-add-square</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-add-square-empty"></i>
+                <p>zricon-add-square-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-add"></i>
+                <p>zricon-add</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-close"></i>
+                <p>zricon-close</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-add-circle"></i>
+                <p>zricon-add-circle</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-add-circle-empty"></i>
+                <p>zricon-add-circle-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-left-circle"></i>
+                <p>zricon-left-circle</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-right-circle"></i>
+                <p>zricon-right-circle</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-up-circle"></i>
+                <p>zricon-up-circle</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-down-circle"></i>
+                <p>zricon-down-circle</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-left-circle-empty"></i>
+                <p>zricon-left-circle-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-right-circle-empty"></i>
+                <p>zricon-right-circle-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-up-circle-empty"></i>
+                <p>zricon-up-circle-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-down-circle-empty"></i>
+                <p>zricon-down-circle-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-ok-circle"></i>
+                <p>zricon-ok-circle</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-ok-circle-empty"></i>
+                <p>zricon-ok-circle-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-ok"></i>
+                <p>zricon-ok</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-download"></i>
+                <p>zricon-download</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-up"></i>
+                <p>zricon-up</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-down"></i>
+                <p>zricon-down</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-left"></i>
+                <p>zricon-left</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-right"></i>
+                <p>zricon-right</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-arrow-up"></i>
+                <p>zricon-arrow-up</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-arrow-down"></i>
+                <p>zricon-arrow-down</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-arrow-left"></i>
+                <p>zricon-arrow-left</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-arrow-right"></i>
+                <p>zricon-arrow-right</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-triangle-up"></i>
+                <p>zricon-triangle-up</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-triangle-down"></i>
+                <p>zricon-triangle-down</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-triangle-left"></i>
+                <p>zricon-triangle-left</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-triangle-right"></i>
+                <p>zricon-triangle-right</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-triangle-up-empty"></i>
+                <p>zricon-triangle-up-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-triangle-down-empty"></i>
+                <p>zricon-triangle-down-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-triangle-left-empty"></i>
+                <p>zricon-triangle-left-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-triangle-right-empty"></i>
+                <p>zricon-triangle-right-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-error-square"></i>
+                <p>zricon-error-square</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-error-square-empty"></i>
+                <p>zricon-error-square-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-password"></i>
+                <p>zricon-password</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-password-empty"></i>
+                <p>zricon-password-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-info"></i>
+                <p>zricon-info</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-info-empty"></i>
+                <p>zricon-info-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-invisible"></i>
+                <p>zricon-invisible</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-invisible-empty"></i>
+                <p>zricon-invisible-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-visible"></i>
+                <p>zricon-visible</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-visible-empty"></i>
+                <p>zricon-visible-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-warning"></i>
+                <p>zricon-warning</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-warning-empty"></i>
+                <p>zricon-warning-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-upload-1"></i>
+                <p>zricon-upload-1</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-next-empty"></i>
+                <p>zricon-next-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-previous-empty"></i>
+                <p>zricon-previous-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-dimission"></i>
+                <p>zricon-dimission</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-dimission-empty"></i>
+                <p>zricon-dimission-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-transaction"></i>
+                <p>zricon-transaction</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-transaction-empty"></i>
+                <p>zricon-transaction-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-upload"></i>
+                <p>zricon-upload</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-upload-empty"></i>
+                <p>zricon-upload-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-rank"></i>
+                <p>zricon-rank</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-rank-empty"></i>
+                <p>zricon-rank-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-prohibit"></i>
+                <p>zricon-prohibit</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-prohibit-empty"></i>
+                <p>zricon-prohibit-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-minus-square"></i>
+                <p>zricon-minus-square</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-minus-square-empty"></i>
+                <p>zricon-minus-square-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-minus-empty"></i>
+                <p>zricon-minus-minus-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-menu-empty"></i>
+                <p>zricon-menu-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-filter-empty"></i>
+                <p>zricon-filter-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-accessory-empty"></i>
+                <p>zricon-accessory-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-exit-empty"></i>
+                <p>zricon-exit-empty</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-save-empty"></i>
+                <p>zricon-save-empty</p>
+            </li>
+
+
+        </ul>
+        <ul class="zr-row-flex icon-ul">
+            <li class="zr-col-4">
+                <i class="zricon-spin2 animate-spin"></i>
+                <p>zricon-spin2 animate-spin</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-spin3 animate-spin"></i>
+                <p>zricon-spin3 animate-spin</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-spin5 animate-spin"></i>
+                <p>zricon-spin5 animate-spin</p>
+            </li>
+            <li class="zr-col-4">
+                <i class="zricon-spin6 animate-spin"></i>
+                <p>zricon-spin6 animate-spin</p>
+            </li>
+        </ul>
+    </section>
+</article>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?4"/>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+
+    <style>
+        .c-demo>div{
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Input 输入框</p>
+        <span>通过鼠标或键盘输入内容，可组合使用，常用于查询条件、表单、新建或修改等场景。</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>使用方法</p>
+        <span>
+            <ul>
+                <li><span>文本框一般用于接收较短的字符串，如账号、密码、姓名等。文本框高度和宽度固定，显示的文本一般左对齐。</span></li>
+                <li><span>当用户输入的内容超出文本框范围时显示最后输入的文本位置，横向滑动可查看已输入的内容。如要显示较长的字符串，请改用“多行文本框”。</span></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>最基础输入框的使用状态有默认状态和禁用状态，只需要添加样式  <i class="c-block-inline">zr-input</i> ；input标签有  <i class="c-block-inline">disabled</i> 属性时会显示成禁用状态。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 240px">
+                <input type="text" placeholder="Please input text" class="zr-input">
+            </div>
+            <div style="width: 240px">
+                <input type="text" placeholder="Disabled" disabled="disabled" class="zr-input">
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--默认状态-->
+    <input type="text" placeholder="Please input text" class="zr-input">
+    <!--禁用状态，只需给input标签设置disabled属性-->
+    <input type="text" placeholder="Text" disabled="disabled" class="zr-input">
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>输入框尺寸 <a href="#">#</a></p>
+        <span>定义了输入框三种尺寸：大、中（默认）、小；高度分别为  <i class="c-block-inline">40px</i>   <i class="c-block-inline">32px</i>   <i class="c-block-inline">24px</i>；
+        大尺寸和小尺寸需额外增加样式 <i class="c-block-inline">zr-input-lg</i> 和 <i class="c-block-inline">zr-input-sm</i>。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 240px">
+                <input type="text" placeholder="Large" class="zr-input zr-input-lg">
+            </div>
+            <div style="width: 240px">
+                <input type="text" placeholder="Default" class="zr-input">
+            </div>
+            <div style="width: 240px">
+                <input type="text" placeholder="Small" class="zr-input zr-input-sm">
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--大尺寸 需额外增加样式“zr-input-lg”-->
+    <input type="text" placeholder="Large" class="zr-input zr-input-lg">
+    <!--默认尺寸-->
+    <input type="text" placeholder="Default" class="zr-input">
+    <!--小尺寸 需额外增加样式“zr-input-sm”-->
+    <input type="text" placeholder="Small" class="zr-input zr-input-sm">
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>可清除输入内容 <a href="#">#</a></p>
+        <span>输入状态下点击右侧icon，可清除输入内容；只需增加样式 <i class="c-block-inline">zr-input-clear</i>。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 240px">
+                <input type="text" placeholder="Please input text" class="zr-input zr-input-clear">
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--只需增加样式“zr-input-clear”-->
+    <input type="text" placeholder="Please input text" class="zr-input zr-input-clear">
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>带icon的输入框 <a href="#">#</a></p>
+        <span>带有icon的输入框，分为两种：可操作的icon置于输入框的右侧（默认状态）；提醒性的icon置于输入框左侧，父级div需增加样式 <i class="c-block-inline">zr-input-left</i>。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Please input text" class="zr-input">
+                    <span class="zr-input-addon">
+                        <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <div style="width: 240px">
+                <div class="zr-input-group zr-input-left">
+                    <span class="zr-input-addon">
+                        <i class="zricon-user-empty"></i>
+                    </span>
+                    <input type="text" placeholder="Please input text" class="zr-input">
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--默认状态-->
+    <div class="zr-input-group">
+        <input type="text" placeholder="Please input text" class="zr-input">
+        <span class="zr-input-addon">
+            <i class="zricon-calendar-empty"></i>
+        </span>
+    </div>
+    <!--增加样式“zr-input-left”，icon置于左侧-->
+    <div class="zr-input-group zr-input-left">
+        <span class="zr-input-addon">
+            <i class="zricon-user-empty"></i>
+        </span>
+        <input type="text" placeholder="Please input text" class="zr-input">
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>文本域 <a href="#">#</a></p>
+        <span>用于输入多行文本信息，需配置  <i class="c-block-inline">maxlength</i> 属性用于显示最大输入字符数。</span>
+    </section>
+    <section class="c-code ">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 480px;height: 64px">
+                <textarea class="zr-textarea" maxlength="100" placeholder="Textarea"></textarea>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--maxlength属性用于显示最大可输入字符数-->
+    <textarea class="zr-textarea" maxlength="100" placeholder="Textarea"></textarea>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>组合输入框 <a href="#">#</a></p>
+        <span>可前置或后置元素，一般为标签或按钮；默认状态为标签，按钮需额外增加样式  <i class="c-block-inline">zr-input-btn</i></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width: 480px">
+                <div class="zr-input-wapper">
+                    <select name="country" class="zr-select">
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                    </select>
+                    <input type="text" class="zr-input">
+                </div>
+            </div>
+            <div style="width: 480px">
+                <div class="zr-input-wapper zr-input-btn">
+                    <select name="country" class="zr-select">
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                    </select>
+                    <input type="text" class="zr-input">
+                    <span class="zr-input-addon">
+                        <i class="zricon-search-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <div style="width: 480px">
+                <div class="zr-input-wapper zr-input-wapper-left zr-input-btn">
+                    <input type="text" class="zr-input">
+                    <select name="country" class="zr-select">
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-input-wapper">
+        <select name="country" class="zr-select">
+            <option value="option1">option1</option>
+            <option value="option2">option2</option>
+        </select>
+        <input type="text" class="zr-input">
+    </div>
+    <div class="zr-input-wapper zr-input-btn">
+        <div class="zr-input-wapper zr-input-btn">
+            <select name="country" class="zr-select">
+                <option value="option1">option1</option>
+                <option value="option2">option2</option>
+            </select>
+            <input type="text" class="zr-input">
+            <span class="zr-input-addon">
+                <i class="zricon-search-empty"></i>
+            </span>
+        </div>
+    </div>
+    <div class="zr-input-wapper zr-input-wapper-left zr-input-btn">
+        <input type="text" class="zr-input">
+        <select name="country" class="zr-select">
+            <option value="option1">option1</option>
+            <option value="option2">option2</option>
+        </select>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+</article>
+<!--注意此段js必须第一引入在开发模式下{-->
+<script type="text/javascript" src="js/input.js"></script>
+<script type="text/javascript" src="js/select.js"></script>
+<script type="text/javascript" src="http://storage.jd.com/v1.0.0/zr.dev.min.js"></script>
+<script type="text/javascript">
+	Zr.config({
+		baseUrl: "/js/plugin_modules/"
+	})
+	Zr.ready(function () {
+		Zr.use("./js/quickMenu", "./js/code",function (zr) {
+			zr.dom.dispatch();
+		})
+	})
+</script>
+</body>
+</html>

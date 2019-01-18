@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?4"/>
+    <!--<script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>-->
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <!--<script type="text/javascript" src="js/dropdown.js"></script>-->
+    <script type="text/javascript" src="/js/zr.min.js?3"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl: "/js/plugin_modules/"
+        })
+        Zr.ready(function () {
+            Zr.use("./js/quickMenu", "./js/code");
+        })
+    </script>
+    <style type="text/css">
+        .inline-w15{
+            width:14px;
+            height:10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Drop down 下拉菜单</p>
+        <span>点击或移入操作区，会向下弹出一个菜单列表。</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>使用方法</p>
+        <span>
+            <ul>
+                <li><span>当页面上的操作命令过多时，用此组件可以收纳操作元素。</span></li>
+                <li><span>点击或移入触点，会出现一个下拉菜单。</span></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>最简单的下拉样式</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-dropdown">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Dropdown<i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Menu 1（normal）</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Menu 2（normal）</a>
+                    </li>
+                    <li class="zr-dropdown-item zr-dropdown-disable">
+                        Menu 3（disable）
+                    </li>
+                    <li class="zr-dropdown-divider"></li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Menu 4（normal）</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--菜单默认是隐藏，如果默认显示，请添加样式"zr-dropdown-show"-->
+    <div class="zr-dropdown">
+        <!--标题名称-->
+        <a class="zr-dropdown-normal" href="javascript:void(0);">Dropdown<i class="zricon-arrow-down"></i></a>
+        <!--下拉菜单-->
+        <ul class="zr-dropdown-menu">
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 1</a>
+            </li>
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 2</a>
+            </li>
+            <li class="zr-dropdown-item zr-dropdown-disable">
+                Item 3（disable）
+            </li>
+            <li class="zr-dropdown-divider"></li>
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 4（normal）</a>
+            </li>
+        </ul>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>触发方式 <a href="#">#</a></p>
+        <span>最基本的触发方式是  <i class="c-block-inline">hover</i>   ，可以更改为  <i class="c-block-inline">click</i>   触发。添加zr-event属性有"click"、"hover"(默认)</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-dropdown" zr-event="click">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Click<i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 1</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 2</a>
+                    </li>
+                    <li class="zr-dropdown-item zr-dropdown-disable">
+                        Item 3（disable）
+                    </li>
+                    <li class="zr-dropdown-divider"></li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 4（normal）</a>
+                    </li>
+                </ul>
+            </div><div class='inline-w15'></div>
+            <div class="zr-dropdown">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Hover<i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 1</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 2</a>
+                    </li>
+                    <li class="zr-dropdown-item zr-dropdown-disable">
+                        Item 3（disable）
+                    </li>
+                    <li class="zr-dropdown-divider"></li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 4（normal）</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--Click方式-->
+    <div class="zr-dropdown" zr-event="click">
+        <a class="zr-dropdown-normal" href="javascript:void(0);">Click<i class="zricon-arrow-down"></i></a>
+        <ul class="zr-dropdown-menu">
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 1</a>
+            </li>
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 2</a>
+            </li>
+            <li class="zr-dropdown-item zr-dropdown-disable">
+                Item 3（disable）
+            </li>
+            <li class="zr-dropdown-divider"></li>
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 4（normal）</a>
+            </li>
+        </ul>
+    </div>
+    <!--默认Hover方式-->
+    <div class="zr-dropdown">
+        <a class="zr-dropdown-normal" href="javascript:void(0);">Hover<i class="zricon-arrow-down"></i></a>
+        <ul class="zr-dropdown-menu">
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 1</a>
+            </li>
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 2</a>
+            </li>
+            <li class="zr-dropdown-item zr-dropdown-disable">
+                Item 3（disable）
+            </li>
+            <li class="zr-dropdown-divider"></li>
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 4（normal）</a>
+            </li>
+        </ul>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>带下拉框的按钮 <a href="#">#</a></p>
+        <span>可以使用按钮形式触发下拉菜单，只需要添加样式"zr-dropdown-btn"</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-dropdown zr-dropdown-btn" zr-event="click">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Click<i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 1</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 2</a>
+                    </li>
+                    <li class="zr-dropdown-item zr-dropdown-disable">
+                        Item 3（disable）
+                    </li>
+                    <li class="zr-dropdown-divider"></li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 4（normal）</a>
+                    </li>
+                </ul>
+            </div><div class='inline-w15'></div>
+            <div class="zr-dropdown zr-dropdown-btn">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Hover<i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 1</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 2</a>
+                    </li>
+                    <li class="zr-dropdown-item zr-dropdown-disable">
+                        Item 3（disable）
+                    </li>
+                    <li class="zr-dropdown-divider"></li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 4（normal）</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--带边框类型一-->
+    <div class="zr-dropdown zr-dropdown-btn" zr-event="click">
+        <a class="zr-dropdown-normal" href="javascript:void(0);">Click<i class="zricon-arrow-down"></i></a>
+        <ul class="zr-dropdown-menu">
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 1</a>
+            </li>
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 2</a>
+            </li>
+            <li class="zr-dropdown-item zr-dropdown-disable">
+                Item 3（disable）
+            </li>
+            <li class="zr-dropdown-divider"></li>
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 4（normal）</a>
+            </li>
+        </ul>
+    </div>
+    <!--带边框类型二-->
+    <div class="zr-dropdown zr-dropdown-btn">
+        <a class="zr-dropdown-normal" href="javascript:void(0);">Hover<i class="zricon-arrow-down"></i></a>
+        <ul class="zr-dropdown-menu">
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 1</a>
+            </li>
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 2</a>
+            </li>
+            <li class="zr-dropdown-item zr-dropdown-disable">
+                Item 3（disable）
+            </li>
+            <li class="zr-dropdown-divider"></li>
+            <li class="zr-dropdown-item">
+                <a target="_blank" href="#">Item 4（normal）</a>
+            </li>
+        </ul>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>对齐方式 <a href="#">#</a></p>
+        <span>左对齐(默认)，右对齐样式"zr-dropdown-right"，居中对齐样式zr-dropdown-center三种方式</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-dropdown zr-dropdown-btn">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Dropdown left <i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 1</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 2</a>
+                    </li>
+                </ul>
+            </div><div class='inline-w15'></div>
+            <div class="zr-dropdown zr-dropdown-btn zr-dropdown-center">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Dropdown center <i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 1</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 2</a>
+                    </li>
+                </ul>
+            </div><div class='inline-w15'></div>
+            <div class="zr-dropdown zr-dropdown-btn zr-dropdown-right">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Dropdown right <i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 1</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <!--默认居左-->
+            <div class="zr-dropdown zr-dropdown-btn">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Dropdown left <i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 1</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 2</a>
+                    </li>
+                </ul>
+            </div><div class='inline-w15'></div>
+            <!--居中对齐-->
+            <div class="zr-dropdown zr-dropdown-btn zr-dropdown-center">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Dropdown center <i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 1</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 2</a>
+                    </li>
+                </ul>
+            </div><div class='inline-w15'></div>
+            <!--居右对齐-->
+            <div class="zr-dropdown zr-dropdown-btn zr-dropdown-right">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Dropdown right <i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 1</a>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">Item 2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>多级菜单 <a href="#">#</a></p>
+        <span>菜单多用于功能较多的时候使用，建议最多二级。添加的子元素菜单只需要添加样式为"zr-dropdown-children"即可。</span>
+    </section>
+    <section class="c-code ">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-dropdown zr-dropdown-btn">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Cascading menu<i class="zricon-arrow-down"></i></a>
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">List 1</a>
+                        <i class="zricon-arrow-right"></i>
+                        <ul class="zr-dropdown-children">
+                            <li class="zr-dropdown-item">Child 1</li>
+                            <li class="zr-dropdown-item">Child 2</li>
+                        </ul>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">List 2</a>
+                        <i class="zricon-arrow-right"></i>
+                        <ul class="zr-dropdown-children">
+                            <li class="zr-dropdown-item"><a target="_blank" href="#">Child 1 target blank</a></li>
+                            <li class="zr-dropdown-item">Child 2</li>
+                            <li class="zr-dropdown-item zr-dropdown-disable">
+                                Child 3（disable）
+                            </li>
+                            <li class="zr-dropdown-divider"></li>
+                            <li class="zr-dropdown-item">
+                                <a target="_blank" href="#">Child 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <div class="zr-dropdown zr-dropdown-btn">
+                <a class="zr-dropdown-normal" href="javascript:void(0);">Cascading menu<i class="zricon-arrow-down"></i></a>
+                <!--一级菜单-->
+                <ul class="zr-dropdown-menu">
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">List 1</a>
+                        <i class="zricon-arrow-right"></i>
+                        <ul class="zr-dropdown-children">
+                            <li class="zr-dropdown-item">Child 1</li>
+                            <li class="zr-dropdown-item">Child 2</li>
+                        </ul>
+                    </li>
+                    <li class="zr-dropdown-item">
+                        <a target="_blank" href="#">List 2</a>
+                        <i class="zricon-arrow-right"></i>
+                        <!--子集菜单-->
+                        <ul class="zr-dropdown-children">
+                            <li class="zr-dropdown-item"><a target="_blank" href="#">Child 1 target blank</a></li>
+                            <li class="zr-dropdown-item">Child 2</li>
+                            <li class="zr-dropdown-item zr-dropdown-disable">
+                                Child 3（disable）
+                            </li>
+                            <li class="zr-dropdown-divider"></li>
+                            <li class="zr-dropdown-item">
+                                <a target="_blank" href="#">Child 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+</article>
+</body>
+</html>

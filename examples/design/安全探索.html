@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>安全探索</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <!--}-->
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+		Zr.config({
+			baseUrl:"/js/plugin_modules/",
+			requestTime:true
+		})
+		Zr.ready(function(){
+			Zr.use("./js/quickMenu","./js/code")
+		})
+    </script>
+</head>
+
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>安全探索</p>
+        <span>好的软件允许人们去尝试某些不熟悉的操作，让用户可以自由的进行操作，为了避免用户的误用和误击，网页应提供撤销和重做功能，或防止用户出错的机制。而不会给用户带来任何压力。<br>在用户进行一些不可逆或者删除操作时应该有信息提示用户，并让用户确认是否继续操作，必要时应该把操作造成的后果也告诉用户。</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>可撤销浮层 <a href="#">#</a></p>
+        <span>
+            <div>出现后一段时间自动消失的反馈信息层，主要用于对系统级、应用级或用户操作结果的提示，区别在于浮层不强求用户一定要对其进行交互，3~5秒内不进行操作此浮层自动消失，因而其对用户的打扰也更弱。</div>
+            <div class="c-img">
+                <div>
+                    <img src="http://storage.jd.com/zrstatic/design/design-13-01.png" alt="">
+                </div>
+                <div class="c-title-4">可撤销浮层示例</div>
+            </div>
+        </span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title">
+        <p>浮层二次确认 <a href="#">#</a></p>
+        <span>
+            <div>通常用于在执行毁灭性操作前，让用户进行二次确认。一般由操作会造成的结果描述，继续执行操作的按钮和取消按钮构成。点击空白区域和取消都等同于取消操作。</div>
+            <div class="c-img">
+                <div>
+                    <img src="http://storage.jd.com/zrstatic/design/design-13-02.png" alt="">
+                </div>
+                <div class="c-title-4">浮层二次确认示例</div>
+            </div>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+</article>
+</body>
+</html>

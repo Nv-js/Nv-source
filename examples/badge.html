@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css"/>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//storage.jd.com/1.0.9/zr.dev.min.js"></script>
+    <script type="text/javascript" src="js/badge.js"></script>
+    <style>
+        .c-demo>div{
+            margin-bottom: 17px;
+            align-items: center;
+            display: flex;
+        }
+        .c-demo > div:last-child{
+            margin-bottom: 0;
+        }
+        .zr-badge{
+            margin-right: 60px;
+        }
+
+    </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Badge 徽标</p>
+        <span>
+            出现在图标或者按钮的右上角，提醒用户有未读信息
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/badge.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/24"><b>组件问题反馈和讨论</b></a>
+        </span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>最基本徽标显示方式</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div>
+                <span class="zr-badge">
+                    <button class="zr-btn zr-btn-default">Comment</button>
+                    <span class="zr-badge-normal">9</span>
+                </span>
+                <span class="zr-badge">
+                    <button class="zr-btn zr-btn-default">Comment</button>
+                    <span class="zr-badge-normal" data-max="99">90</span>
+                </span>
+                <span class="zr-badge">
+                    <span class="zr-photo">
+                        <img src="//storage.jd.com/zrstatic/images/demo1.jpg" alt="">
+                    </span>
+                    <span class="zr-badge-normal" data-max="99">9</span>
+                </span>
+                <span class="zr-badge">
+                    <button class="zr-btn zr-btn-primary">Comment</button>
+                    <span class="zr-badge-normal" data-max="99">100</span>
+                </span>
+                <span>
+                    <span>option1</span>
+                    <span class="zr-badge-normal" data-max="99">9</span>
+                </span>
+            </div>
+            <div>
+                <button id="btn" class="zr-btn zr-btn-primary">DOM 节点的监听测试</button>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+        <span class="zr-badge">
+            <button class="zr-btn zr-btn-default">Comment</button>
+            <span class="zr-badge-normal" data-max="99">9</span>
+        </span>
+        <span class="zr-badge">
+            <button class="zr-btn zr-btn-default">Comment</button>
+            <span class="zr-badge-normal" data-max="99">99</span>
+        </span>
+        <span class="zr-badge">
+            <span class="zr-photo">
+                <img src="//storage.jd.com/zrstatic/images/demo1.jpg" alt="">
+            </span>
+            <span class="zr-badge-normal" data-max="99">9</span>
+        </span>
+        <span class="zr-badge">
+            <button class="zr-btn zr-btn-primary">Comment</button>
+            <span class="zr-badge-normal" data-max="99">100</span>
+        </span>
+        <span>
+            <span>option1</span>
+            <span class="zr-badge-normal" data-max="99">9</span>
+        </span>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>最大值 <a href="#">#</a></p>
+        <span>可自定义显示最大值，默认最大值为99，超过99显示为99+</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div>
+                <span class="zr-badge">
+                    <button class="zr-btn zr-btn-default">Comment</button>
+                    <span  class="zr-badge-normal" data-max="99">100000</span>
+                </span>
+                <span class="zr-badge">
+                    <button class="zr-btn zr-btn-default">Comment</button>
+                    <span class="zr-badge-normal" data-max="999">100000</span>
+                </span>
+                <span class="zr-badge">
+                    <button class="zr-btn zr-btn-default">Comment</button>
+                    <span class="zr-badge-normal" data-max="9999">100000</span>
+                </span>
+            </div>
+
+        </div>
+        <div class="c-code-inner c-code-hide">
+        <span class="zr-badge">
+            <button class="zr-btn zr-btn-default">Comment</button>
+            <span class="zr-badge-normal" data-max="99">100000</span>
+        </span>
+        <span class="zr-badge">
+            <button class="zr-btn zr-btn-default">Comment</button>
+            <span class="zr-badge-normal" data-max="999">100000</span>
+        </span>
+        <span class="zr-badge">
+            <button class="zr-btn zr-btn-default">Comment</button>
+            <span class="zr-badge-normal" data-max="9999">100000</span>
+        </span>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>小红点 <a href="#">#</a></p>
+        <span>不显示具体数字，只提示用户有需要关注的信息</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div>
+                <span class="zr-badge">
+                    <span>New Message</span>
+                    <span class="zr-badge-pointer"></span>
+                </span>
+                <span class="zr-badge">
+                    <span>……</span>
+                    <span class="zr-badge-pointer"></span>
+                </span>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+        <span class="zr-badge">
+            <span>New Message</span>
+            <span class="zr-badge-pointer"></span>
+        </span>
+        <span class="zr-badge">
+            <span>……</span>
+            <span class="zr-badge-pointer"></span>
+        </span>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>自定义文本内容<a href="#">#</a></p>
+        <span>不显示具体数字，只提示用户有需要关注的信息</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div>
+                <span class="zr-badge">
+                    <button class="zr-btn zr-btn-default">Comment</button>
+                    <span class="zr-badge-normal">Comment</span>
+                </span>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+        <span class="zr-badge">
+            <button class="zr-btn zr-btn-default">Comment</button>
+            <span class="zr-badge-normal">Comment</span>
+        </span>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+</article>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl: "/js/plugin_modules/",
+        requestTime: true
+    })
+    Zr.ready(function () {
+        Zr.use("./js/quickMenu", "./js/code","./jquery/")
+    })
+</script>
+</body>
+</html>

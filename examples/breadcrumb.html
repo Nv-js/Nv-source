@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/0.0.1/zr/css/cdn_zr.min.css" />
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl: "/js/plugin_modules/",
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code")
+        })
+    </script>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Breadcrumb面包屑</p>
+        <span>
+            告诉用户他们在网站中的位置以及如何返回
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/breadcrumb.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/6"><b>组件问题反馈和讨论</b></a>
+        </span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>使用方法</p>
+        <span>
+            <ul>
+                <li><span>网站层级较多（2层级以上）</span></li>
+                <li><span>用户对网站不熟悉，需要知道自己在哪里</span></li>
+                <li><span>用户有返回上级导航的需求</span></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基本用法 <a href="#">#</a></p>
+        <span>最基础简单的面包屑</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-breadcrumb">
+                <em class="zr-breadcrumb-normal">Home</em>
+                <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
+                <em class="zr-breadcrumb-normal">
+                    <a href="" class="zr-breadcrumb-link">Page</a>
+                </em>
+                <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
+                <em class="zr-breadcrumb-normal">
+                    <a href="" class="zr-breadcrumb-link">Subpage</a>
+                </em>
+                <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
+                <em class="zr-breadcrumb-normal zr-breadcrumb-current">Balabala</em>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-breadcrumb">
+        <em class="zr-breadcrumb-normal">Home</em>
+        <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
+        <em class="zr-breadcrumb-normal">
+            <a href="" class="zr-breadcrumb-link">Page</a>
+        </em>
+        <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
+        <em class="zr-breadcrumb-normal">
+            <a href="" class="zr-breadcrumb-link">Subpage</a>
+        </em>
+        <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
+        <em class="zr-breadcrumb-normal zr-breadcrumb-current">Balabala</em>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>图标组合 <a href="#">#</a></p>
+        <span>可以在每一级的面包屑前加一个图标，首级面包屑可以单独使用图标</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-breadcrumb">
+                <a href="" class="zr-breadcrumb-link">
+                    <i class="zricon-home-empty"></i>
+                    <em class="zr-breadcrumb-normal">Home</em>
+                </a>
+                <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
+                <a href="" class="zr-breadcrumb-link">
+                    <i class="zricon-doc-empty"></i>
+                    <em class="zr-breadcrumb-normal">Page</em>
+                </a>
+                <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
+                <em class="zr-breadcrumb-normal zr-breadcrumb-current">Balabala</em>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-breadcrumb">
+        <a href="" class="zr-breadcrumb-link">
+            <i class="zricon-home-empty"></i>
+            <em class="zr-breadcrumb-normal">Home</em>
+        </a>
+        <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
+        <a href="" class="zr-breadcrumb-link">
+            <i class="zricon-doc-empty"></i>
+            <em class="zr-breadcrumb-normal">Page</em>
+        </a>
+        <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
+        <em class="zr-breadcrumb-normal zr-breadcrumb-current">Balabala</em>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-breadcrumb">
+                <a href="" class="zr-breadcrumb-link">
+                    <i class="zricon-home-empty"></i>
+                </a>
+                <i class="zricon-arrow-right"></i>
+                <a href="" class="zr-breadcrumb-link">
+                    <i class="zricon-doc-empty"></i>
+                    <em class="zr-breadcrumb-normal">Page</em>
+                </a>
+                <i class="zricon-arrow-right"></i>
+                <em class="zr-breadcrumb-normal zr-breadcrumb-current">Balabala</em>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-breadcrumb">
+        <a href="" class="zr-breadcrumb-link">
+            <i class="zricon-home-empty"></i>
+        </a>
+        <i class="zricon-arrow-right"></i>
+        <a href="" class="zr-breadcrumb-link">
+            <i class="zricon-doc-empty"></i>
+            <em class="zr-breadcrumb-normal">Page</em>
+        </a>
+        <i class="zricon-arrow-right"></i>
+        <em class="zr-breadcrumb-normal zr-breadcrumb-current">Balabala</em>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+</article>
+</body>
+</html>

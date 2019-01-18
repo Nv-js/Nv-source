@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timeline</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
+    <style type="text/css">
+        .c-introduce-ul {
+            padding-top: 16px;
+            color: rgba(0, 0, 0, 0.65);
+        }
+        .c-introduce-ul li{
+            line-height: 24px;
+            padding-bottom: 5px;
+        }
+        .c-introduce-ul li::before{
+            content: "• ";
+            color: #CBCBCB;
+        }
+        .c-demo-w-360{
+            width: 360px;
+        }
+        .c-demo-w-640{
+            width: 640px;
+        }
+        .zr-alert{
+            margin-bottom: 8px;
+        }
+
+    </style>
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <!--}-->
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code")
+        })
+    </script>
+</head>
+
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Time 时间轴</p>
+        <span>
+            按时间顺序垂直展示的信息
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/timeline.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/17"><b>组件问题反馈和讨论</b></a>
+        </span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>最基本的时间轴，只需结构保证为外层是  <i class="c-block-inline">zr-timeline</i>  样式，每个条目是样式  <i class="c-block-inline">zr-timeline-item</i> 即可</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-360">
+                <ul class="zr-timeline">
+                    <li class="zr-timeline-item">
+                        <i class="zr-timeline-icon"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-11</h3>
+                            <span>
+                                <p>Approve and initiate a project</p>
+                                <p>project description</p>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="zr-timeline-item">
+                        <i class="zr-timeline-icon"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-03</h3>
+                            <span>
+                                <p>Require review</p>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="zr-timeline-item">
+                        <i class="zr-timeline-icon"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-01</h3>
+                            <span>
+                                <p>UE&UI design</p>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <ul class="zr-timeline">
+        <li class="zr-timeline-item">
+            <i class="zr-timeline-icon"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-11</h3>
+                <span>
+                    <p>Approve and initiate a project</p>
+                    <p>project description</p>
+                </span>
+            </div>
+        </li>
+        <li class="zr-timeline-item">
+            <i class="zr-timeline-icon"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-03</h3>
+                <span>
+                    <p>Require review</p>
+                </span>
+            </div>
+        </li>
+        <li class="zr-timeline-item">
+            <i class="zr-timeline-icon"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-01</h3>
+                <span>
+                    <p>UE&UI design</p>
+                </span>
+            </div>
+        </li>
+    </ul>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>状态提示 <a href="#">#</a></p>
+        <span>绿色样式  <i class="c-block-inline">zr-timeline-green</i>  用于已完成、成功状态、红色样式  <i class="c-block-inline">zr-timeline-error</i>  表示错误、橙色样式  <i class="c-block-inline">zr-timeline-warning</i>  表示警告状态、  蓝色为默认色可表示正在进行</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-640">
+                <ul class="zr-timeline">
+                    <li class="zr-timeline-item zr-timeline-green">
+                        <i class="zr-timeline-icon"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-21</h3>
+                            <span>
+                                <p>Approve and initiate a project</p>
+                                <p>project description</p>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="zr-timeline-item zr-timeline-warning">
+                        <i class="zr-timeline-icon"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-13</h3>
+                            <span>
+                                <p>Require review</p>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="zr-timeline-item zr-timeline-error">
+                        <i class="zr-timeline-icon"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-11</h3>
+                            <span>
+                                <p>UE&UI design</p>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="zr-timeline-item">
+                        <i class="zr-timeline-icon"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-01</h3>
+                            <span>
+                                <p>Front-end development</p>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <ul class="zr-timeline">
+        <li class="zr-timeline-item zr-timeline-green">
+            <i class="zr-timeline-icon"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-21</h3>
+                <span>
+                        <p>Approve and initiate a project</p>
+                        <p>project description</p>
+                    </span>
+            </div>
+        </li>
+        <li class="zr-timeline-item zr-timeline-warning">
+            <i class="zr-timeline-icon"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-13</h3>
+                <span>
+                        <p>Require review</p>
+                    </span>
+            </div>
+        </li>
+        <li class="zr-timeline-item zr-timeline-error">
+            <i class="zr-timeline-icon"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-11</h3>
+                <span>
+                        <p>UE&UI design</p>
+                    </span>
+            </div>
+        </li>
+        <li class="zr-timeline-item">
+            <i class="zr-timeline-icon"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-01</h3>
+                <span>
+                        <p>Front-end development</p>
+                    </span>
+            </div>
+        </li>
+    </ul>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>自定义时间轴 <a href="#">#</a></p>
+        <span>可以将时间节点设置为图标，将图标样式  <i class="c-block-inline">zr-timeline-icon</i> 改成需求图标即可，详情<a href="http://gtp-zr.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=8fd3459c5ba04cf681494941b2db31e2&directoryName=Icon%20%E5%9B%BE%E6%A0%87">图标icon</a></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-640">
+    <ul class="zr-timeline">
+        <li class="zr-timeline-item zr-timeline-green">
+            <i class="zricon-ok-circle"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-21</h3>
+                <span>
+                    <p>Approve and initiate a project</p>
+                    <p>project description</p>
+                </span>
+            </div>
+        </li>
+        <li class="zr-timeline-item zr-timeline-error">
+            <i class="zricon-close-circle"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-13</h3>
+                <span>
+                    <p>Require review</p>
+                </span>
+            </div>
+        </li>
+        <li class="zr-timeline-item zr-timeline-warning">
+            <i class="zr-timeline-icon"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-11</h3>
+                <span>
+                    <p>UE&UI design</p>
+                </span>
+            </div>
+        </li>
+        <li class="zr-timeline-item">
+            <i class="zr-timeline-icon"></i>
+            <div class="zr-timeline-content">
+                <h3>2018-01-01</h3>
+                <span>
+                    <p>Front-end development</p>
+                </span>
+            </div>
+        </li>
+    </ul>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <ul class="zr-timeline">
+                <li class="zr-timeline-item zr-timeline-green">
+                    <i class="zricon-ok-circle"></i>
+                    <div class="zr-timeline-content">
+                        <h3>2018-01-21</h3>
+                        <span>
+                    <p>Approve and initiate a project</p>
+                    <p>project description</p>
+                </span>
+                    </div>
+                </li>
+                <li class="zr-timeline-item zr-timeline-error">
+                    <i class="zricon-close-circle"></i>
+                    <div class="zr-timeline-content">
+                        <h3>2018-01-13</h3>
+                        <span>
+                    <p>Require review</p>
+                </span>
+                    </div>
+                </li>
+                <li class="zr-timeline-item zr-timeline-warning">
+                    <i class="zr-timeline-icon"></i>
+                    <div class="zr-timeline-content">
+                        <h3>2018-01-11</h3>
+                        <span>
+                    <p>UE&UI design</p>
+                </span>
+                    </div>
+                </li>
+                <li class="zr-timeline-item">
+                    <i class="zr-timeline-icon"></i>
+                    <div class="zr-timeline-content">
+                        <h3>2018-01-01</h3>
+                        <span>
+                    <p>Front-end development</p>
+                </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>幽灵节点 <a href="#">#</a></p>
+        <span>可以将最后一个节点设置为幽灵节点，表示任务正在进行,将最后图标更改为<a href="/docs?languageCode=CN&columnUid=40ad19be535e477596a033f9fea2bf7d&directoryUid=9d30d954caf544f4a60a496a2b854771">图标icon</a>的动态图标即可</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-640">
+                <ul class="zr-timeline">
+                    <li class="zr-timeline-item zr-timeline-green">
+                        <i class="zricon-ok-circle"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-21</h3>
+                            <span>
+                    <p>Approve and initiate a project</p>
+                    <p>project description</p>
+                </span>
+                        </div>
+                    </li>
+                    <li class="zr-timeline-item zr-timeline-error">
+                        <i class="zricon-close-circle"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-13</h3>
+                            <span>
+                    <p>Require review</p>
+                </span>
+                        </div>
+                    </li>
+                    <li class="zr-timeline-item zr-timeline-warning">
+                        <i class="zr-timeline-icon"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-11</h3>
+                            <span>
+                    <p>UE&UI design</p>
+                </span>
+                        </div>
+                    </li>
+                    <li class="zr-timeline-item">
+                        <i class="zricon-spin6 animate-spin"></i>
+                        <div class="zr-timeline-content">
+                            <h3>2018-01-01</h3>
+                            <span>
+                    <p>Front-end development</p>
+                </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <ul class="zr-timeline">
+                <li class="zr-timeline-item zr-timeline-green">
+                    <i class="zricon-ok-circle"></i>
+                    <div class="zr-timeline-content">
+                        <h3>2018-01-21</h3>
+                        <span>
+                    <p>Approve and initiate a project</p>
+                    <p>project description</p>
+                </span>
+                    </div>
+                </li>
+                <li class="zr-timeline-item zr-timeline-error">
+                    <i class="zricon-close-circle"></i>
+                    <div class="zr-timeline-content">
+                        <h3>2018-01-13</h3>
+                        <span>
+                    <p>Require review</p>
+                </span>
+                    </div>
+                </li>
+                <li class="zr-timeline-item zr-timeline-warning">
+                    <i class="zr-timeline-icon"></i>
+                    <div class="zr-timeline-content">
+                        <h3>2018-01-11</h3>
+                        <span>
+                    <p>UE&UI design</p>
+                </span>
+                    </div>
+                </li>
+                <li class="zr-timeline-item">
+                    <i class="zricon-spin6 animate-spin"></i>
+                    <div class="zr-timeline-content">
+                        <h3>2018-01-01</h3>
+                        <span>
+                    <p>Front-end development</p>
+                </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+</article>
+
+
+</body>
+</html>

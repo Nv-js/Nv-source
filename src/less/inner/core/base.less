@@ -1,0 +1,190 @@
+@import "../theme/default";
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius:@radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+.box-shadow(@shadow){
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  -ms-box-shadow:@shadow;
+  -o-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+.transform(@value){
+  -webkit-transform: @value;
+  -moz-transform: @value;
+  -ms-transform:@value;
+  -o-transform: @value;
+  transform: @value;
+}
+.transition(@value){
+  -webkit-transition: @value;
+  -moz-transition: @value;
+  -ms-transition:@value;
+  -o-transition: @value;
+  transition: @value;
+}
+
+.background-gradient(@top,@bottom){
+  background: -moz-linear-gradient(top, @top 0%, @bottom 100%);
+  background: -webkit-linear-gradient(top, @top 0%,@bottom 100%);
+  background: -o-linear-gradient(top, @top 0%,@bottom 100%);
+  background: -ms-linear-gradient(top, @top 0%,@bottom 100%);
+  background: linear-gradient(to bottom, @top 0%,@bottom 100%);
+}
+
+.animation(@name,@duration,@timing-function,@time){
+  animation-name: @name;
+  animation-duration: @duration;
+  animation-timing-function: @timing-function;
+  animation-delay: @time;
+  animation-iteration-count: infinite;
+  //animation-direction: alternate;
+  animation-play-state: running;
+  /* Firefox: */
+  -moz-animation-name: @name;
+  -moz-animation-duration: @duration;
+  -moz-animation-timing-function: @timing-function;
+  -moz-animation-delay: @time;
+  -moz-animation-iteration-count: infinite;
+  //-moz-animation-direction: alternate;
+  -moz-animation-play-state: running;
+  /* Safari 和 Chrome: */
+  -webkit-animation-name: @name;
+  -webkit-animation-duration: @duration;
+  -webkit-animation-timing-function: @timing-function;
+  -webkit-animation-delay: @time;
+  -webkit-animation-iteration-count: infinite;
+  //-webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+  /* Opera: */
+  -o-animation-name: @name;
+  -o-animation-duration: @duration;
+  -o-animation-timing-function: @timing-function;
+  -o-animation-delay: @time;
+  -o-animation-iteration-count: infinite;
+  //-o-animation-direction: alternate;
+  -o-animation-play-state: running;
+}
+.box-sizing-selector(){
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.placeholder(@color,@fontSize){
+  &:-moz-placeholder {
+    color: @color;
+    font-size:@fontSize;
+  }
+
+  &::-moz-placeholder {
+    color: @color;
+    font-size:@fontSize;
+  }
+
+  &:-ms-input-placeholder{
+    color: @color;
+    font-size:@fontSize;
+  }
+
+  &::-webkit-input-placeholder{
+    color: @color;
+    font-size:@fontSize;
+  }
+}
+
+
+* {
+  word-wrap:break-word;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  font-family:@font-family-no-number ;
+  outline:none;
+  .box-sizing-selector()
+}
+*::before,*::after{
+  .box-sizing-selector()
+}
+body{
+  background: @body-background;
+}
+body,input {
+  margin:0 auto;
+  padding:0;
+}
+input,textarea,a,div{
+  outline:none;
+}
+textarea{
+  resize: none;
+}
+input,textarea{
+  appearance:button;
+  -moz-appearance:button; /* Firefox */
+  -webkit-appearance:button; /* Safari 和 Chrome */
+}
+#container {
+width:100%;
+}
+h1,h2,h3,h4,h5,h6,dd,dt,ul,li,span,p,dl,a,th,td,blockquote,form,fieldset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+dt.clear,li.clear,.clear {
+  clear:both;
+  font-size:0;
+  height:0;
+  overflow: hidden;
+}
+dt.clear,li.clear {
+  height: 0;
+  font-size: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset {
+border: 0;
+}
+address,caption,cite,code,dfn,th,var {
+  font-weight: normal;
+  font-style: normal;
+}
+abbr,acronym {
+  border: 0;
+}
+caption,th {
+  text-align: left;
+}
+img{
+  border: 0;
+}
+a{
+  color:@link-color;
+  text-decoration: @link-decoration;
+}
+a:hover{
+  color:@link-hover-color;
+  text-decoration: @link-hover-decoration;
+}
+a:active{
+  color:@link-active-color;
+}
+.noSelect{
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+}
+html [class*=" zricon-"]:before,html [class^=zricon-]:before{
+  margin: 0;
+  padding: 0;
+}
+

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
+    <style type="text/css">
+        .c-introduce-ul {
+            padding-top: 16px;
+            color: rgba(0, 0, 0, 0.65);
+        }
+        .c-introduce-ul li{
+            line-height: 24px;
+            padding-bottom: 5px;
+        }
+        .c-introduce-ul li::before{
+            content: "• ";
+            color: #CBCBCB;
+        }
+        .c-demo-w-360{
+            width: 360px;
+        }
+        .c-demo-w-640{
+            width: 640px;
+        }
+        .zr-alert{
+            margin-bottom: 8px;
+        }
+
+    </style>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <script type="text/javascript" src="js/alert.js"></script>
+    <!--}-->
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code")
+        })
+    </script>
+</head>
+
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Alert 警告提示</p>
+        <span>页面中展示重要的提示信息</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>使用方法 <a href="#">#</a></p>
+        <ul class="c-introduce-ul">
+            <li>支持手动关闭，静态浮层不会自动消失。</li>
+        </ul>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>基本使用方法，有四种样式可以选择info <i class="c-block-inline">zr-alert-info</i> 、success <i class="c-block-inline">zr-alert-success</i> 、warning <i class="c-block-inline">zr-alert-error</i> 、error <i class="c-block-inline">zr-alert-warning</i> ，适用于简短的信息</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-360">
+                <div class="zr-alert zr-alert-info">
+                    <span class="zr-alert-message">Info Text</span>
+                </div>
+                <div class="zr-alert zr-alert-success">
+                    <span class="zr-alert-message">Success Text</span>
+                </div>
+                <div class="zr-alert zr-alert-error">
+                    <span class="zr-alert-message">Error Text</span>
+                </div>
+                <div class="zr-alert zr-alert-warning">
+                    <span class="zr-alert-message">Warning Text</span>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <div class="zr-alert zr-alert-info">
+                <span class="zr-alert-message">Info Text</span>
+            </div>
+            <div class="zr-alert zr-alert-success">
+                <span class="zr-alert-message">Success Text</span>
+            </div>
+            <div class="zr-alert zr-alert-error">
+                <span class="zr-alert-message">Error Text</span>
+            </div>
+            <div class="zr-alert zr-alert-warning">
+                <span class="zr-alert-message">Warning Text</span>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>含有描述信息 <a href="#">#</a></p>
+        <span>含有辅助性文字介绍的警告提示，需添加 <i class="c-block-inline">zr-alert-with-description</i> </span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-640">
+                <div class="zr-alert zr-alert-info zr-alert-with-description">
+                    <span class="zr-alert-message">Info</span>
+                    <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+                </div>
+                <div class="zr-alert zr-alert-success zr-alert-with-description">
+                    <span class="zr-alert-message">Success</span>
+                    <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+                </div>
+                <div class="zr-alert zr-alert-error zr-alert-with-description">
+                    <span class="zr-alert-message">Error</span>
+                    <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+                </div>
+                <div class="zr-alert zr-alert-warning zr-alert-with-description">
+                    <span class="zr-alert-message">Warning</span>
+                    <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <div class="zr-alert zr-alert-info zr-alert-with-description">
+                <span class="zr-alert-message">Info</span>
+                <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+            </div>
+            <div class="zr-alert zr-alert-success zr-alert-with-description">
+                <span class="zr-alert-message">Success</span>
+                <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+            </div>
+            <div class="zr-alert zr-alert-error zr-alert-with-description">
+                <span class="zr-alert-message">Error</span>
+                <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+            </div>
+            <div class="zr-alert zr-alert-warning zr-alert-with-description">
+                <span class="zr-alert-message">Warning</span>
+                <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>可关闭的提示 <a href="#">#</a></p>
+        <span>显示关闭按钮，点击可关闭警告提示；添加关闭标签，并给标签添加相应class <i class="c-block-inline">zr-alert-close</i></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-640">
+                <div class="zr-alert zr-alert-error">
+                    <a class="zr-alert-close" href="javascript:void(0);">
+                        <i class="zricon-close"></i>
+                    </a>
+                    <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+                </div>
+                <div class="zr-alert zr-alert-error zr-alert-with-description">
+                    <a class="zr-alert-close" href="javascript:void(0);">
+                        <i class="zricon-close"></i>
+                    </a>
+                    <span class="zr-alert-message">Error</span>
+                    <span class="zr-alert-description">Error Description Error Description Error Description Error Description</span>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <div class="zr-alert zr-alert-error">
+                <a class="zr-alert-close" href="javascript:void(0);">
+                    <i class="zricon-close"></i>
+                </a>
+                <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+            </div>
+            <div class="zr-alert zr-alert-error zr-alert-with-description">
+                <a class="zr-alert-close" href="javascript:void(0);">
+                    <i class="zricon-close"></i>
+                </a>
+                <span class="zr-alert-message">Error</span>
+                <span class="zr-alert-description">Error Description Error Description Error Description Error Description</span>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>带图标的提示 <a href="#">#</a></p>
+        <span>图标可以让提示更醒目，则添加 <i class="c-block-inline">zr-alert-with-icon</i></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-360">
+                <div class="zr-alert zr-alert-info zr-alert-with-icon">
+                    <i class="zricon-info"></i>
+                    <span class="zr-alert-message">Info Text</span>
+                </div>
+                <div class="zr-alert zr-alert-success zr-alert-with-icon">
+                    <i class="zricon-ok-circle"></i>
+                    <span class="zr-alert-message">Success Text</span>
+                </div>
+                <div class="zr-alert zr-alert-error zr-alert-with-icon">
+                    <i class="zricon-close-circle"></i>
+                    <span class="zr-alert-message">Error Text</span>
+                </div>
+                <div class="zr-alert zr-alert-warning zr-alert-with-icon">
+                    <i class="zricon-warning"></i>
+                    <span class="zr-alert-message">Warning Text</span>
+                </div>
+            </div>
+            <div class="c-demo-w-640">
+                <div class="zr-alert zr-alert-info zr-alert-with-description zr-alert-with-icon">
+                    <i class="zricon-info"></i>
+                    <span class="zr-alert-message">Info</span>
+                    <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+                </div>
+                <div class="zr-alert zr-alert-success zr-alert-with-description zr-alert-with-icon">
+                    <i class="zricon-ok-circle"></i>
+                    <span class="zr-alert-message">Success</span>
+                    <span class="zr-alert-description">Success Description Success Description Success Description Success Description</span>
+                </div>
+                <div class="zr-alert zr-alert-error zr-alert-with-description zr-alert-with-icon">
+                    <i class="zricon-close-circle"></i>
+                    <span class="zr-alert-message">Error</span>
+                    <span class="zr-alert-description">Error Description Error Description Error Description Error Description</span>
+                </div>
+                <div class="zr-alert zr-alert-warning zr-alert-with-description zr-alert-with-icon">
+                    <i class="zricon-close-circle"></i>
+                    <span class="zr-alert-message">Warning</span>
+                    <span class="zr-alert-description">Warning Description Warning Description Warning Description Warning Description</span>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <div class="zr-alert zr-alert-info zr-alert-with-icon">
+                <i class="zricon-info"></i>
+                <span class="zr-alert-message">Info Text</span>
+            </div>
+            <div class="zr-alert zr-alert-success zr-alert-with-icon">
+                <i class="zricon-ok-circle"></i>
+                <span class="zr-alert-message">Success Text</span>
+            </div>
+            <div class="zr-alert zr-alert-error zr-alert-with-icon">
+                <i class="zricon-close-circle"></i>
+                <span class="zr-alert-message">Error Text</span>
+            </div>
+            <div class="zr-alert zr-alert-warning zr-alert-with-icon">
+                <i class="zricon-warning"></i>
+                <span class="zr-alert-message">Warning Text</span>
+            </div>
+            <div class="zr-alert zr-alert-info zr-alert-with-description zr-alert-with-icon">
+                <i class="zricon-info"></i>
+                <span class="zr-alert-message">Info</span>
+                <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+            </div>
+            <div class="zr-alert zr-alert-success zr-alert-with-description zr-alert-with-icon">
+                <i class="zricon-ok-circle"></i>
+                <span class="zr-alert-message">Success</span>
+                <span class="zr-alert-description">Success Description Success Description Success Description Success Description</span>
+            </div>
+            <div class="zr-alert zr-alert-error zr-alert-with-description zr-alert-with-icon">
+                <i class="zricon-close-circle"></i>
+                <span class="zr-alert-message">Error</span>
+                <span class="zr-alert-description">Error Description Error Description Error Description Error Description</span>
+            </div>
+            <div class="zr-alert zr-alert-warning zr-alert-with-description zr-alert-with-icon">
+                <i class="zricon-warning"></i>
+                <span class="zr-alert-message">Warning</span>
+                <span class="zr-alert-description">Warning Description Warning Description Warning Description Warning Description</span>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>自定义关闭按钮 <a href="#">#</a></p>
+        <span>自定义关闭按钮为文字或其他符号</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-360">
+                <div class="zr-alert zr-alert-info zr-alert-with-icon">
+                    <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                    <i class="zricon-info"></i>
+                    <span class="zr-alert-message">Info Text</span>
+                </div>
+                <div class="zr-alert zr-alert-success zr-alert-with-icon">
+                    <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                    <i class="zricon-ok-circle"></i>
+                    <span class="zr-alert-message">Success Text</span>
+                </div>
+                <div class="zr-alert zr-alert-error zr-alert-with-icon">
+                    <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                    <i class="zricon-close-circle"></i>
+                    <span class="zr-alert-message">Error Text</span>
+                </div>
+                <div class="zr-alert zr-alert-warning zr-alert-with-icon">
+                    <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                    <i class="zricon-warning"></i>
+                    <span class="zr-alert-message">Warning Text</span>
+                </div>
+            </div>
+            <div class="c-demo-w-640">
+                <div class="zr-alert zr-alert-info zr-alert-with-description zr-alert-with-icon">
+                    <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                    <i class="zricon-info"></i>
+                    <span class="zr-alert-message">Info</span>
+                    <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+                </div>
+                <div class="zr-alert zr-alert-success zr-alert-with-description zr-alert-with-icon">
+                    <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                    <i class="zricon-ok-circle"></i>
+                    <span class="zr-alert-message">Success</span>
+                    <span class="zr-alert-description">Success Description Success Description Success Description Success Description</span>
+                </div>
+                <div class="zr-alert zr-alert-error zr-alert-with-description zr-alert-with-icon">
+                    <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                    <i class="zricon-close-circle"></i>
+                    <span class="zr-alert-message">Error</span>
+                    <span class="zr-alert-description">Error Description Error Description Error Description Error Description</span>
+                </div>
+                <div class="zr-alert zr-alert-warning zr-alert-with-description zr-alert-with-icon">
+                    <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                    <i class="zricon-warning"></i>
+                    <span class="zr-alert-message">Warning</span>
+                    <span class="zr-alert-description">Warning Description Warning Description Warning Description Warning Description</span>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <div class="zr-alert zr-alert-info zr-alert-with-icon">
+                <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                <i class="zricon-info"></i>
+                <span class="zr-alert-message">Info Text</span>
+            </div>
+            <div class="zr-alert zr-alert-success zr-alert-with-icon">
+                <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                <i class="zricon-ok-circle"></i>
+                <span class="zr-alert-message">Success Text</span>
+            </div>
+            <div class="zr-alert zr-alert-error zr-alert-with-icon">
+                <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                <i class="zricon-close-circle"></i>
+                <span class="zr-alert-message">Error Text</span>
+            </div>
+            <div class="zr-alert zr-alert-warning zr-alert-with-icon">
+                <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                <i class="zricon-warning"></i>
+                <span class="zr-alert-message">Warning Text</span>
+            </div>
+            <div class="zr-alert zr-alert-info zr-alert-with-description zr-alert-with-icon">
+                <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                <i class="zricon-info"></i>
+                <span class="zr-alert-message">Info</span>
+                <span class="zr-alert-description">Info Description Info Description Info Description Info Description</span>
+            </div>
+            <div class="zr-alert zr-alert-success zr-alert-with-description zr-alert-with-icon">
+                <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                <i class="zricon-ok-circle"></i>
+                <span class="zr-alert-message">Success</span>
+                <span class="zr-alert-description">Success Description Success Description Success Description Success Description</span>
+            </div>
+            <div class="zr-alert zr-alert-error zr-alert-with-description zr-alert-with-icon">
+                <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                <i class="zricon-close-circle"></i>
+                <span class="zr-alert-message">Error</span>
+                <span class="zr-alert-description">Error Description Error Description Error Description Error Description</span>
+            </div>
+            <div class="zr-alert zr-alert-warning zr-alert-with-description zr-alert-with-icon">
+                <a class="zr-alert-close" href="javascript:void(0);">close</a>
+                <i class="zricon-warning"></i>
+                <span class="zr-alert-message">Warning</span>
+                <span class="zr-alert-description">Warning Description Warning Description Warning Description Warning Description</span>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+
+</article>
+
+
+</body>
+</html>

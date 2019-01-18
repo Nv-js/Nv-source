@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Affix</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1"/>
+    <link type="text/css" rel="stylesheet" href="/js/plugin_modules/zr/css/zr.min.css?1"/>
+    <style type="text/css">
+        .c-demo button {
+            margin: 0 80% 0 0;
+            width: auto;
+        }
+
+        .c-demo button:first-child{
+            margin: 0 80% 8px 0;
+        }
+        button{
+            width:90px !important;
+        }
+    </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Affix 固钉</p>
+        <span>将元素固定在页面的某个位置，一直保持可见</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>基本样式 <a href="#">#</a></p>
+        <span>最基本的固钉：固定在顶部以及底部</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-affix" style="height:85px;">
+                <button type="button" id="demo-top" class="zr-btn zr-btn-primary">Affix top</button>
+                <button type="button" id="demo-bottom" class="zr-btn zr-btn-primary">Affix bottom</button>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <div class="zr-affix">
+        <button type="button" id="demo-top" class="zr-btn zr-btn-primary">Affix top</button>
+        <button type="button" id="demo-tottom" class="zr-btn zr-btn-primary">Affix bottom</button>
+    </div>
+    <!--Javascript-->
+    Zr.use("affix",function(zr,affix){
+        affix.init({
+            target:"#demo-top"
+        })
+        affix.init({
+            target:"#demo-bottom",
+            type:"bottom"
+        })
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>自定义样式 <a href="#">#</a></p>
+        <span>可以自定义固钉距离顶部以及底部的距离</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-affix" style="height:85px;">
+                <button type="button" id="demo-sop"  class="zr-btn zr-btn-primary">Affix top</button>
+                <button type="button" id="demo-sottom" class="zr-btn zr-btn-primary">Affix bottom</button>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <button type="button" id="demo-sop" class="zr-btn zr-btn-primary">Affix top</button>
+    <button type="button" id="demo-sottom" class="zr-btn zr-btn-primary">Affix bottom</button>
+    <!--Javascript-->
+            Zr.use("affix",function(zr,affix){
+                affix.init({
+                    target:"#demo-sop",
+                    offsetTop:40
+                })
+                affix.init({
+                    target:"#demo-sottom",
+                    type:"bottom",
+                    offsetBottom:40
+                })
+            });
+
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-20" style="height:2000px;"></div>
+</article>
+<script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js?1"></script>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl:"/js/plugin_modules/",
+        requestTime:true
+    });
+    Zr.ready(function(){
+        Zr.use("./js/quickMenu","./js/code");
+        Zr.use("./affix/index",function(zr,affix){
+            affix.init({
+                target:"#demo-top"
+            })
+            affix.init({
+                target:"#demo-bottom",
+                type:"bottom"
+            })
+            affix.init({
+                target:"#demo-sop",
+                offsetTop:40
+            })
+            affix.init({
+                target:"#demo-sottom",
+                type:"bottom",
+                offsetBottom:40
+            })
+        });
+    })
+</script>
+</body>
+</html>

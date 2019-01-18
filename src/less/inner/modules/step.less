@@ -1,0 +1,281 @@
+/*
+ * step
+ */
+//基础样式图文横向排版
+.@{zr-prefix}-step {
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  display: flex;
+  width: 100%;
+  color: @grey-7;
+  .@{zr-prefix}-step-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow: hidden;
+    margin-right: @padding-xs;
+    white-space: nowrap;
+    .@{zr-prefix}-step-icon, .@{zr-prefix}-step-content {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .@{zr-prefix}-step-icon {
+      background-color: @grey-2;
+      width: @btn-height-base;
+      height: @btn-height-base;
+      line-height: @btn-height-base;
+      text-align: center;
+      margin-right: @padding-xs;
+      border: 1px solid @grey-5;
+      border-radius: @border-radius-base*4;
+      span {
+        font-weight: bold;
+        color: @grey-6;
+        top: -1px;
+        position: relative;
+      }
+    }
+    [class^="zricon-"] {
+      color: @normal-color;
+    }
+  }
+  .@{zr-prefix}-step-item:last-child {
+    margin-right: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    .@{zr-prefix}-step-title:after {
+      display: none;
+    }
+  }
+  .@{zr-prefix}-step-item:first-child{
+    .@{zr-prefix}-step-title:before {
+      display: none;
+    }
+  }
+  .@{zr-prefix}-step-content {
+    padding-top: 5px;
+    .@{zr-prefix}-step-title {
+      font-weight: bold;
+      color: @grey-7;
+      display: inline-block;
+      padding-right: @padding-xs;
+      position: relative;
+      &:after {
+        content: '';
+        height: 1px;
+        width: 9999px;
+        background: @grey-4;
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: 100%;
+      }
+    }
+  }
+  .@{zr-prefix}-step-finish {
+    .@{zr-prefix}-step-title:after {
+      background: @primary-color;
+    }
+  }
+  //背景色变主题色表示已经完成
+  .@{zr-prefix}-step-finish{
+    .@{zr-prefix}-step-icon {
+      border: 1px solid @primary-color;
+      span {
+        color: @primary-color;
+      }
+    }
+  }
+  //正在进行项，字色加黑
+  .@{zr-prefix}-step-progress {
+    .@{zr-prefix}-step-icon {
+      background-color: @primary-color;
+      border: 1px solid @primary-color;
+      span {
+        color:@grey-1;
+      }
+    }
+    .@{zr-prefix}-step-title,
+    .@{zr-prefix}-step-description {
+      color: @grey-8;
+    }
+  }
+
+}
+
+//基础样式纵向排版样式
+.@{zr-prefix}-step-vertical {
+  .@{zr-prefix}-step-item {
+    margin-right: 0;
+    .@{zr-prefix}-step-icon, .@{zr-prefix}-step-content {
+      display: block;
+      vertical-align: top;
+    }
+  }
+  .@{zr-prefix}-step-item:first-child{
+    .@{zr-prefix}-step-icon:before{
+      display: none;
+    }
+  }
+  .@{zr-prefix}-step-item:last-child{
+    .@{zr-prefix}-step-icon:after{
+      display: none;
+    }
+  }
+  .@{zr-prefix}-step-icon {
+    margin-left: 50px;
+    &:after {
+      content: '';
+      height: 1px;
+      width: 9999px;
+      background: @grey-4;
+      display: block;
+      position: absolute;
+      top: 16px;
+      left: 90px;
+    }
+    &:before{
+      content: '';
+      height: 1px;
+      width: calc(100% - 50px);
+      background: @grey-4;
+      display: block;
+      position: absolute;
+      top: 16px;
+      left: -28px;
+    }
+  }
+  .@{zr-prefix}-step-content {
+    text-align: center;
+    margin-top: 0px;
+    width: 140px;
+    .@{zr-prefix}-step-title:after {
+      display: none;
+    }
+  }
+  .@{zr-prefix}-step-finish {
+    .@{zr-prefix}-step-icon {
+      &:after {
+        background: @primary-color;
+      }
+    }
+  }
+  .@{zr-prefix}-step-progress {
+    .@{zr-prefix}-step-icon {
+      &:after {
+        background: @grey-4;
+      }
+      &:before{
+        width: calc(100% - 75px);
+        left: -50px;
+        background-color: @primary-color;
+      }
+    }
+  }
+}
+
+//基础样式MINI
+.@{zr-prefix}-step-small {
+  font-size: @font-size-sm;
+  line-height: @btn-height-sm;
+  .@{zr-prefix}-step-item {
+    .@{zr-prefix}-step-icon {
+      width: @btn-height-sm;
+      height: @btn-height-sm;
+      line-height: @btn-height-sm;
+    }
+  }
+  .@{zr-prefix}-step-content {
+    padding-top: 0;
+    .@{zr-prefix}-step-title {
+      line-height: @btn-height-sm;
+      &:after {
+        position: absolute;
+        top: 13px;
+        left: 100%;
+      }
+    }
+  }
+}
+
+//带图标
+.@{zr-prefix}-step-icons {
+  .@{zr-prefix}-step-item {
+    .@{zr-prefix}-step-icon {
+      background-color: @heading-color-dark;
+      margin-right: 0;
+      border: 1px solid @heading-color-dark;
+      i {
+        display: inline-block;
+        font-size: @font-size-sm*2;
+        margin-top: -@padding-xs/2;
+      }
+    }
+  }
+  .@{zr-prefix}-step-finish, .@{zr-prefix}-step-progress {
+    .@{zr-prefix}-step-icon {
+      [class^="zricon-"] {
+        color: @primary-color;
+      }
+    }
+  }
+}
+
+//运行错误
+.@{zr-prefix}-step-error {
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  display: flex;
+  width: 100%;
+  color: @grey-7;
+  .@{zr-prefix}-step-finish, .@{zr-prefix}-step-progress {
+    .@{zr-prefix}-step-icon {
+      background-color: @heading-color-dark;
+      border: 1px solid @heading-color-dark;
+      [class^="zricon-"]  {
+        display: inline-block;
+        font-size: @font-size-base*2+4;
+        margin-top: -@padding-xs/4;
+      }
+    }
+  }
+  .@{zr-prefix}-step-finish {
+    [class^="zricon-"]  {
+      color: @success-color;
+    }
+  }
+  .@{zr-prefix}-step-progress {
+    [class^="zricon-"]  {
+      color: @error-color;
+    }
+    .@{zr-prefix}-step-title,
+    .@{zr-prefix}-step-description {
+      color: @error-color;
+    }
+  }
+}
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-step) {
+  //默认手机
+}
+
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-step) {
+  //平板
+}
+
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-step) {
+  //桌面显示器
+}
+
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-step) {
+  //大桌面显示器
+}
+
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-step) {
+  //大屏慕数据展示
+}

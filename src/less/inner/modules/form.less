@@ -1,0 +1,75 @@
+.zr-form{
+  .zr-form-item{
+    margin-bottom: 24px;
+    //line-height: 32px;
+  }
+  .zr-form-item-control{
+    display: inline-block;
+  }
+  .zr-radio-module{
+    display: inline-block;
+    padding-top: 8px;
+  }
+  .zr-checkbox-module{
+    margin-right: 0;
+    display: inline-block;
+    padding-top: 8px;
+  }
+  .zr-form-item-title{
+    text-align: right;
+    padding-top: 4px;
+    line-height: normal;
+  }
+  .zr-form-btn{
+    font-size: 0;
+    .zr-btn{
+      margin-right: 8px;
+    }
+  }
+  //错误提示
+  .zr-form-item-error{
+    .zr-input,.zr-textarea{
+      border: 1px solid red;
+    }
+    .zr-error-message{
+      display: block;
+      font-size: 14px;
+      color: #E2231A;
+    }
+  }
+  .zr-error-message{
+    display: none;
+  }
+}
+.c-demo{
+  .zr-form{
+    .zr-checkbox-module{
+      margin-right: 10px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-form) {
+  //默认手机
+}
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-form) {
+  //平板
+}
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-form) {
+  //桌面显示器
+}
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-form) {
+  //大桌面显示器
+}
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-form) {
+  //大屏慕数据展示
+}

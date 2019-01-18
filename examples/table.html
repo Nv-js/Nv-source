@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1"/>
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/1.0.9/zr/css/cdn_zr.min.css">
+    <style>
+        th, td {
+            white-space: nowrap;
+        }
+
+        div.dataTables_wrapper {
+            /*width: 800px;*/
+            margin: 0 auto;
+        }
+
+        .zr-page {
+            text-align: right;
+            margin-top: 16px;
+        }
+
+        .zr-page a {
+            vertical-align: top;
+        }
+
+        .c-demo .c-table-w-125 {
+            width: 170px;
+        }
+        .c-demo .zr-checkbox-module {
+            margin-right: 0;
+        }
+        .c-demo .dataTables_paginate{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Table 表格</p>
+        <span>
+            展示大量结构化数据，可以对这些数据进行排序、搜索、分页、自定义等操作
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/table.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/19"><b>组件问题反馈和讨论</b></a>
+        </span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>使用方法</p>
+        <span>
+            <ul>
+                <li><span>支持对数据的基本操作如查看、排序、筛选等，也支持一些复杂操作如自定义等</span></li>
+                <li><span>支持表单对页面的自适应，设置最小宽度，页面小于最小宽度时出横向滚动条。</span></li>
+                <li><span>保持表单的可读性，每列表格可设置最小宽度以及最多可展示的字段数量，超过最多字段出省略号，鼠标悬停时出完整内容。</span></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span> <i class="c-block-inline">zr-table-wrap</i> 为最基础简单的表格样式，在 <i class="c-block-inline">th</i> 或者 <i
+                class="c-block-inline">td</i> 上添加 <i class="c-block-inline">zr-table-text-right</i> 样式属性表示文字右对齐。</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Country</th>
+                            <th class="zr-table-text-right c-table-w-125">Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Otto Clay</td>
+                            <td>23</td>
+                            <td>China</td>
+                            <td class="zr-table-text-right">23.00</td>
+                            <td><a>Edit</a><a>Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Connor Johnston</td>
+                            <td>31</td>
+                            <td>Unit States</td>
+                            <td class="zr-table-text-right">9.00</td>
+                            <td><a>Edit</a><a>Delete</a></td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Timothy Henson</td>
+                            <td>65</td>
+                            <td>Unit States</td>
+                            <td class="zr-table-text-right">100.00</td>
+                            <td><a>Edit</a><a>Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-table-wrap">
+        <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Country</th>
+            <th class="zr-table-text-right">Price</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>001</td>
+            <td>Otto Clay</td>
+            <td>23</td>
+            <td>China</td>
+            <td class="zr-table-text-right">23.00</td>
+            <td><a>Edit</a><a>Delete</a></td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Connor Johnston</td>
+            <td>31</td>
+            <td>Unit States</td>
+            <td class="zr-table-text-right">9.00</td>
+            <td><a>Edit</a><a>Delete</a></td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Timothy Henson</td>
+            <td>65</td>
+            <td>Unit States</td>
+            <td class="zr-table-text-right">100.00</td>
+            <td><a>Edit</a><a>Delete</a></td>
+        </tr>
+        </tbody>
+</table>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>批量操作 <a href="#">#</a></p>
+        <span>用户可以进行批量操作，在 <i class="c-block-inline">zr-table-wrap</i> 后面添加 <i class="c-block-inline">zr-table-checkbox</i> 属性，首列添加 <i
+                class="c-block-inline">Checkbox</i> 对应组件模块，<i class="c-block-inline">Checkbox</i> 使用详情见 <a
+                href="/docs?languageCode=CN&columnUid=40ad19be535e477596a033f9fea2bf7d&directoryUid=0a2ca6c293974779b65e9b9f6c35b962&directoryName=Checkbox%20复选框">Checkbox 复选框</a></span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-table-wrap zr-table-checkbox">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" name="" value="0" class="zr-checkbox">
+                        </th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Country</th>
+                        <th class="zr-table-text-right c-table-w-125">Price</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" value="0" class="zr-checkbox">
+                        </td>
+                        <td>001</td>
+                        <td>Otto Clay</td>
+                        <td>23</td>
+                        <td>China</td>
+                        <td class="zr-table-text-right">23.00</td>
+                        <td><a>Edit</a><a>Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" value="0" class="zr-checkbox">
+                        </td>
+                        <td>002</td>
+                        <td>Connor Johnston</td>
+                        <td>31</td>
+                        <td>Unit States</td>
+                        <td class="zr-table-text-right">9.00</td>
+                        <td><a>Edit</a><a>Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="" value="0" class="zr-checkbox">
+                        </td>
+                        <td>003</td>
+                        <td>Alexander</td>
+                        <td>42</td>
+                        <td>Unit States</td>
+                        <td class="zr-table-text-right">100.00</td>
+                        <td><a>Edit</a><a>Delete</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-table-wrap zr-table-checkbox">
+        <table>
+            <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                </th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Country</th>
+                <th class="zr-table-text-right c-table-w-125">Price</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                </td>
+                <td>001</td>
+                <td>Otto Clay</td>
+                <td>23</td>
+                <td>China</td>
+                <td class="zr-table-text-right">23.00</td>
+                <td><a>Edit</a><a>Delete</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                </td>
+                <td>002</td>
+                <td>Connor Johnston</td>
+                <td>31</td>
+                <td>Unit States</td>
+                <td class="zr-table-text-right">9.00</td>
+                <td><a>Edit</a><a>Delete</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                </td>
+                <td>003</td>
+                <td>Alexander</td>
+                <td>42</td>
+                <td>Unit States</td>
+                <td class="zr-table-text-right">100.00</td>
+                <td><a>Edit</a><a>Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>固定表头 <a href="#">#</a></p>
+        <span>引用了 <i class="c-block-inline">DataTables</i> 插件，固定表头功能只需绑定ID，在js处设置 <i class="c-block-inline">scrollY</i> 数值即可。</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-table-wrap zr-table-wrap-border zr-table-normal">
+                <table id="example">
+                    <thead>
+                        <tr>
+                        <th>Number</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                        <th>Extn.</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Tiger</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>14</td>
+                            <td>01/25</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Connor</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>24</td>
+                            <td>03/25</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Johnston</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>18</td>
+                            <td>10/25</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>Alexander</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>21</td>
+                            <td>06/25</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>005</td>
+                            <td>Amy</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>19</td>
+                            <td>04/01</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>006</td>
+                            <td>Tony</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>16</td>
+                            <td>08/25</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--html代码-->
+    <div class="zr-table-wrap zr-table-wrap-border">
+        <table id="example">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                    <th>Extn.</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Tiger</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>14</td>
+                    <td>01/25</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Connor</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>24</td>
+                    <td>03/25</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Johnston</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>18</td>
+                    <td>10/25</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Alexander</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>21</td>
+                    <td>06/25</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Amy</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>19</td>
+                    <td>04/01</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+                <tr>
+                    <td>006</td>
+                    <td>Tony</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>16</td>
+                    <td>08/25</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--javascript代码-->
+    Zr.ready(function(){
+        Zr.use("jquery", "./dataTables/fixedColumns",function ($,DataTable) {
+            var table = $('#example').DataTable({
+                scrollY: "150px",
+                scrollCollapse: true,
+                paging: true,
+                bLengthChange:false,
+                oLanguage:{
+                    oPaginate:{
+                        "sPrevious": "<i class='zricon-arrow-left'></i>",
+                        "sNext": "<i class='zricon-arrow-right'></i>",
+                    }
+                },
+                columnDefs:[{
+                    targets : [2,3,4,7,8,9],
+                    orderable : false
+                }]
+            });
+        }
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>固定列 <a href="#">#</a></p>
+        <span>引用了 <i class="c-block-inline">DataTables</i> 插件，固定列功能只需绑定ID，在js处设置 <i class="c-block-inline">fixedColumns</i> 参数即可。</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-table-wrap zr-table-wrap-border">
+                <table id="example1">
+                    <thead>
+                        <tr>
+                        <th>Number</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Shool</th>
+                        <th>Salary</th>
+                        <th>Extn.</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Tiger</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>14</td>
+                            <td>01/25</td>
+                            <td>AU</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Connor</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>24</td>
+                            <td>03/25</td>
+                            <td>AU</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Johnston</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>18</td>
+                            <td>10/25</td>
+                            <td>AU</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>004</td>
+                            <td>Alexander</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>21</td>
+                            <td>06/25</td>
+                            <td>AU</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>005</td>
+                            <td>Amy</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>19</td>
+                            <td>04/01</td>
+                            <td>AU</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                        <tr>
+                            <td>006</td>
+                            <td>Tony</td>
+                            <td>Nixon</td>
+                            <td>System</td>
+                            <td>Tokyo</td>
+                            <td>16</td>
+                            <td>08/25</td>
+                            <td>AU</td>
+                            <td>$800</td>
+                            <td>5421</td>
+                            <td><a>Edit</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--html代码-->
+    <div class="zr-table-wrap zr-table-wrap-border">
+        <table id="example1">
+            <thead>
+            <tr>
+                <th>Number</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Shool</th>
+                <th>Salary</th>
+                <th>Extn.</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>001</td>
+                <td>Tiger</td>
+                <td>Nixon</td>
+                <td>System</td>
+                <td>Tokyo</td>
+                <td>14</td>
+                <td>01/25</td>
+                <td>AU</td>
+                <td>$800</td>
+                <td>5421</td>
+                <td><a>Edit</a></td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Connor</td>
+                <td>Nixon</td>
+                <td>System</td>
+                <td>Tokyo</td>
+                <td>24</td>
+                <td>03/25</td>
+                <td>AU</td>
+                <td>$800</td>
+                <td>5421</td>
+                <td><a>Edit</a></td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Johnston</td>
+                <td>Nixon</td>
+                <td>System</td>
+                <td>Tokyo</td>
+                <td>18</td>
+                <td>10/25</td>
+                <td>AU</td>
+                <td>$800</td>
+                <td>5421</td>
+                <td><a>Edit</a></td>
+            </tr>
+            <tr>
+                <td>004</td>
+                <td>Alexander</td>
+                <td>Nixon</td>
+                <td>System</td>
+                <td>Tokyo</td>
+                <td>21</td>
+                <td>06/25</td>
+                <td>AU</td>
+                <td>$800</td>
+                <td>5421</td>
+                <td><a>Edit</a></td>
+            </tr>
+            <tr>
+                <td>005</td>
+                <td>Amy</td>
+                <td>Nixon</td>
+                <td>System</td>
+                <td>Tokyo</td>
+                <td>19</td>
+                <td>04/01</td>
+                <td>AU</td>
+                <td>$800</td>
+                <td>5421</td>
+                <td><a>Edit</a></td>
+            </tr>
+            <tr>
+                <td>006</td>
+                <td>Tony</td>
+                <td>Nixon</td>
+                <td>System</td>
+                <td>Tokyo</td>
+                <td>16</td>
+                <td>08/25</td>
+                <td>AU</td>
+                <td>$800</td>
+                <td>5421</td>
+                <td><a>Edit</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--javascript代码-->
+    Zr.ready(function(){
+        Zr.use("jquery", "./dataTables/fixedColumns",function ($,DataTable) {
+            var table = $('#example').DataTable({
+                scrollX: true,
+                scrollCollapse: true,
+                paging: true,
+                bLengthChange:false,
+                fixedColumns: {
+                    leftColumns: 1,
+                    rightColumns: 1
+                },
+                oLanguage:{
+                    oPaginate:{
+                        "sPrevious": "<i class='zricon-arrow-left'></i>",
+                        "sNext": "<i class='zricon-arrow-right'></i>",
+                    }
+                },
+                columnDefs:[{
+                    targets : [2,3,4,7,8,9,10],
+                    orderable : false
+                }]
+            });
+        })
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>固定表头和列 <a href="#">#</a></p>
+        <div class="editor">
+            <p class="capitalize"></p>
+        </div>
+        <span>引用了 <i class="c-block-inline">DataTables</i> 插件，固定表头和列的功能只需绑定ID，在js处设置 <i class="c-block-inline">scrollY、fixedColumns</i> 参数即可。</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <div class="zr-table-wrap zr-table-wrap-border">
+                <table id="example2">
+                    <thead>
+                    <tr>
+                        <th>Number</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Age</th>
+                        <th>Start date</th>
+                        <th>Shool</th>
+                        <th>Salary</th>
+                        <th>Extn.</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Tiger</td>
+                        <td>Nixon</td>
+                        <td>System</td>
+                        <td>Tokyo</td>
+                        <td>14</td>
+                        <td>01/25</td>
+                        <td>AU</td>
+                        <td>$800</td>
+                        <td>5421</td>
+                        <td><a>Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Connor</td>
+                        <td>Nixon</td>
+                        <td>System</td>
+                        <td>Tokyo</td>
+                        <td>24</td>
+                        <td>03/25</td>
+                        <td>AU</td>
+                        <td>$800</td>
+                        <td>5421</td>
+                        <td><a>Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Johnston</td>
+                        <td>Nixon</td>
+                        <td>System</td>
+                        <td>Tokyo</td>
+                        <td>18</td>
+                        <td>10/25</td>
+                        <td>AU</td>
+                        <td>$800</td>
+                        <td>5421</td>
+                        <td><a>Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Alexander</td>
+                        <td>Nixon</td>
+                        <td>System</td>
+                        <td>Tokyo</td>
+                        <td>21</td>
+                        <td>06/25</td>
+                        <td>AU</td>
+                        <td>$800</td>
+                        <td>5421</td>
+                        <td><a>Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Amy</td>
+                        <td>Nixon</td>
+                        <td>System</td>
+                        <td>Tokyo</td>
+                        <td>19</td>
+                        <td>04/01</td>
+                        <td>AU</td>
+                        <td>$800</td>
+                        <td>5421</td>
+                        <td><a>Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td>006</td>
+                        <td>Tony</td>
+                        <td>Nixon</td>
+                        <td>System</td>
+                        <td>Tokyo</td>
+                        <td>16</td>
+                        <td>08/25</td>
+                        <td>AU</td>
+                        <td>$800</td>
+                        <td>5421</td>
+                        <td><a>Edit</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--html代码-->
+    <div class="zr-table-wrap zr-table-wrap-border">
+        <table id="example2">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Shool</th>
+                    <th>Salary</th>
+                    <th>Extn.</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>Tiger</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>14</td>
+                    <td>01/25</td>
+                    <td>AU</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Connor</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>24</td>
+                    <td>03/25</td>
+                    <td>AU</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Johnston</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>18</td>
+                    <td>10/25</td>
+                    <td>AU</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+                <tr>
+                    <td>004</td>
+                    <td>Alexander</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>21</td>
+                    <td>06/25</td>
+                    <td>AU</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+                <tr>
+                    <td>005</td>
+                    <td>Amy</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>19</td>
+                    <td>04/01</td>
+                    <td>AU</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+                <tr>
+                    <td>006</td>
+                    <td>Tony</td>
+                    <td>Nixon</td>
+                    <td>System</td>
+                    <td>Tokyo</td>
+                    <td>16</td>
+                    <td>08/25</td>
+                    <td>AU</td>
+                    <td>$800</td>
+                    <td>5421</td>
+                    <td><a>Edit</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--javascript代码-->
+    Zr.ready(function(){
+        Zr.use("jquery", "./dataTables/fixedColumns",function ($,DataTable) {
+            var table = $('#example2').DataTable({
+                scrollY: "150px",
+                scrollX: true,
+                scrollCollapse: true,
+                paging: true,
+                bLengthChange:false,
+                    fixedColumns: {
+                        leftColumns: 1,
+                        rightColumns: 1
+                    },
+                oLanguage:{
+                    oPaginate:{
+                        "sPrevious": "<i class='zricon-arrow-left'></i>",
+                        "sNext": "<i class='zricon-arrow-right'></i>",
+                    }
+                },
+                columnDefs:[{
+                    targets : [2,3,4,7,8,9,10],
+                    orderable : false
+                }]
+            });
+        })
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+</article>
+<!--<script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js"></script>-->
+<script type="text/javascript" src="/js/zr.js?1"></script>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl: "/js/plugin_modules/",
+        requestTime: true
+    })
+    Zr.ready(function () {
+        Zr.use("./js/quickMenu", "./js/code", "jquery", "./dataTables/fixedColumns", "./zrModules/page", function (zr, quickMenu, code, $, DataTable, page) {
+            var table = $('#example').DataTable({
+                scrollY: "150px",
+                scrollCollapse: true,
+                paging: true,
+                bLengthChange:false,
+                oLanguage:{
+                    oPaginate:{
+                        "sPrevious": "<i class='zricon-arrow-left'></i>",
+                        "sNext": "<i class='zricon-arrow-right'></i>"
+                    }
+                },
+                columnDefs:[{
+                    targets : [2,3,4,7,8,9],
+                    orderable : false
+                }]
+            });
+            var table = $('#example1').DataTable({
+                scrollX: true,
+                scrollCollapse: true,
+                paging: true,
+                bLengthChange:false,
+                fixedColumns: {
+                    leftColumns: 1,
+                    rightColumns: 1
+                },
+                oLanguage:{
+                    oPaginate:{
+                        "sPrevious": "<i class='zricon-arrow-left'></i>",
+                        "sNext": "<i class='zricon-arrow-right'></i>"
+                    }
+                },
+                columnDefs:[{
+                    targets : [2,3,4,7,8,9,10],
+                    orderable : false
+                }]
+            });
+            var table = $('#example2').DataTable({
+                scrollY: "150px",
+                scrollX: true,
+                scrollCollapse: true,
+                paging: true,
+                bLengthChange:false,
+                fixedColumns: {
+                    leftColumns: 1,
+                    rightColumns: 1
+                },
+                oLanguage:{
+                    oPaginate:{
+                        "sPrevious": "<i class='zricon-arrow-left'></i>",
+                        "sNext": "<i class='zricon-arrow-right'></i>"
+                    }
+                },
+                columnDefs:[{
+                    targets : [2,3,4,7,8,9,10],
+                    orderable : false
+                }]
+            });
+            page.init(200, {
+                items_per_page: 40
+            }, ".basis-page");
+
+            page.init(200, {
+                items_per_page: 10
+            }, document.getElementsByClassName("more-page")[0]);
+        })
+    })
+</script>
+</body>
+</html>

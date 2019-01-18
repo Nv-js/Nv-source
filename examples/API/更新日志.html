@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更新日志</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <!--}-->
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code")
+        })
+    </script>
+</head>
+
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>更新日志</p>
+        <span>严格遵循 <a target="_blank" href="https://semver.org/lang/zh-CN/">Semantic Versioning 2.0.0</a> 语义化版本规范</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>发布周期 <a href="#">#</a></p>
+        <span>
+            版本格式：主版本号.次版本号.修订号，先行版本号及版本编译信息可以加到“主版本号.次版本号.修订号”的后面，作为延伸。
+            <ul>
+                <li><div>主版本号：当你做了不兼容的 API 修改</div></li>
+                <li><div>次版本号：当你做了向下兼容的功能性新增</div></li>
+                <li><div>修订号：当你做了向下兼容的问题修正</div></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>更新时间轴 <a href="#">#</a></p>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-360">
+                <ul class="zr-timeline">
+                    <li class="zr-timeline-item">
+                        <i class="zr-timeline-icon"></i>
+                        <div class="zr-timeline-content">
+                            <h2>v2.0.0</h2>
+                            <div class="c-block-10"></div>
+                            <span>
+                                <h3>2018-01-15</h3>
+                                <p>将beta版本升级，目前测试完毕，可以稳定使用</p>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="zr-timeline-item">
+                        <i class="zr-timeline-icon"></i>
+                        <div class="zr-timeline-content">
+                            <h2>v1.0.0</h2>
+                            <div class="c-block-10"></div>
+                            <span>
+                                <h3>2018-12-30</h3>
+                                <p>大调整，此版本为bate版本，请关注V2.0.0正式版本</p>
+                                <p>　~引擎模块大修改，兼容老版本Zr，新增很多新功能</p>
+                                <p>　~内置组件重构，部分功能不兼容，请慎重升级</p>
+                                <p>　~外置组件优化</p>
+                                <p>　~文档重写</p>
+                                <p>　~PRO修改</p>
+                                <p>　~全局支持多语言</p>
+                                <p>　~各个外置组件可以自定义版本号</p>
+                                <p>　~支持多种皮肤的PRO</p>
+                                <p>　~技术库和文档迁移到GitHub</p>
+                                <p>　~支持话题讨论和留言到GitHub</p>
+                                <p>　~专业的前端团队保障，永久的和良好的服务支撑</p>
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</article>
+</body>
+</html>

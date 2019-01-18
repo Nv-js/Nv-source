@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <!--开发阶段引用jq-->
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <style>
+        .zr-checkbox-vertical .zr-checkbox-module{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Checkbox 复选框</p>
+        <span>对一组选项进行单选，主要用于一组可选项单项选择，或者单独用于切换到选中状态。</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>使用方法</p>
+        <span>
+            <ul>
+                <li><span>在一组可选项中进行多项选择时。</span></li>
+                <li><span>单独使用可以表示两种状态之间的切换。</span></li>
+                <li><span>复选按钮有选中态、未选中态、禁用态，放置在可选信息的左侧。</span></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>最基础简单的复选框样式,只需在input标签上加上class为 <i class="c-block-inline">zr-checkbox</i> 即可实现,标签添加 <i class="c-block-inline">checked="true"</i> 即为选中</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox">
+            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true">
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox">
+            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true">
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>禁选样式 <a href="#">#</a></p>
+        <span>复选框不可用状态：不可选、不可更改,标签上添加 <i class="c-block-inline">disabled="disabled"</i> 代表复选框禁用</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox" disabled="disabled">
+            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true" disabled="disabled">
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox" disabled="disabled">
+            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true" disabled="disabled">
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>复选框组合样式 <a href="#">#</a></p>
+        <span>在一个复选框组合内有多个勾选项，标签上添加 <i class="c-block-inline">title</i> 属性代表复选框显示文字</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox">
+            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true">
+            <input type="checkbox" name="" value="0" title="checkbox3" class="zr-checkbox" disabled="disabled">
+            <input type="checkbox" name="" value="0" title="checkbox4" class="zr-checkbox" checked="true" disabled="disabled">
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox">
+            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true">
+            <input type="checkbox" name="" value="0" title="checkbox3" class="zr-checkbox" disabled="disabled">
+            <input type="checkbox" name="" value="0" title="checkbox4" class="zr-checkbox" checked="true" disabled="disabled">
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>全选 (水平)<a href="#">#</a></p>
+        <span>所有选项全部勾选</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-checkbox-container">
+                <div class="zr-checkbox-all-container">
+                    <input type="checkbox" name="" value="0" title="Check all" class="zr-checkbox zr-checkbox-all" checked="true">
+                </div>
+                <div class="zr-checkbox-sigle-container">
+                    <input type="checkbox" name="" value="0" title="Checkbox1" class="zr-checkbox" zr-checkbox-click="checks">
+                    <input type="checkbox" name="" value="0" title="Checkbox2" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox3" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox4" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox5" class="zr-checkbox">
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <div class="zr-checkbox-container">
+                <div class="zr-checkbox-all-container">
+                    <input type="checkbox" name="" value="0" title="Check all" class="zr-checkbox zr-checkbox-all" checked="true">
+                </div>
+                <div class="zr-checkbox-sigle-container">
+                    <input type="checkbox" name="" value="0" title="Checkbox1" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox2" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox3" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox4" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox5" class="zr-checkbox">
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>全选 (垂直)<a href="#">#</a></p>
+        <span>只需在class为 <i class="c-block-inline">zr-checkbox-sigle-container</i> 的节点上添加一个 <i class="c-block-inline">zr-checkbox-vertical</i> 的class即可实现垂直全选</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-checkbox-container">
+                <div class="zr-checkbox-all-container">
+                    <input type="checkbox" name="" value="0" title="Check all" class="zr-checkbox zr-checkbox-all" checked="true">
+                </div>
+                <div class="zr-checkbox-sigle-container zr-checkbox-vertical">
+                    <input type="checkbox" name="" value="0" title="Checkbox1" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox2" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox3" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox4" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox5" class="zr-checkbox">
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <div class="zr-checkbox-container">
+                <div class="zr-checkbox-all-container">
+                    <input type="checkbox" name="" value="0" title="Check all" class="zr-checkbox zr-checkbox-all" checked="true">
+                </div>
+                <div class="zr-checkbox-sigle-container zr-checkbox-vertical">
+                    <input type="checkbox" name="" value="0" title="Checkbox1" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox2" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox3" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox4" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" title="Checkbox5" class="zr-checkbox">
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>自定义事件<a href="#">#</a></p>
+        <span>checkbox内置了一个名为zrChange的事件，只需要调用该事件就可以动态配置checkbox的选中和禁用状态（主要用于渲染完成之后动态改变checkbox的选中和禁用状态）</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <input type="checkbox" name="" value="111" title="Checkbox1" class="zr-checkbox" id="ckeckbox-demo1">
+            <input type="checkbox" name="" value="2222" title="Checkbox1" class="zr-checkbox" id="ckeckbox-demo2">
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <!--html代码-->
+            <input type="checkbox" name="" value="111" title="Checkbox1" class="zr-checkbox" id="ckeckbox-demo3">
+            <!--javascript代码-->
+            <!--checked属性默认为false不选中，当他为true时会选中-->
+            document.getElementById("ckeckbox-demo3").zrChange({
+                checked:true
+            })
+            <!--html代码-->
+            <input type="checkbox" name="" value="222" title="Checkbox1" class="zr-checkbox" id="ckeckbox-demo4">
+            <!--javascript代码-->
+            <!--disabled属性默认为false不选中，当他为true时会选中-->
+            document.getElementById("ckeckbox-demo4").zrChange({
+                disabled:true
+            })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+</article>
+<!--注意此段js必须第一引入在开发模式下{-->
+<script type="text/javascript" src="js/checkbox.js"></script>
+<script type="text/javascript" src="//storage.jd.com/1.2.2/zr.dev.min.js"></script>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl: "/js/plugin_modules/",
+        requestTime:true
+    })
+    Zr.ready(function(){
+        Zr.use("jquery","./js/quickMenu","./js/code",function(zr,$){
+            document.getElementById("ckeckbox-demo1").zrChange({
+                checked:true
+            })
+            document.getElementById("ckeckbox-demo2").zrChange({
+                disabled:true
+            })
+        })
+    })
+</script>
+</body>
+</html>

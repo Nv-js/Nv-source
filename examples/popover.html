@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>popover</title>
+    <!--开发阶段引用jq-->
+    <!--<script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>-->
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <style type="text/css">
+          .zr-popover{
+              margin-right: 8px;
+          }
+          .zr-popover-derection-left .zr-popover,.c-demo .zr-popover-derection-right .zr-popover{
+              margin-bottom: 8px;
+          }
+          .c-demo .zr-popover-derection-top {
+              margin-left: 226px;
+              white-space: nowrap;
+              margin-top: 8px;
+          }
+          .c-demo .zr-popover-derection-left {
+              width: 70px;
+              float: left;
+              margin-left: 137px;
+          }
+          .c-demo .zr-popover-derection-right {
+              width: 70px;
+              margin-left: 462px;
+          }
+          .c-demo .zr-popover-derection-bottom {
+              margin-left: 226px;
+              clear: both;
+              white-space: nowrap;
+          }
+          .zr-popover-hide{
+              display: none;
+          }
+      </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Popover 气泡卡片</p>
+        <span>文字提示气泡框，当鼠标悬浮时出现。</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>基本样式 <a href="#">#</a></p>
+        <span>触发按钮添加zr-popover-btn类，默认是hover触发。<br/><strong>为了更好的用户体验，建议添加zr-popover类的标签用span标签，并为zr-popover-content的标签添加style="display: none"的样式</strong></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <span class="zr-popover" id="zr-popover-clcik">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">Click</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-hover">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">Hover</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover hover <br/>
+                        I am popover hover <br/>
+                        I am popover hover
+                    </div>
+                </div>
+            </span>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <span class="zr-popover" id="zr-popover-clcik">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">Click</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-hover">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">Hover</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover hover <br/>
+                        I am popover hover <br/>
+                        I am popover hover
+                    </div>
+                </div>
+            </span>
+            <!-- <script type="text/javascript">
+                Zr.config({
+                    baseUrl: "/js/plugin_modules/",
+                    requestTime:true
+                })
+                Zr.ready(function(){
+                    Zr.use("./js/quickMenu","./js/code")
+                    Zr.use("./popover/index",function(zr,popover){
+                        popover.init({
+                            target: '#zr-popover-clcik',
+                            position: 'top',
+                            width: '230px',
+                            event: 'click'
+                        });
+                        popover.init({
+                           target: '#zr-popover-hover',
+                           position: 'right'
+                        });
+                    });
+                })
+            
+            </script> -->
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>不同的展示位置 <a href="#">#</a></p>
+        <span>位置有12个方向</span>
+    </section>
+    <section class="c-code">
+         <!--switch code show or hide-->
+         <div class="c-code-switch">&lt;code&gt;</div>
+         <div class="c-demo">
+            <div class="zr-popover-derection">
+                <div class="zr-popover-derection-top">
+                    <span class="zr-popover" id="zr-popover-tl">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上左</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                    <span class="zr-popover" id="zr-popover-top">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上边</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                    <span class="zr-popover" id="zr-popover-tr">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上右</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="zr-popover-derection-left">
+                    <span class="zr-popover" id="zr-popover-lt">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左上</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                    <span class="zr-popover" id="zr-popover-left">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左边</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                    <span class="zr-popover" id="zr-popover-lb">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左下</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="zr-popover-derection-right">
+                    <span class="zr-popover" id="zr-popover-rt">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右上</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                    <span class="zr-popover" id="zr-popover-right">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右边</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                    <span class="zr-popover" id="zr-popover-rb">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右下</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="zr-popover-derection-bottom">
+                    <span class="zr-popover" id="zr-popover-bl">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                    <span class="zr-popover" id="zr-popover-bottom">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下边</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                    <span class="zr-popover" id="zr-popover-br">
+                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下右</button>
+                        <div class="zr-popover-content" style="display: none">
+                            <div class="zr-popover-arrow"></div>
+                            <div class="zr-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+         </div>
+         <div class="c-code-inner c-code-hide">
+            <span class="zr-popover" id="zr-popover-tl">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上左</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-top">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上边</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-tr">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上右</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-lt">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左上</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-left">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左边</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-lb">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左下</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-rt">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右上</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-right">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右边</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-rb">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右下</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-bl">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-bottom">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下边</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover" id="zr-popover-br">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下右</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am popover content <br/>
+                        I am popover content <br/>
+                        I am popover content
+                    </div>
+                </div>
+            </span>
+            <!-- <script>
+                popover.init({
+                target: '#zr-popover-tl',
+                position: 'tl'
+            });
+            popover.init({
+                target: '#zr-popover-top',
+                position: 'top'
+            });
+            popover.init({
+                target: '#zr-popover-tr',
+                position: 'tr'
+            });
+            popover.init({
+                target: '#zr-popover-lt',
+                position: 'lt'
+            });
+            popover.init({
+                target: '#zr-popover-left',
+                position: 'left'
+            });
+            popover.init({
+                target: '#zr-popover-lb',
+                position: 'lb'
+            });
+            popover.init({
+                target: '#zr-popover-rt',
+                position: 'rt'
+            });
+            popover.init({
+                target: '#zr-popover-right',
+                position: 'right'
+            });
+            popover.init({
+                target: '#zr-popover-rb',
+                position: 'rb'
+            });
+            popover.init({
+                target: '#zr-popover-bl',
+                position: 'bl'
+            });
+            popover.init({
+                target: '#zr-popover-bottom',
+                position: 'bottom'
+            });
+            popover.init({
+                target: '#zr-popover-br',
+                position: 'br'
+            });
+            </script> -->
+         </div>
+         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>同时初始化多个卡片 <a href="#">#</a></p>
+        <span>支持使用class类名同时初始化多个气泡卡片</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <span class="zr-popover same-popover">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am init at the same time1 <br/>
+                        I am init at the same time <br/>
+                        I am init at the same time
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover same-popover">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am init at the same time2 <br/>
+                        I am init at the same time <br/>
+                        I am init at the same time
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover same-popover">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am init at the same time3 <br/>
+                        I am init at the same time <br/>
+                        I am init at the same time
+                    </div>
+                </div>
+            </span>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <span class="zr-popover same-popover">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am init at the same time1 <br/>
+                        I am init at the same time <br/>
+                        I am init at the same time
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover same-popover">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am init at the same time2 <br/>
+                        I am init at the same time <br/>
+                        I am init at the same time
+                    </div>
+                </div>
+            </span>
+            <span class="zr-popover same-popover">
+                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        I am init at the same time3 <br/>
+                        I am init at the same time <br/>
+                        I am init at the same time
+                    </div>
+                </div>
+            </span>
+            <!-- <script>
+                popover.init({
+                        target: '.same-popover',
+                        position: 'bl'
+                    })
+            </script> -->
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+            <p>内嵌操作 <a href="#">#</a></p>
+            <span>更为轻量的弹窗框，可操作</span>
+    </section>
+    <section class="c-code">
+         <!--switch code show or hide-->
+         <div class="c-code-switch">&lt;code&gt;</div>
+         <div class="c-demo">
+            <span class="zr-popover" id="zr-popover-delete">
+                <p class="zr-popover-btn">Delete</p>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        <p style="padding: 10px 0 20px 0">Are you sure delete this task?</p>
+                        <div style="text-align: right;">
+                            <button class="zr-btn zr-btn-default zr-btn-sm" style="margin-right: 8px;">No</button><button class="zr-btn zr-btn-primary zr-btn-sm zr-popover-confirm-ok">Ok</button>
+                        </div> 
+                    </div>
+                </div>
+            </span>
+         </div>
+         <div class="c-code-inner c-code-hide">
+            <span class="zr-popover" id="zr-popover-delete">
+                <p class="zr-popover-btn">Delete</p>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        <p style="padding: 10px 0 20px 0">Are you sure delete this task?</p>
+                        <div style="text-align: right;">
+                            <button class="zr-btn zr-btn-default zr-btn-sm" style="margin-right: 8px;">No</button><button class="zr-btn zr-btn-primary zr-btn-sm zr-popover-confirm-ok">Ok</button>
+                        </div> 
+                    </div>
+                </div>
+            </span>
+            <!-- <script>
+                popover.init({
+                target: '#zr-popover-delete',
+                onClose: function(dom){
+                    console.log(dom.id);
+                },
+                onOpen: function(dom){
+                    console.log(dom.id)
+                }
+            });
+            </script> -->
+         </div>
+         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+            <p>内嵌信息 <a href="#">#</a></p>
+            <span>可以内嵌多种类型信息，比如表格信息</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <span class="zr-popover" id="zr-popover-table">
+                <button class="zr-btn zr-btn-default zr-popover-btn">Click</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        <div class="zr-table-wrap">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>Otto Clay</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Otto Clay</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Otto Clay</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>004</td>
+                                    <td>Otto Clay</td>
+                                    <td>23</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </span>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <span class="zr-popover" id="zr-popover-table">
+                <button class="zr-btn zr-btn-default zr-popover-btn">Click</button>
+                <div class="zr-popover-content" style="display: none">
+                    <div class="zr-popover-arrow"></div>
+                    <div class="zr-popover-inner">
+                        <div class="zr-table-wrap">
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>001</td>
+                                    <td>Otto Clay</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Otto Clay</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>003</td>
+                                    <td>Otto Clay</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>004</td>
+                                    <td>Otto Clay</td>
+                                    <td>23</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <!-- <script>
+                popover.init({
+                target: '#zr-popover-table',
+                position: 'rt',
+                width: '400',
+                event: 'click',
+                onOpen: function(dom){
+                    console.log("打开");
+                },
+                onClose: function(dom){
+                    console.log("关闭")
+                }
+            });
+            </script> -->
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>参数配置 <a href="#">#</a></p>
+        <span>可以通过传递不同的参数来配置你所需要的业务场景</span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-700">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">target</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">string（必填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">触发的目标元素，可使用ID选择器或类选择器（类选择器可同时初始化多个属性相同的气泡卡片）</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">width</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">number（选填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">值为number类型数字，定义卡片宽度，默认为240</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">position</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">string（选填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">卡片的位置，默认为top，可选值为tl,top,tr,lt,left,lb,rt,right,rb,bl,bottom,br</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">event</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">string（选填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">触发的事件，默认为hover，可选click</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">onOpen</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">function（选填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">卡片显示时的回调函数</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">onClose</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">function（选填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">卡片关闭时的回调函数</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</article>
+<!--注意此段js必须第一引入在开发模式下{-->
+<script type="text/javascript" src="/js/zr.min.js?1"></script>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl: "/js/plugin_modules/",
+        requestTime:true
+    })
+    Zr.ready(function(){
+        Zr.use("./js/quickMenu","./js/code")
+        Zr.use("./popover/index",function(zr,popover){
+            popover.init({
+               target: '#zr-popover-hover',
+               position: 'right'
+            });
+            popover.init({
+                target: '#zr-popover-clcik',
+                position: 'top',
+                width: '230px',
+                event: 'click'
+            });
+            popover.init({
+                target: '#zr-popover-tl',
+                position: 'tl'
+            });
+            popover.init({
+                target: '#zr-popover-top',
+                position: 'top'
+            });
+            popover.init({
+                target: '#zr-popover-tr',
+                position: 'tr'
+            });
+            popover.init({
+                target: '#zr-popover-lt',
+                position: 'lt'
+            });
+            popover.init({
+                target: '#zr-popover-left',
+                position: 'left'
+            });
+            popover.init({
+                target: '#zr-popover-lb',
+                position: 'lb'
+            });
+            popover.init({
+                target: '#zr-popover-rt',
+                position: 'rt'
+            });
+            popover.init({
+                target: '#zr-popover-right',
+                position: 'right'
+            });
+            popover.init({
+                target: '#zr-popover-rb',
+                position: 'rb'
+            });
+            popover.init({
+                target: '#zr-popover-bl',
+                position: 'bl'
+            });
+            popover.init({
+                target: '#zr-popover-bottom',
+                position: 'bottom'
+            });
+            popover.init({
+                target: '#zr-popover-br',
+                position: 'br'
+            });
+            popover.init({
+                target: '#zr-popover-delete',
+                onOpen: function(dom){
+                    console.log(dom.id);
+                },
+                onClose: function(dom){
+                    console.log(dom.id)
+                }
+            });
+            popover.init({
+                target: '#zr-popover-table',
+                position: 'rt',
+                width: '400',
+                event: 'click',
+                onOpen: function(dom){
+                    console.log("打开");
+                },
+                onClose: function(dom){
+                    console.log("关闭")
+                }
+            });
+
+            // class 同时初始化
+            popover.init({
+                target: '.same-popover',
+                position: 'bl'
+            })
+        });
+    })
+
+</script>
+</body>
+</html>

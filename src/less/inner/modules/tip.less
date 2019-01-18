@@ -1,0 +1,205 @@
+﻿/*
+ * tips
+ */
+.@{zr-prefix}-tip {
+  display: none;
+  line-height: 1.5;
+  font-size: @font-size-base;
+  font-weight: @btn-font-weight;
+  cursor: pointer;
+  max-width: @tooltip-max-width;
+  text-decoration: none;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 8200;
+}
+.@{zr-prefix}-tip-show{
+  display: inline-block;
+}
+
+  //箭头
+.@{zr-prefix}-tip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: @border-style-base;
+}
+
+//内容
+.@{zr-prefix}-tip-inner {
+  color: @tooltip-color;
+  box-sizing: border-box;
+  text-align: left;
+  padding: @padding-xs - 4px  @padding-md;
+  min-height: @tooltip-height-base;
+  background-color: @tooltip-bg;
+  border: @border-width-base @border-style-base @tooltip-bg;
+  border-radius: @btn-border-radius-base;
+  box-shadow: 0 @padding-xs - 6px @padding-xs @shadow-color;
+}
+
+//上 上左 上右
+.@{zr-prefix}-tip-top,
+.@{zr-prefix}-tip-top-left,
+.@{zr-prefix}-tip-top-right {
+  padding-bottom: @padding-xs;
+  .@{zr-prefix}-tip-arrow {
+    bottom: @tooltip-arrow-width - 2px;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width 0;
+    border-top-color: @tooltip-arrow-color;
+  }
+}
+
+//上
+.@{zr-prefix}-tip-top {
+  .@{zr-prefix}-tip-arrow {
+    left: 50%;
+    margin-left: -@tooltip-arrow-width;
+  }
+}
+
+//上左
+.@{zr-prefix}-tip-top-left {
+  .@{zr-prefix}-tip-arrow {
+    left: @tooltip-position-base;
+  }
+}
+
+//上右
+.@{zr-prefix}-tip-top-right {
+  .@{zr-prefix}-tip-arrow {
+    right: @tooltip-position-base;
+  }
+}
+
+//左 左上 左下
+.@{zr-prefix}-tip-left,
+.@{zr-prefix}-tip-left-top,
+.@{zr-prefix}-tip-left-bottom {
+  padding-right: @padding-xs;
+  .@{zr-prefix}-tip-arrow {
+    right: @tooltip-arrow-width - 2px;
+    border-width: @tooltip-arrow-width 0 @tooltip-arrow-width @tooltip-arrow-width;
+    border-left-color: @tooltip-arrow-color;
+  }
+}
+
+//左
+.@{zr-prefix}-tip-left {
+  .@{zr-prefix}-tip-arrow {
+    top: 50%;
+    margin-top: -@tooltip-arrow-width;
+  }
+}
+
+//左上
+.@{zr-prefix}-tip-left-top {
+  .@{zr-prefix}-tip-arrow {
+    top: @padding-xs;
+  }
+}
+
+//左下
+.@{zr-prefix}-tip-left-bottom {
+  .@{zr-prefix}-tip-arrow {
+    bottom: @padding-xs;
+  }
+}
+
+//右 右上 右下
+.@{zr-prefix}-tip-right,
+.@{zr-prefix}-tip-right-top,
+.@{zr-prefix}-tip-right-bottom {
+  padding-left: @padding-xs;
+  .@{zr-prefix}-tip-arrow {
+    left: @tooltip-arrow-width - 2px;
+    border-width: @tooltip-arrow-width @tooltip-arrow-width @tooltip-arrow-width 0;
+    border-right-color: @tooltip-arrow-color;
+  }
+}
+
+//右
+.@{zr-prefix}-tip-right {
+  .@{zr-prefix}-tip-arrow {
+    top: 50%;
+    margin-top: -@tooltip-arrow-width;
+  }
+}
+
+//右上
+.@{zr-prefix}-tip-right-top {
+  .@{zr-prefix}-tip-arrow {
+    top: @padding-xs;
+  }
+}
+
+//右下
+.@{zr-prefix}-tip-right-bottom {
+  .@{zr-prefix}-tip-arrow {
+    bottom: @padding-xs;
+  }
+}
+
+//下 下左 下右
+.@{zr-prefix}-tip-bottom,
+.@{zr-prefix}-tip-bottom-left,
+.@{zr-prefix}-tip-bottom-right {
+  padding-top: @padding-xs;
+  .@{zr-prefix}-tip-arrow {
+    top: @tooltip-arrow-width - 2px;
+    border-width: 0 @tooltip-arrow-width @tooltip-arrow-width;
+    border-bottom-color: @tooltip-arrow-color;
+  }
+}
+
+//下
+.@{zr-prefix}-tip-bottom {
+  .@{zr-prefix}-tip-arrow {
+    left: 50%;
+    margin-left: -@tooltip-arrow-width;
+  }
+}
+
+//左下
+.@{zr-prefix}-tip-bottom-left {
+  .@{zr-prefix}-tip-arrow {
+    left: @tooltip-position-base;
+  }
+}
+
+
+//右下
+.@{zr-prefix}-tip-bottom-right {
+  .@{zr-prefix}-tip-arrow {
+    right: @tooltip-position-base;
+  }
+}
+
+
+
+
+.@{zr-prefix}-tip-multiline{
+  padding: @padding-xs + 2px  @padding-md;
+}
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-tip) {
+  //默认手机
+}
+
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-tip) {
+  //平板
+}
+
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-tip) {
+  //桌面显示器
+}
+
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-tip) {
+  //大桌面显示器
+}
+
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-tip) {
+  //大屏慕数据展示
+}
+

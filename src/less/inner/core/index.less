@@ -1,0 +1,192 @@
+//基础
+@import "./base";
+//栅格
+@import "../modules/grid";
+//按钮
+@import "../modules/buttons";
+//警告
+@import "../modules/alert";
+//面包屑
+@import "../modules/breadcrumb";
+//下拉菜单
+@import "../modules/dropdown";
+//输入框
+@import "../modules/input";
+//导航和导航菜单
+@import "../modules/nav";
+@import "../modules/nav_geekblue";
+//翻页
+@import "../modules/page";
+//下拉选择器
+@import "../modules/select";
+//步骤条
+@import "../modules/step";
+//上传
+@import "../modules/upload";
+//表单元素
+@import "../modules/form";
+@import "../modules/radio";
+@import "../modules/checkbox";
+//list列表
+@import "../modules/list";
+//timeline时间轴
+@import "../modules/timeline";
+//布局
+@import "../modules/layout";
+//表格
+@import "../modules/table";
+//文字气泡提示
+@import "../modules/tip";
+//徽标数
+@import "../modules/badge";
+//卡片
+@import "../modules/card";
+//头像
+@import "../modules/photo";
+//返回顶部
+@import "../modules/top";
+//分割线
+@import "../modules/divide";
+
+
+
+
+/*!screen media for auto width*/
+@media ( max-width: @screen-phone ) {
+  //默认手机
+  @screen-size-name : @xs-name;
+  .mixin(@screen-size-name,@screen-name-grid);
+  .mixin(@screen-size-name,@screen-name-button);
+  .mixin(@screen-size-name,@screen-name-breadcrumb);
+  .mixin(@screen-size-name,@screen-name-nav);
+  .mixin(@screen-size-name,@screen-name-dropdown);
+  .mixin(@screen-size-name,@screen-name-step);
+  .mixin(@screen-size-name,@screen-name-page);
+  .mixin(@screen-size-name,@screen-name-tab);
+  .mixin(@screen-size-name,@screen-name-input);
+  .mixin(@screen-size-name,@screen-name-select);
+  .mixin(@screen-size-name,@screen-name-upload);
+  .mixin(@screen-size-name,@screen-name-alert);
+  .mixin(@screen-size-name,@screen-name-timeline);
+  .mixin(@screen-size-name,@screen-name-list);
+  .mixin(@screen-size-name,@screen-name-radio);
+  .mixin(@screen-size-name,@screen-name-checkbox);
+  .mixin(@screen-size-name,@screen-name-layout);
+  .mixin(@screen-size-name,@screen-name-tip);
+  .mixin(@screen-size-name,@screen-name-badge);
+  .mixin(@screen-size-name,@screen-name-card);
+  .mixin(@screen-size-name,@screen-name-photo);
+  .mixin(@screen-size-name,@screen-name-top);
+  .mixin(@screen-size-name,@screen-name-divide);
+}
+@media (min-width: @screen-xs-min ){
+  //平板
+  @screen-size-name : @sm-name;
+  .mixin(@screen-size-name,@screen-name-grid);
+  .mixin(@screen-size-name,@screen-name-button);
+  .mixin(@screen-size-name,@screen-name-breadcrumb);
+  .mixin(@screen-size-name,@screen-name-nav);
+  .mixin(@screen-size-name,@screen-name-dropdown);
+  .mixin(@screen-size-name,@screen-name-step);
+  .mixin(@screen-size-name,@screen-name-page);
+  .mixin(@screen-size-name,@screen-name-tab);
+  .mixin(@screen-size-name,@screen-name-input);
+  .mixin(@screen-size-name,@screen-name-select);
+  .mixin(@screen-size-name,@screen-name-upload);
+  .mixin(@screen-size-name,@screen-name-alert);
+  .mixin(@screen-size-name,@screen-name-timeline);
+  .mixin(@screen-size-name,@screen-name-list);
+  .mixin(@screen-size-name,@screen-name-radio);
+  .mixin(@screen-size-name,@screen-name-checkbox);
+  .mixin(@screen-size-name,@screen-name-layout);
+  .mixin(@screen-size-name,@screen-name-tip);
+  .mixin(@screen-size-name,@screen-name-badge);
+  .mixin(@screen-size-name,@screen-name-card);
+  .mixin(@screen-size-name,@screen-name-photo);
+  .mixin(@screen-size-name,@screen-name-top);
+  .mixin(@screen-size-name,@screen-name-divide);
+}
+@media (min-width: @screen-sm-min ){
+  //桌面显示器
+  @screen-size-name : @md-name;
+  .mixin(@screen-size-name,@screen-name-grid);
+  .mixin(@screen-size-name,@screen-name-button);
+  .mixin(@screen-size-name,@screen-name-breadcrumb);
+  .mixin(@screen-size-name,@screen-name-nav);
+  .mixin(@screen-size-name,@screen-name-dropdown);
+  .mixin(@screen-size-name,@screen-name-step);
+  .mixin(@screen-size-name,@screen-name-page);
+  .mixin(@screen-size-name,@screen-name-tab);
+  .mixin(@screen-size-name,@screen-name-input);
+  .mixin(@screen-size-name,@screen-name-select);
+  .mixin(@screen-size-name,@screen-name-upload);
+  .mixin(@screen-size-name,@screen-name-alert);
+  .mixin(@screen-size-name,@screen-name-timeline);
+  .mixin(@screen-size-name,@screen-name-list);
+  .mixin(@screen-size-name,@screen-name-radio);
+  .mixin(@screen-size-name,@screen-name-checkbox);
+  .mixin(@screen-size-name,@screen-name-layout);
+  .mixin(@screen-size-name,@screen-name-tip);
+  .mixin(@screen-size-name,@screen-name-badge);
+  .mixin(@screen-size-name,@screen-name-card);
+  .mixin(@screen-size-name,@screen-name-photo);
+  .mixin(@screen-size-name,@screen-name-top);
+  .mixin(@screen-size-name,@screen-name-divide);
+}
+@media (min-width: @screen-lg-min ){
+  //大桌面显示器
+  @screen-size-name : @lg-name;
+  .mixin(@screen-size-name,@screen-name-grid);
+  .mixin(@screen-size-name,@screen-name-button);
+  .mixin(@screen-size-name,@screen-name-breadcrumb);
+  .mixin(@screen-size-name,@screen-name-nav);
+  .mixin(@screen-size-name,@screen-name-dropdown);
+  .mixin(@screen-size-name,@screen-name-step);
+  .mixin(@screen-size-name,@screen-name-page);
+  .mixin(@screen-size-name,@screen-name-tab);
+  .mixin(@screen-size-name,@screen-name-input);
+  .mixin(@screen-size-name,@screen-name-select);
+  .mixin(@screen-size-name,@screen-name-upload);
+  .mixin(@screen-size-name,@screen-name-alert);
+  .mixin(@screen-size-name,@screen-name-timeline);
+  .mixin(@screen-size-name,@screen-name-list);
+  .mixin(@screen-size-name,@screen-name-radio);
+  .mixin(@screen-size-name,@screen-name-checkbox);
+  .mixin(@screen-size-name,@screen-name-layout);
+  .mixin(@screen-size-name,@screen-name-tip);
+  .mixin(@screen-size-name,@screen-name-badge);
+  .mixin(@screen-size-name,@screen-name-card);
+  .mixin(@screen-size-name,@screen-name-photo);
+  .mixin(@screen-size-name,@screen-name-top);
+  .mixin(@screen-size-name,@screen-name-divide);
+}
+@media (min-width: @screen-xxl-min ){
+  //大屏慕数据展示
+  @screen-size-name : @xl-name;
+  .mixin(@screen-size-name,@screen-name-grid);
+  .mixin(@screen-size-name,@screen-name-button);
+  .mixin(@screen-size-name,@screen-name-breadcrumb);
+  .mixin(@screen-size-name,@screen-name-nav);
+  .mixin(@screen-size-name,@screen-name-dropdown);
+  .mixin(@screen-size-name,@screen-name-step);
+  .mixin(@screen-size-name,@screen-name-page);
+  .mixin(@screen-size-name,@screen-name-tab);
+  .mixin(@screen-size-name,@screen-name-input);
+  .mixin(@screen-size-name,@screen-name-select);
+  .mixin(@screen-size-name,@screen-name-upload);
+  .mixin(@screen-size-name,@screen-name-alert);
+  .mixin(@screen-size-name,@screen-name-timeline);
+  .mixin(@screen-size-name,@screen-name-list);
+  .mixin(@screen-size-name,@screen-name-radio);
+  .mixin(@screen-size-name,@screen-name-checkbox);
+  .mixin(@screen-size-name,@screen-name-layout);
+  .mixin(@screen-size-name,@screen-name-tip);
+  .mixin(@screen-size-name,@screen-name-badge);
+  .mixin(@screen-size-name,@screen-name-card);
+  .mixin(@screen-size-name,@screen-name-photo);
+  .mixin(@screen-size-name,@screen-name-top);
+  .mixin(@screen-size-name,@screen-name-divide);
+}
+
+
+

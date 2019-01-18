@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DatePicker</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
+    <link type="text/css" rel="stylesheet" href="/js/plugin_modules/zr/css/zr.min.css" />
+    <script type="text/javascript" src="http://storage.jd.com/v1.0.0/zr.min.js"></script>
+
+</head>
+
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>DatePicker 日期控件 1.0.9+</p>
+        <span>输入或选择日期的控件，支持年、月、日期等类型。此控件是1.0.9+开始支持</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>使用方法 <a href="#">#</a></p>
+        <ul class="c-introduce-ul">
+            <li>该控件由两部分组成，日期输入字段和日期选择器，用户可以分别输入开始和结束日期或选择连续的一段日期。</li>
+        </ul>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>最基础的日期选择框,只需要使用组件名称"datePicker"，然后调动datePicker.init(options)即可</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Select Date" class="zr-input" id="date-1">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="c-block-10"></div>
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Select DateTime" class="zr-input" id="date-2">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="c-block-10"></div>
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="YYYY-MM-DD HH:mm:ss" value="1987-07-29 06:10:38" class="zr-input" id="date-5">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="c-block-10"></div>
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Select year" class="zr-input" id="date-3">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="c-block-10"></div>
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Select month" class="zr-input" id="date-4">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="c-block-10"></div>
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Select week" value=""  class="zr-input" id="date-6">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="c-block-10"></div>
+            <div style="width:360px">
+                <div class="zr-input-group zr-input zr-input-datepicker" id="date-7">
+                    <input type="text" class="zr-datepicker-range-start" placeholder="Start Date" readonly>
+                    —
+                    <input type="text" class="zr-datepicker-range-end" placeholder="End Date" readonly>
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <!--选择日期-->
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Select Date" class="zr-input" id="date-1">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <!--选择日期与时间-->
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Select DateTime" class="zr-input" id="date-2">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <!--读取输入框日期选择-->
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="YYYY-MM-DD HH:mm:ss" value="1987-07-29 06:10:38" class="zr-input" id="date-5">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <!--选择年-->
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Select year" class="zr-input" id="date-3">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <!--选择月-->
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Select month" class="zr-input" id="date-4">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <!--选择周-->
+            <div style="width:240px">
+                <div class="zr-input-group">
+                    <input type="text" placeholder="Select week" class="zr-input" id="date-6">
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+            <!--双日历选择区间-->
+            <div style="width:360px">
+                <div class="zr-input-group zr-input zr-input-datepicker" id="date-7">
+                    <input type="text" class="zr-datepicker-range-start" placeholder="Start Date" readonly>
+                    —
+                    <input type="text" class="zr-datepicker-range-end" placeholder="End Date" readonly>
+                    <span class="zr-input-addon">
+                      <i class="zricon-calendar-empty"></i>
+                    </span>
+                </div>
+            </div>
+    <script type="text/javascript">
+        /*
+        Zr.use("./datePicker/index",function(zr,picker){
+                picker.init({
+                    target:"#date-1",
+                    type:"normal"
+                });
+                picker.init({
+                    target:"#date-2",
+                    type:"datetime",
+                    format:"YYYY-MM-DD HH"
+                });
+                picker.init({
+                    target:"#date-5",
+                    type:"datetime"
+                });
+                picker.init({
+                    target:"#date-3",
+                    type:"year",
+                    autoClose:true
+                });
+                picker.init({
+                    target:"#date-4",
+                    type:"month"
+                });
+                picker.init({
+                    target:"#date-6",
+                    type:"week"
+                });
+                picker.init({
+                    target:'#date-7',
+                    type:"range"
+                })
+            })
+        */
+    </script>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/"
+        })
+    </script>
+    <script type="text/javascript">
+        Zr.ready(function(){
+            Zr.use("datePicker",function(zr,picker){
+                picker.init({
+                    target:"#date-1",
+                    initialDate:"2018-01-21",
+                    type:"normal",
+                    maxDate:"2018-09-20",
+                    minDate:"2018-01-09"
+                });
+                picker.init({
+                    target:"#date-2",
+                    type:"datetime",
+                    format:"YYYY-MM-DD HH"
+
+                });
+                picker.init({
+                    target:"#date-5",
+                    type:"datetime"
+                });
+                picker.init({
+                    target:"#date-3",
+                    type:"year",
+                    autoClose:true
+                });
+                picker.init({
+                    target:"#date-4",
+                    type:"month",
+                    onselect:function(time,array){
+                        console.log(array[0].format("YYYY-MM-DD"))
+                        console.log(array[array.length - 1].format("YYYY-MM-DD"))
+                    }
+                });
+                picker.init({
+                    target:"#date-6",
+                    type:"week",
+                    onselect:function(time,array){
+                        console.log(array[0].format("YYYY-MM-DD"))
+                        console.log(array[array.length - 1].format("YYYY-MM-DD"))
+                    }
+                });
+                picker.init({
+                    target:'#date-7',
+                    type:"range",
+                    format:"YYYY-MM-DD"
+                })
+            })
+        })
+    </script>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title">
+        <p>options配置 <a href="#">#</a></p>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">language</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">string (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">目前支持zh-CN(默认)和EN两种选择，可以拓展，不设置读取默认组件库配置</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">target</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">string (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">选择器，可以不填写直接调取，填写后自动绑定关系，支持class、id、element</div>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <div class="c-cell c-table-w-125">type</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">string (选填)</div>
+                    </td>
+                    <td >
+                        <div class="c-cell c-table-w-500" style="height:170px;line-height: 20px;">
+                            可选参数:<br />
+                            'month'（1.1.3+）修复了确定按钮没值问题<br />
+                            'year'<br />
+                            'time'<br />
+                            'week'（1.1.3+）新增类型<br />
+                            'normal'<br />
+                            'range'(1.3.3+) 区间选择<br />
+                            'datetime'(默认)
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">autoClose</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">boolean (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">选择后是否触发自动关闭，默认是true,但当type为'datetime'时候此配置失效</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">showBtnTools</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">boolean (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">是否显示底部按钮组，默认显示，如果'autoClose'为false的时候此选项无效</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">format</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">string (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500" style="height:90px;">
+                            可以格式化方式为:Y M D H m s, e.g:'YYYY-MM-DD HH:mm:ss'等各种组合<br/>
+                            @注意：禁止使用特殊格式显示，比如：中文，特殊字符等；<br/>
+                            读取可能会显示不正常
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">isTabSwitch</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">boolean (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500" >
+                            是否显示头部日期与时间的选项卡，默认是true显示
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">autoOffset</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Object (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500" >
+                            {x:number,y:number}，分别对应x轴偏移位置和y轴偏移位置
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">initialDate</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Date String (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500" style="height:800px;">
+                            初始化日期，默认读取input框或者绑定元素取值，或者 new Date(time)对象<br/>
+                            //Date String对象可以是以下几种格式<br/>
+                            //可以是ISO 8601的字符类型<br/>
+                            2013-02-08  # A calendar date part<br/>
+                            2013-W06-5  # A week date part<br/>
+                            2013-039    # An ordinal date part<br/>
+                            //也可以是部分时间片段，日期和时间可以用T或者空格进行分割<br/>
+                            2013-02-08T09            # An hour time part separated by a T<br/>
+                            2013-02-08 09            # An hour time part separated by a space<br/>
+                            2013-02-08 09:30         # An hour and minute time part<br/>
+                            2013-02-08 09:30:26      # An hour, minute, and second time part<br/>
+                            2013-02-08 09:30:26.123  # An hour, minute, second, and millisecond time part<br/>
+                            2013-02-08 24:00:00.000  # hour 24, minute, second, millisecond equal 0 means next day at midnight<br/>
+                            //任何一种时间片段都能进行组合<br/>
+                            2013-02-08 09  # A calendar date part and hour time part<br/>
+                            2013-W06-5 09  # A week date part and hour time part<br/>
+                            2013-039 09    # An ordinal date part and hour time part<br/>
+                            //如果是部分时间片段，也可以设置相对于UTC的时间格式类型，比如：+-HH:mm, +-HHmm, or Z.<br/>
+                            2013-02-08 09+07:00            # +-HH:mm<br/>
+                            2013-02-08 09-0100             # +-HHmm<br/>
+                            2013-02-08 09Z                 # Z<br/>
+                            2013-02-08 09:30:26.123+07:00  # +-HH:mm<br/>
+                            //<br/>
+                            如果关于具体的时间格式表示方法不清楚，请参考标准的Moment控件的格式类型<br/><a href="http://momentjs.cn/docs/#/parsing/string-format/" target="_blank">Moment时间类型</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">minDate</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Date String (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500" >
+                            限制最小的时间点
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">maxDate</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Date String (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500" >
+                            限制最大的时间点
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">onOpen(time)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">function (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">日期控件打开时触发,第一个参数是时间，内部指针是配置的options对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">onSelect(time)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">function (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">日期控件选中时触发,第一个参数是时间，内部指针是配置的options对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">onSure(time)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">function (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">日期控件点击确定按钮时触发,第一个参数是时间，内部指针是配置的options对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">onClose(time)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">function (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">日期控件关闭时触发,第一个参数是时间，内部指针是配置的options对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">onClear(time)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">function (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">日期控件点击清楚按钮时触发,第一个参数是时间，内部指针是配置的options对象</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</article>
+</body>
+</html>

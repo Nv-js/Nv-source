@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/0.0.1/zr/css/cdn_zr.min.css" />
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css"/>
+    <style>
+        .zr-tag,.zr-tag-normal,.zr-tag-closable{
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Tag 标签 1.2.2+</p>
+        <span>用于对内容的分类标记。如果使用请升级版本到1.2.2 版本。</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>特点</p>
+        <span>
+            <ul>
+                <li><span>支持标签的增加及和删除。</span></li>
+                <li><span>支持标签的选择 。</span></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>最基本的标签样式，可以通过添加 <i class="c-block-inline">closable</i> 变为可关闭标签。同时要调用<i class="c-block-inline">tag.init</i>方法初始化即可。页面中所有tag标签自己需要调用一次<i class="c-block-inline">tag.init</i>即可。</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <span class="zr-tag-normal">普通标签</span>
+            <span class="zr-tag-closable">
+                可删除标签 <i class="zricon-close"></i>
+            </span>
+        </div>
+        <div class="c-code-inner c-code-hide">
+        <span class="zr-tag-normal">普通标签</span>
+        <span class="zr-tag-closable">
+            可删除标签 <i class="zricon-close"></i>
+        </span>
+        <!--javascript代码-->
+    Zr.use("tag",function(zr,tag){
+        //如果只是zr-tag-normal 普通标签，无需加载tag 组件。tag 组件用于可删除和可编辑的标签。
+        tag.init();
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>动态编辑标签 <a href="#">#</a></p>
+        <span>支持显示图片、字符和icon，其中字符和icon可以更换背景色</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <span class="zr-tag">
+                <span class="zr-tag-addable">
+                    <i class="zricon-add"></i> 可添加标签
+                </span>
+                <input type="text" class="zr-tag-input"/>
+            </span>
+        </div>
+        <div class="c-code-inner c-code-hide">
+        <span class="zr-tag">
+            <span class="zr-tag-addable">
+                <i class="zricon-add"></i> 可添加标签
+            </span>
+            <input type="text" class="zr-tag-input"/>
+        </span>
+        <!--javascript代码-->
+    Zr.use("tag",function(zr,tag){
+        //如果只是zr-tag-normal 普通标签，无需加载tag 组件。tag 组件用于可删除和可编辑的标签。
+        tag.init();
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>五颜六色标签 <a href="#">#</a></p>
+        <span>支持显示图片、字符和icon，其中字符和icon可以更换背景色</span>
+    </section>
+    <section class="c-code">
+        <div class="c-demo">
+            <span class="zr-tag-normal zr-tag-red">Tag red</span>
+            <span class="zr-tag-normal zr-tag-orange">Tag orange</span>
+            <span class="zr-tag-normal zr-tag-yellow">Tag yellow</span>
+            <span class="zr-tag-normal zr-tag-green">Tag green</span>
+            <span class="zr-tag-normal  zr-tag-cyan">Tag cyan</span>
+            <span class="zr-tag-normal zr-tag-geekblue">Tag geekblue</span>
+            <span class="zr-tag-normal  zr-tag-blue">Tag blue</span>
+            <span class="zr-tag-normal zr-tag-purple">Tag purple</span>
+        </div>
+        <div class="c-code-inner c-code-hide">
+        <span class="zr-tag-normal zr-tag-red">Tag red</span>
+        <span class="zr-tag-normal zr-tag-orange">Tag orange</span>
+        <span class="zr-tag-normal zr-tag-yellow">Tag yellow</span>
+        <span class="zr-tag-normal zr-tag-green">Tag green</span>
+        <span class="zr-tag-normal  zr-tag-cyan">Tag cyan</span>
+        <span class="zr-tag-normal zr-tag-geekblue">Tag geekblue</span>
+        <span class="zr-tag-normal  zr-tag-blue">Tag blue</span>
+        <span class="zr-tag-normal zr-tag-purple">Tag purple</span>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+</article>
+<script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js"></script>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl: "/js/plugin_modules/",
+        requestTime: true
+    })
+    Zr.ready(function () {
+        Zr.use("./js/quickMenu", "./js/code","./jquery/","./tag/", function (zr,a,b,$,tag) {
+            tag.init();
+        })
+    })
+</script>
+</body>
+</html>

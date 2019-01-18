@@ -1,0 +1,21 @@
+{
+  "name": "cmbuild",
+  "version": "1.0.0",
+  "description": "build for components",
+  "main": "index.js",
+  "author": "zhangjinglin",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clone": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-less": "3.5.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-webserver": "^0.9.1",
+    "run-sequence": "^2.2.1"
+  }
+}

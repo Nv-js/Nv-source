@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?4"/>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Divide 分割线</p>
+        <span>
+            用来分割不同内容
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/divide.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/21"><b>组件问题反馈和讨论</b></a>
+        </span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>基本样式 <a href="#">#</a></p>
+        <span>水平分割线最基本的样式：实线分割线，只需要添加样式 <i class="c-block-inline">zr-divide-hr</i>；虚线分割线，只需要添加样式 <i class="c-block-inline">zr-divide-dashed</i>；带标题的分割线，只需要添加样式 <i class="c-block-inline">zr-divide-fieldset</i></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-demo">
+            <div class="zr-divide">
+                <p>A friend of mine named Paul received an automobile from his brother as Christmas present. On Christmas eve, when Paul came out of his office, a street urchin was looking around the shining new car, admiring it.</p>
+                <!--实线分割线-->
+                <div class="zr-divide-horizontal"></div>
+                <p>A friend of mine named Paul received an automobile from his brother as Christmas present. On Christmas eve, when Paul came out of his office, a street urchin was looking around the shining new car, admiring it.</p>
+                <!--虚线分割线-->
+                <div class="zr-divide-horizontal zr-divide-dashed"></div>
+                <p>A friend of mine named Paul received an automobile from his brother as Christmas present. On Christmas eve, when Paul came out of his office, a street urchin was looking around the shining new car, admiring it.</p>
+                <!--带标题的分割线-->
+                <div class="zr-divide-fieldset"><span class="zr-divide-legend">TEXT</span></div>
+                <p>A friend of mine named Paul received an automobile from his brother as Christmas present. On Christmas eve, when Paul came out of his office, a street urchin was looking around the shining new car, admiring it.</p>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-divide">
+        <!--实线分割线-->
+        <div class="zr-divide-horizontal"></div>
+        <!--虚线分割线-->
+        <div class="zr-divide-horizontal zr-divide-dashed"></div>
+        <!--带标题的分割线-->
+        <div class="zr-divide-fieldset"><span class="zr-divide-legend">TEXT</span></div>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+
+    <section class="c-sub-title">
+        <p>链接样式 <a href="#">#</a></p>
+        <span>垂直分割线</span>
+    </section>
+    <!--switch code show or hide-->
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-demo">
+            <div class="zr-divide">
+                <a class="zr-divide-unlink"><cite>Text</cite></a>
+                <span class="zr-divide-vertical">|</span>
+                <a href="">Link One</a>
+                <span class="zr-divide-vertical">|</span>
+                <a href="">Link Two</a>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-divide">
+        <a class="zr-divide-unlink"><cite>Text</cite></a>
+        <span class="zr-divide-separator">|</span>
+        <a href="">Link One</a>
+        <span class="zr-divide-separator">|</span>
+        <a href="">Link Two</a>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-16"></div>
+</article>
+<!--注意此段js必须第一引入在开发模式下{-->
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="/js/zr.min.js?3"></script>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl: "/js/plugin_modules/"
+    })
+    Zr.ready(function () {
+        Zr.use("./js/quickMenu", "./js/code",function (zr) {
+            zr.dom.dispatch();
+        })
+    })
+</script>
+</body>
+</html>

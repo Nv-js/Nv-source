@@ -1,0 +1,144 @@
+/*
+ * buttons
+ */
+.@{zr-prefix}-btn{
+  display: inline-block;
+  height: @btn-height-base;
+  padding: @btn-padding-base;
+  border:@border-width-base @border-style-base @border-color-base;
+  border-radius: @btn-border-radius-base;
+  line-height: 1;
+  font-size: @font-size-base;
+  font-weight: @btn-font-weight;
+  cursor: pointer;
+}
+.@{zr-prefix}-btn [class^="zricon-"]{
+  margin-left: .2em;
+  margin-right: .2em;
+}
+.@{zr-prefix}-btn-primary{
+  border-color: @btn-primary-bg;
+  background: @btn-primary-bg;
+  color: @btn-primary-color;
+}
+.@{zr-prefix}-btn-primary:hover{
+  border-color: @primary-5;
+  background: @primary-5;
+  color: @btn-primary-color;
+}
+.@{zr-prefix}-btn-default{
+  border-color: @btn-default-border;
+  background: @btn-default-bg;
+  color: @btn-default-color;
+}
+.@{zr-prefix}-btn-default:hover{
+  border-color: @primary-5;
+  color: @primary-5;
+}
+.@{zr-prefix}-btn-danger{
+  border-color: @btn-danger-border;
+  background: @btn-danger-bg;
+  color: @btn-danger-color;
+}
+.@{zr-prefix}-btn-danger:hover{
+  border-color: @red-5;
+  background: @red-5;
+  color: @btn-danger-color;
+}
+.@{zr-prefix}-btn-disable,
+.@{zr-prefix}-btn-disable:hover{
+  border-color: @btn-disable-border;
+  background: @btn-disable-bg;
+  color: @btn-disable-color;
+  cursor: not-allowed;
+}
+/*
+ zr-btn-size
+*/
+.@{zr-prefix}-btn-sm{
+  height: @btn-height-sm;
+  font-size: @btn-font-size-sm;
+  padding: @btn-padding-sm;
+}
+.@{zr-prefix}-btn-lg{
+  height: @btn-height-lg;
+  font-size: @btn-font-size-lg;
+  padding: @btn-padding-lg;
+}
+/*
+ zr-btn-circle
+ */
+.@{zr-prefix}-btn-circle{
+  height: @btn-circle-size;
+  width: @btn-circle-size;
+  border-radius: 50%;
+  padding: 0;
+  text-align: center;
+}
+.@{zr-prefix}-btn-circle.zr-btn-sm{
+  height: @btn-circle-size-sm;
+  width: @btn-circle-size-sm;
+}
+.@{zr-prefix}-btn-circle.zr-btn-lg{
+  height: @btn-circle-size-lg;
+  width: @btn-circle-size-lg;
+}
+.@{zr-prefix}-btn-circle [class^="zricon-"]{
+  display: inline-block;
+  font-size: @font-size-base;
+  width: @font-size-base;
+  height: @font-size-base;
+  margin-top: -6px;
+  vertical-align: middle;
+  line-height: @font-size-base - 2px;
+}
+/*
+ * zr-btn-group
+ */
+.@{zr-prefix}-btn-group{
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.@{zr-prefix}-btn-group>.@{zr-prefix}-btn:first-child:not(:last-child){
+  border-radius: @btn-border-radius-base 0 0 @btn-border-radius-base;
+}
+.@{zr-prefix}-btn-group>.@{zr-prefix}-btn:last-child:not(:first-child){
+  border-radius:  0 @btn-border-radius-base @btn-border-radius-base 0;
+  border-right: 0;
+}
+.@{zr-prefix}-btn-group>.zr-btn{
+  border-radius: 0;
+  border-right: @border-width-base @border-style-base @btn-group-spaceline;
+}
+/*
+ * a.zr-btn
+ */
+a.@{zr-prefix}-btn{
+  line-height: @btn-height-base - 2px;
+}
+a.@{zr-prefix}-btn-lg{
+  line-height: @btn-height-lg - 2px;
+}
+a.@{zr-prefix}-btn-sm{
+  line-height: @btn-height-sm - 2px;
+}
+
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-button) {
+  //默认手机
+}
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-button) {
+  //平板
+}
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-button) {
+  //桌面显示器
+}
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-button) {
+  //大桌面显示器
+}
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-button) {
+  //大屏慕数据展示
+}

@@ -1,0 +1,65 @@
+﻿/*
+ * top
+ */
+
+.@{zr-prefix}-top {
+  width: @btn-height-lg;
+  .@{zr-prefix}-btn {
+    width: @btn-height-lg;
+    background-color: @top-primary-bg;
+    font-size: @font-size-lg;
+    color: @top-primary-color;
+    border: 0;
+    padding: 0;
+    text-align: center;
+    &:hover {
+      background-color: @primary-6; //颜色未知需要挠挠确认
+    }
+  }
+
+
+  .@{zr-prefix}-btn [class^="zricon-"] {
+    display: inline-block;
+    font-size: @top-font-size;
+    width: @top-font-size;
+    height: @top-font-size;
+    vertical-align: middle;
+    line-height: @font-size-base;
+
+  }
+}
+
+/*
+ * 自定义
+*/
+.@{zr-prefix}-top-custom {
+  .@{zr-prefix}-btn {
+    background-color: @primary-color;
+    border-radius: 50%;
+    padding: 0;
+    &:hover {
+      background-color: @primary-5; //颜色未知需要挠挠确认
+    }
+  }
+}
+
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-top) {
+  //默认手机
+}
+
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-top) {
+  //平板
+}
+
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-top) {
+  //桌面显示器
+}
+
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-top) {
+  //大桌面显示器
+}
+
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-top) {
+  //大屏慕数据展示
+}

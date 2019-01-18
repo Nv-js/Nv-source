@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Progress</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js"></script>
+    <style>
+         /* .zr-progress-current{
+            width: 50%;
+        } */
+        .pro-width-80 .zr-progress-current{
+            width: 80%;
+        }
+        .pro-width-100 .zr-progress-current{
+            width: 100%;
+        }
+        .zr-progress-circle{
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Progress  进度条 1.2.2及以上版本支持</p>
+        <span>在需要很长时间才能完成的操作中为用户显示该操作的当前进度，让用户直观的看到当前的进度和状态。请注意这组件是1.2.2版本以后添加，如果使用请升级版本到1.2.2 版本</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>使用方法</p>
+        <span>显示处理任务的进度，完成度，剩余未完成任务量的大小，和可能需要处理时间，一般超过2秒时用进度条。调用方法：<i class="c-block-inline"> progress.init(config)</i>，具体配置信息可见下面config配置项。<br/>在进度条节点可通过添加data-percent属性设置初始进度，如果config同时设置了percent属性，data-percent将会被覆盖</span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>最基础的进度条样式，线形进度条<i class="c-block-inline">zr-progress-line</i> 。进度条有大（默认）、小 <i class="c-block-inline">zr-progress-line-sm</i> 两种尺寸，颜色有蓝色 <i class="c-block-inline">zr-progress-line-primary</i> 红色 <i class="c-block-inline">zr-progress-line-danger</i> 绿色 <i class="c-block-inline">zr-progress-line-success</i></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+    <!-- 蓝色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-primary line-more" data-percent="0.3">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    <div class="c-block-20"></div>
+    <!-- 红色-->
+    <div class="zr-progress zr-progress-line zr-progress-line-danger line-more" data-percent="0.3">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    <div class="c-block-20"></div>
+    <!-- 绿色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-success line-more" data-percent="0.3">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    </div>
+    <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <!-- 蓝色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-primary line-more" data-percent="0.3">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    <!-- 红色-->
+    <div class="zr-progress zr-progress-line zr-progress-line-danger line-more" data-percent="0.3">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    <!-- 绿色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-success line-more" data-percent="0.3">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    <!--Javascript-->
+    Zr.use("progress", function (Zr, progress) {
+        var proLineMore = progress.init({
+            target: ".line-more"
+        })
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>小尺寸进度条 <a href="#">#</a></p>
+        <span>小尺寸的线形进度条</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+    <!-- 小尺寸蓝色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-sm zr-progress-line-primary line-more" data-percent="0.4">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    <div class="c-block-20"></div>
+    <!-- 小尺寸红色-->
+    <div class="zr-progress zr-progress-line zr-progress-line-sm zr-progress-line-danger line-more" data-percent="0.4">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    <div class="c-block-20"></div>
+    <!-- 小尺寸绿色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-sm zr-progress-line-success line-more" data-percent="0.4">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+</div>
+<div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <!-- 小尺寸蓝色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-sm zr-progress-line-primary line-more" data-percent="0.4">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    <!-- 小尺寸红色-->
+    <div class="zr-progress zr-progress-line zr-progress-line-sm zr-progress-line-danger line-more">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    <!-- 小尺寸绿色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-sm zr-progress-line-success line-more" data-percent="0.4">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current"></span>
+        </div>
+        <span class="zr-progress-line-status"></span>
+    </div>
+    <!--Javascript-->
+    Zr.use("progress", function (Zr, progress) {
+        var proLineMore = progress.init({
+            target: ".line-more"
+        })
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>百分比内显 <a href="#">#</a></p>
+        <span>百分比放置于进度条内 <i class="c-block-inline">zr-progress-line-inset</i>,默认百分比显示在进度右侧，添加 <i class="c-block-inline">zr-progress-current-over</i> 类使百分比显示在已完成进度内侧</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <!-- 百分比内显蓝色 -->
+            <div class="zr-progress zr-progress-line zr-progress-line-primary zr-progress-line-inset line-more" data-percent="0.4">
+                <div class="zr-progress-width">
+                    <span class="zr-progress-current"><span class="zr-progress-line-status"></span></span>
+                </div>
+            </div>
+            <div class="c-block-20"></div>
+            <!-- 百分比内显红色 -->
+            <div class="zr-progress zr-progress-line zr-progress-line-danger zr-progress-line-inset zr-progress-current-over line-more" data-percent="0.5">
+                <div class="zr-progress-width">
+                    <span class="zr-progress-current"><span class="zr-progress-line-status"></span></span>
+                </div>
+            </div>
+            <div class="c-block-20"></div>
+            <!-- 百分比内显绿色 -->
+            <div class="zr-progress zr-progress-line zr-progress-line-success zr-progress-line-inset zr-progress-current-over line-more" data-percent="0.5">
+                <div class="zr-progress-width">
+                    <span class="zr-progress-current"><span class="zr-progress-line-status"></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <!-- 百分比内显蓝色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-primary zr-progress-line-inset line-more" data-percent="0.5">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current">
+                <span class="zr-progress-line-status"></span>
+            </span>
+        </div>
+    </div>
+    <!-- 百分比内显红色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-danger zr-progress-line-inset zr-progress-current-over line-more"
+        data-percent="0.5">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current">
+                <span class="zr-progress-line-status"></span>
+            </span>
+        </div>
+    </div>
+    <!-- 百分比内显绿色 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-success zr-progress-line-inset zr-progress-current-over line-more"
+        data-percent="0.5">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current">
+                <span class="zr-progress-line-status"></span>
+            </span>
+        </div>
+    </div>
+    <!--Javascript-->
+    Zr.use("progress", function (Zr, progress) {
+        var proLineMore = progress.init({
+            target: ".line-more"
+        })
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>特殊文本显示 <a href="#">#</a></p>
+        <span>选择显示特定的文本而不是百分比。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <!-- 特殊文本显示 -->
+            <div class="zr-progress zr-progress-line zr-progress-line-primary zr-progress-line-inset zr-progress-current-over" id="line-content" data-percent="0.5">
+                <div class="zr-progress-width">
+                    <span class="zr-progress-current"><span class="zr-progress-line-status"></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <!-- 特殊文本显示 -->
+    <div class="zr-progress zr-progress-line zr-progress-line-primary zr-progress-line-inset zr-progress-current-over" id="line-content"
+        data-percent="0.5">
+        <div class="zr-progress-width">
+            <span class="zr-progress-current">
+                <span class="zr-progress-line-status"></span>
+            </span>
+        </div>
+    </div>
+    <!--Javascript-->
+    Zr.use("progress", function (Zr, progress) {
+        var proLineContent = progress.init({
+            target: "#line-content",
+            content: "50 of 100M"
+        })
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>环形进度条 <a href="#">#</a></p>
+        <span>环形进度条 <i class="c-block-inline">zr-progress-circle</i> 。环形进度条有大（默认）、小 <i class="c-block-inline">zr-progress-circle-sm</i> 两种尺寸，颜色有蓝色 <i class="c-block-inline">zr-progress-circle-primary</i> 红色 <i class="c-block-inline">zr-progress-circle-danger</i> 绿色 <i class="c-block-inline">zr-progress-circle-success</i></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <!-- 环形进度条 蓝色 -->
+            <div class="zr-progress zr-progress-circle" id="circle-one" data-percent="0.4">
+                <svg width="128" height="128" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="zr-progress-circle-background" r="64" cx="64" cy="64" fill="transparent"/>
+                    <circle class="zr-progress-circle-bar" r="64" cx="64" cy="64" fill="transparent"
+                          />
+              </svg>
+              <span class="zr-progress-circle-status"></span>
+            </div>
+            <!-- 环形进度条 红色 -->
+            <div class="zr-progress-circle zr-progress-circle-danger circle-more" data-percent="0.5">
+                <svg width="128" height="128" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="zr-progress-circle-background" r="64" cx="64" cy="64" fill="transparent"/>
+                    <circle class="zr-progress-circle-bar" r="64" cx="64" cy="64" fill="transparent"
+                            />
+                </svg>
+                <span class="zr-progress-circle-status"></span>
+            </div>
+            <!-- 环形进度条 绿色-->
+            <div class="zr-progress-circle zr-progress-circle-success circle-more" data-percent="0.5">
+                <svg width="128" height="128" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="zr-progress-circle-background" r="64" cx="64" cy="64" fill="transparent"/>
+                    <circle class="zr-progress-circle-bar" r="64" cx="64" cy="64" fill="transparent"
+                            />
+                </svg>
+                <span class="zr-progress-circle-status"></span>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <!-- 环形进度条 蓝色 -->
+    <div class="zr-progress zr-progress-circle" id="circle-one" data-percent="0.4">
+        <svg width="128" height="128" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="zr-progress-circle-background" r="64" cx="64" cy="64" fill="transparent"/>
+            <circle class="zr-progress-circle-bar" r="64" cx="64" cy="64" fill="transparent"
+                    />
+        </svg>
+        <span class="zr-progress-circle-status"></span>
+    </div>
+    <!-- 环形进度条 红色 -->
+    <div class="zr-progress-circle zr-progress-circle-danger circle-more" data-percent="0.5">
+        <svg width="128" height="128" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="zr-progress-circle-background" r="64" cx="64" cy="64" fill="transparent"/>
+            <circle class="zr-progress-circle-bar" r="64" cx="64" cy="64" fill="transparent"
+                    />
+        </svg>
+        <span class="zr-progress-circle-status"></span>
+    </div>
+    <!-- 环形进度条 绿色-->
+    <div class="zr-progress-circle zr-progress-circle-success circle-more" data-percent="0.5">
+        <svg width="128" height="128" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="zr-progress-circle-background" r="64" cx="64" cy="64" fill="transparent"/>
+            <circle class="zr-progress-circle-bar" r="64" cx="64" cy="64" fill="transparent"
+                    />
+        </svg>
+        <span class="zr-progress-circle-status"></span>
+    </div>
+    <!--Javascript-->
+    Zr.use("progress", function (Zr, progress) {
+        var proCircle = progress.init({
+            target: "#circle-one"
+        })
+        proCircle.change("0.6");
+
+        var proCircleMore = progress.init({
+            target: ".circle-more"
+        });
+        proCircleMore[0].change("0.3");
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>小尺寸环形进度条 <a href="#">#</a></p>
+        <span>小尺寸的环形进度条</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <!-- 小尺寸环形进度条 蓝色 -->
+            <div class="zr-progress zr-progress-circle zr-progress-circle-sm circle-sm-more" data-percent="0.7">
+                <svg width="64" height="64" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="zr-progress-circle-background" r="32" cx="32" cy="32" fill="transparent"/>
+                    <circle class="zr-progress-circle-bar" r="32" cx="32" cy="32" fill="transparent"  stroke-dashoffset="0"
+                            />
+                </svg>
+                <span class="zr-progress-circle-status"></span>
+            </div>
+            <!-- 小尺寸环形进度条 红色 -->
+            <div class="zr-progress zr-progress-circle zr-progress-circle-sm zr-progress-circle-danger circle-sm-more" data-percent="0.6">
+                <svg width="64" height="64" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="zr-progress-circle-background" r="32" cx="32" cy="32" fill="transparent"/>
+                    <circle class="zr-progress-circle-bar" r="32" cx="32" cy="32" fill="transparent"  stroke-dashoffset="0"
+                            />
+                </svg>
+                <span class="zr-progress-circle-status"></span>
+            </div>
+            <!-- 小尺寸环形进度条 绿色 -->
+            <div class="zr-progress zr-progress-circle zr-progress-circle-sm zr-progress-circle-success circle-sm-more" data-percent="0.5">
+                <svg width="64" height="64" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="zr-progress-circle-background" r="32" cx="32" cy="32" fill="transparent"/>
+                    <circle class="zr-progress-circle-bar" r="32" cx="32" cy="32" fill="transparent"  stroke-dashoffset="0"
+                            />
+                </svg>
+                <span class="zr-progress-circle-status"></span>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <!-- 小尺寸环形进度条 蓝色 -->
+    <div class="zr-progress zr-progress-circle zr-progress-circle-sm circle-sm-more" data-percent="0.7">
+        <svg width="64" height="64" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="zr-progress-circle-background" r="32" cx="32" cy="32" fill="transparent"/>
+            <circle class="zr-progress-circle-bar" r="32" cx="32" cy="32" fill="transparent"  stroke-dashoffset="0"
+                    />
+        </svg>
+        <span class="zr-progress-circle-status"></span>
+    </div>
+    <!-- 小尺寸环形进度条 红色 -->
+    <div class="zr-progress zr-progress-circle zr-progress-circle-sm zr-progress-circle-danger circle-sm-more" data-percent="0.6">
+        <svg width="64" height="64" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="zr-progress-circle-background" r="32" cx="32" cy="32" fill="transparent"/>
+            <circle class="zr-progress-circle-bar" r="32" cx="32" cy="32" fill="transparent"  stroke-dashoffset="0"
+                    />
+        </svg>
+        <span class="zr-progress-circle-status"></span>
+    </div>
+    <!-- 小尺寸环形进度条 绿色 -->
+    <div class="zr-progress zr-progress-circle zr-progress-circle-sm zr-progress-circle-success circle-sm-more" data-percent="0.5">
+        <svg width="64" height="64" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <circle class="zr-progress-circle-background" r="32" cx="32" cy="32" fill="transparent"/>
+            <circle class="zr-progress-circle-bar" r="32" cx="32" cy="32" fill="transparent"  stroke-dashoffset="0"
+                    />
+        </svg>
+        <span class="zr-progress-circle-status"></span>
+    </div>
+    <!--Javascript-->
+    Zr.use("progress", function (Zr, progress) {
+        var proSmCircleMore = progress.init({
+            target: ".circle-sm-more"
+        })
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>config配置 <a href="#">#</a></p>
+        <span>进度条初始化配置</span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-700">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">config.target</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">String（必填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700" style="height: 90px;">初始化进度条的目标元素，可使用ID选择器或类选择器<br/>
+                                ID选择器初始化后返回的是一个Progress对象。<br/>
+                                类选择器初始化后返回的是包含多个Progress对象的数组</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">config.percent</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">String（选填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">设置进度条的进度，例如：0.1，0.8（设置了此属性将会覆盖节点属性data-percent设置的值）</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">config.content</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">String（选填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">进度条显示的内容，默认显示百分比，例如：10%，80%。可设置显示图标，例如：&lt;i class="zricon-ok"&gt;&lt;/i&gt;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>Method <a href="#">#</a></p>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">方法</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">入参</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-700">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">message.change</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">Object options</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">修改进度条的进度和显示内容。</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>Object options属性 <a href="#">#</a></p>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-700">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">options.percent</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">String（必填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">修改进度条的进度，例如：0.1，0.8</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="c-cell c-table-w-125">options.content</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-125">String（选填）</div>
+                        </td>
+                        <td>
+                            <div class="c-cell c-table-w-700">修改进度条的显示内容，默认显示百分比，例如：10%，80%。可设置显示图标，例如：&lt;i class="zricon-ok"&gt;&lt;/i&gt;</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</article>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl: "/js/plugin_modules/",
+        requestTime:true
+    })
+    Zr.ready(function () {
+        Zr.use("./js/quickMenu", "./js/code");
+        Zr.use("./progress/index",function(Zr,progress){
+            //线型
+            var proLineMore = progress.init({
+                target: ".line-more",
+            })
+
+            //特殊文本
+            var proLineContent = progress.init({
+                target: "#line-content",
+                content: "50 of 100M"
+            })
+            
+            //环形
+            var proCircle = progress.init({
+                target: "#circle-one"
+            })
+            proCircle.change("0.6");
+
+            //类选择器，多个环形
+            var proCircleMore = progress.init({
+                target: ".circle-more"
+            });
+            // 显示图标
+            proCircleMore[0].change("0.3",'<i class="zricon-ok"></i>');
+
+            //类选择器，小尺寸环形
+            var proSmCircleMore = progress.init({
+                target: ".circle-sm-more"
+            })
+        });
+    })
+</script>
+</body>
+</html>

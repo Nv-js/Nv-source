@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <style type="text/css">
+        .c-demo-form{
+            width: 50%;
+        }
+    </style>
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code")
+        })
+    </script>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Form 表单</p>
+        <span>表单用于向用户显示数据，并允许用户输入数据，提交数据，包含输入框、复选框和选择器等组件</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>表单用于向用户显示数据，并允许用户输入数据，提交数据，包含输入框、复选框和选择器等组件</p>
+        <span>
+            <ul>
+                <li><span>一个表单有三个基本组成部分： </span></li>
+                <li><span>表单标签。 </span></li>
+                <li><span>表单域：包含了文本框、密码框、隐藏域、多行文本框、复选框、单选框、下拉选择框和文件上传框等。 </span></li>
+                <li><span>表单按钮：包括提交按钮。</span></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>包括各种表单项，比如输入框、选择器、开关、单选框、多选框等。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-form">
+                <div class="zr-form">
+                    <div class="zr-form-item zr-row">
+                        <label class="zr-form-label">
+                            <span class="zr-form-item-title zr-col-5">input</span>
+                            <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                                <input type="text" placeholder="Please input text" class="zr-input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="zr-form-item zr-row">
+                        <label class="zr-form-label">
+                            <span class="zr-form-item-title zr-col-5">Select</span>
+                            <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                                <select name="country" class="zr-select">
+                                    <option value="">请选择一个城市</option>
+                                    <option value="010">北京</option>
+                                    <option value="021">上海</option>
+                                    <option value="0571">杭州</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="zr-form-item zr-row">
+                        <span class="zr-form-item-title zr-col-5">Radio</span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <input type="radio" name="demo0" class="zr-radio" value="0" title="Radio1" checked="checked">
+                            <input type="radio" name="demo0" class="zr-radio" value="1" title="Radio2">
+                        </div>
+                    </div>
+                    <div class="zr-form-item zr-row">
+                        <span class="zr-form-item-title zr-col-5">Checkbox</span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <input type="checkbox" name="meau" class="zr-checkbox" value="0" title="Checkbox1">
+                            <input type="checkbox" name="meau" class="zr-checkbox" value="1" title="Checkbox2" checked="true">
+                            <input type="checkbox" name="meau" class="zr-checkbox" value="1" title="Checkbox3">
+                        </div>
+                    </div>
+                    <div class="zr-form-item zr-row">
+                        <label class="zr-form-label">
+                        <span class="zr-form-item-title zr-col-5">
+                            Text
+                        </span>
+                            <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                                <textarea class="zr-textarea" placeholder="Textarea"></textarea>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="zr-form-item zr-row">
+                        <span class="zr-form-item-title zr-col-5">Upload</span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <input type="file" title="Click to upload" class="zr-upload">
+                        </div>
+                    </div>
+                    <div class="zr-form-item zr-row">
+                        <div class="zr-form-item-control zr-form-btn zr-col-18 zr-col-offset-6">
+                            <button type="button" class="zr-btn zr-btn-primary">Submit</button>
+                            <button type="button" class="zr-btn zr-btn-default">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+                <div class="zr-form">
+                <div class="zr-form-item zr-row">
+                    <label class="zr-form-label">
+                        <span class="zr-form-item-title zr-col-5">input</span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <input type="text" placeholder="Please input text" class="zr-input">
+                        </div>
+                    </label>
+                </div>
+                <div class="zr-form-item zr-row">
+                    <label class="zr-form-label">
+                        <span class="zr-form-item-title zr-col-5">Select</span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <select name="country" class="zr-select">
+                                <option value="">请选择一个城市</option>
+                                <option value="010">北京</option>
+                                <option value="021">上海</option>
+                                <option value="0571">杭州</option>
+                            </select>
+                        </div>
+                    </label>
+                </div>
+                <div class="zr-form-item zr-row">
+                    <span class="zr-form-item-title zr-col-5">Radio</span>
+                    <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                        <input type="radio" name="demo0" class="zr-radio" value="0" title="Radio1" checked="checked">
+                        <input type="radio" name="demo0" class="zr-radio" value="1" title="Radio2">
+                    </div>
+                </div>
+                <div class="zr-form-item zr-row">
+                    <span class="zr-form-item-title zr-col-5">Checkbox</span>
+                    <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                        <input type="checkbox" name="meau" class="zr-checkbox" value="0" title="Checkbox1">
+                        <input type="checkbox" name="meau" class="zr-checkbox" value="1" title="Checkbox2" checked="true">
+                        <input type="checkbox" name="meau" class="zr-checkbox" value="1" title="Checkbox3">
+                    </div>
+                </div>
+                <div class="zr-form-item zr-row">
+                    <label class="zr-form-label">
+                        <span class="zr-form-item-title zr-col-5">
+                            Text
+                        </span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <textarea class="zr-textarea" placeholder="Textarea"></textarea>
+                        </div>
+                    </label>
+                </div>
+                <div class="zr-form-item zr-row">
+                    <span class="zr-form-item-title zr-col-5">Upload</span>
+                    <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                        <input type="file" title="Click to upload" class="zr-upload">
+                    </div>
+                </div>
+                <div class="zr-form-item zr-row">
+                    <div class="zr-form-item-control zr-form-btn zr-col-18 zr-col-offset-6">
+                        <button type="button" class="zr-btn zr-btn-primary">Submit</button>
+                        <button type="button" class="zr-btn zr-btn-default">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>表单验证 <a href="#">#</a></p>
+        <span>即时反馈给用户所输入的表单状态。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-form">
+                <div class="zr-form">
+                    <div class="zr-form-item zr-row zr-form-item-error">
+                        <label class="zr-form-label">
+                            <span class="zr-form-item-title zr-col-5">input</span>
+                            <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                                <input type="text" placeholder="Please input text" class="zr-input">
+                                <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="zr-form-item zr-row zr-form-item-error">
+                        <label class="zr-form-label">
+                            <span class="zr-form-item-title zr-col-5">Select</span>
+                            <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                                <select name="country" class="zr-select">
+                                    <option value="">请选择一个城市</option>
+                                    <option value="010">北京</option>
+                                    <option value="021">上海</option>
+                                    <option value="0571">杭州</option>
+                                </select>
+                                <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="zr-form-item zr-row zr-form-item-error">
+                        <span class="zr-form-item-title zr-col-5">Radio</span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <input type="radio" name="demo1" class="zr-radio" value="0" title="Radio1">
+                            <input type="radio" name="demo1" class="zr-radio" value="1" title="Radio2">
+                            <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                        </div>
+                    </div>
+                    <div class="zr-form-item zr-row zr-form-item-error">
+                        <span class="zr-form-item-title zr-col-5">Checkbox</span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <input type="checkbox" name="meau" class="zr-checkbox" value="0" title="Checkbox1">
+                            <input type="checkbox" name="meau" class="zr-checkbox" value="1" title="Checkbox2">
+                            <input type="checkbox" name="meau" class="zr-checkbox" value="1" title="Checkbox3">
+                            <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                        </div>
+                    </div>
+                    <div class="zr-form-item zr-row zr-form-item-error">
+                        <label class="zr-form-label">
+                        <span class="zr-form-item-title zr-col-5">
+                            Text
+                        </span>
+                            <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                                <textarea class="zr-textarea" placeholder="Textarea"></textarea>
+                                <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="zr-form-item zr-row zr-form-item-error">
+                        <span class="zr-form-item-title zr-col-5">Upload</span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <input type="file" title="Click to upload" class="zr-upload">
+                            <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                        </div>
+                    </div>
+                    <div class="zr-form-item zr-row zr-form-item-error">
+                        <div class="zr-form-item-control zr-form-btn zr-col-18 zr-col-offset-6">
+                            <button type="button" class="zr-btn zr-btn-primary">Submit</button>
+                            <button type="button" class="zr-btn zr-btn-default">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <div class="zr-form">
+                <div class="zr-form-item zr-row zr-form-item-error">
+                    <label class="zr-form-label">
+                        <span class="zr-form-item-title zr-col-5">input</span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <input type="text" placeholder="Please input text" class="zr-input">
+                            <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="zr-form-item zr-row zr-form-item-error">
+                    <label class="zr-form-label">
+                        <span class="zr-form-item-title zr-col-5">Select</span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <select name="country" class="zr-select">
+                                <option value="">请选择一个城市</option>
+                                <option value="010">北京</option>
+                                <option value="021">上海</option>
+                                <option value="0571">杭州</option>
+                            </select>
+                            <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="zr-form-item zr-row zr-form-item-error">
+                    <span class="zr-form-item-title zr-col-5">Radio</span>
+                    <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                        <input type="radio" name="demo1" class="zr-radio" value="0" title="Radio1" checked="true">
+                        <input type="radio" name="demo1" class="zr-radio" value="1" title="Radio2">
+                        <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                    </div>
+                </div>
+                <div class="zr-form-item zr-row zr-form-item-error">
+                    <span class="zr-form-item-title zr-col-5">Checkbox</span>
+                    <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                        <input type="checkbox" name="meau" class="zr-checkbox" value="0" title="Checkbox1">
+                        <input type="checkbox" name="meau" class="zr-checkbox" value="1" title="Checkbox2" checked="true">
+                        <input type="checkbox" name="meau" class="zr-checkbox" value="1" title="Checkbox3">
+                        <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                    </div>
+                </div>
+                <div class="zr-form-item zr-row zr-form-item-error">
+                    <label class="zr-form-label">
+                        <span class="zr-form-item-title zr-col-5">
+                            Text
+                        </span>
+                        <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                            <textarea class="zr-textarea" placeholder="Textarea"></textarea>
+                            <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                        </div>
+                    </label>
+                </div>
+                <div class="zr-form-item zr-row zr-form-item-error">
+                    <span class="zr-form-item-title zr-col-5">Upload</span>
+                    <div class="zr-form-item-control zr-col-18 zr-col-offset-1">
+                        <input type="file" title="Click to upload" class="zr-upload">
+                        <p class="zr-error-message">Your options is incorrect, please re-enter it.</p>
+                    </div>
+                </div>
+                <div class="zr-form-item zr-row zr-form-item-error">
+                    <div class="zr-form-item-control zr-form-btn zr-col-18 zr-col-offset-6">
+                        <button type="button" class="zr-btn zr-btn-primary">Submit</button>
+                        <button type="button" class="zr-btn zr-btn-default">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+</article>
+
+</body>
+</html>

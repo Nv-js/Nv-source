@@ -1,0 +1,259 @@
+.zr-page{
+  text-align: center;
+  .zr-page-common{
+    display: inline-block;
+  }
+  //完整分页样式
+  .zr-complete-page{
+    line-height: 32px;
+    a,span{
+      margin-right: 4px;
+    }
+    a{
+      display: inline-block;
+      vertical-align: top;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      border: @border-width-base  @border-style-base @normal-color;
+      .border-radius(@border-radius-base);
+      font-size: @font-size-sm;
+      color: @grey-8;
+      text-decoration:none;
+      background: #ffffff;
+      &:hover{
+        color: @grey-8;
+      }
+    }
+    >span{
+      display: inline-block;
+      height: 32px;
+      width: 32px;
+      line-height: 32px;
+      //padding: 0 13px;
+      text-align: center;
+      vertical-align: top;
+      .border-radius(@border-radius-base);
+      background: @geekblue-6;
+      font-size: @font-size-sm;
+      color: @grey-1 ;
+    }
+    .prev,.next{
+      background: @grey-1;
+      color: @grey-8;
+      border: @border-width-base  @border-style-base @normal-color;
+      .border-radius(@border-radius-base);
+      width: 32px;
+    }
+    .ellipse{
+      background: @grey-1;
+      color: @grey-8;
+      border: @border-width-base  @border-style-base @normal-color;
+      position: relative;
+      i{
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin:-18px 0 0 -3px;
+      }
+    }
+    .jump{
+      a{
+        padding: 0;
+      }
+    }
+  }
+  //简单分页样式
+  .zr-simple-page{
+    line-height: 24px;
+    font-size: @font-size-sm ;
+    .prev,.next{
+      color: @grey-8;
+    }
+    .next{
+      margin-right: 0;
+    }
+    span{
+      color: @geekblue-6;
+      margin-right: 13px;
+    }
+    a{
+      font-size: 12px;
+      color: @grey-8;
+      margin-right: 13px;
+    }
+    .jump{
+      height: 24px;
+      line-height: 24px;
+      a{
+        margin-right: 0;
+      }
+    }
+    .pagevalue{
+      height: 24px;
+      line-height: 24px;
+    }
+    .zr-page-select{
+      margin-left: 16.5px;
+      height: 24px;
+      line-height: 24px;
+      p{
+        height: 24px;
+        line-height: 24px;
+      }
+      span{
+        color: @grey-8;
+      }
+    }
+  }
+  //mini分页样式
+  .zr-mini-page{
+    line-height: 24px;
+    .prev,.next{
+      color: @grey-8;
+    }
+    .zr-mini-text{
+      display: inline-block;
+      color: @grey-8;
+      font-size: @font-size-sm ;
+      margin: 0 16px;
+      i{
+        font-style: normal;
+        margin: 0 5px;
+      }
+      .pagevalue{
+        height: 24px;
+        line-height: 24px;
+        margin: 0;
+      }
+    }
+  }
+
+  //跳转部分通用
+  .pagevalue{
+    width: 40px;
+    height: 32px;
+    line-height: 32px;
+    font-size: @font-size-sm;
+    color: @grey-8;
+    text-align: center;
+    vertical-align: top;
+    margin: 0 8px;
+    border: @border-width-base  @border-style-base @normal-color;
+    .border-radius(@border-radius-base);
+  }
+  .zr-jump{
+    display: inline-block;
+    padding: 0 13px;
+    font-size: @font-size-sm;
+    height: 30px;
+    line-height: 30px;
+    color: @grey-1;
+    background: @geekblue-6;
+    margin-right: 0;
+    //border-radius: 0;
+    vertical-align: top;
+    a{
+      border: none;
+      color: @grey-1;
+      height: 30px;
+    }
+  }
+  //总页数样式通用
+  .zr-total-page{
+    display: inline !important;
+    background: @component-background !important;
+    color: @grey-7 !important;
+    padding: 0 !important;
+    margin-right: 8px !important;
+    font-size: @font-size-sm;
+  }
+  //切换分页下拉框通用
+  .zr-page-select{
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 79px;
+    height: 32px;
+    border: @border-width-base  @border-style-base @normal-color;
+    .border-radius(@border-radius-base);
+    cursor: pointer;
+    font-size: @font-size-sm ;
+    color: @text-color;
+    margin-left: 12px;
+    strong{
+      font-weight: normal;
+    }
+    i{
+      font-style: normal;
+      margin: 0 4px;
+    }
+    p{
+      display: inline-block;
+      height: 32px;
+      line-height: 32px;
+      width: 100%;
+      text-indent: 1px;
+      span{
+        margin: 0;
+        padding: 0;
+      }
+    }
+    ul{
+      position: absolute;
+      width: 100%;
+      top: 32px;
+      left: 0;
+      z-index: 99;
+      background: @grey-1 ;
+      box-shadow: 0 0 7px -2px @shadow-color;
+      display: none;
+      li{
+        height: 24px;
+        line-height: 24px;
+        text-align: left;
+        text-indent: 10px;
+        span{
+          margin: 0;
+          padding: 0;
+        }
+        &:hover{
+          background: @grey-4;
+        }
+      }
+    }
+  }
+  .zr-jump-text{
+    margin-left: 24px;
+    display: inline-block;
+    font-size: @font-size-sm ;
+    color: @grey-8;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-page) {
+  //默认手机
+}
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-page) {
+  //平板
+}
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-page) {
+  //桌面显示器
+}
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-page) {
+  //大桌面显示器
+}
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-page) {
+  //大屏慕数据展示
+}

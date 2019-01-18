@@ -1,0 +1,135 @@
+/*
+ * alert
+ */
+.@{zr-prefix}-alert{
+  position: relative;
+  box-sizing: border-box;
+  border-radius: @border-radius-base;
+  border-width: @border-width-base;
+  border-style: @border-style-base;
+  padding: @padding-xs - 2px @padding-md;
+  color: @text-color;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+}
+.@{zr-prefix}-alert .@{zr-prefix}-alert-close{
+  position: absolute;
+  top: @padding-xs - 2px;
+  right: @padding-sm;
+  font-size: @font-size-base;
+  color: @text-color-secondary;
+}
+.@{zr-prefix}-alert .@{zr-prefix}-alert-close:hover{
+  color: @text-color;
+}
+.@{zr-prefix}-alert-info{
+  border-color: @info-2;
+  background: @info-1;
+}
+.@{zr-prefix}-alert-success{
+  border-color: @success-2;
+  background: @success-1;
+}
+.@{zr-prefix}-alert-error{
+  border-color: @error-2;
+  background: @error-1;
+}
+.@{zr-prefix}-alert-warning{
+  border-color: @warning-2;
+  background: @warning-1;
+}
+.@{zr-prefix}-alert-message{
+}
+/*
+ alert-with-description
+*/
+.@{zr-prefix}-alert-with-description{
+  padding: @padding-md @padding-lg;
+}
+.@{zr-prefix}-alert-with-description .@{zr-prefix}-alert-message{
+  display: block;
+  margin-bottom: @padding-xs;
+  font-weight: 600;
+}
+/*
+ alert-icon
+*/
+
+.@{zr-prefix}-alert-with-icon{
+  padding-left: @padding-lg + 14px;
+}
+.@{zr-prefix}-alert-with-icon > [class^="zricon-"]{
+  position: absolute;
+  top: @padding-xs - 2px;
+  left: @padding-sm;
+  font-size: @font-size-base;
+}
+.@{zr-prefix}-alert-with-description.@{zr-prefix}-alert-with-icon{
+  padding-left: @padding-lg *2 + 4px;
+}
+.@{zr-prefix}-alert-with-description > [class^="zricon-"]{
+  top: @padding-sm;
+  left: @padding-md;
+  font-size: @font-size-lg + 4px;
+}
+.@{zr-prefix}-alert-info > [class^="zricon-"]{
+  color: @info-6;
+}
+.@{zr-prefix}-alert-success > [class^="zricon-"]{
+  color: @success-6;
+}
+.@{zr-prefix}-alert-error >[class^="zricon-"]{
+  color: @error-6;
+}
+.@{zr-prefix}-alert-warning >[class^="zricon-"]{
+  color: @warning-6;
+}
+
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-alert) {
+  //默认手机
+}
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-alert) {
+  //平板
+}
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-alert) {
+  //桌面显示器
+}
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-alert) {
+  //大桌面显示器
+}
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-alert) {
+  //大屏慕数据展示
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

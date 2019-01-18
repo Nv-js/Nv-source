@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快速上手</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <!--}-->
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code")
+        })
+    </script>
+</head>
+
+<body>
+<article class="c-content">
+
+    <section class="c-title">
+        <p>快速上手</p>
+        <span>在开始前，我们先了解一下常用的方法API</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>准备工作 <a href="#">#</a></p>
+    </section>
+    <div class="c-block-20"></div>
+    <span class="c-title-3">第一步，引入CSS方式：直接引入<b>"//storage.jd.com/1.3.3/zr/css/cdn_zr.min.css"的样式文件</b></span>
+    <div class="c-block-5"></div>
+    <span class="c-title-3">@注意：如果引入后字体图标不能正常显示，或者字体图标报错为跨域限制，请参考更改<a href="https://github.com/fontello/fontello/wiki/How-to-setup-server-to-serve-fonts" target="_blank">服务端设置</a>，或者下载css资源包放到本地运行，<a href="//storage.jd.com/1.3.3/zrstyles.zip" target="_blank">css下载</a></b></span>
+    <div class="c-block-5"></div>
+    <span class="c-title-3">第二步，页面适当位置引入，建议放到body节点之前，引入方式：直接引入<b>"//storage.jd.com/1.3.3/zr.min.js"的脚本文件</b></span>
+    <div class="c-block-5"></div>
+    <span class="c-title-3">还有另外一种通过CDN引入</span>
+    <div class="c-block-5"></div>
+    <span class="c-title-3">"//storage.360buyimg.com/1.3.3/zr/css/cdn_zr.min.css"</span>
+    <div class="c-block-5"></div>
+    <span class="c-title-3">"//storage.360buyimg.com/1.3.3/zr.min.js"</span>
+    <div class="c-block-5"></div>
+    <span class="c-title-3"><b>CDN引入建议使用HTTPS方式，防止某些区域HTTP被挟持</b></span>
+    <div class="c-block-5"></div>
+    <span class="c-title-3">第三部，配置信息（建议放到第一步后面即可）：</span>
+    <div class="c-block-5"></div>
+    <span class="c-title-3">Javascript 代码</span>
+    <section class="c-code">
+        <div class="c-code-inner" style="border-top:0;">
+            &lt;script type="text/javascript"&gt;
+            //配置方法
+            Zr.config({
+                //配置plugin_modules的目录；
+                baseUrl:"/js/plugin_modules/",
+                //开发模式，默认关闭；
+                requestTime:true
+            })
+            //初始入口，Zr各个模块准备就绪后调用；
+            Zr.ready(function(){
+                //使用相应的模块；
+                Zr.use("jquery","./js/code",function(zr,$,code){
+                    //自动注入了jquery组件；
+                    //自动注入了./js/code组件；
+                })
+            })
+            &lt;/script&gt;
+            <div>
+    </section>
+    <div class="c-block-10"></div>
+    <span class="c-title-3">
+        以上就是完成了基本使用方式，看着是不是很爽~</span>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>简要说明 <a href="#">#</a></p>
+        <span class="c-title-3">总体来说，Zr采用的是异步加载策略，当需要使用的时候才加载。下面来详细讲解常用方法 <i class="c-block-inline">Zr.use</i> 和 <i class="c-block-inline">Zr.add</i> 以及其他工具类方法</span>
+    </section>
+    <div class="c-options-title">Method</div>
+    <section class="c-sub-title">
+        <p>Zr.use <a href="#">#</a></p>
+        <span class="c-title-3">语法：Zr.use(param1,param2,[...],callback)</span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-150">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-150">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-700">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">param1,param2,...</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">String（必填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">入参参数，用逗号间隔，可以使用配置的别名与Zr.add(name,...)中的name名称即可</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-150">callback</div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-150">Function（选填）</div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-700">
+                            回调函数，e.g : [function(zr,callback1,callback2,[...])]
+                        </div>
+                        <div class="c-cell c-table-w-700">
+                            1.回调函数第一参数为zr组件生态环境引用，可以直接访问属性并修改，请注意修改时候注意不要引起变量泛滥。
+                        </div>
+                        <div class="c-cell c-table-w-700">
+                            2.callback1,callback2,[...]分别对应param1,param2,[...]返回的内容
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-block-20"></div>
+    <span class="c-title-3">Javascript:</span>
+    <section class="c-code" style="max-width: 1098px">
+        <!--switch code show or hide-->
+        <div class="c-code-inner c-code-hide">
+            Zr.use("jquery","page","./timer/theme.js",function(zr,$,page,theme)
+            //todo something；
+            $(function(){
+            page.init({
+            total:500
+            });
+            theme.change();
+            })
+            })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>Zr.add <a href="#">#</a></p>
+        <span class="c-title-3">语法：Zr.add(name,callback,options)</span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-150">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-150">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-700">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-150">name</div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-150">String（必填）</div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-700">此name属性为相对于目录"plugin_modules"文件下的位置</div>
+                        <div class="c-cell c-table-w-700">常用使用模块方式名称："./code/index"或者'./code/index.js'</div>
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-150">callback</div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-150">Function（选填）</div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-700">
+                            回调函数，第一个参数为zr的全局引用，之后的参数分别对应引用配置
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                </tr>
+                <tr>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-150">options</div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-150">Object（选填）</div>
+                    </td>
+                    <td rowspan="3">
+                        <div class="c-cell c-table-w-700">
+                            回调函数，e.g : [function(zr,callback1,callback2,[...])]
+                        </div>
+                        <div class="c-cell c-table-w-700">
+                            1.回调函数第一参数为zr组件生态环境引用，可以直接访问属性并修改，请注意修改时候注意不要引起变量泛滥。
+                        </div>
+                        <div class="c-cell c-table-w-700">
+                            2.callback1,callback2,[...]分别对应param1,param2,[...]返回的内容
+                        </div>
+                        <div class="c-cell c-table-w-700">
+                            3.配置对象，其中唯一参数为"requires",数组类型，<b>此处相对的目录位置是当前文件的位置为起点</b>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-block-20"></div>
+    <span class="c-title-3">Javascript:</span>
+    <section class="c-code" style="max-width: 1098px">
+        <!--switch code show or hide-->
+        <div class="c-code-inner c-code-hide">
+            //根据依赖，第一个参数永远为zr，之后都是根据依赖顺序注入；
+            Zr.add("./mobile/",function(zr,jquery,theme){
+            //todo something；
+            },{
+            //属性配置，依赖哪些模块；
+            requires:["jquery","/map/theme"]
+            })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>Zr.document <a href="#">#</a></p>
+        <span class="c-title-3">语法：Zr.document，保证全局统一指向同一个document对象</span>
+    </section>
+    <div class="c-block-20"></div>
+    <span class="c-title-3">Javascript:</span>
+    <section class="c-code" style="max-width: 1098px">
+        <!--switch code show or hide-->
+        <div class="c-code-inner c-code-hide">
+            Zr.use("./mobile/",function(zr,mobile){
+            //获取document对象
+            var doc = zr.document;
+            })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>Zr.window <a href="#">#</a></p>
+        <span class="c-title-3">语法：Zr.window，保证全局统一指向同一个window对象</span>
+    </section>
+    <div class="c-block-20"></div>
+    <span class="c-title-3">Javascript:</span>
+    <section class="c-code" style="max-width: 1098px">
+        <!--switch code show or hide-->
+        <div class="c-code-inner c-code-hide">
+            Zr.use("./mobile/",function(zr,mobile){
+            //获取document对象
+            var window = zr.window;
+            })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>Zr.config <a href="#">#</a></p>
+        <span class="c-title-3">语法：Zr.config(opt)，初始化配置方法,opt为初始化对象配置信息，为Object类型</span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-150">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-150">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-700">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">opt.baseUrl</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">String（必填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">配置"plugin_modules"的根路径位置，这个常用于开发的代码库地址</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">opt.requestTime</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">Boolean（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">生成随即时间戳，防止缓存，开发环境建议打开，上线后必须关闭</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">opt.version</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">String（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">当前Zr的版本信息,目前最新版本0.0.1</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">opt.language</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">String（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">当前语言环境，设置将影响组件的显示</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">opt.requestVersion</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">String（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">用于更新线上环境所有Zr的异步组件当前版本信息，常用于发版清除缓存</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">opt.cdnUrl</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">String（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">指向公共资源库地址，文件命名格式："cdn_**.js"即可，默认指向：//storage.360buyimg.com/0.0.1/</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">opt.module</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">Object{name1:value1,name2:value2,......}（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700" style="height:450px;">
+                            Zr.use使用时候对应的别名：name对应别名名称，value对应的别名相关配置<br/>
+                            Zr.config({<br/>
+                            "module":{<br/>
+                            //模块别名名称<br/>
+                            "jquery":{<br/>
+                            //配置的寻址路径<br/>
+                             "path":"./jquery/"<br/>
+                              },<br/>
+                             "jquery3":{<br/>
+                              "path":"./jquery/jquery3.js"<br/>
+                             },<br/>
+                             "zepto":{<br/>
+                             "path":"./zepto/"<br/>
+                              }<br/>
+                             }<br/>
+                            })<br/>
+                        </div>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-block-20"></div>
+    <span class="c-title-3">Javascript:</span>
+    <section class="c-code" style="max-width: 1098px">
+        <!--switch code show or hide-->
+        <div class="c-code-inner c-code-hide">
+            Zr.config({
+            //根目录配置路径;
+            "baseUrl":"/plugin_modules/",
+            //文件请求是否添加后缀;
+            "requestTime":false,
+            //模块别名配置区域;
+            "module":{
+            //模块别名名称;
+            "jquery":{
+            //配置的寻址路径;
+            "path":"./jquery/"
+            },
+            "jquery3":{
+            "path":"./jquery/jquery3.js"
+            },
+            "zepto":{
+            "path":"./zepto/"
+            }
+            }
+            })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>Zr.extend <a href="#">#</a></p>
+        <span class="c-title-3">语法：Zr.extend(boolean,object1,object2)，copy合并继承，不会影响原来对象，后者与前者某一个属性重复，后者则覆盖前者对象</span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-150">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-150">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-700">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">boolean</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">Boolean（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否要深度copy，默认是false</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">object1</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">Object（必填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">需要合并的对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-150">object2</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-150">Object（必填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">需要合并的对象</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-block-20"></div>
+    <span class="c-title-3">Javascript:</span>
+    <section class="c-code" style="max-width: 1098px">
+        <!--switch code show or hide-->
+        <div class="c-code-inner c-code-hide">
+            var defaults = {
+            a:1,
+            b:{
+            status:false,
+            show:false,
+            value:100
+            }
+            }
+
+            var options = {
+            a:100,
+            b:{
+            status:true,
+            name:"现状"
+            },
+            c:2
+            }
+            var opt = Zr.extend(defaults,options);
+            console.log(opt);
+            /**
+            * 输出结果为
+            * {
+            *   a:100,
+            *   b:{
+            *     status:true,
+            *     name:"现状"
+            *   },
+            *   c:2
+            * }
+            *
+            * */
+            opt = Zr.extend(true,defaults,options);
+            /**
+            * 输出结果为
+            * {
+            *   a:100,
+            *   b:{
+            *     status:true,
+            *     show:false,
+            *     name:"现状"
+            *     value:100,
+            *   },
+            *   c:2
+            * }
+            *
+            * */
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>Zr.tools <a href="#">#</a></p>
+        <span class="c-title-3">语法：Zr.tools，对象Object类型，工具类，方便实用的小工具</span>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-300">方法名称</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-700">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">bind(func,object,[param1,param2,...])</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700" style="height:380px;">
+                            对象绑定，借用构造函数<br/>
+                            /**<br/>
+                            * {param} (func) [function] 被绑定的函数对象<br/>
+                            * {param} (object) [object] 绑定指向的对象<br/>
+                            * {param} (param1,param2,...) [入参] 绑定后参数一函数（func）执行后的形式参数<br/>
+                            * e.g:<br/>
+                            * var func = function(greeting){ return greeting + ': ' + this.name };<br/>
+                            * func = tools.bind(func, {name: 'moe'}, 'hi');<br/>
+                            * func();<br/>
+                            * => 'hi: moe'<br/>
+                            * */<br/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">each(object,callback)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700" style="height:200px;">
+                            循环对象或者数组<br/>
+                            /**<br/>
+                            *循环执行object对象（数组或者对象都可以），参数二回调方法中返回两个参数<br/>
+                            *其中回调参数一是数组的下角标或者对象的key<br/>
+                            *参数二为数组小角标对应的数值本身或者对象的value<br/>
+                            */<br/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">endWidth(str,suffix)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">判断参数一是否以参数二结尾。主要是针对文件路径的判断</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">extname(boolean,object1,object2)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">获取当前入参的路径别名</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isArray(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是数组</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isBoolean(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是布尔值</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isDate(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是日期类型</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isEmptyObject(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是空对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isFunction(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是方法</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isNull(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是空对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isNumber(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是数字</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isObject(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isPlainObject(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是Zr的对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isRegExp(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是正则</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isString(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是字符类</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">isUndefined(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否是空对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">key(Object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">获取对象的key值返回数组</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">later(callback,time,boolean)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700" style="height:420px;">
+                            定时器，支持单次、多次、取消<br />
+                            /**<br />
+                            * {param} (callback)<br />
+                            * 回调函数内部执行方法<br />
+                            * {param} (time) [number]<br />
+                            * 间隔执行时间<br />
+                            * {param} (boolean) [boolean]<br />
+                            * 默认是false执行一次，true后触发循环执行<br />
+                            * {return} (callback) [object]<br />
+                            *  返回对象中包含以下方法<br />
+                            *    (id) [number] 当前定时器的唯一标识<br />
+                            *    (interval) [boolean] 当前是单次执行（false）还是循环执行（true）<br />
+                            *    (cancel) [function] 取消当前定时器方法<br />
+                            * */
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">makeArray(object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">伪数组转换成数组</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">size(object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">数组返回长度，对象返回关键字key的长度</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">stringArray(object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">字符串转转换成数组</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">trim(stringObject)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">字符串去首尾空格</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">values(object)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">获取对象的value部分，返回数组</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">cookie(key,value,time)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700" style="height:250px;">
+                            /*获取cookie与设置cookie<br/>
+                            *{param} (key)<br/>
+                            *cookie的key，必填<br/>
+                            *{param} (value)<br/>
+                            *设置cookie时候使用，如果没有此参数，则是获取cookie<br/>
+                            *{param} (time)<br/>
+                            * 设置cookie过期时间默认是30,可以是0.1 或者 1、2<br/>
+                            */<br/>
+                        </div>
+                    </td>
+                </tr>
+                <tr style="text-decoration: line-through">
+                    <td>
+                        <div class="c-cell c-table-w-300">storage(key,value,which)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700" style="height:250px;">
+                            /*获取离线存储与设置离线存储数据<br/>
+                            *{param} (key)<br/>
+                            *离线存储的key，必填<br/>
+                            *{param} (value)<br/>
+                            *设置离线存储时候使用，如果没有此参数，则是获取数据<br/>
+                            *{param} (which)<br/>
+                            * 设置离线存储的类型true为sessionStorage / false（默认）为localStorage<br/>
+                            */<br/>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">browser</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700" style="height:620px;">
+                            浏览器特征检测，非常实用<br/>
+                            /*代理检测的一种手段<br/>
+                            ------------------<br/>
+                            *browser.versions<br/>
+                            **返回对象，检测对象包<br/>
+                            **browser.versions.trident  //IE内核 是则返回true<br/>
+                            **browser.versions.presto   //opera内核 是则返回true<br/>
+                            **browser.versions.webKit   //苹果、谷歌内核 是则返回true<br/>
+                            **browser.versions.gecko    //火狐内核 是则返回true<br/>
+                            **browser.versions.mobile   //是否为移动终端 是则返回true<br/>
+                            **browser.versions.ios      //ios终端 是则返回true<br/>
+                            **browser.versions.android  //android终端或者uc浏览器 是则返回true<br/>
+                            **browser.versions.iPhone   //是否为iPhone或者QQHD浏览器 是则返回true<br/>
+                            **browser.versions.iPad     //是否iPad 是则返回true<br/>
+                            **browser.versions.isSupportTouch //是否支持touch 是则返回true<br/>
+                            **browser.versions.webApp   //是否web应该程序，没有头部与底部 是则返回true<br/>
+                            ------------------<br/>
+                            *browser.language<br/>
+                            **返回当前环境默认语言<br/>
+                            */<br/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">format(fmt,time)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700" style="height:100px;">
+                            日期格式化<br/>
+                            //fmt表示格式类型："yyyy-MM-dd hh:MM:ss SSSS 季度:q"<br/>
+                            //time传入的时间<br/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">splitNumber(number,split,qt)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700" style="height:200px;">
+                            /**<br/>
+                            * 数字分割方法 e.g:"1000023 => 1,000,023"<br/>
+                            * @param {number} [number] 一个整数字<br/>
+                            * @param {split} [number] 以几位进行分割，默认是3<br/>
+                            * @param {qt} [string] 以什么字符进行分割<br/>
+                            * */<br/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">splitMoney(moneyNumber)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">自动转化为万，采用四舍五入</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-300">transUrl(search)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">url的search部分转换为对象，暂不支持较复杂情况</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-block-20"></div>
+    <span class="c-title-3">Javascript:</span>
+    <section class="c-code" style="max-width: 1098px">
+        <!--switch code show or hide-->
+        <div class="c-code-inner c-code-hide">
+            Zr.use("jquery",function(zr,jquery){
+            var tools = zr.tools;
+            //公共方法如下；
+            /**
+            * {param} (func) [function] 被绑定的函数对象
+            * {param} (object) [object] 绑定指向的对象
+            * {param} (param1,param2,...) [入参] 绑定后参数一函数（func）执行后的形式参数
+            * e.g:
+            * var func = function(greeting){ return greeting + ': ' + this.name };
+            * func = tools.bind(func, {name: 'moe'}, 'hi');
+            * func();
+            * 'hi: moe'
+            * */
+
+            tools.bind(func,object,[param1,param2,...]);
+
+            /**
+            *循环执行object对象（数组或者对象都可以），参数二回调方法中返回两个参数
+            *其中回调参数一是数组的下角标或者对象的key
+            *参数二为数组小角标对应的数值本身或者对象的value
+            */
+            tools.each(object,callback)
+            //判断参数一是否以参数二结尾。主要是针对文件路径的判断；
+            tools.endWidth(str,suffix)
+            //同Zr.extend；
+            tools.extend(boolean,object1,object2)
+            //获取当前入参的路径别名；
+            tools.extname(path)
+            //判断入参的类型；
+            tools.isArray(Object)
+            tools.isBoolean(Object)
+            tools.isDate(Object)
+            tools.isEmptyObject(Object)
+            tools.isFunction(Object)
+            tools.isNull(Object)
+            tools.isNumber(Object)
+            tools.isObject(Object)
+            tools.isPlainObject(Object)
+            tools.isRegExp(Object)
+            tools.isString(Object)
+            tools.isUndefined(Object)
+            //
+            tools.key(object)
+            /**
+            * {param} (callback)
+            * 回调函数内部执行方法
+            * {param} (time) [number]
+            * 间隔执行时间
+            * {param} (boolean) [boolean]
+            * 默认是false执行一次，true后触发循环执行
+            * {return} (callback) [object]
+            *  返回对象中包含以下方法
+            *    (id) [number] 当前定时器的唯一标识
+            *    (interval) [boolean] 当前是单次执行（false）还是循环执行（true）
+            *    (cancel) [function] 取消当前定时器方法
+            * */
+            tools.later(callback,time,boolean)
+            //对象为类数组，则变为数组，为map对象则key组合成数组；
+            tools.makeArray(object)
+            //数组返回长度，对象返回关键字key的长度；
+            tools.size(object)
+            //字符串转转换成数组；
+            tools.stringArray(object)
+            //字符串去首位空格；
+            tools.trim(stringObject)
+            //入参对象的关键数值{key:value}中value的组合；
+            tools.values(object)
+            /*获取cookie与设置cookie
+            *{param} (key)
+            *cookie的key，必填
+            *{param} (value)
+            *设置cookie时候使用，如果没有此参数，则是获取cookie
+            *{param} (time)
+            * 设置cookie过期时间默认是30,可以是0.1 或者 1、2
+            */
+            tools.cookie(key,value,time)
+            /*获取离线存储与设置离线存储数据
+            *{param} (key)
+            *离线存储的key，必填
+            *{param} (value)
+            *设置离线存储时候使用，如果没有此参数，则是获取数据
+            *{param} (which)
+            * 设置离线存储的类型true为sessionStorage / false（默认）为localStorage
+            */
+            tools.storage(key,value,which)
+            /*代理检测的一种手段
+            ------------------
+            *browser.versions
+            **返回对象，检测对象包
+            **browser.versions.trident  //IE内核 是则返回true
+            **browser.versions.presto   //opera内核 是则返回true
+            **browser.versions.webKit   //苹果、谷歌内核 是则返回true
+            **browser.versions.gecko    //火狐内核 是则返回true
+            **browser.versions.mobile   //是否为移动终端 是则返回true
+            **browser.versions.ios      //ios终端 是则返回true
+            **browser.versions.android  //android终端或者uc浏览器 是则返回true
+            **browser.versions.iPhone   //是否为iPhone或者QQHD浏览器 是则返回true
+            **browser.versions.iPad     //是否iPad 是则返回true
+            **browser.versions.isSupportTouch //是否支持touch 是则返回true
+            **browser.versions.webApp   //是否web应该程序，没有头部与底部 是则返回true
+            ------------------
+            *browser.language
+            **返回当前环境默认语言
+            */
+            tools.browser
+            //fmt表示格式类型："yyyy-MM-dd hh:MM:ss SSSS 季度:q"；
+            //time传入的时间；
+            tools.format(fmt,time)
+            /**
+            * 数字分割方法 e.g:"1000023 => 1,000,023"
+            * @param {number} [number] 一个整数字
+            * @param {split} [number] 以几位进行分割，默认是3
+            * @param {qt} [string] 以什么字符进行分割
+            * */
+            tools.splitNumber(number,split,qt)
+            //自动转化为万，采用四舍五入；
+            tools.splitMoney(moneyNumber)
+            //url的search部分转换为对象；
+            tools.transUrl(search)
+            })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+
+</article>
+
+
+</body>
+</html>

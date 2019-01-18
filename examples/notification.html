@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <link rel="stylesheet" href="//storage.jd.com/0.0.1/zr/css/cdn_zr.min.css">
+    <style type="text/css">
+        .c-demo-notification .zr-btn{
+            margin-right: 14px;
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Notification 通知提醒 1.2.2及以上版本支持</p>
+        <span>在页面的右上角显示通知提醒信息，常用于以下场景：较复杂的通知内容、有交互的通知以及系统的推送，请注意这组件是1.2.2版本以后添加，如果使用请升级版本到1.2.2 版本</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>基本使用方法，两种类型的信息提示，默认4秒后自动关闭，调用方法：<i class="c-block-inline">notification.alert(options)</i>，具体配置信息可见下面options配置项</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-notification">
+                <button type="button" class="zr-btn zr-btn-default" id="notification_all">Notification with tittle</button>
+                <button type="button" class="zr-btn zr-btn-default" id="notification_title">Only the tittle</button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <button type="button" class="zr-btn zr-btn-default" id="notification_all_1">Notification with tittle</button>
+    <button type="button" class="zr-btn zr-btn-default" id="notification_title_1">Only the tittle</button>
+    <!--javascript-->
+    Zr.use("notification",function(zr,notification){
+        document.getElementById("notification_all_1").addEventListener("click",function(){
+            notification.alert({
+                title:"Title",
+                content:"This is the content......"
+            })
+        },false)
+        document.getElementById("notification_title_1").addEventListener("click",function(){
+            notification.alert({
+                title:"Only title"
+            })
+        },false)
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>带有图标的通知提醒 <a href="#">#</a></p>
+        <span>图标可以让通知提醒更醒目，分别有信息提醒<i class="c-block-inline">notification.info(options)</i>，成功<i class="c-block-inline">notification.success(options)</i>，警告<i class="c-block-inline">notification.warning(options)</i>，错误提示<i class="c-block-inline">notification.error(options)</i></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-notification">
+                <button type="button" class="zr-btn zr-btn-default" id="notification_info">Info</button>
+                <button type="button" class="zr-btn zr-btn-default" id="notification_success">Success</button>
+                <button type="button" class="zr-btn zr-btn-default" id="notification_warning">Warning</button>
+                <button type="button" class="zr-btn zr-btn-default" id="notification_error">Error</button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <button type="button" class="zr-btn zr-btn-default" id="notification_info_1">Info</button>
+    <button type="button" class="zr-btn zr-btn-default" id="notification_success_1">Success</button>
+    <button type="button" class="zr-btn zr-btn-default" id="notification_warning_1">Warning</button>
+    <button type="button" class="zr-btn zr-btn-default" id="notification_error_1">Error</button>
+    <!--javascript-->
+    Zr.use("notification",function(zr,notification){
+        document.getElementById("notification_info_1").addEventListener("click",function(){
+            notification.info({
+                title:"Info title",
+                content:"This is the info content......"
+            })
+        },false)
+        document.getElementById("notification_success_1").addEventListener("click",function(){
+            notification.success({
+                title:"Success title",
+                content:"This is the success content......"
+            })
+        },false)
+        document.getElementById("notification_warning_1").addEventListener("click",function(){
+            notification.warning({
+                title:"Info warning",
+                content:"This is the warning content......"
+            })
+        },false)
+        document.getElementById("notification_error_1").addEventListener("click",function(){
+            notification.error({
+                title:"Error title",
+                content:"This is the error content......"
+            })
+        },false)
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>自定义显示时长 <a href="#">#</a></p>
+        <span>默认时长为4秒，为 0 则不自动关闭。配置信息详情查看options配置信息</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-notification">
+                <button type="button" class="zr-btn zr-btn-default" id="notification_time">Open The Notification </button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <button type="button" class="zr-btn zr-btn-default">Open The Notification </button>
+    <!--javascript-->
+    Zr.use("notification",function(zr,notification){
+        document.getElementById("notification_error_1").addEventListener("click",function(){
+            notification.success({
+                title:"Self time title",
+                content:"Forever show ~~~ by options.time",
+                iconsClassName:"zricon-transaction",
+                time:0
+            })
+        },false)
+
+    });
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title">
+        <p>options配置 <a href="#">#</a></p>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-200">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">options.time</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Number (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">定义提醒框消失时间，默认是4000毫秒</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">options.title</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String (必填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">显示提示信息的标题，如果没有标题可以替换为内容，内容区content为空即可</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">options.content</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">提示内容</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">options.iconsClassName</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String (选填)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">提示图标，传入ICONS中的任何样式即可。e.g:"zricon-star"</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">options.iconsShowStatus</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Number/Boolean</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">是否显示图标，可以是数字0、1,也可以是布尔值</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</article>
+<script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js?1"></script>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl:"/js/plugin_modules/",
+        requestTime:true
+    });
+    Zr.ready(function(){
+        Zr.use("./js/quickMenu","./js/code");
+        Zr.use("jquery","notification",function(zr,$,notification){
+             $("#notification_all").on("click",function(){
+                 notification.alert({
+                    title:"Title",
+                    content:"This is the content......"
+                 })
+             })
+            $("#notification_title").on("click",function(){
+                notification.alert({
+                    title:"Only title"
+                })
+            })
+            $("#notification_info").on("click",function(){
+                notification.info({
+                    title:"Info title",
+                    content:"This is the info content......"
+                })
+            })
+            $("#notification_success").on("click",function(){
+                notification.success({
+                    title:"Success title",
+                    content:"This is the success content......"
+                })
+            })
+            $("#notification_warning").on("click",function(){
+                notification.warning({
+                    title:"Info warning",
+                    content:"This is the warning content......"
+                })
+            })
+            $("#notification_error").on("click",function(){
+                notification.error({
+                    title:"Error title",
+                    content:"This is the error content......"
+                })
+            })
+            $("#notification_time").on("click",function(){
+                notification.success({
+                    title:"Self time title",
+                    content:"Forever show ~~~ by options.time",
+                    iconsClassName:"zricon-transaction",
+                    time:0
+                })
+            })
+        });
+    })
+</script>
+</body>
+</html>

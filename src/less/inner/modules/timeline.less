@@ -1,0 +1,103 @@
+﻿.@{zr-prefix}-timeline{
+  padding-left: 5px;
+}
+
+.@{zr-prefix}-timeline-item{
+  position: relative;
+  padding-bottom: 20px;
+  &:after{
+    content:' ';
+    position: absolute;
+    left: 5px;
+    top:0;
+    z-index: 0;
+    width:2px;
+    height:100%;
+    background: @grey-3;
+  }
+  &:last-child:after{
+    display: none;
+  }
+  [class*=" zricon-"],[class^=zricon-],.@{zr-prefix}-timeline-icon{
+    position: absolute;
+    left:0;
+    top:1px;
+    z-index: 20;
+    background: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    color:@geekblue-6;
+  }
+  .@{zr-prefix}-timeline-icon{
+    display: block;
+    width:9px;
+    height:9px;
+    border:2px solid @geekblue-6 ;
+    background: @geekblue-2;
+    border-radius: 10px;
+    z-index: 30;
+    left:1.5px;
+  }
+  h1,h2,h3,h4,h5{
+    font-weight: 200;
+    color: @grey-8;
+    line-height: 0.7;
+    margin-bottom: 10px;
+  }
+}
+.@{zr-prefix}-timeline-green{
+  .@{zr-prefix}-timeline-icon{
+    border-color: @green-6;
+    background: @green-2;
+  }
+  [class*=" zricon-"],[class^=zricon-]{
+    color:@green-6;
+  }
+}
+.@{zr-prefix}-timeline-warning{
+  .@{zr-prefix}-timeline-icon{
+    border-color: @orange-6;
+    background: @orange-2;
+  }
+  [class*=" zricon-"],[class^=zricon-]{
+    color:@orange-6;
+  }
+}
+.@{zr-prefix}-timeline-error{
+  .@{zr-prefix}-timeline-icon{
+    border-color: @red-6;
+    background: @red-2;
+  }
+  [class*=" zricon-"],[class^=zricon-]{
+    color:@red-6;
+  }
+}
+
+.@{zr-prefix}-timeline-content{
+  padding-left: 25px;
+  line-height: 1.5;
+  font-weight: 200;
+}
+
+
+
+
+
+
+
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-timeline) {
+  //默认手机
+}
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-timeline) {
+  //平板
+}
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-timeline) {
+  //桌面显示器
+}
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-timeline) {
+  //大桌面显示器
+}
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-timeline) {
+  //大屏慕数据展示
+}

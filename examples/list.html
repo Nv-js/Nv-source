@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List列表</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <style type="text/css">
+        .c-demo-w-720{
+            width: 720px;
+        }
+        .mt20{
+            margin-bottom: 20px;
+        }
+        .c-demo-title{
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: rgba(0,0,0,.85);
+            line-height: 22px;
+            font-weight: 500;
+        }
+
+    </style>
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code")
+        })
+    </script>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>List 列表</p>
+        <span>
+            最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/list.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/18"><b>组件问题反馈和讨论</b></a>
+        </span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>不同尺寸 <a href="#">#</a></p>
+        <span>最简单的列表有大、中(默认)、小三种尺寸，<i class="c-block-inline">zr-list</i> 为中尺寸(默认)的样式，创建不同尺寸的列表，只需添加 <i class="c-block-inline">zr-list-sm</i> (小)、<i class="c-block-inline">zr-list-lg</i> (大)；<br/>列表分为三部分：表头 <i class="c-block-inline">zr-list-header</i> 、表内容区 <i class="c-block-inline">zr-list-content</i> 、表尾  <i class="c-block-inline">zr-list-footer</i> ；其中表内容区每一行 <i class="c-block-inline">zr-list-item</i> 。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+
+            <div class="c-demo-w-720 mt20">
+                <h5 class="c-demo-title">Default</h5>
+                <div class="zr-list zr-list-border">
+                    <div class="zr-list-header">Header</div>
+                    <div class="zr-list-content">
+                        <div class="zr-list-item">Do one thing at a time, and do well</div>
+                        <div class="zr-list-item">Between the cup and the lip a morsel may slip</div>
+                        <div class="zr-list-item">By reading we enrich the mind; by conversation we polish it.</div>
+                    </div>
+                    <div class="zr-list-footer">Footer</div>
+                </div>
+            </div>
+
+            <div class="c-demo-w-720 mt20">
+                <h5 class="c-demo-title">Small</h5>
+                <div class="zr-list zr-list-border zr-list-sm">
+                    <div class="zr-list-header">Header</div>
+                    <div class="zr-list-content">
+                        <div class="zr-list-item">Do one thing at a time, and do well</div>
+                        <div class="zr-list-item">Between the cup and the lip a morsel may slip</div>
+                        <div class="zr-list-item">By reading we enrich the mind; by conversation we polish it.</div>
+                    </div>
+                    <div class="zr-list-footer">Footer</div>
+                </div>
+            </div>
+
+            <div class="c-demo-w-720">
+                <h5 class="c-demo-title">Large</h5>
+                <div class="zr-list zr-list-border zr-list-lg">
+                    <div class="zr-list-header">Header</div>
+                    <div class="zr-list-content">
+                        <div class="zr-list-item">Do one thing at a time, and do well</div>
+                        <div class="zr-list-item">Between the cup and the lip a morsel may slip</div>
+                        <div class="zr-list-item">By reading we enrich the mind; by conversation we polish it.</div>
+                    </div>
+                    <div class="zr-list-footer">Footer</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!-- Default -->
+    <div class="zr-list zr-list-border">
+        <div class="zr-list-header">Header</div>
+        <div class="zr-list-content">
+            <div class="zr-list-item">Do one thing at a time, and do well</div>
+        </div>
+        <div class="zr-list-footer">Footer</div>
+    </div>
+    <!-- Small -->
+    <div class="zr-list zr-list-border zr-list-sm">
+        <div class="zr-list-header">Header</div>
+        <div class="zr-list-content">
+            <div class="zr-list-item">Do one thing at a time, and do well</div>
+        </div>
+        <div class="zr-list-footer">Footer</div>
+    </div>
+    <!-- Large -->
+    <div class="zr-list zr-list-border zr-list-lg">
+        <div class="zr-list-header">Header</div>
+        <div class="zr-list-content">
+            <div class="zr-list-item">Do one thing at a time, and do well</div>
+        </div>
+        <div class="zr-list-footer">Footer</div>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基本样式 <a href="#">#</a></p>
+        <span>创建最基本的列表样式，只需添加 <i class="c-block-inline">zr-list-base</i> 样式，如需去掉列表的外边框，则删除 <i class="c-block-inline">zr-list-border</i> 即可。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-720">
+                <div class="zr-list zr-list-base">
+                    <div class="zr-list-content">
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!-- 展示一行代码示例 -->
+    <div class="zr-list zr-list-base">
+        <div class="zr-list-content">
+            <div class="zr-list-item">
+                <div class="zr-list-item-meta">
+                    <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                    <div class="zr-list-item-meta-content">
+                        <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                        <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>带有操作的列表 <a href="#">#</a></p>
+        <span>创建带有操作的列表和基础列表类同，只是行间多添加了一个操作列标签，示例中为 <i class="c-block-inline">ul</i> 标签，并给标签添加 <i class="c-block-inline">zr-list-item-action</i> 即可。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-720">
+                <div class="zr-list zr-list-base">
+                    <div class="zr-list-content">
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                            <ul class="zr-list-item-action">
+                                <li><a href="#">Reply</a></li>
+                                <li><a href="#">More</a></li>
+                            </ul>
+                        </div>
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                            <ul class="zr-list-item-action">
+                                <li><a href="#">Reply</a></li>
+                                <li><a href="#">More</a></li>
+                            </ul>
+                        </div>
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                            <ul class="zr-list-item-action">
+                                <li><a href="#">Reply</a></li>
+                                <li><a href="#">More</a></li>
+                            </ul>
+                        </div>
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                            <ul class="zr-list-item-action">
+                                <li><a href="#">Reply</a></li>
+                                <li><a href="#">More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!-- 展示一行代码示例 -->
+    <div class="zr-list zr-list-base">
+        <div class="zr-list-content">
+            <div class="zr-list-item">
+                <div class="zr-list-item-meta">
+                    <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                    <div class="zr-list-item-meta-content">
+                        <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                        <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                    </div>
+                </div>
+                <ul class="zr-list-item-action">
+                    <li><a href="#">Reply</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>可加载的列表 <a href="#">#</a></p>
+        <span>创建可加载更多的列表，只需添加 <i class="c-block-inline">zr-list-loading</i> 样式；同时，需注意添加底部加载按钮</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-720">
+                <div class="zr-list zr-list-base zr-list-loading">
+                    <div class="zr-list-content">
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                            <ul class="zr-list-item-action">
+                                <li><a href="#">Reply</a></li>
+                                <li><a href="#">More</a></li>
+                            </ul>
+                        </div>
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                            <ul class="zr-list-item-action">
+                                <li><a href="#">Reply</a></li>
+                                <li><a href="#">More</a></li>
+                            </ul>
+                        </div>
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                            <ul class="zr-list-item-action">
+                                <li><a href="#">Reply</a></li>
+                                <li><a href="#">More</a></li>
+                            </ul>
+                        </div>
+                        <div class="zr-list-item">
+                            <div class="zr-list-item-meta">
+                                <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                                <div class="zr-list-item-meta-content">
+                                    <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                                    <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                                </div>
+                            </div>
+                            <ul class="zr-list-item-action">
+                                <li><a href="#">Reply</a></li>
+                                <li><a href="#">More</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="zr-list-btn">
+                    <button type="button" class="zr-btn zr-btn-default">Loading More</button>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!-- 展示一行代码示例 -->
+    <div class="zr-list zr-list-base zr-list-loading">
+        <div class="zr-list-content">
+            <div class="zr-list-item">
+                <div class="zr-list-item-meta">
+                    <span class="zr-list-avatar"><img src="https://storage.jd.com/zrstatic/images/demo1.jpg"></span>
+                    <div class="zr-list-item-meta-content">
+                        <h4 class="zr-list-item-title">Tittle A  User Name</h4>
+                        <p class="zr-list-item-txt">By reading we enrich the mind; by conversation we polish it.  Coment Detail</p>
+                    </div>
+                </div>
+                <ul class="zr-list-item-action">
+                    <li><a href="#">Reply</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="zr-list-btn">
+        <button type="button" class="zr-btn zr-btn-default">Loading More</button>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>多栏式列表 <a href="#">#</a></p>
+        <span>创建多栏式列表，只需添加 <i class="c-block-inline">zr-list-columns</i> 样式，行内容可为1栏，2栏，3栏……，本示例为3栏效果，具体分栏可参考 <a href="/docs?languageCode=CN&columnUid=40ad19be535e477596a033f9fea2bf7d&directoryUid=d987c54252b5467d9579d80eab63aefb">栅格grid</a> 布局；</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w-720">
+                <div class="zr-list zr-list-border zr-list-columns">
+                    <div class="zr-list-content">
+                        <div class="zr-list-item zr-row">
+                            <div class="zr-col-8">
+                                <h4 class="zr-list-item-title">Name</h4>
+                                <p class="zr-list-item-txt">Andy Wang</p>
+                            </div>
+                            <div class="zr-col-8">
+                                <h4 class="zr-list-item-title">Contact</h4>
+                                <p class="zr-list-item-txt">18810779876</p>
+                            </div>
+                            <div class="zr-col-8">
+                                <h4 class="zr-list-item-title">Time</h4>
+                                <p class="zr-list-item-txt">2018-02-02 00:00:00</p>
+                            </div>
+                        </div>
+                        <div class="zr-list-item zr-row">
+                            <div class="zr-col-8">
+                                <h4 class="zr-list-item-title">ID</h4>
+                                <p class="zr-list-item-txt">000001</p>
+                            </div>
+                            <div class="zr-col-8">
+                                <h4 class="zr-list-item-title">Systerm</h4>
+                                <p class="zr-list-item-txt">Android</p>
+                            </div>
+                            <div class="zr-col-8">
+                                <h4 class="zr-list-item-title">Resolution</h4>
+                                <p class="zr-list-item-txt">1080*1920</p>
+                            </div>
+                        </div>
+                        <div class="zr-list-item zr-row">
+                            <div class="zr-col-8">
+                                <h4 class="zr-list-item-title">Tag</h4>
+                                <p class="zr-list-item-txt"><span>TagA</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!-- 展示一行代码示例 -->
+    <div class="zr-list zr-list-border zr-list-columns">
+        <div class="zr-list-content">
+            <div class="zr-list-item zr-row">
+                <div class="zr-col-8">
+                    <h4 class="zr-list-item-title">Name</h4>
+                    <p class="zr-list-item-txt">Andy Wang</p>
+                </div>
+                <div class="zr-col-8">
+                    <h4 class="zr-list-item-title">Contact</h4>
+                    <p class="zr-list-item-txt">18810779876</p>
+                </div>
+                <div class="zr-col-8">
+                    <h4 class="zr-list-item-title">Time</h4>
+                    <p class="zr-list-item-txt">2018-02-02 00:00:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+
+</article>
+
+</body>
+</html>

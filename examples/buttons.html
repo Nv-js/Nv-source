@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <style type="text/css">
+        .c-demo-btn .zr-btn{
+            margin-right: 8px;
+            vertical-align: bottom;
+        }
+    </style>
+    <script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code")
+        })
+    </script>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Button 按钮</p>
+        <span>
+            基础控件，没有自定义方法。直接添加样式和自定义属性即可使用。
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/button.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/2"><b>组件问题反馈和讨论</b></a>
+        </span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>使用方法</p>
+        <span>
+            <ul>
+                <li><span>按钮触发应用的功能，存在于页面的许多地方。按钮可以是“图标按钮”，也可以是“文字按钮”，也可以“图文结合”。</span></li>
+                <li><span>使用“文字按钮”时，注意使用动词或动词短语来描述按钮所执行的操作。</span></li>
+                <li><span>按钮有4种状态：默认、点击、选中、禁用。</span></li>
+                <li><span>按钮最多会有3种状态：默认、点击、禁用，也可以只有2种状态：默认、点击或者默认、选中（只有默认、选中的按钮作用）。</span></li>
+                <li><span>按钮支持按下后逃逸行为，即按下按钮后再移出热区区域即为取消操作。</span></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>标准按钮 <a href="#">#</a></p>
+        <span>标准按钮有四种类型：主按钮 <i class="c-block-inline">zr-btn-primary</i> 、次按钮 <i class="c-block-inline">zr-btn-default</i> 、危险按钮 <i class="c-block-inline">zr-btn-danger</i> 、不可点按钮 <i class="c-block-inline">zr-btn-disable</i> 。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-btn">
+                <button type="button" class="zr-btn zr-btn-primary">Primary</button>
+                <button type="button" class="zr-btn zr-btn-default">Default</button>
+                <button type="button" class="zr-btn zr-btn-danger">Danger</button>
+                <button type="button" class="zr-btn zr-btn-disable">Disable</button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <button type="button" class="zr-btn zr-btn-primary">Primary</button>
+    <button type="button" class="zr-btn zr-btn-default">Default</button>
+    <button type="button" class="zr-btn zr-btn-danger">Danger</button>
+    <button type="button" class="zr-btn zr-btn-disable">Disable</button>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>多种标签 <a href="#">#</a></p>
+        <span>可以很好的支持button标签与A标签</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-btn">
+                <a href="#" class="zr-btn zr-btn-default">A target</a>
+                <button type="button" class="zr-btn zr-btn-default">Button target</button>
+                <a href="#" type="button" class="zr-btn zr-btn-danger">A target</a>
+                <button type="button" class="zr-btn zr-btn-danger">Button target</button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <a href="#" class="zr-btn zr-btn-default">A target</a>
+    <button type="button" class="zr-btn zr-btn-default">Button target</button>
+    <a href="#" type="button" class="zr-btn zr-btn-danger">A target</a>
+    <button type="button" class="zr-btn zr-btn-danger">Button target</button>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>按钮尺寸 <a href="#">#</a></p>
+        <span>按钮有大 <i class="c-block-inline">zr-btn-lg</i> 、中(默认)、小 <i class="c-block-inline">zr-btn-sm</i> 三种尺寸，在这里我们只定义三种高度（24px,32px,40px）,宽度随内容自适应</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-btn">
+                <button type="button" class="zr-btn zr-btn-primary zr-btn-sm">Small</button>
+                <button type="button" class="zr-btn zr-btn-primary">Default</button>
+                <button type="button" class="zr-btn zr-btn-primary zr-btn-lg">Large</button>
+            </p>
+            <br/>
+            <p class="c-demo-btn">
+                <button type="button" class="zr-btn zr-btn-primary zr-btn-circle zr-btn-sm"><i class="zricon-search-empty"></i></button>
+                <button type="button" class="zr-btn zr-btn-primary zr-btn-circle"><i class="zricon-search-empty"></i></button>
+                <button type="button" class="zr-btn zr-btn-primary zr-btn-circle zr-btn-lg"><i class="zricon-search-empty"></i></button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--大、中、小-->
+    <button type="button" class="zr-btn zr-btn-primary zr-btn-sm">Small</button>
+    <button type="button" class="zr-btn zr-btn-primary">Default</button>
+    <button type="button" class="zr-btn zr-btn-primary zr-btn-lg">Large</button>
+    <!--图标按钮-->
+    <button type="button" class="zr-btn zr-btn-primary zr-btn-circle zr-btn-sm"><i class="zricon-search-empty"></i></button>
+    <button type="button" class="zr-btn zr-btn-primary zr-btn-circle"><i class="zricon-search-empty"></i></button>
+    <button type="button" class="zr-btn zr-btn-primary zr-btn-circle zr-btn-lg"><i class="zricon-search-empty"></i></button>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>图标按钮 <a href="#">#</a></p>
+        <span>图标按钮：带icon的圆形按钮 <i class="c-block-inline">zr-btn-circle</i> 、带icon和text的按钮则同标准按钮</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-btn">
+                <button type="button" class="zr-btn zr-btn-primary zr-btn-circle"><i class="zricon-search-empty"></i></button>
+                <button type="button" class="zr-btn zr-btn-primary"><i class="zricon-search-empty"></i>search</button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+        <button type="button" class="zr-btn zr-btn-primary zr-btn-circle"><i class="zricon-search-empty"></i></button>
+        <button type="button" class="zr-btn zr-btn-primary"><i class="zricon-search-empty"></i>search</button>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>组合按钮 <a href="#">#</a></p>
+        <span>组合按钮需给父级添加 <i class="c-block-inline">zr-btn-group</i> ，组合按钮的样式分为：basic、with icon、icon</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-btn-group">
+                <button type="button" class="zr-btn zr-btn-primary">text1</button>
+                <button type="button" class="zr-btn zr-btn-primary">text2</button>
+                <button type="button" class="zr-btn zr-btn-primary">text3</button>
+            </div>
+            <div class="zr-btn-group">
+                <button type="button" class="zr-btn zr-btn-primary"><i class="zricon-arrow-left"></i>text1</button>
+                <button type="button" class="zr-btn zr-btn-primary">text2<i class="zricon-arrow-right"></i></button>
+            </div>
+            <div class="zr-btn-group">
+                <button type="button" class="zr-btn zr-btn-primary"><i class="zricon-arrow-left"></i></button>
+                <button type="button" class="zr-btn zr-btn-primary"><i class="zricon-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-btn-group">
+        <button type="button" class="zr-btn zr-btn-primary">text1</button>
+        <button type="button" class="zr-btn zr-btn-primary">text2</button>
+        <button type="button" class="zr-btn zr-btn-primary">text3</button>
+    </div>
+    <div class="zr-btn-group">
+        <button type="button" class="zr-btn zr-btn-primary"><i class="zricon-arrow-left"></i>text1</button>
+        <button type="button" class="zr-btn zr-btn-primary">text2<i class="zricon-arrow-right"></i></button>
+    </div>
+    <div class="zr-btn-group">
+        <button type="button" class="zr-btn zr-btn-primary"><i class="zricon-arrow-left"></i></button>
+        <button type="button" class="zr-btn zr-btn-primary"><i class="zricon-arrow-right"></i></button>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+
+</article>
+
+</body>
+</html>

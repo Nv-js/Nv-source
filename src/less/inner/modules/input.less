@@ -1,0 +1,215 @@
+/*
+ * input
+*/
+.inputDisable(){
+  background: @btn-disable-bg;
+  color:@disabled-color;
+  cursor: not-allowed;
+}
+.focus(){
+  &:focus{
+    border: @border-width-base @border-style-base @primary-color;
+  }
+}
+.@{zr-prefix}-input{
+  width: 100%;
+  height: @input-height-base;
+  border: @border-width-base @border-style-base @border-color-base;
+  border-radius: @btn-border-radius-base;
+  line-height: @input-height-base;
+  padding: 0 @input-padding-vertical-base*2;
+  font-family: @font-family;
+  color:@text-color;
+  font-size: @font-size-base;
+  .placeholder(@disabled-color,@font-size-base);
+  .focus();
+}
+.@{zr-prefix}-input[disabled=disabled]{
+    .inputDisable()
+}
+.@{zr-prefix}-input-lg{
+  height: @input-height-lg;
+  line-height: @input-height-lg;
+}
+.@{zr-prefix}-input-sm{
+  height: @input-height-sm;
+  line-height: @input-height-sm;
+}
+.@{zr-prefix}-input-group{
+  position: relative;
+  .@{zr-prefix}-input{
+    padding-right: 30px;
+  }
+  [class=zricon-close-circle]{
+    display: none;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    opacity: .25;
+    margin-top: -9.5px;
+    &:hover{
+      opacity: .45;
+    }
+  }
+}
+.@{zr-prefix}-input-addon{
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  right: 8px;
+  top: 0;
+  opacity: .45;
+  line-height: @input-height-base;
+}
+.@{zr-prefix}-input-addon.@{zr-prefix}-input-sm{
+  height: @input-height-sm;
+  line-height: @input-height-sm;
+}
+.@{zr-prefix}-input-addon.@{zr-prefix}-input-lg{
+  height: @input-height-lg;
+  line-height: @input-height-lg;
+}
+.@{zr-prefix}-input-left{
+  .@{zr-prefix}-input{
+    padding-left: 30px;
+    padding-right: 0px;
+  }
+  .@{zr-prefix}-input-addon{
+    left: 8px;
+    width: 14px;
+  }
+}
+.@{zr-prefix}-textarea{
+  width: 100%;
+  height: auto;
+  min-height: 64px;
+  border: @border-width-base @border-style-base @border-color-base;
+  border-radius: @btn-border-radius-base;
+  padding:@input-padding-vertical-base*2;
+  .placeholder(@disabled-color,@font-size-base);
+  .focus();
+}
+.@{zr-prefix}-input-num{
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  font-size: 12px;
+  right: 8px;
+  bottom: 8px;
+  color: @normal-color;
+}
+.@{zr-prefix}-input-wapper{
+  .@{zr-prefix}-unselect{
+    width: 20%;
+    margin: 0;
+    display: inline-block;
+    .@{zr-prefix}-input{
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+  >.@{zr-prefix}-input{
+    display: inline-block;
+    width: 79%;
+    margin-left: -4px;
+    //border-left: none;
+    border-left: @border-width-base @border-style-base rgba(255, 255, 255, 0);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    &:focus{
+      border-left: @border-width-base @border-style-base @primary-color;
+    }
+  }
+}
+.@{zr-prefix}-input-btn{
+  position: relative;
+  .@{zr-prefix}-unselect{
+    .@{zr-prefix}-select-title{
+      .@{zr-prefix}-input{
+        background: #fafafa;
+      }
+    }
+  }
+  >.@{zr-prefix}-input{
+    width: 70%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+  >.@{zr-prefix}-input-addon{
+    position: relative;
+    right: 0;
+    top: 1px;
+    margin-left: -4px;
+    width: 9%;
+    background: #fafafa;
+    border: @border-width-base @border-style-base @border-color-base;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-left: none;
+    cursor: pointer;
+    opacity: 1;
+    height: 32px;
+    text-align: center;
+    .@{zr-prefix}icon-search-empty{
+      opacity: .45;
+      &:hover{
+        opacity: .65;
+      }
+    }
+  }
+}
+.@{zr-prefix}-input-wapper-left{
+  .@{zr-prefix}-unselect{
+    .@{zr-prefix}-input{
+      border-radius: 4px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+  >.@{zr-prefix}-input{
+    width: 79%;
+    margin-right: -4px;
+    margin-left: 0px;
+    border-right: @border-width-base @border-style-base rgba(255, 255, 255, 0);
+    border-left: @border-width-base @border-style-base @border-color-base;
+    border-radius: 4px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    &:focus{
+      border-color: @primary-color;
+      border-right: @border-width-base @border-style-base @primary-color;
+    }
+  }
+}
+
+.@{zr-prefix}-input-datepicker{
+  color: @grey-6;
+  input{
+    width:38%;
+    height:30px;
+    background: none;
+    border:0;
+    margin: 0 10px;
+    text-align: center;
+    .placeholder(@disabled-color,@font-size-base);
+  }
+}
+
+
+
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-input) {
+  //默认手机
+}
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-input) {
+  //平板
+}
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-input) {
+  //桌面显示器
+}
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-input) {
+  //大桌面显示器
+}
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-input) {
+  //大屏慕数据展示
+}

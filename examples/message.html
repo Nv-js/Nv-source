@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <style type="text/css">
+        .c-demo-btn .zr-btn{
+            margin-right: 8px;
+            vertical-align: bottom;
+        }
+    </style>
+    <script type="text/javascript" src="//storage.jd.com/1.3.3/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+            module:{
+                "message":"./modal/index"
+            },
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code");
+            Zr.use("./test")
+        })
+    </script>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Message 全局提示</p>
+        <span>用户主动操作后的反馈提示</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>基本使用方法，四种类型的信息提示，默认3s消失，可自定义时长，不要超过15个字</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-btn">
+                <button type="button" onclick="Zr.use('message',function(zr,message){message.info('This is a message of info')})" class="zr-btn zr-btn-default">Info</button>
+                <button type="button" onclick="Zr.use('message',function(zr,message){message.success('This is a message of success')})" class="zr-btn zr-btn-default">Success</button>
+                <button type="button" onclick="Zr.use('message',function(zr,message){message.warning('This is a message of warning')})" class="zr-btn zr-btn-default">Warning</button>
+                <button type="button" onclick="Zr.use('message',function(zr,message){message.error('This is a message of error')})" class="zr-btn zr-btn-default">Error</button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <button type="button" class="zr-btn zr-btn-default info">Info</button>
+    <button type="button" class="zr-btn zr-btn-default success">Success</button>
+    <button type="button" class="zr-btn zr-btn-default warning">Warning</button>
+    <button type="button" class="zr-btn zr-btn-default error">Error</button>
+
+    <!--jQuery-->
+    Zr.use("message","jquery",function(zr,message,$){
+        $(".info").off("click").on("click",function(){
+            message.info("This is a message of info");
+        })
+        $(".success").off("click").on("click",function(){
+            message.success("This is a message of success");
+        })
+        $(".warning").off("click").on("click",function(){
+            message.warning("This is a message of warning");
+        })
+        $(".error").off("click").on("click",function(){
+            message.error("This is a message of error");
+        })
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>自定义显示时长 <a href="#">#</a></p>
+        <span>含有辅助性文字介绍的警告提示</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-btn">
+                <button type="button" onclick="Zr.use('message',function(zr,message){message.info('This message will disappear in 10 seconds',{time:10000})})" class="zr-btn zr-btn-default">Customized display duration</button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <!--HTML-->
+            <button type="button" class="zr-btn zr-btn-default">Customized display duration</button>
+            <!--jQuery-->
+            Zr.use("message","jquery",function(zr,message,$){
+                $(".info").off("click").on("click",function(){
+                    //10s后消失
+                    message.info("This message will disappear in 10 seconds",{
+                        time:10000
+                    });
+                })
+            })
+
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>加载中 <a href="#">#</a></p>
+        <span>全局Loading的状态，并异步在某个时机移除。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-btn">
+                <button type="button" onclick="Zr.use('message',function(zr,message){message.loadingShow('Loading...')})"  class="zr-btn zr-btn-default">Loading</button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <button type="button" class="zr-btn zr-btn-default">Loading</button>
+
+    <!--jQuery-->
+    Zr.use("message","jquery",function(zr,message,$){
+        $(".info").off("click").on("click",function(){
+            //10s后消失
+            message.loadingShow("Loading...");
+            //message.loadingHide()
+        })
+    })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>警告提示框 <a href="#">#</a></p>
+        <span>经常用于阻断性消息提醒，可以自定义图标</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-btn">
+                <button type="button" onclick="Zr.use('message',function(zr,message){message.alert('@注意此时是对话框')})"  class="zr-btn zr-btn-default">Alert</button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <!--HTML-->
+            <button type="button" class="zr-btn zr-btn-default">Alert</button>
+
+            <!--jQuery-->
+            Zr.use("message",function(zr,message){
+            message.alert('@注意此时是对话框')
+            })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>确认提示框 <a href="#">#</a></p>
+        <span>确认是否要进行下一步操作，常用语警醒确认操作</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <p class="c-demo-btn">
+                <button type="button" onclick="Zr.use('message',function(zr,message){message.confirm('是否要删除此条数据？')})"  class="zr-btn zr-btn-default">Confirm</button>
+            </p>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <!--HTML-->
+            <button type="button" class="zr-btn zr-btn-default">Confirm</button>
+
+            <!--jQuery-->
+            Zr.use("message",function(zr,message){
+            message.confirm('是否要删除此条数据')
+            })
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-options-title">Method</div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-200">方法</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-300">入参</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-300">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">message.config</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">Object options</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">全局配置信息</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">message.info</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">String name,Object options(可选)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">重要信息提示，可单独配置相关信息</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">message.success</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">String name,Object options(可选)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">成功信息提示，可单独配置相关信息</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">message.warning</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">String name,Object options(可选)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">警告信息提示，可单独配置相关信息</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">message.error</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">String name,Object options(可选)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">错误信息提示，可单独配置相关信息</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">message.loadingShow</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">String name,Object options(可选)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">加载信息提示，可单独配置相关信息</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">message.loadingHide</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300"></div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">加载信息隐藏</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">message.alert</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">String content,Object config(可选)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">信息警告提示框，content为信息内容</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">message.confirm</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">String content,Object config(可选)</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-300">信息确认提示框，content为信息内容</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-options-title">Object options 属性</div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-200">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">options.time</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Number（可选）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">自定义消失时间，单位是(ms)，默认是3000，针对loadingShow无效</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">options.content</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String（可选）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">提示内容，同方法中的String name 属性</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">options.iconsClassName</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String（可选）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">提示图标，传入ICONS中的任何样式即可。e.g:"zricon-star"</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">options.iconsShowStatus</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Number/Boolean（可选）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">是否显示图标，可以是数字0、1,也可以是布尔值</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-options-title">Object config 属性</div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-200">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">类型（是否必要）</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">config.content</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String（可选）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">定义的显示内容</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">config.title</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String（可选）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">显示标题名称</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">config.onClose</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Function（可选）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">关闭对话框时，触发此方法，并且内部指针指向当前会话Dom对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">object.onConfirm</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Function（可选）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">确认的时候触发此方法，并且内部指针指向当前会话Dom对象</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">object.okText</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String（可选）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">确认按钮文案，默认是中文</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-200">object.closeText</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String（可选）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">关闭按钮文案，默认是中文</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</article>
+<!-- Message 全局提示 -->
+</body>
+</html>

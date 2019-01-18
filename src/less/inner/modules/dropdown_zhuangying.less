@@ -1,0 +1,491 @@
+/*
+ * dropdown
+ */
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+
+.mr8{
+  margin-right: @padding-xs
+}
+.@{zr-prefix}-dropdown{
+  display: inline-block;
+
+  .@{zr-prefix}-dropdown-hidder{
+    display: none;
+  }
+
+  .@{zr-prefix}-dropdown-link{
+    font-size: @font-size-base;
+    position: relative;
+    a{
+      color: @grey-8;
+      i{
+          width: 8px;
+          height: 10px;
+          display: inline-block;
+          margin-left: 5px;
+          -ms-transform-origin: right bottom;
+          -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+          -ms-transform: rotate(0deg);
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+          -ms-transition: all 0.2s ease-in 0.1s;
+          -webkit-transition: all 0.2s ease-in 0.1s;
+          transition: all 0.2s ease-in 0.1s;
+
+      }
+    }
+
+    .@{zr-prefix}-dropdown-location{
+      position: absolute;
+      z-index: 100;
+    }
+
+    .@{zr-prefix}-dropdown-topLeft{
+      left:0;
+      top:26px;
+    }
+    .@{zr-prefix}-dropdown-topCenter{
+      left: 0;
+      right: 0;
+      top: 26px;
+    }
+    .@{zr-prefix}-dropdown-topRight{
+      right: 0;
+      top: 26px;
+    }
+
+    .@{zr-prefix}-dropdown-menu{
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      z-index: 1050;
+      display: block;
+      background: #FFF;
+      box-shadow: 0 2px 9px 0 rgba(0,0,0,0.12);
+
+      .@{zr-prefix}-dropdown-item{
+        clear: both;
+        white-space: nowrap;
+        cursor: pointer;
+        -webkit-transition: all .3s;
+        transition: all .3s;
+        line-height: 40px;
+        a{
+          //padding: 10px 13px 11px 16px;
+          //display: block;
+          //-webkit-transition: all .3s;
+          //transition: all .3s;
+          padding: 0 13px 0 16px;
+          display: block;
+          color:@grey-7;
+
+          &:hover {
+            background-color: @primary-1;
+            color: @grey-8;
+          }
+          &.disable{
+            color:@grey-6;
+          }
+          &.disable:hover{
+            background-color: transparent;
+            cursor:not-allowed;
+          }
+        }
+      }
+      .@{zr-prefix}-dropdown-divider{
+        height: 1px;
+        overflow: hidden;
+        background-color: rgba(0,0,0,0.05);
+        line-height: 0;
+      }
+
+    }
+
+    &:hover{
+      a{
+        color:@blue-6;
+        i{
+          -ms-transform: rotate(-180deg);
+          -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+        }
+      }
+
+
+      .@{zr-prefix}-dropdown-hidder{
+        display: block;
+      }
+    }
+  }
+
+  .@{zr-prefix}-dropdown-normal{
+    padding:4px 15px;
+    border: 1px solid transparent;
+  }
+  .@{zr-prefix}-dropdown-border{
+    padding:4px 15px;
+    border: 1px solid rgba(0,0,0,0.10);
+    border-radius: 4px;
+  }
+
+
+
+}
+
+
+
+.slide-down-enter {
+  -webkit-animation-name: zrSlideUpIn;
+  animation-name: zrSlideUpIn;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes zrSlideUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes zrSlideUpIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes zrSlideUpOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+}
+@keyframes zrSlideUpOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+}
+@-webkit-keyframes zrSlideDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@keyframes zrSlideDownIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+@-webkit-keyframes zrSlideDownOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+}
+@keyframes zrSlideDownOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+    -webkit-transform: scaleY(0.8);
+    transform: scaleY(0.8);
+  }
+}
+@-webkit-keyframes zrSlideLeftIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@keyframes zrSlideLeftIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes zrSlideLeftOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+  }
+}
+@keyframes zrSlideLeftOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+  }
+}
+@-webkit-keyframes zrSlideRightIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@keyframes zrSlideRightIn {
+  0% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes zrSlideRightOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+  }
+}
+@keyframes zrSlideRightOut {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+  }
+}
+/*.swing-enter,
+.swing-appear {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+.swing-enter.swing-enter-active,
+.swing-appear.swing-appear-active {
+  -webkit-animation-name: @{zr-prefix}SwingIn;
+  animation-name: @{zr-prefix}SwingIn;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}*/
+@-webkit-keyframes zrSwingIn {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  20% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  40% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  60% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  80% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+@keyframes zrSwingIn {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  20% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  40% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  60% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+  80% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+}
+
+
+.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-dropdown) {
+  //默认手机
+}
+
+.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-dropdown) {
+  //平板
+}
+
+.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-dropdown) {
+  //桌面显示器
+}
+
+.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-dropdown) {
+  //大桌面显示器
+}
+
+.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-dropdown) {
+  //大屏慕数据展示
+}

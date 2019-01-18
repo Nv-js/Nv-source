@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    <!--开发阶段引用jq-->
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <style type="text/css">
+        .c-demo-w400{
+            width: 400px;
+        }
+        .c-demo-w500{
+            width: 500px;
+        }
+        .c-demo-w450{
+            width: 450px;
+        }
+        .c-demo-w320{
+            width: 320px;
+        }
+        .inline{
+            display: inline-block;
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Upload 上传</p>
+        <span>可以通过点击选择、拖拽、手动上传文件</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>使用方法</p>
+        <span>
+            <ul>
+                <li><span>上传文件的大小不易过大。</span></li>
+            </ul>
+        </span>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础样式 <a href="#">#</a></p>
+        <span>最基础的上传文件的方式 <i class="c-block-inline">zr-upload</i> ，点击按钮出现选择文件选择框</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w400">
+                <input type="file" title="Click to upload" class="zr-upload">
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <input type="file" title="Click to upload" class="zr-upload">
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>文字说明样式 <a href="#">#</a></p>
+        <span>对上传文件的大小、格式等有相应的文字说明，可添加样式 <i class="c-block-inline">zr-upload-explain</i> 。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w500">
+                <input type="file" title="Click to upload" alt="The file size is no more than 500kb and the file format is JPG/PNG" class="zr-upload zr-upload-explain">
+            </div>
+
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <input type="file" title="Click to upload" alt="The file size is no more than 500kb and the file format is JPG/PNG" class="zr-upload zr-upload-explain">
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>已上传文件列表 <a href="#">#</a></p>
+        <span>已上传列表样式为 <i class="c-block-inline">zr-upload-list</i> ，有默认状态、上传失败 <i class="c-block-inline">zr-upload-error</i>、上传中 <i class="c-block-inline">zr-upload-doing</i> 三种状态。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w400">
+                <input type="file" title="Click to upload" class="zr-upload">
+                <ul class="zr-upload-list">
+                    <li>
+                        <i class="zricon-accessory-empty"></i>
+                        <span>Accessory1.png</span>
+                        <i class="delete zricon-close"></i>
+                    </li>
+                    <li class="zr-upload-error">
+                        <i class="zricon-accessory-empty"></i>
+                        <span>Accessory2.png</span>
+                        <i class="delete zricon-close"></i>
+                    </li>
+                    <li class="zr-upload-doing">
+                        <i class="zricon-accessory-empty"></i>
+                        <span>Accessory3.png</span>
+                        <em>10%</em>
+                        <div class="zr-upload-progress">
+                            <span style="width: 40%"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <input type="file" title="Click to upload" class="zr-upload">
+    <ul class="zr-upload-list">
+        <li>
+            <i class="zricon-accessory-empty"></i>
+            <span>Accessory1.png</span>
+            <i class="delete zricon-close"></i>
+        </li>
+        <li class="zr-upload-error">
+            <i class="zricon-accessory-empty"></i>
+            <span>Accessory2.png</span>
+            <i class="delete zricon-close"></i>
+        </li>
+        <li class="zr-upload-doing">
+            <i class="zricon-accessory-empty"></i>
+            <span>Accessory3.png</span>
+            <em>10%</em>
+            <div class="zr-upload-progress">
+                <span style="width: 40%"></span>
+            </div>
+        </li>
+    </ul>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>头像上传 <a href="#">#</a></p>
+        <span>点击上传用户头像，并且要能够限制用户上传的图片格式和大小，需添加样式 <i class="c-block-inline">zr-upload-avatar</i> 。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <input type="file" class="zr-upload zr-upload-avatar" />
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <input type="file" class="zr-upload zr-upload-avatar" />
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>多图片上传 <a href="#">#</a></p>
+        <span>用户可以上传多张图片，需要限制上传数量，到达上传上限，上传按钮消失，本示例中最多上传3张图片。多图片上传样式 <i class="c-block-inline">zr-upload-picture</i> ，图片列表样式 <i class="c-block-inline">zr-upload-list-picture</i> </span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <ul class="zr-upload-list zr-upload-list-picture">
+                <li>
+                    <img src="https://storage.jd.com/zrstatic/images/demo1.jpg">
+                    <div class="zr-upload-list-mask">
+                        <i class="zricon-visible-empty view"></i>
+                        <i class="zricon-trash-empty delete"></i>
+                    </div>
+                </li>
+            </ul>
+            <input type="file" class="zr-upload zr-upload-picture">
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <ul class="zr-upload-list zr-upload-list-picture">
+        <li>
+            <img src="https://storage.jd.com/zrstatic/images/demo1.jpg">
+            <div class="zr-upload-list-mask">
+                <i class="zricon-visible-empty view"></i>
+                <i class="zricon-trash-empty delete"></i>
+            </div>
+        </li>
+    </ul>
+    <input type="file" class="zr-upload zr-upload-picture">
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>图片列表 <a href="#">#</a></p>
+        <span>已上传图片列表样式 <i class="c-block-inline">zr-upload-list-photo</i> ，有两种排列方式：默认 、垂直 <i class="c-block-inline">zr-upload-list-vertical</i></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w320">
+                <input type="file" title="Click to upload" class="zr-upload zr-upload-photo">
+                <ul class="zr-upload-list zr-upload-list-photo">
+                    <li>
+                        <img src="https://storage.jd.com/zrstatic/images/demo1.jpg">
+                        <div title="photo1.jpg">photo1.jpg</div>
+                        <i class="zricon-close delete"></i>
+                    </li>
+                    <li>
+                        <img src="https://storage.jd.com/zrstatic/images/demo1.jpg">
+                        <div title="photo1.jpg">photo1.jpg</div>
+                        <i class="zricon-close delete"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="c-block-50"></div>
+            <div class="c-demo-w450">
+                <input type="file" title="Click to upload" class="zr-upload zr-upload-photo">
+                <ul class="zr-upload-list zr-upload-list-photo zr-upload-list-vertical">
+                    <li>
+                        <img src="https://storage.jd.com/zrstatic/images/demo1.jpg">
+                        <div title="photo1.jpg">photo1.jpg</div>
+                        <i class="zricon-close delete"></i>
+                    </li>
+                    <li>
+                        <img src="https://storage.jd.com/zrstatic/images/demo1.jpg">
+                        <div title="photo1.jpg">photo1.jpg</div>
+                        <i class="zricon-close delete"></i>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--默认排列方式-->
+    <input type="file" title="Click to upload" class="zr-upload zr-upload-photo">
+    <ul class="zr-upload-list zr-upload-list-photo">
+        <li>
+            <img src="https://storage.jd.com/zrstatic/images/demo1.jpg">
+            <div title="photo1.jpg">photo1.jpg</div>
+            <i class="zricon-close delete"></i>
+        </li>
+        <li>
+            <img src="https://storage.jd.com/zrstatic/images/demo1.jpg">
+            <div title="photo1.jpg">photo1.jpg</div>
+            <i class="zricon-close delete"></i>
+        </li>
+    </ul>
+    <!--垂直排列方式-->
+    <input type="file" title="Click to upload" class="zr-upload zr-upload-photo">
+    <ul class="zr-upload-list zr-upload-list-photo zr-upload-list-vertical">
+        <li>
+            <img src="https://storage.jd.com/zrstatic/images/demo1.jpg">
+            <div title="photo1.jpg">photo1.jpg</div>
+            <i class="zricon-close delete"></i>
+        </li>
+        <li>
+            <img src="https://storage.jd.com/zrstatic/images/demo1.jpg">
+            <div title="photo1.jpg">photo1.jpg</div>
+            <i class="zricon-close delete"></i>
+        </li>
+    </ul>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>拖拽上传 <a href="#">#</a></p>
+        <span>把文件拖拽至指定区域即可完成上传，同样支持点击上传，拖拽上传需添加样式 <i class="c-block-inline">zr-upload-drag</i>。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w400">
+                <input type="file" title="Click or drag file to this area to upload" alt="The file size is no more than 500kb and the file format is JPG/PNG" class="zr-upload zr-upload-drag">
+                <ul class="zr-upload-list">
+                    <li>
+                        <i class="zricon-accessory-empty"></i>
+                        <span>Accessory1.png</span>
+                        <i class="delete zricon-close"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <input type="file" title="Click or drag file to this area to upload" alt="The file size is no more than 500kb and the file format is JPG/PNG" class="zr-upload zr-upload-drag">
+    <ul class="zr-upload-list">
+        <li>
+            <i class="zricon-accessory-empty"></i>
+            <span>Accessory1.png</span>
+            <i class="delete zricon-close"></i>
+        </li>
+    </ul>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>手动上传 <a href="#">#</a></p>
+        <span>手动上传需添加样式 <i class="c-block-inline">zr-upload-manual</i> ，默认状态下，Upload按钮为灰色不可点击状态，当选择文件后，Upload按钮成激活状态，Upload按钮触发上传文件操作，手动上传文件。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="c-demo-w320 inline">
+                <input type="file" class="zr-upload zr-upload-manual" />
+                <div class="zr-upload-btn">
+                    <button class="zr-btn zr-btn-primary zr-btn-disable">Upload</button>
+                </div>
+            </div>
+            <div class="c-demo-w320 inline">
+                <input type="file" class="zr-upload zr-upload-manual" />
+                <ul class="zr-upload-list">
+                    <li>
+                        <i class="zricon-accessory-empty"></i>
+                        <span>Accessory1.png</span>
+                        <i class="delete zricon-close"></i>
+                    </li>
+                </ul>
+                <div class="zr-upload-btn">
+                    <button class="zr-btn zr-btn-primary">Upload</button>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!-- 未选择文件状态 -->
+    <input type="file" accept="" class="zr-upload zr-upload-manual" />
+    <div class="zr-upload-btn">
+        <button class="zr-btn zr-btn-primary zr-btn-disable">Upload</button>
+    </div>
+    <!-- 已选择文件状态 -->
+    <input type="file" accept="" class="zr-upload zr-upload-manual" />
+    <ul class="zr-upload-list">
+        <li>
+            <i class="zricon-accessory-empty"></i><span>Accessory1.png</span><i class="delete zricon-close"></i>
+        </li>
+    </ul>
+    <div class="zr-upload-btn">
+        <button class="zr-btn zr-btn-primary">Upload</button>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <div class="c-options-title">API</div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-200">描述</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">类型</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">默认值</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">title</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-200">上传按钮的名称</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">Click to Upload（基础上传）、Select File（手动上传）</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">alt</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-200">上传要求描述文字</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">The file size is no more than 500kb and the file format is JPG/PNG</div>
+                    </td>
+                </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+</article>
+<!--注意此段js必须第一引入在开发模式下{-->
+<script type="text/javascript" src="/js/zr.min.js?1"></script>
+<script type="text/javascript" src="js/upload.js"></script>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl: "/js/plugin_modules/",
+        requestTime:true
+    })
+    Zr.ready(function(){
+        Zr.use("./js/quickMenu","./js/code")
+    })
+</script>
+</body>
+</html>

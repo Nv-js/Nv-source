@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件平台显示内容</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <link rel="stylesheet" href="//storage.jd.com/0.0.1/zr/css/cdn_zr.min.css">
+    <style>
+        .c-demo .c-top-introduce{
+            color: rgba(0,0,0,0.65);
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Back top 返回顶部</p>
+        <span>
+            返回页面顶部的操作
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/top.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/25"><b>组件问题反馈和讨论</b></a>
+        </span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>基本样式 <a href="#">#</a></p>
+        <span>尺寸为40px*40px，页面滚动400px时出现，距右边下边距离40px</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <span class="c-top-introduce">Scroll down to see the bottom-right</span>
+            <div class="zr-top">
+                <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <div class="zr-top-wrap" data-position = "auto 20px 100px auto">
+        <div class="zr-top">
+            <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+        </div>
+    </div>
+    <!--HTML-->
+
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>自定义样式 <a href="#">#</a></p>
+        <span>可以自定义回到顶部按钮的样式</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <span class="c-top-introduce">Scroll down to see the bottom-right</span>
+            <div class="zr-top zr-top-custom">
+                <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--HTML-->
+    <div class="zr-top-wrap" data-position = "auto 20px 100px auto">
+        <div class="zr-top zr-top-custom">
+            <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+        </div>
+    </div>
+    <!--HTML-->
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <!---->
+    <div class="c-block-20"></div>
+    <section class="c-sub-title">
+        <p>属性 <a href="#">#</a></p>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">节点属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">是否必填</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">data-position</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">必填，是节点属性</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">data-position = "auto 20px 100px auto" => 位置：上、右、下、左</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div style="width:100%;height:1000px;"></div>
+</article>
+<div class="zr-top-wrap" data-position="auto 20px 100px auto">
+    <div class="zr-top">
+        <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+    </div>
+</div>
+
+<script type="text/javascript" src="/frontPage/js/top.js?1"></script>
+<script type="text/javascript" src="/js/zr.min.js?1"></script>
+<script type="text/javascript">
+    Zr.config({
+        baseUrl: "/js/plugin_modules/",
+        requestTime:true
+    })
+    Zr.ready(function(){
+        Zr.use("./js/quickMenu","./js/code")
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
+    <style type="text/css">
+        .c-introduce-ul {
+            padding-top: 16px;
+            color: rgba(0, 0, 0, 0.65);
+        }
+        .c-introduce-ul li{
+            line-height: 24px;
+            padding-bottom: 5px;
+        }
+        .c-introduce-ul li::before{
+            content: "• ";
+            color: #CBCBCB;
+        }
+        .c-demo-w-360{
+            width: 360px;
+        }
+        .c-demo-w-640{
+            width: 640px;
+        }
+        .zr-alert{
+            margin-bottom: 8px;
+        }
+        .c-left-20{
+            margin-left: 20px;
+        }
+        .c-demo-test .zr-layout{
+            text-align: center;
+        }
+        .c-demo-test .zr-layout-content{
+            min-height: 128px;
+            line-height: 128px;
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .c-demo-test .zr-layout-side{
+            max-width: 200px;
+            min-width: 200px;
+            background: #ccc;
+            line-height: 128px;
+        }
+        .c-demo .zr-layout{
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .logo{
+            background: rgba(255, 255, 255, 0.2);
+            height:32px;
+            margin: 15px 24px;
+        }
+        .c-demo .zr-layout-space .zr-breadcrumb{
+            text-align: left;
+        }
+
+
+
+
+
+
+    </style>
+    <link type="text/css" rel="stylesheet" href="/js/plugin_modules/zr/css/zr.min.css" />
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/layout.js"></script>
+    <!--}-->
+    <script type="text/javascript" src="/js/zr.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+//            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code")
+        })
+    </script>
+</head>
+
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>Layout 布局</p>
+        <span>有关整体页面布局的设计原则</span>
+        <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/layout.md"><b>API文档</b></a>
+        <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/5"><b>组件问题反馈和讨论</b></a>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-thin-title">
+        <p>设计规则</p>
+        <div class="c-block-15"></div>
+        <div class="c-size-18">尺寸</div>
+        <span>
+            <ul>
+                <li><span>顶部导航的高度尺寸计算范围：48+8n</span></li>
+                <li><span>左侧导航的宽度尺寸计算范围：200+8n</span></li>
+            </ul>
+        </span>
+        <div class="c-block-15"></div>
+        <div class="c-left-20"><a href="#">点击了解栅格系统</a></div>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>基础布局 <a href="#">#</a></p>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo c-demo-test">
+            <div class="zr-layout">
+                <div class="zr-layout-header grey-bgc-3">
+                    Header
+                </div>
+                <div class="zr-layout-content grey-bgc-4">
+                    Content
+                </div>
+                <div class="zr-layout-footer grey-bgc-3">
+                    Footer
+                </div>
+            </div>
+            <div class="c-block-20"></div>
+            <div class="zr-layout">
+                <div class="zr-layout-header grey-bgc-3">
+                    Header
+                </div>
+                <div class="zr-layout zr-layout-has-side grey-bgc-4">
+                    <div class="zr-layout-side">
+                        <div class="zr-layout-side-children">
+                            Side
+                        </div>
+                    </div>
+                    <div class="zr-layout-content">
+                        Content
+                    </div>
+                </div>
+                <div class="zr-layout-footer grey-bgc-3">
+                    Footer
+                </div>
+            </div>
+            <div class="c-block-20"></div>
+            <div class="zr-layout zr-layout-has-side">
+                <div class="zr-layout-side">Side</div>
+                <div class="zr-layout">
+                    <div class="zr-layout-header">Header</div>
+                    <div class="zr-layout-content">Content</div>
+                    <div class="zr-layout-footer">Footer</div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <!--第一种-->
+    <div class="zr-layout">
+        <div class="zr-layout-header grey-bgc-3">
+            Header
+        </div>
+        <div class="zr-layout-content grey-bgc-4">
+            Content
+        </div>
+        <div class="zr-layout-footer grey-bgc-3">
+            Footer
+        </div>
+    </div>
+    <!--第二种-->
+    <div class="zr-layout">
+        <div class="zr-layout-header grey-bgc-3">
+            Header
+        </div>
+        <div class="zr-layout zr-layout-has-side grey-bgc-4">
+            <div class="zr-layout-side">
+                <div class="zr-layout-side-children">
+                    Side
+                </div>
+            </div>
+            <div class="zr-layout-content">
+                Content
+            </div>
+        </div>
+        <div class="zr-layout-footer grey-bgc-3">
+            Footer
+        </div>
+    </div>
+    <!--第三种-->
+    <div class="zr-layout zr-layout-has-side">
+        <div class="zr-layout-side">Side</div>
+        <div class="zr-layout">
+            <div class="zr-layout-header">Header</div>
+            <div class="zr-layout-content">Content</div>
+            <div class="zr-layout-footer">Footer</div>
+        </div>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>侧边栏导航 <a href="#">#</a></p>
+        <span>将设置、搜索、用户信息等常用内容放置在左侧导航区，导航层级少于3级时可以使用此结构。同时如果需要深色的皮肤需要在最外层<i class="c-block-inline">zr-layout</i> 添加样式<i class="c-block-inline">zr-layout-theme-dark</i>,同时在za-nav的外层添加样式<i class="c-block-inline">zr-nav-geekblue</i></span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-layout zr-layout-has-side zr-layout-side-trigger zr-layout-theme-dark">
+                <div class="zr-layout-side">
+                    <div class="zr-layout-side-children zr-nav-geekblue">
+                        <div class="zr-layout-logo"></div>
+                        <div class="zr-layout-icon-home">
+                            <i class="zricon-home-empty"></i>
+                        </div>
+                        <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="double" zr-event="click">
+                            <!--二级导航效果一-->
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">
+                                    <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
+                                    <i class="zricon-arrow-down"></i>
+                                </div>
+
+                                <!--一级菜单-->
+                                <ul class="zr-nav-menu">
+                                    <li class="zr-nav-item">
+                                        <!--可以使用 <a> 标签-->
+                                        <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                    </li>
+                                    <li class="zr-nav-item">
+                                        <!--可以使用 除<a> 标签之外的其它标签-->
+                                        <div class="zr-nav-subtitle">Option 2</div>
+                                    </li>
+                                    <li class="zr-nav-item">
+                                        <div class="zr-nav-subtitle">
+                                            <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                        <!--子集菜单-->
+                                        <ul class="zr-nav-leaves">
+                                            <li class="zr-nav-item">
+                                                <div class="zr-nav-subtitle">Option 3</div>
+                                            </li>
+                                            <li class="zr-nav-item">
+                                                <div class="zr-nav-subtitle">Option 4</div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!--二级导航效果一-->
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">
+                                    <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
+                                    <i class="zricon-arrow-down"></i>
+                                </div>
+
+                                <!--一级菜单-->
+                                <ul class="zr-nav-menu">
+                                    <li class="zr-nav-item">
+                                        <div class="zr-nav-subtitle">Option 5</div>
+                                    </li>
+                                    <li class="zr-nav-item">
+                                        <div class="zr-nav-subtitle">Option 6</div>
+                                    </li>
+                                    <li class="zr-nav-item">
+                                        <div class="zr-nav-subtitle">Option 7</div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!--一级菜单效果-->
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">
+                                    <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
+                                    <i class="zricon-arrow-down"></i>
+                                </div>
+                                <!--一级菜单-->
+                                <ul class="zr-nav-menu">
+                                    <li class="zr-nav-item">
+                                        <div class="zr-nav-subtitle">Option 8</div>
+                                    </li>
+                                    <li class="zr-nav-item">
+                                        <div class="zr-nav-subtitle">Option 9</div>
+                                    </li>
+                                    <li class="zr-nav-item">
+                                        <div class="zr-nav-subtitle">Option 10</div>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!--一级菜单效果-->
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">
+                                    <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                                </div>
+                            </li>
+
+                            <!--一级级菜单效果-->
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">
+                                    <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                                </div>
+                            </li>
+
+                            <!--没有子菜单效果-->
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">
+                                    <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="zr-layout-info">
+                            <div class="zr-layout-info-photo" title="userName"><img src="//storage.jd.com/zrstatic/images/demo2.jpg" /></div>
+                            <div class="zr-layout-info-item">
+                                <p class="zr-layout-info-title">User Name</p>
+                                <a class="zr-layout-info-icon"><i class="zricon-mail-empty"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="zr-layout">
+                    <div class="zr-layout-header">
+                        <div class="zr-row-flex">
+                            <div class="zr-col-2 zr-layout-trigger" id="double"><i class="zricon-menu-empty"></i></div>
+                            <div class="zr-col-6 zr-col-offset-16">
+                                <div class="zr-input-group zr-layout-search-group">
+                                    <input type="text" placeholder="Please input text" class="zr-input">
+                                    <span class="zr-input-addon">
+                                        <i class="zricon-search-empty"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zr-layout-content zr-layout-space">
+                        <div class="zr-breadcrumb">
+                            <span><em>Home</em><i class="zricon-arrow-right"></i></span>
+                            <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
+                            <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                            <span><em>Other info</em></span>
+                        </div>
+                        <div style="min-height: 400px;background: #fff;padding: 24px;">
+                            这里是展示内容
+                        </div>
+                    </div>
+                    <div class="zr-layout-footer" style="text-align: center">Zr Design</div>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-layout zr-layout-has-side zr-layout-side-trigger zr-layout-theme-dark">
+        <div class="zr-layout-side">
+            <div class="zr-layout-side-children zr-nav-geekblue">
+                <div class="zr-layout-logo"></div>
+                <div class="zr-layout-icon-home">
+                    <i class="zricon-home-empty"></i>
+                </div>
+                <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="double" zr-event="click">
+                    <!--二级导航效果一-->
+                    <li class="zr-nav-item">
+                        <div class="zr-nav-subtitle">
+                            <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
+                            <i class="zricon-arrow-down"></i>
+                        </div>
+
+                        <!--一级菜单-->
+                        <ul class="zr-nav-menu">
+                            <li class="zr-nav-item">
+                                <!--可以使用 <a> 标签-->
+                                <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                            </li>
+                            <li class="zr-nav-item">
+                                <!--可以使用 除<a> 标签之外的其它标签-->
+                                <div class="zr-nav-subtitle">Option 2</div>
+                            </li>
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">
+                                    <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                <!--子集菜单-->
+                                <ul class="zr-nav-leaves">
+                                    <li class="zr-nav-item">
+                                        <div class="zr-nav-subtitle">Option 3</div>
+                                    </li>
+                                    <li class="zr-nav-item">
+                                        <div class="zr-nav-subtitle">Option 4</div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--二级导航效果一-->
+                    <li class="zr-nav-item">
+                        <div class="zr-nav-subtitle">
+                            <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
+                            <i class="zricon-arrow-down"></i>
+                        </div>
+
+                        <!--一级菜单-->
+                        <ul class="zr-nav-menu">
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">Option 5</div>
+                            </li>
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">Option 6</div>
+                            </li>
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">Option 7</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--一级菜单效果-->
+                    <li class="zr-nav-item">
+                        <div class="zr-nav-subtitle">
+                            <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
+                            <i class="zricon-arrow-down"></i>
+                        </div>
+                        <!--一级菜单-->
+                        <ul class="zr-nav-menu">
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">Option 8</div>
+                            </li>
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">Option 9</div>
+                            </li>
+                            <li class="zr-nav-item">
+                                <div class="zr-nav-subtitle">Option 10</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--一级菜单效果-->
+                    <li class="zr-nav-item">
+                        <div class="zr-nav-subtitle">
+                            <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                        </div>
+                    </li>
+
+                    <!--一级级菜单效果-->
+                    <li class="zr-nav-item">
+                        <div class="zr-nav-subtitle">
+                            <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                        </div>
+                    </li>
+
+                    <!--没有子菜单效果-->
+                    <li class="zr-nav-item">
+                        <div class="zr-nav-subtitle">
+                            <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="zr-layout-info">
+                    <div class="zr-layout-info-photo" title="userName"><img src="//storage.jd.com/zrstatic/images/demo2.jpg" /></div>
+                    <div class="zr-layout-info-item">
+                        <p class="zr-layout-info-title">User Name</p>
+                        <a class="zr-layout-info-icon"><i class="zricon-mail-empty"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="zr-layout">
+            <div class="zr-layout-header">
+                <div class="zr-row-flex">
+                    <div class="zr-col-2 zr-layout-trigger" id="double"><i class="zricon-menu-empty"></i></div>
+                    <div class="zr-col-6 zr-col-offset-16">
+                        <div class="zr-input-group zr-layout-search-group">
+                            <input type="text" placeholder="Please input text" class="zr-input">
+                            <span class="zr-input-addon">
+                                <i class="zricon-search-empty"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="zr-layout-content zr-layout-space">
+                <div class="zr-breadcrumb">
+                    <span><em>Home</em><i class="zricon-arrow-right"></i></span>
+                    <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
+                    <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                    <span><em>Other info</em></span>
+                </div>
+                <div style="min-height: 400px;background: #fff;padding: 24px;">
+                    这里是展示内容
+                </div>
+            </div>
+            <div class="zr-layout-footer" style="text-align: center">Zr Design</div>
+        </div>
+    </div>
+
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>顶部导航-侧边导航布局 <a href="#">#</a></p>
+        <span>将头部固定，将设置、搜索、用户信息等常用内容放置在头部，导航层级多于3级时建议使用</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-layout">
+                <div class="zr-layout-header zr-layout-header-theme-dark">
+                    <div class="zr-row-flex">
+                        <div class="zr-col-4">
+                            <div class="zr-layout-logo"></div>
+                        </div>
+                        <div class="zr-col-2 zr-layout-trigger" id="other_btn"><i class="zricon-menu-empty"></i></div>
+                        <div class="zr-col-7">
+                            <ul class="zr-nav zr-nav-horizontal">
+                                <!--当前选中状态 添加zr-nav-selected-->
+                                <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                                <!--有下拉菜单状态-->
+                                <li class="zr-nav-item">
+                                    Nav 2 <i class="zricon-arrow-down"></i>
+                                    <!--一级菜单-->
+                                    <ul class="zr-nav-menu">
+                                        <li class="zr-nav-item">List 1</li>
+                                        <li class="zr-nav-item">
+                                            List 2<i class="zricon-arrow-right"></i>
+                                            <!--子集菜单-->
+                                            <ul class="zr-nav-leaves">
+                                                <li class="zr-nav-item">
+                                                    <a href="#">Child 1 target blank</a>
+                                                </li>
+                                                <li class="zr-nav-item"><a href="#">Child 2</a></li>
+                                                <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="zr-col-6">
+                            <div class="zr-input-group zr-layout-search-group">
+                                <input type="text" placeholder="Please input text" class="zr-input">
+                                <span class="zr-input-addon">
+                                        <i class="zricon-search-empty"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="zr-col-1">
+                            <div class="mail" style="padding-left: 10px;">
+                                <i class="zricon-mail-empty"></i>
+                            </div>
+                        </div>
+                        <div class="zr-col-4" style="text-align: center">
+                            User Info
+                        </div>
+                    </div>
+                </div>
+                <div class="zr-layout zr-layout-has-side zr-layout-side-trigger grey-bgc-4">
+                    <div class="zr-layout-side zr-layout-side-light">
+                        <div class="zr-layout-side-children">
+                            <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="other_btn" zr-event="click">
+                                <!--二级导航效果一-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
+                                        <i class="zricon-arrow-down"></i>
+                                    </div>
+                                    <!--一级菜单-->
+                                    <ul class="zr-nav-menu">
+                                        <li class="zr-nav-item">
+                                            <!--可以使用 <a> 标签-->
+                                            <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <!--可以使用 除<a> 标签之外的其它标签-->
+                                            <div class="zr-nav-subtitle">Option 2</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">
+                                                <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                            <!--子集菜单-->
+                                            <ul class="zr-nav-leaves">
+                                                <li class="zr-nav-item">
+                                                    <div class="zr-nav-subtitle">Option 3</div>
+                                                </li>
+                                                <li class="zr-nav-item">
+                                                    <div class="zr-nav-subtitle">Option 4</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!--二级导航效果一-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
+                                        <i class="zricon-arrow-down"></i>
+                                    </div>
+                                    <!--一级菜单-->
+                                    <ul class="zr-nav-menu">
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 5</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 6</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 7</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!--一级菜单效果-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
+                                        <i class="zricon-arrow-down"></i>
+                                    </div>
+                                    <!--一级菜单-->
+                                    <ul class="zr-nav-menu">
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 8</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 9</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 10</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!--一级菜单效果-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                                    </div>
+                                </li>
+                                <!--一级级菜单效果-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                                    </div>
+                                </li>
+                                <!--没有子菜单效果-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="zr-layout-content zr-layout-space">
+                        <div class="zr-breadcrumb">
+                            <span><em>Home</em><i class="zricon-arrow-right"></i></span>
+                            <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
+                            <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                            <span><em>Other info</em></span>
+                        </div>
+                        <div style="min-height: 400px;background: #fff;padding: 24px;">
+                            这里是展示内容
+                        </div>
+                    </div>
+                </div>
+                <div class="zr-layout-footer">
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-layout">
+        <div class="zr-layout-header zr-layout-header-theme-dark">
+            <div class="zr-row-flex">
+                <div class="zr-col-4">
+                    <div class="zr-layout-logo"></div>
+                </div>
+                <div class="zr-col-2 zr-layout-trigger" id="other_btn"><i class="zricon-menu-empty"></i></div>
+                <div class="zr-col-7">
+                    <ul class="zr-nav zr-nav-horizontal">
+                        <!--当前选中状态 添加zr-nav-selected-->
+                        <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                        <!--有下拉菜单状态-->
+                        <li class="zr-nav-item">
+                            Nav 2 <i class="zricon-arrow-down"></i>
+                            <!--一级菜单-->
+                            <ul class="zr-nav-menu">
+                                <li class="zr-nav-item">List 1</li>
+                                <li class="zr-nav-item">
+                                    List 2<i class="zricon-arrow-right"></i>
+                                    <!--子集菜单-->
+                                    <ul class="zr-nav-leaves">
+                                        <li class="zr-nav-item">
+                                            <a href="#">Child 1 target blank</a>
+                                        </li>
+                                        <li class="zr-nav-item"><a href="#">Child 2</a></li>
+                                        <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="zr-col-6">
+                    <div class="zr-input-group zr-layout-search-group">
+                        <input type="text" placeholder="Please input text" class="zr-input">
+                        <span class="zr-input-addon">
+                                <i class="zricon-search-empty"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="zr-col-1">
+                    <div class="mail" style="padding-left: 10px;">
+                        <i class="zricon-mail-empty"></i>
+                    </div>
+                </div>
+                <div class="zr-col-4" style="text-align: center">
+                    User Info
+                </div>
+            </div>
+        </div>
+        <div class="zr-layout zr-layout-has-side zr-layout-side-trigger grey-bgc-4">
+            <div class="zr-layout-side zr-layout-side-light">
+                <div class="zr-layout-side-children">
+                    <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="other_btn" zr-event="click">
+                        <!--二级导航效果一-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
+                                <i class="zricon-arrow-down"></i>
+                            </div>
+                            <!--一级菜单-->
+                            <ul class="zr-nav-menu">
+                                <li class="zr-nav-item">
+                                    <!--可以使用 <a> 标签-->
+                                    <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <!--可以使用 除<a> 标签之外的其它标签-->
+                                    <div class="zr-nav-subtitle">Option 2</div>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                    <!--子集菜单-->
+                                    <ul class="zr-nav-leaves">
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 3</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 4</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--二级导航效果一-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
+                                <i class="zricon-arrow-down"></i>
+                            </div>
+                            <!--一级菜单-->
+                            <ul class="zr-nav-menu">
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 5</div>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 6</div>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 7</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--一级菜单效果-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
+                                <i class="zricon-arrow-down"></i>
+                            </div>
+                            <!--一级菜单-->
+                            <ul class="zr-nav-menu">
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 8</div>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 9</div>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 10</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--一级菜单效果-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                            </div>
+                        </li>
+                        <!--一级级菜单效果-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                            </div>
+                        </li>
+                        <!--没有子菜单效果-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="zr-layout-content zr-layout-space">
+                <div class="zr-breadcrumb">
+                    <span><em>Home</em><i class="zricon-arrow-right"></i></span>
+                    <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
+                    <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                    <span><em>Other info</em></span>
+                </div>
+                <div style="min-height: 400px;background: #fff;padding: 24px;">
+                    这里是展示内容
+                </div>
+            </div>
+        </div>
+        <div class="zr-layout-footer">
+        </div>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>顶部导航 <a href="#">#</a></p>
+        <span>将头部固定，将设置、搜索、用户信息等常用内容放置在头部，导航层级多于2级时不建议使用</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-layout">
+                <div class="zr-layout-header zr-layout-header-theme-dark">
+                    <div class="zr-row-flex">
+                        <div class="zr-col-4">
+                            <div class="zr-layout-logo"></div>
+                        </div>
+                        <div class="zr-col-1"></div>
+                        <div class="zr-col-8">
+                            <ul class="zr-nav zr-nav-horizontal">
+                                <!--当前选中状态 添加zr-nav-selected-->
+                                <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                                <!--有下拉菜单状态-->
+                                <li class="zr-nav-item">
+                                    Nav 2 <i class="zricon-arrow-down"></i>
+                                    <!--一级菜单-->
+                                    <ul class="zr-nav-menu">
+                                        <li class="zr-nav-item">List 1</li>
+                                        <li class="zr-nav-item">
+                                            List 2<i class="zricon-arrow-right"></i>
+                                            <!--子集菜单-->
+                                            <ul class="zr-nav-leaves">
+                                                <li class="zr-nav-item">
+                                                    <a href="#">Child 1 target blank</a>
+                                                </li>
+                                                <li class="zr-nav-item"><a href="#">Child 2</a></li>
+                                                <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="zr-col-6">
+                            <div class="zr-input-group zr-layout-search-group">
+                                <input type="text" placeholder="Please input text" class="zr-input">
+                                <span class="zr-input-addon">
+                                        <i class="zricon-search-empty"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="zr-col-1">
+                            <div class="mail" style="padding-left: 10px;">
+                                <i class="zricon-mail-empty"></i>
+                            </div>
+                        </div>
+                        <div class="zr-col-4" style="text-align: center">
+                            User Info
+                        </div>
+                    </div>
+                </div>
+                <div class="zr-layout-content zr-layout-space">
+                    <div class="zr-breadcrumb">
+                        <span><em>Home</em><i class="zricon-arrow-right"></i></span>
+                        <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
+                        <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                        <span><em>Other info</em></span>
+                    </div>
+                    <div style="min-height: 400px;background: #fff;padding: 24px;">
+                        这里是展示内容
+                    </div>
+                </div>
+                <div class="zr-layout-footer">
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-layout">
+                <div class="zr-layout-header zr-layout-header-theme-dark">
+                    <div class="zr-row-flex">
+                        <div class="zr-col-4">
+                            <div class="zr-layout-logo"></div>
+                        </div>
+                        <div class="zr-col-1"></div>
+                        <div class="zr-col-8">
+                            <ul class="zr-nav zr-nav-horizontal">
+                                <!--当前选中状态 添加zr-nav-selected-->
+                                <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                                <!--有下拉菜单状态-->
+                                <li class="zr-nav-item">
+                                    Nav 2 <i class="zricon-arrow-down"></i>
+                                    <!--一级菜单-->
+                                    <ul class="zr-nav-menu">
+                                        <li class="zr-nav-item">List 1</li>
+                                        <li class="zr-nav-item">
+                                            List 2<i class="zricon-arrow-right"></i>
+                                            <!--子集菜单-->
+                                            <ul class="zr-nav-leaves">
+                                                <li class="zr-nav-item">
+                                                    <a href="#">Child 1 target blank</a>
+                                                </li>
+                                                <li class="zr-nav-item"><a href="#">Child 2</a></li>
+                                                <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="zr-col-6">
+                            <div class="zr-input-group zr-layout-search-group">
+                                <input type="text" placeholder="Please input text" class="zr-input">
+                                <span class="zr-input-addon">
+                                        <i class="zricon-search-empty"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="zr-col-1">
+                            <div class="mail" style="padding-left: 10px;">
+                                <i class="zricon-mail-empty"></i>
+                            </div>
+                        </div>
+                        <div class="zr-col-4" style="text-align: center">
+                            User Info
+                        </div>
+                    </div>
+                </div>
+                <div class="zr-layout-content zr-layout-space">
+                    <div class="zr-breadcrumb">
+                        <span><em>Home</em><i class="zricon-arrow-right"></i></span>
+                        <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
+                        <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                        <span><em>Other info</em></span>
+                    </div>
+                    <div style="min-height: 400px;background: #fff;padding: 24px;">
+                        这里是展示内容
+                    </div>
+                </div>
+                <div class="zr-layout-footer">
+                </div>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>顶部—左侧导航深色背景 <a href="#">#</a></p>
+        <span>深色背景应用场景比较广泛</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div class="zr-layout">
+                <div class="zr-layout-header zr-layout-header-theme-dark">
+                    <div class="zr-row-flex">
+                        <div class="zr-col-4">
+                            <div class="zr-layout-logo"></div>
+                        </div>
+                        <div class="zr-col-2 zr-layout-trigger" id="other_btn_2"><i class="zricon-menu-empty"></i></div>
+                        <div class="zr-col-7">
+                            <ul class="zr-nav zr-nav-horizontal">
+                                <!--当前选中状态 添加zr-nav-selected-->
+                                <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                                <!--有下拉菜单状态-->
+                                <li class="zr-nav-item">
+                                    Nav 2 <i class="zricon-arrow-down"></i>
+                                    <!--一级菜单-->
+                                    <ul class="zr-nav-menu">
+                                        <li class="zr-nav-item">List 1</li>
+                                        <li class="zr-nav-item">
+                                            List 2<i class="zricon-arrow-right"></i>
+                                            <!--子集菜单-->
+                                            <ul class="zr-nav-leaves">
+                                                <li class="zr-nav-item">
+                                                    <a href="#">Child 1 target blank</a>
+                                                </li>
+                                                <li class="zr-nav-item"><a href="#">Child 2</a></li>
+                                                <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="zr-col-6">
+                            <div class="zr-input-group zr-layout-search-group">
+                                <input type="text" placeholder="Please input text" class="zr-input">
+                                <span class="zr-input-addon">
+                                        <i class="zricon-search-empty"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="zr-col-1">
+                            <div class="mail" style="padding-left: 10px;">
+                                <i class="zricon-mail-empty"></i>
+                            </div>
+                        </div>
+                        <div class="zr-col-4" style="text-align: center">
+                            User Info
+                        </div>
+                    </div>
+                </div>
+                <div class="zr-layout zr-layout-has-side zr-layout-side-trigger zr-layout-theme-dark">
+                    <div class="zr-layout-side">
+                        <div class="zr-layout-side-children zr-nav-geekblue">
+                            <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="other_btn_2" zr-event="click">
+                                <!--二级导航效果一-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
+                                        <i class="zricon-arrow-down"></i>
+                                    </div>
+                                    <!--一级菜单-->
+                                    <ul class="zr-nav-menu">
+                                        <li class="zr-nav-item">
+                                            <!--可以使用 <a> 标签-->
+                                            <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <!--可以使用 除<a> 标签之外的其它标签-->
+                                            <div class="zr-nav-subtitle">Option 2</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">
+                                                <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                            <!--子集菜单-->
+                                            <ul class="zr-nav-leaves">
+                                                <li class="zr-nav-item">
+                                                    <div class="zr-nav-subtitle">Option 3</div>
+                                                </li>
+                                                <li class="zr-nav-item">
+                                                    <div class="zr-nav-subtitle">Option 4</div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!--二级导航效果一-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
+                                        <i class="zricon-arrow-down"></i>
+                                    </div>
+                                    <!--一级菜单-->
+                                    <ul class="zr-nav-menu">
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 5</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 6</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 7</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!--一级菜单效果-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
+                                        <i class="zricon-arrow-down"></i>
+                                    </div>
+                                    <!--一级菜单-->
+                                    <ul class="zr-nav-menu">
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 8</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 9</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 10</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!--一级菜单效果-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                                    </div>
+                                </li>
+                                <!--一级级菜单效果-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                                    </div>
+                                </li>
+                                <!--没有子菜单效果-->
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="zr-layout-content zr-layout-space">
+                        <div class="zr-breadcrumb">
+                            <span><em>Home</em><i class="zricon-arrow-right"></i></span>
+                            <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
+                            <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                            <span><em>Other info</em></span>
+                        </div>
+                        <div style="min-height: 400px;background: #fff;padding: 24px;">
+                            这里是展示内容
+                        </div>
+                    </div>
+                </div>
+                <div class="zr-layout-footer">
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+    <div class="zr-layout">
+        <div class="zr-layout-header zr-layout-header-theme-dark">
+            <div class="zr-row-flex">
+                <div class="zr-col-4">
+                    <div class="zr-layout-logo"></div>
+                </div>
+                <div class="zr-col-2 zr-layout-trigger" id="other_btn_2"><i class="zricon-menu-empty"></i></div>
+                <div class="zr-col-7">
+                    <ul class="zr-nav zr-nav-horizontal">
+                        <!--当前选中状态 添加zr-nav-selected-->
+                        <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                        <!--有下拉菜单状态-->
+                        <li class="zr-nav-item">
+                            Nav 2 <i class="zricon-arrow-down"></i>
+                            <!--一级菜单-->
+                            <ul class="zr-nav-menu">
+                                <li class="zr-nav-item">List 1</li>
+                                <li class="zr-nav-item">
+                                    List 2<i class="zricon-arrow-right"></i>
+                                    <!--子集菜单-->
+                                    <ul class="zr-nav-leaves">
+                                        <li class="zr-nav-item">
+                                            <a href="#">Child 1 target blank</a>
+                                        </li>
+                                        <li class="zr-nav-item"><a href="#">Child 2</a></li>
+                                        <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="zr-col-6">
+                    <div class="zr-input-group zr-layout-search-group">
+                        <input type="text" placeholder="Please input text" class="zr-input">
+                        <span class="zr-input-addon">
+                                <i class="zricon-search-empty"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="zr-col-1">
+                    <div class="mail" style="padding-left: 10px;">
+                        <i class="zricon-mail-empty"></i>
+                    </div>
+                </div>
+                <div class="zr-col-4" style="text-align: center">
+                    User Info
+                </div>
+            </div>
+        </div>
+        <div class="zr-layout zr-layout-has-side zr-layout-side-trigger zr-layout-theme-dark">
+            <div class="zr-layout-side">
+                <div class="zr-layout-side-children zr-nav-geekblue">
+                    <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="other_btn_2" zr-event="click">
+                        <!--二级导航效果一-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
+                                <i class="zricon-arrow-down"></i>
+                            </div>
+                            <!--一级菜单-->
+                            <ul class="zr-nav-menu">
+                                <li class="zr-nav-item">
+                                    <!--可以使用 <a> 标签-->
+                                    <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <!--可以使用 除<a> 标签之外的其它标签-->
+                                    <div class="zr-nav-subtitle">Option 2</div>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">
+                                        <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                    <!--子集菜单-->
+                                    <ul class="zr-nav-leaves">
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 3</div>
+                                        </li>
+                                        <li class="zr-nav-item">
+                                            <div class="zr-nav-subtitle">Option 4</div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--二级导航效果一-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
+                                <i class="zricon-arrow-down"></i>
+                            </div>
+                            <!--一级菜单-->
+                            <ul class="zr-nav-menu">
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 5</div>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 6</div>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 7</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--一级菜单效果-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
+                                <i class="zricon-arrow-down"></i>
+                            </div>
+                            <!--一级菜单-->
+                            <ul class="zr-nav-menu">
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 8</div>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 9</div>
+                                </li>
+                                <li class="zr-nav-item">
+                                    <div class="zr-nav-subtitle">Option 10</div>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--一级菜单效果-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                            </div>
+                        </li>
+                        <!--一级级菜单效果-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                            </div>
+                        </li>
+                        <!--没有子菜单效果-->
+                        <li class="zr-nav-item">
+                            <div class="zr-nav-subtitle">
+                                <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="zr-layout-content zr-layout-space">
+                <div class="zr-breadcrumb">
+                    <span><em>Home</em><i class="zricon-arrow-right"></i></span>
+                    <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
+                    <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                    <span><em>Other info</em></span>
+                </div>
+                <div style="min-height: 400px;background: #fff;padding: 24px;">
+                    这里是展示内容
+                </div>
+            </div>
+        </div>
+        <div class="zr-layout-footer">
+        </div>
+    </div>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+</article>
+
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见组件列表</title>
+    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
+    <style type="text/css">
+        .c-introduce-ul {
+            padding-top: 16px;
+            color: rgba(0, 0, 0, 0.65);
+        }
+        .c-introduce-ul li{
+            line-height: 24px;
+            padding-bottom: 5px;
+        }
+        .c-introduce-ul li::before{
+            content: "• ";
+            color: #CBCBCB;
+        }
+        .c-demo-w-360{
+            width: 360px;
+        }
+        .c-demo-w-640{
+            width: 640px;
+        }
+        .zr-alert{
+            margin-bottom: 8px;
+        }
+
+    </style>
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <script type="text/javascript" src="js/alert.js"></script>
+    <!--}-->
+    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript">
+        Zr.config({
+            baseUrl:"/js/plugin_modules/",
+            requestTime:true
+        })
+        Zr.ready(function(){
+            Zr.use("./js/quickMenu","./js/code")
+        })
+    </script>
+</head>
+
+<body>
+<article class="c-content">
+    <section class="c-title">
+        <p>常见组件列表</p>
+        <span>展示为市场上常用的组件，如果以下没有请自行参考"<a href="http://git.jd.com/Zr/demo">如何制作第三方组件</a>"来手动加入即可</span>
+    </section>
+    <div class="c-line"></div>
+    <section class="c-sub-title">
+        <p>使用方法 <a href="#">#</a></p>
+    </section>
+    <section class="c-code">
+        <div class="c-code-inner">
+    //可以直接使用
+    Zr.use("jquery");
+    //当然更多的是使用后注入到钩子中的业务逻辑
+    Zr.use("datatables",function(zr,Datatables){
+    //可以使用Datatables的所有功能了
+    //即使Datatables依赖jquery也已经按照顺序加载完毕，无须重复加载
+    //但是此钩子函数不能访问外部的作用域，即Datatables虽然依赖jquery，但是此处无法使用jquery的语法
+    //所以如果想使用jquery，请在use的时候额外添加使用的第三方库的名称即可
+    })
+    //使用jquery的语法
+    Zr.use("jquery","datatables",function(zr,$,Datatables){
+    //这样就可以使用jquery的语法了，基本原则就是使用就要use这个已存在的第三方组件
+    })
+        </div>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title">
+        <p>Zr的常用外置组件 <a href="#">#</a></p>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">Zr的use名称</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">链接地址</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">message</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500"><a target="_blank" href="/docs?languageCode=CN&columnUid=40ad19be535e477596a033f9fea2bf7d&directoryUid=636a839e110e44c5b8551de4ada1593b&directoryName=Message%20全局提示">快速浏览API地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">tab</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500"><a target="_blank" href="/docs?languageCode=CN&columnUid=40ad19be535e477596a033f9fea2bf7d&directoryUid=1842d3d9226e411297c4d27083e38d1d&directoryName=Tab%20选项卡">快速浏览API地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">tmpl</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">模版引擎 <a target="_blank" href="https://github.com/blueimp/JavaScript-Templates">API地址</a> <a target="_blank" href="https://blueimp.github.io/JavaScript-Templates/">官网地址</a></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title">
+        <p>Jquery及插件 <a href="#">#</a></p>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">Zr的use名称</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">描述</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">文档外链</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">jquery</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">jquery的版本号为：1.12.3</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="http://jquery.cuishifeng.cn">API地址</a> <a target="_blank" href="https://www.jquery123.com">官网地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">jquery3</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">jquery的版本号为：3.2.1</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="http://jquery.cuishifeng.cn">API地址</a> <a target="_blank" href="https://www.jquery123.com">官网地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">jstree</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">树形菜单生成插件</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="https://www.jstree.com/demo/">Demo地址</a> <a target="_blank" href="https://www.jstree.com/api/">API地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">ztree</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">树形菜单控件支持多种皮肤</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="http://www.treejs.cn/v3/demo.php#_101">Demo地址</a> <a target="_blank" href="http://www.treejs.cn/v3/api.php">API地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">ajaxForm</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">ajax文件上传组件</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="http://jquery.malsup.com/form/#ajaxForm">Demo地址</a> <a target="_blank" href="http://jquery.malsup.com/form/">API地址</a></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title">
+    <p>展示类组件 <a href="#">#</a></p>
+</section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">Zr的use名称</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">描述</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">文档外链</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">animate</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">只需参考API中的样式，将样式名称复制到对应的节点即可实现效果</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="https://github.com/daneden/animate.css">API地址</a> <a target="_blank" href="https://daneden.github.io/animate.css">官网地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">swiper</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">版本号：4.0</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="http://www.swiper.com.cn/api/index.html">API地址</a> <a target="_blank" href="http://www.swiper.com.cn/demo/index.html">DEMO地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">echarts</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">版本号为：4.0.4,包含所有图表组件，大约是706KB左右</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="http://echarts.baidu.com/api.html#echarts">API</a> <a target="_blank" href="http://echarts.baidu.com">官网地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">echartsSimple</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">版本号为：4.0.4,只包含基础图表：折、柱、饼，大约是283KB左右</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="http://echarts.baidu.com/api.html#echarts">API</a> <a target="_blank" href="http://echarts.baidu.com">官网地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">echartsNormal</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">版本号为：4.0.4,包含常用图表：折、柱、饼、散点、图例、工具栏、标注/线/域、数据区域缩放，大约是444KB左右</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="http://echarts.baidu.com/api.html#echarts">API</a> <a target="_blank" href="http://echarts.baidu.com">官网地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">compress</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">图片压缩</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="https://github.com/guguaihaha/compress">API</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">perfectscrollbar</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">版本号为：v1.3.0</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="https://github.com/noraesae/perfect-scrollbar">GIT地址</a> <a target="_blank" href="https://www.npmjs.com/package/perfect-scrollbar#jquery">npm地址</a></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-sub-title">
+        <p>数据处理类组件 <a href="#">#</a></p>
+    </section>
+    <div class="c-block-20"></div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">Zr的use名称</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">描述</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">文档外链</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">datatables</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">数据表格插件</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="http://www.datatables.club/reference/">API地址</a>  <a target="_blank" href="http://www.datatables.club/example">DEMO地址</a></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">fixedColumns</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">列固定配合datatables使用</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">参照datatable API</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">mock</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-500">生成随机数据，拦截 Ajax 请求</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125"><a target="_blank" href="https://github.com/nuysoft/Mock/wiki">API地址</a>  <a target="_blank" href="http://mockjs.com/examples.html">DEMO地址</a></div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</article>
+
+
+
+
+
+</body>
+</html>
