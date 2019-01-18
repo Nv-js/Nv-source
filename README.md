@@ -28,9 +28,23 @@ All components in code and build
 
 直接启动即可，进入对应的examples目录进行查看
 
-```spel
+```
 $ gulp
 ```
+
+> 快捷入口
+
++ [官网](http://nv.jd.com)
+
++ [引擎](https://github.com/guguaihaha/Nv-engine)
+
++ [PRO](https://github.com/guguaihaha/Nv-pro)
+
++ [组件快捷入口](docs/index.md)
+
++ [第三方组件库入口](docs/otherPlugins.md)
+
++ [主题](docs/theme.md)
 
 
 
