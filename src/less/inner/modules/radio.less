@@ -1,22 +1,22 @@
 input[type='radio']{
   appearance: radio;
 }
-.@{zr-prefix}-radio{
+.@{nv-prefix}-radio{
   display: none;
 }
 
-.@{zr-prefix}-radio-module{
-  .@{zr-prefix}-radio-simulation{
+.@{nv-prefix}-radio-module{
+  .@{nv-prefix}-radio-simulation{
     cursor: pointer;
     display: inline-block;
     font-size: 14px;
     color: @grey-8;
     &:hover{
-      .@{zr-prefix}-radio-normal{
+      .@{nv-prefix}-radio-normal{
         border-color: @geekblue-6;
       }
     }
-    .@{zr-prefix}-radio-normal{
+    .@{nv-prefix}-radio-normal{
       display: inline-block;
       width: 14px;
       height: 14px;
@@ -37,7 +37,7 @@ input[type='radio']{
         border-radius: 50%;
       }
     }
-    .@{zr-prefix}-radio-text{
+    .@{nv-prefix}-radio-text{
       display: inline-block;
       height: 14px;
       line-height: 14px;
@@ -45,9 +45,9 @@ input[type='radio']{
     }
   }
 }
-.@{zr-prefix}-radio-radioed{
-  .@{zr-prefix}-radio-simulation{
-    .@{zr-prefix}-radio-normal{
+.@{nv-prefix}-radio-radioed{
+  .@{nv-prefix}-radio-simulation{
+    .@{nv-prefix}-radio-normal{
       border-color:@geekblue-6;
       span{
         display: block;
@@ -55,27 +55,27 @@ input[type='radio']{
     }
   }
 }
-.@{zr-prefix}-radio-disable{
-  .@{zr-prefix}-radio-simulation{
+.@{nv-prefix}-radio-disable{
+  .@{nv-prefix}-radio-simulation{
     cursor: not-allowed;
     &:hover{
-      .@{zr-prefix}-radio-normal{
+      .@{nv-prefix}-radio-normal{
         border-color: @grey-5;
       }
     }
-    .@{zr-prefix}-radio-normal{
+    .@{nv-prefix}-radio-normal{
       border: @border-width-base  @border-style-base @grey-5;
       span{
         background: #d9d9d9 ;
       }
     }
-    .@{zr-prefix}-radio-text{
+    .@{nv-prefix}-radio-text{
       opacity: 0.25;
       //color: @grey-6;
     }
   }
-  input[type='radio']:checked+.@{zr-prefix}-radio-simulation{
-    .@{zr-prefix}-radio-normal{
+  input[type='radio']:checked+.@{nv-prefix}-radio-simulation{
+    .@{nv-prefix}-radio-normal{
       border-color: #D9D9D9;
       span{
         display: block;
@@ -84,17 +84,17 @@ input[type='radio']{
     }
   }
 }
-.@{zr-prefix}-radio-middle{
+.@{nv-prefix}-radio-middle{
   display: block;
 }
-.@{zr-prefix}-radio-hide{
+.@{nv-prefix}-radio-hide{
   display: none;
 }
 .c-demo{
-  .@{zr-prefix}-radio-module{
+  .@{nv-prefix}-radio-module{
     margin-right: 40px;
   }
-  .@{zr-prefix}-radio-middle{
+  .@{nv-prefix}-radio-middle{
     margin-bottom:24px;
   }
 }

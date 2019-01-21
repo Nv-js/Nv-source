@@ -1,12 +1,12 @@
-.@{zr-prefix}-select{
+.@{nv-prefix}-select{
   display: none;
 }
-.@{zr-prefix}-unselect{
+.@{nv-prefix}-unselect{
   position: relative;
   display: inline-block;
   color:@text-color;
   width: 100%;
-  .@{zr-prefix}-select-content{
+  .@{nv-prefix}-select-content{
     width: 100%;
     font-family: @font-family;
     font-size: @font-size-base;
@@ -32,21 +32,21 @@
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-    .@{zr-prefix}-select-tips{
+    .@{nv-prefix}-select-tips{
       color:@disabled-color;
     }
-    .@{zr-prefix}-select-checkbox{
+    .@{nv-prefix}-select-checkbox{
       cursor: pointer;
       //display: inline-block;
       font-size: 14px;
       opacity: 0.65;
       color: @grey-10;
       &:hover{
-        .@{zr-prefix}-select-checkbox-normal{
+        .@{nv-prefix}-select-checkbox-normal{
           border-color: #4363F4;
         }
       }
-      .@{zr-prefix}-select-checkbox-normal{
+      .@{nv-prefix}-select-checkbox-normal{
         display: inline-block;
         width: 14px;
         height: 14px;
@@ -71,7 +71,7 @@
           transform:rotate(135deg);
           visibility: hidden;
         }
-        .@{zr-prefix}-select-checkbox-uncheck{
+        .@{nv-prefix}-select-checkbox-uncheck{
           border: transparent;
           height: 0;
           width: 8px;
@@ -81,15 +81,15 @@
           margin-left: -4px;
         }
       }
-      .@{zr-prefix}-select-checkbox-text{
+      .@{nv-prefix}-select-checkbox-text{
         display: inline-block;
         height: 14px;
         line-height: 14px;
         //vertical-align: top;
       }
     }
-    .@{zr-prefix}-select-checkbox.@{zr-prefix}-select-checkbox-checked{
-      .@{zr-prefix}-select-checkbox-normal{
+    .@{nv-prefix}-select-checkbox.@{nv-prefix}-select-checkbox-checked{
+      .@{nv-prefix}-select-checkbox-normal{
         border: none;
         background: #4363F4;
         span{
@@ -98,14 +98,14 @@
       }
     }
   }
-  .@{zr-prefix}-select-content-lg{
+  .@{nv-prefix}-select-content-lg{
     top:@font-size-base + 30px;
     dd{
       height: @input-height-lg;
       line-height: @input-height-lg;
     }
   }
-  .@{zr-prefix}-select-content-sm{
+  .@{nv-prefix}-select-content-sm{
     top:@font-size-base + 14px;
     dd{
       height: @input-height-sm;
@@ -113,13 +113,13 @@
     }
   }
 }
-.@{zr-prefix}-select-hide{
+.@{nv-prefix}-select-hide{
   display: none;
 }
-.@{zr-prefix}-select-show{
+.@{nv-prefix}-select-show{
   display: block;
 }
-.@{zr-prefix}-select-values{
+.@{nv-prefix}-select-values{
   position: relative;
   width: 100%;
   border: @border-width-base @border-style-base @border-color-base;

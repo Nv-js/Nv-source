@@ -1,7 +1,7 @@
 /*
  * alert
  */
-.@{zr-prefix}-alert{
+.@{nv-prefix}-alert{
   position: relative;
   box-sizing: border-box;
   border-radius: @border-radius-base;
@@ -12,41 +12,41 @@
   font-size: @font-size-base;
   line-height: @line-height-base;
 }
-.@{zr-prefix}-alert .@{zr-prefix}-alert-close{
+.@{nv-prefix}-alert .@{nv-prefix}-alert-close{
   position: absolute;
   top: @padding-xs - 2px;
   right: @padding-sm;
   font-size: @font-size-base;
   color: @text-color-secondary;
 }
-.@{zr-prefix}-alert .@{zr-prefix}-alert-close:hover{
+.@{nv-prefix}-alert .@{nv-prefix}-alert-close:hover{
   color: @text-color;
 }
-.@{zr-prefix}-alert-info{
+.@{nv-prefix}-alert-info{
   border-color: @info-2;
   background: @info-1;
 }
-.@{zr-prefix}-alert-success{
+.@{nv-prefix}-alert-success{
   border-color: @success-2;
   background: @success-1;
 }
-.@{zr-prefix}-alert-error{
+.@{nv-prefix}-alert-error{
   border-color: @error-2;
   background: @error-1;
 }
-.@{zr-prefix}-alert-warning{
+.@{nv-prefix}-alert-warning{
   border-color: @warning-2;
   background: @warning-1;
 }
-.@{zr-prefix}-alert-message{
+.@{nv-prefix}-alert-message{
 }
 /*
  alert-with-description
 */
-.@{zr-prefix}-alert-with-description{
+.@{nv-prefix}-alert-with-description{
   padding: @padding-md @padding-lg;
 }
-.@{zr-prefix}-alert-with-description .@{zr-prefix}-alert-message{
+.@{nv-prefix}-alert-with-description .@{nv-prefix}-alert-message{
   display: block;
   margin-bottom: @padding-xs;
   font-weight: 600;
@@ -55,33 +55,33 @@
  alert-icon
 */
 
-.@{zr-prefix}-alert-with-icon{
+.@{nv-prefix}-alert-with-icon{
   padding-left: @padding-lg + 14px;
 }
-.@{zr-prefix}-alert-with-icon > [class^="zricon-"]{
+.@{nv-prefix}-alert-with-icon > [class^="nvicon-"]{
   position: absolute;
   top: @padding-xs - 2px;
   left: @padding-sm;
   font-size: @font-size-base;
 }
-.@{zr-prefix}-alert-with-description.@{zr-prefix}-alert-with-icon{
+.@{nv-prefix}-alert-with-description.@{nv-prefix}-alert-with-icon{
   padding-left: @padding-lg *2 + 4px;
 }
-.@{zr-prefix}-alert-with-description > [class^="zricon-"]{
+.@{nv-prefix}-alert-with-description > [class^="nvicon-"]{
   top: @padding-sm;
   left: @padding-md;
   font-size: @font-size-lg + 4px;
 }
-.@{zr-prefix}-alert-info > [class^="zricon-"]{
+.@{nv-prefix}-alert-info > [class^="nvicon-"]{
   color: @info-6;
 }
-.@{zr-prefix}-alert-success > [class^="zricon-"]{
+.@{nv-prefix}-alert-success > [class^="nvicon-"]{
   color: @success-6;
 }
-.@{zr-prefix}-alert-error >[class^="zricon-"]{
+.@{nv-prefix}-alert-error >[class^="nvicon-"]{
   color: @error-6;
 }
-.@{zr-prefix}-alert-warning >[class^="zricon-"]{
+.@{nv-prefix}-alert-warning >[class^="nvicon-"]{
   color: @warning-6;
 }
 

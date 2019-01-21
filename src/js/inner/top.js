@@ -33,7 +33,7 @@ var _top = {
                     array = opt.array;
                 $.each(array,function(i,n){
                     var $wrap = $(this).parent();
-                    if($wrap.hasClass("zr-top-wrap")){
+                    if($wrap.hasClass("nv-top-wrap")){
                         position = $wrap.attr("data-position")
                         position = position.split(" ");
                         _top = position[0];

@@ -11,7 +11,7 @@
     border: @border-width-base @border-style-base @primary-color;
   }
 }
-.@{zr-prefix}-input{
+.@{nv-prefix}-input{
   width: 100%;
   height: @input-height-base;
   border: @border-width-base @border-style-base @border-color-base;
@@ -24,23 +24,23 @@
   .placeholder(@disabled-color,@font-size-base);
   .focus();
 }
-.@{zr-prefix}-input[disabled=disabled]{
+.@{nv-prefix}-input[disabled=disabled]{
     .inputDisable()
 }
-.@{zr-prefix}-input-lg{
+.@{nv-prefix}-input-lg{
   height: @input-height-lg;
   line-height: @input-height-lg;
 }
-.@{zr-prefix}-input-sm{
+.@{nv-prefix}-input-sm{
   height: @input-height-sm;
   line-height: @input-height-sm;
 }
-.@{zr-prefix}-input-group{
+.@{nv-prefix}-input-group{
   position: relative;
-  .@{zr-prefix}-input{
+  .@{nv-prefix}-input{
     padding-right: 30px;
   }
-  [class=zricon-close-circle]{
+  [class=nvicon-close-circle]{
     display: none;
     position: absolute;
     right: 8px;
@@ -52,7 +52,7 @@
     }
   }
 }
-.@{zr-prefix}-input-addon{
+.@{nv-prefix}-input-addon{
   position: absolute;
   display: inline-block;
   height: 100%;
@@ -61,25 +61,25 @@
   opacity: .45;
   line-height: @input-height-base;
 }
-.@{zr-prefix}-input-addon.@{zr-prefix}-input-sm{
+.@{nv-prefix}-input-addon.@{nv-prefix}-input-sm{
   height: @input-height-sm;
   line-height: @input-height-sm;
 }
-.@{zr-prefix}-input-addon.@{zr-prefix}-input-lg{
+.@{nv-prefix}-input-addon.@{nv-prefix}-input-lg{
   height: @input-height-lg;
   line-height: @input-height-lg;
 }
-.@{zr-prefix}-input-left{
-  .@{zr-prefix}-input{
+.@{nv-prefix}-input-left{
+  .@{nv-prefix}-input{
     padding-left: 30px;
     padding-right: 0px;
   }
-  .@{zr-prefix}-input-addon{
+  .@{nv-prefix}-input-addon{
     left: 8px;
     width: 14px;
   }
 }
-.@{zr-prefix}-textarea{
+.@{nv-prefix}-textarea{
   width: 100%;
   height: auto;
   min-height: 64px;
@@ -89,7 +89,7 @@
   .placeholder(@disabled-color,@font-size-base);
   .focus();
 }
-.@{zr-prefix}-input-num{
+.@{nv-prefix}-input-num{
   width: 100%;
   text-align: right;
   position: absolute;
@@ -98,17 +98,17 @@
   bottom: 8px;
   color: @normal-color;
 }
-.@{zr-prefix}-input-wapper{
-  .@{zr-prefix}-unselect{
+.@{nv-prefix}-input-wapper{
+  .@{nv-prefix}-unselect{
     width: 20%;
     margin: 0;
     display: inline-block;
-    .@{zr-prefix}-input{
+    .@{nv-prefix}-input{
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
     }
   }
-  >.@{zr-prefix}-input{
+  >.@{nv-prefix}-input{
     display: inline-block;
     width: 79%;
     margin-left: -4px;
@@ -121,21 +121,21 @@
     }
   }
 }
-.@{zr-prefix}-input-btn{
+.@{nv-prefix}-input-btn{
   position: relative;
-  .@{zr-prefix}-unselect{
-    .@{zr-prefix}-select-title{
-      .@{zr-prefix}-input{
+  .@{nv-prefix}-unselect{
+    .@{nv-prefix}-select-title{
+      .@{nv-prefix}-input{
         background: #fafafa;
       }
     }
   }
-  >.@{zr-prefix}-input{
+  >.@{nv-prefix}-input{
     width: 70%;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
   }
-  >.@{zr-prefix}-input-addon{
+  >.@{nv-prefix}-input-addon{
     position: relative;
     right: 0;
     top: 1px;
@@ -150,7 +150,7 @@
     opacity: 1;
     height: 32px;
     text-align: center;
-    .@{zr-prefix}icon-search-empty{
+    .@{nv-prefix}icon-search-empty{
       opacity: .45;
       &:hover{
         opacity: .65;
@@ -158,15 +158,15 @@
     }
   }
 }
-.@{zr-prefix}-input-wapper-left{
-  .@{zr-prefix}-unselect{
-    .@{zr-prefix}-input{
+.@{nv-prefix}-input-wapper-left{
+  .@{nv-prefix}-unselect{
+    .@{nv-prefix}-input{
       border-radius: 4px;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
     }
   }
-  >.@{zr-prefix}-input{
+  >.@{nv-prefix}-input{
     width: 79%;
     margin-right: -4px;
     margin-left: 0px;
@@ -182,7 +182,7 @@
   }
 }
 
-.@{zr-prefix}-input-datepicker{
+.@{nv-prefix}-input-datepicker{
   color: @grey-6;
   input{
     width:38%;

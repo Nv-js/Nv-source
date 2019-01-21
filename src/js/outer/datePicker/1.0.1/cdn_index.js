@@ -6,7 +6,6 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
             month:{}
         }
     }
-    //
     var datePicker = {
         init:function(config){
             var _this = this;
@@ -48,7 +47,7 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                 */
                 type:"datetime",
                 //格式化类型
-                format:"YYYY-MM-DD HH:mm:ss",
+                format:"",
                 //初始化日期
                 initialDate:new Date(),
                 //当type为range,rangeDate
@@ -68,31 +67,23 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                 //清除回调
                 onClear:function(){}
             }
+
+
+
             var options = $.extend(true,defaults,config);
             //
             options._moment = moment(options.initialDate);
             //
             var _target = $(options.target)
-            //存储配置信息
-            _target.data("options",options);
-            //判断是否需要初始化赋值(补丁)
-            if($.trim(config.initialDate)){
-                var _type = _target[0].nodeName.toLowerCase(),
-                    _value = options._moment.format(options.format);
-                if(_type == "input" || _type == "textarea"){
-                    _target.val(_value)
-                }else{
-                    _target.text(_value)
-                }
-            }
-            //
+
+
             if(!options.format){
                 switch(options.type){
                     case "datetime":
                         options.format = "YYYY-MM-DD HH:mm:ss";
                     break;
                     case "week":
-                        // options.format = "YYYY-WW";
+                         options.format = "YYYY-WW";
                     break;
                     case "normal":
                         options.format = "YYYY-MM-DD";
@@ -109,6 +100,20 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
 
                 }
             }
+            //判断是否需要初始化赋值(补丁)
+            if($.trim(config.initialDate)){
+                var _type = _target[0].nodeName.toLowerCase(),
+                    _value = options._moment.format(options.format);
+                if(_type == "input" || _type == "textarea"){
+                    _target.val(_value)
+                }else{
+                    _target.text(_value)
+                }
+            }
+            //
+            //
+            //存储配置信息
+            _target.data("options",options);
             //
             if(!options.target){
                 options.target = _this;
@@ -1695,8 +1700,7 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                 var _this = this;
                 //
                 _this.options = options;
-                Nv.use("./datePicker/js/cdn_"+      options.language,function(nv,lconfig){
-
+                Nv.use("./datePicker/1.0.1/static/language/cdn_" + options.language,function(nv,lconfig){
                     /**
                      * @Author: zhangjinglin
                      * @Email: zhangjinglin@jd.com

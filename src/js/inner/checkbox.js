@@ -14,30 +14,30 @@ var _checkbox = {
             if(opt.array.length>0){
                 $.each(opt.array,function(index,elem){
                     var str="",
-                        label=$("<label class='zr-checkbox-module'></label>");
+                        label=$("<label class='nv-checkbox-module'></label>");
                     if($(elem).get(0).disabled){
-                        label.addClass("zr-checkbox-disable");
+                        label.addClass("nv-checkbox-disable");
                     }
                     if($(elem).get(0).checked){
                         label.addClass(_checkbox.options._obj.options.checkedClassName);
                     }
-                    if($(elem).hasClass("zr-checkbox-all")){
+                    if($(elem).hasClass("nv-checkbox-all")){
                         label.addClass(_checkbox.options._obj.options.checkedAllClassName);
                     }
-                    str+='<div class="zr-checkbox-simulation"><span class="zr-checkbox-normal">';
-                    str+='<span></span></span><div class="zr-checkbox-text">';
+                    str+='<div class="nv-checkbox-simulation"><span class="nv-checkbox-normal">';
+                    str+='<span></span></span><div class="nv-checkbox-text">';
                     $(elem).attr("title")==undefined ? str+='</div></div>' : str+=$(elem).attr("title")+'</div></div>';
                     label.append(str);
-                    $(elem).after(label).addClass("zr-checkbox-hide");
+                    $(elem).after(label).addClass("nv-checkbox-hide");
                     //判断一开始是否全选
                     if($(elem).next().length>0){
                         if($(elem).next().hasClass(_checkbox.options._obj.options.checkedAllClassName) && $(elem).get(0).checked){
                             var that=$(elem);
-                            var check= $(elem).parents(".zr-checkbox-container").eq(0).find(".zr-checkbox-sigle-container input[type='checkbox']");
+                            var check= $(elem).parents(".nv-checkbox-container").eq(0).find(".nv-checkbox-sigle-container input[type='checkbox']");
                             $.each(check, function (index,elem) {
                                 $(elem).get(0).checked=that.get(0).checked;
                                 //判断是否创建出了模拟框架
-                                if($(elem).next().hasClass("zr-checkbox-module")){
+                                if($(elem).next().hasClass("nv-checkbox-module")){
                                     $(elem).get(0).checked ? $(elem).next().addClass(_checkbox.options._obj.options.checkedClassName) :$(elem).next().removeClass(_checkbox.options._obj.options.checkedClassName);
                                 }
                             })
@@ -68,9 +68,9 @@ var _checkbox = {
                             var that_check=$(this).prev().get(0).checked;
                             if(that_check){
                                 $(this).addClass(_checkbox.options._obj.options.checkedClassName);
-                                $(this).find(".zr-checkbox-normal").children("span").removeClass(_checkbox.options._obj.options.uncheckClassName)
+                                $(this).find(".nv-checkbox-normal").children("span").removeClass(_checkbox.options._obj.options.uncheckClassName)
                             }
-                            var check= $(this).parents(".zr-checkbox-container").eq(0).find(".zr-checkbox-sigle-container input[type='checkbox']");
+                            var check= $(this).parents(".nv-checkbox-container").eq(0).find(".nv-checkbox-sigle-container input[type='checkbox']");
                             $.each(check, function (index,elem) {
                                 $(elem).get(0).checked=that_check;
                                 $(elem).get(0).checked ? $(elem).next().addClass(_checkbox.options._obj.options.checkedClassName) :$(elem).next().removeClass(_checkbox.options._obj.options.checkedClassName)
@@ -80,7 +80,7 @@ var _checkbox = {
                     if($(this).parent().hasClass(_checkbox.options._obj.options.sigleContainerClassName)){
                         var check=$(this).siblings("input[type='checkbox']"),
                             is_check_num=0,
-                            all_check_status=$(this).parents("."+_checkbox.options._obj.options.containerClassName).eq(0).find(".zr-checkbox-all");
+                            all_check_status=$(this).parents("."+_checkbox.options._obj.options.containerClassName).eq(0).find(".nv-checkbox-all");
                         if(check.length>0){
                             $.each(check,function(index,elem){
                                 if($(elem).get(0).checked){
@@ -89,16 +89,16 @@ var _checkbox = {
                             })
                             if(is_check_num==check.length){
                                 all_check_status.addClass(_checkbox.options._obj.options.checkedClassName);
-                                all_check_status.find(".zr-checkbox-normal").find("span").removeClass()
+                                all_check_status.find(".nv-checkbox-normal").find("span").removeClass()
                                 all_check_status.prev().get(0).checked=true;
                             }else{
-                                all_check_status.find(".zr-checkbox-normal").find("span").addClass(_checkbox.options._obj.options.uncheckClassName)
+                                all_check_status.find(".nv-checkbox-normal").find("span").addClass(_checkbox.options._obj.options.uncheckClassName)
                                 all_check_status.addClass(_checkbox.options._obj.options.checkedClassName);
                                 all_check_status.prev().get(0).checked=false;
                             }
                             if(is_check_num==0){
                                 all_check_status.removeClass(_checkbox.options._obj.options.checkedClassName);
-                                all_check_status.find(".zr-checkbox-normal").find("span").removeClass()
+                                all_check_status.find(".nv-checkbox-normal").find("span").removeClass()
                             }
                         }
                     }
@@ -107,7 +107,7 @@ var _checkbox = {
                 }
         },
         customEventFn:function(elem){
-            $(elem)[0]["zrChange"]=function(opts){
+            $(elem)[0]["nvChange"]=function(opts){
                 opts= $.extend({
                     disabled:false,
                     checked:false
@@ -115,18 +115,18 @@ var _checkbox = {
                 //判断是否禁用
                 if(opts.disabled){
                     $(this).attr("disabled","disabled");
-                    $(this).next().addClass("zr-checkbox-disable")
+                    $(this).next().addClass("nv-checkbox-disable")
                 }else{
                     $(this).removeAttr("disabled");
-                    $(this).next().removeClass("zr-checkbox-disable")
+                    $(this).next().removeClass("nv-checkbox-disable")
                 }
                 //判断是否选中
                 if(opts.checked){
                     $(this).attr("checked","checked");
-                    $(this).next().addClass("zr-checkbox-checked")
+                    $(this).next().addClass("nv-checkbox-checked")
                 }else{
                     $(this).removeAttr("checked");
-                    $(this).next().removeClass("zr-checkbox-checked")
+                    $(this).next().removeClass("nv-checkbox-checked")
                 }
             }
         }

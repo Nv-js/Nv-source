@@ -48,6 +48,8 @@ var _alert = {
 
 }
 
+
+
 var _badge = {
     uid: 40800000,
     version: "1.0.0",
@@ -71,7 +73,7 @@ var _badge = {
             })
             //DOM 监听测试
             $('#btn').click(function(){
-                $('.zr-badge-normal:eq(0)').html('200000000000')
+                $('.nv-badge-normal:eq(0)').html('200000000000')
             });
 
             function setCharacter(ele){
@@ -117,30 +119,30 @@ var _checkbox = {
             if(opt.array.length>0){
                 $.each(opt.array,function(index,elem){
                     var str="",
-                        label=$("<label class='zr-checkbox-module'></label>");
+                        label=$("<label class='nv-checkbox-module'></label>");
                     if($(elem).get(0).disabled){
-                        label.addClass("zr-checkbox-disable");
+                        label.addClass("nv-checkbox-disable");
                     }
                     if($(elem).get(0).checked){
                         label.addClass(_checkbox.options._obj.options.checkedClassName);
                     }
-                    if($(elem).hasClass("zr-checkbox-all")){
+                    if($(elem).hasClass("nv-checkbox-all")){
                         label.addClass(_checkbox.options._obj.options.checkedAllClassName);
                     }
-                    str+='<div class="zr-checkbox-simulation"><span class="zr-checkbox-normal">';
-                    str+='<span></span></span><div class="zr-checkbox-text">';
+                    str+='<div class="nv-checkbox-simulation"><span class="nv-checkbox-normal">';
+                    str+='<span></span></span><div class="nv-checkbox-text">';
                     $(elem).attr("title")==undefined ? str+='</div></div>' : str+=$(elem).attr("title")+'</div></div>';
                     label.append(str);
-                    $(elem).after(label).addClass("zr-checkbox-hide");
+                    $(elem).after(label).addClass("nv-checkbox-hide");
                     //判断一开始是否全选
                     if($(elem).next().length>0){
                         if($(elem).next().hasClass(_checkbox.options._obj.options.checkedAllClassName) && $(elem).get(0).checked){
                             var that=$(elem);
-                            var check= $(elem).parents(".zr-checkbox-container").eq(0).find(".zr-checkbox-sigle-container input[type='checkbox']");
+                            var check= $(elem).parents(".nv-checkbox-container").eq(0).find(".nv-checkbox-sigle-container input[type='checkbox']");
                             $.each(check, function (index,elem) {
                                 $(elem).get(0).checked=that.get(0).checked;
                                 //判断是否创建出了模拟框架
-                                if($(elem).next().hasClass("zr-checkbox-module")){
+                                if($(elem).next().hasClass("nv-checkbox-module")){
                                     $(elem).get(0).checked ? $(elem).next().addClass(_checkbox.options._obj.options.checkedClassName) :$(elem).next().removeClass(_checkbox.options._obj.options.checkedClassName);
                                 }
                             })
@@ -171,9 +173,9 @@ var _checkbox = {
                             var that_check=$(this).prev().get(0).checked;
                             if(that_check){
                                 $(this).addClass(_checkbox.options._obj.options.checkedClassName);
-                                $(this).find(".zr-checkbox-normal").children("span").removeClass(_checkbox.options._obj.options.uncheckClassName)
+                                $(this).find(".nv-checkbox-normal").children("span").removeClass(_checkbox.options._obj.options.uncheckClassName)
                             }
-                            var check= $(this).parents(".zr-checkbox-container").eq(0).find(".zr-checkbox-sigle-container input[type='checkbox']");
+                            var check= $(this).parents(".nv-checkbox-container").eq(0).find(".nv-checkbox-sigle-container input[type='checkbox']");
                             $.each(check, function (index,elem) {
                                 $(elem).get(0).checked=that_check;
                                 $(elem).get(0).checked ? $(elem).next().addClass(_checkbox.options._obj.options.checkedClassName) :$(elem).next().removeClass(_checkbox.options._obj.options.checkedClassName)
@@ -183,7 +185,7 @@ var _checkbox = {
                     if($(this).parent().hasClass(_checkbox.options._obj.options.sigleContainerClassName)){
                         var check=$(this).siblings("input[type='checkbox']"),
                             is_check_num=0,
-                            all_check_status=$(this).parents("."+_checkbox.options._obj.options.containerClassName).eq(0).find(".zr-checkbox-all");
+                            all_check_status=$(this).parents("."+_checkbox.options._obj.options.containerClassName).eq(0).find(".nv-checkbox-all");
                         if(check.length>0){
                             $.each(check,function(index,elem){
                                 if($(elem).get(0).checked){
@@ -192,16 +194,16 @@ var _checkbox = {
                             })
                             if(is_check_num==check.length){
                                 all_check_status.addClass(_checkbox.options._obj.options.checkedClassName);
-                                all_check_status.find(".zr-checkbox-normal").find("span").removeClass()
+                                all_check_status.find(".nv-checkbox-normal").find("span").removeClass()
                                 all_check_status.prev().get(0).checked=true;
                             }else{
-                                all_check_status.find(".zr-checkbox-normal").find("span").addClass(_checkbox.options._obj.options.uncheckClassName)
+                                all_check_status.find(".nv-checkbox-normal").find("span").addClass(_checkbox.options._obj.options.uncheckClassName)
                                 all_check_status.addClass(_checkbox.options._obj.options.checkedClassName);
                                 all_check_status.prev().get(0).checked=false;
                             }
                             if(is_check_num==0){
                                 all_check_status.removeClass(_checkbox.options._obj.options.checkedClassName);
-                                all_check_status.find(".zr-checkbox-normal").find("span").removeClass()
+                                all_check_status.find(".nv-checkbox-normal").find("span").removeClass()
                             }
                         }
                     }
@@ -210,7 +212,7 @@ var _checkbox = {
                 }
         },
         customEventFn:function(elem){
-            $(elem)[0]["zrChange"]=function(opts){
+            $(elem)[0]["nvChange"]=function(opts){
                 opts= $.extend({
                     disabled:false,
                     checked:false
@@ -218,18 +220,18 @@ var _checkbox = {
                 //判断是否禁用
                 if(opts.disabled){
                     $(this).attr("disabled","disabled");
-                    $(this).next().addClass("zr-checkbox-disable")
+                    $(this).next().addClass("nv-checkbox-disable")
                 }else{
                     $(this).removeAttr("disabled");
-                    $(this).next().removeClass("zr-checkbox-disable")
+                    $(this).next().removeClass("nv-checkbox-disable")
                 }
                 //判断是否选中
                 if(opts.checked){
                     $(this).attr("checked","checked");
-                    $(this).next().addClass("zr-checkbox-checked")
+                    $(this).next().addClass("nv-checkbox-checked")
                 }else{
                     $(this).removeAttr("checked");
-                    $(this).next().removeClass("zr-checkbox-checked")
+                    $(this).next().removeClass("nv-checkbox-checked")
                 }
             }
         }
@@ -306,7 +308,7 @@ var _dropdown = {
                         $(this).on("mouseout",function(ev){
                             var _this = this;
                             $(this).removeData(_dropdown.options._obj.options.cacheName);
-                            Zr.tools.later(function(){
+                            nv.tools.later(function(){
                                if(!$(_this).data(_dropdown.options._obj.options.cacheName)){
                                    $(_this).removeData(_dropdown.options._obj.options.cacheName);
                                    $(_this).removeClass(_dropdown.options._obj.options.showMenuClassName);
@@ -317,7 +319,7 @@ var _dropdown = {
                     //阻止向上冒泡
                     $(this).find("."+_dropdown.options._obj.options.menuClassName).on("click",function(ev){
                         ev.stopPropagation();
-                        Zr.tools.later(function(){
+                        nv.tools.later(function(){
                             $(_this).removeData(_dropdown.options._obj.options.cacheName);
                             $(_this).removeClass(_dropdown.options._obj.options.showMenuClassName);
                         },300);
@@ -325,7 +327,7 @@ var _dropdown = {
 
                 })
                 //点击其他地方取消相关样式
-                zr.dom.clickQueen.push(function(){
+                nv.dom.clickQueen.push(function(){
                     $.each(array,function(i,n){
                         $(this).removeClass(_dropdown.options._obj.options.showMenuClassName);
                     })
@@ -341,7 +343,6 @@ var _input = {
         uid:30100000,
         version:"1.0.0",
         init:function(domObject){
-			console.log(domObject)
             this.options._obj = domObject;
             this.events.bindEvent(domObject);
 	        // this.events.showIconEvent(domObject);
@@ -367,16 +368,16 @@ var _input = {
             */
             bindEvent:function (opt) {
 	            var $ret1 = "";
-	            if (opt.selector == ".zr-textarea"){
+	            if (opt.selector == ".nv-textarea"){
 		            $.each(opt.array,function(i,n){
 		            	//缓存_obj'
 			            $(n).data(_input.options.cacheName,_input.options._obj);
 			            //
 			            if ($(n).length > 0){
-				            $(n).wrap("<div class='zr-input-group'></div>");
+				            $(n).wrap("<div class='nv-input-group'></div>");
 				           var  maxLength = $(n).attr("maxLength"),
 					           txtLength = $.trim($(n).val()).length || 0,
-				                txtNum = "<div class='zr-input-num'><span>"+ txtLength +"</span><span>/</span><span>" + maxLength + "</span></div>";
+				                txtNum = "<div class='nv-input-num'><span>"+ txtLength +"</span><span>/</span><span>" + maxLength + "</span></div>";
 				           if (maxLength){
 					           $(n).after(txtNum);
 					           $(n).off("keyup").on("keyup",_input.eventFn.inputNumFn);
@@ -389,10 +390,10 @@ var _input = {
 				            //缓存_obj'
 				            $(n).data(_input.options.cacheName,_input.options._obj);
 				            //
-				            $(n).wrap("<div class='zr-input-group'></div>");
-				            var iconHtml = '<i class="zricon-close-circle"></i>';
+				            $(n).wrap("<div class='nv-input-group'></div>");
+				            var iconHtml = '<i class="nvicon-close-circle"></i>';
 				            $(n).after(iconHtml);
-				            $ret1 = $(n).closest(opt.options.groupSelector).find(".zricon-close-circle");
+				            $ret1 = $(n).closest(opt.options.groupSelector).find(".nvicon-close-circle");
 				            $ret1.data(_input.options.cacheName,_input.options._obj);
 				            $(n).off("input").on("input",_input.eventFn.showIconFn);
 				            if($ret1.length > 0){
@@ -412,9 +413,9 @@ var _input = {
             showIconFn:function () {
 	            var _obj = $(this).data(_input.options.cacheName);
                 if ($(this).val().length > 0){
-	                $(this).closest(_obj.options.groupSelector).find(".zricon-close-circle").show();
+	                $(this).closest(_obj.options.groupSelector).find(".nvicon-close-circle").show();
                 }else {
-	                $(this).closest(_obj.options.groupSelector).find(".zricon-close-circle").hide();
+	                $(this).closest(_obj.options.groupSelector).find(".nvicon-close-circle").hide();
                 }
             },
 	        inputNumFn:function () {
@@ -515,8 +516,8 @@ var _nav = {
         eventList: function (opt) {
             var $ret1 = "",tri="",$ret2="";
             $.each(opt.array, function (i, n) {
-                //n代表每个zr-nav的容器ul
-                $ret1 = $(n).find(opt.options.itemClassName);//zr-nav-item 代表每个li
+                //n代表每个nv-nav的容器ul
+                $ret1 = $(n).find(opt.options.itemClassName);//nv-nav-item 代表每个li
                 tri = $(n).attr("trigger");
                 $ret2 = $("#"+tri);
                 //缓存_obj'
@@ -582,16 +583,16 @@ var _nav = {
                     $(this).closest("." + _obj.options.collapsedClassName + ">" + _obj.options.itemClassName).addClass(_obj.options.selectedClassName);
                 }
                 //添加被选中属性
-                if (!$(this).attr("zr-isselected")) {
+                if (!$(this).attr("nv-isselected")) {
                    //判断是否是叶子节点
                     if($(this).find(_obj.options.itemClassName).length == 0){
-                        $(this).closest("."+_obj.options.shrinkClassName).find(_obj.options.itemClassName).attr("zr-isselected", "");
-                        $(this).attr("zr-isselected", "selected");
+                        $(this).closest("."+_obj.options.shrinkClassName).find(_obj.options.itemClassName).attr("nv-isselected", "");
+                        $(this).attr("nv-isselected", "selected");
                     }else{
                         return false;
                     }
                 } else {
-                    $(this).attr("zr-isselected", "")
+                    $(this).attr("nv-isselected", "")
                 }
             }
         },
@@ -603,7 +604,7 @@ var _nav = {
                 return false;
             } else {
                 var _this = this;
-                // Zr.tools.later(function () {
+                // nv.tools.later(function () {
                 //     _this.stop().removeClass(_obj.options.showClassName)
                 // }, 150)
                 //  $(this).stop().removeClass(_obj.options.showClassName).delay(150);
@@ -621,13 +622,13 @@ var _nav = {
             //取缓存
             var _obj = $(this).data(_nav.options.cacheName),
                 name = $(this).attr("id"),
-                $target = $(".zr-nav[trigger='"+name+"']");
+                $target = $(".nv-nav[trigger='"+name+"']");
             //
-            $(this).children('.zricon-left').toggleClass('zricon-right');
-            $target.toggleClass("zr-nav-collapsed");
+            $(this).children('.nvicon-left').toggleClass('nvicon-right');
+            $target.toggleClass("nv-nav-collapsed");
             $target.find(_obj.options.itemClassName).removeClass(_obj.options.showClassName);
-            $target.find("> " + _obj.options.itemClassName + "[zr-isselected=selected]").addClass(_obj.options.selectedClassName);
-            var items=$target.find(_obj.options.itemClassName + "[zr-isselected=selected]").parents(_obj.options.itemClassName);
+            $target.find("> " + _obj.options.itemClassName + "[nv-isselected=selected]").addClass(_obj.options.selectedClassName);
+            var items=$target.find(_obj.options.itemClassName + "[nv-isselected=selected]").parents(_obj.options.itemClassName);
             if ($target.hasClass(_obj.options.collapsedClassName)) {
                 if(items.length>0){
                     //有父级节点
@@ -642,7 +643,7 @@ var _nav = {
                 if(items.length>0){
                     items.addClass(_obj.options.showClassName);
                 }else{
-                    $target.find("> " + _obj.options.itemClassName + "[zr-isselected=selected]").addClass(_obj.options.selectedClassName);
+                    $target.find("> " + _obj.options.itemClassName + "[nv-isselected=selected]").addClass(_obj.options.selectedClassName);
                 }
             }
         }
@@ -667,11 +668,11 @@ var _radio = {
                     //console.log($(elem).prop("class"));
                         var pubClass=$(elem).prop("class"),
                             label;
-                        if(pubClass.indexOf("zr-radio-vertical")>-1){
-                            pubClass="zr-radio-middle";
-                            label=$("<label class='"+pubClass+" zr-radio-module"+"'></label>");
+                        if(pubClass.indexOf("nv-radio-vertical")>-1){
+                            pubClass="nv-radio-middle";
+                            label=$("<label class='"+pubClass+" nv-radio-module"+"'></label>");
                         }else{
-                            label=$("<label class='zr-radio-module'></label>");
+                            label=$("<label class='nv-radio-module'></label>");
                         }
                         var str="";
                         if($(elem).get(0).disabled){
@@ -680,8 +681,8 @@ var _radio = {
                         if($(elem).get(0).checked){
                             label.addClass(_radio.options._obj.options.radioedClassName);
                         }
-                        $(elem).after(label).addClass("zr-radio-hide");
-                        str+='<div class="zr-radio-simulation"><span class="zr-radio-normal"><span></span></span><div class="zr-radio-text">';
+                        $(elem).after(label).addClass("nv-radio-hide");
+                        str+='<div class="nv-radio-simulation"><span class="nv-radio-normal"><span></span></span><div class="nv-radio-text">';
                         $(elem).attr("title")==undefined ? str+='</div></div>' : str+=$(elem).attr("title")+'</div></div>';
                         label.append(str);
                         //绑定自定义事件
@@ -713,7 +714,7 @@ var _radio = {
             }
         },
         customEventFn:function(elem){
-            $(elem)[0]["zrChange"]=function(opts){
+            $(elem)[0]["nvChange"]=function(opts){
                 opts= $.extend({
                     disabled:false,
                     checked:false
@@ -721,18 +722,18 @@ var _radio = {
                 //判断是否禁用
                 if(opts.disabled){
                     $(this).attr("disabled","disabled");
-                    $(this).next().addClass("zr-radio-disable")
+                    $(this).next().addClass("nv-radio-disable")
                 }else{
                     $(this).removeAttr("disabled");
-                    $(this).next().removeClass("zr-radio-disable")
+                    $(this).next().removeClass("nv-radio-disable")
                 }
                 //判断是否选中
                 if(opts.checked){
                     $(this).attr("checked","checked");
-                    $(this).next().addClass("zr-radio-radioed")
+                    $(this).next().addClass("nv-radio-radioed")
                 }else{
                     $(this).removeAttr("checked");
-                    $(this).next().removeClass("zr-radio-radioed")
+                    $(this).next().removeClass("nv-radio-radioed")
                 }
             }
         }
@@ -777,31 +778,31 @@ var _select = {
 				//
 				_select.eventFn.getValue($(n));
 				$(n).on("DOMNodeInserted",function () {
-					$(n).nextAll(".zr-unselect").eq(0).remove();
+					$(n).nextAll(".nv-unselect").eq(0).remove();
                         _select.eventFn.getValue($(n));
 				});
 				$(n).on("DOMNodeRemoved",function () {
-					$(n).nextAll(".zr-unselect").eq(0).remove();
+					$(n).nextAll(".nv-unselect").eq(0).remove();
                         _select.eventFn.getValue($(n));
 				});
                 //自定义事件监听DOM变化
-				$(n)[0]["zrchange"] = function(opt){
+				$(n)[0]["nvchange"] = function(opt){
 					var opts = {
 							eventFn:"",
 							other:""
 						},
 						opt = $.extend(opts,opt||{});
 					opt.eventFn();
-					$(n).nextAll(".zr-unselect").eq(0).remove();
+					$(n).nextAll(".nv-unselect").eq(0).remove();
 					_select.eventFn.getValue($(n));
 				}
 
 			});
 			//点击其他地方取消相关样式
-			Zr.dom.clickQueen.push(function(){
+			nv.dom.clickQueen.push(function(){
 				$.each(opt.array,function(i,n){
 					$(_select.options._obj.options.contentClassName).addClass(_select.options._obj.options.hideClassName);
-					$(_select.options._obj.options.titleClassName).find(".zricon-arrow-down").removeClass("zricon-arrow-up")
+					$(_select.options._obj.options.titleClassName).find(".nvicon-arrow-down").removeClass("nvicon-arrow-up")
 				})
 			})
 		}
@@ -840,24 +841,24 @@ var _select = {
 				inputHtml = "",
 				inputContent = '',
 				html = "",
-				selectAll = '<dt class="zr-select-checkbox" zr-option-value=""><span class="zr-select-checkbox-normal"><span class=""></span></span><div class="zr-select-checkbox-text">全选</div></dt>';
+				selectAll = '<dt class="nv-select-checkbox" nv-option-value=""><span class="nv-select-checkbox-normal"><span class=""></span></span><div class="nv-select-checkbox-text">全选</div></dt>';
 			for (var i = 0,j = arr.length; i < j; i++){
 				if (obj.attr("multiple")){
-					var selectClass = arr[i].optSelected?"zr-select-checkbox-checked":"";
-					optHtml += '<dd class="zr-select-checkbox ' + selectClass +'" zr-option-value="' + arr[i].optVal +'" zr-option-text="' + arr[i].optText +'" title="'+arr[i].optText+'"><span class="zr-select-checkbox-normal"><span></span></span><div class="zr-select-checkbox-text">' + arr[i].optText + '</div></dd>';
+					var selectClass = arr[i].optSelected?"nv-select-checkbox-checked":"";
+					optHtml += '<dd class="nv-select-checkbox ' + selectClass +'" nv-option-value="' + arr[i].optVal +'" nv-option-text="' + arr[i].optText +'" title="'+arr[i].optText+'"><span class="nv-select-checkbox-normal"><span></span></span><div class="nv-select-checkbox-text">' + arr[i].optText + '</div></dd>';
 				}else {
-					optHtml += '<dd title="'+arr[i].optText+'" zr-option-value="' + arr[i].optVal + '">' + arr[i].optText + '</dd>';
+					optHtml += '<dd title="'+arr[i].optText+'" nv-option-value="' + arr[i].optVal + '">' + arr[i].optText + '</dd>';
 				}
 			};
 			if (optSelected.length > 0){
                 if (obj.attr("multiple")){
                 	if (optSelected.length == arr.length){
-                        selectAll = '<dt class="zr-select-checkbox zr-select-checkbox-checked" zr-option-value=""><span class="zr-select-checkbox-normal"><span class=""></span></span><div class="zr-select-checkbox-text">全选</div></dt>';
+                        selectAll = '<dt class="nv-select-checkbox nv-select-checkbox-checked" nv-option-value=""><span class="nv-select-checkbox-normal"><span class=""></span></span><div class="nv-select-checkbox-text">全选</div></dt>';
 					} else {
-                        selectAll = '<dt class="zr-select-checkbox zr-select-checkbox-checked" zr-option-value=""><span class="zr-select-checkbox-normal"><span class="zr-select-checkbox-uncheck"></span></span><div class="zr-select-checkbox-text">全选</div></dt>';
+                        selectAll = '<dt class="nv-select-checkbox nv-select-checkbox-checked" nv-option-value=""><span class="nv-select-checkbox-normal"><span class="nv-select-checkbox-uncheck"></span></span><div class="nv-select-checkbox-text">全选</div></dt>';
                     };
                     for (var i = 0,j = optSelected.length; i < j; i++){
-                        inputContent += '<span>' + $(optSelected[i]).text() +  '<i zr-close-text="' + $(optSelected[i]).text() +'" zr-close-val="' + $(optSelected[i]).val() + '" class="zricon-close"></i></span>';
+                        inputContent += '<span>' + $(optSelected[i]).text() +  '<i nv-close-text="' + $(optSelected[i]).text() +'" nv-close-val="' + $(optSelected[i]).val() + '" class="nvicon-close"></i></span>';
                     };
 				}else {
                     inputHtml = $(optSelected).text();
@@ -868,25 +869,25 @@ var _select = {
 				inputContent = '<input type="text" placeholder="' + inputHtml + '" readonly="readonly" '
 			};
 			if (obj.attr("disabled")){
-				html = '<div class="zr-unselect zr-select-disable"><div class="zr-select-title zr-input-group">' + inputContent +'disabled="disabled" class="zr-input">' +
-					'<span class="zr-input-addon"><i class="zricon-arrow-down"></i></span></div><dl class="zr-select-content zr-select-hide">' + optHtml + '</dl></div>';
+				html = '<div class="nv-unselect nv-select-disable"><div class="nv-select-title nv-input-group">' + inputContent +'disabled="disabled" class="nv-input">' +
+					'<span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span></div><dl class="nv-select-content nv-select-hide">' + optHtml + '</dl></div>';
 			}else if (obj.attr("multiple")){
 				if (optSelected.length > 0){
-                    html = '<div class="zr-unselect"><div class="zr-select-title zr-input-group zr-select-values">' + inputContent +
-                        '<i class="zricon-arrow-down"></i></div><dl class="zr-select-content zr-select-hide">' + selectAll + optHtml + '</dl></div>';
+                    html = '<div class="nv-unselect"><div class="nv-select-title nv-input-group nv-select-values">' + inputContent +
+                        '<i class="nvicon-arrow-down"></i></div><dl class="nv-select-content nv-select-hide">' + selectAll + optHtml + '</dl></div>';
 				} else {
-                    html = '<div class="zr-unselect"><div class="zr-select-title zr-input-group">' + inputContent +' class="zr-input">' +
-                        '<span class="zr-input-addon"><i class="zricon-arrow-down"></i></span></div><dl class="zr-select-content zr-select-hide">' + selectAll + optHtml + '</dl></div>';
+                    html = '<div class="nv-unselect"><div class="nv-select-title nv-input-group">' + inputContent +' class="nv-input">' +
+                        '<span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span></div><dl class="nv-select-content nv-select-hide">' + selectAll + optHtml + '</dl></div>';
 				};
 			}else if (obj.hasClass(_obj.options.smClassName)){
-				html = '<div class="zr-unselect"><div class="zr-select-title zr-input-group">' + inputContent +' class="zr-input zr-input-sm">' +
-					'<span class="zr-input-addon zr-input-sm"><i class="zricon-arrow-down"></i></span></div><dl class="zr-select-content zr-select-hide zr-select-content-sm">' + optHtml + '</dl></div>';
+				html = '<div class="nv-unselect"><div class="nv-select-title nv-input-group">' + inputContent +' class="nv-input nv-input-sm">' +
+					'<span class="nv-input-addon nv-input-sm"><i class="nvicon-arrow-down"></i></span></div><dl class="nv-select-content nv-select-hide nv-select-content-sm">' + optHtml + '</dl></div>';
 			}else if (obj.hasClass(_obj.options.lgClassName)){
-				html = '<div class="zr-unselect"><div class="zr-select-title zr-input-group">' + inputContent +' class="zr-input zr-input-lg">' +
-					'<span class="zr-input-addon zr-input-lg"><i class="zricon-arrow-down"></i></span></div><dl class="zr-select-content zr-select-hide zr-select-content-lg">' + optHtml + '</dl></div>';
+				html = '<div class="nv-unselect"><div class="nv-select-title nv-input-group">' + inputContent +' class="nv-input nv-input-lg">' +
+					'<span class="nv-input-addon nv-input-lg"><i class="nvicon-arrow-down"></i></span></div><dl class="nv-select-content nv-select-hide nv-select-content-lg">' + optHtml + '</dl></div>';
 			}else {
-				html = '<div class="zr-unselect"><div class="zr-select-title zr-input-group">' + inputContent +' class="zr-input">' +
-					'<span class="zr-input-addon"><i class="zricon-arrow-down"></i></span></div><dl class="zr-select-content zr-select-hide">' + optHtml + '</dl></div>';
+				html = '<div class="nv-unselect"><div class="nv-select-title nv-input-group">' + inputContent +' class="nv-input">' +
+					'<span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span></div><dl class="nv-select-content nv-select-hide">' + optHtml + '</dl></div>';
 			};
 
 			obj.after(html);
@@ -900,7 +901,7 @@ var _select = {
 				ev.stopPropagation();
 				// $(_obj.options.contentClassName).addClass(_obj.options.hideClassName);
                 var $contentDom = $(this).closest(_obj.options.unselectClassName).find(_obj.options.contentClassName),
-                    $icon = $(this).find(".zricon-arrow-down");
+                    $icon = $(this).find(".nvicon-arrow-down");
 
 				if ($(this).closest(_obj.options.unselectClassName).hasClass(_obj.options.disableClassName)){
 					return false;
@@ -925,42 +926,42 @@ var _select = {
 							})
 						}
                         $(_obj.options.unselectClassName).find(_obj.options.contentClassName).addClass(_obj.options.hideClassName);
-                        $(_obj.options.titleClassName).find(".zricon-arrow-down").removeClass("zricon-arrow-up");
+                        $(_obj.options.titleClassName).find(".nvicon-arrow-down").removeClass("nvicon-arrow-up");
                         $contentDom.removeClass(_obj.options.hideClassName);
-                        $icon.addClass("zricon-arrow-up");
+                        $icon.addClass("nvicon-arrow-up");
 					}else{
                         $contentDom.addClass(_obj.options.hideClassName);
-                        $icon.removeClass("zricon-arrow-up");
+                        $icon.removeClass("nvicon-arrow-up");
 					}
 				}
 			});
 			//虚拟option点击事件
-			$(".zr-select-content dd").off("click").on("click",function (ev) {
+			$(".nv-select-content dd").off("click").on("click",function (ev) {
 				ev.stopPropagation();
                 var $dtDom = $(this).closest(_obj.options.contentClassName).find("dt"),
                     $contentDom = $(this).closest(_obj.options.contentClassName),
                     $unselectDom = $(this).closest(_obj.options.unselectClassName);
-				if ($(this).hasClass("zr-select-checkbox")){
-					var optVal = $(this).attr("zr-option-value"),
-						optText = $(this).attr("zr-option-text"),
+				if ($(this).hasClass("nv-select-checkbox")){
+					var optVal = $(this).attr("nv-option-value"),
+						optText = $(this).attr("nv-option-text"),
 						optArr = [],
 						opt = $(this).closest(_obj.options.contentClassName).find("dd"),
 						optLength = $(this).closest(_obj.options.contentClassName).find("dd").length;
 					for (var i = 0,j = opt.length; i < j; i++){
-						if ($(opt[i]).hasClass("zr-select-checkbox-checked")){
+						if ($(opt[i]).hasClass("nv-select-checkbox-checked")){
 							optArr.push({
-								optVal:$(opt[i]).attr("zr-option-value"),
-								optText:$(opt[i]).attr("zr-option-text")
+								optVal:$(opt[i]).attr("nv-option-value"),
+								optText:$(opt[i]).attr("nv-option-text")
 							})
 						}
 					};
-					// $(this).toggleClass("zr-select-checkbox-checked");
-					if ($(this).hasClass("zr-select-checkbox-checked")){
-						$(this).removeClass("zr-select-checkbox-checked");
+					// $(this).toggleClass("nv-select-checkbox-checked");
+					if ($(this).hasClass("nv-select-checkbox-checked")){
+						$(this).removeClass("nv-select-checkbox-checked");
 					} else {
-						$(this).addClass("zr-select-checkbox-checked");
+						$(this).addClass("nv-select-checkbox-checked");
 					};
-					if ($(this).hasClass("zr-select-checkbox-checked")){
+					if ($(this).hasClass("nv-select-checkbox-checked")){
 						optArr.push({
 							optVal:optVal,
 							optText:optText
@@ -971,26 +972,26 @@ var _select = {
 					_select.eventFn.appendDom($(this),_obj,optArr);
 					_select.eventFn.deleteOpt(_obj);
 					if (optArr && optArr.length < optLength && optArr.length > 0){
-                        $dtDom.addClass("zr-select-checkbox-checked");
-                        $dtDom.find(".zr-select-checkbox-normal").find("span").addClass("zr-select-checkbox-uncheck");
+                        $dtDom.addClass("nv-select-checkbox-checked");
+                        $dtDom.find(".nv-select-checkbox-normal").find("span").addClass("nv-select-checkbox-uncheck");
 					}else if (optArr && optArr.length == optLength){
-                        $dtDom.addClass("zr-select-checkbox-checked");
-                        $dtDom.find(".zr-select-checkbox-normal").find("span").removeClass("zr-select-checkbox-uncheck");
+                        $dtDom.addClass("nv-select-checkbox-checked");
+                        $dtDom.find(".nv-select-checkbox-normal").find("span").removeClass("nv-select-checkbox-uncheck");
 					}else{
-						var firstVal = $(this).closest(_obj.options.contentClassName).find("dd").eq(0).attr("zr-option-text");
-						var html = '<input type="text" placeholder="' + firstVal +'" readonly="readonly" class="zr-input"><span class="zr-input-addon"><i class="zricon-arrow-down"></i></span>';
-						$unselectDom.find(_obj.options.titleClassName).addClass("zr-select-values").removeClass("zr-select-values").html(html);
+						var firstVal = $(this).closest(_obj.options.contentClassName).find("dd").eq(0).attr("nv-option-text");
+						var html = '<input type="text" placeholder="' + firstVal +'" readonly="readonly" class="nv-input"><span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span>';
+						$unselectDom.find(_obj.options.titleClassName).addClass("nv-select-values").removeClass("nv-select-values").html(html);
 						$contentDom.css({
 							"top":$unselectDom.find(_obj.options.titleClassName).height() + 4
 						});
-						$dtDom.removeClass("zr-select-checkbox-checked");
+						$dtDom.removeClass("nv-select-checkbox-checked");
 					};
 					_select.eventFn.bindVal($(this),_obj,optArr);
 				}else {
-					var optVal = $(this).attr("zr-option-value"),
+					var optVal = $(this).attr("nv-option-value"),
 						optText = $(this).text();
 					$contentDom.addClass(_obj.options.hideClassName);
-                    $unselectDom.find(_obj.options.titleClassName).find(".zricon-arrow-down").removeClass("zricon-arrow-up");
+                    $unselectDom.find(_obj.options.titleClassName).find(".nvicon-arrow-down").removeClass("nvicon-arrow-up");
                     $unselectDom.find("input").val(optText);
                     $unselectDom.prev(_obj.selector).eq(0).val(optVal);
                     $unselectDom.prev(_obj.selector).eq(0).trigger("change");
@@ -998,37 +999,37 @@ var _select = {
 				}
 			});
 			//全选点击事件
-			$(".zr-select-content dt").off("click").on("click",function (ev) {
+			$(".nv-select-content dt").off("click").on("click",function (ev) {
 				ev.stopPropagation();
 				var optArr = [];
-				// $(this).toggleClass("zr-select-checkbox-checked");
-                if ($(this).hasClass("zr-select-checkbox-checked")){
-                    $(this).removeClass("zr-select-checkbox-checked");
+				// $(this).toggleClass("nv-select-checkbox-checked");
+                if ($(this).hasClass("nv-select-checkbox-checked")){
+                    $(this).removeClass("nv-select-checkbox-checked");
                 } else {
-                    $(this).addClass("zr-select-checkbox-checked");
+                    $(this).addClass("nv-select-checkbox-checked");
                 };
-				if ($(this).hasClass("zr-select-checkbox-checked")){
-					$(this).siblings("dd").addClass("zr-select-checkbox-checked");
-					$(this).find(".zr-select-checkbox-normal").find("span").removeClass("zr-select-checkbox-uncheck");
+				if ($(this).hasClass("nv-select-checkbox-checked")){
+					$(this).siblings("dd").addClass("nv-select-checkbox-checked");
+					$(this).find(".nv-select-checkbox-normal").find("span").removeClass("nv-select-checkbox-uncheck");
 					var ddArr = $(this).siblings("dd");
 					for (var i = 0,j = ddArr.length; i < j; i++){
 						optArr.push({
-							optVal:$(ddArr[i]).attr("zr-option-value"),
-							optText:$(ddArr[i]).attr("zr-option-text")
+							optVal:$(ddArr[i]).attr("nv-option-value"),
+							optText:$(ddArr[i]).attr("nv-option-text")
 						})
 					};
 					_select.eventFn.appendDom($(this),_obj,optArr);
 					_select.eventFn.deleteOpt(_obj);
 				}else {
-					$(this).siblings("dd").removeClass("zr-select-checkbox-checked");
-					var firstVal = $(this).siblings("dd").eq(0).attr("zr-option-text");
-					var html = '<input type="text" placeholder="' + firstVal +'" readonly="readonly" class="zr-input"><span class="zr-input-addon"><i class="zricon-arrow-down"></i></span>';
-					$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).addClass("zr-select-values").removeClass("zr-select-values").html(html);
+					$(this).siblings("dd").removeClass("nv-select-checkbox-checked");
+					var firstVal = $(this).siblings("dd").eq(0).attr("nv-option-text");
+					var html = '<input type="text" placeholder="' + firstVal +'" readonly="readonly" class="nv-input"><span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span>';
+					$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).addClass("nv-select-values").removeClass("nv-select-values").html(html);
 					$(this).closest(_obj.options.contentClassName).css({
 						"top":$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).height() + 4
 					});
 				};
-				$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).find(".zricon-arrow-down").addClass("zricon-arrow-up");
+				$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).find(".nvicon-arrow-down").addClass("nvicon-arrow-up");
 				_select.eventFn.bindVal($(this),_obj,optArr);
 			});
 
@@ -1046,37 +1047,37 @@ var _select = {
 		appendDom:function (obj,_obj,optArr) {
 			var html = "";
 			for (var i = 0,j = optArr.length; i < j; i++){
-				html += '<span>' + optArr[i].optText +  '<i zr-close-text="' + optArr[i].optText +'" zr-close-val="' + optArr[i].optVal + '" class="zricon-close"></i></span>';
+				html += '<span>' + optArr[i].optText +  '<i nv-close-text="' + optArr[i].optText +'" nv-close-val="' + optArr[i].optVal + '" class="nvicon-close"></i></span>';
 			};
-			html = html + '<i class="zricon-arrow-down"></i>';
-			obj.closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).addClass("zr-select-values").html(html);
+			html = html + '<i class="nvicon-arrow-down"></i>';
+			obj.closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).addClass("nv-select-values").html(html);
 			obj.closest(_obj.options.contentClassName).css({
 				"top":obj.closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).height() + 14
 			});
 		},
 		// value删除按钮事件
 		deleteOpt:function (_obj) {
-            // $(_obj.options.unselectClassName).find(".zricon-close")
-            $(_obj.options.unselectClassName).find(".zricon-close").off("click").on("click",function (ev) {
+            // $(_obj.options.unselectClassName).find(".nvicon-close")
+            $(_obj.options.unselectClassName).find(".nvicon-close").off("click").on("click",function (ev) {
 				ev.stopPropagation();
-				var closeDomArr = $(this).closest(_obj.options.titleClassName).find(".zricon-close"),
+				var closeDomArr = $(this).closest(_obj.options.titleClassName).find(".nvicon-close"),
 					closestDom = $(this).closest(_obj.options.unselectClassName);
 				var optArr = [];
 				for (var i = 0,j = closeDomArr.length; i < j; i++){
 					optArr.push({
-						optVal:$(closeDomArr[i]).attr("zr-close-val"),
-						optText:$(closeDomArr[i]).attr("zr-close-text"),
+						optVal:$(closeDomArr[i]).attr("nv-close-val"),
+						optText:$(closeDomArr[i]).attr("nv-close-text"),
 					});
 				};
-				_select.eventFn.removeByValue(optArr,$(this).attr("zr-close-val"));
-				closestDom.find(".zr-select-checkbox[zr-option-value=" + $(this).attr("zr-close-val") +"]").removeClass("zr-select-checkbox-checked");
-				closestDom.find("dt").find(".zr-select-checkbox-normal").find("span").addClass("zr-select-checkbox-uncheck");
+				_select.eventFn.removeByValue(optArr,$(this).attr("nv-close-val"));
+				closestDom.find(".nv-select-checkbox[nv-option-value=" + $(this).attr("nv-close-val") +"]").removeClass("nv-select-checkbox-checked");
+				closestDom.find("dt").find(".nv-select-checkbox-normal").find("span").addClass("nv-select-checkbox-uncheck");
 				_select.eventFn.bindVal($(this),_obj,optArr);
 				if (optArr.length == 0){
-					closestDom.find("dt").removeClass("zr-select-checkbox-checked");
-					var firstVal = closestDom.find("dd").eq(0).attr("zr-option-text");
-					var html = '<input type="text" placeholder="' + firstVal +'" readonly="readonly" class="zr-input"><span class="zr-input-addon"><i class="zricon-arrow-down"></i></span>';
-					$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).addClass("zr-select-values").removeClass("zr-select-values").html(html);
+					closestDom.find("dt").removeClass("nv-select-checkbox-checked");
+					var firstVal = closestDom.find("dd").eq(0).attr("nv-option-text");
+					var html = '<input type="text" placeholder="' + firstVal +'" readonly="readonly" class="nv-input"><span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span>';
+					$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).addClass("nv-select-values").removeClass("nv-select-values").html(html);
 
 				};
 				_select.eventFn.appendDom($(this),_obj,optArr);
@@ -1136,25 +1137,25 @@ var _tip = {
                        var $ids =  $("#"+ids);
                        $ids.data("status","hidden");
                        // console.log("11="+ids)
-                       Zr.tools.later(function(){
+                       nv.tools.later(function(){
                            // console.log("22="+ids)
                            var status = $ids.data("status") || "hidden";
                            if(status == "hidden"){
-                               $ids.removeClass("zr-tip-show");
+                               $ids.removeClass("nv-tip-show");
                            }
 
                        },50)
                        $ids.off("mouseover").on("mouseover",function(){
-                           $(this).addClass("zr-tip-show");
+                           $(this).addClass("nv-tip-show");
                            $(this).data("status","show");
                        })
                        $ids.off("mouseout").on("mouseout",function(){
                            var _this = this;
                            $(_this).data("status","hidden");
-                           Zr.tools.later(function(){
+                           nv.tools.later(function(){
                                var status = $ids.data("status") || "hidden";
                                if(status == "hidden"){
-                                   $(_this).removeClass("zr-tip-show");
+                                   $(_this).removeClass("nv-tip-show");
                                }
 
                            },50)
@@ -1165,8 +1166,8 @@ var _tip = {
                }
 
            })
-           Zr.dom.clickQueen.push(function(){
-               $(".zr-tip").removeClass("zr-tip-show");
+           nv.dom.clickQueen.push(function(){
+               $(".nv-tip").removeClass("nv-tip-show");
            })
        }
     },
@@ -1178,7 +1179,7 @@ var _tip = {
             var $ids = $("#"+ids);
             if(ids && cacheStatus == "true"){
                 $ids.data("status","show")
-                $ids.addClass("zr-tip-show");
+                $ids.addClass("nv-tip-show");
                 return false;
             }
             //
@@ -1197,9 +1198,9 @@ var _tip = {
             if(!text){
                 return false;
             }
-            var html = "<div class=\"zr-tip\" id=\""+ids+"\" style='max-width:"+maxWidth+"px'>";
-                html += "<div class=\"zr-tip-inner\">"+text+"</div>";
-                html += "<i class=\"zr-tip-arrow\"></i></div>";
+            var html = "<div class=\"nv-tip\" id=\""+ids+"\" style='max-width:"+maxWidth+"px'>";
+                html += "<div class=\"nv-tip-inner\">"+text+"</div>";
+                html += "<i class=\"nv-tip-arrow\"></i></div>";
             //
             var $tip = $(html).appendTo("body");
             //
@@ -1217,51 +1218,51 @@ var _tip = {
                 //
                 _top = _top - _tipHeight - 5;
                 _left = _left + _width/2 - _tipWidth/2;
-                className = "zr-tip-top zr-tip-show";
+                className = "nv-tip-top nv-tip-show";
 
             }else if(ps == "tl"){
                 _top = _top - _tipHeight - 5;
-                className = "zr-tip-top-left zr-tip-show";
+                className = "nv-tip-top-left nv-tip-show";
             }else if(ps == "tr"){
                 _top = _top - _tipHeight - 5;
                 _left = _left - _tipWidth + _width;
-                className = "zr-tip-top-right zr-tip-show";
+                className = "nv-tip-top-right nv-tip-show";
             }else if(ps == "rt"){
                 _left = _left + _width;
-                className = "zr-tip-right-top zr-tip-show";
+                className = "nv-tip-right-top nv-tip-show";
 
             }else if(ps == "right"){
                 _top = _top + _height/2 - _tipHeight/2;
                 _left = _left + _width;
-                className = "zr-tip-right-top zr-tip-show";
+                className = "nv-tip-right-top nv-tip-show";
 
             }else if(ps == "rb"){
                 _top = _top + _height - _tipHeight;
                 _left = _left + _width;
-                className = "zr-tip-right-bottom zr-tip-show";
+                className = "nv-tip-right-bottom nv-tip-show";
             }else if(ps == "lt"){
                 _top = _top + _height - _tipHeight;
                 _left = _left - _tipWidth - 5;
-                className = "zr-tip-left-top zr-tip-show";
+                className = "nv-tip-left-top nv-tip-show";
             }else if(ps == "left"){
                 _top = _top + _height - _tipHeight;
                 _left = _left - _tipWidth - 5;
-                className = "zr-tip-left zr-tip-show";
+                className = "nv-tip-left nv-tip-show";
             }else if(ps == "lb"){
                 _top = _top + _height - _tipHeight;
                 _left = _left - _tipWidth - 5;
-                className = "zr-tip-left-bottom zr-tip-show";
+                className = "nv-tip-left-bottom nv-tip-show";
             }else if(ps == "bl"){
                 _top = _top + _height;
-                className = "zr-tip-bottom-left zr-tip-show";
+                className = "nv-tip-bottom-left nv-tip-show";
             }else if(ps == "bottom"){
                 _top = _top + _height;
                 _left = _left + _width/2 - _tipWidth/2;
-                className = "zr-tip-bottom zr-tip-show";
+                className = "nv-tip-bottom nv-tip-show";
             }else if(ps == "br"){
                 _top = _top + _height;
                 _left = _left - _tipWidth + _width;
-                className = "zr-tip-bottom-right zr-tip-show";
+                className = "nv-tip-bottom-right nv-tip-show";
             }
             //
             $tip.css({
@@ -1313,7 +1314,7 @@ var _top = {
                     array = opt.array;
                 $.each(array,function(i,n){
                     var $wrap = $(this).parent();
-                    if($wrap.hasClass("zr-top-wrap")){
+                    if($wrap.hasClass("nv-top-wrap")){
                         position = $wrap.attr("data-position")
                         position = position.split(" ");
                         _top = position[0];
@@ -1359,33 +1360,33 @@ var _upload = {
             if(opt.array.length>0){
                 $.each(opt.array,function(index,elem){
                     var str   = "",
-                        a     = "<a class='zr-btn zr-btn-default'></a>",
+                        a     = "<a class='nv-btn nv-btn-default'></a>",
                         sDef = "Click to upload",
                         sDef2 = "Select File",
-                        label = $("<label class='zr-upload-module'></label>");
+                        label = $("<label class='nv-upload-module'></label>");
 
                     if($(elem).hasClass(_upload.options._obj.options.avatarClassName)){    //头像上传
                         label.addClass(_upload.options._obj.options.avatarClassName);
-                        str  += "<i class='zricon-add'></i>";
+                        str  += "<i class='nvicon-add'></i>";
                     }else if($(elem).hasClass(_upload.options._obj.options.pictureClassName)){   //多图片上传
                         label.addClass(_upload.options._obj.options.pictureClassName);
-                        str  += "<i class='zricon-add'></i>";
+                        str  += "<i class='nvicon-add'></i>";
                     }else if($(elem).hasClass(_upload.options._obj.options.dragClassName)){   //拖拽上传
                         label.addClass(_upload.options._obj.options.dragClassName);
-                        str  += "<i class='zricon-upload-empty'></i><h4>" + $(elem).attr('title') +
+                        str  += "<i class='nvicon-upload-empty'></i><h4>" + $(elem).attr('title') +
                                 "</h4><p>" + $(elem).attr('alt') + "</p>";
                     }else if($(elem).hasClass(_upload.options._obj.options.manualClassName)){   // 手动上传
                         label = label.append(a).addClass(_upload.options._obj.options.manualClassName);
-                        str  += "<i class='zricon-doc-empty'></i>";
+                        str  += "<i class='nvicon-doc-empty'></i>";
                         $(elem).attr("title")== undefined ? str += sDef2 : str += $(elem).attr("title");
                     }else if($(elem).hasClass(_upload.options._obj.options.explainClassName)){   //带文字说明
                         var p = $('<p>' + $(elem).attr('alt') + '</p>');
                         label = label.append(a).addClass(_upload.options._obj.options.explainClassName).append(p);
-                        str  += "<i class='zricon-upload-1'></i>";
+                        str  += "<i class='nvicon-upload-1'></i>";
                         $(elem).attr("title")== undefined ? str += sDef : str += $(elem).attr("title");
                     }else{   //默认上传
                         label = label.append(a);
-                        str  += "<i class='zricon-upload-1'></i>";
+                        str  += "<i class='nvicon-upload-1'></i>";
                         $(elem).attr("title")== undefined ? str += sDef : str += $(elem).attr("title");
                     }
                     $(elem).addClass(_upload.options._obj.options.hideClassName).wrap(label);

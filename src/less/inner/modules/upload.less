@@ -1,12 +1,12 @@
 /*
  * upload
  */
-.@{zr-prefix}-upload,.@{zr-prefix}-upload-module{
+.@{nv-prefix}-upload,.@{nv-prefix}-upload-module{
   display: inline-block;
   vertical-align: top;
   cursor: pointer;
   overflow: hidden;
-  .@{zr-prefix}-btn{
+  .@{nv-prefix}-btn{
     position: relative;
     vertical-align: top;
     overflow: hidden;
@@ -23,44 +23,44 @@
     cursor: pointer;
   }*/
 }
-.@{zr-prefix}-upload-explain p{
+.@{nv-prefix}-upload-explain p{
   margin-top: @padding-xs;
   color: @text-color-secondary;
   line-height: @line-height-base;
 }
-.@{zr-prefix}-upload-list{
+.@{nv-prefix}-upload-list{
   margin-top: @padding-xs;
 }
-.@{zr-prefix}-upload-list li{
+.@{nv-prefix}-upload-list li{
   position: relative;
   margin-bottom: @padding-xs;
   padding: 2px @padding-xs;
   color: @text-color;
   line-height: @line-height-base;
 }
-.@{zr-prefix}-upload-list li.@{zr-prefix}-upload-error,
-.@{zr-prefix}-upload-list li.@{zr-prefix}-upload-error:hover,
-.@{zr-prefix}-upload-list li.@{zr-prefix}-upload-error a{
+.@{nv-prefix}-upload-list li.@{nv-prefix}-upload-error,
+.@{nv-prefix}-upload-list li.@{nv-prefix}-upload-error:hover,
+.@{nv-prefix}-upload-list li.@{nv-prefix}-upload-error a{
   color: @error-color;
 }
-.@{zr-prefix}-upload-list li:hover{
+.@{nv-prefix}-upload-list li:hover{
   background: @primary-1;
   color: @primary-5;
 }
-.@{zr-prefix}-upload-list li.@{zr-prefix}-upload-error:hover{
+.@{nv-prefix}-upload-list li.@{nv-prefix}-upload-error:hover{
   background: @error-1;
 }
-.@{zr-prefix}-upload-list li .delete{
+.@{nv-prefix}-upload-list li .delete{
   display: none;
   position: absolute;
   top: 2px;
   right: @padding-xs;
   cursor: pointer;
 }
-.@{zr-prefix}-upload-list li:hover .delete{
+.@{nv-prefix}-upload-list li:hover .delete{
   display: inline-block;
 }
-.@{zr-prefix}-upload-list li em{
+.@{nv-prefix}-upload-list li em{
   position: absolute;
   display: inline-block;
   top: 5px;
@@ -70,14 +70,14 @@
   line-height: @line-height-base;
   color: @text-color;
 }
-.@{zr-prefix}-upload-list li .@{zr-prefix}-upload-progress{
+.@{nv-prefix}-upload-list li .@{nv-prefix}-upload-progress{
   position: relative;
   margin-top: @padding-xs;
   height: 2px;
   background: @primary-1;
   overflow: hidden;
 }
-.@{zr-prefix}-upload-list li .@{zr-prefix}-upload-progress span{
+.@{nv-prefix}-upload-list li .@{nv-prefix}-upload-progress span{
   display: inline-block;
   position: absolute;
   top:0;
@@ -85,7 +85,7 @@
   height: 2px;
   background: @primary-5;
 }
-.@{zr-prefix}-upload-list li.@{zr-prefix}-upload-doing:hover{
+.@{nv-prefix}-upload-list li.@{nv-prefix}-upload-doing:hover{
   background: transparent;
   color: @text-color;
 }
@@ -93,8 +93,8 @@
  * upload-avatar
  */
 
-.@{zr-prefix}-upload-avatar,
-.@{zr-prefix}-upload-picture{
+.@{nv-prefix}-upload-avatar,
+.@{nv-prefix}-upload-picture{
   position: relative;
   display: inline-block;
   width: @upload-avatar-size-base;
@@ -108,48 +108,48 @@
   font-size: 0;
   overflow: hidden;
 }
-.@{zr-prefix}-upload-picture{
+.@{nv-prefix}-upload-picture{
   width: @upload-picture-size-base;
   height: @upload-picture-size-base;
   margin-right: @padding-xs;
   margin-bottom: @padding-xs;
 }
-.@{zr-prefix}-upload-avatar:hover,
-.@{zr-prefix}-upload-picture:hover{
+.@{nv-prefix}-upload-avatar:hover,
+.@{nv-prefix}-upload-picture:hover{
   border-color: @primary-5;
 }
-.@{zr-prefix}-upload-avatar i,
-.@{zr-prefix}-upload-picture i{
+.@{nv-prefix}-upload-avatar i,
+.@{nv-prefix}-upload-picture i{
   display: inline-block;
   position: absolute;
   color: @disabled-color;
 }
-.@{zr-prefix}-upload-avatar i{
+.@{nv-prefix}-upload-avatar i{
   top: @upload-avatar-size-base /3;
   left: @upload-avatar-size-base /3;
   width: @upload-avatar-size-base /3;
   height: @upload-avatar-size-base /3;
   font-size: @font-size-base * 3 - 2px;
 }
-.@{zr-prefix}-upload-picture i{
+.@{nv-prefix}-upload-picture i{
   top: @upload-picture-size-base /3;
   left: @upload-picture-size-base /3;
   width: @upload-picture-size-base /3;
   height: @upload-picture-size-base /3;
   font-size: @font-size-base * 2 + 2px;
 }
-.@{zr-prefix}-upload-avatar img{
+.@{nv-prefix}-upload-avatar img{
   position: relative;
   width: 100%;
   height: 100%;
   vertical-align: bottom;
   z-index: 1;
 }
-.@{zr-prefix}-upload-list-picture{
+.@{nv-prefix}-upload-list-picture{
   display: inline-block;
   margin-top: 0;
 }
-.@{zr-prefix}-upload-list-picture li{
+.@{nv-prefix}-upload-list-picture li{
   float:left;
   position: relative;
   width: @upload-picture-size-base;
@@ -163,14 +163,14 @@
   font-size: 0;
   overflow: hidden;
 }
-.@{zr-prefix}-upload-list-picture li:hover{
+.@{nv-prefix}-upload-list-picture li:hover{
   background: transparent;
 }
-.@{zr-prefix}-upload-list-picture li img{
+.@{nv-prefix}-upload-list-picture li img{
   width: 100%;
   height: 100%;
 }
-.@{zr-prefix}-upload-list-mask{
+.@{nv-prefix}-upload-list-mask{
   position: absolute;
   top: @padding-xs/2 - 1px;
   left: @padding-xs/2 - 1px;
@@ -182,10 +182,10 @@
   opacity: 0;
   transition: all .3s;
 }
-.@{zr-prefix}-upload-list-picture li:hover .@{zr-prefix}-upload-list-mask{
+.@{nv-prefix}-upload-list-picture li:hover .@{nv-prefix}-upload-list-mask{
   opacity: 1;
 }
-.@{zr-prefix}-upload-list-mask > [class^="zricon-"]{
+.@{nv-prefix}-upload-list-mask > [class^="nvicon-"]{
   display: inline-block;
   margin: 0 @padding-xs/2;
   font-size: @font-size-sm;
@@ -194,29 +194,29 @@
   vertical-align: middle;
   cursor: pointer;
 }
-.@{zr-prefix}-upload-list-mask > [class^="zricon-"]:hover{
+.@{nv-prefix}-upload-list-mask > [class^="nvicon-"]:hover{
   color: @heading-color-dark;
 }
-.@{zr-prefix}-upload-list-picture li .delete{
+.@{nv-prefix}-upload-list-picture li .delete{
   position: static;
   display: inline-block;
   top: inherit;
   right: inherit;
 }
-.@{zr-prefix}-upload-list-photo li{
+.@{nv-prefix}-upload-list-photo li{
   height: @upload-photo-size-base;
   padding: @padding-xs/2 - 1px;
   border-radius: @border-radius-base;
   border:@border-width-base @border-style-base @border-color-base;
   overflow: hidden;
 }
-.@{zr-prefix}-upload-list-photo li img{
+.@{nv-prefix}-upload-list-photo li img{
   float: left;
   width: @upload-photo-size-base - @padding-xs;
   height: @upload-photo-size-base - @padding-xs;
   margin-right: @padding-xs;
 }
-.@{zr-prefix}-upload-list-photo li div{
+.@{nv-prefix}-upload-list-photo li div{
   height: @upload-photo-size-base - @padding-xs;
   margin-left: @upload-photo-size-base;
   line-height: @upload-photo-size-base - @padding-xs;
@@ -224,25 +224,25 @@
   white-space: nowrap;
   overflow: hidden;
 }
-.@{zr-prefix}-upload-list-photo li:hover{
+.@{nv-prefix}-upload-list-photo li:hover{
   background: transparent;
   color: @text-color;
   border-color: @primary-5;
 }
-.@{zr-prefix}-upload-list.@{zr-prefix}-upload-list-vertical {
+.@{nv-prefix}-upload-list.@{nv-prefix}-upload-list-vertical {
   overflow: hidden;
 }
-.@{zr-prefix}-upload-list.@{zr-prefix}-upload-list-vertical li{
+.@{nv-prefix}-upload-list.@{nv-prefix}-upload-list-vertical li{
   float: left;
   width: 200px;
   margin-right: @padding-xs;
 }
-.@{zr-prefix}-upload-list-photo li .delete{
+.@{nv-prefix}-upload-list-photo li .delete{
   top: 0;
   right: 2px;
 }
 
-.@{zr-prefix}-upload-drag{
+.@{nv-prefix}-upload-drag{
   position: relative;
   display: block;
   margin-bottom: @padding-xs;
@@ -254,10 +254,10 @@
   text-align: center;
   overflow: hidden;
 }
-.@{zr-prefix}-upload-drag:hover{
+.@{nv-prefix}-upload-drag:hover{
   border-color: @primary-5;
 }
-.@{zr-prefix}-upload-drag i{
+.@{nv-prefix}-upload-drag i{
   display: inline-block;
   margin-bottom: @padding-md;
   width: @font-size-sm * 4;
@@ -265,24 +265,24 @@
   font-size: @font-size-sm * 4;
   color: @text-color-secondary;
 }
-.@{zr-prefix}-upload-drag h4{
+.@{nv-prefix}-upload-drag h4{
   font-size: @font-size-base + 2px;
   color: @text-color;
   line-height: @line-height-base;
   font-weight: 600;
 }
-.@{zr-prefix}-upload-drag p{
+.@{nv-prefix}-upload-drag p{
   font-size: @font-size-sm;
   color: @text-color-secondary;
   line-height: @line-height-base;
 }
-.@{zr-prefix}-upload-btn{
+.@{nv-prefix}-upload-btn{
   margin-top: @padding-md;
 }
-.@{zr-prefix}-upload-hide{
+.@{nv-prefix}-upload-hide{
   display: none;
 }
-.@{zr-prefix}-upload-module{}
+.@{nv-prefix}-upload-module{}
 
 
 .mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-upload) {

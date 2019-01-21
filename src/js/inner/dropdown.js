@@ -66,7 +66,7 @@ var _dropdown = {
                         $(this).on("mouseout",function(ev){
                             var _this = this;
                             $(this).removeData(_dropdown.options._obj.options.cacheName);
-                            Zr.tools.later(function(){
+                            nv.tools.later(function(){
                                if(!$(_this).data(_dropdown.options._obj.options.cacheName)){
                                    $(_this).removeData(_dropdown.options._obj.options.cacheName);
                                    $(_this).removeClass(_dropdown.options._obj.options.showMenuClassName);
@@ -77,7 +77,7 @@ var _dropdown = {
                     //阻止向上冒泡
                     $(this).find("."+_dropdown.options._obj.options.menuClassName).on("click",function(ev){
                         ev.stopPropagation();
-                        Zr.tools.later(function(){
+                        nv.tools.later(function(){
                             $(_this).removeData(_dropdown.options._obj.options.cacheName);
                             $(_this).removeClass(_dropdown.options._obj.options.showMenuClassName);
                         },300);
@@ -85,7 +85,7 @@ var _dropdown = {
 
                 })
                 //点击其他地方取消相关样式
-                zr.dom.clickQueen.push(function(){
+                nv.dom.clickQueen.push(function(){
                     $.each(array,function(i,n){
                         $(this).removeClass(_dropdown.options._obj.options.showMenuClassName);
                     })

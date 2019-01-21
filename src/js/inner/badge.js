@@ -21,7 +21,7 @@ var _badge = {
             })
             //DOM 监听测试
             $('#btn').click(function(){
-                $('.zr-badge-normal:eq(0)').html('200000000000')
+                $('.nv-badge-normal:eq(0)').html('200000000000')
             });
 
             function setCharacter(ele){

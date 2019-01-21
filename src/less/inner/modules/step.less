@@ -2,13 +2,13 @@
  * step
  */
 //基础样式图文横向排版
-.@{zr-prefix}-step {
+.@{nv-prefix}-step {
   font-size: @font-size-base;
   line-height: @line-height-base;
   display: flex;
   width: 100%;
   color: @grey-7;
-  .@{zr-prefix}-step-item {
+  .@{nv-prefix}-step-item {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -19,11 +19,11 @@
     overflow: hidden;
     margin-right: @padding-xs;
     white-space: nowrap;
-    .@{zr-prefix}-step-icon, .@{zr-prefix}-step-content {
+    .@{nv-prefix}-step-icon, .@{nv-prefix}-step-content {
       display: inline-block;
       vertical-align: top;
     }
-    .@{zr-prefix}-step-icon {
+    .@{nv-prefix}-step-icon {
       background-color: @grey-2;
       width: @btn-height-base;
       height: @btn-height-base;
@@ -39,27 +39,27 @@
         position: relative;
       }
     }
-    [class^="zricon-"] {
+    [class^="nvicon-"] {
       color: @normal-color;
     }
   }
-  .@{zr-prefix}-step-item:last-child {
+  .@{nv-prefix}-step-item:last-child {
     margin-right: 0;
     -webkit-box-flex: 0;
     -webkit-flex: none;
     -ms-flex: none;
-    .@{zr-prefix}-step-title:after {
+    .@{nv-prefix}-step-title:after {
       display: none;
     }
   }
-  .@{zr-prefix}-step-item:first-child{
-    .@{zr-prefix}-step-title:before {
+  .@{nv-prefix}-step-item:first-child{
+    .@{nv-prefix}-step-title:before {
       display: none;
     }
   }
-  .@{zr-prefix}-step-content {
+  .@{nv-prefix}-step-content {
     padding-top: 5px;
-    .@{zr-prefix}-step-title {
+    .@{nv-prefix}-step-title {
       font-weight: bold;
       color: @grey-7;
       display: inline-block;
@@ -77,14 +77,14 @@
       }
     }
   }
-  .@{zr-prefix}-step-finish {
-    .@{zr-prefix}-step-title:after {
+  .@{nv-prefix}-step-finish {
+    .@{nv-prefix}-step-title:after {
       background: @primary-color;
     }
   }
   //背景色变主题色表示已经完成
-  .@{zr-prefix}-step-finish{
-    .@{zr-prefix}-step-icon {
+  .@{nv-prefix}-step-finish{
+    .@{nv-prefix}-step-icon {
       border: 1px solid @primary-color;
       span {
         color: @primary-color;
@@ -92,16 +92,16 @@
     }
   }
   //正在进行项，字色加黑
-  .@{zr-prefix}-step-progress {
-    .@{zr-prefix}-step-icon {
+  .@{nv-prefix}-step-progress {
+    .@{nv-prefix}-step-icon {
       background-color: @primary-color;
       border: 1px solid @primary-color;
       span {
         color:@grey-1;
       }
     }
-    .@{zr-prefix}-step-title,
-    .@{zr-prefix}-step-description {
+    .@{nv-prefix}-step-title,
+    .@{nv-prefix}-step-description {
       color: @grey-8;
     }
   }
@@ -109,25 +109,25 @@
 }
 
 //基础样式纵向排版样式
-.@{zr-prefix}-step-vertical {
-  .@{zr-prefix}-step-item {
+.@{nv-prefix}-step-vertical {
+  .@{nv-prefix}-step-item {
     margin-right: 0;
-    .@{zr-prefix}-step-icon, .@{zr-prefix}-step-content {
+    .@{nv-prefix}-step-icon, .@{nv-prefix}-step-content {
       display: block;
       vertical-align: top;
     }
   }
-  .@{zr-prefix}-step-item:first-child{
-    .@{zr-prefix}-step-icon:before{
+  .@{nv-prefix}-step-item:first-child{
+    .@{nv-prefix}-step-icon:before{
       display: none;
     }
   }
-  .@{zr-prefix}-step-item:last-child{
-    .@{zr-prefix}-step-icon:after{
+  .@{nv-prefix}-step-item:last-child{
+    .@{nv-prefix}-step-icon:after{
       display: none;
     }
   }
-  .@{zr-prefix}-step-icon {
+  .@{nv-prefix}-step-icon {
     margin-left: 50px;
     &:after {
       content: '';
@@ -150,23 +150,23 @@
       left: -28px;
     }
   }
-  .@{zr-prefix}-step-content {
+  .@{nv-prefix}-step-content {
     text-align: center;
     margin-top: 0px;
     width: 140px;
-    .@{zr-prefix}-step-title:after {
+    .@{nv-prefix}-step-title:after {
       display: none;
     }
   }
-  .@{zr-prefix}-step-finish {
-    .@{zr-prefix}-step-icon {
+  .@{nv-prefix}-step-finish {
+    .@{nv-prefix}-step-icon {
       &:after {
         background: @primary-color;
       }
     }
   }
-  .@{zr-prefix}-step-progress {
-    .@{zr-prefix}-step-icon {
+  .@{nv-prefix}-step-progress {
+    .@{nv-prefix}-step-icon {
       &:after {
         background: @grey-4;
       }
@@ -180,19 +180,19 @@
 }
 
 //基础样式MINI
-.@{zr-prefix}-step-small {
+.@{nv-prefix}-step-small {
   font-size: @font-size-sm;
   line-height: @btn-height-sm;
-  .@{zr-prefix}-step-item {
-    .@{zr-prefix}-step-icon {
+  .@{nv-prefix}-step-item {
+    .@{nv-prefix}-step-icon {
       width: @btn-height-sm;
       height: @btn-height-sm;
       line-height: @btn-height-sm;
     }
   }
-  .@{zr-prefix}-step-content {
+  .@{nv-prefix}-step-content {
     padding-top: 0;
-    .@{zr-prefix}-step-title {
+    .@{nv-prefix}-step-title {
       line-height: @btn-height-sm;
       &:after {
         position: absolute;
@@ -204,9 +204,9 @@
 }
 
 //带图标
-.@{zr-prefix}-step-icons {
-  .@{zr-prefix}-step-item {
-    .@{zr-prefix}-step-icon {
+.@{nv-prefix}-step-icons {
+  .@{nv-prefix}-step-item {
+    .@{nv-prefix}-step-icon {
       background-color: @heading-color-dark;
       margin-right: 0;
       border: 1px solid @heading-color-dark;
@@ -217,9 +217,9 @@
       }
     }
   }
-  .@{zr-prefix}-step-finish, .@{zr-prefix}-step-progress {
-    .@{zr-prefix}-step-icon {
-      [class^="zricon-"] {
+  .@{nv-prefix}-step-finish, .@{nv-prefix}-step-progress {
+    .@{nv-prefix}-step-icon {
+      [class^="nvicon-"] {
         color: @primary-color;
       }
     }
@@ -227,34 +227,34 @@
 }
 
 //运行错误
-.@{zr-prefix}-step-error {
+.@{nv-prefix}-step-error {
   font-size: @font-size-base;
   line-height: @line-height-base;
   display: flex;
   width: 100%;
   color: @grey-7;
-  .@{zr-prefix}-step-finish, .@{zr-prefix}-step-progress {
-    .@{zr-prefix}-step-icon {
+  .@{nv-prefix}-step-finish, .@{nv-prefix}-step-progress {
+    .@{nv-prefix}-step-icon {
       background-color: @heading-color-dark;
       border: 1px solid @heading-color-dark;
-      [class^="zricon-"]  {
+      [class^="nvicon-"]  {
         display: inline-block;
         font-size: @font-size-base*2+4;
         margin-top: -@padding-xs/4;
       }
     }
   }
-  .@{zr-prefix}-step-finish {
-    [class^="zricon-"]  {
+  .@{nv-prefix}-step-finish {
+    [class^="nvicon-"]  {
       color: @success-color;
     }
   }
-  .@{zr-prefix}-step-progress {
-    [class^="zricon-"]  {
+  .@{nv-prefix}-step-progress {
+    [class^="nvicon-"]  {
       color: @error-color;
     }
-    .@{zr-prefix}-step-title,
-    .@{zr-prefix}-step-description {
+    .@{nv-prefix}-step-title,
+    .@{nv-prefix}-step-description {
       color: @error-color;
     }
   }

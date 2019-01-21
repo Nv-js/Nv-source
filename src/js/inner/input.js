@@ -2,7 +2,6 @@ var _input = {
         uid:30100000,
         version:"1.0.0",
         init:function(domObject){
-			console.log(domObject)
             this.options._obj = domObject;
             this.events.bindEvent(domObject);
 	        // this.events.showIconEvent(domObject);
@@ -28,16 +27,16 @@ var _input = {
             */
             bindEvent:function (opt) {
 	            var $ret1 = "";
-	            if (opt.selector == ".zr-textarea"){
+	            if (opt.selector == ".nv-textarea"){
 		            $.each(opt.array,function(i,n){
 		            	//缓存_obj'
 			            $(n).data(_input.options.cacheName,_input.options._obj);
 			            //
 			            if ($(n).length > 0){
-				            $(n).wrap("<div class='zr-input-group'></div>");
+				            $(n).wrap("<div class='nv-input-group'></div>");
 				           var  maxLength = $(n).attr("maxLength"),
 					           txtLength = $.trim($(n).val()).length || 0,
-				                txtNum = "<div class='zr-input-num'><span>"+ txtLength +"</span><span>/</span><span>" + maxLength + "</span></div>";
+				                txtNum = "<div class='nv-input-num'><span>"+ txtLength +"</span><span>/</span><span>" + maxLength + "</span></div>";
 				           if (maxLength){
 					           $(n).after(txtNum);
 					           $(n).off("keyup").on("keyup",_input.eventFn.inputNumFn);
@@ -50,10 +49,10 @@ var _input = {
 				            //缓存_obj'
 				            $(n).data(_input.options.cacheName,_input.options._obj);
 				            //
-				            $(n).wrap("<div class='zr-input-group'></div>");
-				            var iconHtml = '<i class="zricon-close-circle"></i>';
+				            $(n).wrap("<div class='nv-input-group'></div>");
+				            var iconHtml = '<i class="nvicon-close-circle"></i>';
 				            $(n).after(iconHtml);
-				            $ret1 = $(n).closest(opt.options.groupSelector).find(".zricon-close-circle");
+				            $ret1 = $(n).closest(opt.options.groupSelector).find(".nvicon-close-circle");
 				            $ret1.data(_input.options.cacheName,_input.options._obj);
 				            $(n).off("input").on("input",_input.eventFn.showIconFn);
 				            if($ret1.length > 0){
@@ -73,9 +72,9 @@ var _input = {
             showIconFn:function () {
 	            var _obj = $(this).data(_input.options.cacheName);
                 if ($(this).val().length > 0){
-	                $(this).closest(_obj.options.groupSelector).find(".zricon-close-circle").show();
+	                $(this).closest(_obj.options.groupSelector).find(".nvicon-close-circle").show();
                 }else {
-	                $(this).closest(_obj.options.groupSelector).find(".zricon-close-circle").hide();
+	                $(this).closest(_obj.options.groupSelector).find(".nvicon-close-circle").hide();
                 }
             },
 	        inputNumFn:function () {

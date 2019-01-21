@@ -14,8 +14,8 @@ var _nav = {
         eventList: function (opt) {
             var $ret1 = "",tri="",$ret2="";
             $.each(opt.array, function (i, n) {
-                //n代表每个zr-nav的容器ul
-                $ret1 = $(n).find(opt.options.itemClassName);//zr-nav-item 代表每个li
+                //n代表每个nv-nav的容器ul
+                $ret1 = $(n).find(opt.options.itemClassName);//nv-nav-item 代表每个li
                 tri = $(n).attr("trigger");
                 $ret2 = $("#"+tri);
                 //缓存_obj'
@@ -81,16 +81,16 @@ var _nav = {
                     $(this).closest("." + _obj.options.collapsedClassName + ">" + _obj.options.itemClassName).addClass(_obj.options.selectedClassName);
                 }
                 //添加被选中属性
-                if (!$(this).attr("zr-isselected")) {
+                if (!$(this).attr("nv-isselected")) {
                    //判断是否是叶子节点
                     if($(this).find(_obj.options.itemClassName).length == 0){
-                        $(this).closest("."+_obj.options.shrinkClassName).find(_obj.options.itemClassName).attr("zr-isselected", "");
-                        $(this).attr("zr-isselected", "selected");
+                        $(this).closest("."+_obj.options.shrinkClassName).find(_obj.options.itemClassName).attr("nv-isselected", "");
+                        $(this).attr("nv-isselected", "selected");
                     }else{
                         return false;
                     }
                 } else {
-                    $(this).attr("zr-isselected", "")
+                    $(this).attr("nv-isselected", "")
                 }
             }
         },
@@ -102,7 +102,7 @@ var _nav = {
                 return false;
             } else {
                 var _this = this;
-                // Zr.tools.later(function () {
+                // nv.tools.later(function () {
                 //     _this.stop().removeClass(_obj.options.showClassName)
                 // }, 150)
                 //  $(this).stop().removeClass(_obj.options.showClassName).delay(150);
@@ -120,13 +120,13 @@ var _nav = {
             //取缓存
             var _obj = $(this).data(_nav.options.cacheName),
                 name = $(this).attr("id"),
-                $target = $(".zr-nav[trigger='"+name+"']");
+                $target = $(".nv-nav[trigger='"+name+"']");
             //
-            $(this).children('.zricon-left').toggleClass('zricon-right');
-            $target.toggleClass("zr-nav-collapsed");
+            $(this).children('.nvicon-left').toggleClass('nvicon-right');
+            $target.toggleClass("nv-nav-collapsed");
             $target.find(_obj.options.itemClassName).removeClass(_obj.options.showClassName);
-            $target.find("> " + _obj.options.itemClassName + "[zr-isselected=selected]").addClass(_obj.options.selectedClassName);
-            var items=$target.find(_obj.options.itemClassName + "[zr-isselected=selected]").parents(_obj.options.itemClassName);
+            $target.find("> " + _obj.options.itemClassName + "[nv-isselected=selected]").addClass(_obj.options.selectedClassName);
+            var items=$target.find(_obj.options.itemClassName + "[nv-isselected=selected]").parents(_obj.options.itemClassName);
             if ($target.hasClass(_obj.options.collapsedClassName)) {
                 if(items.length>0){
                     //有父级节点
@@ -141,7 +141,7 @@ var _nav = {
                 if(items.length>0){
                     items.addClass(_obj.options.showClassName);
                 }else{
-                    $target.find("> " + _obj.options.itemClassName + "[zr-isselected=selected]").addClass(_obj.options.selectedClassName);
+                    $target.find("> " + _obj.options.itemClassName + "[nv-isselected=selected]").addClass(_obj.options.selectedClassName);
                 }
             }
         }

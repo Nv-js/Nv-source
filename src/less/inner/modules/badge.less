@@ -1,8 +1,8 @@
 ﻿/*
  * badge
 */
-//若在zr-badge 中，则会被部分覆盖
-.@{zr-prefix}-badge-normal{
+//若在nv-badge 中，则会被部分覆盖
+.@{nv-prefix}-badge-normal{
   display: inline-block;
   min-width: @badge-height;
   height: @badge-height;
@@ -16,16 +16,16 @@
   box-shadow: 0 0 0 2px @grey-1;
 }
 
-.@{zr-prefix}-badge{
+.@{nv-prefix}-badge{
   height: @btn-height-base;
   position: relative;
-  .@{zr-prefix}-badge-normal{
+  .@{nv-prefix}-badge-normal{
     position: absolute;
     top: -10px;
     right: 0%;
     transform: translateX(50%);
   }
-  .@{zr-prefix}-badge-pointer{
+  .@{nv-prefix}-badge-pointer{
     position: absolute;
     top: -3px;
     right: -6px;

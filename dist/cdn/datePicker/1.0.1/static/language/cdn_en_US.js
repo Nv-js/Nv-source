@@ -1,4 +1,4 @@
-Nv.add("./datePicker/1.0.1/static/js/cdn_EN",function(){
+Nv.add("./datePicker/1.0.1/static/language/cdn_en_US",function(){
     var config = {
         tab:{
             dateText:"Date",

@@ -15,11 +15,11 @@ var _radio = {
                     //console.log($(elem).prop("class"));
                         var pubClass=$(elem).prop("class"),
                             label;
-                        if(pubClass.indexOf("zr-radio-vertical")>-1){
-                            pubClass="zr-radio-middle";
-                            label=$("<label class='"+pubClass+" zr-radio-module"+"'></label>");
+                        if(pubClass.indexOf("nv-radio-vertical")>-1){
+                            pubClass="nv-radio-middle";
+                            label=$("<label class='"+pubClass+" nv-radio-module"+"'></label>");
                         }else{
-                            label=$("<label class='zr-radio-module'></label>");
+                            label=$("<label class='nv-radio-module'></label>");
                         }
                         var str="";
                         if($(elem).get(0).disabled){
@@ -28,8 +28,8 @@ var _radio = {
                         if($(elem).get(0).checked){
                             label.addClass(_radio.options._obj.options.radioedClassName);
                         }
-                        $(elem).after(label).addClass("zr-radio-hide");
-                        str+='<div class="zr-radio-simulation"><span class="zr-radio-normal"><span></span></span><div class="zr-radio-text">';
+                        $(elem).after(label).addClass("nv-radio-hide");
+                        str+='<div class="nv-radio-simulation"><span class="nv-radio-normal"><span></span></span><div class="nv-radio-text">';
                         $(elem).attr("title")==undefined ? str+='</div></div>' : str+=$(elem).attr("title")+'</div></div>';
                         label.append(str);
                         //绑定自定义事件
@@ -61,7 +61,7 @@ var _radio = {
             }
         },
         customEventFn:function(elem){
-            $(elem)[0]["zrChange"]=function(opts){
+            $(elem)[0]["nvChange"]=function(opts){
                 opts= $.extend({
                     disabled:false,
                     checked:false
@@ -69,18 +69,18 @@ var _radio = {
                 //判断是否禁用
                 if(opts.disabled){
                     $(this).attr("disabled","disabled");
-                    $(this).next().addClass("zr-radio-disable")
+                    $(this).next().addClass("nv-radio-disable")
                 }else{
                     $(this).removeAttr("disabled");
-                    $(this).next().removeClass("zr-radio-disable")
+                    $(this).next().removeClass("nv-radio-disable")
                 }
                 //判断是否选中
                 if(opts.checked){
                     $(this).attr("checked","checked");
-                    $(this).next().addClass("zr-radio-radioed")
+                    $(this).next().addClass("nv-radio-radioed")
                 }else{
                     $(this).removeAttr("checked");
-                    $(this).next().removeClass("zr-radio-radioed")
+                    $(this).next().removeClass("nv-radio-radioed")
                 }
             }
         }

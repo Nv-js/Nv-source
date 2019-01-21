@@ -22,7 +22,8 @@ var
     slice            = ArrayProto.slice,
     // concat           = ArrayProto.concat,
     toString         = ObjProto.toString;
-var _ms = nv.global.baseConfig.moduleSelectors,
+
+var _ms = nv.baseConfig.moduleSelectors,
     _tools = nv.tools;
 /**
  * @Author: zhangjinglin

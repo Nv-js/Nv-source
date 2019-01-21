@@ -1,4 +1,4 @@
-Nv.add("./datePicker/1.0.1/static/js/zh-CN",function(){
+Nv.add("./datePicker/1.0.1/static/language/cdn_zh_CN",function(){
  var config = {
      tab:{
          dateText:"日期",

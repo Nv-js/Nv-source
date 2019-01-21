@@ -1,7 +1,7 @@
 /*
  * buttons
  */
-.@{zr-prefix}-btn{
+.@{nv-prefix}-btn{
   display: inline-block;
   height: @btn-height-base;
   padding: @btn-padding-base;
@@ -12,78 +12,78 @@
   font-weight: @btn-font-weight;
   cursor: pointer;
 }
-.@{zr-prefix}-btn [class^="zricon-"]{
+.@{nv-prefix}-btn [class^="nvicon-"]{
   margin-left: .2em;
   margin-right: .2em;
 }
-.@{zr-prefix}-btn-primary{
+.@{nv-prefix}-btn-primary{
   border-color: @btn-primary-bg;
   background: @btn-primary-bg;
   color: @btn-primary-color;
 }
-.@{zr-prefix}-btn-primary:hover{
+.@{nv-prefix}-btn-primary:hover{
   border-color: @primary-5;
   background: @primary-5;
   color: @btn-primary-color;
 }
-.@{zr-prefix}-btn-default{
+.@{nv-prefix}-btn-default{
   border-color: @btn-default-border;
   background: @btn-default-bg;
   color: @btn-default-color;
 }
-.@{zr-prefix}-btn-default:hover{
+.@{nv-prefix}-btn-default:hover{
   border-color: @primary-5;
   color: @primary-5;
 }
-.@{zr-prefix}-btn-danger{
+.@{nv-prefix}-btn-danger{
   border-color: @btn-danger-border;
   background: @btn-danger-bg;
   color: @btn-danger-color;
 }
-.@{zr-prefix}-btn-danger:hover{
+.@{nv-prefix}-btn-danger:hover{
   border-color: @red-5;
   background: @red-5;
   color: @btn-danger-color;
 }
-.@{zr-prefix}-btn-disable,
-.@{zr-prefix}-btn-disable:hover{
+.@{nv-prefix}-btn-disable,
+.@{nv-prefix}-btn-disable:hover{
   border-color: @btn-disable-border;
   background: @btn-disable-bg;
   color: @btn-disable-color;
   cursor: not-allowed;
 }
 /*
- zr-btn-size
+ nv-btn-size
 */
-.@{zr-prefix}-btn-sm{
+.@{nv-prefix}-btn-sm{
   height: @btn-height-sm;
   font-size: @btn-font-size-sm;
   padding: @btn-padding-sm;
 }
-.@{zr-prefix}-btn-lg{
+.@{nv-prefix}-btn-lg{
   height: @btn-height-lg;
   font-size: @btn-font-size-lg;
   padding: @btn-padding-lg;
 }
 /*
- zr-btn-circle
+ nv-btn-circle
  */
-.@{zr-prefix}-btn-circle{
+.@{nv-prefix}-btn-circle{
   height: @btn-circle-size;
   width: @btn-circle-size;
   border-radius: 50%;
   padding: 0;
   text-align: center;
 }
-.@{zr-prefix}-btn-circle.zr-btn-sm{
+.@{nv-prefix}-btn-circle.nv-btn-sm{
   height: @btn-circle-size-sm;
   width: @btn-circle-size-sm;
 }
-.@{zr-prefix}-btn-circle.zr-btn-lg{
+.@{nv-prefix}-btn-circle.nv-btn-lg{
   height: @btn-circle-size-lg;
   width: @btn-circle-size-lg;
 }
-.@{zr-prefix}-btn-circle [class^="zricon-"]{
+.@{nv-prefix}-btn-circle [class^="nvicon-"]{
   display: inline-block;
   font-size: @font-size-base;
   width: @font-size-base;
@@ -93,36 +93,36 @@
   line-height: @font-size-base - 2px;
 }
 /*
- * zr-btn-group
+ * nv-btn-group
  */
-.@{zr-prefix}-btn-group{
+.@{nv-prefix}-btn-group{
   position: relative;
   display: inline-block;
   font-size: 0;
   white-space: nowrap;
   vertical-align: middle;
 }
-.@{zr-prefix}-btn-group>.@{zr-prefix}-btn:first-child:not(:last-child){
+.@{nv-prefix}-btn-group>.@{nv-prefix}-btn:first-child:not(:last-child){
   border-radius: @btn-border-radius-base 0 0 @btn-border-radius-base;
 }
-.@{zr-prefix}-btn-group>.@{zr-prefix}-btn:last-child:not(:first-child){
+.@{nv-prefix}-btn-group>.@{nv-prefix}-btn:last-child:not(:first-child){
   border-radius:  0 @btn-border-radius-base @btn-border-radius-base 0;
   border-right: 0;
 }
-.@{zr-prefix}-btn-group>.zr-btn{
+.@{nv-prefix}-btn-group>.nv-btn{
   border-radius: 0;
   border-right: @border-width-base @border-style-base @btn-group-spaceline;
 }
 /*
- * a.zr-btn
+ * a.nv-btn
  */
-a.@{zr-prefix}-btn{
+a.@{nv-prefix}-btn{
   line-height: @btn-height-base - 2px;
 }
-a.@{zr-prefix}-btn-lg{
+a.@{nv-prefix}-btn-lg{
   line-height: @btn-height-lg - 2px;
 }
-a.@{zr-prefix}-btn-sm{
+a.@{nv-prefix}-btn-sm{
   line-height: @btn-height-sm - 2px;
 }
 

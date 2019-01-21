@@ -7,12 +7,12 @@
      */
     var config = {
         "jquery":{
-            "path":"./jquery/cdn_index",
-            "dependencies":{}
+            "path":"./jqplugins/jquery/@version/cdn_index",
+            "version":'1.12.3'
         },
         "jquery3":{
-            "path":"./jquery.3/cdn_index",
-            "dependencies":{}
+            "path":"./jqplugins/jquery/@version/cdn_index",
+            "version":'3.2.1'
         },
         "zepto":{
             "path":"./zepto/cdn_index",
@@ -82,7 +82,8 @@
             "path":"./mock/cdn_index"
         },
         "datePicker":{
-            "path":"./datePicker/cdn_index"
+            "path":"./datePicker/@version/cdn_index",
+            "version":"1.0.1"
         },
         "notification":{
             "path":"./notification/cdn_index"
@@ -275,15 +276,14 @@
      * @Date: Created in 2018/1/30 下午9:46
      * @Description:nv的继承方法
      */
-    Nv._config({
-        module:config,
+    Nv.config({
+        modules:config,
         moduleSelectors:moduleSelectors,
-        language:"zh-CN"
+        language:"zh_CN"
     })
 })()
 
-
-Nv.add("./nv/cdn_index",function(nv,$){
+Nv.add("./init/1.0.1/cdn_index",function(nv,$){
     //
     nv.global.init = nv.init = _init;
     nv.dom = {
@@ -307,5 +307,7 @@ Nv.add("./nv/cdn_index",function(nv,$){
         resizeQueen:[]
     }
     //
+
+
 
 

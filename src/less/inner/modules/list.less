@@ -1,20 +1,20 @@
 ﻿/*
  * list 列表
  */
-.@{zr-prefix}-list{
+.@{nv-prefix}-list{
   font-size: @font-size-base;
   line-height: @line-height-base;
   color: @text-color;
   box-sizing: border-box;
 
 }
-.@{zr-prefix}-list-header,
-.@{zr-prefix}-list-footer,
-.@{zr-prefix}-list-item{
+.@{nv-prefix}-list-header,
+.@{nv-prefix}-list-footer,
+.@{nv-prefix}-list-item{
   padding: @padding-sm @padding-sm * 2;
   border-bottom: @border-width-base @border-style-base @border-color-split;
 }
-.@{zr-prefix}-list-item{
+.@{nv-prefix}-list-item{
   -webkit-box-align: center;
   -webkit-align-items: center;
   /*-ms-flex-align: center;*/
@@ -24,35 +24,35 @@
   display: -ms-flexbox;
   display: flex;
 }
-.@{zr-prefix}-list-border{
+.@{nv-prefix}-list-border{
   border-radius: @border-radius-base ;
   border:@border-width-base @border-style-base @border-color-split;
 }
-.@{zr-prefix}-list-sm .@{zr-prefix}-list-header,
-.@{zr-prefix}-list-sm .@{zr-prefix}-list-footer,
-.@{zr-prefix}-list-sm .@{zr-prefix}-list-item{
+.@{nv-prefix}-list-sm .@{nv-prefix}-list-header,
+.@{nv-prefix}-list-sm .@{nv-prefix}-list-footer,
+.@{nv-prefix}-list-sm .@{nv-prefix}-list-item{
   padding: @padding-xs @padding-sm * 2;
   border-bottom: @border-width-base @border-style-base @border-color-split;
 }
-.@{zr-prefix}-list-lg .@{zr-prefix}-list-header,
-.@{zr-prefix}-list-lg .@{zr-prefix}-list-footer,
-.@{zr-prefix}-list-lg .@{zr-prefix}-list-item{
+.@{nv-prefix}-list-lg .@{nv-prefix}-list-header,
+.@{nv-prefix}-list-lg .@{nv-prefix}-list-footer,
+.@{nv-prefix}-list-lg .@{nv-prefix}-list-item{
   padding: @padding-md @padding-sm * 2;
   border-bottom: @border-width-base @border-style-base @border-color-split;
 }
-.@{zr-prefix}-list-footer,
-.@{zr-prefix}-list-sm .@{zr-prefix}-list-footer,
-.@{zr-prefix}-list-lg .@{zr-prefix}-list-footer{
+.@{nv-prefix}-list-footer,
+.@{nv-prefix}-list-sm .@{nv-prefix}-list-footer,
+.@{nv-prefix}-list-lg .@{nv-prefix}-list-footer{
   border-bottom: 0;
 
 }
 /*
  * list-base
  */
-.@{zr-prefix}-list-base .@{zr-prefix}-list-item{
+.@{nv-prefix}-list-base .@{nv-prefix}-list-item{
   padding: @padding-md 0;
 }
-.@{zr-prefix}-list-base .@{zr-prefix}-list-item-meta{
+.@{nv-prefix}-list-base .@{nv-prefix}-list-item-meta{
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
@@ -67,33 +67,33 @@
   flex: 1;
   font-size: 0;
 }
-.@{zr-prefix}-list-base .@{zr-prefix}-list-item .@{zr-prefix}-list-avatar{
+.@{nv-prefix}-list-base .@{nv-prefix}-list-item .@{nv-prefix}-list-avatar{
   display: inline-block;
   width: @list-list-avatar-size;
   height: @list-list-avatar-size;
   margin-right: @padding-md;
 }
-.@{zr-prefix}-list-base .@{zr-prefix}-list-item .@{zr-prefix}-list-avatar img{
+.@{nv-prefix}-list-base .@{nv-prefix}-list-item .@{nv-prefix}-list-avatar img{
   width: @list-list-avatar-size;
   height: @list-list-avatar-size;
   border-radius: 50%;
 }
-.@{zr-prefix}-list-base .@{zr-prefix}-list-item .@{zr-prefix}-list-item-meta-content{
+.@{nv-prefix}-list-base .@{nv-prefix}-list-item .@{nv-prefix}-list-item-meta-content{
   -webkit-box-flex: 1;
   -webkit-flex: 1 0;
   -ms-flex: 1 0;
   flex: 1 0;
 }
-.@{zr-prefix}-list-item .@{zr-prefix}-list-item-title{
+.@{nv-prefix}-list-item .@{nv-prefix}-list-item-title{
   color: @heading-color;
   font-size: @font-size-base;
   font-weight: @font-weight;
 }
-.@{zr-prefix}-list-item .@{zr-prefix}-list-item-txt{
+.@{nv-prefix}-list-item .@{nv-prefix}-list-item-txt{
   color: @text-color;
   font-size: @font-size-base;
 }
-.@{zr-prefix}-list-item-action {
+.@{nv-prefix}-list-item-action {
   font-size: 0;
   -webkit-box-flex: 0;
   -webkit-flex: 0 auto;
@@ -104,28 +104,28 @@
   padding: 0;
   list-style: none;
 }
-.@{zr-prefix}-list-item-action li{
+.@{nv-prefix}-list-item-action li{
   display: inline-block;
   padding-right: @padding-md;
   font-size: @font-size-base;
 }
-.@{zr-prefix}-list-item-action li:last-child{
+.@{nv-prefix}-list-item-action li:last-child{
   padding-right: 0;
 }
-.@{zr-prefix}-list-loading + .@{zr-prefix}-list-btn{
+.@{nv-prefix}-list-loading + .@{nv-prefix}-list-btn{
   margin-top: @padding-md;
   text-align: center;
 }
 /*
  * list-vertical
  */
-.@{zr-prefix}-list-columns .@{zr-prefix}-list-item{
+.@{nv-prefix}-list-columns .@{nv-prefix}-list-item{
   padding: @padding-sm 0;
 }
-.@{zr-prefix}-list-columns .@{zr-prefix}-list-item:last-child{
+.@{nv-prefix}-list-columns .@{nv-prefix}-list-item:last-child{
   border-bottom: 0;
 }
-.@{zr-prefix}-list-columns .@{zr-prefix}-list-item > [class^="@{zr-prefix}-col-"]{
+.@{nv-prefix}-list-columns .@{nv-prefix}-list-item > [class^="@{nv-prefix}-col-"]{
   padding: 0 @padding-sm*2;
 }
 
