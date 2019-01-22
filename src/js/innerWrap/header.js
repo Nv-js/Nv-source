@@ -15,96 +15,108 @@
             "version":'3.2.1'
         },
         "zepto":{
-            "path":"./zepto/cdn_index",
-            "dependencies":{}
-        },
-        "mobiscroll":{
-            "path":"./mobiscroll/cdn_index"
+            "path":"./jqplugins/zepto/@version/cdn_index",
+            "version":"1.0.1"
         },
         "perfectscrollbar":{
-            "path":"./perfectscrollbar/cdn_index"
+            "path":"./perfectscrollbar/@version/cdn_index",
+            "version":"1.0.1"
         },
         "swiper":{
-            "path":"./swiper/cdn_index"
-        },
-        "gmap":{
-            "path":"./gmap/cdn_index"
+            "path":"./swiper/@version/cdn_index",
+            "version":"1.0.1"
         },
         "echarts":{
-            "path":"./echarts/cdn_index"
+            "path":"./echarts/@version/cdn_index",
+            "version":"4.0.1"
         },
         "echartsSimple":{
-            "path":"./echarts/cdn_echarts-simple"
+            "path":"./echarts/@version/cdn_echarts-simple",
+            "version":"4.0.1"
         },
         "echartsNormal":{
-            "path":"./echarts/cdn_echarts-normal"
-        },
-        "toast":{
-            "path":"./toast/cdn_index"
+            "path":"./echarts/@version/cdn_echarts-normal",
+            "version":"4.0.1"
         },
         "animate":{
-            "path":"./animate/cdn_index"
+            "path":"./animate/@version/cdn_index",
+            "version":"1.0.1"
         },
         "compress":{
-            "path":"./compress/cdn_index"
+            "path":"./compress/@1.0.1/cdn_index",
+            "version":"1.0.1"
         },
         "dragFloat":{
-            "path":"./dragFloat/cdn_index"
+            "path":"./dragFloat/@version/cdn_index",
+            "version":"1.0.1"
         },
         "message":{
-            "path":"./message/cdn_index"
+            "path":"./message/@version/cdn_index",
+            "version":"1.0.1"
         },
         "tab":{
-            "path":"./tabs/cdn_index"
+            "path":"./tabs/@version/cdn_index",
+            "version":"1.0.1"
         },
         "tmpl":{
-            "path":"./tmpl/cdn_index"
-        },
-        "lazyload":{
-            "path":"./nvModules/cdn_lazyload"
+            "path":"./tmpl/@version/cdn_index",
+            "version":"1.0.1"
         },
         "datatables":{
-            "path":"./datatables/cdn_index"
+            "path":"./datatables/@version/cdn_index",
+            "version":"1.0.1"
         },
         "page":{
-            "path":"./nvModules/cdn_page"
+            "path":"./page/@version/cdn_page",
+            "version":"1.0.1"
         },
         "modal":{
-            "path":"./modal/cdn_index"
+            "path":"./modal/@version/cdn_index",
+            "version":"1.0.1"
         },
         "jstree":{
-            "path":"./jstree/cdn_index"
+            "path":"./jstree/@version/cdn_index",
+            "version":"3.3.5"
         },
         "ztree":{
-            "path":"./ztree/cdn_index"
+            "path":"./ztree/@version/cdn_index",
+            "version":"1.0.1"
         },
         "mock":{
-            "path":"./mock/cdn_index"
+            "path":"./mock/@version/cdn_index",
+            "version":"1.0.1"
         },
         "datePicker":{
             "path":"./datePicker/@version/cdn_index",
             "version":"1.0.1"
         },
         "notification":{
-            "path":"./notification/cdn_index"
+            "path":"./notification/@version/cdn_index",
+            "version":"1.0.1"
         },
         "affix":{
-            "path":"./affix/cdn_index"
+            "path":"./affix/@version/cdn_index",
+            "version":"1.0.1"
         },
         "popover":{
-            "path":"./popover/cdn_index"
+            "path":"./popover/@version/cdn_index",
+            "version":"1.0.1"
         },
         "tag":{
-            "path":"./tag/cdn_index"
+            "path":"./tag/@version/cdn_index",
+            "version":"1.0.1"
         },
         "ajaxForm":{
-            "path":"./jqplugins/jqueryForm/cdn_index"
+            "path":"./jqplugins/jqueryForm/@version/cdn_index",
+            "version":"1.0.1"
         },
         "progress":{
-            "path":"./progress/cdn_index"
+            "path":"./progress/@version/cdn_index",
+            "version":"1.0.1"
         },
         "fixedColumns":{
-            "path":"./datatables/cdn_fixedColumns"
+            "path":"./datatables/@version/cdn_fixedColumns",
+            "version":"1.0.1"
         }
     }
     /**

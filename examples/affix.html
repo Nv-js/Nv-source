@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Affix</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1"/>
-    <link type="text/css" rel="stylesheet" href="/js/plugin_modules/zr/css/zr.min.css?1"/>
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style type="text/css">
         .c-demo button {
             margin: 0 80% 0 0;
@@ -34,19 +35,19 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="zr-affix" style="height:85px;">
-                <button type="button" id="demo-top" class="zr-btn zr-btn-primary">Affix top</button>
-                <button type="button" id="demo-bottom" class="zr-btn zr-btn-primary">Affix bottom</button>
+            <div class="nv-affix" style="height:85px;">
+                <button type="button" id="demo-top" class="nv-btn nv-btn-primary">Affix top</button>
+                <button type="button" id="demo-bottom" class="nv-btn nv-btn-primary">Affix bottom</button>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
     <!--HTML-->
-    <div class="zr-affix">
-        <button type="button" id="demo-top" class="zr-btn zr-btn-primary">Affix top</button>
-        <button type="button" id="demo-tottom" class="zr-btn zr-btn-primary">Affix bottom</button>
+    <div class="nv-affix">
+        <button type="button" id="demo-top" class="nv-btn nv-btn-primary">Affix top</button>
+        <button type="button" id="demo-tottom" class="nv-btn nv-btn-primary">Affix bottom</button>
     </div>
     <!--Javascript-->
-    Zr.use("affix",function(zr,affix){
+    Nv.use("affix",function(nv,affix){
         affix.init({
             target:"#demo-top"
         })
@@ -56,7 +57,7 @@
         })
     });
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -67,17 +68,17 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="zr-affix" style="height:85px;">
-                <button type="button" id="demo-sop"  class="zr-btn zr-btn-primary">Affix top</button>
-                <button type="button" id="demo-sottom" class="zr-btn zr-btn-primary">Affix bottom</button>
+            <div class="nv-affix" style="height:85px;">
+                <button type="button" id="demo-sop"  class="nv-btn nv-btn-primary">Affix top</button>
+                <button type="button" id="demo-sottom" class="nv-btn nv-btn-primary">Affix bottom</button>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
     <!--HTML-->
-    <button type="button" id="demo-sop" class="zr-btn zr-btn-primary">Affix top</button>
-    <button type="button" id="demo-sottom" class="zr-btn zr-btn-primary">Affix bottom</button>
+    <button type="button" id="demo-sop" class="nv-btn nv-btn-primary">Affix top</button>
+    <button type="button" id="demo-sottom" class="nv-btn nv-btn-primary">Affix bottom</button>
     <!--Javascript-->
-            Zr.use("affix",function(zr,affix){
+            Nv.use("affix",function(nv,affix){
                 affix.init({
                     target:"#demo-sop",
                     offsetTop:40
@@ -90,19 +91,13 @@
             });
 
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-20" style="height:2000px;"></div>
 </article>
-<script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js?1"></script>
 <script type="text/javascript">
-    Zr.config({
-        baseUrl:"/js/plugin_modules/",
-        requestTime:true
-    });
-    Zr.ready(function(){
-        Zr.use("./js/quickMenu","./js/code");
-        Zr.use("./affix/index",function(zr,affix){
+    Nv.ready(function(){
+        Nv.use("affix",function(nv,affix){
             affix.init({
                 target:"#demo-top"
             })

@@ -15,7 +15,7 @@ const prefix = 'nv'
 //可执行方法，编译内容模版的样式文件
 G.task('contentLess',function(){
     let target = 'dist/local/css/content',
-        input = 'src/less/inner/custom/content.less'
+        input = 'src/less/inner/**/*.less'
     G.src(input)
      .pipe(less())
      .pipe(autoprefixer({
@@ -36,7 +36,7 @@ G.task('contentLess',function(){
 
 //可执行方法，编译组件库的样式文件
 G.task('coreLess',function(){
-    let input = ['src/less/inner/core/index.less','src/less/inner/font/css/fontello.css','src/less/inner/font/css/animation.css'],
+    let input = ['src/less/inner/**/*.less','src/less/inner/font/css/fontello.css','src/less/inner/font/css/animation.css'],
         target = 'dist/cdn'
     G.src(input)
      .pipe(less())
