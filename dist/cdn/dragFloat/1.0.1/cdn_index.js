@@ -31,4 +31,4 @@ function eventPs(obj){var ot={};var ps=$(obj).offset();ot.left=parseFloat(ps.lef
 function eventLT(obj){var ot={};var ps=$(obj);ot.left=parseFloat(ps.css("left"));ot.top=parseFloat(ps.css("top"));return ot;}
 function parentPs(obj){var ot=new Object();var ps=$(obj).parent().offset();ot.left=parseFloat(ps.left);ot.top=parseFloat(ps.top);return ot;}
 function limitMove(obj){var ot=new Object();var width=$(options.dragBox).width();var height=$(options.dragBox).height();var w=$(obj).eq(0).width();var h=$(obj).eq(0).height();ot.left1=0;ot.top1=0;ot.left2=width-w;ot.top2=0;ot.left3=0;ot.top3=height-h;ot.left4=width-w;ot.top4=height-h;return ot;}
-bind(_this);return{id:_this,destory:function destory(){unbind.call(this.id);},resize:resize};};return{};},{requires:["jquery",'./css/cdn_index.css']});
+bind(_this);return{id:_this,destory:function destory(){unbind.call(this.id);},resize:resize};};return{};},{requires:["jquery",'./css/cdn_index.css'],alias:'dragFloat'});

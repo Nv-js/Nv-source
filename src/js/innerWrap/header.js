@@ -108,7 +108,7 @@
         },
         "ajaxForm":{
             "path":"./jqplugins/jqueryForm/@version/cdn_index",
-            "version":"1.0.1"
+            "version":"3.50.0"
         },
         "progress":{
             "path":"./progress/@version/cdn_index",

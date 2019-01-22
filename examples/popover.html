@@ -4,35 +4,36 @@
     <meta charset="UTF-8">
     <title>popover</title>
     <!--开发阶段引用jq-->
-    <!--<script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>-->
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style type="text/css">
-          .zr-popover{
+          .nv-popover{
               margin-right: 8px;
           }
-          .zr-popover-derection-left .zr-popover,.c-demo .zr-popover-derection-right .zr-popover{
+          .nv-popover-derection-left .nv-popover,.c-demo .nv-popover-derection-right .nv-popover{
               margin-bottom: 8px;
           }
-          .c-demo .zr-popover-derection-top {
+          .c-demo .nv-popover-derection-top {
               margin-left: 226px;
               white-space: nowrap;
               margin-top: 8px;
           }
-          .c-demo .zr-popover-derection-left {
+          .c-demo .nv-popover-derection-left {
               width: 70px;
               float: left;
               margin-left: 137px;
           }
-          .c-demo .zr-popover-derection-right {
+          .c-demo .nv-popover-derection-right {
               width: 70px;
               margin-left: 462px;
           }
-          .c-demo .zr-popover-derection-bottom {
+          .c-demo .nv-popover-derection-bottom {
               margin-left: 226px;
               clear: both;
               white-space: nowrap;
           }
-          .zr-popover-hide{
+          .nv-popover-hide{
               display: none;
           }
       </style>
@@ -46,28 +47,28 @@
     <div class="c-line"></div>
     <section class="c-sub-title">
         <p>基本样式 <a href="#">#</a></p>
-        <span>触发按钮添加zr-popover-btn类，默认是hover触发。<br/><strong>为了更好的用户体验，建议添加zr-popover类的标签用span标签，并为zr-popover-content的标签添加style="display: none"的样式</strong></span>
+        <span>触发按钮添加nv-popover-btn类，默认是hover触发。<br/><strong>为了更好的用户体验，建议添加nv-popover类的标签用span标签，并为nv-popover-content的标签添加style="display: none"的样式</strong></span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <span class="zr-popover" id="zr-popover-clcik">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">Click</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-clcik">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">Click</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-hover">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">Hover</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-hover">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">Hover</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover hover <br/>
                         I am popover hover <br/>
                         I am popover hover
@@ -76,22 +77,22 @@
             </span>
         </div>
         <div class="c-code-inner c-code-hide">
-            <span class="zr-popover" id="zr-popover-clcik">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">Click</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-clcik">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">Click</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-hover">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">Hover</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-hover">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">Hover</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover hover <br/>
                         I am popover hover <br/>
                         I am popover hover
@@ -99,21 +100,21 @@
                 </div>
             </span>
             <!-- <script type="text/javascript">
-                Zr.config({
+                Nv.config({
                     baseUrl: "/js/plugin_modules/",
                     requestTime:true
                 })
-                Zr.ready(function(){
-                    Zr.use("./js/quickMenu","./js/code")
-                    Zr.use("./popover/index",function(zr,popover){
+                Nv.ready(function(){
+                    Nv.use("./js/quickMenu","./js/code")
+                    Nv.use("./popover/index",function(nv,popover){
                         popover.init({
-                            target: '#zr-popover-clcik',
+                            target: '#nv-popover-clcik',
                             position: 'top',
                             width: '230px',
                             event: 'click'
                         });
                         popover.init({
-                           target: '#zr-popover-hover',
+                           target: '#nv-popover-hover',
                            position: 'right'
                         });
                     });
@@ -121,7 +122,7 @@
             
             </script> -->
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -132,70 +133,35 @@
          <!--switch code show or hide-->
          <div class="c-code-switch">&lt;code&gt;</div>
          <div class="c-demo">
-            <div class="zr-popover-derection">
-                <div class="zr-popover-derection-top">
-                    <span class="zr-popover" id="zr-popover-tl">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上左</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
+            <div class="nv-popover-derection">
+                <div class="nv-popover-derection-top">
+                    <span class="nv-popover" id="nv-popover-tl">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">上左</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
                                 I am popover content <br/>
                                 I am popover content <br/>
                                 I am popover content
                             </div>
                         </div>
                     </span>
-                    <span class="zr-popover" id="zr-popover-top">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上边</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
+                    <span class="nv-popover" id="nv-popover-top">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">上边</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
                                 I am popover content <br/>
                                 I am popover content <br/>
                                 I am popover content
                             </div>
                         </div>
                     </span>
-                    <span class="zr-popover" id="zr-popover-tr">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上右</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
-                                I am popover content <br/>
-                                I am popover content <br/>
-                                I am popover content
-                            </div>
-                        </div>
-                    </span>
-                </div>
-                <div class="zr-popover-derection-left">
-                    <span class="zr-popover" id="zr-popover-lt">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左上</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
-                                I am popover content <br/>
-                                I am popover content <br/>
-                                I am popover content
-                            </div>
-                        </div>
-                    </span>
-                    <span class="zr-popover" id="zr-popover-left">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左边</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
-                                I am popover content <br/>
-                                I am popover content <br/>
-                                I am popover content
-                            </div>
-                        </div>
-                    </span>
-                    <span class="zr-popover" id="zr-popover-lb">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左下</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
+                    <span class="nv-popover" id="nv-popover-tr">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">上右</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
                                 I am popover content <br/>
                                 I am popover content <br/>
                                 I am popover content
@@ -203,34 +169,34 @@
                         </div>
                     </span>
                 </div>
-                <div class="zr-popover-derection-right">
-                    <span class="zr-popover" id="zr-popover-rt">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右上</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
+                <div class="nv-popover-derection-left">
+                    <span class="nv-popover" id="nv-popover-lt">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">左上</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
                                 I am popover content <br/>
                                 I am popover content <br/>
                                 I am popover content
                             </div>
                         </div>
                     </span>
-                    <span class="zr-popover" id="zr-popover-right">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右边</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
+                    <span class="nv-popover" id="nv-popover-left">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">左边</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
                                 I am popover content <br/>
                                 I am popover content <br/>
                                 I am popover content
                             </div>
                         </div>
                     </span>
-                    <span class="zr-popover" id="zr-popover-rb">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右下</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
+                    <span class="nv-popover" id="nv-popover-lb">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">左下</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
                                 I am popover content <br/>
                                 I am popover content <br/>
                                 I am popover content
@@ -238,34 +204,69 @@
                         </div>
                     </span>
                 </div>
-                <div class="zr-popover-derection-bottom">
-                    <span class="zr-popover" id="zr-popover-bl">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
+                <div class="nv-popover-derection-right">
+                    <span class="nv-popover" id="nv-popover-rt">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">右上</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
                                 I am popover content <br/>
                                 I am popover content <br/>
                                 I am popover content
                             </div>
                         </div>
                     </span>
-                    <span class="zr-popover" id="zr-popover-bottom">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下边</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
+                    <span class="nv-popover" id="nv-popover-right">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">右边</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
                                 I am popover content <br/>
                                 I am popover content <br/>
                                 I am popover content
                             </div>
                         </div>
                     </span>
-                    <span class="zr-popover" id="zr-popover-br">
-                        <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下右</button>
-                        <div class="zr-popover-content" style="display: none">
-                            <div class="zr-popover-arrow"></div>
-                            <div class="zr-popover-inner">
+                    <span class="nv-popover" id="nv-popover-rb">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">右下</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="nv-popover-derection-bottom">
+                    <span class="nv-popover" id="nv-popover-bl">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下左</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                    <span class="nv-popover" id="nv-popover-bottom">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下边</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
+                                I am popover content <br/>
+                                I am popover content <br/>
+                                I am popover content
+                            </div>
+                        </div>
+                    </span>
+                    <span class="nv-popover" id="nv-popover-br">
+                        <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下右</button>
+                        <div class="nv-popover-content" style="display: none">
+                            <div class="nv-popover-arrow"></div>
+                            <div class="nv-popover-inner">
                                 I am popover content <br/>
                                 I am popover content <br/>
                                 I am popover content
@@ -276,132 +277,132 @@
             </div>
          </div>
          <div class="c-code-inner c-code-hide">
-            <span class="zr-popover" id="zr-popover-tl">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上左</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-tl">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">上左</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-top">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上边</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-top">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">上边</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-tr">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">上右</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-tr">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">上右</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-lt">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左上</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-lt">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">左上</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-left">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左边</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-left">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">左边</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-lb">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">左下</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-lb">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">左下</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-rt">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右上</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-rt">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">右上</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-right">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右边</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-right">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">右边</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-rb">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">右下</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-rb">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">右下</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-bl">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-bl">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下左</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-bottom">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下边</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-bottom">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下边</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
                     </div>
                 </div>
             </span>
-            <span class="zr-popover" id="zr-popover-br">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下右</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-br">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下右</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am popover content <br/>
                         I am popover content <br/>
                         I am popover content
@@ -410,56 +411,56 @@
             </span>
             <!-- <script>
                 popover.init({
-                target: '#zr-popover-tl',
+                target: '#nv-popover-tl',
                 position: 'tl'
             });
             popover.init({
-                target: '#zr-popover-top',
+                target: '#nv-popover-top',
                 position: 'top'
             });
             popover.init({
-                target: '#zr-popover-tr',
+                target: '#nv-popover-tr',
                 position: 'tr'
             });
             popover.init({
-                target: '#zr-popover-lt',
+                target: '#nv-popover-lt',
                 position: 'lt'
             });
             popover.init({
-                target: '#zr-popover-left',
+                target: '#nv-popover-left',
                 position: 'left'
             });
             popover.init({
-                target: '#zr-popover-lb',
+                target: '#nv-popover-lb',
                 position: 'lb'
             });
             popover.init({
-                target: '#zr-popover-rt',
+                target: '#nv-popover-rt',
                 position: 'rt'
             });
             popover.init({
-                target: '#zr-popover-right',
+                target: '#nv-popover-right',
                 position: 'right'
             });
             popover.init({
-                target: '#zr-popover-rb',
+                target: '#nv-popover-rb',
                 position: 'rb'
             });
             popover.init({
-                target: '#zr-popover-bl',
+                target: '#nv-popover-bl',
                 position: 'bl'
             });
             popover.init({
-                target: '#zr-popover-bottom',
+                target: '#nv-popover-bottom',
                 position: 'bottom'
             });
             popover.init({
-                target: '#zr-popover-br',
+                target: '#nv-popover-br',
                 position: 'br'
             });
             </script> -->
          </div>
-         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -470,33 +471,33 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <span class="zr-popover same-popover">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover same-popover">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下左</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am init at the same time1 <br/>
                         I am init at the same time <br/>
                         I am init at the same time
                     </div>
                 </div>
             </span>
-            <span class="zr-popover same-popover">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover same-popover">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下左</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am init at the same time2 <br/>
                         I am init at the same time <br/>
                         I am init at the same time
                     </div>
                 </div>
             </span>
-            <span class="zr-popover same-popover">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover same-popover">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下左</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am init at the same time3 <br/>
                         I am init at the same time <br/>
                         I am init at the same time
@@ -505,33 +506,33 @@
             </span>
         </div>
         <div class="c-code-inner c-code-hide">
-            <span class="zr-popover same-popover">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover same-popover">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下左</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am init at the same time1 <br/>
                         I am init at the same time <br/>
                         I am init at the same time
                     </div>
                 </div>
             </span>
-            <span class="zr-popover same-popover">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover same-popover">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下左</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am init at the same time2 <br/>
                         I am init at the same time <br/>
                         I am init at the same time
                     </div>
                 </div>
             </span>
-            <span class="zr-popover same-popover">
-                <button type="button" class="zr-btn zr-btn-default zr-popover-btn">下左</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover same-popover">
+                <button type="button" class="nv-btn nv-btn-default nv-popover-btn">下左</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         I am init at the same time3 <br/>
                         I am init at the same time <br/>
                         I am init at the same time
@@ -545,7 +546,7 @@
                     })
             </script> -->
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -556,35 +557,35 @@
          <!--switch code show or hide-->
          <div class="c-code-switch">&lt;code&gt;</div>
          <div class="c-demo">
-            <span class="zr-popover" id="zr-popover-delete">
-                <p class="zr-popover-btn">Delete</p>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-delete">
+                <p class="nv-popover-btn">Delete</p>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         <p style="padding: 10px 0 20px 0">Are you sure delete this task?</p>
                         <div style="text-align: right;">
-                            <button class="zr-btn zr-btn-default zr-btn-sm" style="margin-right: 8px;">No</button><button class="zr-btn zr-btn-primary zr-btn-sm zr-popover-confirm-ok">Ok</button>
+                            <button class="nv-btn nv-btn-default nv-btn-sm" style="margin-right: 8px;">No</button><button class="nv-btn nv-btn-primary nv-btn-sm nv-popover-confirm-ok">Ok</button>
                         </div> 
                     </div>
                 </div>
             </span>
          </div>
          <div class="c-code-inner c-code-hide">
-            <span class="zr-popover" id="zr-popover-delete">
-                <p class="zr-popover-btn">Delete</p>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
+            <span class="nv-popover" id="nv-popover-delete">
+                <p class="nv-popover-btn">Delete</p>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
                         <p style="padding: 10px 0 20px 0">Are you sure delete this task?</p>
                         <div style="text-align: right;">
-                            <button class="zr-btn zr-btn-default zr-btn-sm" style="margin-right: 8px;">No</button><button class="zr-btn zr-btn-primary zr-btn-sm zr-popover-confirm-ok">Ok</button>
+                            <button class="nv-btn nv-btn-default nv-btn-sm" style="margin-right: 8px;">No</button><button class="nv-btn nv-btn-primary nv-btn-sm nv-popover-confirm-ok">Ok</button>
                         </div> 
                     </div>
                 </div>
             </span>
             <!-- <script>
                 popover.init({
-                target: '#zr-popover-delete',
+                target: '#nv-popover-delete',
                 onClose: function(dom){
                     console.log(dom.id);
                 },
@@ -594,7 +595,7 @@
             });
             </script> -->
          </div>
-         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -605,12 +606,12 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <span class="zr-popover" id="zr-popover-table">
-                <button class="zr-btn zr-btn-default zr-popover-btn">Click</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
-                        <div class="zr-table-wrap">
+            <span class="nv-popover" id="nv-popover-table">
+                <button class="nv-btn nv-btn-default nv-popover-btn">Click</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
+                        <div class="nv-table-wrap">
                             <table>
                                 <thead>
                                 <tr>
@@ -648,12 +649,12 @@
             </span>
         </div>
         <div class="c-code-inner c-code-hide">
-            <span class="zr-popover" id="zr-popover-table">
-                <button class="zr-btn zr-btn-default zr-popover-btn">Click</button>
-                <div class="zr-popover-content" style="display: none">
-                    <div class="zr-popover-arrow"></div>
-                    <div class="zr-popover-inner">
-                        <div class="zr-table-wrap">
+            <span class="nv-popover" id="nv-popover-table">
+                <button class="nv-btn nv-btn-default nv-popover-btn">Click</button>
+                <div class="nv-popover-content" style="display: none">
+                    <div class="nv-popover-arrow"></div>
+                    <div class="nv-popover-inner">
+                        <div class="nv-table-wrap">
                             <table>
                                 <thead>
                                 <tr>
@@ -691,7 +692,7 @@
             </span>
             <!-- <script>
                 popover.init({
-                target: '#zr-popover-table',
+                target: '#nv-popover-table',
                 position: 'rt',
                 width: '400',
                 event: 'click',
@@ -704,7 +705,7 @@
             });
             </script> -->
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -805,75 +806,74 @@
     </section>
 </article>
 <!--注意此段js必须第一引入在开发模式下{-->
-<script type="text/javascript" src="/js/zr.min.js?1"></script>
 <script type="text/javascript">
-    Zr.config({
+    Nv.config({
         baseUrl: "/js/plugin_modules/",
         requestTime:true
     })
-    Zr.ready(function(){
-        Zr.use("./js/quickMenu","./js/code")
-        Zr.use("./popover/index",function(zr,popover){
+    Nv.ready(function(){
+        Nv.use("./js/quickMenu","./js/code")
+        Nv.use("popover",function(nv,popover){
             popover.init({
-               target: '#zr-popover-hover',
+               target: '#nv-popover-hover',
                position: 'right'
             });
             popover.init({
-                target: '#zr-popover-clcik',
+                target: '#nv-popover-clcik',
                 position: 'top',
                 width: '230px',
                 event: 'click'
             });
             popover.init({
-                target: '#zr-popover-tl',
+                target: '#nv-popover-tl',
                 position: 'tl'
             });
             popover.init({
-                target: '#zr-popover-top',
+                target: '#nv-popover-top',
                 position: 'top'
             });
             popover.init({
-                target: '#zr-popover-tr',
+                target: '#nv-popover-tr',
                 position: 'tr'
             });
             popover.init({
-                target: '#zr-popover-lt',
+                target: '#nv-popover-lt',
                 position: 'lt'
             });
             popover.init({
-                target: '#zr-popover-left',
+                target: '#nv-popover-left',
                 position: 'left'
             });
             popover.init({
-                target: '#zr-popover-lb',
+                target: '#nv-popover-lb',
                 position: 'lb'
             });
             popover.init({
-                target: '#zr-popover-rt',
+                target: '#nv-popover-rt',
                 position: 'rt'
             });
             popover.init({
-                target: '#zr-popover-right',
+                target: '#nv-popover-right',
                 position: 'right'
             });
             popover.init({
-                target: '#zr-popover-rb',
+                target: '#nv-popover-rb',
                 position: 'rb'
             });
             popover.init({
-                target: '#zr-popover-bl',
+                target: '#nv-popover-bl',
                 position: 'bl'
             });
             popover.init({
-                target: '#zr-popover-bottom',
+                target: '#nv-popover-bottom',
                 position: 'bottom'
             });
             popover.init({
-                target: '#zr-popover-br',
+                target: '#nv-popover-br',
                 position: 'br'
             });
             popover.init({
-                target: '#zr-popover-delete',
+                target: '#nv-popover-delete',
                 onOpen: function(dom){
                     console.log(dom.id);
                 },
@@ -882,7 +882,7 @@
                 }
             });
             popover.init({
-                target: '#zr-popover-table',
+                target: '#nv-popover-table',
                 position: 'rt',
                 width: '400',
                 event: 'click',

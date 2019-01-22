@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
-    <link rel="stylesheet" href="//storage.jd.com/0.0.1/zr/css/cdn_zr.min.css">
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style type="text/css">
-        .c-demo-notification .zr-btn{
+        .c-demo-notification .nv-btn{
             margin-right: 14px;
             vertical-align: bottom;
         }
@@ -29,16 +30,16 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <p class="c-demo-notification">
-                <button type="button" class="zr-btn zr-btn-default" id="notification_all">Notification with tittle</button>
-                <button type="button" class="zr-btn zr-btn-default" id="notification_title">Only the tittle</button>
+                <button type="button" class="nv-btn nv-btn-default" id="notification_all">Notification with tittle</button>
+                <button type="button" class="nv-btn nv-btn-default" id="notification_title">Only the tittle</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
     <!--HTML-->
-    <button type="button" class="zr-btn zr-btn-default" id="notification_all_1">Notification with tittle</button>
-    <button type="button" class="zr-btn zr-btn-default" id="notification_title_1">Only the tittle</button>
+    <button type="button" class="nv-btn nv-btn-default" id="notification_all_1">Notification with tittle</button>
+    <button type="button" class="nv-btn nv-btn-default" id="notification_title_1">Only the tittle</button>
     <!--javascript-->
-    Zr.use("notification",function(zr,notification){
+    Nv.use("notification",function(nv,notification){
         document.getElementById("notification_all_1").addEventListener("click",function(){
             notification.alert({
                 title:"Title",
@@ -52,7 +53,7 @@
         },false)
     });
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -64,20 +65,20 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <p class="c-demo-notification">
-                <button type="button" class="zr-btn zr-btn-default" id="notification_info">Info</button>
-                <button type="button" class="zr-btn zr-btn-default" id="notification_success">Success</button>
-                <button type="button" class="zr-btn zr-btn-default" id="notification_warning">Warning</button>
-                <button type="button" class="zr-btn zr-btn-default" id="notification_error">Error</button>
+                <button type="button" class="nv-btn nv-btn-default" id="notification_info">Info</button>
+                <button type="button" class="nv-btn nv-btn-default" id="notification_success">Success</button>
+                <button type="button" class="nv-btn nv-btn-default" id="notification_warning">Warning</button>
+                <button type="button" class="nv-btn nv-btn-default" id="notification_error">Error</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
     <!--HTML-->
-    <button type="button" class="zr-btn zr-btn-default" id="notification_info_1">Info</button>
-    <button type="button" class="zr-btn zr-btn-default" id="notification_success_1">Success</button>
-    <button type="button" class="zr-btn zr-btn-default" id="notification_warning_1">Warning</button>
-    <button type="button" class="zr-btn zr-btn-default" id="notification_error_1">Error</button>
+    <button type="button" class="nv-btn nv-btn-default" id="notification_info_1">Info</button>
+    <button type="button" class="nv-btn nv-btn-default" id="notification_success_1">Success</button>
+    <button type="button" class="nv-btn nv-btn-default" id="notification_warning_1">Warning</button>
+    <button type="button" class="nv-btn nv-btn-default" id="notification_error_1">Error</button>
     <!--javascript-->
-    Zr.use("notification",function(zr,notification){
+    Nv.use("notification",function(nv,notification){
         document.getElementById("notification_info_1").addEventListener("click",function(){
             notification.info({
                 title:"Info title",
@@ -104,7 +105,7 @@
         },false)
     });
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -116,26 +117,26 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <p class="c-demo-notification">
-                <button type="button" class="zr-btn zr-btn-default" id="notification_time">Open The Notification </button>
+                <button type="button" class="nv-btn nv-btn-default" id="notification_time">Open The Notification </button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
     <!--HTML-->
-    <button type="button" class="zr-btn zr-btn-default">Open The Notification </button>
+    <button type="button" class="nv-btn nv-btn-default">Open The Notification </button>
     <!--javascript-->
-    Zr.use("notification",function(zr,notification){
+    Nv.use("notification",function(nv,notification){
         document.getElementById("notification_error_1").addEventListener("click",function(){
             notification.success({
                 title:"Self time title",
                 content:"Forever show ~~~ by options.time",
-                iconsClassName:"zricon-transaction",
+                iconsClassName:"nvicon-transaction",
                 time:0
             })
         },false)
 
     });
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-20"></div>
     <section class="c-sub-title">
@@ -204,7 +205,7 @@
                         <div class="c-cell c-table-w-125">String (选填)</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-500">提示图标，传入ICONS中的任何样式即可。e.g:"zricon-star"</div>
+                        <div class="c-cell c-table-w-500">提示图标，传入ICONS中的任何样式即可。e.g:"nvicon-star"</div>
                     </td>
                 </tr>
                 <tr>
@@ -223,15 +224,14 @@
         </div>
     </section>
 </article>
-<script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js?1"></script>
 <script type="text/javascript">
-    Zr.config({
+    Nv.config({
         baseUrl:"/js/plugin_modules/",
         requestTime:true
     });
-    Zr.ready(function(){
-        Zr.use("./js/quickMenu","./js/code");
-        Zr.use("jquery","notification",function(zr,$,notification){
+    Nv.ready(function(){
+
+        Nv.use("jquery","notification",function(nv,$,notification){
              $("#notification_all").on("click",function(){
                  notification.alert({
                     title:"Title",
@@ -271,12 +271,13 @@
                 notification.success({
                     title:"Self time title",
                     content:"Forever show ~~~ by options.time",
-                    iconsClassName:"zricon-transaction",
+                    iconsClassName:"nvicon-transaction",
                     time:0
                 })
             })
         });
     })
+    Nv.use("./js/quickMenu","./js/code");
 </script>
 </body>
 </html>

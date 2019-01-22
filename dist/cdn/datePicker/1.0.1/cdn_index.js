@@ -212,4 +212,4 @@ rets.push({moment:_nm,rangeStatus:0,defaultDay:0,nowDay:nowDay,defaultDayRange:0
 var key=moment(options.time).format("YYYY-MM");nv.fn.datePicker.month[key]=rets;return{rets:rets,key:key,_moment:moment(options.time)};}},ajax:{}}
 nv.dom.clickQueen.push(function(){var $pickers=$(".nv-datepicker-wrap");$pickers.each(function(){var options=$(this).data("options"),_moment=$(this).data("moment");options.onClose.call(options,_moment.format("YYYY-MM-DD HH:mm:ss"));})
 $pickers.remove();})
-return{init:datePicker.init}},{requires:["jquery","./static/js/cdn_moment","./css/cdn_index.css"]})
+return{init:datePicker.init}},{requires:["jquery","./static/js/cdn_moment","./css/cdn_index.css"],alias:'dataPicker'})

@@ -178,4 +178,4 @@ Nv.add("./compress/1.0.1/cdn_index",function(nv,$){
         }
 
     }
-},{requires:["jquery"]})
+},{requires:["jquery"],alias:'compress'})

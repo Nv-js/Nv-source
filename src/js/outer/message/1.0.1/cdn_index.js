@@ -284,4 +284,4 @@ Nv.add("./message/1.0.1/cdn_index",function(nv,$){
         alert:_alert,
         confirm:_confirm
     }
-},{requires:["jquery","./css/cdn_index.css"]})
+},{requires:["jquery","./css/cdn_index.css"],alias:'message'})

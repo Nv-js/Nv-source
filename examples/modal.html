@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
     <!--开发阶段引用jq-->
-    <!--<script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>-->
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
 </head>
 <body>
 <article class="c-content">
@@ -29,9 +30,9 @@
         <span>
             弹窗有三个尺寸（lg、sm、normal）：
             <ul>
-                <li><span>zr-modal节点加上class名为zr-modal-lg即为大弹窗，宽度为800px</span></li>
-                <li><span>zr-modal节点加上class名为zr-modal-normal即为适中弹窗，宽度为600px</span></li>
-                <li><span>zr-modal节点加上class名为zr-modal-sm即为小弹窗，宽度为400px（默认显示zr-modal-sm）</span></li>
+                <li><span>nv-modal节点加上class名为nv-modal-lg即为大弹窗，宽度为800px</span></li>
+                <li><span>nv-modal节点加上class名为nv-modal-normal即为适中弹窗，宽度为600px</span></li>
+                <li><span>nv-modal节点加上class名为nv-modal-sm即为小弹窗，宽度为400px（默认显示nv-modal-sm）</span></li>
             </ul>
         </span>
     </section>
@@ -39,42 +40,42 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <button type="button" class="zr-btn zr-btn-primary size-lg">Lg</button>
-            <button type="button" class="zr-btn zr-btn-primary size-normal">Normal</button>
-            <button type="button" class="zr-btn zr-btn-primary size-sm">Sm</button>
+            <button type="button" class="nv-btn nv-btn-primary size-lg">Lg</button>
+            <button type="button" class="nv-btn nv-btn-primary size-normal">Normal</button>
+            <button type="button" class="nv-btn nv-btn-primary size-sm">Sm</button>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--大尺寸弹窗-->
                 <!--html代码-->
-                <div class="zr-modal zr-modal-lg zr-modal-size-lg">
-                    <div class="zr-modal-dialog">
-                        <div class="zr-modal-content">
-                            <div class="zr-modal-header">
-                                <p class="zr-modal-title">
+                <div class="nv-modal nv-modal-lg nv-modal-size-lg">
+                    <div class="nv-modal-dialog">
+                        <div class="nv-modal-content">
+                            <div class="nv-modal-header">
+                                <p class="nv-modal-title">
                                     <span>Title</span>
-                                    <i class="zricon-close zr-modal-close"></i>
+                                    <i class="nvicon-close nv-modal-close"></i>
                                 </p>
                             </div>
-                            <div class="zr-modal-body">
+                            <div class="nv-modal-body">
                                 Here is the content  Here is the content Here is the content  Here is the content
                             </div>
-                            <div class="zr-modal-footer">
-                                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+                            <div class="nv-modal-footer">
+                                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--javascript代码-->
-                Zr.ready(function(){
-                    Zr.use("modal",function(zr,modal){
+                Nv.ready(function(){
+                    Nv.use("modal",function(nv,modal){
                         /*
                         modal.init中第一个参数为需要调用弹窗的class或者id，
                         第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                         他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                         弹窗关闭的回调函数
                         */
-                        var modal=modal.init(".zr-modal-size-lg",{
+                        var modal=modal.init(".nv-modal-size-lg",{
                             top:"",
                             openCallback:function(){},
                             closeCallback:function(){}
@@ -92,35 +93,35 @@
                 })
             <!--正常尺寸弹窗-->
                 <!--html代码-->
-                <div class="zr-modal zr-modal-normal zr-modal-size-normal">
-                    <div class="zr-modal-dialog">
-                        <div class="zr-modal-content">
-                            <div class="zr-modal-header">
-                                <p class="zr-modal-title">
+                <div class="nv-modal nv-modal-normal nv-modal-size-normal">
+                    <div class="nv-modal-dialog">
+                        <div class="nv-modal-content">
+                            <div class="nv-modal-header">
+                                <p class="nv-modal-title">
                                     <span>Title</span>
-                                    <i class="zricon-close zr-modal-close"></i>
+                                    <i class="nvicon-close nv-modal-close"></i>
                                 </p>
                             </div>
-                            <div class="zr-modal-body">
+                            <div class="nv-modal-body">
                                 Here is the content  Here is the content Here is the content  Here is the content
                             </div>
-                            <div class="zr-modal-footer">
-                                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+                            <div class="nv-modal-footer">
+                                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--javascript代码-->
-                Zr.ready(function(){
-                    Zr.use("modal",function(zr,modal){
+                Nv.ready(function(){
+                    Nv.use("modal",function(nv,modal){
                         /*
                         modal.init中第一个参数为需要调用弹窗的class或者id，
                         第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                         他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                         弹窗关闭的回调函数
                         */
-                        var modal=modal.init(".zr-modal-size-normal",{
+                        var modal=modal.init(".nv-modal-size-normal",{
                             top:"",
                             openCallback:function(){},
                             closeCallback:function(){}
@@ -138,35 +139,35 @@
                 })
             <!--小尺寸弹窗-->
                 <!--html代码-->
-                <div class="zr-modal zr-modal-sm zr-modal-size-sm">
-                    <div class="zr-modal-dialog">
-                        <div class="zr-modal-content">
-                            <div class="zr-modal-header">
-                                <p class="zr-modal-title">
+                <div class="nv-modal nv-modal-sm nv-modal-size-sm">
+                    <div class="nv-modal-dialog">
+                        <div class="nv-modal-content">
+                            <div class="nv-modal-header">
+                                <p class="nv-modal-title">
                                     <span>Title</span>
-                                    <i class="zricon-close zr-modal-close"></i>
+                                    <i class="nvicon-close nv-modal-close"></i>
                                 </p>
                             </div>
-                            <div class="zr-modal-body">
+                            <div class="nv-modal-body">
                                 Here is the content  Here is the content Here is the content  Here is the content
                             </div>
-                            <div class="zr-modal-footer">
-                                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+                            <div class="nv-modal-footer">
+                                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--javascript代码-->
-                Zr.ready(function(){
-                    Zr.use("modal",function(zr,modal){
+                Nv.ready(function(){
+                    Nv.use("modal",function(nv,modal){
                         /*
                         modal.init中第一个参数为需要调用弹窗的class或者id，
                         第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                         他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                         弹窗关闭的回调函数
                         */
-                        var modal=modal.init(".zr-modal-size-sm",{
+                        var modal=modal.init(".nv-modal-size-sm",{
                             top:"",
                             openCallback:function(){},
                             closeCallback:function(){}
@@ -183,7 +184,7 @@
                     })
                 })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -194,39 +195,39 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <button type="button" class="zr-btn zr-btn-primary message-prompt">Open</button>
+            <button type="button" class="nv-btn nv-btn-primary message-prompt">Open</button>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--html代码-->
-            <div class="zr-modal fade zr-modal-prompt">
-                <div class="zr-modal-dialog">
-                    <div class="zr-modal-content">
-                        <div class="zr-modal-header">
-                            <p class="zr-modal-title">
+            <div class="nv-modal fade nv-modal-prompt">
+                <div class="nv-modal-dialog">
+                    <div class="nv-modal-content">
+                        <div class="nv-modal-header">
+                            <p class="nv-modal-title">
                                 <span>Title</span>
-                                <i class="zricon-close zr-modal-close"></i>
+                                <i class="nvicon-close nv-modal-close"></i>
                             </p>
                         </div>
-                        <div class="zr-modal-body">
+                        <div class="nv-modal-body">
                             Here is the content  Here is the content Here is the content  Here is the content
                         </div>
-                        <div class="zr-modal-footer">
-                            <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                            <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+                        <div class="nv-modal-footer">
+                            <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                            <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!--javascript代码-->
-            Zr.ready(function(){
-                Zr.use("modal",function(zr,modal){
+            Nv.ready(function(){
+                Nv.use("modal",function(nv,modal){
                     /*
                         modal.init中第一个参数为需要调用弹窗的class或者id，
                         第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                         他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                         弹窗关闭的回调函数
                     */
-                    var modal=modal.init(".zr-modal-prompt",{
+                    var modal=modal.init(".nv-modal-prompt",{
                         top:"",
                         openCallback:function(){},
                         closeCallback:function(){}
@@ -243,7 +244,7 @@
                 })
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -254,39 +255,39 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <button type="button" class="zr-btn zr-btn-primary message-enter">Comfire</button>
+            <button type="button" class="nv-btn nv-btn-primary message-enter">Comfire</button>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--html代码-->
-            <div class="zr-modal fade zr-modal-enter">
-                <div class="zr-modal-dialog">
-                    <div class="zr-modal-content">
-                        <div class="zr-modal-header">
-                            <p class="zr-modal-title">
+            <div class="nv-modal fade nv-modal-enter">
+                <div class="nv-modal-dialog">
+                    <div class="nv-modal-content">
+                        <div class="nv-modal-header">
+                            <p class="nv-modal-title">
                                 <span>Title</span>
-                                <i class="zricon-close zr-modal-close"></i>
+                                <i class="nvicon-close nv-modal-close"></i>
                             </p>
                         </div>
-                        <div class="zr-modal-body">
-                            <i class="zricon-info zr-modal-warning"></i>Do you want to delete these items?
+                        <div class="nv-modal-body">
+                            <i class="nvicon-info nv-modal-warning"></i>Do you want to delete these items?
                         </div>
-                        <div class="zr-modal-footer">
-                            <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                            <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+                        <div class="nv-modal-footer">
+                            <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                            <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!--javascript代码-->
-            Zr.ready(function(){
-                Zr.use("modal",function(zr,modal){
+            Nv.ready(function(){
+                Nv.use("modal",function(nv,modal){
                     /*
                     modal.init中第一个参数为需要调用弹窗的class或者id，
                     第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                     他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                     弹窗关闭的回调函数
                     */
-                    var modal=modal.init(".zr-modal-enter",{
+                    var modal=modal.init(".nv-modal-enter",{
                         top:"",
                         openCallback:function(){},
                         closeCallback:function(){}
@@ -303,7 +304,7 @@
                 })
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -314,48 +315,48 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <button type="button" class="zr-btn zr-btn-primary message-submit">Promot</button>
+            <button type="button" class="nv-btn nv-btn-primary message-submit">Promot</button>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--html代码-->
-            <div class="zr-modal fade zr-modal-submit">
-                <div class="zr-modal-dialog">
-                    <div class="zr-modal-content">
-                        <div class="zr-modal-header">
-                            <p class="zr-modal-title">
+            <div class="nv-modal fade nv-modal-submit">
+                <div class="nv-modal-dialog">
+                    <div class="nv-modal-content">
+                        <div class="nv-modal-header">
+                            <p class="nv-modal-title">
                                 <span>Title</span>
-                                <i class="zricon-close zr-modal-close"></i>
+                                <i class="nvicon-close nv-modal-close"></i>
                             </p>
                         </div>
-                        <div class="zr-modal-body">
+                        <div class="nv-modal-body">
                             <form>
                                 <div>
                                     <label>Fied A</label>
-                                    <input type="text" placeholder="Please input" class="zr-input">
+                                    <input type="text" placeholder="Please input" class="nv-input">
                                 </div>
                                 <div>
                                     <label>Fied A</label>
-                                    <input type="text" placeholder="Please input" class="zr-input">
+                                    <input type="text" placeholder="Please input" class="nv-input">
                                 </div>
                             </form>
                         </div>
-                        <div class="zr-modal-footer">
-                            <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                            <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+                        <div class="nv-modal-footer">
+                            <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                            <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!--javascript代码-->
-            Zr.ready(function(){
-                Zr.use("modal",function(zr,modal){
+            Nv.ready(function(){
+                Nv.use("modal",function(nv,modal){
                     /*
                     modal.init中第一个参数为需要调用弹窗的class或者id，
                     第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                     他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                     弹窗关闭的回调函数
                     */
-                    var modal=modal.init(".zr-modal-submit",{
+                    var modal=modal.init(".nv-modal-submit",{
                         top:"",
                         openCallback:function(){},
                         closeCallback:function(){}
@@ -372,53 +373,53 @@
                 })
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>信息提示 <a href="#">#</a></p>
-        <span>zr弹窗组件提供了4个状态的提示弹窗，分别为，info、success、warning、error</span>
+        <span>nv弹窗组件提供了4个状态的提示弹窗，分别为，info、success、warning、error</span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <button type="button" class="zr-btn zr-btn-default message-info">Promot</button>
-            <button type="button" class="zr-btn zr-btn-default message-success">Success</button>
-            <button type="button" class="zr-btn zr-btn-default message-warning">Warning</button>
-            <button type="button" class="zr-btn zr-btn-default message-error">Error</button>
+            <button type="button" class="nv-btn nv-btn-default message-info">Promot</button>
+            <button type="button" class="nv-btn nv-btn-default message-success">Success</button>
+            <button type="button" class="nv-btn nv-btn-default message-warning">Warning</button>
+            <button type="button" class="nv-btn nv-btn-default message-error">Error</button>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--info状态-->
                 <!--html代码-->
-                <div class="zr-modal fade zr-modal-info zr-modal-status">
-                    <div class="zr-modal-dialog">
-                        <div class="zr-modal-content">
-                            <div class="zr-modal-header">
+                <div class="nv-modal fade nv-modal-info nv-modal-status">
+                    <div class="nv-modal-dialog">
+                        <div class="nv-modal-content">
+                            <div class="nv-modal-header">
                             </div>
-                            <div class="zr-modal-body">
-                                <i class="zricon-info zr-modal-info zr-modal-icon"></i>
+                            <div class="nv-modal-body">
+                                <i class="nvicon-info nv-modal-info nv-modal-icon"></i>
                                 <div class="prompt-content">
                                     <p class="prompt-content-title">This is a normal message</p>
                                     <p>balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalab</p>
                                 </div>
                             </div>
-                            <div class="zr-modal-footer">
-                                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-cancel">Ok</button>
+                            <div class="nv-modal-footer">
+                                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-cancel">Ok</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--javascript代码-->
-                Zr.ready(function(){
-                    Zr.use("modal",function(zr,modal){
+                Nv.ready(function(){
+                    Nv.use("modal",function(nv,modal){
                         /*
                         modal.init中第一个参数为需要调用弹窗的class或者id，
                         第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                         他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                         弹窗关闭的回调函数
                         */
-                        var modal=modal.init(".zr-modal-info",{
+                        var modal=modal.init(".nv-modal-info",{
                             top:"",
                             openCallback:function(){},
                             closeCallback:function(){}
@@ -436,34 +437,34 @@
                 })
             <!--success状态-->
                 <!--html代码-->
-                <div class="zr-modal fade zr-modal-success zr-modal-status">
-                <div class="zr-modal-dialog">
-                    <div class="zr-modal-content">
-                        <div class="zr-modal-header">
+                <div class="nv-modal fade nv-modal-success nv-modal-status">
+                <div class="nv-modal-dialog">
+                    <div class="nv-modal-content">
+                        <div class="nv-modal-header">
                         </div>
-                        <div class="zr-modal-body">
-                            <i class="zricon-info zr-modal-ok zr-modal-icon"></i>
+                        <div class="nv-modal-body">
+                            <i class="nvicon-info nv-modal-ok nv-modal-icon"></i>
                             <div class="prompt-content">
                                 <p class="prompt-content-title">This is a success message</p>
                                 <p>balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalab</p>
                             </div>
                         </div>
-                        <div class="zr-modal-footer">
-                            <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-cancel">Ok</button>
+                        <div class="nv-modal-footer">
+                            <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-cancel">Ok</button>
                         </div>
                     </div>
                 </div>
             </div>
                 <!--javascript代码-->
-                Zr.ready(function(){
-                    Zr.use("modal",function(zr,modal){
+                Nv.ready(function(){
+                    Nv.use("modal",function(nv,modal){
                         /*
                         modal.init中第一个参数为需要调用弹窗的class或者id，
                         第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                         他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                         弹窗关闭的回调函数
                         */
-                        var modal=modal.init(".zr-modal-success",{
+                        var modal=modal.init(".nv-modal-success",{
                             top:"",
                             openCallback:function(){},
                             closeCallback:function(){}
@@ -481,34 +482,34 @@
                 })
             <!--warning状态-->
                 <!--html代码-->
-                <div class="zr-modal fade zr-modal-warning zr-modal-status">
-                    <div class="zr-modal-dialog">
-                        <div class="zr-modal-content">
-                            <div class="zr-modal-header">
+                <div class="nv-modal fade nv-modal-warning nv-modal-status">
+                    <div class="nv-modal-dialog">
+                        <div class="nv-modal-content">
+                            <div class="nv-modal-header">
                             </div>
-                            <div class="zr-modal-body">
-                                <i class="zricon-info zr-modal-warning zr-modal-icon"></i>
+                            <div class="nv-modal-body">
+                                <i class="nvicon-info nv-modal-warning nv-modal-icon"></i>
                                 <div class="prompt-content">
                                     <p class="prompt-content-title">This is a warning message</p>
                                     <p>balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalab</p>
                                 </div>
                             </div>
-                            <div class="zr-modal-footer">
-                                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-cancel">Ok</button>
+                            <div class="nv-modal-footer">
+                                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-cancel">Ok</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--javascript代码-->
-                Zr.ready(function(){
-                    Zr.use("modal",function(zr,modal){
+                Nv.ready(function(){
+                    Nv.use("modal",function(nv,modal){
                         /*
                         modal.init中第一个参数为需要调用弹窗的class或者id，
                         第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                         他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                         弹窗关闭的回调函数
                         */
-                        var modal=modal.init(".zr-modal-warning",{
+                        var modal=modal.init(".nv-modal-warning",{
                             top:"",
                             openCallback:function(){},
                             closeCallback:function(){}
@@ -526,34 +527,34 @@
                 })
             <!--error状态-->
                 <!--html代码-->
-                <div class="zr-modal fade zr-modal-error zr-modal-status">
-                    <div class="zr-modal-dialog">
-                        <div class="zr-modal-content">
-                            <div class="zr-modal-header">
+                <div class="nv-modal fade nv-modal-error nv-modal-status">
+                    <div class="nv-modal-dialog">
+                        <div class="nv-modal-content">
+                            <div class="nv-modal-header">
                             </div>
-                            <div class="zr-modal-body">
-                                <i class="zricon-info zr-modal-error zr-modal-icon"></i>
+                            <div class="nv-modal-body">
+                                <i class="nvicon-info nv-modal-error nv-modal-icon"></i>
                                 <div class="prompt-content">
                                     <p class="prompt-content-title">This is a error message</p>
                                     <p>balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalab</p>
                                 </div>
                             </div>
-                            <div class="zr-modal-footer">
-                                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-cancel">Ok</button>
+                            <div class="nv-modal-footer">
+                                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-cancel">Ok</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--javascript代码-->
-                Zr.ready(function(){
-                    Zr.use("modal",function(zr,modal){
+                Nv.ready(function(){
+                    Nv.use("modal",function(nv,modal){
                         /*
                         modal.init中第一个参数为需要调用弹窗的class或者id，
                         第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                         他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                         弹窗关闭的回调函数
                         */
-                        var modal=modal.init(".zr-modal-error",{
+                        var modal=modal.init(".nv-modal-error",{
                             top:"",
                             openCallback:function(){},
                             closeCallback:function(){}
@@ -570,7 +571,7 @@
                     })
                 })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -581,50 +582,50 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <button type="button" class="zr-btn zr-btn-primary message-async">Async</button>
+            <button type="button" class="nv-btn nv-btn-primary message-async">Async</button>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--html代码-->
-            <div class="zr-modal fade zr-modal-submit-async">
-                <div class="zr-modal-dialog">
-                    <div class="zr-modal-content">
-                        <div class="zr-modal-header">
-                            <p class="zr-modal-title">
+            <div class="nv-modal fade nv-modal-submit-async">
+                <div class="nv-modal-dialog">
+                    <div class="nv-modal-content">
+                        <div class="nv-modal-header">
+                            <p class="nv-modal-title">
                                 <span>Title</span>
-                                <i class="zricon-close zr-modal-close"></i>
+                                <i class="nvicon-close nv-modal-close"></i>
                             </p>
                         </div>
-                        <div class="zr-modal-body">
+                        <div class="nv-modal-body">
                             <form>
                                 <div>
                                     <label>Fied A</label>
-                                    <input type="text" placeholder="Please input" class="zr-input">
+                                    <input type="text" placeholder="Please input" class="nv-input">
                                 </div>
                                 <div>
                                     <label>Fied A</label>
-                                    <input type="text" placeholder="Please input" class="zr-input">
+                                    <input type="text" placeholder="Please input" class="nv-input">
                                 </div>
                             </form>
                         </div>
-                        <div class="zr-modal-footer">
-                            <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                            <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">
-                                <i class="zricon-spin6 animate-spin zr-modal-loading"></i>
+                        <div class="nv-modal-footer">
+                            <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                            <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">
+                                <i class="nvicon-spin6 animate-spin nv-modal-loading"></i>
                                 Ok</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!--javascript代码-->
-            Zr.ready(function(){
-                Zr.use("modal",function(zr,modal){
+            Nv.ready(function(){
+                Nv.use("modal",function(nv,modal){
                     /*
                     modal.init中第一个参数为需要调用弹窗的class或者id，
                     第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                     他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                     弹窗关闭的回调函数
                     */
-                    var modal=modal.init(".zr-modal-submit-async",{
+                    var modal=modal.init(".nv-modal-submit-async",{
                         top:"",
                         openCallback:function(){},
                         closeCallback:function(){}
@@ -641,7 +642,7 @@
                 })
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <section class="c-sub-title">
         <p>自定义位置<a href="#">#</a></p>
@@ -651,39 +652,39 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <button type="button" class="zr-btn zr-btn-primary message-cunstom">自定义</button>
+            <button type="button" class="nv-btn nv-btn-primary message-cunstom">自定义</button>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--html代码-->
-            <div class="zr-modal fade zr-modal-custom">
-                <div class="zr-modal-dialog">
-                    <div class="zr-modal-content">
-                        <div class="zr-modal-header">
-                            <p class="zr-modal-title">
+            <div class="nv-modal fade nv-modal-custom">
+                <div class="nv-modal-dialog">
+                    <div class="nv-modal-content">
+                        <div class="nv-modal-header">
+                            <p class="nv-modal-title">
                                 <span>Title</span>
-                                <i class="zricon-close zr-modal-close"></i>
+                                <i class="nvicon-close nv-modal-close"></i>
                             </p>
                         </div>
-                        <div class="zr-modal-body">
+                        <div class="nv-modal-body">
                             Here is the content  Here is the content Here is the content  Here is the content
                         </div>
-                        <div class="zr-modal-footer zr-modal-footer-center">
-                            <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                            <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+                        <div class="nv-modal-footer nv-modal-footer-center">
+                            <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                            <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!--javascript代码-->
-            Zr.ready(function(){
-                Zr.use("modal",function(zr,modal){
+            Nv.ready(function(){
+                Nv.use("modal",function(nv,modal){
                     /*
                     modal.init中第一个参数为需要调用弹窗的class或者id，
                     第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                     他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                     弹窗关闭的回调函数
                     */
-                    var modal=modal.init(".zr-modal-custom",{
+                    var modal=modal.init(".nv-modal-custom",{
                         top:100,
                         openCallback:function(){},
                         closeCallback:function(){}
@@ -700,7 +701,7 @@
                 })
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -711,39 +712,39 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <button type="button" class="zr-btn zr-btn-primary move">拖拽</button>
+            <button type="button" class="nv-btn nv-btn-primary move">拖拽</button>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--html代码-->
-            <div class="zr-modal fade zr-modal-move">
-                <div class="zr-modal-dialog">
-                    <div class="zr-modal-content">
-                        <div class="zr-modal-header">
-                            <p class="zr-modal-title">
+            <div class="nv-modal fade nv-modal-move">
+                <div class="nv-modal-dialog">
+                    <div class="nv-modal-content">
+                        <div class="nv-modal-header">
+                            <p class="nv-modal-title">
                                 <span>Title</span>
-                                <i class="zricon-close zr-modal-close"></i>
+                                <i class="nvicon-close nv-modal-close"></i>
                             </p>
                         </div>
-                        <div class="zr-modal-body">
+                        <div class="nv-modal-body">
                             Here is the content  Here is the content Here is the content  Here is the content
                         </div>
-                        <div class="zr-modal-footer zr-modal-footer-center">
-                            <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                            <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+                        <div class="nv-modal-footer nv-modal-footer-center">
+                            <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                            <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
                         </div>
                     </div>
                 </div>
             </div>
             <!--javascript代码-->
-            Zr.ready(function(){
-            Zr.use("modal",function(zr,modal){
+            Nv.ready(function(){
+            Nv.use("modal",function(nv,modal){
                 /*
                 modal.init中第一个参数为需要调用弹窗的class或者id，
                 第二个参数为一个对象，其中top为垂直距离，默认不填或者为""垂直居中，
                 他的值为number类型，openCallback是弹窗打开的回调函数，closeCallback
                 弹窗关闭的回调函数,move属性设置为true时开启模态框的拖拽，默认为false
                 */
-                var modal=modal.init(".zr-modal-custom",{
+                var modal=modal.init(".nv-modal-custom",{
                     top:100,
                     move:true,
                     openCallback:function(){},
@@ -761,7 +762,7 @@
             })
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -845,341 +846,339 @@
     </section>
 </article>
 <!--弹窗部分-->
-<div class="zr-modal zr-modal-lg zr-modal-size-lg">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
-                <p class="zr-modal-title">
+<div class="nv-modal nv-modal-lg nv-modal-size-lg">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
+                <p class="nv-modal-title">
                     <span>Title</span>
-                    <i class="zricon-close zr-modal-close"></i>
+                    <i class="nvicon-close nv-modal-close"></i>
                 </p>
             </div>
-            <div class="zr-modal-body">
+            <div class="nv-modal-body">
                 Here is the content  Here is the content Here is the content  Here is the content
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-normal zr-modal-size-normal">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
-                <p class="zr-modal-title">
+<div class="nv-modal nv-modal-normal nv-modal-size-normal">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
+                <p class="nv-modal-title">
                     <span>Title</span>
-                    <i class="zricon-close zr-modal-close"></i>
+                    <i class="nvicon-close nv-modal-close"></i>
                 </p>
             </div>
-            <div class="zr-modal-body">
+            <div class="nv-modal-body">
                 Here is the content  Here is the content Here is the content  Here is the content
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-sm zr-modal-size-sm">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
-                <p class="zr-modal-title">
+<div class="nv-modal nv-modal-sm nv-modal-size-sm">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
+                <p class="nv-modal-title">
                     <span>Title</span>
-                    <i class="zricon-close zr-modal-close"></i>
+                    <i class="nvicon-close nv-modal-close"></i>
                 </p>
             </div>
-            <div class="zr-modal-body">
+            <div class="nv-modal-body">
                 Here is the content  Here is the content Here is the content  Here is the content
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-prompt">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
-                <p class="zr-modal-title">
+<div class="nv-modal nv-modal-prompt">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
+                <p class="nv-modal-title">
                     <span>Title</span>
-                    <i class="zricon-close zr-modal-close"></i>
+                    <i class="nvicon-close nv-modal-close"></i>
                 </p>
             </div>
-            <div class="zr-modal-body">
+            <div class="nv-modal-body">
                 Here is the content  Here is the content Here is the content  Here is the content
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-enters">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
-                <p class="zr-modal-title">
+<div class="nv-modal nv-modal-enters">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
+                <p class="nv-modal-title">
                     <span>Title</span>
-                    <i class="zricon-close zr-modal-close"></i>
+                    <i class="nvicon-close nv-modal-close"></i>
                 </p>
             </div>
-            <div class="zr-modal-body">
-                <i class="zricon-info zr-modal-warning"></i>Do you want to delete these items?
+            <div class="nv-modal-body">
+                <i class="nvicon-info nv-modal-warning"></i>Do you want to delete these items?
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-submit">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
-                <p class="zr-modal-title">
+<div class="nv-modal nv-modal-submit">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
+                <p class="nv-modal-title">
                     <span>Title</span>
-                    <i class="zricon-close zr-modal-close"></i>
+                    <i class="nvicon-close nv-modal-close"></i>
                 </p>
             </div>
-            <div class="zr-modal-body">
+            <div class="nv-modal-body">
                 <form>
                     <div>
                         <label>Fied A</label>
-                        <input type="text" placeholder="Please input" class="zr-input zr-modal-input">
+                        <input type="text" placeholder="Please input" class="nv-input nv-modal-input">
                     </div>
                     <div>
                         <label>Fied A</label>
-                        <input type="text" placeholder="Please input" class="zr-input zr-modal-input">
+                        <input type="text" placeholder="Please input" class="nv-input nv-modal-input">
                     </div>
                 </form>
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-infos zr-modal-status">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
+<div class="nv-modal nv-modal-infos nv-modal-status">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
             </div>
-            <div class="zr-modal-body">
-                <i class="zricon-info zr-modal-info zr-modal-icon"></i>
+            <div class="nv-modal-body">
+                <i class="nvicon-info nv-modal-info nv-modal-icon"></i>
                 <div class="prompt-content">
                     <p class="prompt-content-title">This is a normal message</p>
                     <p>balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalab</p>
                 </div>
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-cancel">Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-cancel">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-success zr-modal-status">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
+<div class="nv-modal nv-modal-success nv-modal-status">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
             </div>
-            <div class="zr-modal-body">
-                <i class="zricon-info zr-modal-ok zr-modal-icon"></i>
+            <div class="nv-modal-body">
+                <i class="nvicon-info nv-modal-ok nv-modal-icon"></i>
                 <div class="prompt-content">
                     <p class="prompt-content-title">This is a success message</p>
                     <p>balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalab</p>
                 </div>
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-cancel">Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-cancel">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-warnings zr-modal-status">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
+<div class="nv-modal nv-modal-warnings nv-modal-status">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
             </div>
-            <div class="zr-modal-body">
-                <i class="zricon-info zr-modal-warning zr-modal-icon"></i>
+            <div class="nv-modal-body">
+                <i class="nvicon-info nv-modal-warning nv-modal-icon"></i>
                 <div class="prompt-content">
                     <p class="prompt-content-title">This is a warning message</p>
                     <p>balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalab</p>
                 </div>
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-cancel">Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-cancel">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-errors zr-modal-status">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
+<div class="nv-modal nv-modal-errors nv-modal-status">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
             </div>
-            <div class="zr-modal-body">
-                <i class="zricon-info zr-modal-error zr-modal-icon"></i>
+            <div class="nv-modal-body">
+                <i class="nvicon-info nv-modal-error nv-modal-icon"></i>
                 <div class="prompt-content">
                     <p class="prompt-content-title">This is a error message</p>
                     <p>balabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalabalab</p>
                 </div>
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-cancel">Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-cancel">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-submit-async">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
-                <p class="zr-modal-title">
+<div class="nv-modal nv-modal-submit-async">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
+                <p class="nv-modal-title">
                     <span>Title</span>
-                    <i class="zricon-close zr-modal-close"></i>
+                    <i class="nvicon-close nv-modal-close"></i>
                 </p>
             </div>
-            <div class="zr-modal-body">
+            <div class="nv-modal-body">
                 <form>
                     <div>
                         <label>Fied A</label>
-                        <input type="text" placeholder="Please input" class="zr-input">
+                        <input type="text" placeholder="Please input" class="nv-input">
                     </div>
                     <div>
                         <label>Fied A</label>
-                        <input type="text" placeholder="Please input" class="zr-input">
+                        <input type="text" placeholder="Please input" class="nv-input">
                     </div>
                 </form>
             </div>
-            <div class="zr-modal-footer">
-                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter"><i class="zricon-spin6 animate-spin zr-modal-loading"></i>Ok</button>
+            <div class="nv-modal-footer">
+                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter"><i class="nvicon-spin6 animate-spin nv-modal-loading"></i>Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-custom">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
-                <p class="zr-modal-title">
+<div class="nv-modal nv-modal-custom">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
+                <p class="nv-modal-title">
                     <span>Title</span>
-                    <i class="zricon-close zr-modal-close"></i>
+                    <i class="nvicon-close nv-modal-close"></i>
                 </p>
             </div>
-            <div class="zr-modal-body">
+            <div class="nv-modal-body">
                 Here is the content  Here is the content Here is the content  Here is the content
             </div>
-            <div class="zr-modal-footer zr-modal-footer-center">
-                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+            <div class="nv-modal-footer nv-modal-footer-center">
+                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
             </div>
         </div>
     </div>
 </div>
-<div class="zr-modal zr-modal-move">
-    <div class="zr-modal-dialog">
-        <div class="zr-modal-content">
-            <div class="zr-modal-header">
-                <p class="zr-modal-title">
+<div class="nv-modal nv-modal-move">
+    <div class="nv-modal-dialog">
+        <div class="nv-modal-content">
+            <div class="nv-modal-header">
+                <p class="nv-modal-title">
                     <span>Title</span>
-                    <i class="zricon-close zr-modal-close"></i>
+                    <i class="nvicon-close nv-modal-close"></i>
                 </p>
             </div>
-            <div class="zr-modal-body">
+            <div class="nv-modal-body">
                 Here is the content  Here is the content Here is the content  Here is the content
             </div>
-            <div class="zr-modal-footer zr-modal-footer-center">
-                <button class="zr-btn zr-btn-default zr-modal-btn zr-modal-cancel">Cancle</button>
-                <button class="zr-btn zr-btn-primary zr-modal-btn zr-modal-enter">Ok</button>
+            <div class="nv-modal-footer nv-modal-footer-center">
+                <button class="nv-btn nv-btn-default nv-modal-btn nv-modal-cancel">Cancle</button>
+                <button class="nv-btn nv-btn-primary nv-modal-btn nv-modal-enter">Ok</button>
             </div>
         </div>
     </div>
 </div>
 <!--注意此段js必须第一引入在开发模式下{-->
-<script type="text/javascript" src="//storage.jd.com/1.2.2/zr.dev.min.js"></script>
 <script type="text/javascript">
-    Zr.config({
+    Nv.config({
         baseUrl: "/js/plugin_modules/",
         requestTime:true
     })
-    Zr.ready(function(){
-        Zr.use("./js/quickMenu","./js/code",function(){
-            Zr.use("jquery","/zrModules/modal/",function(zr,$,modal){
-                var modal1=modal.init(".zr-modal-prompt",{
+    Nv.ready(function(){
+        Nv.use("jquery","modal",function(nv,$,modal){
+            var modal1=modal.init(".nv-modal-prompt",{
 
-                    }),
-                    modal2=modal.init(".zr-modal-enters",{
+                }),
+                modal2=modal.init(".nv-modal-enters",{
 
-                    }),
-                    modal3=modal.init(".zr-modal-submit",{
+                }),
+                modal3=modal.init(".nv-modal-submit",{
 
-                    }),
-                    modal4=modal.init(".zr-modal-infos",{}),
-                    modal5=modal.init(".zr-modal-success",{}),
-                    modal6=modal.init(".zr-modal-warnings",{}),
-                    modal7=modal.init(".zr-modal-errors",{}),
-                    modal8=modal.init(".zr-modal-submit-async",{}),
-                    modal9=modal.init(".zr-modal-custom",{
-                        top:100
-                    }),
-                    modalLg=modal.init(".zr-modal-size-lg",{}),
-                    modalNormal=modal.init(".zr-modal-size-normal",{}),
-                    modalSm=modal.init(".zr-modal-size-sm",{});
-                    modal10=modal.init(".zr-modal-move",{
-                        move:true
-                    }),
+                }),
+                modal4=modal.init(".nv-modal-infos",{}),
+                modal5=modal.init(".nv-modal-success",{}),
+                modal6=modal.init(".nv-modal-warnings",{}),
+                modal7=modal.init(".nv-modal-errors",{}),
+                modal8=modal.init(".nv-modal-submit-async",{}),
+                modal9=modal.init(".nv-modal-custom",{
+                    top:100
+                }),
+                modalLg=modal.init(".nv-modal-size-lg",{}),
+                modalNormal=modal.init(".nv-modal-size-normal",{}),
+                modalSm=modal.init(".nv-modal-size-sm",{});
+            modal10=modal.init(".nv-modal-move",{
+                move:true
+            }),
                 $(".size-lg").off("click").on("click",function(){
                     modalLg.show();
                 })
-                $(".size-normal").off("click").on("click",function(){
-                    modalNormal.show();
-                })
-                $(".size-sm").off("click").on("click",function(){
-                    modalSm.show();
-                })
-                $(".message-prompt").off("click").on("click",function(){
-                    modal1.show();
-                })
-                $(".message-enter").off("click").on("click",function(){
-                    modal2.show();
-                })
-                $(".message-submit").off("click").on("click",function(){
-                    modal3.show();
-                })
-                $(".message-info").off("click").on("click",function(){
-                    modal4.show();
-                })
-                $(".message-success").off("click").on("click",function(){
-                    modal5.show();
-                })
-                $(".message-warning").off("click").on("click",function(){
-                    modal6.show();
-                })
-                $(".message-error").off("click").on("click",function(){
-                    modal7.show();
-                })
-                $(".message-async").off("click").on("click",function(){
-                    modal8.show();
-                })
-                $(".message-cunstom").off("click").on("click",function(){
-                    modal9.show();
-                })
-                $(".move").off("click").on("click",function(){
-                    modal10.show();
-                })
+            $(".size-normal").off("click").on("click",function(){
+                modalNormal.show();
+            })
+            $(".size-sm").off("click").on("click",function(){
+                modalSm.show();
+            })
+            $(".message-prompt").off("click").on("click",function(){
+                modal1.show();
+            })
+            $(".message-enter").off("click").on("click",function(){
+                modal2.show();
+            })
+            $(".message-submit").off("click").on("click",function(){
+                modal3.show();
+            })
+            $(".message-info").off("click").on("click",function(){
+                modal4.show();
+            })
+            $(".message-success").off("click").on("click",function(){
+                modal5.show();
+            })
+            $(".message-warning").off("click").on("click",function(){
+                modal6.show();
+            })
+            $(".message-error").off("click").on("click",function(){
+                modal7.show();
+            })
+            $(".message-async").off("click").on("click",function(){
+                modal8.show();
+            })
+            $(".message-cunstom").off("click").on("click",function(){
+                modal9.show();
+            })
+            $(".move").off("click").on("click",function(){
+                modal10.show();
             })
         })
+        Nv.use("./js/quickMenu","./js/code")
     })
 
 </script>

@@ -110,5 +110,6 @@ Nv.add("./affix/1.0.1/cdn_index",function(nv,$){
         init:affix.init
     }
 },{
-    requires:["jquery"]
+    requires:["jquery"],
+    alias:"affix"
 })

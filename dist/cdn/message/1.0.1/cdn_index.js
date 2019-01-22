@@ -30,4 +30,4 @@ function _alert(content,options){var options=options||{};var defaults={title:opt
 options=$.extend(defaults,options);_rebuildInfoHTML(options);}
 function _confirm(content,options){var options=options||{};var defaults={title:options.title||"",content:content||"",status:"confirm",okText:"确定",closeText:"取消",onClose:function(){},onConfirm:function(){}}
 options=$.extend(defaults,options);_rebuildInfoHTML(options)}
-return{init:init,config:_config,info:_info,success:_success,warning:_warning,error:_error,loadingShow:_loading,loadingHide:_loadingHide,alert:_alert,confirm:_confirm}},{requires:["jquery","./css/cdn_index.css"]})
+return{init:init,config:_config,info:_info,success:_success,warning:_warning,error:_error,loadingShow:_loading,loadingHide:_loadingHide,alert:_alert,confirm:_confirm}},{requires:["jquery","./css/cdn_index.css"],alias:'message'})

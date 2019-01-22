@@ -3002,4 +3002,4 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
     return {
        init:datePicker.init
     }
-},{requires:["jquery","./static/js/cdn_moment","./css/cdn_index.css"]})
+},{requires:["jquery","./static/js/cdn_moment","./css/cdn_index.css"],alias:'dataPicker'})

@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Message</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
-    <style type="text/css">
-        .c-demo-btn .zr-btn{
-            margin-right: 8px;
-            vertical-align: bottom;
-        }
-    </style>
-    <script type="text/javascript" src="//storage.jd.com/1.3.3/zr.min.js?1"></script>
+
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <script type="text/javascript">
-        Zr.config({
+        Nv.config({
             baseUrl:"/js/plugin_modules/",
             module:{
                 "message":"./modal/index"
             },
             requestTime:true
         })
-        Zr.ready(function(){
-            Zr.use("./js/quickMenu","./js/code");
-            Zr.use("./test")
+        Nv.ready(function(){
+            Nv.use("./js/quickMenu","./js/code");
+            Nv.use("./test")
         })
     </script>
+    <style type="text/css">
+        .c-demo-btn .nv-btn{
+            margin-right: 8px;
+            vertical-align: bottom;
+        }
+    </style>
 </head>
 <body>
 <article class="c-content">
@@ -41,21 +43,21 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <p class="c-demo-btn">
-                <button type="button" onclick="Zr.use('message',function(zr,message){message.info('This is a message of info')})" class="zr-btn zr-btn-default">Info</button>
-                <button type="button" onclick="Zr.use('message',function(zr,message){message.success('This is a message of success')})" class="zr-btn zr-btn-default">Success</button>
-                <button type="button" onclick="Zr.use('message',function(zr,message){message.warning('This is a message of warning')})" class="zr-btn zr-btn-default">Warning</button>
-                <button type="button" onclick="Zr.use('message',function(zr,message){message.error('This is a message of error')})" class="zr-btn zr-btn-default">Error</button>
+                <button type="button" onclick="Nv.use('message',function(nv,message){message.info('This is a message of info')})" class="nv-btn nv-btn-default">Info</button>
+                <button type="button" onclick="Nv.use('message',function(nv,message){message.success('This is a message of success')})" class="nv-btn nv-btn-default">Success</button>
+                <button type="button" onclick="Nv.use('message',function(nv,message){message.warning('This is a message of warning')})" class="nv-btn nv-btn-default">Warning</button>
+                <button type="button" onclick="Nv.use('message',function(nv,message){message.error('This is a message of error')})" class="nv-btn nv-btn-default">Error</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
     <!--HTML-->
-    <button type="button" class="zr-btn zr-btn-default info">Info</button>
-    <button type="button" class="zr-btn zr-btn-default success">Success</button>
-    <button type="button" class="zr-btn zr-btn-default warning">Warning</button>
-    <button type="button" class="zr-btn zr-btn-default error">Error</button>
+    <button type="button" class="nv-btn nv-btn-default info">Info</button>
+    <button type="button" class="nv-btn nv-btn-default success">Success</button>
+    <button type="button" class="nv-btn nv-btn-default warning">Warning</button>
+    <button type="button" class="nv-btn nv-btn-default error">Error</button>
 
     <!--jQuery-->
-    Zr.use("message","jquery",function(zr,message,$){
+    Nv.use("message","jquery",function(nv,message,$){
         $(".info").off("click").on("click",function(){
             message.info("This is a message of info");
         })
@@ -70,7 +72,7 @@
         })
     })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -82,14 +84,14 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <p class="c-demo-btn">
-                <button type="button" onclick="Zr.use('message',function(zr,message){message.info('This message will disappear in 10 seconds',{time:10000})})" class="zr-btn zr-btn-default">Customized display duration</button>
+                <button type="button" onclick="Nv.use('message',function(nv,message){message.info('This message will disappear in 10 seconds',{time:10000})})" class="nv-btn nv-btn-default">Customized display duration</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--HTML-->
-            <button type="button" class="zr-btn zr-btn-default">Customized display duration</button>
+            <button type="button" class="nv-btn nv-btn-default">Customized display duration</button>
             <!--jQuery-->
-            Zr.use("message","jquery",function(zr,message,$){
+            Nv.use("message","jquery",function(nv,message,$){
                 $(".info").off("click").on("click",function(){
                     //10s后消失
                     message.info("This message will disappear in 10 seconds",{
@@ -99,7 +101,7 @@
             })
 
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -111,15 +113,15 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <p class="c-demo-btn">
-                <button type="button" onclick="Zr.use('message',function(zr,message){message.loadingShow('Loading...')})"  class="zr-btn zr-btn-default">Loading</button>
+                <button type="button" onclick="Nv.use('message',function(nv,message){message.loadingShow('Loading...')})"  class="nv-btn nv-btn-default">Loading</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
     <!--HTML-->
-    <button type="button" class="zr-btn zr-btn-default">Loading</button>
+    <button type="button" class="nv-btn nv-btn-default">Loading</button>
 
     <!--jQuery-->
-    Zr.use("message","jquery",function(zr,message,$){
+    Nv.use("message","jquery",function(nv,message,$){
         $(".info").off("click").on("click",function(){
             //10s后消失
             message.loadingShow("Loading...");
@@ -127,7 +129,7 @@
         })
     })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -139,19 +141,19 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <p class="c-demo-btn">
-                <button type="button" onclick="Zr.use('message',function(zr,message){message.alert('@注意此时是对话框')})"  class="zr-btn zr-btn-default">Alert</button>
+                <button type="button" onclick="Nv.use('message',function(nv,message){message.alert('@注意此时是对话框')})"  class="nv-btn nv-btn-default">Alert</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--HTML-->
-            <button type="button" class="zr-btn zr-btn-default">Alert</button>
+            <button type="button" class="nv-btn nv-btn-default">Alert</button>
 
             <!--jQuery-->
-            Zr.use("message",function(zr,message){
+            Nv.use("message",function(nv,message){
             message.alert('@注意此时是对话框')
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -163,19 +165,19 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <p class="c-demo-btn">
-                <button type="button" onclick="Zr.use('message',function(zr,message){message.confirm('是否要删除此条数据？')})"  class="zr-btn zr-btn-default">Confirm</button>
+                <button type="button" onclick="Nv.use('message',function(nv,message){message.confirm('是否要删除此条数据？')})"  class="nv-btn nv-btn-default">Confirm</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--HTML-->
-            <button type="button" class="zr-btn zr-btn-default">Confirm</button>
+            <button type="button" class="nv-btn nv-btn-default">Confirm</button>
 
             <!--jQuery-->
-            Zr.use("message",function(zr,message){
+            Nv.use("message",function(nv,message){
             message.confirm('是否要删除此条数据')
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-options-title">Method</div>
     <section class="c-table">
@@ -354,7 +356,7 @@
                         <div class="c-cell c-table-w-125">String（可选）</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-500">提示图标，传入ICONS中的任何样式即可。e.g:"zricon-star"</div>
+                        <div class="c-cell c-table-w-500">提示图标，传入ICONS中的任何样式即可。e.g:"nvicon-star"</div>
                     </td>
                 </tr>
                 <tr>
