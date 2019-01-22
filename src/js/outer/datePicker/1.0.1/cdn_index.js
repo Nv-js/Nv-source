@@ -1707,7 +1707,8 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                      * @Date: Created in 2018/4/19 下午10:59
                      * @Description:初始化日期控件，并将配置信息存储到Dom对象下
                      */
-                    _this.options.languageConfig = lconfig
+
+                    _this.options.languageConfig = $.extend(true,lconfig,_this.options.languageConfig)
                     //周 日历特殊处理数值
                     if(_this.options.type == "week" && _this.options.initialDate.toString().indexOf(_this.options.languageConfig.weekText) > -1){
                         var time = _this.options.initialDate.split(_this.options.languageConfig.weekText)[0];
