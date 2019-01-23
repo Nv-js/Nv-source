@@ -67,7 +67,7 @@
             "version":"1.0.1"
         },
         "page":{
-            "path":"./page/@version/cdn_page",
+            "path":"./page/@version/cdn_index",
             "version":"1.0.1"
         },
         "modal":{

@@ -1,0 +1,721 @@
+@nv-page-color: #4363f4;
+@import "../../../../../less/inner/theme/default";
+.@{nv-prefix}-pagination {
+    font-size: 14px;
+    //下拉
+    .@{nv-prefix}-dropdown {
+        margin: 0 5px;
+    }
+    //完整版
+    .@{nv-prefix}-pagination-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        // font-size: 0;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.65);
+        box-sizing: border-box;
+
+        .@{nv-prefix}-pagination-pre {
+            cursor: pointer;
+            font-size: 14px;
+            user-select: none;
+            min-width: 32px;
+            height: 32px;
+            line-height: 30px;
+            text-align: center;
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #fff;
+            margin-right: 8px;
+            outline: 0;
+            box-sizing: border-box;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            transition: all .3s;
+
+            a {
+                display: block;
+                height: 100%;
+                transition: all .3s;
+                padding-left: 5px;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-top: 1px solid;
+                    border-right: 1px solid;
+                    transform: rotate(-135deg);
+                    transition: all .3s;
+                    border-color: rgba(0, 0, 0, 0.65);
+                }
+            }
+
+            &:hover {
+                border-color: @nv-page-color;
+
+                a {
+                    &::after {
+                        border-color: @nv-page-color !important;
+                    }
+                }
+            }
+
+            &.@{nv-prefix}-pagination-disable {
+                cursor: not-allowed;
+
+                a {
+                    cursor: not-allowed;
+
+                    &::after {
+                        border-color: rgba(0, 0, 0, 0.25);
+                    }
+                }
+
+                &:hover {
+                    border-color: #d9d9d9;
+
+                    a {
+                        &::after {
+                            border-color: rgba(0, 0, 0, 0.25) !important;
+                        }
+                    }
+                }
+            }
+
+            //文案按钮
+            &.@{nv-prefix}-pagination-text {
+                a {
+                    color: rgba(0, 0, 0, 0.65);
+                    text-decoration: none;
+                    display: block;
+                    height: 100%;
+                    transition: all .3s;
+                    padding: 0 5px;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    border-color: @nv-page-color;
+
+                    a {
+                        color: @nv-page-color;
+                    }
+                }
+
+                &.@{nv-prefix}-pagination-disable {
+                    cursor: not-allowed;
+
+                    a {
+                        cursor: not-allowed;
+                        color: #d9d9d9;
+                    }
+
+                    &:hover {
+                        border-color: #d9d9d9;
+
+                        a {
+                            color: #d9d9d9;
+                        }
+                    }
+                }
+            }
+        }
+
+        .@{nv-prefix}-pagination-next {
+            cursor: pointer;
+            font-size: 14px;
+            user-select: none;
+            min-width: 32px;
+            height: 32px;
+            line-height: 30px;
+            text-align: center;
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #fff;
+            margin-right: 8px;
+            outline: 0;
+            box-sizing: border-box;
+            border: 1px solid #d9d9d9;
+            border-radius: 4px;
+            transition: all .3s;
+
+            a {
+                display: block;
+                height: 100%;
+                transition: all .3s;
+                padding-right: 5px;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-top: 1px solid;
+                    border-right: 1px solid;
+                    transform: rotate(45deg);
+                    transition: all .3s;
+                    border-color: rgba(0, 0, 0, 0.65);
+                }
+            }
+
+            &:hover {
+                border-color: @nv-page-color;
+
+                a {
+                    &::after {
+                        border-color: @nv-page-color !important;
+                    }
+                }
+            }
+
+            &.@{nv-prefix}-pagination-disable {
+                cursor: not-allowed;
+
+                a {
+                    cursor: not-allowed;
+
+                    &::after {
+                        border-color: rgba(0, 0, 0, 0.25);
+                    }
+                }
+
+                &:hover {
+                    border-color: #d9d9d9;
+
+                    a {
+                        &::after {
+                            border-color: rgba(0, 0, 0, 0.25) !important;
+                        }
+                    }
+                }
+            }
+
+            //文案按钮
+            &.@{nv-prefix}-pagination-text {
+                a {
+                    color: rgba(0, 0, 0, 0.65);
+                    text-decoration: none;
+                    display: block;
+                    height: 100%;
+                    transition: all .3s;
+                    padding: 0 5px;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    border-color: @nv-page-color;
+
+                    a {
+                        color: @nv-page-color;
+                    }
+                }
+
+                &.@{nv-prefix}-pagination-disable {
+                    cursor: not-allowed;
+
+                    a {
+                        cursor: not-allowed;
+                        color: #d9d9d9;
+                    }
+
+                    &:hover {
+                        border-color: #d9d9d9;
+
+                        a {
+                            color: #d9d9d9;
+                        }
+                    }
+                }
+            }
+        }
+
+        .@{nv-prefix}-pagination-ellipsis {
+            font-size: 14px;
+            min-width: 32px;
+            height: 32px;
+            line-height: 30px;
+            text-align: center;
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #fff;
+            margin-right: 8px;
+            outline: 0;
+            box-sizing: border-box;
+
+            a {
+                cursor: default;
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.35);
+                transition: none;
+                margin: 0 6px;
+                font-weight: 500;
+            }
+        }
+
+        .@{nv-prefix}-pagination-item {
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+            user-select: none;
+            min-width: 32px;
+            height: 32px;
+            line-height: 30px;
+            text-align: center;
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            border: 1px solid #d9d9d9;
+            background-color: #fff;
+            margin-right: 8px;
+            outline: 0;
+            box-sizing: border-box;
+            transition: all .3s;
+
+            a {
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.65);
+                margin: 0 6px;
+                font-weight: 500;
+            }
+
+            &.active {
+                border-color: @nv-page-color;
+                background-color: @nv-page-color;
+                a {
+                    color: white;
+                }
+                &:hover {
+                    a {
+                        color: white;
+                    }
+                }
+            }
+
+            &:hover {
+                border-color: @nv-page-color;
+                a {
+                    color: @nv-page-color;
+                }
+            }
+        }
+
+        
+
+        .@{nv-prefix}-pagination-total-text {
+            display: inline-block;
+            vertical-align: middle;
+            height: 32px;
+            line-height: 32px;
+            margin-right: 8px;
+        }
+
+        .@{nv-prefix}-pagination-total-page {
+            display: inline-block;
+            vertical-align: middle;
+            height: 32px;
+            line-height: 32px;
+            margin-left: 8px;
+        }
+
+        .@{nv-prefix}-pagination-options {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 8px;
+
+            .@{nv-prefix}-pagination-options-jump {
+                display: inline-block;
+                vertical-align: top;
+                height: 32px;
+                line-height: 32px;
+
+                input {
+                    box-sizing: border-box;
+                    position: relative;
+                    display: inline-block;
+                    padding: 4px 11px;
+                    width: 100%;
+                    height: 32px;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    color: rgba(0, 0, 0, 0.65);
+                    background-color: #fff;
+                    background-image: none;
+                    border: 1px solid #d9d9d9;
+                    border-radius: 4px;
+                    transition: all .3s;
+                    margin: 0 8px;
+                    width: 50px;
+                    outline: none;
+
+                    &:hover {
+                        border-color: @nv-page-color;
+                    }
+                }
+            }
+        }
+
+        &::after {
+            content: '';
+            height: 0;
+            visibility: hidden;
+            clear: both;
+            display: block;
+        }
+    }
+    //mini版
+    .@{nv-prefix}-pagination-mini-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        // font-size: 0;
+        line-height: 1.5;
+        color: rgba(0, 0, 0, 0.65);
+        box-sizing: border-box;
+
+        .@{nv-prefix}-pagination-pre {
+            cursor: pointer;
+            font-size: 14px;
+            user-select: none;
+            text-align: center;
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #fff;
+            margin-right: 8px;
+            outline: 0;
+            box-sizing: border-box;
+            transition: all .3s;
+
+            a {
+                display: block;
+                height: 100%;
+                transition: all .3s;
+                padding-left: 5px;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-top: 1px solid;
+                    border-right: 1px solid;
+                    transform: rotate(-135deg);
+                    transition: all .3s;
+                    border-color: rgba(0, 0, 0, 0.65);
+                }
+            }
+
+            &:hover {
+                border-color: @nv-page-color;
+                a {
+                    &::after {
+                        border-color: @nv-page-color !important;
+                    }
+                }
+            }
+
+            &.@{nv-prefix}-pagination-disable {
+                cursor: not-allowed;
+
+                a {
+                    cursor: not-allowed;
+
+                    &::after {
+                        border-color: rgba(0, 0, 0, 0.25);
+                    }
+                }
+
+                &:hover {
+                    border-color: #d9d9d9;
+
+                    a {
+                        &::after {
+                            border-color: rgba(0, 0, 0, 0.25) !important;
+                        }
+                    }
+                }
+            }
+
+            //文案按钮
+            &.@{nv-prefix}-pagination-text {
+                a {
+                    color: rgba(0, 0, 0, 0.65);
+                    text-decoration: none;
+                    display: block;
+                    height: 100%;
+                    transition: all .3s;
+                    padding: 0 5px;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    border-color: @nv-page-color;
+
+                    a {
+                        color: @nv-page-color;
+                    }
+                }
+
+                &.@{nv-prefix}-pagination-disable {
+                    cursor: not-allowed;
+
+                    a {
+                        cursor: not-allowed;
+                        color: #d9d9d9;
+                    }
+
+                    &:hover {
+                        border-color: #d9d9d9;
+
+                        a {
+                            color: #d9d9d9;
+                        }
+                    }
+                }
+            }
+        }
+
+        .@{nv-prefix}-pagination-next {
+            cursor: pointer;
+            font-size: 14px;
+            user-select: none;
+            text-align: center;
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #fff;
+            margin-right: 8px;
+            outline: 0;
+            box-sizing: border-box;
+            transition: all .3s;
+
+            a {
+                display: block;
+                height: 100%;
+                transition: all .3s;
+                padding-right: 5px;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 8px;
+                    height: 8px;
+                    border-top: 1px solid;
+                    border-right: 1px solid;
+                    transform: rotate(45deg);
+                    transition: all .3s;
+                    border-color: rgba(0, 0, 0, 0.65);
+                }
+            }
+
+            &:hover {
+                border-color: @nv-page-color;
+
+                a {
+                    &::after {
+                        border-color: @nv-page-color !important;
+                    }
+                }
+            }
+
+            &.@{nv-prefix}-pagination-disable {
+                cursor: not-allowed;
+
+                a {
+                    cursor: not-allowed;
+
+                    &::after {
+                        border-color: rgba(0, 0, 0, 0.25);
+                    }
+                }
+
+                &:hover {
+                    border-color: #d9d9d9;
+
+                    a {
+                        &::after {
+                            border-color: rgba(0, 0, 0, 0.25) !important;
+                        }
+                    }
+                }
+            }
+
+            //文案按钮
+            &.@{nv-prefix}-pagination-text {
+                a {
+                    color: rgba(0, 0, 0, 0.65);
+                    text-decoration: none;
+                    display: block;
+                    height: 100%;
+                    transition: all .3s;
+                    padding: 0 5px;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    border-color: @nv-page-color;
+
+                    a {
+                        color: @nv-page-color;
+                    }
+                }
+
+                &.@{nv-prefix}-pagination-disable {
+                    cursor: not-allowed;
+
+                    a {
+                        cursor: not-allowed;
+                        color: #d9d9d9;
+                    }
+
+                    &:hover {
+                        border-color: #d9d9d9;
+
+                        a {
+                            color: #d9d9d9;
+                        }
+                    }
+                }
+            }
+        }
+
+        .@{nv-prefix}-pagination-ellipsis {
+            font-size: 14px;
+            text-align: center;
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #fff;
+            margin-right: 8px;
+            outline: 0;
+            box-sizing: border-box;
+
+            a {
+                cursor: default;
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.35);
+                transition: none;
+                margin: 0 6px;
+                font-weight: 500;
+            }
+        }
+
+        .@{nv-prefix}-pagination-item {
+            cursor: pointer;
+            font-size: 14px;
+            user-select: none;
+            text-align: center;
+            list-style: none;
+            display: inline-block;
+            vertical-align: middle;
+            background-color: #fff;
+            margin-right: 8px;
+            outline: 0;
+            box-sizing: border-box;
+            transition: all .3s;
+
+            a {
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.65);
+                margin: 0 2px;
+                font-weight: 500;
+            }
+
+            &.active {
+                a {
+                    color: @nv-page-color;
+                }
+                &:hover {
+                    a {
+                        color: @nv-page-color;
+                    }
+                }
+            }
+
+            &:hover {
+                a {
+                    color: @nv-page-color;
+                }
+            }
+        }
+
+        
+
+        .@{nv-prefix}-pagination-total-text {
+            display: inline-block;
+            vertical-align: middle;
+            // height: 32px;
+            // line-height: 32px;
+            margin-right: 8px;
+        }
+
+        .@{nv-prefix}-pagination-total-page {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+
+        .@{nv-prefix}-pagination-options {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 8px;
+
+            .@{nv-prefix}-pagination-options-jump {
+                display: inline-block;
+                vertical-align: top;
+                // height: 32px;
+                // line-height: 32px;
+
+                input {
+                    box-sizing: border-box;
+                    position: relative;
+                    display: inline-block;
+                    padding: 0 5px;
+                    width: 100%;
+                    height: 18px;
+                    font-size: 14px;
+                    // line-height: 1.5;
+                    color: rgba(0, 0, 0, 0.65);
+                    background-color: #fff;
+                    background-image: none;
+                    border: 1px solid #d9d9d9;
+                    border-radius: 4px;
+                    transition: all .3s;
+                    margin: 0 8px;
+                    width: 40px;
+                    outline: none;
+
+                    &:hover {
+                        border-color: @nv-page-color;
+                    }
+                }
+            }
+        }
+
+        &::after {
+            content: '';
+            height: 0;
+            visibility: hidden;
+            clear: both;
+            display: block;
+        }
+    }
+}
