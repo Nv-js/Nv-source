@@ -1,217 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
     <!--开发阶段引用jq-->
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <link type="text/css" rel="stylesheet" href="/dist/local/css/content/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="/dist/cdn/nv.min.css" />
     <style>
-        .zr-checkbox-vertical .zr-checkbox-module{
+        .nv-checkbox-vertical .nv-checkbox-module{
             margin-bottom: 10px;
         }
     </style>
 </head>
+
 <body>
-<article class="c-content">
-    <section class="c-title">
-        <p>Checkbox 复选框</p>
-        <span>对一组选项进行单选，主要用于一组可选项单项选择，或者单独用于切换到选中状态。</span>
-    </section>
-    <div class="c-line"></div>
-    <section class="c-thin-title">
-        <p>使用方法</p>
-        <span>
-            <ul>
-                <li><span>在一组可选项中进行多项选择时。</span></li>
-                <li><span>单独使用可以表示两种状态之间的切换。</span></li>
-                <li><span>复选按钮有选中态、未选中态、禁用态，放置在可选信息的左侧。</span></li>
-            </ul>
-        </span>
-    </section>
-    <div class="c-block-50"></div>
-    <section class="c-sub-title">
-        <p>基础样式 <a href="#">#</a></p>
-        <span>最基础简单的复选框样式,只需在input标签上加上class为 <i class="c-block-inline">zr-checkbox</i> 即可实现,标签添加 <i class="c-block-inline">checked="true"</i> 即为选中</span>
-    </section>
-    <section class="c-code">
-        <!--switch code show or hide-->
-        <div class="c-code-switch">&lt;code&gt;</div>
-        <div class="c-demo">
-            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox">
-            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true">
-        </div>
-        <div class="c-code-inner c-code-hide">
-            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox">
-            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true">
-        </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
-    </section>
-    <div class="c-block-50"></div>
-    <section class="c-sub-title">
-        <p>禁选样式 <a href="#">#</a></p>
-        <span>复选框不可用状态：不可选、不可更改,标签上添加 <i class="c-block-inline">disabled="disabled"</i> 代表复选框禁用</span>
-    </section>
-    <section class="c-code">
-        <!--switch code show or hide-->
-        <div class="c-code-switch">&lt;code&gt;</div>
-        <div class="c-demo">
-            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox" disabled="disabled">
-            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true" disabled="disabled">
-        </div>
-        <div class="c-code-inner c-code-hide">
-            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox" disabled="disabled">
-            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true" disabled="disabled">
-        </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
-    </section>
-    <div class="c-block-50"></div>
-    <section class="c-sub-title">
-        <p>复选框组合样式 <a href="#">#</a></p>
-        <span>在一个复选框组合内有多个勾选项，标签上添加 <i class="c-block-inline">title</i> 属性代表复选框显示文字</span>
-    </section>
-    <section class="c-code">
-        <!--switch code show or hide-->
-        <div class="c-code-switch">&lt;code&gt;</div>
-        <div class="c-demo">
-            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox">
-            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true">
-            <input type="checkbox" name="" value="0" title="checkbox3" class="zr-checkbox" disabled="disabled">
-            <input type="checkbox" name="" value="0" title="checkbox4" class="zr-checkbox" checked="true" disabled="disabled">
-        </div>
-        <div class="c-code-inner c-code-hide">
-            <input type="checkbox" name="" value="0" title="checkbox1" class="zr-checkbox">
-            <input type="checkbox" name="" value="0" title="checkbox2" class="zr-checkbox" checked="true">
-            <input type="checkbox" name="" value="0" title="checkbox3" class="zr-checkbox" disabled="disabled">
-            <input type="checkbox" name="" value="0" title="checkbox4" class="zr-checkbox" checked="true" disabled="disabled">
-        </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
-    </section>
-    <div class="c-block-50"></div>
-    <section class="c-sub-title">
-        <p>全选 (水平)<a href="#">#</a></p>
-        <span>所有选项全部勾选</span>
-    </section>
-    <section class="c-code">
-        <!--switch code show or hide-->
-        <div class="c-code-switch">&lt;code&gt;</div>
-        <div class="c-demo">
-            <div class="zr-checkbox-container">
-                <div class="zr-checkbox-all-container">
-                    <input type="checkbox" name="" value="0" title="Check all" class="zr-checkbox zr-checkbox-all" checked="true">
-                </div>
-                <div class="zr-checkbox-sigle-container">
-                    <input type="checkbox" name="" value="0" title="Checkbox1" class="zr-checkbox" zr-checkbox-click="checks">
-                    <input type="checkbox" name="" value="0" title="Checkbox2" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox3" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox4" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox5" class="zr-checkbox">
-                </div>
+    <article class="c-content">
+        <section class="c-title">
+            <p>Checkbox 复选框</p>
+            <span>对一组选项进行单选，主要用于一组可选项单项选择，或者单独用于切换到选中状态。</span>
+        </section>
+        <div class="c-line"></div>
+        <section class="c-thin-title">
+            <p>使用方法</p>
+            <span>
+                <ul>
+                    <li><span>在一组可选项中进行多项选择时。</span></li>
+                    <li><span>单独使用可以表示两种状态之间的切换。</span></li>
+                    <li><span>复选按钮有选中态、未选中态、禁用态，放置在可选信息的左侧。</span></li>
+                </ul>
+            </span>
+        </section>
+        <div class="c-block-50"></div>
+        <section class="c-sub-title">
+            <p>基础样式 <a href="#">#</a></p>
+            <span>最基础简单的复选框样式,只需在input标签上加上class为 <i class="c-block-inline">nv-checkbox</i> 即可实现,标签添加 <i class="c-block-inline">checked=""</i>
+                即为选中</span>
+        </section>
+        <section class="c-code">
+            <!--switch code show or hide-->
+            <div class="c-code-switch">&lt;code&gt;</div>
+            <div class="c-demo">
+                <input type="checkbox" name="demo1" value="checkbox1" data-label="label1" class="nv-checkbox">
+                <input type="checkbox" name="demo1" value="checkbox2" data-label="label1" class="nv-checkbox" checked="true">
             </div>
-        </div>
-        <div class="c-code-inner c-code-hide">
-            <div class="zr-checkbox-container">
-                <div class="zr-checkbox-all-container">
-                    <input type="checkbox" name="" value="0" title="Check all" class="zr-checkbox zr-checkbox-all" checked="true">
-                </div>
-                <div class="zr-checkbox-sigle-container">
-                    <input type="checkbox" name="" value="0" title="Checkbox1" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox2" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox3" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox4" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox5" class="zr-checkbox">
-                </div>
+            <div class="c-code-inner c-code-hide">
+                <input type="checkbox" name="demo2" value="checkbox1" data-label="label1" class="nv-checkbox">
+                <input type="checkbox" name="demo2" value="checkbox2" data-label="label1" class="nv-checkbox" checked="true">
             </div>
-        </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
-    </section>
-    <div class="c-block-50"></div>
-    <section class="c-sub-title">
-        <p>全选 (垂直)<a href="#">#</a></p>
-        <span>只需在class为 <i class="c-block-inline">zr-checkbox-sigle-container</i> 的节点上添加一个 <i class="c-block-inline">zr-checkbox-vertical</i> 的class即可实现垂直全选</span>
-    </section>
-    <section class="c-code">
-        <!--switch code show or hide-->
-        <div class="c-code-switch">&lt;code&gt;</div>
-        <div class="c-demo">
-            <div class="zr-checkbox-container">
-                <div class="zr-checkbox-all-container">
-                    <input type="checkbox" name="" value="0" title="Check all" class="zr-checkbox zr-checkbox-all" checked="true">
-                </div>
-                <div class="zr-checkbox-sigle-container zr-checkbox-vertical">
-                    <input type="checkbox" name="" value="0" title="Checkbox1" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox2" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox3" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox4" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox5" class="zr-checkbox">
-                </div>
+            <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        </section>
+        <div class="c-block-50"></div>
+        <section class="c-sub-title">
+            <p>禁选样式 <a href="#">#</a></p>
+            <span>复选框不可用状态：不可选、不可更改,标签上添加 <i class="c-block-inline">disabled=""</i> 代表复选框禁用</span>
+        </section>
+        <section class="c-code">
+            <!--switch code show or hide-->
+            <div class="c-code-switch">&lt;code&gt;</div>
+            <div class="c-demo">
+                <input type="checkbox" name="demo3" value="checkbox1" data-label="label1" class="nv-checkbox" disabled>
+                <input type="checkbox" name="demo3" value="checkbox2" data-label="label1" class="nv-checkbox" disabled
+                    checked>
             </div>
-        </div>
-        <div class="c-code-inner c-code-hide">
-            <div class="zr-checkbox-container">
-                <div class="zr-checkbox-all-container">
-                    <input type="checkbox" name="" value="0" title="Check all" class="zr-checkbox zr-checkbox-all" checked="true">
-                </div>
-                <div class="zr-checkbox-sigle-container zr-checkbox-vertical">
-                    <input type="checkbox" name="" value="0" title="Checkbox1" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox2" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox3" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox4" class="zr-checkbox">
-                    <input type="checkbox" name="" value="0" title="Checkbox5" class="zr-checkbox">
-                </div>
+            <div class="c-code-inner c-code-hide">
+                <input type="checkbox" name="demo3" value="checkbox1" data-label="label1" class="nv-checkbox" disabled>
+                <input type="checkbox" name="demo3" value="checkbox2" data-label="label1" class="nv-checkbox" disabled
+                    checked>
             </div>
-        </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
-    </section>
-    <div class="c-block-50"></div>
-    <section class="c-sub-title">
-        <p>自定义事件<a href="#">#</a></p>
-        <span>checkbox内置了一个名为zrChange的事件，只需要调用该事件就可以动态配置checkbox的选中和禁用状态（主要用于渲染完成之后动态改变checkbox的选中和禁用状态）</span>
-    </section>
-    <section class="c-code">
-        <!--switch code show or hide-->
-        <div class="c-code-switch">&lt;code&gt;</div>
-        <div class="c-demo">
-            <input type="checkbox" name="" value="111" title="Checkbox1" class="zr-checkbox" id="ckeckbox-demo1">
-            <input type="checkbox" name="" value="2222" title="Checkbox1" class="zr-checkbox" id="ckeckbox-demo2">
-        </div>
-        <div class="c-code-inner c-code-hide">
-            <!--html代码-->
-            <input type="checkbox" name="" value="111" title="Checkbox1" class="zr-checkbox" id="ckeckbox-demo3">
-            <!--javascript代码-->
-            <!--checked属性默认为false不选中，当他为true时会选中-->
-            document.getElementById("ckeckbox-demo3").zrChange({
+            <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        </section>
+        <div class="c-block-50"></div>
+        <section class="c-sub-title">
+            <p>复选框组合样式 <a href="#">#</a></p>
+            <span>在一个复选框组合内有多个勾选项，标签上添加 <i class="c-block-inline">data-label="checkbox1"</i> 属性代表复选框显示文字</span>
+        </section>
+        <section class="c-code">
+            <!--switch code show or hide-->
+            <div class="c-code-switch">&lt;code&gt;</div>
+            <div class="c-demo">
+                <input type="checkbox" name="demo4" value="1" data-label="checkbox1" class="nv-checkbox">
+                <input type="checkbox" name="demo4" value="2" data-label="checkbox2" class="nv-checkbox" checked="true">
+                <input type="checkbox" name="demo4" value="3" data-label="checkbox3" class="nv-checkbox" disabled="">
+                <input type="checkbox" name="demo4" value="4" data-label="checkbox4" class="nv-checkbox" checked="true"
+                    disabled="">
+            </div>
+            <div class="c-code-inner c-code-hide">
+                <input type="checkbox" name="demo5" value="1" data-label="checkbox1" class="nv-checkbox">
+                <input type="checkbox" name="demo5" value="2" data-label="checkbox2" class="nv-checkbox" checked="true">
+                <input type="checkbox" name="demo5" value="3" data-label="checkbox3" class="nv-checkbox" disabled="">
+                <input type="checkbox" name="demo5" value="4" data-label="checkbox4" class="nv-checkbox" checked="true"
+                    disabled="">
+            </div>
+            <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        </section>
+        <div class="c-block-50"></div>
+        <section class="c-sub-title">
+            <p>全选<a href="#">#</a></p>
+            <span>所有选项全部勾选</span>
+            <span>全选项与子项必须<i class="c-block-inline">name</i>相同.全选项有属性<i class="c-block-inline">data-all="true"</i></span>
+        </section>
+        <section class="c-code">
+            <!--switch code show or hide-->
+            <div class="c-code-switch">&lt;code&gt;</div>
+            <div class="c-demo">
+                <input type="checkbox" name="demo6" value="1" data-label="checkbox1" class="nv-checkbox" data-all="true">
+                <input type="checkbox" name="demo6" value="1" data-label="checkbox1.1" class="nv-checkbox">
+                <input type="checkbox" name="demo6" value="2" data-label="checkbox1.2" class="nv-checkbox">
+                <input type="checkbox" name="demo6" value="3" data-label="checkbox1.3" class="nv-checkbox">
+                <input type="checkbox" name="demo6" value="4" data-label="checkbox1.4" class="nv-checkbox">
+            </div>
+            <div class="c-code-inner c-code-hide">
+                <input type="checkbox" name="demo7" value="1" data-label="checkbox1" class="nv-checkbox" data-all="true">
+                <input type="checkbox" name="demo7" value="1" data-label="checkbox1.1" class="nv-checkbox">
+                <input type="checkbox" name="demo7" value="2" data-label="checkbox1.2" class="nv-checkbox">
+                <input type="checkbox" name="demo7" value="3" data-label="checkbox1.3" class="nv-checkbox">
+                <input type="checkbox" name="demo7" value="4" data-label="checkbox1.4" class="nv-checkbox">
+            </div>
+            <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        </section>
+
+        <div class="c-block-50"></div>
+        <section class="c-sub-title">
+            <p>自定义事件<a href="#">#</a></p>
+            <span>checkbox内置了一个名为zronchange的事件，只需要调用该事件就可以动态配置checkbox的选中和禁用状态（主要用于渲染完成之后动态改变checkbox的选中和禁用状态）</span>
+        </section>
+        <section class="c-code">
+            <!--switch code show or hide-->
+            <div class="c-code-switch">&lt;code&gt;</div>
+            <div class="c-demo">
+                <input type="checkbox" name="demo8" value="1" data-label="checkbox1" class="nv-checkbox" id="js-demo">
+                <input type="checkbox" name="demo8" value="1" data-label="checkbox2" class="nv-checkbox" id="js-demo1">
+                <button class="nv-btn nv-btn-primary js-select">选中</button>
+                <button class="nv-btn nv-btn-default js-disable">禁用</button>
+            </div>
+            <div class="c-code-inner c-code-hide">
+                <input type="checkbox" name="demo8" value="1" data-label="checkbox1" class="nv-checkbox" id="js-demo2">
+                <input type="checkbox" name="demo8" value="1" data-label="checkbox2" class="nv-checkbox" id="js-demo3">
+                <button class="nv-btn nv-btn-primary js-select">选中</button>
+                <button class="nv-btn nv-btn-default js-disable">禁用</button>
+                <!--html代码-->
+                $('.js-select').on('click', function(){
+                document.getElementById("js-demo2").onnvchange({
                 checked:true
-            })
-            <!--html代码-->
-            <input type="checkbox" name="" value="222" title="Checkbox1" class="zr-checkbox" id="ckeckbox-demo4">
-            <!--javascript代码-->
-            <!--disabled属性默认为false不选中，当他为true时会选中-->
-            document.getElementById("ckeckbox-demo4").zrChange({
+                })
+                })
+                $('.js-diabled').on('click', function(){
+                document.getElementById("js-demo3").onnvchange({
+                checked:true,
                 disabled:true
-            })
-        </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
-    </section>
-</article>
-<!--注意此段js必须第一引入在开发模式下{-->
-<script type="text/javascript" src="js/checkbox.js"></script>
-<script type="text/javascript" src="//storage.jd.com/1.2.2/zr.dev.min.js"></script>
-<script type="text/javascript">
-    Zr.config({
-        baseUrl: "/js/plugin_modules/",
-        requestTime:true
-    })
-    Zr.ready(function(){
-        Zr.use("jquery","./js/quickMenu","./js/code",function(zr,$){
-            document.getElementById("ckeckbox-demo1").zrChange({
-                checked:true
-            })
-            document.getElementById("ckeckbox-demo2").zrChange({
-                disabled:true
+                })
+                })
+            </div>
+            <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        </section>
+
+        <div class="c-block-50"></div>
+        <section class="c-sub-title">
+            <p>API <a href="#">#</a></p>
+            <span>
+                自定义属性
+            </span>
+        </section>
+        <div class="c-block-20"></div>
+        <section class="c-table">
+            <div class="c-table-header">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="c-cell c-table-w-200">属性</div>
+                            </th>
+                            <th>
+                                <div class="c-cell c-table-w-125">类型（是否必要）</div>
+                            </th>
+                            <th>
+                                <div class="c-cell c-table-w-500">描述</div>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="c-table-body">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">checked</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">string (选填)</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">checked 选中 eg: checked=""</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">disabled</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">string (选填)</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">disabled 禁用 eg: disabled=""</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">data-all</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">Boolean (选填)</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">全选属性 eg: data-all="true" 编辑全选属性得复选框会操作name相同得复选框</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">data-label</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">string (选填)</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">leabel内文字,可为空 eg: data-label="中国"</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <div class="c-block-50"></div>
+        <section class="c-sub-title">
+            <p>onnvchange配置项 <a href="#">#</a></p>
+            <span>
+                onnvchange可传配置项说明
+            </span>
+        </section>
+        <div class="c-block-20"></div>
+        <section class="c-table">
+            <div class="c-table-header">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="c-cell c-table-w-200">属性</div>
+                            </th>
+                            <th>
+                                <div class="c-cell c-table-w-125">类型</div>
+                            </th>
+                            <th>
+                                <div class="c-cell c-table-w-500">描述</div>
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="c-table-body">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">checked</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">Boolean</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">"选中" eg: {checked: true}</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">disabled</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">Boolean</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">"禁用" eg: {disabled: true}</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">value</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">String/Number</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">"值" eg: {value: 0}</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">label</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">String/Number</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">"显示文字" eg: {label: 0}</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">checkedAll</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">Boolean</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">"全选" eg: {checkedAll: true}该参数会覆盖checked参数
+                                    相同name的checkbox都会被选中</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">beforeFn</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">Function</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">回调函数,初始化开始时执行.this指向为当前操作input </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="c-cell c-table-w-200">afterFn</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-125">Function</div>
+                            </td>
+                            <td>
+                                <div class="c-cell c-table-w-500">回调函数,初始化结束时执行.this指向为当前操作input </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </article>
+    <!--注意此段js必须第一引入在开发模式下{-->
+    <script type="text/javascript" src="/src/js/inner/checkbox.js"></script>
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.dev.js"></script>
+    <script type="text/javascript">
+        Nv.config({
+            baseUrl: "/",
+            requestTime: true
+        })
+        Nv.ready(function () {
+            Nv.use("jquery", function (nv, $) {
+                $('.js-select').on('click', function () {
+                    document.getElementById("js-demo").onnvchange({
+                        checked: true
+                    })
+                })
+                $('.js-disable').on('click', function () {
+                    document.getElementById("js-demo1").onnvchange({
+                        checked: true,
+                        disabled: true
+                    })
+                })
             })
         })
-    })
-</script>
+    </script>
 </body>
+
 </html>

@@ -10,79 +10,131 @@ var _radio = {
     },
     events:{
         closeEvent:function(opt){
+
             if(opt.array.length>0){
-                $.each(opt.array,function(index,elem){
-                    //console.log($(elem).prop("class"));
-                        var pubClass=$(elem).prop("class"),
-                            label;
-                        if(pubClass.indexOf("nv-radio-vertical")>-1){
-                            pubClass="nv-radio-middle";
-                            label=$("<label class='"+pubClass+" nv-radio-module"+"'></label>");
-                        }else{
-                            label=$("<label class='nv-radio-module'></label>");
+                $.each(opt.array,function (index, element) {
+                    var $original = $(element);
+                    var _checked = $original.prop('checked'),
+                        _disabled = $original.prop('disabled'),
+                        _id = $original.prop('id'),
+                        _label = $original.attr('data-label') || '';
+            
+                    var uuid = function () {
+                        var s = [];
+                        var hexDigits = "0123456789abcdef";
+                        for (var i = 0; i < 6; i++) {
+                            s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
                         }
-                        var str="";
-                        if($(elem).get(0).disabled){
-                            label.addClass(_radio.options._obj.options.disabledClassName);
-                        }
-                        if($(elem).get(0).checked){
-                            label.addClass(_radio.options._obj.options.radioedClassName);
-                        }
-                        $(elem).after(label).addClass("nv-radio-hide");
-                        str+='<div class="nv-radio-simulation"><span class="nv-radio-normal"><span></span></span><div class="nv-radio-text">';
-                        $(elem).attr("title")==undefined ? str+='</div></div>' : str+=$(elem).attr("title")+'</div></div>';
-                        label.append(str);
-                        //绑定自定义事件
-                        _radio.eventFn.customEventFn(elem);
-                        label.off("click",_radio.eventFn.radioFn).on("click",_radio.eventFn.radioFn);
+                        var uuid = s.join("");
+                        return uuid;
+                    }
+                    var checkOnly = function () {
+                        var id = uuid();
+                        $(id).lenth > 0 ? checkOnly() : _id = id;
+                    }
+                    if (!_id) {
+                        checkOnly();
+                        $original.prop('id', _id);
+                    }
+                    var html = '<label class="nv-radio-wrapper" for="' + _id + '">' +
+                        '<span class="nv-radio-clone">' +
+                        '<span class="nv-radio-inner"></span>' +
+                        '</span>' +
+                        '<span class="nv-radio-label">' + _label +
+                        '</span>' +
+                        '</label>';
+                    var $label = $(html);
+                    $original.after($label);
+                    $original.css('display', 'none');
+                    
+                    var $clone = $label.children('.nv-radio-clone'),
+                        $text = $clone.siblings('.nv-radio-label');
+            
+                    if (_label.length == 0) {
+                        $text.css('display', 'none');
+                    } else {
+                        $text.css('display', 'inline');
+                    }
+                    //已选中
+                    if (_checked) {
+                        $clone.addClass('nv-radio-checked');
+                        $label.addClass('nv-radio-wrapper-checked');
+                    }
+                    //已禁用
+                    if (_disabled) {
+                        $clone.addClass('nv-radio-disabled');
+                        $label.addClass('nv-radio-wrapper-disabled');
+                    }
+                    
+                    _radio.eventFn.addClickEvent($label, element); //label绑定事件
+                    _radio.eventFn.addEvent(element); //绑定事件
                 })
-                
             }
+            
         }
     },
     eventFn:{
-        radioFn: function () {
-            if($(this).hasClass(_radio.options._obj.options.radioedClassName)){
-                return;
-            }else{
-                if($(this).hasClass(_radio.options._obj.options.disabledClassName)){
-                    return;
-                }else{
-                    var name=$("[name='"+$(this).prev().attr("name")+"']");
-                    $.each(name, function (index,elem) {
-                        $(elem).next().removeClass(_radio.options._obj.options.radioedClassName);
-                    })
-                    $(this).addClass(_radio.options._obj.options.radioedClassName);
-                    $(this).prev().get(0).checked=true;
-                    //添加onchnage事件的监听
-                    $(this).prev().trigger("change");
+        addEvent: function(dom) {
+            dom.onnvchange = function (option) {
+                var $input = $(this),
+                    input = this,
+                    _name = $input.prop('name'),
+                    _id = $input.prop('id');
+                
+                var $label = $input.siblings('[for="' + _id + '"]'),
+                    $clone = $label.children('.nv-radio-clone'),
+                    $text = $clone.siblings('.nv-radio-label');
+    
+                var opt = option || {};
+    
+                for (var name in opt) {
+                    if (name === 'checked') $input.prop('checked', opt[name]);
+                    if (name === 'disabled') $input.prop('disabled', opt[name]);
+                    if (name === 'value') $input.prop('value', opt[name]);
+                    if (name === 'label') {
+                        if (opt[name].length == 0) {
+                            $text.css('display', 'none');
+                            $input.removeAttr('data-label');
+                        } else {
+                            $text.css('display', 'inline').html(opt[name]);
+                            $input.attr('data-label', opt[name]);
+                        }
+                    };
                 }
-
+                if (opt.beforeFn) opt.beforeFn.call(this, opt);
+                //选中
+                if ($input.prop('checked')) {
+                    $clone.addClass('nv-radio-checked');
+                    $label.addClass('nv-radio-wrapper-checked');
+                    //其他项目取消选中
+                    var aInput = $('input[name=' + _name + ']');
+                    aInput.each(function (i, element) {
+                        if (input !== element) {
+                            element.onnvchange ? element.onnvchange() : '';
+                        }
+                    })
+                } else {
+                    $clone.removeClass('nv-radio-checked');
+                    $label.removeClass('nv-radio-wrapper-checked');
+                }
+                //禁用
+                if ($input.prop('disabled')) {
+                    $clone.addClass('nv-radio-disabled');
+                    $label.addClass('nv-radio-wrapper-disabled');
+                } else {
+                    $clone.removeClass('nv-radio-disabled');
+                    $label.removeClass('nv-radio-wrapper-disabled');
+                }
+    
+                if (opt.afterFn) opt.afterFn.call(this);
             }
         },
-        customEventFn:function(elem){
-            $(elem)[0]["nvChange"]=function(opts){
-                opts= $.extend({
-                    disabled:false,
-                    checked:false
-                },opts||{})
-                //判断是否禁用
-                if(opts.disabled){
-                    $(this).attr("disabled","disabled");
-                    $(this).next().addClass("nv-radio-disable")
-                }else{
-                    $(this).removeAttr("disabled");
-                    $(this).next().removeClass("nv-radio-disable")
-                }
-                //判断是否选中
-                if(opts.checked){
-                    $(this).attr("checked","checked");
-                    $(this).next().addClass("nv-radio-radioed")
-                }else{
-                    $(this).removeAttr("checked");
-                    $(this).next().removeClass("nv-radio-radioed")
-                }
-            }
+        addClickEvent: function($label, original){
+            $label.on('click', function () {
+                setTimeout(function(){
+                    original.onnvchange ? original.onnvchange() : '';
+                },30)
+            })
         }
     },
     ajax:{}

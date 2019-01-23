@@ -10,125 +10,210 @@ var _checkbox = {
     },
     events:{
         closeEvent:function(opt){
-            //console.log(opt);
             if(opt.array.length>0){
-                $.each(opt.array,function(index,elem){
-                    var str="",
-                        label=$("<label class='nv-checkbox-module'></label>");
-                    if($(elem).get(0).disabled){
-                        label.addClass("nv-checkbox-disable");
-                    }
-                    if($(elem).get(0).checked){
-                        label.addClass(_checkbox.options._obj.options.checkedClassName);
-                    }
-                    if($(elem).hasClass("nv-checkbox-all")){
-                        label.addClass(_checkbox.options._obj.options.checkedAllClassName);
-                    }
-                    str+='<div class="nv-checkbox-simulation"><span class="nv-checkbox-normal">';
-                    str+='<span></span></span><div class="nv-checkbox-text">';
-                    $(elem).attr("title")==undefined ? str+='</div></div>' : str+=$(elem).attr("title")+'</div></div>';
-                    label.append(str);
-                    $(elem).after(label).addClass("nv-checkbox-hide");
-                    //判断一开始是否全选
-                    if($(elem).next().length>0){
-                        if($(elem).next().hasClass(_checkbox.options._obj.options.checkedAllClassName) && $(elem).get(0).checked){
-                            var that=$(elem);
-                            var check= $(elem).parents(".nv-checkbox-container").eq(0).find(".nv-checkbox-sigle-container input[type='checkbox']");
-                            $.each(check, function (index,elem) {
-                                $(elem).get(0).checked=that.get(0).checked;
-                                //判断是否创建出了模拟框架
-                                if($(elem).next().hasClass("nv-checkbox-module")){
-                                    $(elem).get(0).checked ? $(elem).next().addClass(_checkbox.options._obj.options.checkedClassName) :$(elem).next().removeClass(_checkbox.options._obj.options.checkedClassName);
-                                }
-                            })
+                $.each(opt.array,function (index, element) {
+                    var $original = $(element);
+                    var _checked = $original.prop('checked'),
+                        _disabled = $original.prop('disabled'),
+                        _id = $original.prop('id'),
+                        _label = $original.attr('data-label') || '';
+            
+                    var uuid = function () {
+                        var s = [];
+                        var hexDigits = "0123456789abcdef";
+                        for (var i = 0; i < 6; i++) {
+                            s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
                         }
+                        var uuid = s.join("");
+                        return uuid;
                     }
-                    //给checkbox添加自定义事件
-                    _checkbox.eventFn.customEventFn(elem);
-                    //绑定点击事件
-                    label.off("click",_checkbox.eventFn.checkedFn).on("click",_checkbox.eventFn.checkedFn);
+                    var checkOnly = function () {
+                        var id = uuid();
+                        $(id).lenth > 0 ? checkOnly() : _id = id;
+                    }
+                    if (!_id) {
+                        checkOnly();
+                        $original.prop('id', _id);
+                    }
+                    var html = '<label class="nv-checkbox-wrapper" for="' + _id + '">' +
+                        '<span class="nv-checkbox-clone">' +
+                        '<span class="nv-checkbox-inner"></span>' +
+                        '</span>' +
+                        '<span class="nv-checkbox-label">' + _label +
+                        '</span>' +
+                        '</label>';
+                    var $label = $(html);
+                    $original.after($label);
+                    $original.css('display', 'none');
+            
+                    var $clone = $label.children('.nv-checkbox-clone'),
+                        $text = $clone.siblings('.nv-checkbox-label');
+            
+                    if (_label.length == 0) {
+                        $text.css('display', 'none');
+                    } else {
+                        $text.css('display', 'inline');
+                    }
+                    //已选中
+                    if (_checked) {
+                        $clone.addClass('nv-checkbox-checked');
+                        $label.addClass('nv-checkbox-wrapper-checked');
+                    }
+                    //已禁用
+                    if (_disabled) {
+                        $clone.addClass('nv-checkbox-disabled');
+                        $label.addClass('nv-checkbox-wrapper-disabled');
+                    }
+                    _checkbox.eventFn.addClickEvent($label, element); //label绑定事件
+                    _checkbox.eventFn.addEvent(element) //绑定事件
                 })
             }
+            
         }
     },
     eventFn:{
-        checkedFn: function () {
-                if($(this).hasClass(_checkbox.options._obj.options.disabledClassName)){
-                    return;
-                }else{
-                    if($(this).hasClass(_checkbox.options._obj.options.checkedClassName)){
-                        $(this).removeClass(_checkbox.options._obj.options.checkedClassName);
-                    }else{
-                        $(this).addClass(_checkbox.options._obj.options.checkedClassName)
-                    }
-                    $(this).prev().get(0).checked=!$(this).prev().get(0).checked;
-                    //判断是否全选
-                    if($(this).parent().hasClass(_checkbox.options._obj.options.allContainerClassName)){
-                        if($(this).hasClass(_checkbox.options._obj.options.checkedAllClassName)){
-                            var that_check=$(this).prev().get(0).checked;
-                            if(that_check){
-                                $(this).addClass(_checkbox.options._obj.options.checkedClassName);
-                                $(this).find(".nv-checkbox-normal").children("span").removeClass(_checkbox.options._obj.options.uncheckClassName)
-                            }
-                            var check= $(this).parents(".nv-checkbox-container").eq(0).find(".nv-checkbox-sigle-container input[type='checkbox']");
-                            $.each(check, function (index,elem) {
-                                $(elem).get(0).checked=that_check;
-                                $(elem).get(0).checked ? $(elem).next().addClass(_checkbox.options._obj.options.checkedClassName) :$(elem).next().removeClass(_checkbox.options._obj.options.checkedClassName)
-                            })
+        addEvent: function(dom){
+            dom.onnvchange = function (option) {
+                var $input = $(this),
+                    input = this,
+                    _name = $input.prop('name'),
+                    _id = $input.prop('id'),
+                    _all = $input.attr('data-all');
+    
+                var $label = $input.siblings('[for="' + _id + '"]'),
+                    $clone = $label.children('.nv-checkbox-clone'),
+                    $text = $clone.siblings('.nv-checkbox-label');
+    
+                //默认配置
+                var settings = {}
+                var opt = $.extend({}, settings, option);
+    
+                for (var name in opt) {
+                    if (name === 'checked') $input.prop('checked', opt[name]);
+                    if (name === 'disabled') $input.prop('disabled', opt[name]);
+                    if (name === 'value') $input.prop('value', opt[name]);
+                    if (name === 'label') {
+                        if (opt[name].length == 0) {
+                            $text.css('display', 'none');
+                            $input.removeAttr('data-label');
+                        } else {
+                            $text.css('display', 'inline').html(opt[name]);
+                            $input.attr('data-label', opt[name]);
                         }
+                    };
+                }
+                if (opt.beforeFn) opt.beforeFn.call(this, opt);
+                
+                //选中
+                if ($input.prop('checked')) {
+                    $clone.addClass('nv-checkbox-checked');
+                    $label.addClass('nv-checkbox-wrapper-checked');
+                } else {
+                    $clone.removeClass('nv-checkbox-checked');
+                    $label.removeClass('nv-checkbox-wrapper-checked');
+                }
+    
+                //禁用
+                if ($input.prop('disabled')) {
+                    $clone.addClass('nv-checkbox-disabled');
+                    $label.addClass('nv-checkbox-wrapper-disabled');
+                } else {
+                    $clone.removeClass('nv-checkbox-disabled');
+                    $label.removeClass('nv-checkbox-wrapper-disabled');
+                }
+                var $checkAll = $('input[name="' + _name + '"][data-all="true"]'),
+                    $aCheckItems = $('input[name="' + _name + '"][data-all!="true"]'),
+                    checkAll = $checkAll[0];
+    
+                //根据当前input状态决定选中或非选中
+                var select = function (element) {
+                    var $element = $(element),
+                        _id = $element.prop('id'),
+                        _checked = $element.prop('checked'),
+                        $label = $('label[for="' + _id + '"]'),
+                        $clone = $label.children('.nv-checkbox-clone');
+                    if (_checked) {
+                        $clone.addClass('nv-checkbox-checked');
+                        $label.addClass('nv-checkbox-wrapper-checked');
+                    } else {
+                        $clone.removeClass('nv-checkbox-checked');
+                        $label.removeClass('nv-checkbox-wrapper-checked');
                     }
-                    if($(this).parent().hasClass(_checkbox.options._obj.options.sigleContainerClassName)){
-                        var check=$(this).siblings("input[type='checkbox']"),
-                            is_check_num=0,
-                            all_check_status=$(this).parents("."+_checkbox.options._obj.options.containerClassName).eq(0).find(".nv-checkbox-all");
-                        if(check.length>0){
-                            $.each(check,function(index,elem){
-                                if($(elem).get(0).checked){
-                                    is_check_num+=1;
-                                }
-                            })
-                            if(is_check_num==check.length){
-                                all_check_status.addClass(_checkbox.options._obj.options.checkedClassName);
-                                all_check_status.find(".nv-checkbox-normal").find("span").removeClass()
-                                all_check_status.prev().get(0).checked=true;
-                            }else{
-                                all_check_status.find(".nv-checkbox-normal").find("span").addClass(_checkbox.options._obj.options.uncheckClassName)
-                                all_check_status.addClass(_checkbox.options._obj.options.checkedClassName);
-                                all_check_status.prev().get(0).checked=false;
-                            }
-                            if(is_check_num==0){
-                                all_check_status.removeClass(_checkbox.options._obj.options.checkedClassName);
-                                all_check_status.find(".nv-checkbox-normal").find("span").removeClass()
-                            }
+                }
+                //取消半全选
+                var cancelMidSelect = function (element) {
+                    var $element = $(element),
+                        _id = $element.prop('id'),
+                        $label = $('label[for="' + _id + '"]'),
+                        $clone = $label.children('.nv-checkbox-clone');
+    
+                    $clone.removeClass('nv-checkbox-mid-checked');
+                }
+                //半选中
+                var midSelect = function (element) {
+                    var $element = $(element),
+                        _id = $element.prop('id'),
+                        $label = $('label[for="' + _id + '"]'),
+                        $clone = $label.children('.nv-checkbox-clone');
+    
+                    $clone.addClass('nv-checkbox-mid-checked');
+                }
+    
+                cancelMidSelect(checkAll); //初始化全选按钮
+                //全选条件判断,判断完退出
+                for (var name in opt) {
+                    if (name === 'checkedAll') {
+                        if(opt[name]){
+                            //全选
+                            $checkAll.prop('checked', true);
+                            $aCheckItems.prop('checked', true);
+                        }else {
+                            //全部选
+                            $checkAll.prop('checked', false);
+                            $aCheckItems.prop('checked', false);
                         }
+                        select($checkAll[0]);
+                        $aCheckItems.each(function (index, element) {
+                            select(element);
+                        })
+                        return false;
                     }
-                    //添加onchnage事件的监听
-                    $(this).prev().trigger("change");
                 }
-        },
-        customEventFn:function(elem){
-            $(elem)[0]["nvChange"]=function(opts){
-                opts= $.extend({
-                    disabled:false,
-                    checked:false
-                },opts||{})
-                //判断是否禁用
-                if(opts.disabled){
-                    $(this).attr("disabled","disabled");
-                    $(this).next().addClass("nv-checkbox-disable")
-                }else{
-                    $(this).removeAttr("disabled");
-                    $(this).next().removeClass("nv-checkbox-disable")
+              
+                //当前操作为全选
+                if (_all) {
+                    $aCheckItems.prop('checked', $checkAll.prop('checked'));
+                    $aCheckItems.each(function (index, element) {
+                        select(element);
+                    })
+                } else {
+                    var aCheckbox_len = $aCheckItems.length,
+                        checked_len = $aCheckItems.filter(':checked').length;
+    
+                    if (aCheckbox_len == checked_len) {
+                        //全选
+                        $checkAll.prop('checked', true);
+                        select(checkAll);
+                    } else if (checked_len > 0) {
+                        //半全选 时机并未选中
+                        $checkAll.prop('checked', false);
+                        midSelect(checkAll);
+                    } else {
+                        //全不选
+                        $checkAll.prop('checked', false);
+                        select(checkAll);
+                    }
                 }
-                //判断是否选中
-                if(opts.checked){
-                    $(this).attr("checked","checked");
-                    $(this).next().addClass("nv-checkbox-checked")
-                }else{
-                    $(this).removeAttr("checked");
-                    $(this).next().removeClass("nv-checkbox-checked")
-                }
+    
+                if (opt.afterFn) opt.afterFn.call(this);
             }
+        },
+        addClickEvent: function($label, original) {
+            $label.on('click', function () {
+                setTimeout(function () {
+                    original.onnvchange ? original.onnvchange() : '';
+                }, 30)
+            })
         }
     },
     ajax:{}

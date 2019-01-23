@@ -5,138 +5,150 @@ input[type='checkbox']{
   display: none;
 }
 
-.@{nv-prefix}-checkbox-module{
-  .@{nv-prefix}-checkbox-simulation{
-    cursor: pointer;
+@radio-new-color: #4363f4;
+input[type='checkbox'][disabled],
+input[type='checkbox'].disabled {
+    cursor: not-allowed
+}
+
+.@{nv-prefix}-checkbox-wrapper {
+    position: relative;
     display: inline-block;
+    font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
     font-size: 14px;
-    //opacity: 0.65;
-    color: @grey-8;
-    &:hover{
-      .@{nv-prefix}-checkbox-normal{
-        border-color: #4363F4;
-      }
+    // font-variant: tabular-nums;
+    line-height: 1.5;  //1.5
+    color: rgba(0,0,0,0.65);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+    outline: none;
+    margin-right: 8px;
+    cursor: pointer;
+    &.@{nv-prefix}-checkbox-wrapper-checked {
+        
     }
-    .@{nv-prefix}-checkbox-normal{
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      border: @border-width-base  @border-style-base @grey-5;
-      position: relative;
-      vertical-align:top;
-      border-radius: @border-radius-sm;
-      margin-right: 8px;
-      span{
-        position: absolute;
+    &.@{nv-prefix}-checkbox-wrapper-disabled {
+        .@{nv-prefix}-checkbox-label {
+            color: rgba(0,0,0,0.25);
+            cursor: not-allowed;
+        }
+    }
+    &:hover {
+        .@{nv-prefix}-checkbox-style {
+            .@{nv-prefix}-checkbox-inner {
+                border-color: @radio-new-color;
+            }
+        }
+    }
+    .@{nv-prefix}-checkbox-clone {
+        &.@{nv-prefix}-checkbox-checked {
+            .@{nv-prefix}-checkbox-inner {
+                border-color: @radio-new-color;
+                background-color: @radio-new-color;
+                &:after {
+                    transform: rotate(45deg) scale(1);
+                    opacity: 1;
+                    transition: all .3s cubic-bezier(.78, .14, .15, .86);
+                }
+            }
+        }
+        &.@{nv-prefix}-checkbox-mid-checked {
+            .@{nv-prefix}-checkbox-inner {
+                border-color: @radio-new-color;
+                background-color: @radio-new-color;
+                &:after {
+                    transform: rotate(90deg) scale(1);
+                    opacity: 1;
+                    transition: all .3s cubic-bezier(.78, .14, .15, .86);
+                    border-bottom: 0;
+                }
+            }
+        }
+        &.@{nv-prefix}-checkbox-disabled {
+            .@{nv-prefix}-checkbox-inner {
+                border-color: #d9d9d9 !important;
+                background-color: #f5f5f5;
+                cursor: not-allowed;
+                &:after {
+                    border-color: rgba(0,0,0,0.25);
+                }
+            }
+        }
+        &:hover {
+            .@{nv-prefix}-checkbox-inner {
+                border-color: @radio-new-color;
+            }
+        }
+        position: relative;
         display: inline-block;
-        top: 50%;
-        left: 50%;
-        margin-top: -3px;
-        margin-left: -3px;
-        width: 6px;
-        height: 4px;
-        border: @border-width-base  @border-style-base @grey-1;
-        border-bottom: transparent;
-        border-left: transparent;
-        transform:rotate(135deg);
-        visibility: hidden;
-      }
-      .@{nv-prefix}-checkbox-uncheck{
-        border: transparent;
-        height: 0;
-        width: 8px;
-        border-top:@border-width-base  @border-style-base @grey-1;
-        transform:rotate(0deg);
-        margin-top: 0;
-        margin-left: -4px;
-      }
+        font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+        font-size: 14px;
+        // font-variant: tabular-nums;
+        line-height: 1;  //1.5
+        color: rgba(0,0,0,0.65);
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        white-space: nowrap;
+        outline: none;
+        vertical-align: sub; //sub
+        cursor: pointer;
+        // 代糖
+        .@{nv-prefix}-checkbox-inner {
+            position: relative;
+            box-sizing: border-box; //ant-no
+            top: 0;
+            left: 0;
+            display: block;
+            width: 14px;
+            height: 14px;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 2px;
+            border-color: #d9d9d9;
+            background-color: #fff;
+            transition: all .3s;
+            // border-collapse: separate
+
+            &:after {
+                position: absolute;
+                left: 4px;
+                top: 1px;
+                display: table;
+                width: 4.71428571px;
+                height: 8.14285714px;
+                border: 1px solid #fff;
+                display: table;
+                content: ' '; 
+                transform: rotate(45deg) scale(0);
+                transition: all .3s ease-in;
+                opacity: 0;
+                border-top: 0; 
+                border-left: 0; 
+            }
+        }
+        // 源生
+        .@{nv-prefix}-checkbox-original {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1; //1
+            outline: none;
+            margin: 0;
+            cursor: pointer;
+        }
     }
-    .@{nv-prefix}-checkbox-text{
-      display: inline-block;
-      height: 14px;
-      line-height: 14px;
-      vertical-align: top;
+    .@{nv-prefix}-checkbox-label {
+        font-size: 14px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
-  }
-}
-.@{nv-prefix}-checkbox-checked{
-  .@{nv-prefix}-checkbox-simulation{
-    .@{nv-prefix}-checkbox-normal{
-      border: none;
-      background: #4363F4;
-      span{
-        visibility: visible;
-      }
-    }
-  }
-}
-.@{nv-prefix}-checkbox-disable{
-  .@{nv-prefix}-checkbox-simulation{
-    cursor: not-allowed;
-    .@{nv-prefix}-checkbox-normal{
-      background: #FAFAFA !important;
-      border:1px solid  #D9D9D9 !important;
-      span{
-        border-color: #D9D9D9;
-      }
-    }
-    &:hover{
-      .nv-checkbox-normal{
-        border-color: @grey-5;
-      }
-    }
-    .@{nv-prefix}-checkbox-text{
-      opacity: 0.25;
-    }
-  }
-  input[type='checkbox']:checked+.@{nv-prefix}-checkbox-simulation{
-    .@{nv-prefix}-checkbox-normal{
-      border-color: #D9D9D9;
-      span{
-        display: block;
-      }
-    }
-  }
-}
-.@{nv-prefix}-checkbox-vertical{
-  .@{nv-prefix}-checkbox-module{
-    display: block;
-  }
-}
-.c-demo{
-  .@{nv-prefix}-checkbox-module{
-    margin-right: 40px;
-  }
-}
-.@{nv-prefix}-checkbox-all{
-  display: inline-block;
-  margin-bottom: 16px;
-}
-.@{nv-prefix}-checkbox-hide{
-  display: none;
 }
 
-
-
-
-
-
-
-
-
-
-.mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-checkbox) {
-  //默认手机
-}
-.mixin(@name,@type) when (@name = @sm-name) and (@type = @screen-name-checkbox) {
-  //平板
-}
-.mixin(@name,@type) when (@name = @md-name) and (@type = @screen-name-checkbox) {
-  //桌面显示器
-}
-.mixin(@name,@type) when (@name = @lg-name) and (@type = @screen-name-checkbox) {
-  //大桌面显示器
-}
-.mixin(@name,@type) when (@name = @xl-name) and (@type = @screen-name-checkbox) {
-  //大屏慕数据展示
-}
