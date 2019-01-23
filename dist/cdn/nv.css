@@ -1173,7 +1173,7 @@ a.nv-btn-sm {
 .nv-dropdown .nv-dropdown-link {
   text-decoration: none;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
-  color: #4363f4;
+  color: rgba(0, 0, 0, 0.65);
   font-size: 14px;
   -webkit-transition: color .3s ease;
   -o-transition: color .3s ease;
