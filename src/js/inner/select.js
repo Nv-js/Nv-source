@@ -2,7 +2,6 @@ var _select = {
     uid: 30500000,
     version: "1.0.0",
     init: function (domObject) {
-        console.log(domObject);
         this.options._obj = domObject;
         this.events.eventList(domObject);
     },

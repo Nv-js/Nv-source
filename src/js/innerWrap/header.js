@@ -331,6 +331,5 @@ Nv.add("./init/1.0.1/cdn_index",function(nv,$) {
         //resize队列
         resizeQueen: []
     }
-});
 
 
