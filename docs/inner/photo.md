@@ -12,26 +12,26 @@
 
 ### 基础样式
 
-三种尺寸，两种形状 `zr-photo` 为默认样式，`zr-photo-circle` 为圆形样式，`zr-photo-lg` 表示大图标，`zr-photo-sm` 表示小图标
+三种尺寸，两种形状 `nv-photo` 为默认样式，`nv-photo-circle` 为圆形样式，`nv-photo-lg` 表示大图标，`nv-photo-sm` 表示小图标
 
 ```html
-    <span class="zr-photo  zr-photo-circle zr-photo-lg">
-        <i class="zricon-user-empty"></i>
+    <span class="nv-photo  nv-photo-circle nv-photo-lg">
+        <i class="nvicon-user-empty"></i>
     </span>
-            <span class="zr-photo  zr-photo-circle">
-        <i class="zricon-user-empty"></i>
+            <span class="nv-photo  nv-photo-circle">
+        <i class="nvicon-user-empty"></i>
     </span>
-            <span class="zr-photo  zr-photo-circle zr-photo-sm">
-        <i class="zricon-user-empty"></i>
+            <span class="nv-photo  nv-photo-circle nv-photo-sm">
+        <i class="nvicon-user-empty"></i>
     </span>
-            <span class="zr-photo  zr-photo-lg">
-        <i class="zricon-user-empty"></i>
+            <span class="nv-photo  nv-photo-lg">
+        <i class="nvicon-user-empty"></i>
     </span>
-            <span class="zr-photo">
-        <i class="zricon-user-empty"></i>
+            <span class="nv-photo">
+        <i class="nvicon-user-empty"></i>
     </span>
-            <span class="zr-photo zr-photo-sm">
-        <i class="zricon-user-empty"></i>
+            <span class="nv-photo nv-photo-sm">
+        <i class="nvicon-user-empty"></i>
     </span>
 ```
 
@@ -39,39 +39,39 @@
 
 ### 多样式类型
 
-基于基础样式之上，在 `zr-photo `之后添加 `zr-photo-db` 属性则背景变为深蓝, 添加 `zr-photo-wb` 属性则背景变为浅蓝，添加 `zr-photo-do` 属性则背景变为深橘色， 添加 `zr-photo-wo` 属性则背景变为浅橘色
+基于基础样式之上，在 `nv-photo `之后添加 `nv-photo-db` 属性则背景变为深蓝, 添加 `nv-photo-wb` 属性则背景变为浅蓝，添加 `nv-photo-do` 属性则背景变为深橘色， 添加 `nv-photo-wo` 属性则背景变为浅橘色
 
 多样性的代码结构如下：
 
 ```html
-    <span class="zr-photo  zr-photo-circle">
+    <span class="nv-photo  nv-photo-circle">
         <img src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" alt="">
     </span>
-    <span class="zr-photo  zr-photo-circle">
-        <i class="zricon-user-empty"></i>
+    <span class="nv-photo  nv-photo-circle">
+        <i class="nvicon-user-empty"></i>
     </span>
-    <span class="zr-photo  zr-photo-circle  zr-photo-db">
-        <i class="zricon-user-empty"></i>
+    <span class="nv-photo  nv-photo-circle  nv-photo-db">
+        <i class="nvicon-user-empty"></i>
     </span>
-    <span class="zr-photo  zr-photo-circle zr-photo-wb">
-        <i class="zricon-user-empty"></i>
+    <span class="nv-photo  nv-photo-circle nv-photo-wb">
+        <i class="nvicon-user-empty"></i>
     </span>
-        <span class="zr-photo  zr-photo-circle">
+        <span class="nv-photo  nv-photo-circle">
         L
     </span>
-    <span class="zr-photo  zr-photo-circle  zr-photo-do">
+    <span class="nv-photo  nv-photo-circle  nv-photo-do">
         L
     </span>
-    <span class="zr-photo  zr-photo-circle zr-photo-wo">
+    <span class="nv-photo  nv-photo-circle nv-photo-wo">
         L
     </span>
-        <span class="zr-photo  zr-photo-circle">
+        <span class="nv-photo  nv-photo-circle">
         Ran
     </span>
-    <span class="zr-photo  zr-photo-circle  zr-photo-do">
+    <span class="nv-photo  nv-photo-circle  nv-photo-do">
         Ran
     </span>
-    <span class="zr-photo  zr-photo-circle zr-photo-wo">
+    <span class="nv-photo  nv-photo-circle nv-photo-wo">
         Ran
     </span>
 ```
@@ -82,10 +82,10 @@
 点击按钮可实现更换背景色
 
 ```html
-    <span class="zr-photo zr-photo-circle zr-photo-db">
+    <span class="nv-photo nv-photo-circle nv-photo-db">
     L
     </span>
-    <button type="button" class="zr-btn zr-btn-default zr-btn-sm">Change</button>
+    <button type="button" class="nv-btn nv-btn-default nv-btn-sm">Change</button>
 ```
 <br/>
 
@@ -94,25 +94,25 @@
 用于新消息的提醒
 
 ```html
-    <span class="zr-badge">
-        <span class="zr-photo">
-            <i class="zricon-user-empty"></i>
+    <span class="nv-badge">
+        <span class="nv-photo">
+            <i class="nvicon-user-empty"></i>
         </span>
-         <span class="zr-badge-normal">
+         <span class="nv-badge-normal">
              9
          </span>
     </span>
-    <span class="zr-badge">
-        <span class="zr-photo">
-            <i class="zricon-user-empty"></i>
+    <span class="nv-badge">
+        <span class="nv-photo">
+            <i class="nvicon-user-empty"></i>
         </span>
-         <span class="zr-badge-pointer"></span>
+         <span class="nv-badge-pointer"></span>
     </span>
 ```
 <br/>
 
-[Demo展示](http://gtp-zr.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=ef23ab31b4a241e6b10fd2a3ac5ef85c&directoryName=Photo%20%E5%A4%B4%E5%83%8F)
+[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=ef23ab31b4a241e6b10fd2a3ac5ef85c&directoryName=Photo%20%E5%A4%B4%E5%83%8F)
 
-[留言和讨论](https://github.com/guguaihaha/zr-source/issues/22)
+[留言和讨论](https://github.com/guguaihaha/nv-source/issues/22)
 
     

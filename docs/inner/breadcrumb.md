@@ -12,7 +12,7 @@
 
 + 左侧导航的宽度尺寸计算范围：200+8n
 
-[点击了解栅格系统](https://github.com/guguaihaha/zr-source/blob/master/docs/inner/grid.md)
+[点击了解栅格系统](https://github.com/guguaihaha/nv-source/blob/master/docs/inner/grid.md)
 
 <br/>
 
@@ -23,18 +23,18 @@
 代码结构如下：
 
 ```html
-    <div class="zr-breadcrumb">
-        <em class="zr-breadcrumb-normal">Home</em>
-        <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
-        <em class="zr-breadcrumb-normal">
-            <a href="" class="zr-breadcrumb-link">Page</a>
+    <div class="nv-breadcrumb">
+        <em class="nv-breadcrumb-normal">Home</em>
+        <i class="nvicon-arrow-right nv-breadcrumb-icon"></i>
+        <em class="nv-breadcrumb-normal">
+            <a href="" class="nv-breadcrumb-link">Page</a>
         </em>
-        <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
-        <em class="zr-breadcrumb-normal">
-            <a href="" class="zr-breadcrumb-link">Subpage</a>
+        <i class="nvicon-arrow-right nv-breadcrumb-icon"></i>
+        <em class="nv-breadcrumb-normal">
+            <a href="" class="nv-breadcrumb-link">Subpage</a>
         </em>
-        <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
-        <em class="zr-breadcrumb-normal zr-breadcrumb-current">Balabala</em>
+        <i class="nvicon-arrow-right nv-breadcrumb-icon"></i>
+        <em class="nv-breadcrumb-normal nv-breadcrumb-current">Balabala</em>
     </div>
 ```
 
@@ -47,18 +47,18 @@
 首级图文混排代码结构：
 
 ```html
-    <div class="zr-breadcrumb">
-        <a href="" class="zr-breadcrumb-link">
-            <i class="zricon-home-empty"></i>
-            <em class="zr-breadcrumb-normal">Home</em>
+    <div class="nv-breadcrumb">
+        <a href="" class="nv-breadcrumb-link">
+            <i class="nvicon-home-empty"></i>
+            <em class="nv-breadcrumb-normal">Home</em>
         </a>
-        <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
-        <a href="" class="zr-breadcrumb-link">
-            <i class="zricon-doc-empty"></i>
-            <em class="zr-breadcrumb-normal">Page</em>
+        <i class="nvicon-arrow-right nv-breadcrumb-icon"></i>
+        <a href="" class="nv-breadcrumb-link">
+            <i class="nvicon-doc-empty"></i>
+            <em class="nv-breadcrumb-normal">Page</em>
         </a>
-        <i class="zricon-arrow-right zr-breadcrumb-icon"></i>
-        <em class="zr-breadcrumb-normal zr-breadcrumb-current">Balabala</em>
+        <i class="nvicon-arrow-right nv-breadcrumb-icon"></i>
+        <em class="nv-breadcrumb-normal nv-breadcrumb-current">Balabala</em>
     </div>
 ```
 
@@ -67,20 +67,20 @@
 首级只有图标代码结构：
 
 ```html
-    <div class="zr-breadcrumb">
-        <a href="" class="zr-breadcrumb-link">
-            <i class="zricon-home-empty"></i>
+    <div class="nv-breadcrumb">
+        <a href="" class="nv-breadcrumb-link">
+            <i class="nvicon-home-empty"></i>
         </a>
-        <i class="zricon-arrow-right"></i>
-        <a href="" class="zr-breadcrumb-link">
-            <i class="zricon-doc-empty"></i>
-            <em class="zr-breadcrumb-normal">Page</em>
+        <i class="nvicon-arrow-right"></i>
+        <a href="" class="nv-breadcrumb-link">
+            <i class="nvicon-doc-empty"></i>
+            <em class="nv-breadcrumb-normal">Page</em>
         </a>
-        <i class="zricon-arrow-right"></i>
-        <em class="zr-breadcrumb-normal zr-breadcrumb-current">Balabala</em>
+        <i class="nvicon-arrow-right"></i>
+        <em class="nv-breadcrumb-normal nv-breadcrumb-current">Balabala</em>
     </div>
 ```
 
-[DEMO展示](http://gtp-zr.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=1ef74d93a52d4ae8b58dd8489db71393&directoryName=Breadcrumb%20%E9%9D%A2%E5%8C%85%E5%B1%91)
+[DEMO展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=1ef74d93a52d4ae8b58dd8489db71393&directoryName=Breadcrumb%20%E9%9D%A2%E5%8C%85%E5%B1%91)
 
-[留言和讨论](https://github.com/guguaihaha/zr-source/issues/6)
+[留言和讨论](https://github.com/guguaihaha/nv-source/issues/6)

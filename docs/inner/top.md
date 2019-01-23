@@ -15,9 +15,9 @@
 尺寸为40px*40px，页面滚动400px时出现，距右边下边距离40px
 
 ```html
-    <div class="zr-top-wrap" data-position="auto 20px 100px auto">
-        <div class="zr-top">
-            <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+    <div class="nv-top-wrap" data-position="auto 20px 100px auto">
+        <div class="nv-top">
+            <button class="nv-btn nv-btn-primary nv-btn-lg"><i class="nvicon-up"></i></button>
         </div>
     </div>
 ```
@@ -29,9 +29,9 @@
 可以自定义回到顶部按钮的样式
 
 ```html
-    <div class="zr-top-wrap" data-position="auto 20px 100px auto">
-        <div class="zr-top zr-top-custom">
-            <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+    <div class="nv-top-wrap" data-position="auto 20px 100px auto">
+        <div class="nv-top nv-top-custom">
+            <button class="nv-btn nv-btn-primary nv-btn-lg"><i class="nvicon-up"></i></button>
         </div>
     </div>
 ```
@@ -52,8 +52,8 @@
 
 
 
-[Demo展示](http://gtp-zr.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=31be0fd339b241d08956341d7ef7efc3&directoryName=Top%20%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8)
+[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=31be0fd339b241d08956341d7ef7efc3&directoryName=Top%20%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8)
 
-[留言和讨论](https://github.com/guguaihaha/zr-source/issues/25)
+[留言和讨论](https://github.com/guguaihaha/nv-source/issues/25)
 
     

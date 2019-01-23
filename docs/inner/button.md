@@ -22,10 +22,10 @@
 
 ### 标准按钮
 
-标准按钮有四种类型：主按钮 `zr-btn-primary` 、次按钮 `zr-btn-default` 、危险按钮 `zr-btn-danger` 、不可点按钮 `zr-btn-disable` 。
+标准按钮有四种类型：主按钮 `nv-btn-primary` 、次按钮 `nv-btn-default` 、危险按钮 `nv-btn-danger` 、不可点按钮 `nv-btn-disable` 。
 
 ```html
-    <button type="button" class="zr-btn zr-btn-primary">Primary</button>
+    <button type="button" class="nv-btn nv-btn-primary">Primary</button>
 ```
 
 <br/>
@@ -35,62 +35,62 @@
 可以很好的支持button标签与A标签
 
 ```html
-    <a href="#" class="zr-btn zr-btn-default">A target</a>
-    <button type="button" class="zr-btn zr-btn-default">Button target</button>
+    <a href="#" class="nv-btn nv-btn-default">A target</a>
+    <button type="button" class="nv-btn nv-btn-default">Button target</button>
 ```
 <br/>
 
 ### 按钮尺寸
 
-按钮有大 `zr-btn-lg` 、中(默认)、小 `zr-btn-sm` 三种尺寸，在这里我们只定义三种高度（24px,32px,40px）,宽度随内容自适应
+按钮有大 `nv-btn-lg` 、中(默认)、小 `nv-btn-sm` 三种尺寸，在这里我们只定义三种高度（24px,32px,40px）,宽度随内容自适应
 
 ```html
     <!--大、中、小-->
-    <button type="button" class="zr-btn zr-btn-primary zr-btn-sm">Small</button>
-    <button type="button" class="zr-btn zr-btn-primary">Default</button>
-    <button type="button" class="zr-btn zr-btn-primary zr-btn-lg">Large</button>
+    <button type="button" class="nv-btn nv-btn-primary nv-btn-sm">Small</button>
+    <button type="button" class="nv-btn nv-btn-primary">Default</button>
+    <button type="button" class="nv-btn nv-btn-primary nv-btn-lg">Large</button>
 ```
 <br/>
 
 ### 图标按钮
 
 ```html
-    <button type="button" class="zr-btn zr-btn-primary zr-btn-circle">
-        <i class="zricon-search-empty"></i>
+    <button type="button" class="nv-btn nv-btn-primary nv-btn-circle">
+        <i class="nvicon-search-empty"></i>
     </button>
-    <button type="button" class="zr-btn zr-btn-primary">
-        <i class="zricon-search-empty"></i>search
+    <button type="button" class="nv-btn nv-btn-primary">
+        <i class="nvicon-search-empty"></i>search
     </button>
 ```
 
 ### 组合按钮
 
 ```html
-    <div class="zr-btn-group">
-        <button type="button" class="zr-btn zr-btn-primary">text1</button>
-        <button type="button" class="zr-btn zr-btn-primary">text2</button>
-        <button type="button" class="zr-btn zr-btn-primary">text3</button>
+    <div class="nv-btn-group">
+        <button type="button" class="nv-btn nv-btn-primary">text1</button>
+        <button type="button" class="nv-btn nv-btn-primary">text2</button>
+        <button type="button" class="nv-btn nv-btn-primary">text3</button>
     </div>
-    <div class="zr-btn-group">
-        <button type="button" class="zr-btn zr-btn-primary">
-            <i class="zricon-arrow-left"></i>text1
+    <div class="nv-btn-group">
+        <button type="button" class="nv-btn nv-btn-primary">
+            <i class="nvicon-arrow-left"></i>text1
         </button>
-        <button type="button" class="zr-btn zr-btn-primary">
-            text2<i class="zricon-arrow-right"></i>
+        <button type="button" class="nv-btn nv-btn-primary">
+            text2<i class="nvicon-arrow-right"></i>
         </button>
     </div>
-    <div class="zr-btn-group">
-        <button type="button" class="zr-btn zr-btn-primary">
-            <i class="zricon-arrow-left"></i>
+    <div class="nv-btn-group">
+        <button type="button" class="nv-btn nv-btn-primary">
+            <i class="nvicon-arrow-left"></i>
         </button>
-        <button type="button" class="zr-btn zr-btn-primary">
-            <i class="zricon-arrow-right"></i>
+        <button type="button" class="nv-btn nv-btn-primary">
+            <i class="nvicon-arrow-right"></i>
         </button>
     </div>
 ```
 
-[Demo展示](http://gtp-zr.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=d6ffabab29694e338a2e9aba2e3ea3d0&directoryName=Button%20%E6%8C%89%E9%92%AE)
+[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=d6ffabab29694e338a2e9aba2e3ea3d0&directoryName=Button%20%E6%8C%89%E9%92%AE)
 
-[留言和讨论](https://github.com/guguaihaha/zr-source/issues/2)
+[留言和讨论](https://github.com/guguaihaha/nv-source/issues/2)
 
     

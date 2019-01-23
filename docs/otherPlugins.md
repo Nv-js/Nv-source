@@ -1,10 +1,10 @@
 ### 常见组件列表
 
-展示为市场上常用的组件，如果以下没有或者自行封装第三方组件，请参考[Zr.add](//github.com/guguaihaha/zr-engine/issues/5)示例即可
+展示为市场上常用的组件，如果以下没有或者自行封装第三方组件，请参考[Nv.add](//github.com/guguaihaha/nv-engine/issues/5)示例即可
 
 > jQuery类的插件
 
-| Zr的use名称     | 描述   |  文档  |
+| Nv的use名称     | 描述   |  文档  |
 | --------       | -----: | :----:  |
 | jquery         | jquery的版本号为：1.12.3  |   [API地址](http://jquery.cuishifeng.cn/) [官网地址](https://www.jquery123.com/)  |
 | jquery3        | jquery的版本号为：3.2.1  |   [API地址](http://jquery.cuishifeng.cn/) [官网地址](https://www.jquery123.com/)  |
@@ -20,7 +20,7 @@
 > 工具类
 
 
-| Zr的use名称     | 描述   |  文档  |
+| Nv的use名称     | 描述   |  文档  |
 | --------       | -----: | :----:  |
 | tmpl           | 轻量动态模版引擎   |   [API地址](//github.com/blueimp/JavaScript-Templates) [官网地址](https://blueimp.github.io/JavaScript-Templates/)  |
 
@@ -29,7 +29,7 @@
 > 展示类
 
 
-| Zr的use名称     | 描述   |  文档  |
+| Nv的use名称     | 描述   |  文档  |
 | --------       | -----: | :----:  |
 | animate        | 轻量动态模版引擎   |   [API地址](//github.com/daneden/animate.css) [官网地址](//daneden.github.io/animate.css/)  |
 | swiper        | 版本号：4.0   |   [API地址](https://www.swiper.com.cn/api/index.html) [官网地址](https://www.swiper.com.cn/demo/index.html)  |

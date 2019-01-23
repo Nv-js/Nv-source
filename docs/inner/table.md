@@ -20,10 +20,10 @@
 
 ### 基础样式
 
-`zr-table-wrap` 为最基础简单的表格样式，在 `th` 或者 `td` 上添加 `zr-table-text-right` 样式属性表示文字右对齐。
+`nv-table-wrap` 为最基础简单的表格样式，在 `th` 或者 `td` 上添加 `nv-table-text-right` 样式属性表示文字右对齐。
 
 ```html
-    <div class="zr-table-wrap">
+    <div class="nv-table-wrap">
         <table>
             <thead>
                 <tr>
@@ -31,7 +31,7 @@
                     <th>Name</th>
                     <th>Age</th>
                     <th>Country</th>
-                    <th class="zr-table-text-right">Price</th>
+                    <th class="nv-table-text-right">Price</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -41,7 +41,7 @@
                     <td>Otto Clay</td>
                     <td>23</td>
                     <td>China</td>
-                    <td class="zr-table-text-right">23.00</td>
+                    <td class="nv-table-text-right">23.00</td>
                     <td><a>Edit</a><a>Delete</a></td>
                 </tr>
                 <tr>
@@ -49,7 +49,7 @@
                     <td>Connor Johnston</td>
                     <td>31</td>
                     <td>Unit States</td>
-                    <td class="zr-table-text-right">9.00</td>
+                    <td class="nv-table-text-right">9.00</td>
                     <td><a>Edit</a><a>Delete</a></td>
                 </tr>
                 <tr>
@@ -57,7 +57,7 @@
                     <td>Timothy Henson</td>
                     <td>65</td>
                     <td>Unit States</td>
-                    <td class="zr-table-text-right">100.00</td>
+                    <td class="nv-table-text-right">100.00</td>
                     <td><a>Edit</a><a>Delete</a></td>
                 </tr>
             </tbody>
@@ -69,56 +69,56 @@
 
 ### 批量操作
 
-用户可以进行批量操作，在 `zr-table-wrap` 后面添加 `zr-table-checkbox` 属性，首列添加 `Checkbox` 对应组件模块，`Checkbox` 使用详情见 [Checkbox 复选框](https://github.com/guguaihaha/zr-source/blob/master/docs/inner/checkbox.md)
+用户可以进行批量操作，在 `nv-table-wrap` 后面添加 `nv-table-checkbox` 属性，首列添加 `Checkbox` 对应组件模块，`Checkbox` 使用详情见 [Checkbox 复选框](https://github.com/guguaihaha/nv-source/blob/master/docs/inner/checkbox.md)
 
 ```html
-    <div class="zr-table-wrap zr-table-checkbox">
+    <div class="nv-table-wrap nv-table-checkbox">
         <table>
             <thead>
             <tr>
                 <th>
-                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" class="nv-checkbox">
                 </th>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Country</th>
-                <th class="zr-table-text-right c-table-w-125">Price</th>
+                <th class="nv-table-text-right c-table-w-125">Price</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>
-                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" class="nv-checkbox">
                 </td>
                 <td>001</td>
                 <td>Otto Clay</td>
                 <td>23</td>
                 <td>China</td>
-                <td class="zr-table-text-right">23.00</td>
+                <td class="nv-table-text-right">23.00</td>
                 <td><a>Edit</a><a>Delete</a></td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" class="nv-checkbox">
                 </td>
                 <td>002</td>
                 <td>Connor Johnston</td>
                 <td>31</td>
                 <td>Unit States</td>
-                <td class="zr-table-text-right">9.00</td>
+                <td class="nv-table-text-right">9.00</td>
                 <td><a>Edit</a><a>Delete</a></td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" class="nv-checkbox">
                 </td>
                 <td>003</td>
                 <td>Alexander</td>
                 <td>42</td>
                 <td>Unit States</td>
-                <td class="zr-table-text-right">100.00</td>
+                <td class="nv-table-text-right">100.00</td>
                 <td><a>Edit</a><a>Delete</a></td>
             </tr>
             </tbody>
@@ -128,7 +128,7 @@
 <br/>
 
 如果是数据较多需要分批次展示，这时候仅仅是内置组件无法满足需求，基于大量调研，最终采用了基于`datatables`的外置第三方组件可以满足
-大部分用户的转换需求，同时为此Zr还定制了一套Zr风格的主题。以下展示为基于`datatables`的插件用法：固定表头、固定列、固定表头和列
+大部分用户的转换需求，同时为此Nv还定制了一套Nv风格的主题。以下展示为基于`datatables`的插件用法：固定表头、固定列、固定表头和列
 
 
 ### 固定表头
@@ -138,7 +138,7 @@
 以下为HTML代码：
 
 ```html
-    <div class="zr-table-wrap zr-table-wrap-border">
+    <div class="nv-table-wrap nv-table-wrap-border">
         <table id="example">
             <thead>
                 <tr>
@@ -233,11 +233,11 @@
 ```
 对应的javascript代码如下，因为是 `jQuery` 插件，所以需要使用 `jQuery` 语法：
 
-以下代码仅供示意，最好将此代码片段封装于[Zr.add](https://github.com/guguaihaha/zr-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
+以下代码仅供示意，最好将此代码片段封装于[Nv.add](https://github.com/guguaihaha/nv-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
 
 ```javascript
-    Zr.ready(function(){
-        Zr.use("jquery", "fixedColumns",function ($) {
+    Nv.ready(function(){
+        Nv.use("jquery", "fixedColumns",function ($) {
             //因为fixedColumns和datatables都是jQuery类插件，所以使用时按照jQuery语法即可
             var table = $('#example').DataTable({
                 scrollY: "150px",
@@ -247,8 +247,8 @@
                 bLengthChange:false,
                 oLanguage:{
                     oPaginate:{
-                        "sPrevious": "<i class="zricon-arrow-left"></i>",
-                        "sNext": "<i class="zricon-arrow-right"></i>",
+                        "sPrevious": "<i class="nvicon-arrow-left"></i>",
+                        "sNext": "<i class="nvicon-arrow-right"></i>",
                     }
                 },
                 columnDefs:[{
@@ -270,7 +270,7 @@
 以下为HTML代码：
 
 ```html
-  <div class="zr-table-wrap zr-table-wrap-border">
+  <div class="nv-table-wrap nv-table-wrap-border">
         <table id="example1">
             <thead>
             <tr>
@@ -373,11 +373,11 @@
 
 然后再调用javascript代码，因为是 `jQuery` 插件，所以需要使用 `jQuery` 语法：：
 
-以下代码仅供示意，最好将此代码片段封装于[Zr.add](https://github.com/guguaihaha/zr-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
+以下代码仅供示意，最好将此代码片段封装于[Nv.add](https://github.com/guguaihaha/nv-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
 
 ```javascript
-    Zr.ready(function(){
-        Zr.use("jquery", "fixedColumns",function ($,DataTable) {
+    Nv.ready(function(){
+        Nv.use("jquery", "fixedColumns",function ($,DataTable) {
             var table = $('#example').DataTable({
                 scrollX: true,
                 scrollCollapse: true,
@@ -389,8 +389,8 @@
                 },
                 oLanguage:{
                     oPaginate:{
-                        "sPrevious": "<i class="zricon-arrow-left"></i>",
-                        "sNext": "<i class="zricon-arrow-right"></i>",
+                        "sPrevious": "<i class="nvicon-arrow-left"></i>",
+                        "sNext": "<i class="nvicon-arrow-right"></i>",
                     }
                 },
                 columnDefs:[{
@@ -411,7 +411,7 @@
 以下为HTML代码：
 
 ```html
-    <div class="zr-table-wrap zr-table-wrap-border">
+    <div class="nv-table-wrap nv-table-wrap-border">
         <table id="example2">
             <thead>
                 <tr>
@@ -514,11 +514,11 @@
 
 然后再调用javascript代码，因为是 `jQuery` 插件，所以需要使用 `jQuery` 语法：：
 
-以下代码仅供示意，最好将此代码片段封装于[Zr.add](https://github.com/guguaihaha/zr-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
+以下代码仅供示意，最好将此代码片段封装于[Nv.add](https://github.com/guguaihaha/nv-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
 
 ```javascript
-    Zr.ready(function(){
-        Zr.use("jquery", "fixedColumns",function ($,DataTable) {
+    Nv.ready(function(){
+        Nv.use("jquery", "fixedColumns",function ($,DataTable) {
             var table = $('#example2').DataTable({
                 scrollY: "150px",
                 scrollX: true,
@@ -531,8 +531,8 @@
                     },
                 oLanguage:{
                     oPaginate:{
-                        "sPrevious": "<i class="zricon-arrow-left"></i>",
-                        "sNext": "<i class="zricon-arrow-right"></i>",
+                        "sPrevious": "<i class="nvicon-arrow-left"></i>",
+                        "sNext": "<i class="nvicon-arrow-right"></i>",
                     }
                 },
                 columnDefs:[{
@@ -544,10 +544,10 @@
     })
 ```
 
-[Demo展示](http://gtp-zr.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=8363128789b44e26b9cae7714bd3a950&directoryName=Table%20%E8%A1%A8%E6%A0%BC)
+[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=8363128789b44e26b9cae7714bd3a950&directoryName=Table%20%E8%A1%A8%E6%A0%BC)
 
-[留言和讨论](https://github.com/guguaihaha/zr-source/issues/19)
+[留言和讨论](https://github.com/guguaihaha/nv-source/issues/19)
 
-[常见第三方组件列表](http://gtp-zr.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=d6d307bb15ab4f3c8814dc552088ad2b&directoryName=%E5%B8%B8%E8%A7%81%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)
+[常见第三方组件列表](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=d6d307bb15ab4f3c8814dc552088ad2b&directoryName=%E5%B8%B8%E8%A7%81%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)
 
     

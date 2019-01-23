@@ -12,10 +12,10 @@
 
 ### 基本样式
 
-最基本的用法，只要将想要提示的节点添加class样式 `zr-tooltip` ,同时添加对应提示文本属性 `data-tip-text='Here is the content...'`，即可展现默认形式
+最基本的用法，只要将想要提示的节点添加class样式 `nv-tooltip` ,同时添加对应提示文本属性 `data-tip-text='Here is the content...'`，即可展现默认形式
 
 ```html
-    <p class="zr-tooltip" data-tip-text="Here is the content...">Mouseover Here...</p>
+    <p class="nv-tooltip" data-tip-text="Here is the content...">Mouseover Here...</p>
 ```
 
 <br/>
@@ -25,40 +25,40 @@
 位置有12个方向
 
 ```html
-    <button type="button" class="zr-tooltip" data-tip-text="tip position tl" data-ip-position="tl">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position tl" data-ip-position="tl">
         <span>TL</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position top">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position top">
         <span>Top</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position tr" data-tip-position="tr">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position tr" data-tip-position="tr">
         <span>TR</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position lt" data-tip-position="lt">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position lt" data-tip-position="lt">
         <span>LT</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position left" data-tip-position="left">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position left" data-tip-position="left">
         <span>Left</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position lb" data-tip-position="lb">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position lb" data-tip-position="lb">
         <span>LB</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position rt" data-tip-position="rt">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position rt" data-tip-position="rt">
         <span>RT</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position right" data-tip-position="right">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position right" data-tip-position="right">
         <span>Right</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position rb" data-tip-position="rb">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position rb" data-tip-position="rb">
         <span>RB</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position bl" data-tip-position="bl">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position bl" data-tip-position="bl">
         <span>BL</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position bottom" data-tip-position="bottom">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position bottom" data-tip-position="bottom">
         <span>Bottom</span>
     </button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position br" data-tip-position="br">
+    <button type="button" class="nv-tooltip" data-tip-text="tip position br" data-tip-position="br">
         <span>BR</span>
     </button>
 ```
@@ -69,7 +69,7 @@
 展示多行文本
 
 ```html
-    <p style="width:480px;" class="zr-tooltip" data-tip-text="Here is the content...Here is the content...Here is the content...">Here is the content...Here is the content...Here is the content...</p>
+    <p style="width:480px;" class="nv-tooltip" data-tip-text="Here is the content...Here is the content...Here is the content...">Here is the content...Here is the content...Here is the content...</p>
 ```
 <br/>
 
@@ -78,7 +78,7 @@
 通过修改属性 `data-tip-event` 为 `click`,即可点击出现提示。建议属性选择有`hover`(默认)和`click`事件,同时支持其他事件
 
 ```html
-    <p class="zr-tooltip" data-tip-event="click" data-tip-text="Click 事件名称，点击后生效">Click 事件名称，点击后生效</p>
+    <p class="nv-tooltip" data-tip-event="click" data-tip-text="Click 事件名称，点击后生效">Click 事件名称，点击后生效</p>
 ```
 
 ### 节点属性
@@ -116,8 +116,8 @@
    - 类型：String (选填)
 
 
-[Demo展示](http://gtp-zr.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=606e2519dda948c2bf214fd62182a157&directoryName=Tooltip%20%E6%96%87%E5%AD%97%E6%8F%90%E7%A4%BA)
+[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=606e2519dda948c2bf214fd62182a157&directoryName=Tooltip%20%E6%96%87%E5%AD%97%E6%8F%90%E7%A4%BA)
 
-[留言和讨论](https://github.com/guguaihaha/zr-source/issues/23)
+[留言和讨论](https://github.com/guguaihaha/nv-source/issues/23)
 
     

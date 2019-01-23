@@ -15,27 +15,27 @@
 最基本徽标显示方式
 
 ```html
-    <span class="zr-badge">
-        <button class="zr-btn zr-btn-default">Comment</button>
-        <span class="zr-badge-normal" data-max="99">9</span>
+    <span class="nv-badge">
+        <button class="nv-btn nv-btn-default">Comment</button>
+        <span class="nv-badge-normal" data-max="99">9</span>
     </span>
-    <span class="zr-badge">
-        <button class="zr-btn zr-btn-default">Comment</button>
-        <span class="zr-badge-normal" data-max="99">99</span>
+    <span class="nv-badge">
+        <button class="nv-btn nv-btn-default">Comment</button>
+        <span class="nv-badge-normal" data-max="99">99</span>
     </span>
-    <span class="zr-badge">
-        <span class="zr-photo">
-            <img src="//storage.jd.com/zrstatic/images/demo1.jpg" alt="">
+    <span class="nv-badge">
+        <span class="nv-photo">
+            <img src="//storage.jd.com/nvstatic/images/demo1.jpg" alt="">
         </span>
-        <span class="zr-badge-normal" data-max="99">9</span>
+        <span class="nv-badge-normal" data-max="99">9</span>
     </span>
-    <span class="zr-badge">
-        <button class="zr-btn zr-btn-primary">Comment</button>
-        <span class="zr-badge-normal" data-max="99">99+</span>
+    <span class="nv-badge">
+        <button class="nv-btn nv-btn-primary">Comment</button>
+        <span class="nv-badge-normal" data-max="99">99+</span>
     </span>
     <span>
         <span>option1</span>
-        <span class="zr-badge-normal" data-max="99">9</span>
+        <span class="nv-badge-normal" data-max="99">9</span>
     </span>
 ```
 
@@ -46,17 +46,17 @@
 可自定义显示最大值，默认最大值为99，超过99显示为99+
 
 ```html
-    <span class="zr-badge">
-        <button class="zr-btn zr-btn-default">Comment</button>
-        <span class="zr-badge-normal" data-max="99">99+</span>
+    <span class="nv-badge">
+        <button class="nv-btn nv-btn-default">Comment</button>
+        <span class="nv-badge-normal" data-max="99">99+</span>
     </span>
-    <span class="zr-badge">
-        <button class="zr-btn zr-btn-default">Comment</button>
-        <span class="zr-badge-normal" data-max="999">999+</span>
+    <span class="nv-badge">
+        <button class="nv-btn nv-btn-default">Comment</button>
+        <span class="nv-badge-normal" data-max="999">999+</span>
     </span>
-    <span class="zr-badge">
-        <button class="zr-btn zr-btn-default">Comment</button>
-        <span class="zr-badge-normal" data-max="9999">9999+</span>
+    <span class="nv-badge">
+        <button class="nv-btn nv-btn-default">Comment</button>
+        <span class="nv-badge-normal" data-max="9999">9999+</span>
     </span>
 ```
 <br/>
@@ -66,13 +66,13 @@
 不显示具体数字，只提示用户有需要关注的信息
 
 ```html
-    <span class="zr-badge">
+    <span class="nv-badge">
         <span>New Message</span>
-        <span class="zr-badge-pointer"></span>
+        <span class="nv-badge-pointer"></span>
     </span>
-    <span class="zr-badge">
+    <span class="nv-badge">
         <span>……</span>
-        <span class="zr-badge-pointer"></span>
+        <span class="nv-badge-pointer"></span>
     </span>
 ```
 <br/>
@@ -82,15 +82,15 @@
 不显示具体数字，只提示用户有需要关注的信息
 
 ```html
-    <span class="zr-badge">
-        <button class="zr-btn zr-btn-default">Comment</button>
-        <span class="zr-badge-normal">Comment</span>
+    <span class="nv-badge">
+        <button class="nv-btn nv-btn-default">Comment</button>
+        <span class="nv-badge-normal">Comment</span>
     </span>
 ```
 
 
-[Demo展示](http://gtp-zr.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=6beaa733cf904e398dadffca48a49954&directoryName=Badge%20%E5%BE%BD%E6%A0%87)
+[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=6beaa733cf904e398dadffca48a49954&directoryName=Badge%20%E5%BE%BD%E6%A0%87)
 
-[留言和讨论](https://github.com/guguaihaha/zr-source/issues/24)
+[留言和讨论](https://github.com/guguaihaha/nv-source/issues/24)
 
     
