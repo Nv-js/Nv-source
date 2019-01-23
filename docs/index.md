@@ -12,9 +12,9 @@
    </button>
 ```
 
-   可以看到，添加了nv-tooltip 的className即可将按钮变成了文字提示，提示位置`data-ip-position`和内容`data-tip-text`又是自定义的属性来控制。
+   可以看到，添加了nv-tooltip 的className即可将按钮变成了文字提示，提示位置`data-tip-position`和内容`data-tip-text`又是自定义的属性来控制。
    
-   当然如果需要控制具体回调事件的操作，每个内置组件基本都会在文档中说明是否嵌入了onnvchange，具体详细参考各个内置模块的api[了解更多](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=)
+   当然如果需要控制具体回调事件的操作，每个内置组件基本都会在文档中说明是否嵌入了onnvchange，具体详细参考各个内置模块的api[了解更多](http://nv.jd.com)
    
    [内置组件讨论和改进意见](//github.com/guguaihaha/Nv-source/issues/36)
    
@@ -26,13 +26,13 @@
    外置组件是用灵活，扩展性强，当然如果再外置组件有问题，可以在[外置组件讨论和改进意见](//github.com/guguaihaha/Nv-source/issues/37)，
    同时外置组件分为以下两点：
   
-  * 外置平台件
+  * 外置平台件 
   
-    通常是指Nv的team研发的组件，负责修改和更新。比如`message`,`modal`等
+    通常是指Nv的team研发的组件，负责修改和更新。比如`message`,`modal`等，可以[参考官网](http://nv.jd.com)
   
   * 外置第三方组件
   
-    通常指封装的第三方组件，文档和内容都是外链的。比如`jquery`,`swiper`等
+    通常指封装的第三方组件，文档和内容都是外链的。比如`jquery`,`swiper`等，[常见第三方组件列表](otherPlugins.md)
   
    <br/> 
    <br/>
@@ -75,13 +75,13 @@
 | tooltip 文字提示  | [Demo]()   | [API](./inner/tooltip.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/23) |
 | badge 徽标  | [Demo]()   | [API](./inner/badge.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/24) |
 | top 返回顶部  | [Demo]()   | [API](./inner/top.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/25) |
-| tab 选项卡  | [Demo]()   | [API](./inner/tab.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/26) |
-| modal 弹框  | [Demo]()   | [API](./inner/modal.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/27) |
-| page 分页  | [Demo]()   | [API](./inner/page.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/28) |
-| message 全局提示  | [Demo]()   | [API](./inner/message.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/29) |
-| datePicker 日期控件  | [Demo]()   | [API](./inner/datePicker.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/30) |
-| popover 气泡卡片  | [Demo]()   | [API](./inner/popover.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/31) |
-| affix 固钉  | [Demo]()   | [API](./inner/affix.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/32) |
-| tag 标签  | [Demo]()   | [API](./inner/tag.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/33) |
-| notification 通知提醒  | [Demo]()   | [API](./inner/notification.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/34) |
-| progress 进度条  | [Demo]()   | [API](./inner/progress.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/35) |
+| tab 选项卡  | [Demo]()   | [API](./out/tab.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/26) |
+| modal 弹框  | [Demo]()   | [API](./out/modal.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/27) |
+| page 分页  | [Demo]()   | [API](./out/page.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/28) |
+| message 全局提示  | [Demo]()   | [API](./out/message.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/29) |
+| datePicker 日期控件  | [Demo]()   | [API](./out/datePicker.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/30) |
+| popover 气泡卡片  | [Demo]()   | [API](./out/popover.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/31) |
+| affix 固钉  | [Demo]()   | [API](./out/affix.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/32) |
+| tag 标签  | [Demo]()   | [API](./out/tag.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/33) |
+| notification 通知提醒  | [Demo]()   | [API](./out/notification.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/34) |
+| progress 进度条  | [Demo]()   | [API](./out/progress.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/35) |
