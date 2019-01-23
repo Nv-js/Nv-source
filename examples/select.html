@@ -208,7 +208,7 @@
         <div class="c-demo">
             <div style="margin-top: 20px">
                 <div style="width: 160px;display: inline-block">
-                    <select name="country" class="nv-select" id="selectDom1">
+                    <select name="country" class="nv-select" id="selectDom01">
                         <option value="">请选择一个城市</option>
                         <option value="010">北京</option>
                         <option value="021">上海</option>
@@ -216,12 +216,12 @@
                     </select>
                 </div>
                 <div style="display: inline-block;margin-left: 20px">
-                    <button type="button" class="nv-btn nv-btn-primary" id="changeDis">改变select的disabled属性</button>
+                    <button type="button" class="nv-btn nv-btn-primary" id="changeDis-demo">改变select的disabled属性</button>
                 </div>
             </div>
             <div style="margin-top: 20px">
                 <div style="width: 160px;display: inline-block">
-                    <select name="country" class="nv-select" id="selectDom2">
+                    <select name="country" class="nv-select" id="selectDom02">
                         <option value="">请选择一个城市</option>
                         <option value="010">北京</option>
                         <option value="021">上海</option>
@@ -229,12 +229,12 @@
                     </select>
                 </div>
                 <div style="display: inline-block;margin-left: 20px">
-                    <button type="button" class="nv-btn nv-btn-primary" id="changeVal">选中value值为输入值的option</button>
+                    <button type="button" class="nv-btn nv-btn-primary" id="changeVal-demo">选中value值为输入值的option</button>
                 </div>
             </div>
             <div style="margin-top: 20px">
                 <div style="width: 160px;display: inline-block">
-                    <select name="country" class="nv-select" id="selectDom3">
+                    <select name="country" class="nv-select" id="selectDom03">
                         <option value="">请选择一个城市</option>
                         <option value="010">北京</option>
                         <option value="021">上海</option>
@@ -242,7 +242,7 @@
                     </select>
                 </div>
                 <div style="display: inline-block;margin-left: 20px">
-                    <button type="button" class="nv-btn nv-btn-primary" id="deleteOpt">删除value值为输入值的option</button>
+                    <button type="button" class="nv-btn nv-btn-primary" id="deleteOpt-demo">删除value值为输入值的option</button>
                 </div>
             </div>
         </div>
@@ -255,17 +255,16 @@
                 <option value="0571">杭州</option>
             </select>
             <button type="button" class="nv-btn nv-btn-primary" id="changeDis">改变select的disabled属性</button>
-            <script type="text/javascript">
+                <!--code代码-->
                 Nv.ready(function () {
                     Nv.use("jquery", function (nv, $) {
                         $("#changeDis").off("click").on("click", function () {
-                            document.getElementById("selectDom1").onnvchange({
+                            document.getElementById("selectDom01").onnvchange({
                                 disabled: true
                             })
                         });
                     })
                 })
-            </script>
             <!--改变select的value属性-->
             <select name="country" class="nv-select" id="selectDom2">
                 <option value="">请选择一个城市</option>
@@ -274,17 +273,16 @@
                 <option value="0571">杭州</option>
             </select>
             <button type="button" class="nv-btn nv-btn-primary" id="changeVal">选中value值为输入值的option</button>
-            <script type="text/javascript">
+                <!--code代码-->
                 Nv.ready(function () {
                     Nv.use("jquery", function (nv, $) {
                         $("#changeVal").off("click").on("click", function () {
-                            document.getElementById("selectDom2").onnvchange({
+                            document.getElementById("selectDom02").onnvchange({
                                 selected: '010' //选中北京
                             })
                         });
                     })
                 })
-            </script>
             <!--删除select的option-->
             <select name="country" class="nv-select" id="selectDom3">
                 <option value="">请选择一个城市</option>
@@ -293,17 +291,16 @@
                 <option value="0571">杭州</option>
             </select>
             <button type="button" class="nv-btn nv-btn-primary" id="deleteOpt">删除value值为输入值的option</button>
-            <script type="text/javascript">
+                <!--code代码-->
                 Nv.ready(function () {
                     Nv.use("jquery", function (nv, $) {
                         $("#deleteOpt").off("click").on("click", function () {
-                            document.getElementById("selectDom3").onnvchange({
+                            document.getElementById("selectDom03").onnvchange({
                                 remove: '010' // 删除北京
                             })
                         });
                     })
                 })
-            </script>
         </div>
         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
@@ -392,35 +389,29 @@
 
     </section>
 </article>
-<!--注意此段js必须第一引入在开发模式下{-->
-<script type="text/javascript" src="js/input.js"></script>
-<script type="text/javascript" src="js/select.js"></script>
+<!--注意此段js必须第一引入在开发模式下-->
+<script type="text/javascript" src="/src/js/inner/input.js"></script>
+<script type="text/javascript" src="/src/js/inner/select.js"></script>
 <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.dev.js"></script>
 <script type="text/javascript">
     Nv.config({
-        baseUrl: "/js/plugin_modules/",
+        baseUrl: "/",
         requestTime: true,
-        module: {
-            nv: {
-                path: './nv/dev_index'
-            }
-        }
     });
     Nv.ready(function () {
-        Nv.use("./js/quickMenu", "./js/code")
         Nv.use("jquery", function (nv, $) {
-            $("#changeDis").off("click").on("click", function () {
-                document.getElementById("selectDom1").onnvchange({
+            $("#changeDis-demo").off("click").on("click", function () {
+                document.getElementById("selectDom01").onnvchange({
                     disabled:true
                 });
             });
-            $("#changeVal").off("click").on("click", function () {
-                document.getElementById("selectDom2").onnvchange({
+            $("#changeVal-demo").off("click").on("click", function () {
+                document.getElementById("selectDom02").onnvchange({
                     selected: '010'
                 });
             });
-            $("#deleteOpt").off("click").on("click", function () {
-                document.getElementById("selectDom3").onnvchange({
+            $("#deleteOpt-demo").off("click").on("click", function () {
+                document.getElementById("selectDom03").onnvchange({
                     remove: '010'
                 });
             })

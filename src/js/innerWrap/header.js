@@ -162,6 +162,9 @@
                 clearSelector:"."+prefix+"-input-clear",
                 clearClassName:prefix+"-input-clear",
                 groupSelector:"."+prefix+"-input-group",
+                groupClassName: prefix + '-input-group', // 多个组件外层盒子
+                iconCloseCircle: prefix + 'icon-close-circle', // 关闭图标
+                wapperClassName: prefix + '-input-wapper', // 组合时外包盒子
             }
         },
         {
@@ -170,6 +173,9 @@
             options:{
                 txtNumSelector:"."+prefix+"-input-num",
                 groupSelector:"."+prefix+"-input-group",
+                groupClassName: prefix + '-input-group', // 多个组件外层盒子
+                textareaClassName: "." + prefix + '-textarea', // 区分input和textarea
+                txtNumClassName: prefix + '-input-num', // textarea输入字数显示
             }
         },
         {
@@ -198,14 +204,21 @@
             selectorName:"."+prefix+"-select",
             moduleName:"_select",
             options:{
-                hideClassName:prefix + "-select-hide",//隐藏
-                disableClassName:prefix + "-select-disable",//禁用样式
-                smClassName:prefix + "-select-sm",//sm
-                lgClassName:prefix + "-select-lg",//lg
-                titleClassName:"."+prefix + "-select-title",//显示选择项内容
-                contentClassName:"."+prefix + "-select-content",//下拉选择项列表
-                unselectClassName:"."+prefix + "-unselect"
-
+                hideClassName: prefix + "-select-hide",//隐藏
+                disableClassName: prefix + "-select-disable",//禁用样式
+                smClassName: prefix + "-select-sm",//sm
+                lgClassName: prefix + "-select-lg",//lg
+                menuClassName: prefix + '-select-menu', // 下拉框列表
+                receptionClassName: prefix + "-select-reception",//显示选择项内容
+                simulationClassName: prefix + "-simulation",  // 模拟出的最外层盒子
+                arrowUpClassName: prefix + "icon-arrow-up",    // 箭头向上的图标
+                arrowDownClassName: prefix + "icon-arrow-down",    // 箭头向下的图标
+                iconClose: prefix + "icon-close",   // 关闭图标
+                selectValues: prefix + "-select-values", // 当模拟框有选中值时带的class
+                multipleClassName: prefix + '-select-multiple', // 多选样式
+                checkboxChecked: prefix + '-select-checkbox-checked', // 是否选中
+                checkboxUncheck: prefix + '-select-checkbox-uncheck',    // 部分选中
+                checkboxNormal: prefix + '-select-checkbox-normal',     // checkbox盒子样式
             }
         },
         // {
@@ -295,31 +308,29 @@
     })
 })()
 
-Nv.add("./init/1.0.1/cdn_index",function(nv,$){
+Nv.add("./init/1.0.1/cdn_index",function(nv,$) {
     //
     nv.global.init = nv.init = _init;
     nv.dom = {
         //初始化配置
-        init:_init,
+        init: _init,
         //手动绑定组件到页面节点元素
-        dispatch:_init_auto,
+        dispatch: _init_auto,
         //自动观察页面节点变化，并通知相应的组件进行相应
-        autoDispatch:_init_observer,
+        autoDispatch: _init_observer,
         //手动查找页面节点元素
-        find:_find,
+        find: _find,
         //所有ajax请求
-        ajax:_ajax,
+        ajax: _ajax,
         //模版对象
-        tmpl:tmpl,
+        tmpl: tmpl,
         //滚动队列
-        scrollQueen:[],
+        scrollQueen: [],
         //点击队列
-        clickQueen:[],
+        clickQueen: [],
         //resize队列
-        resizeQueen:[]
+        resizeQueen: []
     }
-    //
-
-
+});
 
 
