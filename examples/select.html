@@ -5,7 +5,8 @@
     <title>组件平台显示内容</title>
     <!--开发阶段引用jq-->
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <link type="text/css" rel="stylesheet" href="/dist/local/css/content/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="/dist/cdn/nv.min.css" />
 </head>
 <body>
 <article class="c-content">
@@ -26,14 +27,14 @@
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>基础样式 <a href="#">#</a></p>
-        <span>最基础的select选择器样式，只需增加样式  <i class="c-block-inline">zr-select</i>；select标签有  <i class="c-block-inline">disabled</i> 属性时会显示成禁用样式。</span>
+        <span>最基础的select选择器样式，只需增加样式  <i class="c-block-inline">nv-select</i>；select标签有  <i class="c-block-inline">disabled</i> 属性时会显示成禁用样式。</span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <div style="width: 160px;display: inline-block;margin-right: 16px">
-                <select name="country" class="zr-select">
+                <select name="country" class="nv-select">
                     <option value="">请选择一个城市</option>
                     <option value="010">北京</option>
                     <option value="021">上海</option>
@@ -41,7 +42,7 @@
                 </select>
             </div>
             <div style="width: 160px;display: inline-block">
-                <select name="country" class="zr-select" disabled="disabled">
+                <select name="country" class="nv-select" disabled="disabled">
                     <option value="">请选择一个城市</option>
                     <option value="010">北京</option>
                     <option value="021">上海</option>
@@ -50,35 +51,36 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <!--默认样式-->
-    <select name="country" class="zr-select">
-        <option value="">请选择一个城市</option>
-        <option value="010">北京</option>
-        <option value="021">上海</option>
-        <option value="0571">杭州</option>
-    </select>
-    <!--禁用样式-->
-    <select name="country" class="zr-select" disabled="disabled">
-        <option value="">请选择一个城市</option>
-        <option value="010">北京</option>
-        <option value="021">上海</option>
-        <option value="0571">杭州</option>
-    </select>
+            <!--默认样式-->
+            <select name="country" class="nv-select">
+                <option value="">请选择一个城市</option>
+                <option value="010">北京</option>
+                <option value="021">上海</option>
+                <option value="0571">杭州</option>
+            </select>
+            <!--禁用样式-->
+            <select name="country" class="nv-select" disabled="disabled">
+                <option value="">请选择一个城市</option>
+                <option value="010">北京</option>
+                <option value="021">上海</option>
+                <option value="0571">杭州</option>
+            </select>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>不同尺寸 <a href="#">#</a></p>
-        <span>定义了select选择器三种尺寸：大、中（默认）、小；高度分别为  <i class="c-block-inline">40px</i>   <i class="c-block-inline">32px</i>   <i class="c-block-inline">24px</i>；
-        大尺寸和小尺寸需额外增加样式 <i class="c-block-inline">zr-select-lg</i> 和 <i class="c-block-inline">zr-select-sm</i>。</span>
+        <span>定义了select选择器三种尺寸：大、中（默认）、小；高度分别为  <i class="c-block-inline">40px</i>   <i class="c-block-inline">32px</i>   <i
+                class="c-block-inline">24px</i>；
+        大尺寸和小尺寸需额外增加样式 <i class="c-block-inline">nv-select-lg</i> 和 <i class="c-block-inline">nv-select-sm</i>。</span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <div style="width: 160px;display: inline-block;margin-right: 16px">
-                <select name="country" class="zr-select zr-select-sm">
+                <select name="country" class="nv-select nv-select-sm">
                     <option value="">请选择一个城市</option>
                     <option value="010">北京</option>
                     <option value="021">上海</option>
@@ -86,7 +88,7 @@
                 </select>
             </div>
             <div style="width: 160px;display: inline-block;margin-right: 16px">
-                <select name="country" class="zr-select">
+                <select name="country" class="nv-select">
                     <option value="">请选择一个城市</option>
                     <option value="010">北京</option>
                     <option value="021">上海</option>
@@ -94,7 +96,7 @@
                 </select>
             </div>
             <div style="width: 160px;display: inline-block">
-                <select name="country" class="zr-select zr-select-lg">
+                <select name="country" class="nv-select nv-select-lg">
                     <option value="">请选择一个城市</option>
                     <option value="010">北京</option>
                     <option value="021">上海</option>
@@ -103,29 +105,29 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <!--小尺寸 需额外增加样式“zr-select-sm”-->
-    <select name="country" class="zr-select zr-select-sm">
-        <option value="">请选择一个城市</option>
-        <option value="010">北京</option>
-        <option value="021">上海</option>
-        <option value="0571">杭州</option>
-    </select>
-    <!--默认尺寸-->
-    <select name="country" class="zr-select">
-        <option value="">请选择一个城市</option>
-        <option value="010">北京</option>
-        <option value="021">上海</option>
-        <option value="0571">杭州</option>
-    </select>
-    <!--大尺寸 需额外增加样式“zr-select-lg”-->
-    <select name="country" class="zr-select zr-select-lg">
-        <option value="">请选择一个城市</option>
-        <option value="010">北京</option>
-        <option value="021">上海</option>
-        <option value="0571">杭州</option>
-    </select>
+            <!--小尺寸 需额外增加样式“nv-select-sm”-->
+            <select name="country" class="nv-select nv-select-sm">
+                <option value="">请选择一个城市</option>
+                <option value="010">北京</option>
+                <option value="021">上海</option>
+                <option value="0571">杭州</option>
+            </select>
+            <!--默认尺寸-->
+            <select name="country" class="nv-select">
+                <option value="">请选择一个城市</option>
+                <option value="010">北京</option>
+                <option value="021">上海</option>
+                <option value="0571">杭州</option>
+            </select>
+            <!--大尺寸 需额外增加样式“nv-select-lg”-->
+            <select name="country" class="nv-select nv-select-lg">
+                <option value="">请选择一个城市</option>
+                <option value="010">北京</option>
+                <option value="021">上海</option>
+                <option value="0571">杭州</option>
+            </select>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -137,7 +139,7 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <div style="width: 160px">
-                <select name="country" multiple="multiple" class="zr-select">
+                <select name="country" multiple="multiple" class="nv-select">
                     <option value="010">北京</option>
                     <option value="021">上海</option>
                     <option value="0571">杭州</option>
@@ -145,13 +147,13 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <select name="country" multiple="multiple" class="zr-select">
-        <option value="010">北京</option>
-        <option value="021">上海</option>
-        <option value="0571">杭州</option>
-    </select>
+            <select name="country" multiple="multiple" class="nv-select">
+                <option value="010">北京</option>
+                <option value="021">上海</option>
+                <option value="0571">杭州</option>
+            </select>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -163,7 +165,7 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <div style="width: 160px;display: inline-block">
-                <select name="country" class="zr-select">
+                <select name="country" class="nv-select">
                     <option value="">请选择一个城市</option>
                     <option value="010">北京</option>
                     <option value="021" selected="selected">上海</option>
@@ -171,7 +173,7 @@
                 </select>
             </div>
             <div style="width: 160px;display: inline-block">
-                <select name="country" multiple="multiple" class="zr-select">
+                <select name="country" multiple="multiple" class="nv-select">
                     <option value="010">北京</option>
                     <option value="021" selected="selected">上海</option>
                     <option value="0571" selected="selected">杭州</option>
@@ -179,26 +181,26 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <!--默认选中“上海”-->
-    <select name="country" class="zr-select">
-        <option value="">请选择一个城市</option>
-        <option value="010">北京</option>
-        <option value="021" selected="selected">上海</option>
-        <option value="0571">杭州</option>
-    </select>
-    <!--多选列表默认选中-->
-    <select name="country" multiple="multiple" class="zr-select">
-        <option value="010">北京</option>
-        <option value="021" selected="selected">上海</option>
-        <option value="0571" selected="selected">杭州</option>
-    </select>
+            <!--默认选中“上海”-->
+            <select name="country" class="nv-select">
+                <option value="">请选择一个城市</option>
+                <option value="010">北京</option>
+                <option value="021" selected="selected">上海</option>
+                <option value="0571">杭州</option>
+            </select>
+            <!--多选列表默认选中-->
+            <select name="country" multiple="multiple" class="nv-select">
+                <option value="010">北京</option>
+                <option value="021" selected="selected">上海</option>
+                <option value="0571" selected="selected">杭州</option>
+            </select>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>自定义DOM监听事件 <a href="#">#</a></p>
-        <span>1.3.3版本后组件在原生的DOM对象上挂载了<i class="c-block-inline">zrchange</i>方法，需要改变select后重新渲染页面的话可以使用此方法（需升级为1.3.3及以后的版本）。</span>
+        <span>1.3.3版本后组件在原生的DOM对象上挂载了<i class="c-block-inline">onnvchange</i>方法，需要改变select后重新渲染页面的话可以使用此方法（需升级为1.3.3及以后的版本）。</span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
@@ -206,7 +208,7 @@
         <div class="c-demo">
             <div style="margin-top: 20px">
                 <div style="width: 160px;display: inline-block">
-                    <select name="country" class="zr-select" id="selectDom1">
+                    <select name="country" class="nv-select" id="selectDom1">
                         <option value="">请选择一个城市</option>
                         <option value="010">北京</option>
                         <option value="021">上海</option>
@@ -214,12 +216,12 @@
                     </select>
                 </div>
                 <div style="display: inline-block;margin-left: 20px">
-                    <button type="button" class="zr-btn zr-btn-primary" id="changeDis">改变select的disabled属性</button>
+                    <button type="button" class="nv-btn nv-btn-primary" id="changeDis">改变select的disabled属性</button>
                 </div>
             </div>
             <div style="margin-top: 20px">
                 <div style="width: 160px;display: inline-block">
-                    <select name="country" class="zr-select" id="selectDom2">
+                    <select name="country" class="nv-select" id="selectDom2">
                         <option value="">请选择一个城市</option>
                         <option value="010">北京</option>
                         <option value="021">上海</option>
@@ -227,12 +229,12 @@
                     </select>
                 </div>
                 <div style="display: inline-block;margin-left: 20px">
-                    <button type="button" class="zr-btn zr-btn-primary" id="changeVal">改变select的value属性</button>
+                    <button type="button" class="nv-btn nv-btn-primary" id="changeVal">选中value值为输入值的option</button>
                 </div>
             </div>
             <div style="margin-top: 20px">
                 <div style="width: 160px;display: inline-block">
-                    <select name="country" class="zr-select" id="selectDom3">
+                    <select name="country" class="nv-select" id="selectDom3">
                         <option value="">请选择一个城市</option>
                         <option value="010">北京</option>
                         <option value="021">上海</option>
@@ -240,79 +242,73 @@
                     </select>
                 </div>
                 <div style="display: inline-block;margin-left: 20px">
-                    <button type="button" class="zr-btn zr-btn-primary" id="deleteOpt">删除select的option</button>
+                    <button type="button" class="nv-btn nv-btn-primary" id="deleteOpt">删除value值为输入值的option</button>
                 </div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <!--改变select的disabled属性-->
-    <select name="country" class="zr-select" id="selectDom1">
-        <option value="">请选择一个城市</option>
-        <option value="010">北京</option>
-        <option value="021">上海</option>
-        <option value="0571">杭州</option>
-    </select>
-    <button type="button" class="zr-btn zr-btn-primary" id="changeDis">改变select的disabled属性</button>
-    <script type="text/javascript">
-        Zr.ready(function(){
-            Zr.use("jquery",function (zr,$) {
-                $("#changeDis").off("click").on("click",function () {
-                    document.getElementById("selectDom1").zrchange({
-                        eventFn:function () {
-                            $("#selectDom1").attr("disabled","disabled");
-                        }
+            <!--改变select的disabled属性-->
+            <select name="country" class="nv-select" id="selectDom1">
+                <option value="">请选择一个城市</option>
+                <option value="010">北京</option>
+                <option value="021">上海</option>
+                <option value="0571">杭州</option>
+            </select>
+            <button type="button" class="nv-btn nv-btn-primary" id="changeDis">改变select的disabled属性</button>
+            <script type="text/javascript">
+                Nv.ready(function () {
+                    Nv.use("jquery", function (nv, $) {
+                        $("#changeDis").off("click").on("click", function () {
+                            document.getElementById("selectDom1").onnvchange({
+                                disabled: true
+                            })
+                        });
                     })
-                });
-            })
-        })
-    </script>
-    <!--改变select的value属性-->
-    <select name="country" class="zr-select" id="selectDom2">
-        <option value="">请选择一个城市</option>
-        <option value="010">北京</option>
-        <option value="021">上海</option>
-        <option value="0571">杭州</option>
-    </select>
-    <button type="button" class="zr-btn zr-btn-primary" id="changeVal">改变select的value属性</button>
-    <script type="text/javascript">
-        Zr.ready(function(){
-            Zr.use("jquery",function (zr,$) {
-                $("#changeVal").off("click").on("click",function () {
-                    document.getElementById("selectDom2").zrchange({
-                        eventFn:function () {
-	                        $("#selectDom2").val("010");
-                        }
+                })
+            </script>
+            <!--改变select的value属性-->
+            <select name="country" class="nv-select" id="selectDom2">
+                <option value="">请选择一个城市</option>
+                <option value="010">北京</option>
+                <option value="021">上海</option>
+                <option value="0571">杭州</option>
+            </select>
+            <button type="button" class="nv-btn nv-btn-primary" id="changeVal">选中value值为输入值的option</button>
+            <script type="text/javascript">
+                Nv.ready(function () {
+                    Nv.use("jquery", function (nv, $) {
+                        $("#changeVal").off("click").on("click", function () {
+                            document.getElementById("selectDom2").onnvchange({
+                                selected: '010' //选中北京
+                            })
+                        });
                     })
-                });
-            })
-        })
-    </script>
-    <!--删除select的option-->
-    <select name="country" class="zr-select" id="selectDom3">
-        <option value="">请选择一个城市</option>
-        <option value="010">北京</option>
-        <option value="021">上海</option>
-        <option value="0571">杭州</option>
-    </select>
-    <button type="button" class="zr-btn zr-btn-primary" id="deleteOpt">删除select的option</button>
-    <script type="text/javascript">
-        Zr.ready(function(){
-            Zr.use("jquery",function (zr,$) {
-                $("#deleteOpt").off("click").on("click",function () {
-                    document.getElementById("selectDom3").zrchange({
-                        eventFn:function () {
-	                        $("#selectDom3").find("option[value=010]").remove();
-                        }
+                })
+            </script>
+            <!--删除select的option-->
+            <select name="country" class="nv-select" id="selectDom3">
+                <option value="">请选择一个城市</option>
+                <option value="010">北京</option>
+                <option value="021">上海</option>
+                <option value="0571">杭州</option>
+            </select>
+            <button type="button" class="nv-btn nv-btn-primary" id="deleteOpt">删除value值为输入值的option</button>
+            <script type="text/javascript">
+                Nv.ready(function () {
+                    Nv.use("jquery", function (nv, $) {
+                        $("#deleteOpt").off("click").on("click", function () {
+                            document.getElementById("selectDom3").onnvchange({
+                                remove: '010' // 删除北京
+                            })
+                        });
                     })
-                });
-            })
-        })
-    </script>
+                })
+            </script>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
-    <div class="c-options-title">API</div>
+    <div class="c-options-title">onnvchange 参数</div>
     <section class="c-table">
         <div class="c-table-header">
             <table>
@@ -322,13 +318,10 @@
                         <div class="c-cell c-table-w-125">属性</div>
                     </th>
                     <th>
-                        <div class="c-cell c-table-w-200">描述</div>
-                    </th>
-                    <th>
                         <div class="c-cell c-table-w-125">类型</div>
                     </th>
                     <th>
-                        <div class="c-cell c-table-w-500">默认值</div>
+                        <div class="c-cell c-table-w-500">描述</div>
                     </th>
                 </tr>
                 </thead>
@@ -337,18 +330,60 @@
         <div class="c-table-body">
             <table>
                 <tbody>
+                </tr>
                 <tr>
                     <td>
-                        <div class="c-cell c-table-w-125">zrchange</div>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">disabled</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-200">自定义监听DOM变化的事件</div>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">Boolean</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-125">Function</div>
+                        <div class="c-cell c-cell-height-auto c-table-w-500">禁用select元素，默认值false，入参为true时，禁用select。eg:{disabled: false}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">selected</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-500">入参需要是一个对象，Key为eventFn，Value为处理DOM变化的函数方法。</div>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">Number</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-500">选中value值为输入值的option，默认为false，入参为option的value值。eg：{selected: '010'}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">remove</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">Number</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-500">删除value值为输入值的option，默认为false，入参为option的value值。eg：{remove: '010'}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">beforeFn</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">Function</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-500">前置回调函数，在onnvchange最开始执行。eg: {beforeFn: function(){}}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">afterFn</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">Function</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-500">后置回调函数，在onnvchange最后执行。eg: {afterFn: function(){}}</div>
                     </td>
                 </tr>
                 </tbody>
@@ -360,37 +395,36 @@
 <!--注意此段js必须第一引入在开发模式下{-->
 <script type="text/javascript" src="js/input.js"></script>
 <script type="text/javascript" src="js/select.js"></script>
-<script type="text/javascript" src="//storage.jd.com/1.1.3/zr.dev.min.js"></script>
+<script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.dev.js"></script>
 <script type="text/javascript">
-    Zr.config({
+    Nv.config({
         baseUrl: "/js/plugin_modules/",
-        requestTime:true
-    })
-    Zr.ready(function(){
-        Zr.use("./js/quickMenu","./js/code")
-	    Zr.use("jquery",function (zr,$) {
-		    $("#changeDis").off("click").on("click",function () {
-			    document.getElementById("selectDom1").zrchange({
-                    eventFn:function () {
-	                    $("#selectDom1").attr("disabled","disabled");
-                    }
-                })
-		    });
-		    $("#changeVal").off("click").on("click",function () {
-			    document.getElementById("selectDom2").zrchange({
-				    eventFn:function () {
-					    $("#selectDom2").val("010");
-				    }
-			    })
-		    });
-		    $("#deleteOpt").off("click").on("click",function () {
-			    document.getElementById("selectDom3").zrchange({
-				    eventFn:function () {
-					    $("#selectDom3").find("option[value=010]").remove();
-				    }
-			    })
-		    })
-	    })
+        requestTime: true,
+        module: {
+            nv: {
+                path: './nv/dev_index'
+            }
+        }
+    });
+    Nv.ready(function () {
+        Nv.use("./js/quickMenu", "./js/code")
+        Nv.use("jquery", function (nv, $) {
+            $("#changeDis").off("click").on("click", function () {
+                document.getElementById("selectDom1").onnvchange({
+                    disabled:true
+                });
+            });
+            $("#changeVal").off("click").on("click", function () {
+                document.getElementById("selectDom2").onnvchange({
+                    selected: '010'
+                });
+            });
+            $("#deleteOpt").off("click").on("click", function () {
+                document.getElementById("selectDom3").onnvchange({
+                    remove: '010'
+                });
+            })
+        })
     })
 </script>
 </body>

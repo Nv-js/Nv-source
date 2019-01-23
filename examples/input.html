@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?4"/>
+    <!--开发阶段引用jq-->
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/dist/local/css/content/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="/dist/cdn/nv.min.css" />
 
     <style>
-        .c-demo>div{
+        .c-demo > div {
             margin-bottom: 8px;
         }
     </style>
@@ -31,7 +33,8 @@
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>基础样式 <a href="#">#</a></p>
-        <span>最基础输入框的使用状态有默认状态和禁用状态，只需要添加样式  <i class="c-block-inline">zr-input</i> ；input标签有  <i class="c-block-inline">disabled</i> 属性时会显示成禁用状态。</span>
+        <span>最基础输入框的使用状态有默认状态和禁用状态，只需要添加样式  <i class="c-block-inline">zr-input</i> ；input标签有  <i
+                class="c-block-inline">disabled</i> 属性时会显示成禁用状态。</span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
@@ -45,17 +48,18 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <!--默认状态-->
-    <input type="text" placeholder="Please input text" class="zr-input">
-    <!--禁用状态，只需给input标签设置disabled属性-->
-    <input type="text" placeholder="Text" disabled="disabled" class="zr-input">
+            <!--默认状态-->
+            <input type="text" placeholder="Please input text" class="zr-input">
+            <!--禁用状态，只需给input标签设置disabled属性-->
+            <input type="text" placeholder="Text" disabled="disabled" class="zr-input">
         </div>
         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>输入框尺寸 <a href="#">#</a></p>
-        <span>定义了输入框三种尺寸：大、中（默认）、小；高度分别为  <i class="c-block-inline">40px</i>   <i class="c-block-inline">32px</i>   <i class="c-block-inline">24px</i>；
+        <span>定义了输入框三种尺寸：大、中（默认）、小；高度分别为  <i class="c-block-inline">40px</i>   <i class="c-block-inline">32px</i>   <i
+                class="c-block-inline">24px</i>；
         大尺寸和小尺寸需额外增加样式 <i class="c-block-inline">zr-input-lg</i> 和 <i class="c-block-inline">zr-input-sm</i>。</span>
     </section>
     <section class="c-code">
@@ -73,12 +77,12 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <!--大尺寸 需额外增加样式“zr-input-lg”-->
-    <input type="text" placeholder="Large" class="zr-input zr-input-lg">
-    <!--默认尺寸-->
-    <input type="text" placeholder="Default" class="zr-input">
-    <!--小尺寸 需额外增加样式“zr-input-sm”-->
-    <input type="text" placeholder="Small" class="zr-input zr-input-sm">
+            <!--大尺寸 需额外增加样式“zr-input-lg”-->
+            <input type="text" placeholder="Large" class="zr-input zr-input-lg">
+            <!--默认尺寸-->
+            <input type="text" placeholder="Default" class="zr-input">
+            <!--小尺寸 需额外增加样式“zr-input-sm”-->
+            <input type="text" placeholder="Small" class="zr-input zr-input-sm">
         </div>
         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
@@ -97,8 +101,8 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <!--只需增加样式“zr-input-clear”-->
-    <input type="text" placeholder="Please input text" class="zr-input zr-input-clear">
+            <!--只需增加样式“zr-input-clear”-->
+            <input type="text" placeholder="Please input text" class="zr-input zr-input-clear">
         </div>
         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
@@ -106,7 +110,7 @@
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>带icon的输入框 <a href="#">#</a></p>
-        <span>带有icon的输入框，分为两种：可操作的icon置于输入框的右侧（默认状态）；提醒性的icon置于输入框左侧，父级div需增加样式 <i class="c-block-inline">zr-input-left</i>。</span>
+        <span>带有icon的输入框，分为两种：可操作的icon置于输入框的右侧（默认状态）；</span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
@@ -121,7 +125,7 @@
                 </div>
             </div>
             <div style="width: 240px">
-                <div class="zr-input-group zr-input-left">
+                <div class="zr-input-group">
                     <span class="zr-input-addon">
                         <i class="zricon-user-empty"></i>
                     </span>
@@ -130,20 +134,19 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <!--默认状态-->
-    <div class="zr-input-group">
-        <input type="text" placeholder="Please input text" class="zr-input">
-        <span class="zr-input-addon">
+            <!--默认状态-->
+            <div class="zr-input-group">
+                <input type="text" placeholder="Please input text" class="zr-input">
+                <span class="zr-input-addon">
             <i class="zricon-calendar-empty"></i>
         </span>
-    </div>
-    <!--增加样式“zr-input-left”，icon置于左侧-->
-    <div class="zr-input-group zr-input-left">
+            </div>
+            <div class="zr-input-group">
         <span class="zr-input-addon">
             <i class="zricon-user-empty"></i>
         </span>
-        <input type="text" placeholder="Please input text" class="zr-input">
-    </div>
+                <input type="text" placeholder="Please input text" class="zr-input">
+            </div>
         </div>
         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
@@ -162,8 +165,8 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <!--maxlength属性用于显示最大可输入字符数-->
-    <textarea class="zr-textarea" maxlength="100" placeholder="Textarea"></textarea>
+            <!--maxlength属性用于显示最大可输入字符数-->
+            <textarea class="zr-textarea" maxlength="100" placeholder="Textarea"></textarea>
         </div>
         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
@@ -171,7 +174,7 @@
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>组合输入框 <a href="#">#</a></p>
-        <span>可前置或后置元素，一般为标签或按钮；默认状态为标签，按钮需额外增加样式  <i class="c-block-inline">zr-input-btn</i></span>
+        <span>可前置或后置元素，一般为下拉标签或按钮；默认状态为标签，按钮需额外增加样式  <i class="c-block-inline">zr-input-btn</i>，input默认在右侧，如果在左侧需额外增加样式  <i class="c-block-inline">zr-input-wapper-left</i></span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
@@ -209,49 +212,158 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-input-wapper">
-        <select name="country" class="zr-select">
-            <option value="option1">option1</option>
-            <option value="option2">option2</option>
-        </select>
-        <input type="text" class="zr-input">
-    </div>
-    <div class="zr-input-wapper zr-input-btn">
-        <div class="zr-input-wapper zr-input-btn">
-            <select name="country" class="zr-select">
-                <option value="option1">option1</option>
-                <option value="option2">option2</option>
-            </select>
-            <input type="text" class="zr-input">
-            <span class="zr-input-addon">
+            <div class="zr-input-wapper">
+                <select name="country" class="zr-select">
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                </select>
+                <input type="text" class="zr-input">
+            </div>
+            <div class="zr-input-wapper zr-input-btn">
+                <div class="zr-input-wapper zr-input-btn">
+                    <select name="country" class="zr-select">
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                    </select>
+                    <input type="text" class="zr-input">
+                    <span class="zr-input-addon">
                 <i class="zricon-search-empty"></i>
             </span>
-        </div>
-    </div>
-    <div class="zr-input-wapper zr-input-wapper-left zr-input-btn">
-        <input type="text" class="zr-input">
-        <select name="country" class="zr-select">
-            <option value="option1">option1</option>
-            <option value="option2">option2</option>
-        </select>
-    </div>
+                </div>
+            </div>
+            <div class="zr-input-wapper zr-input-wapper-left zr-input-btn">
+                <input type="text" class="zr-input">
+                <select name="country" class="zr-select">
+                    <option value="option1">option1</option>
+                    <option value="option2">option2</option>
+                </select>
+            </div>
         </div>
         <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
+    <div class="c-block-50"></div>
+    <section class="c-sub-title">
+        <p>自定义DOM监听事件 <a href="#">#</a></p>
+        <span>1.3.3版本后组件在原生的DOM对象上挂载了<i class="c-block-inline">onzrchange</i>方法，需要改变textarea后重新渲染页面的话可以使用此方法（需升级为1.3.3及以后的版本）。</span>
+    </section>
+    <section class="c-code">
+        <!--switch code show or hide-->
+        <div class="c-code-switch">&lt;code&gt;</div>
+        <div class="c-demo">
+            <div style="margin-top: 20px">
+                <div style="width: 480px; height:64px;display: inline-block;vertical-align: top;">
+                    <textarea id="textarea" class="zr-textarea" maxlength="100" placeholder="Textarea"></textarea>
+                </div>
+                <div style="display: inline-block;margin-left: 20px; vertical-align: top;">
+                    <button type="button" class="zr-btn zr-btn-primary" id="changeInner">动态改变输入框的值</button>
+                </div>
+            </div>
+        </div>
+        <div class="c-code-inner c-code-hide">
+            <!--动态改变输入框的值-->
+            <textarea id="textarea" class="zr-textarea" maxlength="100" placeholder="Textarea"></textarea>
+            <button type="button" class="zr-btn zr-btn-primary" id="changeInner">动态改变输入框的值</button>
+            <script type="text/javascript">
+                Zr.ready(function () {
+                    Zr.use('jquery', function (zr, $) {
+                        $("#changeInner").off("click").on("click", function () {
+                            document.getElementById("textarea").onzrchange({
+                                inserted: '我是新添加的内容'
+                            });
+                        });
+                    });
+                })
+            </script>
+        </div>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    </section>
+    <div class="c-block-50"></div>
+    <div class="c-options-title">onzrchange 参数</div>
+    <section class="c-table">
+        <div class="c-table-header">
+            <table>
+                <thead>
+                <tr>
+                    <th>
+                        <div class="c-cell c-table-w-125">属性</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-125">类型</div>
+                    </th>
+                    <th>
+                        <div class="c-cell c-table-w-500">描述</div>
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="c-table-body">
+            <table>
+                <tbody>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">inserted</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">String</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-500">默认为false，动态改变输入框的值。eg：{inserted：'我是新添加的内容'}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">beforeFn</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">Function</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-500">前置回调函数，在onzrchange最开始执行。eg: {beforeFn: function(){}}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">afterFn</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-125">Function</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-cell-height-auto c-table-w-500">后置回调函数，在onzrchange最后执行。eg: {afterFn: function(){}}</div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 </article>
-<!--注意此段js必须第一引入在开发模式下{-->
+<!--注意此段js必须第一引入在开发模式下-->
 <script type="text/javascript" src="js/input.js"></script>
 <script type="text/javascript" src="js/select.js"></script>
-<script type="text/javascript" src="http://storage.jd.com/v1.0.0/zr.dev.min.js"></script>
+<script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.dev.js"></script>
 <script type="text/javascript">
-	Zr.config({
-		baseUrl: "/js/plugin_modules/"
-	})
-	Zr.ready(function () {
-		Zr.use("./js/quickMenu", "./js/code",function (zr) {
-			zr.dom.dispatch();
-		})
-	})
+    Zr.config({
+        modole: {
+            zr: {
+                path: './zr/dev_index'
+            }
+        },
+        baseUrl: "/js/plugin_modules/"
+    })
+    Zr.ready(function () {
+        Zr.use("./js/quickMenu", "./js/code", function (zr) {
+            zr.dom.dispatch();
+        });
+        Zr.use('jquery', function (zr, $) {
+            $("#changeInner").off("click").on("click", function () {
+                document.getElementById("textarea").onzrchange({
+                    inserted: '我是新添加的内容'
+                });
+            });
+        });
+    })
 </script>
 </body>
 </html>

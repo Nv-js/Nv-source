@@ -1,367 +1,494 @@
 var _select = {
-	uid:30500000,
-	version:"1.0.0",
-	init:function(domObject){
-
+    uid: 30500000,
+    version: "1.0.0",
+    init: function (domObject) {
         this.options._obj = domObject;
-		this.events.eventList(domObject);
-	},
-	options:{
-		_obj:{},//公共变量，永远不会变
-		cacheName:"select_cache"
-	},
-	events:{
-		/**
-		 * @Author: zhangjinglin
-		 * @Email: zhangjinglin@jd.com
-		 * @Date: Created in 2018/2/9 下午5:18
-		 * @Description:绑定关闭事件
-		 * @params <Object> opt
-		 * @paramsDescription
-		 * {
-            *   selector:_selector,//选择器模块
-            *   module:_module,//模块名称
-            *   options:_options,//所有该模块的附加对象
-            *   array:_retSelector//传入的新模块对象
-            * }
-		 */
-		eventList:function(opt){
-			$.each(opt.array,function(i,n){
-				//缓存_obj'
-				$(n).data(_select.options.cacheName,_select.options._obj);
-				//
-				_select.eventFn.getValue($(n));
-				$(n).on("DOMNodeInserted",function () {
-					$(n).nextAll(".nv-unselect").eq(0).remove();
-                        _select.eventFn.getValue($(n));
-				});
-				$(n).on("DOMNodeRemoved",function () {
-					$(n).nextAll(".nv-unselect").eq(0).remove();
-                        _select.eventFn.getValue($(n));
-				});
-                //自定义事件监听DOM变化
-				$(n)[0]["nvchange"] = function(opt){
-					var opts = {
-							eventFn:"",
-							other:""
-						},
-						opt = $.extend(opts,opt||{});
-					opt.eventFn();
-					$(n).nextAll(".nv-unselect").eq(0).remove();
-					_select.eventFn.getValue($(n));
-				}
+        this.events.eventList(domObject);
+    },
+    options: {
+        _obj: {},
+    },
+    events: {
+        eventList: function (opt) {
+            var options = _select.options._obj.options;
+            $.each(opt.array, function (i, n) {
+                // 缓存
+                var $n = $(n),
+                    optArr = [],
+                    htmlArr = [],
+                    receptionArr = [],
+                    optionArr = [],
+                    selectedItem = [],
+                    selectedNumber = 0,
+                    isHasMultipleClass = '';
 
-			});
-			//点击其他地方取消相关样式
-			nv.dom.clickQueen.push(function(){
-				$.each(opt.array,function(i,n){
-					$(_select.options._obj.options.contentClassName).addClass(_select.options._obj.options.hideClassName);
-					$(_select.options._obj.options.titleClassName).find(".nvicon-arrow-down").removeClass("nvicon-arrow-up")
-				})
-			})
-		}
-	},
-	eventFn:{
-		//获取select下option的value和text
-		getValue:function(obj){
-			var _obj = obj.data(_select.options.cacheName);
-			obj.addClass(_obj.options.hideClassName);
-			var opt = obj.find("option"),
-				optArr = [];
-			if (obj.find("option[selected]").length > 0){
-				var optSelected = obj.find("option[selected]");
-			}else if (obj.val() && !obj.attr("multiple")) {
-				var optSelected = obj.find("option[value="+obj.val()+"]");
-			}else if (obj.val() && obj.attr("multiple")){
-				var optSelected = obj.find("option[selected]");
-			}else {
-				var optSelected = [];
-			}
-            if (opt.length > 0){
-				for (var i = 0,j = opt.length; i < j; i++){
-					optArr.push({
-						optVal:$(opt[i]).val(),
-						optText:$(opt[i]).text(),
-						optSelected:$(opt[i]).attr("selected")
-					})
-				};
-				_select.eventFn.Unselect(obj,optArr,optSelected);
-			}
-		},
-		//生成虚拟select
-		Unselect:function (obj,arr,optSelected) {
-			var _obj = obj.data(_select.options.cacheName);
-			var optHtml = "",
-				inputHtml = "",
-				inputContent = '',
-				html = "",
-				selectAll = '<dt class="nv-select-checkbox" nv-option-value=""><span class="nv-select-checkbox-normal"><span class=""></span></span><div class="nv-select-checkbox-text">全选</div></dt>';
-			for (var i = 0,j = arr.length; i < j; i++){
-				if (obj.attr("multiple")){
-					var selectClass = arr[i].optSelected?"nv-select-checkbox-checked":"";
-					optHtml += '<dd class="nv-select-checkbox ' + selectClass +'" nv-option-value="' + arr[i].optVal +'" nv-option-text="' + arr[i].optText +'" title="'+arr[i].optText+'"><span class="nv-select-checkbox-normal"><span></span></span><div class="nv-select-checkbox-text">' + arr[i].optText + '</div></dd>';
-				}else {
-					optHtml += '<dd title="'+arr[i].optText+'" nv-option-value="' + arr[i].optVal + '">' + arr[i].optText + '</dd>';
-				}
-			};
-			if (optSelected.length > 0){
-                if (obj.attr("multiple")){
-                	if (optSelected.length == arr.length){
-                        selectAll = '<dt class="nv-select-checkbox nv-select-checkbox-checked" nv-option-value=""><span class="nv-select-checkbox-normal"><span class=""></span></span><div class="nv-select-checkbox-text">全选</div></dt>';
-					} else {
-                        selectAll = '<dt class="nv-select-checkbox nv-select-checkbox-checked" nv-option-value=""><span class="nv-select-checkbox-normal"><span class="nv-select-checkbox-uncheck"></span></span><div class="nv-select-checkbox-text">全选</div></dt>';
-                    };
-                    for (var i = 0,j = optSelected.length; i < j; i++){
-                        inputContent += '<span>' + $(optSelected[i]).text() +  '<i nv-close-text="' + $(optSelected[i]).text() +'" nv-close-val="' + $(optSelected[i]).val() + '" class="nvicon-close"></i></span>';
-                    };
-				}else {
-                    inputHtml = $(optSelected).text();
-                    inputContent = '<input type="text" value="' + inputHtml + '" readonly="readonly" '
-				};
-			} else {
-				inputHtml = arr[0].optText;
-				inputContent = '<input type="text" placeholder="' + inputHtml + '" readonly="readonly" '
-			};
-			if (obj.attr("disabled")){
-				html = '<div class="nv-unselect nv-select-disable"><div class="nv-select-title nv-input-group">' + inputContent +'disabled="disabled" class="nv-input">' +
-					'<span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span></div><dl class="nv-select-content nv-select-hide">' + optHtml + '</dl></div>';
-			}else if (obj.attr("multiple")){
-				if (optSelected.length > 0){
-                    html = '<div class="nv-unselect"><div class="nv-select-title nv-input-group nv-select-values">' + inputContent +
-                        '<i class="nvicon-arrow-down"></i></div><dl class="nv-select-content nv-select-hide">' + selectAll + optHtml + '</dl></div>';
-				} else {
-                    html = '<div class="nv-unselect"><div class="nv-select-title nv-input-group">' + inputContent +' class="nv-input">' +
-                        '<span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span></div><dl class="nv-select-content nv-select-hide">' + selectAll + optHtml + '</dl></div>';
-				};
-			}else if (obj.hasClass(_obj.options.smClassName)){
-				html = '<div class="nv-unselect"><div class="nv-select-title nv-input-group">' + inputContent +' class="nv-input nv-input-sm">' +
-					'<span class="nv-input-addon nv-input-sm"><i class="nvicon-arrow-down"></i></span></div><dl class="nv-select-content nv-select-hide nv-select-content-sm">' + optHtml + '</dl></div>';
-			}else if (obj.hasClass(_obj.options.lgClassName)){
-				html = '<div class="nv-unselect"><div class="nv-select-title nv-input-group">' + inputContent +' class="nv-input nv-input-lg">' +
-					'<span class="nv-input-addon nv-input-lg"><i class="nvicon-arrow-down"></i></span></div><dl class="nv-select-content nv-select-hide nv-select-content-lg">' + optHtml + '</dl></div>';
-			}else {
-				html = '<div class="nv-unselect"><div class="nv-select-title nv-input-group">' + inputContent +' class="nv-input">' +
-					'<span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span></div><dl class="nv-select-content nv-select-hide">' + optHtml + '</dl></div>';
-			};
+                // 获取原生select的value、key、selected
+                $n.children().each(function (idx) {
+                    var $this = $(this),
+                        val = $this.val(),
+                        text = $this.text(),
+                        selected = $this.prop('selected');
 
-			obj.after(html);
-			_select.eventFn.clickFn(_obj);
-			_select.eventFn.deleteOpt(_obj);
-		},
-		//虚拟select点击事件
-		clickFn:function (_obj) {
-			//value显示区域点击事件
-			$(_obj.options.titleClassName).off("click").on("click",function (ev) {
-				ev.stopPropagation();
-				// $(_obj.options.contentClassName).addClass(_obj.options.hideClassName);
-                var $contentDom = $(this).closest(_obj.options.unselectClassName).find(_obj.options.contentClassName),
-                    $icon = $(this).find(".nvicon-arrow-down");
+                    // 统计选中数量
+                    if (selected) {
+                        selectedNumber++;
+                    }
 
-				if ($(this).closest(_obj.options.unselectClassName).hasClass(_obj.options.disableClassName)){
-					return false;
-				}else {
-					//fix for guoming,toggle is removed by jQuery in high Level 2+
-                    if($contentDom.hasClass(_obj.options.hideClassName)){
-						//先判断select显示出来是不是会超出屏幕底部
-						var top=$(this).offset().top,
-							height=$(this).parent().find(_obj.options.contentClassName).height(),
-							clientHeight=$(window).height(),
-							documentTop=$(document).scrollTop();
-						var ht=clientHeight-(top-documentTop)-$(this).height();
-						ht=parseInt(Math.abs(ht));
-						if(ht<parseInt(height)){
-							//到可视窗口底部距离要小于下拉框的距离，此时下拉框要朝上
-							$(this).parent().find(_obj.options.contentClassName).css({
-								top:"-"+(parseInt(height)+5)+"px"
-							})
-						}else{
-							$(this).parent().find(_obj.options.contentClassName).css({
-								top:"36px"
-							})
-						}
-                        $(_obj.options.unselectClassName).find(_obj.options.contentClassName).addClass(_obj.options.hideClassName);
-                        $(_obj.options.titleClassName).find(".nvicon-arrow-down").removeClass("nvicon-arrow-up");
-                        $contentDom.removeClass(_obj.options.hideClassName);
-                        $icon.addClass("nvicon-arrow-up");
-					}else{
-                        $contentDom.addClass(_obj.options.hideClassName);
-                        $icon.removeClass("nvicon-arrow-up");
-					}
-				}
-			});
-			//虚拟option点击事件
-			$(".nv-select-content dd").off("click").on("click",function (ev) {
-				ev.stopPropagation();
-                var $dtDom = $(this).closest(_obj.options.contentClassName).find("dt"),
-                    $contentDom = $(this).closest(_obj.options.contentClassName),
-                    $unselectDom = $(this).closest(_obj.options.unselectClassName);
-				if ($(this).hasClass("nv-select-checkbox")){
-					var optVal = $(this).attr("nv-option-value"),
-						optText = $(this).attr("nv-option-text"),
-						optArr = [],
-						opt = $(this).closest(_obj.options.contentClassName).find("dd"),
-						optLength = $(this).closest(_obj.options.contentClassName).find("dd").length;
-					for (var i = 0,j = opt.length; i < j; i++){
-						if ($(opt[i]).hasClass("nv-select-checkbox-checked")){
-							optArr.push({
-								optVal:$(opt[i]).attr("nv-option-value"),
-								optText:$(opt[i]).attr("nv-option-text")
-							})
-						}
-					};
-					// $(this).toggleClass("nv-select-checkbox-checked");
-					if ($(this).hasClass("nv-select-checkbox-checked")){
-						$(this).removeClass("nv-select-checkbox-checked");
-					} else {
-						$(this).addClass("nv-select-checkbox-checked");
-					};
-					if ($(this).hasClass("nv-select-checkbox-checked")){
-						optArr.push({
-							optVal:optVal,
-							optText:optText
-						})
-					}else {
-						_select.eventFn.removeByValue(optArr,optVal);
-					};
-					_select.eventFn.appendDom($(this),_obj,optArr);
-					_select.eventFn.deleteOpt(_obj);
-					if (optArr && optArr.length < optLength && optArr.length > 0){
-                        $dtDom.addClass("nv-select-checkbox-checked");
-                        $dtDom.find(".nv-select-checkbox-normal").find("span").addClass("nv-select-checkbox-uncheck");
-					}else if (optArr && optArr.length == optLength){
-                        $dtDom.addClass("nv-select-checkbox-checked");
-                        $dtDom.find(".nv-select-checkbox-normal").find("span").removeClass("nv-select-checkbox-uncheck");
-					}else{
-						var firstVal = $(this).closest(_obj.options.contentClassName).find("dd").eq(0).attr("nv-option-text");
-						var html = '<input type="text" placeholder="' + firstVal +'" readonly="readonly" class="nv-input"><span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span>';
-						$unselectDom.find(_obj.options.titleClassName).addClass("nv-select-values").removeClass("nv-select-values").html(html);
-						$contentDom.css({
-							"top":$unselectDom.find(_obj.options.titleClassName).height() + 4
-						});
-						$dtDom.removeClass("nv-select-checkbox-checked");
-					};
-					_select.eventFn.bindVal($(this),_obj,optArr);
-				}else {
-					var optVal = $(this).attr("nv-option-value"),
-						optText = $(this).text();
-					$contentDom.addClass(_obj.options.hideClassName);
-                    $unselectDom.find(_obj.options.titleClassName).find(".nvicon-arrow-down").removeClass("nvicon-arrow-up");
-                    $unselectDom.find("input").val(optText);
-                    $unselectDom.prev(_obj.selector).eq(0).val(optVal);
-                    $unselectDom.prev(_obj.selector).eq(0).trigger("change");
-					// _select.eventFn.bindVal($(this),_obj,optArr);
-				}
-			});
-			//全选点击事件
-			$(".nv-select-content dt").off("click").on("click",function (ev) {
-				ev.stopPropagation();
-				var optArr = [];
-				// $(this).toggleClass("nv-select-checkbox-checked");
-                if ($(this).hasClass("nv-select-checkbox-checked")){
-                    $(this).removeClass("nv-select-checkbox-checked");
+                    selectedItem.push(
+                        '<span>' + val + '<i class="' + options.iconClose + '"></i></span>'
+                    );
+
+                    optArr.push({
+                        val: val,
+                        text: text,
+                        selected: selected
+                    });
+                });
+
+                $n.addClass(options.hideClassName);
+
+                if ($n.prop('multiple')) {
+                    // 初始化前台展示框
+                    var selectedArr = [],
+                        valueSelected = [];
+
+                    isHasMultipleClass = options.multipleClassName;
+
+                    $.each(optArr, function (idx) {
+                        if (optArr[idx].selected) {
+                            selectedArr.push(
+                                '<span data-value="' + optArr[idx].val + '">' + optArr[idx].text + ' <i class="' + options.iconClose + '"></i></span>'
+                            );
+                            valueSelected.push(optArr[idx].val);
+                        }
+                    });
+
+                    // todo 多选的默认选中
+                    // if (selectedArr.length === 0) {
+                    //     selectedArr.push('请选择');
+                    // }
+
+                    receptionArr.push(
+                        '<div class="' + options.receptionClassName + ' ' + options.multipleClassName + '">' +
+                        selectedArr.join('') +
+                        '<i class="' + options.arrowDownClassName + '"></i>' +
+                        '</div>'
+                    );
+
+                    // 初始化全选标签
+                    var dtClass = '',
+                        spanClass = '';
+                    if (selectedNumber === 0) {
+                        dtClass = '';
+                        spanClass = '';
+                    } else if (selectedNumber === optArr.length) {
+                        dtClass = options.checkboxChecked;
+                        spanClass = '';
+                    } else {
+                        dtClass = options.checkboxChecked;
+                        spanClass = options.checkboxUncheck;
+                    }
+
+                    optionArr.push(
+                        '<dt class="' + dtClass + '">' +
+                        '<span class="' + options.checkboxNormal + '">' +
+                        '<span class="' + spanClass + '"></span>' +
+                        '</span>' +
+                        '<span>全选</span>' +
+                        '</dt>'
+                    );
+
+                    // 初始化option框
+                    $.each(optArr, function (idx) {
+                        var ddClass = '',
+                            item = optArr[idx];
+
+                        if (item.selected) {
+                            ddClass = options.checkboxChecked;
+                        }
+
+                        optionArr.push(
+                            '<dd data-value="' + item.val + '" class="' + ddClass + '">' +
+                            '<span class="' + options.checkboxNormal + '">' +
+                            '<span></span>' +
+                            '</span>' +
+                            '<span>' + item.text + '</span>' +
+                            '</dd>'
+                        );
+                    });
                 } else {
-                    $(this).addClass("nv-select-checkbox-checked");
-                };
-				if ($(this).hasClass("nv-select-checkbox-checked")){
-					$(this).siblings("dd").addClass("nv-select-checkbox-checked");
-					$(this).find(".nv-select-checkbox-normal").find("span").removeClass("nv-select-checkbox-uncheck");
-					var ddArr = $(this).siblings("dd");
-					for (var i = 0,j = ddArr.length; i < j; i++){
-						optArr.push({
-							optVal:$(ddArr[i]).attr("nv-option-value"),
-							optText:$(ddArr[i]).attr("nv-option-text")
-						})
-					};
-					_select.eventFn.appendDom($(this),_obj,optArr);
-					_select.eventFn.deleteOpt(_obj);
-				}else {
-					$(this).siblings("dd").removeClass("nv-select-checkbox-checked");
-					var firstVal = $(this).siblings("dd").eq(0).attr("nv-option-text");
-					var html = '<input type="text" placeholder="' + firstVal +'" readonly="readonly" class="nv-input"><span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span>';
-					$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).addClass("nv-select-values").removeClass("nv-select-values").html(html);
-					$(this).closest(_obj.options.contentClassName).css({
-						"top":$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).height() + 4
-					});
-				};
-				$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).find(".nvicon-arrow-down").addClass("nvicon-arrow-up");
-				_select.eventFn.bindVal($(this),_obj,optArr);
-			});
+                    var text = '',
+                        val = '';
 
-		},
-		//根据value删除数组元素
-		removeByValue:function (arr, val) {
-			for(var i=0; i<arr.length; i++) {
-				if(arr[i].optVal == val) {
-					arr.splice(i, 1);
-					break;
-				}
-			}
-		},
-		//往value展示区域渲染DOM
-		appendDom:function (obj,_obj,optArr) {
-			var html = "";
-			for (var i = 0,j = optArr.length; i < j; i++){
-				html += '<span>' + optArr[i].optText +  '<i nv-close-text="' + optArr[i].optText +'" nv-close-val="' + optArr[i].optVal + '" class="nvicon-close"></i></span>';
-			};
-			html = html + '<i class="nvicon-arrow-down"></i>';
-			obj.closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).addClass("nv-select-values").html(html);
-			obj.closest(_obj.options.contentClassName).css({
-				"top":obj.closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).height() + 14
-			});
-		},
-		// value删除按钮事件
-		deleteOpt:function (_obj) {
-            // $(_obj.options.unselectClassName).find(".nvicon-close")
-            $(_obj.options.unselectClassName).find(".nvicon-close").off("click").on("click",function (ev) {
-				ev.stopPropagation();
-				var closeDomArr = $(this).closest(_obj.options.titleClassName).find(".nvicon-close"),
-					closestDom = $(this).closest(_obj.options.unselectClassName);
-				var optArr = [];
-				for (var i = 0,j = closeDomArr.length; i < j; i++){
-					optArr.push({
-						optVal:$(closeDomArr[i]).attr("nv-close-val"),
-						optText:$(closeDomArr[i]).attr("nv-close-text"),
-					});
-				};
-				_select.eventFn.removeByValue(optArr,$(this).attr("nv-close-val"));
-				closestDom.find(".nv-select-checkbox[nv-option-value=" + $(this).attr("nv-close-val") +"]").removeClass("nv-select-checkbox-checked");
-				closestDom.find("dt").find(".nv-select-checkbox-normal").find("span").addClass("nv-select-checkbox-uncheck");
-				_select.eventFn.bindVal($(this),_obj,optArr);
-				if (optArr.length == 0){
-					closestDom.find("dt").removeClass("nv-select-checkbox-checked");
-					var firstVal = closestDom.find("dd").eq(0).attr("nv-option-text");
-					var html = '<input type="text" placeholder="' + firstVal +'" readonly="readonly" class="nv-input"><span class="nv-input-addon"><i class="nvicon-arrow-down"></i></span>';
-					$(this).closest(_obj.options.unselectClassName).find(_obj.options.titleClassName).addClass("nv-select-values").removeClass("nv-select-values").html(html);
+                    if (selectedNumber === 0) {
+                        text = optArr[0].text;
+                        val = optArr[0].val;
+                    } else {
+                        $.each(optArr, function (idx) {
+                            if (optArr[idx].selected) {
+                                text = optArr[idx].text;
+                                val = optArr[idx].val;
+                            }
+                        });
+                    }
 
-				};
-				_select.eventFn.appendDom($(this),_obj,optArr);
-				if (optArr.length == 0){
-					closestDom.find(_obj.options.contentClassName).css({
-						"top":closestDom.find(_obj.options.titleClassName).height() + 4
-					});
-				}else {
-					closestDom.find(_obj.options.contentClassName).css({
-						"top":closestDom.find(_obj.options.titleClassName).height() + 14
-					});
-				}
-				_select.eventFn.deleteOpt(_obj);
-			})
-		},
-		// 往真实select绑定选中的数据
-		bindVal:function (obj,_obj,optArr) {
-			var selectVal = [],
-				selectDom = obj.closest(_obj.options.unselectClassName).prev(_obj.selector).eq(0);
-			for (var i = 0,j = optArr.length; i < j; i++){
-				selectVal.push(optArr[i].optVal);
-			};
-			selectDom.val(selectVal);
-			selectDom.trigger("change");
-		}
-	},
-	ajax:{}
-}
+                    // 初始化展示框
+                    receptionArr.push(
+                        '<div data-value="' + val + '" class="' + options.receptionClassName + '">' +
+                        text +
+                        '<i class="' + options.arrowDownClassName + '"></i>' +
+                        '</div>'
+                    );
 
+                    // 初始化下拉框
+                    $.each(optArr, function (idx) {
+                        optionArr.push(
+                            '<dd data-value="' + optArr[idx].val + '">' + optArr[idx].text + '</dd>'
+                        );
+                    });
+                }
 
+                // 初始化lg、sm样式
+                var sizeClass = '',
+                    disabledClass = '';
+                if ($n.hasClass(options.smClassName)) {
+                    sizeClass = options.smClassName;
+                } else if ($n.hasClass(options.lgClassName)) {
+                    sizeClass = options.lgClassName;
+                }
 
+                if ($n.prop('disabled')) {
+                    disabledClass = options.disableClassName;
+                }
 
+                // 初始化模拟代码
+                htmlArr.push(
+                    '<div class="' + options.simulationClassName + ' ' + sizeClass + ' ' + disabledClass + '">' +
+                    receptionArr.join('') +
+                    '<dl class="' + options.menuClassName + ' ' + isHasMultipleClass + ' ' + options.hideClassName + '">' +
+                    optionArr.join('') +
+                    '</dl>' +
+                    '</div>'
+                );
 
+                $n.after(htmlArr.join(''));
+
+                // 多选时赋值
+                if ($n.prop('multiple')) {
+                    $n.next('.' + options.simulationClassName).children('.' + options.receptionClassName).data('data-value', valueSelected);
+                }
+
+                // onnvchange触发函数
+                _select.eventFn.addEvent(n);
+            });
+
+            // 下拉框切换
+            _select.eventFn.taggleMenu();
+
+            // 点击选中操作
+            _select.eventFn.selectOption();
+
+            // 点击展示框删除相应选中项
+            _select.eventFn.delSelected();
+        }
+    },
+    eventFn: {
+        addEvent: function (el) {
+            el.onnvchange = function (opt) {
+                var opts = {
+                        disabled: false,
+                        selected: false,
+                        remove: false,
+                        // change: function () {
+                        // },
+                        beforeFn: function () {
+                        },
+                        afterFn: function () {
+                        },
+                    },
+                    option = $.extend(opts, opt || {}),
+                    options = _select.options._obj.options,
+                    $this = $(this),
+                    $simulation = $this.next('.' + options.simulationClassName);
+
+                // 执行前回调
+                option.beforeFn();
+
+                if (option.disabled) {
+                    $simulation.addClass(options.disableClassName);
+                }
+
+                if (option.selected) {
+                    let $selector = $simulation.find('dd[data-value=' + option.selected + ']');
+                    if ($selector.length !== 0) {
+                        $selector.click();
+                    } else {
+                        alert('未找到您输入value值的option！');
+                    }
+                }
+
+                if (option.remove) {
+                    let $selector = $simulation.find('dd[data-value=' + option.remove + ']');
+                    if ($selector.length !== 0) {
+                        $selector.remove();
+                    } else {
+                        alert('未找到您输入value值的option！');
+                    }
+                }
+
+                // 回调函数
+                // option.change();
+
+                // 执行后回调
+                option.afterFn();
+
+                // opts.eventFn.call(this, opts);
+                opts.beforeFn.call(this, opts);
+                opts.afterFn.call(this, opts);
+            }
+        },
+
+        // 下拉框切换
+        taggleMenu: function () {
+            // 显示下拉框
+            var opt = _select.options._obj.options,
+                arrowUpClassName = opt.arrowUpClassName,
+                hideClassName = opt.hideClassName,
+                menuClassName = opt.menuClassName,
+                receptionClassName = '.' + opt.receptionClassName;
+
+            $(receptionClassName).off('click').on('click', function (e) {
+                e.stopPropagation();
+
+                var $this = $(this),
+                    $icon = $this.children('i'),
+                    $menu = $this.next('.' + menuClassName);
+                if (!$this.closest('.' + opt.simulationClassName).hasClass(opt.disableClassName)) {
+                    // 当前打开
+                    if ($menu.hasClass(hideClassName)) {
+                        $icon.addClass(arrowUpClassName);
+                        $menu.removeClass(hideClassName);
+                    } else {
+                        $icon.removeClass(arrowUpClassName);
+                        $menu.addClass(hideClassName);
+                    }
+                }
+            });
+
+            // 隐藏下拉框
+            Nv.dom.clickQueen.push(function(){
+                $(receptionClassName).children('i').removeClass(arrowUpClassName);
+                $('.' + menuClassName).addClass(hideClassName);
+            });
+        },
+
+        // 点击选中操作
+        selectOption: function () {
+            var options = _select.options._obj.options;
+
+            // 点击非全选标签
+            $('.nv-select-menu dd').on('click', function (e) {
+                e.stopPropagation();
+                var $this = $(this),
+                    $simulation = $this.closest('.' + options.simulationClassName),
+                    $reception = $simulation.children('.' + options.receptionClassName),
+                    $menu = $this.closest('.' + options.menuClassName);
+
+                // 多选时
+                if ($this.parent().prev().hasClass(options.multipleClassName)) {
+                    var val = $this.attr('data-value');
+
+                    // 是否选中切换，删减展示框内容
+                    if ($this.hasClass(options.checkboxChecked)) {
+                        $this.removeClass(options.checkboxChecked);
+
+                        $reception.children('span[data-value=' + val + ']').remove();
+
+                        var valueSelected = $.grep($reception.data('data-value'), function (n, i) {
+                            return n !== val;
+                        });
+
+                        // 更新value值
+                        $reception.data('data-value', valueSelected);
+
+                        // 数据绑定原生select
+                        _select.eventFn.bindSelect($simulation.prev(_select.options._obj.selector), valueSelected);
+                    } else {
+                        $this.addClass(options.checkboxChecked);
+
+                        $this.closest('.' + options.simulationClassName).children('.' + options.receptionClassName).prepend(
+                            '<span data-value="' + val + '">' + $this.children('span:last-child').text() + ' <i class="' + options.iconClose + '"></i></span>'
+                        );
+
+                        // 更新value值
+                        var valueSelected = $reception.data('data-value');
+                        valueSelected.push(val);
+                        $reception.data('data-value', valueSelected);
+
+                        // 重新绑定监听
+                        _select.eventFn.delSelected();
+
+                        // 数据绑定原生select
+                        _select.eventFn.bindSelect($simulation.prev(_select.options._obj.selector), valueSelected);
+                    }
+
+                    // 全选框做相应更新
+                    var $dd = $menu.children('dd'),
+                        ddLength = $dd.length,
+                        selectedNumber = 0;
+                    $dd.each(function (idx) {
+                        var $this = $(this);
+                        if ($this.hasClass(options.checkboxChecked)) {
+                            selectedNumber++;
+                        }
+                    });
+
+                    var $dt = $this.prevAll('dt');
+                    if (selectedNumber === 0) {
+                        $dt.removeClass(options.checkboxChecked).children().children().removeClass(options.checkboxUncheck);
+                    } else if (selectedNumber === ddLength) {
+                        $dt.addClass(options.checkboxChecked).children().children().removeClass(options.checkboxUncheck);
+                    } else {
+                        $dt.addClass(options.checkboxChecked).children().children().addClass(options.checkboxUncheck);
+                    }
+
+                    _select.eventFn.dealMenuTop($menu);
+
+                } else {
+                    var obj = {
+                        val: $this.attr('data-value'),
+                        text: $this.text()
+                    };
+
+                    // 更新选中数据
+                    $reception.attr('data-value', obj.val);
+                    // 数据绑定原生select
+                    _select.eventFn.bindSelect($simulation.prev(_select.options._obj.selector), obj.val);
+
+                    $reception.html(obj.text + ' <i class="' + options.arrowDownClassName + '"></i>');
+                    $this.parent().addClass(options.hideClassName);
+                }
+            });
+
+            // 点击全选标签
+            $('.nv-select-menu dt').on('click', function (e) {
+                e.stopPropagation();
+                var $this = $(this),
+                    $menu = $this.closest('.' + options.menuClassName),
+                    $simulation = $menu.closest('.' + options.simulationClassName);
+
+                if ($this.hasClass(options.checkboxChecked)) {
+                    $this.removeClass(options.checkboxChecked);
+                    $this.nextAll('dd').removeClass(options.checkboxChecked);
+
+                    var $span = $this.children().eq(0).children();
+                    if ($span.hasClass(options.checkboxUncheck)) {
+                        $span.removeClass(options.checkboxUncheck);
+                    }
+                    // 展示框展示和赋值
+                    $this.closest('.' + options.simulationClassName).children('.' + options.receptionClassName).html('<i class="' + options.arrowDownClassName + ' ' + options.arrowUpClassName + '"></i>').data('data-value', []);
+
+                    // 更新下拉框高度Top
+                    _select.eventFn.dealMenuTop($menu);
+
+                    // 数据绑定原生select
+                    _select.eventFn.bindSelect($simulation.prev(_select.options._obj.selector), []);
+                } else {
+                    $this.addClass(options.checkboxChecked);
+                    $this.nextAll('dd').addClass(options.checkboxChecked);
+
+                    var receptionChecked = [],
+                        valueChecked = [];
+                    $this.nextAll().each(function () {
+                        var $this = $(this);
+                        receptionChecked.push(
+                            '<span data-value="' + $this.attr('data-value') + '">' + $this.children('span:last-child').text() + ' <i class="' + options.iconClose + '"></i></span>'
+                        );
+                        valueChecked.push($this.attr('data-value'));
+                    });
+
+                    // 添加角标
+                    receptionChecked.push('<i class="' + options.arrowUpClassName + '"></i>');
+
+                    // 展示框展示和赋值
+                    $this.closest('.' + options.simulationClassName).children('.' + options.receptionClassName).html(receptionChecked.join('')).data('data-value', valueChecked);
+
+                    // 数据绑定原生select
+                    _select.eventFn.bindSelect($simulation.prev(_select.options._obj.selector), valueChecked);
+
+                    // 更新下拉框高度Top
+                    _select.eventFn.dealMenuTop($menu);
+
+                    // 重新绑定监听
+                    _select.eventFn.delSelected();
+                }
+            });
+        },
+
+        delSelected: function () {
+            var options = _select.options._obj.options;
+
+            $('.' + options.receptionClassName).find('.' + options.iconClose).off('click').on('click', function (e) {
+                e.stopPropagation();
+
+                var $this = $(this),
+                    $span = $this.closest('span'),
+                    $reception = $this.closest('.' + options.receptionClassName),
+                    $menu = $reception.next(),
+                    val = $span.attr('data-value'),
+                    valueSelected = $reception.data('data-value'),
+                    selectedNumber = 0,
+                    optionsNumber = 0;
+
+                // 删除当前选中项
+                $span.remove();
+
+                // 更新缓存
+                $.grep(valueSelected, function (n, i) {
+                    return n !== val;
+                });
+                $reception.data('data-value', valueSelected);
+
+                // 更新下拉框
+                $reception.next().children('dd').each(function (i) {
+                    var $this = $(this);
+                    if ($this.attr('data-value') === val) {
+                        $this.removeClass(options.checkboxChecked);
+                    }
+
+                    if ($this.hasClass(options.checkboxChecked)) {
+                        selectedNumber++;
+                    }
+
+                    // option数量
+                    optionsNumber++;
+                });
+
+                // 更新全选
+                var $dt = $menu.children('dt');
+
+                if (selectedNumber === 0) {
+                    $dt.removeClass(options.checkboxChecked).children().children().removeClass(options.checkboxUncheck);
+                } else if (selectedNumber === optionsNumber) {
+                    $dt.addClass(options.checkboxChecked).children().children().removeClass(options.checkboxUncheck);
+                } else {
+                    $dt.addClass(options.checkboxChecked).children().children().addClass(options.checkboxUncheck);
+                }
+
+                // 更新下拉框高度
+                _select.eventFn.dealMenuTop($menu);
+            });
+        },
+
+        bindSelect: function (selectDom, valueSelected) {
+            selectDom.val(valueSelected);
+            selectDom.trigger("change");
+        },
+
+        // 调整下拉框相对位置-top
+        dealMenuTop: function ($menu) {
+            $menu.css('top', $menu.prev('.' + _select.options._obj.options.receptionClassName).height() + 4);
+        }
+    },
+    ajax: {}
+};
