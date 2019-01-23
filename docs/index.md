@@ -22,7 +22,7 @@
 
 + 外置组件
 
-   外置组件的特点就是要是用[Nv.use](//github.com/guguaihaha/nv-engine/blob/master/docs/API.md#user-content-use)是用插件和[Nv.add](://github.com/guguaihaha/nv-engine/blob/master/docs/API.md#user-content-add )封装插件了
+   外置组件的特点就是要是用[Nv.use](//github.com/guguaihaha/Nv-engine/blob/master/docs/API.md#user-content-use)是用插件和[Nv.add](://github.com/guguaihaha/Nv-engine/blob/master/docs/API.md#user-content-add )封装插件了
    外置组件是用灵活，扩展性强，当然如果再外置组件有问题，可以在[外置组件讨论和改进意见](//github.com/guguaihaha/nv-source/issues/37)，
    同时外置组件分为以下两点：
   
@@ -45,11 +45,11 @@
 
 | 组件名称     | Demo地址   |  API地址  |  讨论地址  |
 | --------    | :----- | :----:  | :----:  |
-| Nv的API  |    | [API](//github.com/guguaihaha/nv-engine/blob/master/docs/API.md)    |  |
-| 快速使用  |    | [API](//github.com/guguaihaha/nv-engine/blob/master/docs/quick.md)    | [讨论](//github.com/guguaihaha/nv-engine/issues/3) |
-| 组件封装技巧  |    | [API](//github.com/guguaihaha/nv-engine/blob/master/docs/API.md#user-content-add)    | [讨论](//github.com/guguaihaha/nv-engine/issues/5) |
-| PRO的使用  |    | [API](//github.com/guguaihaha/nv-pro-flex)    | [讨论](//github.com/guguaihaha/nv-pro-flex/issues) |
-| 主题修改  |    | [API](//github.com/guguaihaha/nv-engine/blob/master/docs/theme.md)    | [讨论](//github.com/guguaihaha/nv-source/issues/38) |
+| Nv的API  |    | [API](//github.com/guguaihaha/Nv-engine/blob/master/docs/API.md)    |  |
+| 快速使用  |    | [API](//github.com/guguaihaha/Nv-engine/blob/master/docs/quick.md)    | [讨论](//github.com/guguaihaha/Nv-engine/issues/3) |
+| 组件封装技巧  |    | [API](//github.com/guguaihaha/Nv-engine/blob/master/docs/API.md#user-content-add)    | [讨论](//github.com/guguaihaha/Nv-engine/issues/5) |
+| PRO的使用  |    | [API](//github.com/guguaihaha/Nv-pro)    | [讨论](//github.com/guguaihaha/Nv-pro/issues) |
+| 主题修改  |    | [API](//github.com/guguaihaha/Nv-engine/blob/master/docs/theme.md)    | [讨论](//github.com/guguaihaha/nv-source/issues/38) |
 |   |    |    |  |
 | button 按钮  | [Demo](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=d6ffabab29694e338a2e9aba2e3ea3d0&directoryName=Button%20%E6%8C%89%E9%92%AE)   | [API](./inner/button.md)    | [讨论](//github.com/guguaihaha/nv-source/issues/2) |
 | icon 图标  | [Demo](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=8fd3459c5ba04cf681494941b2db31e2&directoryName=Icon%20%E5%9B%BE%E6%A0%87)   | [API](./inner/icon.md)    | [讨论](//github.com/guguaihaha/nv-source/issues/3) |
