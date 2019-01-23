@@ -1,43 +1,44 @@
 Nv.add("./page/1.0.1/cdn_index",function(nv,$){
     var language = nv.baseConfig.language;
-    
+    var _this = this;
     var _pagination = {
         init: function (config) {
-            console.log(config);
+            var defOptions = {
+                'current': 1, //当前页数
+                'pageSize': 10, //每页条数
+                'total': 0, //总数
+                'defaultCurrent': 1, //默认的当前页数
+                'defaultPageSize': 10, //默认的每页条数
+                'pageSizeOptions': [10, 20, 50, 100], //[10,20,50,100]
+                'showPageSize': false, //是否显示分页切换
+                'showTotal': false, //是否显示总条数
+                'showTotalPage': false, //是否显示总页数
+                'showInfo': false, //是否显示分页信息
+                'showJump': false, //是否显示跳转框
+                'onChange': function () {}, //分页点击
+                'onShowSizeChange': function () {}, //每页下拉回调
+                'errNotice': '输入有误,请检查后重新尝试',
+                'showTextBtn': false,
+                'type': 'complete', //分页类型 默认完整 complete/simple/mini
+                'language': {
+                    'lan': 'zh_CN',
+                    'pre': '上页',
+                    'next': '下页',
+                    'total': '共',
+                    'item': '条',
+                    'page': '页',
+                    'jump': '跳转'
+                }
+            }
             if (config.id) { 
-                _pagination.options = $.extend(true, _pagination.options, config); //配置
-                _pagination.events.init();
+                _pagination.options = $.extend(true, defOptions, config); //配置
+                return (new _pagination.eventsFn.init);
             }
         },
-        options: {
-            'current': 1, //当前页数
-            'pageSize': 10, //每页条数
-            'total': 0, //总数
-            'defaultCurrent': 1, //默认的当前页数
-            'defaultPageSize': 10, //默认的每页条数
-            'pageSizeOptions': [10, 20, 50, 100], //[10,20,50,100]
-            'showPageSize': false, //是否显示分页切换
-            'showTotal': false, //是否显示总条数
-            'showTotalPage': false, //是否显示总页数
-            'showInfo': false, //是否显示分页信息
-            'showJump': false, //是否显示跳转框
-            'onChange': function () {}, //分页点击
-            'onShowSizeChange': function () {}, //每页下拉回调
-            'errNotice': '输入有误,请检查后重新尝试',
-            'showTextBtn': false,
-            'type': 'complete', //分页类型 默认完整 complete/simple/mini
-            'language': {
-                'lan': 'zh_CN',
-                'pre': '上页',
-                'next': '下页',
-                'total': '共',
-                'item': '条',
-                'page': '页',
-                'jump': '跳转'
-            }
-        },
-        events: {
+        options: {},
+        eventsFn: {
             init: function () {
+                // this.constructor = _this;
                 var $element = $('#' + _pagination.options.id);
                 var html = '<ul class="nv-pagination-list">' +
                     '<li class="nv-pagination-pre nv-pagination-disable"><a href="javascript:;"></a></li>' +
@@ -388,7 +389,6 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
     }
 
     return {
-       init: _pagination.init,
-       fn: function(){}
+       init: _pagination.init
     }
 },{requires:["jquery","./css/cdn_index.css"],alias:'page'})

@@ -382,7 +382,22 @@
     })
     Nv.ready(function () {
         Nv.use("page",function(nv,page){
-           
+            var page1 = page.init({
+                'id': 'page1',
+                'total': 30,
+                'pageSize': 5
+            })
+            var page1 = page.init({
+                'id': 'page2',
+                'total': 35,
+                'pageSize': 5
+            })
+            page.init({
+                'id': 'page3',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true
+            })
             page.init({
                 'id': 'page4',
                 'total': 100,
@@ -390,7 +405,23 @@
                 'showPageSize': true,
                 'showJump': true,
             })
-           
+            page.init({
+                'id': 'page5',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true,
+                'showJump': true,
+                'showTotal': true
+            })
+            page.init({
+                'id': 'page6',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true,
+                'showJump': true,
+                'showTotal': true,
+                'type': 'mini'
+            })
         })
     })
 </script>
