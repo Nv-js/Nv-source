@@ -312,11 +312,12 @@
         </section>
     </article>
     <!--注意此段js必须第一引入在开发模式下{-->
-    <script type="text/javascript" src="/src/js/inner/radio.js"></script>
-    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.dev.js"></script>
+    <!-- <script type="text/javascript" src="/src/js/inner/radio.js"></script>
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.dev.js"></script> -->
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.min.js"></script>
     <script type="text/javascript">
         Nv.config({
-            baseUrl: "/",
+            cdnUrl: "/dist/cdn/",
             requestTime: true
         })
         Nv.ready(function () {

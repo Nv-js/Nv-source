@@ -138,14 +138,9 @@
     var moduleSelectors = [
         {
             selectorName:"."+prefix+"-dropdown",
+            prefix: prefix,
             moduleName:"_dropdown",
-            options:{
-                showMenuClassName:prefix+"-dropdown-show",//显示下拉菜单
-                centerClassName:prefix+"-dropdown-center",//居中名称
-                menuClassName:prefix+"-dropdown-menu",//菜单名称
-                domEventName:prefix+"-event",//获取触发事件的方法
-                cacheName:prefix+"-show"//设置节点是否已缓存的名称
-            }
+            options:{}
         },
         {
             selectorName:"."+prefix+"-alert",
@@ -180,25 +175,15 @@
         },
         {
             selectorName:"."+prefix+"-radio",
+            prefix: prefix,
             moduleName:"_radio",
-            options:{
-                radioedClassName:prefix+"-radio-radioed",//选中的radio
-                disabledClassName:prefix+"-radio-disable",//禁用的radio
-                verticalClassName:prefix+"-radio-vertical"//垂直排列的radio
-            }
+            options:{}
         },
         {
             selectorName:"."+prefix+"-checkbox",
+            prefix: prefix,
             moduleName:"_checkbox",
-            options:{
-                checkedAllClassName:prefix+"-checkbox-all",//全选
-                checkedClassName:prefix+"-checkbox-checked",//选中
-                disabledClassName:prefix+"-checkbox-disable",//禁用的checkbox
-                containerClassName:prefix+"-checkbox-container",//全选的容器
-                sigleContainerClassName:prefix+"-checkbox-sigle-container",//全选组件中的单选框
-                allContainerClassName:prefix+"-checkbox-all-container",//全选组件中的全选框
-                uncheckClassName:prefix+"-checkbox-uncheck"//全选按钮没有全部选中的情况下
-            }
+            options:{}
         },
         {
             selectorName:"."+prefix+"-select",

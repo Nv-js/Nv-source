@@ -7,12 +7,13 @@
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
     <link type="text/css" rel="stylesheet" href="/dist/local/css/content/content.min.css" />
     <link type="text/css" rel="stylesheet" href="/dist/cdn/nv.min.css" />
-    <script type="text/javascript" src="/src/js/inner/dropdown.js"></script>
-    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.dev.js"></script>
-
+    <!-- <script type="text/javascript" src="/src/js/inner/dropdown.js"></script>
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.dev.js"></script> -->
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.min.js"></script>
     <script type="text/javascript">
         Nv.config({
-            baseUrl: "/"
+            cdnUrl: "/dist/cdn/",
+            requestTime: true
         })
         Nv.ready(function () {
             

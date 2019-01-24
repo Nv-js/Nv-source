@@ -104,25 +104,26 @@ var _badge = {
 
 
 var _checkbox = {
-    uid:30400000 ,
-    version:"1.0.0",
-    init:function(domObject){
+    uid: 30400000,
+    version: "1.0.0",
+    init: function (domObject) {
         this.options._obj = domObject;
         this.events.closeEvent(domObject);
     },
-    options:{
-        _obj:{},//公共变量，永远不会变
+    options: {
+        _obj: {}, //公共变量，永远不会变
     },
-    events:{
-        closeEvent:function(opt){
-            if(opt.array.length>0){
-                $.each(opt.array,function (index, element) {
+    events: {
+        closeEvent: function (opt) {
+            var PREFIX = _checkbox.options._obj.prefix;
+            if (opt.array.length > 0) {
+                $.each(opt.array, function (index, element) {
                     var $original = $(element);
                     var _checked = $original.prop('checked'),
                         _disabled = $original.prop('disabled'),
                         _id = $original.prop('id'),
                         _label = $original.attr('data-label') || '';
-            
+
                     var uuid = function () {
                         var s = [];
                         var hexDigits = "0123456789abcdef";
@@ -140,20 +141,20 @@ var _checkbox = {
                         checkOnly();
                         $original.prop('id', _id);
                     }
-                    var html = '<label class="nv-checkbox-wrapper" for="' + _id + '">' +
-                        '<span class="nv-checkbox-clone">' +
-                        '<span class="nv-checkbox-inner"></span>' +
+                    var html = '<label class="' + PREFIX + '-checkbox-wrapper" for="' + _id + '">' +
+                        '<span class="' + PREFIX + '-checkbox-clone">' +
+                        '<span class="' + PREFIX + '-checkbox-inner"></span>' +
                         '</span>' +
-                        '<span class="nv-checkbox-label">' + _label +
+                        '<span class="' + PREFIX + '-checkbox-label">' + _label +
                         '</span>' +
                         '</label>';
                     var $label = $(html);
                     $original.after($label);
                     $original.css('display', 'none');
-            
-                    var $clone = $label.children('.nv-checkbox-clone'),
-                        $text = $clone.siblings('.nv-checkbox-label');
-            
+
+                    var $clone = $label.children('.' + PREFIX + '-checkbox-clone'),
+                        $text = $clone.siblings('.' + PREFIX + '-checkbox-label');
+
                     if (_label.length == 0) {
                         $text.css('display', 'none');
                     } else {
@@ -161,38 +162,39 @@ var _checkbox = {
                     }
                     //已选中
                     if (_checked) {
-                        $clone.addClass('nv-checkbox-checked');
-                        $label.addClass('nv-checkbox-wrapper-checked');
+                        $clone.addClass(PREFIX + '-checkbox-checked');
+                        $label.addClass(PREFIX + '-checkbox-wrapper-checked');
                     }
                     //已禁用
                     if (_disabled) {
-                        $clone.addClass('nv-checkbox-disabled');
-                        $label.addClass('nv-checkbox-wrapper-disabled');
+                        $clone.addClass(PREFIX + '-checkbox-disabled');
+                        $label.addClass(PREFIX + '-checkbox-wrapper-disabled');
                     }
                     _checkbox.eventFn.addClickEvent($label, element); //label绑定事件
                     _checkbox.eventFn.addEvent(element) //绑定事件
                 })
             }
-            
+
         }
     },
-    eventFn:{
-        addEvent: function(dom){
+    eventFn: {
+        addEvent: function (dom) {
             dom.onnvchange = function (option) {
+                var PREFIX = _checkbox.options._obj.prefix;
                 var $input = $(this),
                     input = this,
                     _name = $input.prop('name'),
                     _id = $input.prop('id'),
                     _all = $input.attr('data-all');
-    
+
                 var $label = $input.siblings('[for="' + _id + '"]'),
-                    $clone = $label.children('.nv-checkbox-clone'),
-                    $text = $clone.siblings('.nv-checkbox-label');
-    
+                    $clone = $label.children('.' + PREFIX + '-checkbox-clone'),
+                    $text = $clone.siblings('.' + PREFIX + '-checkbox-label');
+
                 //默认配置
                 var settings = {}
                 var opt = $.extend({}, settings, option);
-    
+
                 for (var name in opt) {
                     if (name === 'checked') $input.prop('checked', opt[name]);
                     if (name === 'disabled') $input.prop('disabled', opt[name]);
@@ -208,41 +210,41 @@ var _checkbox = {
                     };
                 }
                 if (opt.beforeFn) opt.beforeFn.call(this, opt);
-                
+
                 //选中
                 if ($input.prop('checked')) {
-                    $clone.addClass('nv-checkbox-checked');
-                    $label.addClass('nv-checkbox-wrapper-checked');
+                    $clone.addClass(PREFIX + '-checkbox-checked');
+                    $label.addClass(PREFIX + '-checkbox-wrapper-checked');
                 } else {
-                    $clone.removeClass('nv-checkbox-checked');
-                    $label.removeClass('nv-checkbox-wrapper-checked');
+                    $clone.removeClass(PREFIX + '-checkbox-checked');
+                    $label.removeClass(PREFIX + '-checkbox-wrapper-checked');
                 }
-    
+
                 //禁用
                 if ($input.prop('disabled')) {
-                    $clone.addClass('nv-checkbox-disabled');
-                    $label.addClass('nv-checkbox-wrapper-disabled');
+                    $clone.addClass(PREFIX + '-checkbox-disabled');
+                    $label.addClass(PREFIX + '-checkbox-wrapper-disabled');
                 } else {
-                    $clone.removeClass('nv-checkbox-disabled');
-                    $label.removeClass('nv-checkbox-wrapper-disabled');
+                    $clone.removeClass(PREFIX + '-checkbox-disabled');
+                    $label.removeClass(PREFIX + '-checkbox-wrapper-disabled');
                 }
                 var $checkAll = $('input[name="' + _name + '"][data-all="true"]'),
                     $aCheckItems = $('input[name="' + _name + '"][data-all!="true"]'),
                     checkAll = $checkAll[0];
-    
+
                 //根据当前input状态决定选中或非选中
                 var select = function (element) {
                     var $element = $(element),
                         _id = $element.prop('id'),
                         _checked = $element.prop('checked'),
                         $label = $('label[for="' + _id + '"]'),
-                        $clone = $label.children('.nv-checkbox-clone');
+                        $clone = $label.children('.' + PREFIX + '-checkbox-clone');
                     if (_checked) {
-                        $clone.addClass('nv-checkbox-checked');
-                        $label.addClass('nv-checkbox-wrapper-checked');
+                        $clone.addClass(PREFIX + '-checkbox-checked');
+                        $label.addClass(PREFIX + '-checkbox-wrapper-checked');
                     } else {
-                        $clone.removeClass('nv-checkbox-checked');
-                        $label.removeClass('nv-checkbox-wrapper-checked');
+                        $clone.removeClass(PREFIX + '-checkbox-checked');
+                        $label.removeClass(PREFIX + '-checkbox-wrapper-checked');
                     }
                 }
                 //取消半全选
@@ -250,29 +252,29 @@ var _checkbox = {
                     var $element = $(element),
                         _id = $element.prop('id'),
                         $label = $('label[for="' + _id + '"]'),
-                        $clone = $label.children('.nv-checkbox-clone');
-    
-                    $clone.removeClass('nv-checkbox-mid-checked');
+                        $clone = $label.children('.' + PREFIX + '-checkbox-clone');
+
+                    $clone.removeClass(PREFIX + '-checkbox-mid-checked');
                 }
                 //半选中
                 var midSelect = function (element) {
                     var $element = $(element),
                         _id = $element.prop('id'),
                         $label = $('label[for="' + _id + '"]'),
-                        $clone = $label.children('.nv-checkbox-clone');
-    
-                    $clone.addClass('nv-checkbox-mid-checked');
+                        $clone = $label.children('.' + PREFIX + '-checkbox-clone');
+
+                    $clone.addClass(PREFIX + '-checkbox-mid-checked');
                 }
-    
+
                 cancelMidSelect(checkAll); //初始化全选按钮
                 //全选条件判断,判断完退出
                 for (var name in opt) {
                     if (name === 'checkedAll') {
-                        if(opt[name]){
+                        if (opt[name]) {
                             //全选
                             $checkAll.prop('checked', true);
                             $aCheckItems.prop('checked', true);
-                        }else {
+                        } else {
                             //全部选
                             $checkAll.prop('checked', false);
                             $aCheckItems.prop('checked', false);
@@ -284,7 +286,7 @@ var _checkbox = {
                         return false;
                     }
                 }
-              
+
                 //当前操作为全选
                 if (_all) {
                     $aCheckItems.prop('checked', $checkAll.prop('checked'));
@@ -294,7 +296,7 @@ var _checkbox = {
                 } else {
                     var aCheckbox_len = $aCheckItems.length,
                         checked_len = $aCheckItems.filter(':checked').length;
-    
+
                     if (aCheckbox_len == checked_len) {
                         //全选
                         $checkAll.prop('checked', true);
@@ -309,11 +311,11 @@ var _checkbox = {
                         select(checkAll);
                     }
                 }
-    
+
                 if (opt.afterFn) opt.afterFn.call(this);
             }
         },
-        addClickEvent: function($label, original) {
+        addClickEvent: function ($label, original) {
             $label.on('click', function () {
                 setTimeout(function () {
                     original.onnvchange ? original.onnvchange() : '';
@@ -321,27 +323,28 @@ var _checkbox = {
             })
         }
     },
-    ajax:{}
+    ajax: {}
 
 }
-
 var _dropdown = {
-    uid:20300000,
-    version:"1.0.0",
-    init:function(domObject){
+    uid: 20300000,
+    version: "1.0.0",
+    init: function (domObject) {
         this.options._obj = domObject;
         this.events.eventList(domObject.array);
     },
-    options:{
-        _obj:{},//公共变量，永远不会变
+    options: {
+        _obj: {}, //公共变量，永远不会变
     },
-    events:{
-        eventList: function(array){
+    events: {
+        eventList: function (array) {
+            var PREFIX = _dropdown.options._obj.prefix;
+            console.log(PREFIX);
             //自动计算高度
             var autoHeight = function (element) {
                 var $element = $(element),
-                    $link = $element.children('.nv-dropdown-link'),
-                    $menu = $element.children('.nv-dropdown-menu');
+                    $link = $element.children('.' + PREFIX + '-dropdown-link'),
+                    $menu = $element.children('.' + PREFIX + '-dropdown-menu');
                 /**
                  * 根据视窗距离屏幕上下距离,决定向上展示还是向下展示.
                  * 上下同时不够,向下展开
@@ -356,39 +359,39 @@ var _dropdown = {
                 //距离
                 var bottom_h = window_h - (element_t - scroll_h) - element_h,
                     top_h = window_h - bottom_h - element_h;
-    
+
                 if (menu_h < bottom_h) {
-                    $element.removeClass('nv-dropdown-up'); //down
+                    $element.removeClass(PREFIX + '-dropdown-up'); //down
                 } else if (menu_h < top_h) {
-                    $element.addClass('nv-dropdown-up'); //up
+                    $element.addClass(PREFIX + '-dropdown-up'); //up
                 } else {
-                    $element.removeClass('nv-dropdown-up'); //down
+                    $element.removeClass(PREFIX + '-dropdown-up'); //down
                 }
             }
-            $.each(array,function (index, element) {
+            $.each(array, function (index, element) {
                 var $element = $(element),
-                    $link = $element.children('.nv-dropdown-link'),
-                    $menu = $element.children('.nv-dropdown-menu');
-        
+                    $link = $element.children('.' + PREFIX + '-dropdown-link'),
+                    $menu = $element.children('.' + PREFIX + '-dropdown-menu');
+
                 var type = $element.attr('data-type'),
                     menuwidth = $element.attr('data-menuwidth'),
                     menuheight = $element.attr('data-menuheight'),
                     closeauto = $element.attr('data-close-auto');
-        
+
                 //整体禁用
-                if ($element.hasClass('nv-dropdown-disabled')) {
+                if ($element.hasClass(PREFIX + '-dropdown-disabled')) {
                     return;
                 }
-        
+
                 //事件委托 阻止冒泡
-                $element.on('click', '.nv-dropdown-item-disabled', function (ev) {
+                $element.on('click', '.' + PREFIX + '-dropdown-item-disabled', function (ev) {
                     ev.stopPropagation();
                     return false;
                 })
-                $element.on('click', '.nv-dropdown-item', function (ev) {
+                $element.on('click', '.' + PREFIX + '-dropdown-item', function (ev) {
                     ev.stopPropagation();
                 })
-        
+
                 //自定义属性
                 //展开框宽度限定
                 if (menuwidth) {
@@ -397,8 +400,8 @@ var _dropdown = {
                 if (menuheight) {
                     $menu.css('height', menuheight);
                 }
-                
-                $(window).on("scroll resize", function(){
+
+                $(window).on("scroll resize", function () {
                     if (!closeauto) autoHeight(element);
                 })
                 //初始化
@@ -424,15 +427,15 @@ var _dropdown = {
             })
             //点击其他地方取消相关样式
             var nv = Nv;
-            nv.dom.clickQueen.push(function(){
-                $.each(array,function(i,n){
+            nv.dom.clickQueen.push(function () {
+                $.each(array, function (i, n) {
                     $(this).removeClass('open');
                 })
             })
         }
     },
-    eventFn:{},
-    ajax:{}
+    eventFn: {},
+    ajax: {}
 }
 var _input = {
     uid: 30100000,
@@ -793,26 +796,26 @@ var _nav = {
 };
 
 var _radio = {
-    uid:30300000 ,
-    version:"1.0.0",
-    init:function(domObject){
+    uid: 30300000,
+    version: "1.0.0",
+    init: function (domObject) {
         this.options._obj = domObject;
         this.events.closeEvent(domObject);
     },
-    options:{
-        _obj:{},//公共变量，永远不会变
+    options: {
+        _obj: {}, //公共变量，永远不会变
     },
-    events:{
-        closeEvent:function(opt){
-
-            if(opt.array.length>0){
-                $.each(opt.array,function (index, element) {
+    events: {
+        closeEvent: function (opt) {
+            var PREFIX = _radio.options._obj.prefix;
+            if (opt.array.length > 0) {
+                $.each(opt.array, function (index, element) {
                     var $original = $(element);
                     var _checked = $original.prop('checked'),
                         _disabled = $original.prop('disabled'),
                         _id = $original.prop('id'),
                         _label = $original.attr('data-label') || '';
-            
+
                     var uuid = function () {
                         var s = [];
                         var hexDigits = "0123456789abcdef";
@@ -830,20 +833,20 @@ var _radio = {
                         checkOnly();
                         $original.prop('id', _id);
                     }
-                    var html = '<label class="nv-radio-wrapper" for="' + _id + '">' +
-                        '<span class="nv-radio-clone">' +
-                        '<span class="nv-radio-inner"></span>' +
+                    var html = '<label class="' + PREFIX + '-radio-wrapper" for="' + _id + '">' +
+                        '<span class="' + PREFIX + '-radio-clone">' +
+                        '<span class="' + PREFIX + '-radio-inner"></span>' +
                         '</span>' +
-                        '<span class="nv-radio-label">' + _label +
+                        '<span class="' + PREFIX + '-radio-label">' + _label +
                         '</span>' +
                         '</label>';
                     var $label = $(html);
                     $original.after($label);
                     $original.css('display', 'none');
-                    
-                    var $clone = $label.children('.nv-radio-clone'),
-                        $text = $clone.siblings('.nv-radio-label');
-            
+
+                    var $clone = $label.children('.' + PREFIX + '-radio-clone'),
+                        $text = $clone.siblings('.' + PREFIX + '-radio-label');
+
                     if (_label.length == 0) {
                         $text.css('display', 'none');
                     } else {
@@ -851,36 +854,37 @@ var _radio = {
                     }
                     //已选中
                     if (_checked) {
-                        $clone.addClass('nv-radio-checked');
-                        $label.addClass('nv-radio-wrapper-checked');
+                        $clone.addClass(PREFIX + '-radio-checked');
+                        $label.addClass(PREFIX + '-radio-wrapper-checked');
                     }
                     //已禁用
                     if (_disabled) {
-                        $clone.addClass('nv-radio-disabled');
-                        $label.addClass('nv-radio-wrapper-disabled');
+                        $clone.addClass(PREFIX + '-radio-disabled');
+                        $label.addClass(PREFIX + '-radio-wrapper-disabled');
                     }
-                    
+
                     _radio.eventFn.addClickEvent($label, element); //label绑定事件
                     _radio.eventFn.addEvent(element); //绑定事件
                 })
             }
-            
+
         }
     },
-    eventFn:{
-        addEvent: function(dom) {
+    eventFn: {
+        addEvent: function (dom) {
             dom.onnvchange = function (option) {
+                var PREFIX = _radio.options._obj.prefix;
                 var $input = $(this),
                     input = this,
                     _name = $input.prop('name'),
                     _id = $input.prop('id');
-                
+
                 var $label = $input.siblings('[for="' + _id + '"]'),
-                    $clone = $label.children('.nv-radio-clone'),
-                    $text = $clone.siblings('.nv-radio-label');
-    
+                    $clone = $label.children('.' + PREFIX + '-radio-clone'),
+                    $text = $clone.siblings('.' + PREFIX + '-radio-label');
+
                 var opt = option || {};
-    
+
                 for (var name in opt) {
                     if (name === 'checked') $input.prop('checked', opt[name]);
                     if (name === 'disabled') $input.prop('disabled', opt[name]);
@@ -898,8 +902,8 @@ var _radio = {
                 if (opt.beforeFn) opt.beforeFn.call(this, opt);
                 //选中
                 if ($input.prop('checked')) {
-                    $clone.addClass('nv-radio-checked');
-                    $label.addClass('nv-radio-wrapper-checked');
+                    $clone.addClass(PREFIX + '-radio-checked');
+                    $label.addClass(PREFIX + '-radio-wrapper-checked');
                     //其他项目取消选中
                     var aInput = $('input[name=' + _name + ']');
                     aInput.each(function (i, element) {
@@ -908,35 +912,32 @@ var _radio = {
                         }
                     })
                 } else {
-                    $clone.removeClass('nv-radio-checked');
-                    $label.removeClass('nv-radio-wrapper-checked');
+                    $clone.removeClass(PREFIX + '-radio-checked');
+                    $label.removeClass(PREFIX + '-radio-wrapper-checked');
                 }
                 //禁用
                 if ($input.prop('disabled')) {
-                    $clone.addClass('nv-radio-disabled');
-                    $label.addClass('nv-radio-wrapper-disabled');
+                    $clone.addClass(PREFIX + '-radio-disabled');
+                    $label.addClass(PREFIX + '-radio-wrapper-disabled');
                 } else {
-                    $clone.removeClass('nv-radio-disabled');
-                    $label.removeClass('nv-radio-wrapper-disabled');
+                    $clone.removeClass(PREFIX + '-radio-disabled');
+                    $label.removeClass(PREFIX + '-radio-wrapper-disabled');
                 }
-    
+
                 if (opt.afterFn) opt.afterFn.call(this);
             }
         },
-        addClickEvent: function($label, original){
+        addClickEvent: function ($label, original) {
             $label.on('click', function () {
-                setTimeout(function(){
+                setTimeout(function () {
                     original.onnvchange ? original.onnvchange() : '';
-                },30)
+                }, 30)
             })
         }
     },
-    ajax:{}
+    ajax: {}
 
 }
-
-
-
 var _select = {
     uid: 30500000,
     version: "1.0.0",

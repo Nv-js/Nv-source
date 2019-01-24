@@ -1,24 +1,24 @@
 var _radio = {
-    uid:30300000 ,
-    version:"1.0.0",
-    init:function(domObject){
+    uid: 30300000,
+    version: "1.0.0",
+    init: function (domObject) {
         this.options._obj = domObject;
         this.events.closeEvent(domObject);
     },
-    options:{
-        _obj:{},//公共变量，永远不会变
+    options: {
+        _obj: {}, //公共变量，永远不会变
     },
-    events:{
-        closeEvent:function(opt){
-
-            if(opt.array.length>0){
-                $.each(opt.array,function (index, element) {
+    events: {
+        closeEvent: function (opt) {
+            var PREFIX = _radio.options._obj.prefix;
+            if (opt.array.length > 0) {
+                $.each(opt.array, function (index, element) {
                     var $original = $(element);
                     var _checked = $original.prop('checked'),
                         _disabled = $original.prop('disabled'),
                         _id = $original.prop('id'),
                         _label = $original.attr('data-label') || '';
-            
+
                     var uuid = function () {
                         var s = [];
                         var hexDigits = "0123456789abcdef";
@@ -36,20 +36,20 @@ var _radio = {
                         checkOnly();
                         $original.prop('id', _id);
                     }
-                    var html = '<label class="nv-radio-wrapper" for="' + _id + '">' +
-                        '<span class="nv-radio-clone">' +
-                        '<span class="nv-radio-inner"></span>' +
+                    var html = '<label class="' + PREFIX + '-radio-wrapper" for="' + _id + '">' +
+                        '<span class="' + PREFIX + '-radio-clone">' +
+                        '<span class="' + PREFIX + '-radio-inner"></span>' +
                         '</span>' +
-                        '<span class="nv-radio-label">' + _label +
+                        '<span class="' + PREFIX + '-radio-label">' + _label +
                         '</span>' +
                         '</label>';
                     var $label = $(html);
                     $original.after($label);
                     $original.css('display', 'none');
-                    
-                    var $clone = $label.children('.nv-radio-clone'),
-                        $text = $clone.siblings('.nv-radio-label');
-            
+
+                    var $clone = $label.children('.' + PREFIX + '-radio-clone'),
+                        $text = $clone.siblings('.' + PREFIX + '-radio-label');
+
                     if (_label.length == 0) {
                         $text.css('display', 'none');
                     } else {
@@ -57,36 +57,37 @@ var _radio = {
                     }
                     //已选中
                     if (_checked) {
-                        $clone.addClass('nv-radio-checked');
-                        $label.addClass('nv-radio-wrapper-checked');
+                        $clone.addClass(PREFIX + '-radio-checked');
+                        $label.addClass(PREFIX + '-radio-wrapper-checked');
                     }
                     //已禁用
                     if (_disabled) {
-                        $clone.addClass('nv-radio-disabled');
-                        $label.addClass('nv-radio-wrapper-disabled');
+                        $clone.addClass(PREFIX + '-radio-disabled');
+                        $label.addClass(PREFIX + '-radio-wrapper-disabled');
                     }
-                    
+
                     _radio.eventFn.addClickEvent($label, element); //label绑定事件
                     _radio.eventFn.addEvent(element); //绑定事件
                 })
             }
-            
+
         }
     },
-    eventFn:{
-        addEvent: function(dom) {
+    eventFn: {
+        addEvent: function (dom) {
             dom.onnvchange = function (option) {
+                var PREFIX = _radio.options._obj.prefix;
                 var $input = $(this),
                     input = this,
                     _name = $input.prop('name'),
                     _id = $input.prop('id');
-                
+
                 var $label = $input.siblings('[for="' + _id + '"]'),
-                    $clone = $label.children('.nv-radio-clone'),
-                    $text = $clone.siblings('.nv-radio-label');
-    
+                    $clone = $label.children('.' + PREFIX + '-radio-clone'),
+                    $text = $clone.siblings('.' + PREFIX + '-radio-label');
+
                 var opt = option || {};
-    
+
                 for (var name in opt) {
                     if (name === 'checked') $input.prop('checked', opt[name]);
                     if (name === 'disabled') $input.prop('disabled', opt[name]);
@@ -104,8 +105,8 @@ var _radio = {
                 if (opt.beforeFn) opt.beforeFn.call(this, opt);
                 //选中
                 if ($input.prop('checked')) {
-                    $clone.addClass('nv-radio-checked');
-                    $label.addClass('nv-radio-wrapper-checked');
+                    $clone.addClass(PREFIX + '-radio-checked');
+                    $label.addClass(PREFIX + '-radio-wrapper-checked');
                     //其他项目取消选中
                     var aInput = $('input[name=' + _name + ']');
                     aInput.each(function (i, element) {
@@ -114,31 +115,29 @@ var _radio = {
                         }
                     })
                 } else {
-                    $clone.removeClass('nv-radio-checked');
-                    $label.removeClass('nv-radio-wrapper-checked');
+                    $clone.removeClass(PREFIX + '-radio-checked');
+                    $label.removeClass(PREFIX + '-radio-wrapper-checked');
                 }
                 //禁用
                 if ($input.prop('disabled')) {
-                    $clone.addClass('nv-radio-disabled');
-                    $label.addClass('nv-radio-wrapper-disabled');
+                    $clone.addClass(PREFIX + '-radio-disabled');
+                    $label.addClass(PREFIX + '-radio-wrapper-disabled');
                 } else {
-                    $clone.removeClass('nv-radio-disabled');
-                    $label.removeClass('nv-radio-wrapper-disabled');
+                    $clone.removeClass(PREFIX + '-radio-disabled');
+                    $label.removeClass(PREFIX + '-radio-wrapper-disabled');
                 }
-    
+
                 if (opt.afterFn) opt.afterFn.call(this);
             }
         },
-        addClickEvent: function($label, original){
+        addClickEvent: function ($label, original) {
             $label.on('click', function () {
-                setTimeout(function(){
+                setTimeout(function () {
                     original.onnvchange ? original.onnvchange() : '';
-                },30)
+                }, 30)
             })
         }
     },
-    ajax:{}
+    ajax: {}
 
 }
-
-

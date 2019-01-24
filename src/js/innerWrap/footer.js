@@ -67,11 +67,13 @@ function _init_auto(type){
     var _q = [],
         _retSelector = [],
         _selector = "",
+        _prefix = "",
         _options = "",
         _module = "";
     //
     $.each(_ms,function(i,n){
         _selector = n.selectorName;
+        _prefix = n.prefix;
         _options = n.options;
         _module = n.moduleName;
         _retSelector = _find(_selector,type);
@@ -80,6 +82,7 @@ function _init_auto(type){
             _retSelector = slice.call(_retSelector)
             _q = {
                 selector:_selector,
+                prefix:_prefix,
                 module:_module,
                 options:_options,
                 array:_retSelector
