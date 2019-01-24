@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Layout</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style type="text/css">
         .c-introduce-ul {
             padding-top: 16px;
@@ -23,28 +25,28 @@
         .c-demo-w-640{
             width: 640px;
         }
-        .zr-alert{
+        .nv-alert{
             margin-bottom: 8px;
         }
         .c-left-20{
             margin-left: 20px;
         }
-        .c-demo-test .zr-layout{
+        .c-demo-test .nv-layout{
             text-align: center;
         }
-        .c-demo-test .zr-layout-content{
+        .c-demo-test .nv-layout-content{
             min-height: 128px;
             line-height: 128px;
             background: rgba(0, 0, 0, 0.25);
         }
 
-        .c-demo-test .zr-layout-side{
+        .c-demo-test .nv-layout-side{
             max-width: 200px;
             min-width: 200px;
             background: #ccc;
             line-height: 128px;
         }
-        .c-demo .zr-layout{
+        .c-demo .nv-layout{
             color: rgba(0, 0, 0, 0.8);
         }
         .logo{
@@ -52,7 +54,7 @@
             height:32px;
             margin: 15px 24px;
         }
-        .c-demo .zr-layout-space .zr-breadcrumb{
+        .c-demo .nv-layout-space .nv-breadcrumb{
             text-align: left;
         }
 
@@ -62,20 +64,19 @@
 
 
     </style>
-    <link type="text/css" rel="stylesheet" href="/js/plugin_modules/zr/css/zr.min.css" />
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
     <!--注意此段js必须第一引入在开发模式下{-->
     <script type="text/javascript" src="js/nav.js"></script>
     <script type="text/javascript" src="js/layout.js"></script>
     <!--}-->
-    <script type="text/javascript" src="/js/zr.js?1"></script>
+    <script type="text/javascript" src="/js/nv.js?1"></script>
     <script type="text/javascript">
-        Zr.config({
+        Nv.config({
             baseUrl:"/js/plugin_modules/",
 //            requestTime:true
         })
-        Zr.ready(function(){
-            Zr.use("./js/quickMenu","./js/code")
+        Nv.ready(function(){
+            Nv.use("./js/quickMenu","./js/code")
         })
     </script>
 </head>
@@ -85,8 +86,8 @@
     <section class="c-title">
         <p>Layout 布局</p>
         <span>有关整体页面布局的设计原则</span>
-        <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/layout.md"><b>API文档</b></a>
-        <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/5"><b>组件问题反馈和讨论</b></a>
+        <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/nv-source/blob/master/docs/inner/layout.md"><b>API文档</b></a>
+        <a style="font-size: 16px" href="//github.com/guguaihaha/nv-source/issues/5"><b>组件问题反馈和讨论</b></a>
     </section>
     <div class="c-line"></div>
     <section class="c-thin-title">
@@ -110,134 +111,134 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo c-demo-test">
-            <div class="zr-layout">
-                <div class="zr-layout-header grey-bgc-3">
+            <div class="nv-layout">
+                <div class="nv-layout-header grey-bgc-3">
                     Header
                 </div>
-                <div class="zr-layout-content grey-bgc-4">
+                <div class="nv-layout-content grey-bgc-4">
                     Content
                 </div>
-                <div class="zr-layout-footer grey-bgc-3">
+                <div class="nv-layout-footer grey-bgc-3">
                     Footer
                 </div>
             </div>
             <div class="c-block-20"></div>
-            <div class="zr-layout">
-                <div class="zr-layout-header grey-bgc-3">
+            <div class="nv-layout">
+                <div class="nv-layout-header grey-bgc-3">
                     Header
                 </div>
-                <div class="zr-layout zr-layout-has-side grey-bgc-4">
-                    <div class="zr-layout-side">
-                        <div class="zr-layout-side-children">
+                <div class="nv-layout nv-layout-has-side grey-bgc-4">
+                    <div class="nv-layout-side">
+                        <div class="nv-layout-side-children">
                             Side
                         </div>
                     </div>
-                    <div class="zr-layout-content">
+                    <div class="nv-layout-content">
                         Content
                     </div>
                 </div>
-                <div class="zr-layout-footer grey-bgc-3">
+                <div class="nv-layout-footer grey-bgc-3">
                     Footer
                 </div>
             </div>
             <div class="c-block-20"></div>
-            <div class="zr-layout zr-layout-has-side">
-                <div class="zr-layout-side">Side</div>
-                <div class="zr-layout">
-                    <div class="zr-layout-header">Header</div>
-                    <div class="zr-layout-content">Content</div>
-                    <div class="zr-layout-footer">Footer</div>
+            <div class="nv-layout nv-layout-has-side">
+                <div class="nv-layout-side">Side</div>
+                <div class="nv-layout">
+                    <div class="nv-layout-header">Header</div>
+                    <div class="nv-layout-content">Content</div>
+                    <div class="nv-layout-footer">Footer</div>
                 </div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
     <!--第一种-->
-    <div class="zr-layout">
-        <div class="zr-layout-header grey-bgc-3">
+    <div class="nv-layout">
+        <div class="nv-layout-header grey-bgc-3">
             Header
         </div>
-        <div class="zr-layout-content grey-bgc-4">
+        <div class="nv-layout-content grey-bgc-4">
             Content
         </div>
-        <div class="zr-layout-footer grey-bgc-3">
+        <div class="nv-layout-footer grey-bgc-3">
             Footer
         </div>
     </div>
     <!--第二种-->
-    <div class="zr-layout">
-        <div class="zr-layout-header grey-bgc-3">
+    <div class="nv-layout">
+        <div class="nv-layout-header grey-bgc-3">
             Header
         </div>
-        <div class="zr-layout zr-layout-has-side grey-bgc-4">
-            <div class="zr-layout-side">
-                <div class="zr-layout-side-children">
+        <div class="nv-layout nv-layout-has-side grey-bgc-4">
+            <div class="nv-layout-side">
+                <div class="nv-layout-side-children">
                     Side
                 </div>
             </div>
-            <div class="zr-layout-content">
+            <div class="nv-layout-content">
                 Content
             </div>
         </div>
-        <div class="zr-layout-footer grey-bgc-3">
+        <div class="nv-layout-footer grey-bgc-3">
             Footer
         </div>
     </div>
     <!--第三种-->
-    <div class="zr-layout zr-layout-has-side">
-        <div class="zr-layout-side">Side</div>
-        <div class="zr-layout">
-            <div class="zr-layout-header">Header</div>
-            <div class="zr-layout-content">Content</div>
-            <div class="zr-layout-footer">Footer</div>
+    <div class="nv-layout nv-layout-has-side">
+        <div class="nv-layout-side">Side</div>
+        <div class="nv-layout">
+            <div class="nv-layout-header">Header</div>
+            <div class="nv-layout-content">Content</div>
+            <div class="nv-layout-footer">Footer</div>
         </div>
     </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>侧边栏导航 <a href="#">#</a></p>
-        <span>将设置、搜索、用户信息等常用内容放置在左侧导航区，导航层级少于3级时可以使用此结构。同时如果需要深色的皮肤需要在最外层<i class="c-block-inline">zr-layout</i> 添加样式<i class="c-block-inline">zr-layout-theme-dark</i>,同时在za-nav的外层添加样式<i class="c-block-inline">zr-nav-geekblue</i></span>
+        <span>将设置、搜索、用户信息等常用内容放置在左侧导航区，导航层级少于3级时可以使用此结构。同时如果需要深色的皮肤需要在最外层<i class="c-block-inline">nv-layout</i> 添加样式<i class="c-block-inline">nv-layout-theme-dark</i>,同时在za-nav的外层添加样式<i class="c-block-inline">nv-nav-geekblue</i></span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="zr-layout zr-layout-has-side zr-layout-side-trigger zr-layout-theme-dark">
-                <div class="zr-layout-side">
-                    <div class="zr-layout-side-children zr-nav-geekblue">
-                        <div class="zr-layout-logo"></div>
-                        <div class="zr-layout-icon-home">
-                            <i class="zricon-home-empty"></i>
+            <div class="nv-layout nv-layout-has-side nv-layout-side-trigger nv-layout-theme-dark">
+                <div class="nv-layout-side">
+                    <div class="nv-layout-side-children nv-nav-geekblue">
+                        <div class="nv-layout-logo"></div>
+                        <div class="nv-layout-icon-home">
+                            <i class="nvicon-home-empty"></i>
                         </div>
-                        <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="double" zr-event="click">
+                        <ul class="nv-nav nv-nav-shrink nv-nav-tree" trigger="double" nv-event="click">
                             <!--二级导航效果一-->
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">
-                                    <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
-                                    <i class="zricon-arrow-down"></i>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">
+                                    <i class="nvicon-doc-empty"></i><span class="nv-nav-subset-title">Navigation 1</span>
+                                    <i class="nvicon-arrow-down"></i>
                                 </div>
 
                                 <!--一级菜单-->
-                                <ul class="zr-nav-menu">
-                                    <li class="zr-nav-item">
+                                <ul class="nv-nav-menu">
+                                    <li class="nv-nav-item">
                                         <!--可以使用 <a> 标签-->
-                                        <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                        <a href="javascript:;" class="nv-nav-subtitle">Option 1</a>
                                     </li>
-                                    <li class="zr-nav-item">
+                                    <li class="nv-nav-item">
                                         <!--可以使用 除<a> 标签之外的其它标签-->
-                                        <div class="zr-nav-subtitle">Option 2</div>
+                                        <div class="nv-nav-subtitle">Option 2</div>
                                     </li>
-                                    <li class="zr-nav-item">
-                                        <div class="zr-nav-subtitle">
-                                            <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                    <li class="nv-nav-item">
+                                        <div class="nv-nav-subtitle">
+                                            <span class="nv-nav-subset-title">Submenu2</span><i class="nvicon-arrow-down"></i></div>
                                         <!--子集菜单-->
-                                        <ul class="zr-nav-leaves">
-                                            <li class="zr-nav-item">
-                                                <div class="zr-nav-subtitle">Option 3</div>
+                                        <ul class="nv-nav-leaves">
+                                            <li class="nv-nav-item">
+                                                <div class="nv-nav-subtitle">Option 3</div>
                                             </li>
-                                            <li class="zr-nav-item">
-                                                <div class="zr-nav-subtitle">Option 4</div>
+                                            <li class="nv-nav-item">
+                                                <div class="nv-nav-subtitle">Option 4</div>
                                             </li>
                                         </ul>
                                     </li>
@@ -245,141 +246,141 @@
                             </li>
 
                             <!--二级导航效果一-->
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">
-                                    <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
-                                    <i class="zricon-arrow-down"></i>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">
+                                    <i class="nvicon-home-empty"></i><span class="nv-nav-subset-title">Navigation 2</span>
+                                    <i class="nvicon-arrow-down"></i>
                                 </div>
 
                                 <!--一级菜单-->
-                                <ul class="zr-nav-menu">
-                                    <li class="zr-nav-item">
-                                        <div class="zr-nav-subtitle">Option 5</div>
+                                <ul class="nv-nav-menu">
+                                    <li class="nv-nav-item">
+                                        <div class="nv-nav-subtitle">Option 5</div>
                                     </li>
-                                    <li class="zr-nav-item">
-                                        <div class="zr-nav-subtitle">Option 6</div>
+                                    <li class="nv-nav-item">
+                                        <div class="nv-nav-subtitle">Option 6</div>
                                     </li>
-                                    <li class="zr-nav-item">
-                                        <div class="zr-nav-subtitle">Option 7</div>
+                                    <li class="nv-nav-item">
+                                        <div class="nv-nav-subtitle">Option 7</div>
                                     </li>
                                 </ul>
                             </li>
 
                             <!--一级菜单效果-->
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">
-                                    <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
-                                    <i class="zricon-arrow-down"></i>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">
+                                    <i class="nvicon-classify-empty"></i><span class="nv-nav-subset-title">Navigation 3</span>
+                                    <i class="nvicon-arrow-down"></i>
                                 </div>
                                 <!--一级菜单-->
-                                <ul class="zr-nav-menu">
-                                    <li class="zr-nav-item">
-                                        <div class="zr-nav-subtitle">Option 8</div>
+                                <ul class="nv-nav-menu">
+                                    <li class="nv-nav-item">
+                                        <div class="nv-nav-subtitle">Option 8</div>
                                     </li>
-                                    <li class="zr-nav-item">
-                                        <div class="zr-nav-subtitle">Option 9</div>
+                                    <li class="nv-nav-item">
+                                        <div class="nv-nav-subtitle">Option 9</div>
                                     </li>
-                                    <li class="zr-nav-item">
-                                        <div class="zr-nav-subtitle">Option 10</div>
+                                    <li class="nv-nav-item">
+                                        <div class="nv-nav-subtitle">Option 10</div>
                                     </li>
                                 </ul>
                             </li>
 
                             <!--一级菜单效果-->
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">
-                                    <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">
+                                    <i class="nvicon-heart-empty"></i><span class="nv-nav-subset-title">Option 11</span>
                                 </div>
                             </li>
 
                             <!--一级级菜单效果-->
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">
-                                    <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">
+                                    <i class="nvicon-star-empty"></i><span class="nv-nav-subset-title">Option 12</span>
                                 </div>
                             </li>
 
                             <!--没有子菜单效果-->
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">
-                                    <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">
+                                    <i class="nvicon-seting-empty"></i><span class="nv-nav-subset-title">Option 13</span>
                                 </div>
                             </li>
                         </ul>
-                        <div class="zr-layout-info">
-                            <div class="zr-layout-info-photo" title="userName"><img src="//storage.jd.com/zrstatic/images/demo2.jpg" /></div>
-                            <div class="zr-layout-info-item">
-                                <p class="zr-layout-info-title">User Name</p>
-                                <a class="zr-layout-info-icon"><i class="zricon-mail-empty"></i></a>
+                        <div class="nv-layout-info">
+                            <div class="nv-layout-info-photo" title="userName"><img src="//storage.jd.com/nvstatic/images/demo2.jpg" /></div>
+                            <div class="nv-layout-info-item">
+                                <p class="nv-layout-info-title">User Name</p>
+                                <a class="nv-layout-info-icon"><i class="nvicon-mail-empty"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="zr-layout">
-                    <div class="zr-layout-header">
-                        <div class="zr-row-flex">
-                            <div class="zr-col-2 zr-layout-trigger" id="double"><i class="zricon-menu-empty"></i></div>
-                            <div class="zr-col-6 zr-col-offset-16">
-                                <div class="zr-input-group zr-layout-search-group">
-                                    <input type="text" placeholder="Please input text" class="zr-input">
-                                    <span class="zr-input-addon">
-                                        <i class="zricon-search-empty"></i>
+                <div class="nv-layout">
+                    <div class="nv-layout-header">
+                        <div class="nv-row-flex">
+                            <div class="nv-col-2 nv-layout-trigger" id="double"><i class="nvicon-menu-empty"></i></div>
+                            <div class="nv-col-6 nv-col-offset-16">
+                                <div class="nv-input-group nv-layout-search-group">
+                                    <input type="text" placeholder="Please input text" class="nv-input">
+                                    <span class="nv-input-addon">
+                                        <i class="nvicon-search-empty"></i>
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="zr-layout-content zr-layout-space">
-                        <div class="zr-breadcrumb">
-                            <span><em>Home</em><i class="zricon-arrow-right"></i></span>
-                            <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
-                            <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                    <div class="nv-layout-content nv-layout-space">
+                        <div class="nv-breadcrumb">
+                            <span><em>Home</em><i class="nvicon-arrow-right"></i></span>
+                            <span><em><a href="">Page</a></em><i class="nvicon-arrow-right"></i></span>
+                            <span><em><a href="">Subpage</a></em><i class="nvicon-arrow-right"></i></span>
                             <span><em>Other info</em></span>
                         </div>
                         <div style="min-height: 400px;background: #fff;padding: 24px;">
                             这里是展示内容
                         </div>
                     </div>
-                    <div class="zr-layout-footer" style="text-align: center">Zr Design</div>
+                    <div class="nv-layout-footer" style="text-align: center">Nv Design</div>
                 </div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-layout zr-layout-has-side zr-layout-side-trigger zr-layout-theme-dark">
-        <div class="zr-layout-side">
-            <div class="zr-layout-side-children zr-nav-geekblue">
-                <div class="zr-layout-logo"></div>
-                <div class="zr-layout-icon-home">
-                    <i class="zricon-home-empty"></i>
+    <div class="nv-layout nv-layout-has-side nv-layout-side-trigger nv-layout-theme-dark">
+        <div class="nv-layout-side">
+            <div class="nv-layout-side-children nv-nav-geekblue">
+                <div class="nv-layout-logo"></div>
+                <div class="nv-layout-icon-home">
+                    <i class="nvicon-home-empty"></i>
                 </div>
-                <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="double" zr-event="click">
+                <ul class="nv-nav nv-nav-shrink nv-nav-tree" trigger="double" nv-event="click">
                     <!--二级导航效果一-->
-                    <li class="zr-nav-item">
-                        <div class="zr-nav-subtitle">
-                            <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
-                            <i class="zricon-arrow-down"></i>
+                    <li class="nv-nav-item">
+                        <div class="nv-nav-subtitle">
+                            <i class="nvicon-doc-empty"></i><span class="nv-nav-subset-title">Navigation 1</span>
+                            <i class="nvicon-arrow-down"></i>
                         </div>
 
                         <!--一级菜单-->
-                        <ul class="zr-nav-menu">
-                            <li class="zr-nav-item">
+                        <ul class="nv-nav-menu">
+                            <li class="nv-nav-item">
                                 <!--可以使用 <a> 标签-->
-                                <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                <a href="javascript:;" class="nv-nav-subtitle">Option 1</a>
                             </li>
-                            <li class="zr-nav-item">
+                            <li class="nv-nav-item">
                                 <!--可以使用 除<a> 标签之外的其它标签-->
-                                <div class="zr-nav-subtitle">Option 2</div>
+                                <div class="nv-nav-subtitle">Option 2</div>
                             </li>
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">
-                                    <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">
+                                    <span class="nv-nav-subset-title">Submenu2</span><i class="nvicon-arrow-down"></i></div>
                                 <!--子集菜单-->
-                                <ul class="zr-nav-leaves">
-                                    <li class="zr-nav-item">
-                                        <div class="zr-nav-subtitle">Option 3</div>
+                                <ul class="nv-nav-leaves">
+                                    <li class="nv-nav-item">
+                                        <div class="nv-nav-subtitle">Option 3</div>
                                     </li>
-                                    <li class="zr-nav-item">
-                                        <div class="zr-nav-subtitle">Option 4</div>
+                                    <li class="nv-nav-item">
+                                        <div class="nv-nav-subtitle">Option 4</div>
                                     </li>
                                 </ul>
                             </li>
@@ -387,107 +388,107 @@
                     </li>
 
                     <!--二级导航效果一-->
-                    <li class="zr-nav-item">
-                        <div class="zr-nav-subtitle">
-                            <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
-                            <i class="zricon-arrow-down"></i>
+                    <li class="nv-nav-item">
+                        <div class="nv-nav-subtitle">
+                            <i class="nvicon-home-empty"></i><span class="nv-nav-subset-title">Navigation 2</span>
+                            <i class="nvicon-arrow-down"></i>
                         </div>
 
                         <!--一级菜单-->
-                        <ul class="zr-nav-menu">
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">Option 5</div>
+                        <ul class="nv-nav-menu">
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">Option 5</div>
                             </li>
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">Option 6</div>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">Option 6</div>
                             </li>
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">Option 7</div>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">Option 7</div>
                             </li>
                         </ul>
                     </li>
 
                     <!--一级菜单效果-->
-                    <li class="zr-nav-item">
-                        <div class="zr-nav-subtitle">
-                            <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
-                            <i class="zricon-arrow-down"></i>
+                    <li class="nv-nav-item">
+                        <div class="nv-nav-subtitle">
+                            <i class="nvicon-classify-empty"></i><span class="nv-nav-subset-title">Navigation 3</span>
+                            <i class="nvicon-arrow-down"></i>
                         </div>
                         <!--一级菜单-->
-                        <ul class="zr-nav-menu">
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">Option 8</div>
+                        <ul class="nv-nav-menu">
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">Option 8</div>
                             </li>
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">Option 9</div>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">Option 9</div>
                             </li>
-                            <li class="zr-nav-item">
-                                <div class="zr-nav-subtitle">Option 10</div>
+                            <li class="nv-nav-item">
+                                <div class="nv-nav-subtitle">Option 10</div>
                             </li>
                         </ul>
                     </li>
 
                     <!--一级菜单效果-->
-                    <li class="zr-nav-item">
-                        <div class="zr-nav-subtitle">
-                            <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                    <li class="nv-nav-item">
+                        <div class="nv-nav-subtitle">
+                            <i class="nvicon-heart-empty"></i><span class="nv-nav-subset-title">Option 11</span>
                         </div>
                     </li>
 
                     <!--一级级菜单效果-->
-                    <li class="zr-nav-item">
-                        <div class="zr-nav-subtitle">
-                            <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                    <li class="nv-nav-item">
+                        <div class="nv-nav-subtitle">
+                            <i class="nvicon-star-empty"></i><span class="nv-nav-subset-title">Option 12</span>
                         </div>
                     </li>
 
                     <!--没有子菜单效果-->
-                    <li class="zr-nav-item">
-                        <div class="zr-nav-subtitle">
-                            <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                    <li class="nv-nav-item">
+                        <div class="nv-nav-subtitle">
+                            <i class="nvicon-seting-empty"></i><span class="nv-nav-subset-title">Option 13</span>
                         </div>
                     </li>
                 </ul>
-                <div class="zr-layout-info">
-                    <div class="zr-layout-info-photo" title="userName"><img src="//storage.jd.com/zrstatic/images/demo2.jpg" /></div>
-                    <div class="zr-layout-info-item">
-                        <p class="zr-layout-info-title">User Name</p>
-                        <a class="zr-layout-info-icon"><i class="zricon-mail-empty"></i></a>
+                <div class="nv-layout-info">
+                    <div class="nv-layout-info-photo" title="userName"><img src="//storage.jd.com/nvstatic/images/demo2.jpg" /></div>
+                    <div class="nv-layout-info-item">
+                        <p class="nv-layout-info-title">User Name</p>
+                        <a class="nv-layout-info-icon"><i class="nvicon-mail-empty"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="zr-layout">
-            <div class="zr-layout-header">
-                <div class="zr-row-flex">
-                    <div class="zr-col-2 zr-layout-trigger" id="double"><i class="zricon-menu-empty"></i></div>
-                    <div class="zr-col-6 zr-col-offset-16">
-                        <div class="zr-input-group zr-layout-search-group">
-                            <input type="text" placeholder="Please input text" class="zr-input">
-                            <span class="zr-input-addon">
-                                <i class="zricon-search-empty"></i>
+        <div class="nv-layout">
+            <div class="nv-layout-header">
+                <div class="nv-row-flex">
+                    <div class="nv-col-2 nv-layout-trigger" id="double"><i class="nvicon-menu-empty"></i></div>
+                    <div class="nv-col-6 nv-col-offset-16">
+                        <div class="nv-input-group nv-layout-search-group">
+                            <input type="text" placeholder="Please input text" class="nv-input">
+                            <span class="nv-input-addon">
+                                <i class="nvicon-search-empty"></i>
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="zr-layout-content zr-layout-space">
-                <div class="zr-breadcrumb">
-                    <span><em>Home</em><i class="zricon-arrow-right"></i></span>
-                    <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
-                    <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+            <div class="nv-layout-content nv-layout-space">
+                <div class="nv-breadcrumb">
+                    <span><em>Home</em><i class="nvicon-arrow-right"></i></span>
+                    <span><em><a href="">Page</a></em><i class="nvicon-arrow-right"></i></span>
+                    <span><em><a href="">Subpage</a></em><i class="nvicon-arrow-right"></i></span>
                     <span><em>Other info</em></span>
                 </div>
                 <div style="min-height: 400px;background: #fff;padding: 24px;">
                     这里是展示内容
                 </div>
             </div>
-            <div class="zr-layout-footer" style="text-align: center">Zr Design</div>
+            <div class="nv-layout-footer" style="text-align: center">Nv Design</div>
         </div>
     </div>
 
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -498,155 +499,155 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="zr-layout">
-                <div class="zr-layout-header zr-layout-header-theme-dark">
-                    <div class="zr-row-flex">
-                        <div class="zr-col-4">
-                            <div class="zr-layout-logo"></div>
+            <div class="nv-layout">
+                <div class="nv-layout-header nv-layout-header-theme-dark">
+                    <div class="nv-row-flex">
+                        <div class="nv-col-4">
+                            <div class="nv-layout-logo"></div>
                         </div>
-                        <div class="zr-col-2 zr-layout-trigger" id="other_btn"><i class="zricon-menu-empty"></i></div>
-                        <div class="zr-col-7">
-                            <ul class="zr-nav zr-nav-horizontal">
-                                <!--当前选中状态 添加zr-nav-selected-->
-                                <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                        <div class="nv-col-2 nv-layout-trigger" id="other_btn"><i class="nvicon-menu-empty"></i></div>
+                        <div class="nv-col-7">
+                            <ul class="nv-nav nv-nav-horizontal">
+                                <!--当前选中状态 添加nv-nav-selected-->
+                                <li class="nv-nav-item nv-nav-selected">Nav 1</li>
                                 <!--有下拉菜单状态-->
-                                <li class="zr-nav-item">
-                                    Nav 2 <i class="zricon-arrow-down"></i>
+                                <li class="nv-nav-item">
+                                    Nav 2 <i class="nvicon-arrow-down"></i>
                                     <!--一级菜单-->
-                                    <ul class="zr-nav-menu">
-                                        <li class="zr-nav-item">List 1</li>
-                                        <li class="zr-nav-item">
-                                            List 2<i class="zricon-arrow-right"></i>
+                                    <ul class="nv-nav-menu">
+                                        <li class="nv-nav-item">List 1</li>
+                                        <li class="nv-nav-item">
+                                            List 2<i class="nvicon-arrow-right"></i>
                                             <!--子集菜单-->
-                                            <ul class="zr-nav-leaves">
-                                                <li class="zr-nav-item">
+                                            <ul class="nv-nav-leaves">
+                                                <li class="nv-nav-item">
                                                     <a href="#">Child 1 target blank</a>
                                                 </li>
-                                                <li class="zr-nav-item"><a href="#">Child 2</a></li>
-                                                <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                                <li class="nv-nav-item"><a href="#">Child 2</a></li>
+                                                <li class="nv-nav-item"><a href="#">Child 3</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                        <div class="zr-col-6">
-                            <div class="zr-input-group zr-layout-search-group">
-                                <input type="text" placeholder="Please input text" class="zr-input">
-                                <span class="zr-input-addon">
-                                        <i class="zricon-search-empty"></i>
+                        <div class="nv-col-6">
+                            <div class="nv-input-group nv-layout-search-group">
+                                <input type="text" placeholder="Please input text" class="nv-input">
+                                <span class="nv-input-addon">
+                                        <i class="nvicon-search-empty"></i>
                                 </span>
                             </div>
                         </div>
-                        <div class="zr-col-1">
+                        <div class="nv-col-1">
                             <div class="mail" style="padding-left: 10px;">
-                                <i class="zricon-mail-empty"></i>
+                                <i class="nvicon-mail-empty"></i>
                             </div>
                         </div>
-                        <div class="zr-col-4" style="text-align: center">
+                        <div class="nv-col-4" style="text-align: center">
                             User Info
                         </div>
                     </div>
                 </div>
-                <div class="zr-layout zr-layout-has-side zr-layout-side-trigger grey-bgc-4">
-                    <div class="zr-layout-side zr-layout-side-light">
-                        <div class="zr-layout-side-children">
-                            <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="other_btn" zr-event="click">
+                <div class="nv-layout nv-layout-has-side nv-layout-side-trigger grey-bgc-4">
+                    <div class="nv-layout-side nv-layout-side-light">
+                        <div class="nv-layout-side-children">
+                            <ul class="nv-nav nv-nav-shrink nv-nav-tree" trigger="other_btn" nv-event="click">
                                 <!--二级导航效果一-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
-                                        <i class="zricon-arrow-down"></i>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-doc-empty"></i><span class="nv-nav-subset-title">Navigation 1</span>
+                                        <i class="nvicon-arrow-down"></i>
                                     </div>
                                     <!--一级菜单-->
-                                    <ul class="zr-nav-menu">
-                                        <li class="zr-nav-item">
+                                    <ul class="nv-nav-menu">
+                                        <li class="nv-nav-item">
                                             <!--可以使用 <a> 标签-->
-                                            <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                            <a href="javascript:;" class="nv-nav-subtitle">Option 1</a>
                                         </li>
-                                        <li class="zr-nav-item">
+                                        <li class="nv-nav-item">
                                             <!--可以使用 除<a> 标签之外的其它标签-->
-                                            <div class="zr-nav-subtitle">Option 2</div>
+                                            <div class="nv-nav-subtitle">Option 2</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">
-                                                <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">
+                                                <span class="nv-nav-subset-title">Submenu2</span><i class="nvicon-arrow-down"></i></div>
                                             <!--子集菜单-->
-                                            <ul class="zr-nav-leaves">
-                                                <li class="zr-nav-item">
-                                                    <div class="zr-nav-subtitle">Option 3</div>
+                                            <ul class="nv-nav-leaves">
+                                                <li class="nv-nav-item">
+                                                    <div class="nv-nav-subtitle">Option 3</div>
                                                 </li>
-                                                <li class="zr-nav-item">
-                                                    <div class="zr-nav-subtitle">Option 4</div>
+                                                <li class="nv-nav-item">
+                                                    <div class="nv-nav-subtitle">Option 4</div>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <!--二级导航效果一-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
-                                        <i class="zricon-arrow-down"></i>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-home-empty"></i><span class="nv-nav-subset-title">Navigation 2</span>
+                                        <i class="nvicon-arrow-down"></i>
                                     </div>
                                     <!--一级菜单-->
-                                    <ul class="zr-nav-menu">
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 5</div>
+                                    <ul class="nv-nav-menu">
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 5</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 6</div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 6</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 7</div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 7</div>
                                         </li>
                                     </ul>
                                 </li>
                                 <!--一级菜单效果-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
-                                        <i class="zricon-arrow-down"></i>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-classify-empty"></i><span class="nv-nav-subset-title">Navigation 3</span>
+                                        <i class="nvicon-arrow-down"></i>
                                     </div>
                                     <!--一级菜单-->
-                                    <ul class="zr-nav-menu">
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 8</div>
+                                    <ul class="nv-nav-menu">
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 8</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 9</div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 9</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 10</div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 10</div>
                                         </li>
                                     </ul>
                                 </li>
                                 <!--一级菜单效果-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-heart-empty"></i><span class="nv-nav-subset-title">Option 11</span>
                                     </div>
                                 </li>
                                 <!--一级级菜单效果-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-star-empty"></i><span class="nv-nav-subset-title">Option 12</span>
                                     </div>
                                 </li>
                                 <!--没有子菜单效果-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-seting-empty"></i><span class="nv-nav-subset-title">Option 13</span>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="zr-layout-content zr-layout-space">
-                        <div class="zr-breadcrumb">
-                            <span><em>Home</em><i class="zricon-arrow-right"></i></span>
-                            <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
-                            <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                    <div class="nv-layout-content nv-layout-space">
+                        <div class="nv-breadcrumb">
+                            <span><em>Home</em><i class="nvicon-arrow-right"></i></span>
+                            <span><em><a href="">Page</a></em><i class="nvicon-arrow-right"></i></span>
+                            <span><em><a href="">Subpage</a></em><i class="nvicon-arrow-right"></i></span>
                             <span><em>Other info</em></span>
                         </div>
                         <div style="min-height: 400px;background: #fff;padding: 24px;">
@@ -654,160 +655,160 @@
                         </div>
                     </div>
                 </div>
-                <div class="zr-layout-footer">
+                <div class="nv-layout-footer">
                 </div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-layout">
-        <div class="zr-layout-header zr-layout-header-theme-dark">
-            <div class="zr-row-flex">
-                <div class="zr-col-4">
-                    <div class="zr-layout-logo"></div>
+    <div class="nv-layout">
+        <div class="nv-layout-header nv-layout-header-theme-dark">
+            <div class="nv-row-flex">
+                <div class="nv-col-4">
+                    <div class="nv-layout-logo"></div>
                 </div>
-                <div class="zr-col-2 zr-layout-trigger" id="other_btn"><i class="zricon-menu-empty"></i></div>
-                <div class="zr-col-7">
-                    <ul class="zr-nav zr-nav-horizontal">
-                        <!--当前选中状态 添加zr-nav-selected-->
-                        <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                <div class="nv-col-2 nv-layout-trigger" id="other_btn"><i class="nvicon-menu-empty"></i></div>
+                <div class="nv-col-7">
+                    <ul class="nv-nav nv-nav-horizontal">
+                        <!--当前选中状态 添加nv-nav-selected-->
+                        <li class="nv-nav-item nv-nav-selected">Nav 1</li>
                         <!--有下拉菜单状态-->
-                        <li class="zr-nav-item">
-                            Nav 2 <i class="zricon-arrow-down"></i>
+                        <li class="nv-nav-item">
+                            Nav 2 <i class="nvicon-arrow-down"></i>
                             <!--一级菜单-->
-                            <ul class="zr-nav-menu">
-                                <li class="zr-nav-item">List 1</li>
-                                <li class="zr-nav-item">
-                                    List 2<i class="zricon-arrow-right"></i>
+                            <ul class="nv-nav-menu">
+                                <li class="nv-nav-item">List 1</li>
+                                <li class="nv-nav-item">
+                                    List 2<i class="nvicon-arrow-right"></i>
                                     <!--子集菜单-->
-                                    <ul class="zr-nav-leaves">
-                                        <li class="zr-nav-item">
+                                    <ul class="nv-nav-leaves">
+                                        <li class="nv-nav-item">
                                             <a href="#">Child 1 target blank</a>
                                         </li>
-                                        <li class="zr-nav-item"><a href="#">Child 2</a></li>
-                                        <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                        <li class="nv-nav-item"><a href="#">Child 2</a></li>
+                                        <li class="nv-nav-item"><a href="#">Child 3</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div class="zr-col-6">
-                    <div class="zr-input-group zr-layout-search-group">
-                        <input type="text" placeholder="Please input text" class="zr-input">
-                        <span class="zr-input-addon">
-                                <i class="zricon-search-empty"></i>
+                <div class="nv-col-6">
+                    <div class="nv-input-group nv-layout-search-group">
+                        <input type="text" placeholder="Please input text" class="nv-input">
+                        <span class="nv-input-addon">
+                                <i class="nvicon-search-empty"></i>
                         </span>
                     </div>
                 </div>
-                <div class="zr-col-1">
+                <div class="nv-col-1">
                     <div class="mail" style="padding-left: 10px;">
-                        <i class="zricon-mail-empty"></i>
+                        <i class="nvicon-mail-empty"></i>
                     </div>
                 </div>
-                <div class="zr-col-4" style="text-align: center">
+                <div class="nv-col-4" style="text-align: center">
                     User Info
                 </div>
             </div>
         </div>
-        <div class="zr-layout zr-layout-has-side zr-layout-side-trigger grey-bgc-4">
-            <div class="zr-layout-side zr-layout-side-light">
-                <div class="zr-layout-side-children">
-                    <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="other_btn" zr-event="click">
+        <div class="nv-layout nv-layout-has-side nv-layout-side-trigger grey-bgc-4">
+            <div class="nv-layout-side nv-layout-side-light">
+                <div class="nv-layout-side-children">
+                    <ul class="nv-nav nv-nav-shrink nv-nav-tree" trigger="other_btn" nv-event="click">
                         <!--二级导航效果一-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
-                                <i class="zricon-arrow-down"></i>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-doc-empty"></i><span class="nv-nav-subset-title">Navigation 1</span>
+                                <i class="nvicon-arrow-down"></i>
                             </div>
                             <!--一级菜单-->
-                            <ul class="zr-nav-menu">
-                                <li class="zr-nav-item">
+                            <ul class="nv-nav-menu">
+                                <li class="nv-nav-item">
                                     <!--可以使用 <a> 标签-->
-                                    <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                    <a href="javascript:;" class="nv-nav-subtitle">Option 1</a>
                                 </li>
-                                <li class="zr-nav-item">
+                                <li class="nv-nav-item">
                                     <!--可以使用 除<a> 标签之外的其它标签-->
-                                    <div class="zr-nav-subtitle">Option 2</div>
+                                    <div class="nv-nav-subtitle">Option 2</div>
                                 </li>
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <span class="nv-nav-subset-title">Submenu2</span><i class="nvicon-arrow-down"></i></div>
                                     <!--子集菜单-->
-                                    <ul class="zr-nav-leaves">
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 3</div>
+                                    <ul class="nv-nav-leaves">
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 3</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 4</div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 4</div>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <!--二级导航效果一-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
-                                <i class="zricon-arrow-down"></i>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-home-empty"></i><span class="nv-nav-subset-title">Navigation 2</span>
+                                <i class="nvicon-arrow-down"></i>
                             </div>
                             <!--一级菜单-->
-                            <ul class="zr-nav-menu">
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 5</div>
+                            <ul class="nv-nav-menu">
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 5</div>
                                 </li>
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 6</div>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 6</div>
                                 </li>
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 7</div>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 7</div>
                                 </li>
                             </ul>
                         </li>
                         <!--一级菜单效果-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
-                                <i class="zricon-arrow-down"></i>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-classify-empty"></i><span class="nv-nav-subset-title">Navigation 3</span>
+                                <i class="nvicon-arrow-down"></i>
                             </div>
                             <!--一级菜单-->
-                            <ul class="zr-nav-menu">
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 8</div>
+                            <ul class="nv-nav-menu">
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 8</div>
                                 </li>
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 9</div>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 9</div>
                                 </li>
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 10</div>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 10</div>
                                 </li>
                             </ul>
                         </li>
                         <!--一级菜单效果-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-heart-empty"></i><span class="nv-nav-subset-title">Option 11</span>
                             </div>
                         </li>
                         <!--一级级菜单效果-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-star-empty"></i><span class="nv-nav-subset-title">Option 12</span>
                             </div>
                         </li>
                         <!--没有子菜单效果-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-seting-empty"></i><span class="nv-nav-subset-title">Option 13</span>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="zr-layout-content zr-layout-space">
-                <div class="zr-breadcrumb">
-                    <span><em>Home</em><i class="zricon-arrow-right"></i></span>
-                    <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
-                    <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+            <div class="nv-layout-content nv-layout-space">
+                <div class="nv-breadcrumb">
+                    <span><em>Home</em><i class="nvicon-arrow-right"></i></span>
+                    <span><em><a href="">Page</a></em><i class="nvicon-arrow-right"></i></span>
+                    <span><em><a href="">Subpage</a></em><i class="nvicon-arrow-right"></i></span>
                     <span><em>Other info</em></span>
                 </div>
                 <div style="min-height: 400px;background: #fff;padding: 24px;">
@@ -815,11 +816,11 @@
                 </div>
             </div>
         </div>
-        <div class="zr-layout-footer">
+        <div class="nv-layout-footer">
         </div>
     </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -830,138 +831,138 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="zr-layout">
-                <div class="zr-layout-header zr-layout-header-theme-dark">
-                    <div class="zr-row-flex">
-                        <div class="zr-col-4">
-                            <div class="zr-layout-logo"></div>
+            <div class="nv-layout">
+                <div class="nv-layout-header nv-layout-header-theme-dark">
+                    <div class="nv-row-flex">
+                        <div class="nv-col-4">
+                            <div class="nv-layout-logo"></div>
                         </div>
-                        <div class="zr-col-1"></div>
-                        <div class="zr-col-8">
-                            <ul class="zr-nav zr-nav-horizontal">
-                                <!--当前选中状态 添加zr-nav-selected-->
-                                <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                        <div class="nv-col-1"></div>
+                        <div class="nv-col-8">
+                            <ul class="nv-nav nv-nav-horizontal">
+                                <!--当前选中状态 添加nv-nav-selected-->
+                                <li class="nv-nav-item nv-nav-selected">Nav 1</li>
                                 <!--有下拉菜单状态-->
-                                <li class="zr-nav-item">
-                                    Nav 2 <i class="zricon-arrow-down"></i>
+                                <li class="nv-nav-item">
+                                    Nav 2 <i class="nvicon-arrow-down"></i>
                                     <!--一级菜单-->
-                                    <ul class="zr-nav-menu">
-                                        <li class="zr-nav-item">List 1</li>
-                                        <li class="zr-nav-item">
-                                            List 2<i class="zricon-arrow-right"></i>
+                                    <ul class="nv-nav-menu">
+                                        <li class="nv-nav-item">List 1</li>
+                                        <li class="nv-nav-item">
+                                            List 2<i class="nvicon-arrow-right"></i>
                                             <!--子集菜单-->
-                                            <ul class="zr-nav-leaves">
-                                                <li class="zr-nav-item">
+                                            <ul class="nv-nav-leaves">
+                                                <li class="nv-nav-item">
                                                     <a href="#">Child 1 target blank</a>
                                                 </li>
-                                                <li class="zr-nav-item"><a href="#">Child 2</a></li>
-                                                <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                                <li class="nv-nav-item"><a href="#">Child 2</a></li>
+                                                <li class="nv-nav-item"><a href="#">Child 3</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                        <div class="zr-col-6">
-                            <div class="zr-input-group zr-layout-search-group">
-                                <input type="text" placeholder="Please input text" class="zr-input">
-                                <span class="zr-input-addon">
-                                        <i class="zricon-search-empty"></i>
+                        <div class="nv-col-6">
+                            <div class="nv-input-group nv-layout-search-group">
+                                <input type="text" placeholder="Please input text" class="nv-input">
+                                <span class="nv-input-addon">
+                                        <i class="nvicon-search-empty"></i>
                                 </span>
                             </div>
                         </div>
-                        <div class="zr-col-1">
+                        <div class="nv-col-1">
                             <div class="mail" style="padding-left: 10px;">
-                                <i class="zricon-mail-empty"></i>
+                                <i class="nvicon-mail-empty"></i>
                             </div>
                         </div>
-                        <div class="zr-col-4" style="text-align: center">
+                        <div class="nv-col-4" style="text-align: center">
                             User Info
                         </div>
                     </div>
                 </div>
-                <div class="zr-layout-content zr-layout-space">
-                    <div class="zr-breadcrumb">
-                        <span><em>Home</em><i class="zricon-arrow-right"></i></span>
-                        <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
-                        <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                <div class="nv-layout-content nv-layout-space">
+                    <div class="nv-breadcrumb">
+                        <span><em>Home</em><i class="nvicon-arrow-right"></i></span>
+                        <span><em><a href="">Page</a></em><i class="nvicon-arrow-right"></i></span>
+                        <span><em><a href="">Subpage</a></em><i class="nvicon-arrow-right"></i></span>
                         <span><em>Other info</em></span>
                     </div>
                     <div style="min-height: 400px;background: #fff;padding: 24px;">
                         这里是展示内容
                     </div>
                 </div>
-                <div class="zr-layout-footer">
+                <div class="nv-layout-footer">
                 </div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-layout">
-                <div class="zr-layout-header zr-layout-header-theme-dark">
-                    <div class="zr-row-flex">
-                        <div class="zr-col-4">
-                            <div class="zr-layout-logo"></div>
+    <div class="nv-layout">
+                <div class="nv-layout-header nv-layout-header-theme-dark">
+                    <div class="nv-row-flex">
+                        <div class="nv-col-4">
+                            <div class="nv-layout-logo"></div>
                         </div>
-                        <div class="zr-col-1"></div>
-                        <div class="zr-col-8">
-                            <ul class="zr-nav zr-nav-horizontal">
-                                <!--当前选中状态 添加zr-nav-selected-->
-                                <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                        <div class="nv-col-1"></div>
+                        <div class="nv-col-8">
+                            <ul class="nv-nav nv-nav-horizontal">
+                                <!--当前选中状态 添加nv-nav-selected-->
+                                <li class="nv-nav-item nv-nav-selected">Nav 1</li>
                                 <!--有下拉菜单状态-->
-                                <li class="zr-nav-item">
-                                    Nav 2 <i class="zricon-arrow-down"></i>
+                                <li class="nv-nav-item">
+                                    Nav 2 <i class="nvicon-arrow-down"></i>
                                     <!--一级菜单-->
-                                    <ul class="zr-nav-menu">
-                                        <li class="zr-nav-item">List 1</li>
-                                        <li class="zr-nav-item">
-                                            List 2<i class="zricon-arrow-right"></i>
+                                    <ul class="nv-nav-menu">
+                                        <li class="nv-nav-item">List 1</li>
+                                        <li class="nv-nav-item">
+                                            List 2<i class="nvicon-arrow-right"></i>
                                             <!--子集菜单-->
-                                            <ul class="zr-nav-leaves">
-                                                <li class="zr-nav-item">
+                                            <ul class="nv-nav-leaves">
+                                                <li class="nv-nav-item">
                                                     <a href="#">Child 1 target blank</a>
                                                 </li>
-                                                <li class="zr-nav-item"><a href="#">Child 2</a></li>
-                                                <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                                <li class="nv-nav-item"><a href="#">Child 2</a></li>
+                                                <li class="nv-nav-item"><a href="#">Child 3</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                        <div class="zr-col-6">
-                            <div class="zr-input-group zr-layout-search-group">
-                                <input type="text" placeholder="Please input text" class="zr-input">
-                                <span class="zr-input-addon">
-                                        <i class="zricon-search-empty"></i>
+                        <div class="nv-col-6">
+                            <div class="nv-input-group nv-layout-search-group">
+                                <input type="text" placeholder="Please input text" class="nv-input">
+                                <span class="nv-input-addon">
+                                        <i class="nvicon-search-empty"></i>
                                 </span>
                             </div>
                         </div>
-                        <div class="zr-col-1">
+                        <div class="nv-col-1">
                             <div class="mail" style="padding-left: 10px;">
-                                <i class="zricon-mail-empty"></i>
+                                <i class="nvicon-mail-empty"></i>
                             </div>
                         </div>
-                        <div class="zr-col-4" style="text-align: center">
+                        <div class="nv-col-4" style="text-align: center">
                             User Info
                         </div>
                     </div>
                 </div>
-                <div class="zr-layout-content zr-layout-space">
-                    <div class="zr-breadcrumb">
-                        <span><em>Home</em><i class="zricon-arrow-right"></i></span>
-                        <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
-                        <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                <div class="nv-layout-content nv-layout-space">
+                    <div class="nv-breadcrumb">
+                        <span><em>Home</em><i class="nvicon-arrow-right"></i></span>
+                        <span><em><a href="">Page</a></em><i class="nvicon-arrow-right"></i></span>
+                        <span><em><a href="">Subpage</a></em><i class="nvicon-arrow-right"></i></span>
                         <span><em>Other info</em></span>
                     </div>
                     <div style="min-height: 400px;background: #fff;padding: 24px;">
                         这里是展示内容
                     </div>
                 </div>
-                <div class="zr-layout-footer">
+                <div class="nv-layout-footer">
                 </div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -972,155 +973,155 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="zr-layout">
-                <div class="zr-layout-header zr-layout-header-theme-dark">
-                    <div class="zr-row-flex">
-                        <div class="zr-col-4">
-                            <div class="zr-layout-logo"></div>
+            <div class="nv-layout">
+                <div class="nv-layout-header nv-layout-header-theme-dark">
+                    <div class="nv-row-flex">
+                        <div class="nv-col-4">
+                            <div class="nv-layout-logo"></div>
                         </div>
-                        <div class="zr-col-2 zr-layout-trigger" id="other_btn_2"><i class="zricon-menu-empty"></i></div>
-                        <div class="zr-col-7">
-                            <ul class="zr-nav zr-nav-horizontal">
-                                <!--当前选中状态 添加zr-nav-selected-->
-                                <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                        <div class="nv-col-2 nv-layout-trigger" id="other_btn_2"><i class="nvicon-menu-empty"></i></div>
+                        <div class="nv-col-7">
+                            <ul class="nv-nav nv-nav-horizontal">
+                                <!--当前选中状态 添加nv-nav-selected-->
+                                <li class="nv-nav-item nv-nav-selected">Nav 1</li>
                                 <!--有下拉菜单状态-->
-                                <li class="zr-nav-item">
-                                    Nav 2 <i class="zricon-arrow-down"></i>
+                                <li class="nv-nav-item">
+                                    Nav 2 <i class="nvicon-arrow-down"></i>
                                     <!--一级菜单-->
-                                    <ul class="zr-nav-menu">
-                                        <li class="zr-nav-item">List 1</li>
-                                        <li class="zr-nav-item">
-                                            List 2<i class="zricon-arrow-right"></i>
+                                    <ul class="nv-nav-menu">
+                                        <li class="nv-nav-item">List 1</li>
+                                        <li class="nv-nav-item">
+                                            List 2<i class="nvicon-arrow-right"></i>
                                             <!--子集菜单-->
-                                            <ul class="zr-nav-leaves">
-                                                <li class="zr-nav-item">
+                                            <ul class="nv-nav-leaves">
+                                                <li class="nv-nav-item">
                                                     <a href="#">Child 1 target blank</a>
                                                 </li>
-                                                <li class="zr-nav-item"><a href="#">Child 2</a></li>
-                                                <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                                <li class="nv-nav-item"><a href="#">Child 2</a></li>
+                                                <li class="nv-nav-item"><a href="#">Child 3</a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
-                        <div class="zr-col-6">
-                            <div class="zr-input-group zr-layout-search-group">
-                                <input type="text" placeholder="Please input text" class="zr-input">
-                                <span class="zr-input-addon">
-                                        <i class="zricon-search-empty"></i>
+                        <div class="nv-col-6">
+                            <div class="nv-input-group nv-layout-search-group">
+                                <input type="text" placeholder="Please input text" class="nv-input">
+                                <span class="nv-input-addon">
+                                        <i class="nvicon-search-empty"></i>
                                 </span>
                             </div>
                         </div>
-                        <div class="zr-col-1">
+                        <div class="nv-col-1">
                             <div class="mail" style="padding-left: 10px;">
-                                <i class="zricon-mail-empty"></i>
+                                <i class="nvicon-mail-empty"></i>
                             </div>
                         </div>
-                        <div class="zr-col-4" style="text-align: center">
+                        <div class="nv-col-4" style="text-align: center">
                             User Info
                         </div>
                     </div>
                 </div>
-                <div class="zr-layout zr-layout-has-side zr-layout-side-trigger zr-layout-theme-dark">
-                    <div class="zr-layout-side">
-                        <div class="zr-layout-side-children zr-nav-geekblue">
-                            <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="other_btn_2" zr-event="click">
+                <div class="nv-layout nv-layout-has-side nv-layout-side-trigger nv-layout-theme-dark">
+                    <div class="nv-layout-side">
+                        <div class="nv-layout-side-children nv-nav-geekblue">
+                            <ul class="nv-nav nv-nav-shrink nv-nav-tree" trigger="other_btn_2" nv-event="click">
                                 <!--二级导航效果一-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
-                                        <i class="zricon-arrow-down"></i>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-doc-empty"></i><span class="nv-nav-subset-title">Navigation 1</span>
+                                        <i class="nvicon-arrow-down"></i>
                                     </div>
                                     <!--一级菜单-->
-                                    <ul class="zr-nav-menu">
-                                        <li class="zr-nav-item">
+                                    <ul class="nv-nav-menu">
+                                        <li class="nv-nav-item">
                                             <!--可以使用 <a> 标签-->
-                                            <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                            <a href="javascript:;" class="nv-nav-subtitle">Option 1</a>
                                         </li>
-                                        <li class="zr-nav-item">
+                                        <li class="nv-nav-item">
                                             <!--可以使用 除<a> 标签之外的其它标签-->
-                                            <div class="zr-nav-subtitle">Option 2</div>
+                                            <div class="nv-nav-subtitle">Option 2</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">
-                                                <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">
+                                                <span class="nv-nav-subset-title">Submenu2</span><i class="nvicon-arrow-down"></i></div>
                                             <!--子集菜单-->
-                                            <ul class="zr-nav-leaves">
-                                                <li class="zr-nav-item">
-                                                    <div class="zr-nav-subtitle">Option 3</div>
+                                            <ul class="nv-nav-leaves">
+                                                <li class="nv-nav-item">
+                                                    <div class="nv-nav-subtitle">Option 3</div>
                                                 </li>
-                                                <li class="zr-nav-item">
-                                                    <div class="zr-nav-subtitle">Option 4</div>
+                                                <li class="nv-nav-item">
+                                                    <div class="nv-nav-subtitle">Option 4</div>
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <!--二级导航效果一-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
-                                        <i class="zricon-arrow-down"></i>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-home-empty"></i><span class="nv-nav-subset-title">Navigation 2</span>
+                                        <i class="nvicon-arrow-down"></i>
                                     </div>
                                     <!--一级菜单-->
-                                    <ul class="zr-nav-menu">
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 5</div>
+                                    <ul class="nv-nav-menu">
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 5</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 6</div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 6</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 7</div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 7</div>
                                         </li>
                                     </ul>
                                 </li>
                                 <!--一级菜单效果-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
-                                        <i class="zricon-arrow-down"></i>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-classify-empty"></i><span class="nv-nav-subset-title">Navigation 3</span>
+                                        <i class="nvicon-arrow-down"></i>
                                     </div>
                                     <!--一级菜单-->
-                                    <ul class="zr-nav-menu">
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 8</div>
+                                    <ul class="nv-nav-menu">
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 8</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 9</div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 9</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 10</div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 10</div>
                                         </li>
                                     </ul>
                                 </li>
                                 <!--一级菜单效果-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-heart-empty"></i><span class="nv-nav-subset-title">Option 11</span>
                                     </div>
                                 </li>
                                 <!--一级级菜单效果-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-star-empty"></i><span class="nv-nav-subset-title">Option 12</span>
                                     </div>
                                 </li>
                                 <!--没有子菜单效果-->
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <i class="nvicon-seting-empty"></i><span class="nv-nav-subset-title">Option 13</span>
                                     </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="zr-layout-content zr-layout-space">
-                        <div class="zr-breadcrumb">
-                            <span><em>Home</em><i class="zricon-arrow-right"></i></span>
-                            <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
-                            <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+                    <div class="nv-layout-content nv-layout-space">
+                        <div class="nv-breadcrumb">
+                            <span><em>Home</em><i class="nvicon-arrow-right"></i></span>
+                            <span><em><a href="">Page</a></em><i class="nvicon-arrow-right"></i></span>
+                            <span><em><a href="">Subpage</a></em><i class="nvicon-arrow-right"></i></span>
                             <span><em>Other info</em></span>
                         </div>
                         <div style="min-height: 400px;background: #fff;padding: 24px;">
@@ -1128,160 +1129,160 @@
                         </div>
                     </div>
                 </div>
-                <div class="zr-layout-footer">
+                <div class="nv-layout-footer">
                 </div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-layout">
-        <div class="zr-layout-header zr-layout-header-theme-dark">
-            <div class="zr-row-flex">
-                <div class="zr-col-4">
-                    <div class="zr-layout-logo"></div>
+    <div class="nv-layout">
+        <div class="nv-layout-header nv-layout-header-theme-dark">
+            <div class="nv-row-flex">
+                <div class="nv-col-4">
+                    <div class="nv-layout-logo"></div>
                 </div>
-                <div class="zr-col-2 zr-layout-trigger" id="other_btn_2"><i class="zricon-menu-empty"></i></div>
-                <div class="zr-col-7">
-                    <ul class="zr-nav zr-nav-horizontal">
-                        <!--当前选中状态 添加zr-nav-selected-->
-                        <li class="zr-nav-item zr-nav-selected">Nav 1</li>
+                <div class="nv-col-2 nv-layout-trigger" id="other_btn_2"><i class="nvicon-menu-empty"></i></div>
+                <div class="nv-col-7">
+                    <ul class="nv-nav nv-nav-horizontal">
+                        <!--当前选中状态 添加nv-nav-selected-->
+                        <li class="nv-nav-item nv-nav-selected">Nav 1</li>
                         <!--有下拉菜单状态-->
-                        <li class="zr-nav-item">
-                            Nav 2 <i class="zricon-arrow-down"></i>
+                        <li class="nv-nav-item">
+                            Nav 2 <i class="nvicon-arrow-down"></i>
                             <!--一级菜单-->
-                            <ul class="zr-nav-menu">
-                                <li class="zr-nav-item">List 1</li>
-                                <li class="zr-nav-item">
-                                    List 2<i class="zricon-arrow-right"></i>
+                            <ul class="nv-nav-menu">
+                                <li class="nv-nav-item">List 1</li>
+                                <li class="nv-nav-item">
+                                    List 2<i class="nvicon-arrow-right"></i>
                                     <!--子集菜单-->
-                                    <ul class="zr-nav-leaves">
-                                        <li class="zr-nav-item">
+                                    <ul class="nv-nav-leaves">
+                                        <li class="nv-nav-item">
                                             <a href="#">Child 1 target blank</a>
                                         </li>
-                                        <li class="zr-nav-item"><a href="#">Child 2</a></li>
-                                        <li class="zr-nav-item"><a href="#">Child 3</a></li>
+                                        <li class="nv-nav-item"><a href="#">Child 2</a></li>
+                                        <li class="nv-nav-item"><a href="#">Child 3</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-                <div class="zr-col-6">
-                    <div class="zr-input-group zr-layout-search-group">
-                        <input type="text" placeholder="Please input text" class="zr-input">
-                        <span class="zr-input-addon">
-                                <i class="zricon-search-empty"></i>
+                <div class="nv-col-6">
+                    <div class="nv-input-group nv-layout-search-group">
+                        <input type="text" placeholder="Please input text" class="nv-input">
+                        <span class="nv-input-addon">
+                                <i class="nvicon-search-empty"></i>
                         </span>
                     </div>
                 </div>
-                <div class="zr-col-1">
+                <div class="nv-col-1">
                     <div class="mail" style="padding-left: 10px;">
-                        <i class="zricon-mail-empty"></i>
+                        <i class="nvicon-mail-empty"></i>
                     </div>
                 </div>
-                <div class="zr-col-4" style="text-align: center">
+                <div class="nv-col-4" style="text-align: center">
                     User Info
                 </div>
             </div>
         </div>
-        <div class="zr-layout zr-layout-has-side zr-layout-side-trigger zr-layout-theme-dark">
-            <div class="zr-layout-side">
-                <div class="zr-layout-side-children zr-nav-geekblue">
-                    <ul class="zr-nav zr-nav-shrink zr-nav-tree" trigger="other_btn_2" zr-event="click">
+        <div class="nv-layout nv-layout-has-side nv-layout-side-trigger nv-layout-theme-dark">
+            <div class="nv-layout-side">
+                <div class="nv-layout-side-children nv-nav-geekblue">
+                    <ul class="nv-nav nv-nav-shrink nv-nav-tree" trigger="other_btn_2" nv-event="click">
                         <!--二级导航效果一-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-doc-empty"></i><span class="zr-nav-subset-title">Navigation 1</span>
-                                <i class="zricon-arrow-down"></i>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-doc-empty"></i><span class="nv-nav-subset-title">Navigation 1</span>
+                                <i class="nvicon-arrow-down"></i>
                             </div>
                             <!--一级菜单-->
-                            <ul class="zr-nav-menu">
-                                <li class="zr-nav-item">
+                            <ul class="nv-nav-menu">
+                                <li class="nv-nav-item">
                                     <!--可以使用 <a> 标签-->
-                                    <a href="javascript:;" class="zr-nav-subtitle">Option 1</a>
+                                    <a href="javascript:;" class="nv-nav-subtitle">Option 1</a>
                                 </li>
-                                <li class="zr-nav-item">
+                                <li class="nv-nav-item">
                                     <!--可以使用 除<a> 标签之外的其它标签-->
-                                    <div class="zr-nav-subtitle">Option 2</div>
+                                    <div class="nv-nav-subtitle">Option 2</div>
                                 </li>
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">
-                                        <span class="zr-nav-subset-title">Submenu2</span><i class="zricon-arrow-down"></i></div>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">
+                                        <span class="nv-nav-subset-title">Submenu2</span><i class="nvicon-arrow-down"></i></div>
                                     <!--子集菜单-->
-                                    <ul class="zr-nav-leaves">
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 3</div>
+                                    <ul class="nv-nav-leaves">
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 3</div>
                                         </li>
-                                        <li class="zr-nav-item">
-                                            <div class="zr-nav-subtitle">Option 4</div>
+                                        <li class="nv-nav-item">
+                                            <div class="nv-nav-subtitle">Option 4</div>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
                         <!--二级导航效果一-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-home-empty"></i><span class="zr-nav-subset-title">Navigation 2</span>
-                                <i class="zricon-arrow-down"></i>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-home-empty"></i><span class="nv-nav-subset-title">Navigation 2</span>
+                                <i class="nvicon-arrow-down"></i>
                             </div>
                             <!--一级菜单-->
-                            <ul class="zr-nav-menu">
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 5</div>
+                            <ul class="nv-nav-menu">
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 5</div>
                                 </li>
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 6</div>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 6</div>
                                 </li>
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 7</div>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 7</div>
                                 </li>
                             </ul>
                         </li>
                         <!--一级菜单效果-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-classify-empty"></i><span class="zr-nav-subset-title">Navigation 3</span>
-                                <i class="zricon-arrow-down"></i>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-classify-empty"></i><span class="nv-nav-subset-title">Navigation 3</span>
+                                <i class="nvicon-arrow-down"></i>
                             </div>
                             <!--一级菜单-->
-                            <ul class="zr-nav-menu">
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 8</div>
+                            <ul class="nv-nav-menu">
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 8</div>
                                 </li>
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 9</div>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 9</div>
                                 </li>
-                                <li class="zr-nav-item">
-                                    <div class="zr-nav-subtitle">Option 10</div>
+                                <li class="nv-nav-item">
+                                    <div class="nv-nav-subtitle">Option 10</div>
                                 </li>
                             </ul>
                         </li>
                         <!--一级菜单效果-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-heart-empty"></i><span class="zr-nav-subset-title">Option 11</span>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-heart-empty"></i><span class="nv-nav-subset-title">Option 11</span>
                             </div>
                         </li>
                         <!--一级级菜单效果-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-star-empty"></i><span class="zr-nav-subset-title">Option 12</span>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-star-empty"></i><span class="nv-nav-subset-title">Option 12</span>
                             </div>
                         </li>
                         <!--没有子菜单效果-->
-                        <li class="zr-nav-item">
-                            <div class="zr-nav-subtitle">
-                                <i class="zricon-seting-empty"></i><span class="zr-nav-subset-title">Option 13</span>
+                        <li class="nv-nav-item">
+                            <div class="nv-nav-subtitle">
+                                <i class="nvicon-seting-empty"></i><span class="nv-nav-subset-title">Option 13</span>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="zr-layout-content zr-layout-space">
-                <div class="zr-breadcrumb">
-                    <span><em>Home</em><i class="zricon-arrow-right"></i></span>
-                    <span><em><a href="">Page</a></em><i class="zricon-arrow-right"></i></span>
-                    <span><em><a href="">Subpage</a></em><i class="zricon-arrow-right"></i></span>
+            <div class="nv-layout-content nv-layout-space">
+                <div class="nv-breadcrumb">
+                    <span><em>Home</em><i class="nvicon-arrow-right"></i></span>
+                    <span><em><a href="">Page</a></em><i class="nvicon-arrow-right"></i></span>
+                    <span><em><a href="">Subpage</a></em><i class="nvicon-arrow-right"></i></span>
                     <span><em>Other info</em></span>
                 </div>
                 <div style="min-height: 400px;background: #fff;padding: 24px;">
@@ -1289,11 +1290,11 @@
                 </div>
             </div>
         </div>
-        <div class="zr-layout-footer">
+        <div class="nv-layout-footer">
         </div>
     </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
 </article>
 

@@ -23,7 +23,7 @@
         .c-demo-w-640{
             width: 640px;
         }
-        .zr-alert{
+        .nv-alert{
             margin-bottom: 8px;
         }
 
@@ -32,14 +32,14 @@
     <!--注意此段js必须第一引入在开发模式下{-->
     <script type="text/javascript" src="js/alert.js"></script>
     <!--}-->
-    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript" src="/js/nv.min.js?1"></script>
     <script type="text/javascript">
-        Zr.config({
+        Nv.config({
             baseUrl:"/js/plugin_modules/",
             requestTime:true
         })
-        Zr.ready(function(){
-            Zr.use("./js/quickMenu","./js/code")
+        Nv.ready(function(){
+            Nv.use("./js/quickMenu","./js/code")
         })
     </script>
 </head>
@@ -48,7 +48,7 @@
 <article class="c-content">
     <section class="c-title">
         <p>常见组件列表</p>
-        <span>展示为市场上常用的组件，如果以下没有请自行参考"<a href="http://git.jd.com/Zr/demo">如何制作第三方组件</a>"来手动加入即可</span>
+        <span>展示为市场上常用的组件，如果以下没有请自行参考"<a href="http://git.jd.com/Nv/demo">如何制作第三方组件</a>"来手动加入即可</span>
     </section>
     <div class="c-line"></div>
     <section class="c-sub-title">
@@ -57,23 +57,23 @@
     <section class="c-code">
         <div class="c-code-inner">
     //可以直接使用
-    Zr.use("jquery");
+    Nv.use("jquery");
     //当然更多的是使用后注入到钩子中的业务逻辑
-    Zr.use("datatables",function(zr,Datatables){
+    Nv.use("datatables",function(nv,Datatables){
     //可以使用Datatables的所有功能了
     //即使Datatables依赖jquery也已经按照顺序加载完毕，无须重复加载
     //但是此钩子函数不能访问外部的作用域，即Datatables虽然依赖jquery，但是此处无法使用jquery的语法
     //所以如果想使用jquery，请在use的时候额外添加使用的第三方库的名称即可
     })
     //使用jquery的语法
-    Zr.use("jquery","datatables",function(zr,$,Datatables){
+    Nv.use("jquery","datatables",function(nv,$,Datatables){
     //这样就可以使用jquery的语法了，基本原则就是使用就要use这个已存在的第三方组件
     })
         </div>
     </section>
     <div class="c-block-20"></div>
     <section class="c-sub-title">
-        <p>Zr的常用外置组件 <a href="#">#</a></p>
+        <p>Nv的常用外置组件 <a href="#">#</a></p>
     </section>
     <div class="c-block-20"></div>
     <section class="c-table">
@@ -82,7 +82,7 @@
                 <thead>
                 <tr>
                     <th>
-                        <div class="c-cell c-table-w-125">Zr的use名称</div>
+                        <div class="c-cell c-table-w-125">Nv的use名称</div>
                     </th>
                     <th>
                         <div class="c-cell c-table-w-500">链接地址</div>
@@ -133,7 +133,7 @@
                 <thead>
                 <tr>
                     <th>
-                        <div class="c-cell c-table-w-125">Zr的use名称</div>
+                        <div class="c-cell c-table-w-125">Nv的use名称</div>
                     </th>
                     <th>
                         <div class="c-cell c-table-w-500">描述</div>
@@ -218,7 +218,7 @@
                 <thead>
                 <tr>
                     <th>
-                        <div class="c-cell c-table-w-125">Zr的use名称</div>
+                        <div class="c-cell c-table-w-125">Nv的use名称</div>
                     </th>
                     <th>
                         <div class="c-cell c-table-w-500">描述</div>
@@ -325,7 +325,7 @@
                 <thead>
                 <tr>
                     <th>
-                        <div class="c-cell c-table-w-125">Zr的use名称</div>
+                        <div class="c-cell c-table-w-125">Nv的use名称</div>
                     </th>
                     <th>
                         <div class="c-cell c-table-w-500">描述</div>

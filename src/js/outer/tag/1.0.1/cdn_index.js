@@ -1,4 +1,4 @@
-Nv.add("./tag/cdn_index", function (nv, $) {
+Nv.add("./tag/1.0.1/cdn_index", function (nv, $) {
     var _tag = {
         init: function () {
             $(document).on('click','.nv-tag-closable i',function(){
@@ -40,6 +40,6 @@ Nv.add("./tag/cdn_index", function (nv, $) {
             _tag.init();
         }
     }
-}, {requires: ["jquery","/tag/css/cdn_index.css"],alias:'tag'})
+}, {requires: ["jquery","./css/cdn_index.css"],alias:'tag'})
 
 

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css"/>
-    <script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style>
         .c-demo>div{
             margin-bottom: 17px;
@@ -14,13 +15,13 @@
         .c-demo > div:last-child{
             margin-bottom: 0;
         }
-        .zr-badge{
+        .nv-badge{
             margin-right: 34px;
         }
-        .zr-photo{
+        .nv-photo{
             margin-right: 24px;
         }
-        .zr-badge .zr-photo{
+        .nv-badge .nv-photo{
             margin-right: 0;
         }
     </style>
@@ -31,146 +32,146 @@
         <p>Photo 头像</p>
         <span>
             显示用户的头像，支持图片、图标和字符
-            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/photo.md"><b>API文档</b></a>
-            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/22"><b>组件问题反馈和讨论</b></a>
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/nv-source/blob/master/docs/inner/photo.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/nv-source/issues/22"><b>组件问题反馈和讨论</b></a>
         </span>
     </section>
     <div class="c-line"></div>
     <section class="c-sub-title">
         <p>基础样式 <a href="#">#</a></p>
-        <span>三种尺寸，两种形状<i class="c-block-inline">zr-photo</i>为默认样式，<i
-                class="c-block-inline">zr-photo-circle</i>为圆形样式，<i class="c-block-inline">zr-photo-lg</i>表示大图标，<i
-                class="c-block-inline">zr-photo-sm</i>表示小图标</span>
+        <span>三种尺寸，两种形状<i class="c-block-inline">nv-photo</i>为默认样式，<i
+                class="c-block-inline">nv-photo-circle</i>为圆形样式，<i class="c-block-inline">nv-photo-lg</i>表示大图标，<i
+                class="c-block-inline">nv-photo-sm</i>表示小图标</span>
     </section>
     <section class="c-code">
         <div class="c-demo">
             <div>
-                <span class="zr-photo  zr-photo-circle zr-photo-lg">
-                    <i class="zricon-user-empty"></i>
+                <span class="nv-photo  nv-photo-circle nv-photo-lg">
+                    <i class="nvicon-user-empty"></i>
                 </span>
-                <span class="zr-photo  zr-photo-circle">
-                    <i class="zricon-user-empty"></i>
+                <span class="nv-photo  nv-photo-circle">
+                    <i class="nvicon-user-empty"></i>
                 </span>
-                <span class="zr-photo  zr-photo-circle zr-photo-sm">
-                    <i class="zricon-user-empty"></i>
+                <span class="nv-photo  nv-photo-circle nv-photo-sm">
+                    <i class="nvicon-user-empty"></i>
                 </span>
             </div>
             <div>
-                <span class="zr-photo  zr-photo-lg">
-                    <i class="zricon-user-empty"></i>
+                <span class="nv-photo  nv-photo-lg">
+                    <i class="nvicon-user-empty"></i>
                 </span>
-                <span class="zr-photo">
-                    <i class="zricon-user-empty"></i>
+                <span class="nv-photo">
+                    <i class="nvicon-user-empty"></i>
                 </span>
-                <span class="zr-photo zr-photo-sm">
-                    <i class="zricon-user-empty"></i>
+                <span class="nv-photo nv-photo-sm">
+                    <i class="nvicon-user-empty"></i>
                 </span>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <span class="zr-photo  zr-photo-circle zr-photo-lg">
-        <i class="zricon-user-empty"></i>
+    <span class="nv-photo  nv-photo-circle nv-photo-lg">
+        <i class="nvicon-user-empty"></i>
     </span>
-            <span class="zr-photo  zr-photo-circle">
-        <i class="zricon-user-empty"></i>
+            <span class="nv-photo  nv-photo-circle">
+        <i class="nvicon-user-empty"></i>
     </span>
-            <span class="zr-photo  zr-photo-circle zr-photo-sm">
-        <i class="zricon-user-empty"></i>
+            <span class="nv-photo  nv-photo-circle nv-photo-sm">
+        <i class="nvicon-user-empty"></i>
     </span>
-            <span class="zr-photo  zr-photo-lg">
-        <i class="zricon-user-empty"></i>
+            <span class="nv-photo  nv-photo-lg">
+        <i class="nvicon-user-empty"></i>
     </span>
-            <span class="zr-photo">
-        <i class="zricon-user-empty"></i>
+            <span class="nv-photo">
+        <i class="nvicon-user-empty"></i>
     </span>
-            <span class="zr-photo zr-photo-sm">
-        <i class="zricon-user-empty"></i>
+            <span class="nv-photo nv-photo-sm">
+        <i class="nvicon-user-empty"></i>
     </span>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>多样式类型 <a href="#">#</a></p>
-        <span>基于基础样式之上，在<i class="c-block-inline">zr-photo</i>之后添加<i class="c-block-inline">zr-photo-db</i>属性则背景变为深蓝,
-        添加<i class="c-block-inline">zr-photo-wb</i>属性则背景变为浅蓝，添加<i class="c-block-inline">zr-photo-do</i>属性则背景变为深橘色，
-            添加<i class="c-block-inline">zr-photo-wo</i>属性则背景变为浅橘色
+        <span>基于基础样式之上，在<i class="c-block-inline">nv-photo</i>之后添加<i class="c-block-inline">nv-photo-db</i>属性则背景变为深蓝,
+        添加<i class="c-block-inline">nv-photo-wb</i>属性则背景变为浅蓝，添加<i class="c-block-inline">nv-photo-do</i>属性则背景变为深橘色，
+            添加<i class="c-block-inline">nv-photo-wo</i>属性则背景变为浅橘色
         </span>
     </section>
     <section class="c-code">
         <div class="c-demo">
             <div>
-                <span class="zr-photo  zr-photo-circle">
-                   <img src="//storage.jd.com/zrstatic/images/demo1.jpg" alt="">
+                <span class="nv-photo  nv-photo-circle">
+                   <img src="//storage.jd.com/nvstatic/images/demo1.jpg" alt="">
                 </span>
             </div>
             <div>
-                <span class="zr-photo  zr-photo-circle">
-                    <i class="zricon-user-empty"></i>
+                <span class="nv-photo  nv-photo-circle">
+                    <i class="nvicon-user-empty"></i>
                 </span>
-                <span class="zr-photo  zr-photo-circle  zr-photo-db">
-                    <i class="zricon-user-empty"></i>
+                <span class="nv-photo  nv-photo-circle  nv-photo-db">
+                    <i class="nvicon-user-empty"></i>
                 </span>
-                <span class="zr-photo  zr-photo-circle zr-photo-wb">
-                    <i class="zricon-user-empty"></i>
-                </span>
-            </div>
-            <div>
-                 <span class="zr-photo  zr-photo-circle">
-                    L
-                </span>
-                <span class="zr-photo  zr-photo-circle  zr-photo-do">
-                    L
-                </span>
-                <span class="zr-photo  zr-photo-circle zr-photo-wo">
-                    L
+                <span class="nv-photo  nv-photo-circle nv-photo-wb">
+                    <i class="nvicon-user-empty"></i>
                 </span>
             </div>
             <div>
-                 <span class="zr-photo  zr-photo-circle">
+                 <span class="nv-photo  nv-photo-circle">
+                    L
+                </span>
+                <span class="nv-photo  nv-photo-circle  nv-photo-do">
+                    L
+                </span>
+                <span class="nv-photo  nv-photo-circle nv-photo-wo">
+                    L
+                </span>
+            </div>
+            <div>
+                 <span class="nv-photo  nv-photo-circle">
                    Ran
                 </span>
-                <span class="zr-photo  zr-photo-circle  zr-photo-do">
+                <span class="nv-photo  nv-photo-circle  nv-photo-do">
                     Ran
                 </span>
-                <span class="zr-photo  zr-photo-circle zr-photo-wo">
+                <span class="nv-photo  nv-photo-circle nv-photo-wo">
                     Ran
                 </span>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-        <span class="zr-photo  zr-photo-circle">
+        <span class="nv-photo  nv-photo-circle">
            <img src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" alt="">
         </span>
-        <span class="zr-photo  zr-photo-circle">
-            <i class="zricon-user-empty"></i>
+        <span class="nv-photo  nv-photo-circle">
+            <i class="nvicon-user-empty"></i>
         </span>
-        <span class="zr-photo  zr-photo-circle  zr-photo-db">
-            <i class="zricon-user-empty"></i>
+        <span class="nv-photo  nv-photo-circle  nv-photo-db">
+            <i class="nvicon-user-empty"></i>
         </span>
-        <span class="zr-photo  zr-photo-circle zr-photo-wb">
-            <i class="zricon-user-empty"></i>
+        <span class="nv-photo  nv-photo-circle nv-photo-wb">
+            <i class="nvicon-user-empty"></i>
         </span>
-         <span class="zr-photo  zr-photo-circle">
+         <span class="nv-photo  nv-photo-circle">
             L
         </span>
-        <span class="zr-photo  zr-photo-circle  zr-photo-do">
+        <span class="nv-photo  nv-photo-circle  nv-photo-do">
             L
         </span>
-        <span class="zr-photo  zr-photo-circle zr-photo-wo">
+        <span class="nv-photo  nv-photo-circle nv-photo-wo">
             L
         </span>
-         <span class="zr-photo  zr-photo-circle">
+         <span class="nv-photo  nv-photo-circle">
            Ran
         </span>
-        <span class="zr-photo  zr-photo-circle  zr-photo-do">
+        <span class="nv-photo  nv-photo-circle  nv-photo-do">
             Ran
         </span>
-        <span class="zr-photo  zr-photo-circle zr-photo-wo">
+        <span class="nv-photo  nv-photo-circle nv-photo-wo">
             Ran
         </span>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -181,19 +182,19 @@
     <section class="c-code">
         <div class="c-demo">
             <div>
-                <span class="zr-photo zr-photo-circle zr-photo-db">
+                <span class="nv-photo nv-photo-circle nv-photo-db">
                     L
                 </span>
-                <button type="button" class="zr-btn zr-btn-default zr-btn-sm">change</button>
+                <button type="button" class="nv-btn nv-btn-default nv-btn-sm">change</button>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-            <span class="zr-photo zr-photo-circle zr-photo-db">
+            <span class="nv-photo nv-photo-circle nv-photo-db">
                 L
             </span>
-            <button type="button" class="zr-btn zr-btn-default zr-btn-sm">Change</button>
+            <button type="button" class="nv-btn nv-btn-default nv-btn-sm">Change</button>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -203,54 +204,54 @@
     <section class="c-code">
         <div class="c-demo">
             <div>
-                 <span class="zr-badge">
-                    <span class="zr-photo">
-                        <i class="zricon-user-empty"></i>
+                 <span class="nv-badge">
+                    <span class="nv-photo">
+                        <i class="nvicon-user-empty"></i>
                     </span>
-                     <span class="zr-badge-normal">
+                     <span class="nv-badge-normal">
                          9
                      </span>
                 </span>
-                <span class="zr-badge">
-                    <span class="zr-photo">
-                        <i class="zricon-user-empty"></i>
+                <span class="nv-badge">
+                    <span class="nv-photo">
+                        <i class="nvicon-user-empty"></i>
                     </span>
-                     <span class="zr-badge-pointer"></span>
+                     <span class="nv-badge-pointer"></span>
                 </span>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <span class="zr-badge">
-        <span class="zr-photo">
-            <i class="zricon-user-empty"></i>
+    <span class="nv-badge">
+        <span class="nv-photo">
+            <i class="nvicon-user-empty"></i>
         </span>
-         <span class="zr-badge-normal">
+         <span class="nv-badge-normal">
              9
          </span>
     </span>
-    <span class="zr-badge">
-        <span class="zr-photo">
-            <i class="zricon-user-empty"></i>
+    <span class="nv-badge">
+        <span class="nv-photo">
+            <i class="nvicon-user-empty"></i>
         </span>
-         <span class="zr-badge-pointer"></span>
+         <span class="nv-badge-pointer"></span>
     </span>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
 </article>
 <script type="text/javascript">
-    Zr.config({
+    Nv.config({
         baseUrl: "/js/plugin_modules/",
         requestTime: true
     })
-    Zr.ready(function () {
-        Zr.use("./js/quickMenu", "./js/code","./jquery/", function (zr,a,b,$) {
-            $(".zr-btn").unbind("click").bind("click",function () {
+    Nv.ready(function () {
+        Nv.use("./js/quickMenu", "./js/code","./jquery/", function (nv,a,b,$) {
+            $(".nv-btn").unbind("click").bind("click",function () {
                 var $pho = $(this).prev();
-                if($pho.hasClass("zr-photo-do")){
-                    $pho.removeClass("zr-photo-do")
+                if($pho.hasClass("nv-photo-do")){
+                    $pho.removeClass("nv-photo-do")
                 }else {
-                    $pho.addClass("zr-photo-do")
+                    $pho.addClass("nv-photo-do")
                 }
             })
         })

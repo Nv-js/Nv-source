@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
-    <link type="text/css" rel="stylesheet" href="//storage.jd.com/0.0.1/zr/css/cdn_zr.min.css" />
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css"/>
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style>
-        .zr-tag,.zr-tag-normal,.zr-tag-closable{
+        .nv-tag,.nv-tag-normal,.nv-tag-closable{
             margin-right: 12px;
         }
     </style>
@@ -34,23 +35,23 @@
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <span class="zr-tag-normal">普通标签</span>
-            <span class="zr-tag-closable">
-                可删除标签 <i class="zricon-close"></i>
+            <span class="nv-tag-normal">普通标签</span>
+            <span class="nv-tag-closable">
+                可删除标签 <i class="nvicon-close"></i>
             </span>
         </div>
         <div class="c-code-inner c-code-hide">
-        <span class="zr-tag-normal">普通标签</span>
-        <span class="zr-tag-closable">
-            可删除标签 <i class="zricon-close"></i>
+        <span class="nv-tag-normal">普通标签</span>
+        <span class="nv-tag-closable">
+            可删除标签 <i class="nvicon-close"></i>
         </span>
         <!--javascript代码-->
-    Zr.use("tag",function(zr,tag){
-        //如果只是zr-tag-normal 普通标签，无需加载tag 组件。tag 组件用于可删除和可编辑的标签。
+    Nv.use("tag",function(nv,tag){
+        //如果只是nv-tag-normal 普通标签，无需加载tag 组件。tag 组件用于可删除和可编辑的标签。
         tag.init();
     })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -59,27 +60,27 @@
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <span class="zr-tag">
-                <span class="zr-tag-addable">
-                    <i class="zricon-add"></i> 可添加标签
+            <span class="nv-tag">
+                <span class="nv-tag-addable">
+                    <i class="nvicon-add"></i> 可添加标签
                 </span>
-                <input type="text" class="zr-tag-input"/>
+                <input type="text" class="nv-tag-input"/>
             </span>
         </div>
         <div class="c-code-inner c-code-hide">
-        <span class="zr-tag">
-            <span class="zr-tag-addable">
-                <i class="zricon-add"></i> 可添加标签
+        <span class="nv-tag">
+            <span class="nv-tag-addable">
+                <i class="nvicon-add"></i> 可添加标签
             </span>
-            <input type="text" class="zr-tag-input"/>
+            <input type="text" class="nv-tag-input"/>
         </span>
         <!--javascript代码-->
-    Zr.use("tag",function(zr,tag){
-        //如果只是zr-tag-normal 普通标签，无需加载tag 组件。tag 组件用于可删除和可编辑的标签。
+    Nv.use("tag",function(nv,tag){
+        //如果只是nv-tag-normal 普通标签，无需加载tag 组件。tag 组件用于可删除和可编辑的标签。
         tag.init();
     })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -88,36 +89,35 @@
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <span class="zr-tag-normal zr-tag-red">Tag red</span>
-            <span class="zr-tag-normal zr-tag-orange">Tag orange</span>
-            <span class="zr-tag-normal zr-tag-yellow">Tag yellow</span>
-            <span class="zr-tag-normal zr-tag-green">Tag green</span>
-            <span class="zr-tag-normal  zr-tag-cyan">Tag cyan</span>
-            <span class="zr-tag-normal zr-tag-geekblue">Tag geekblue</span>
-            <span class="zr-tag-normal  zr-tag-blue">Tag blue</span>
-            <span class="zr-tag-normal zr-tag-purple">Tag purple</span>
+            <span class="nv-tag-normal nv-tag-red">Tag red</span>
+            <span class="nv-tag-normal nv-tag-orange">Tag orange</span>
+            <span class="nv-tag-normal nv-tag-yellow">Tag yellow</span>
+            <span class="nv-tag-normal nv-tag-green">Tag green</span>
+            <span class="nv-tag-normal  nv-tag-cyan">Tag cyan</span>
+            <span class="nv-tag-normal nv-tag-geekblue">Tag geekblue</span>
+            <span class="nv-tag-normal  nv-tag-blue">Tag blue</span>
+            <span class="nv-tag-normal nv-tag-purple">Tag purple</span>
         </div>
         <div class="c-code-inner c-code-hide">
-        <span class="zr-tag-normal zr-tag-red">Tag red</span>
-        <span class="zr-tag-normal zr-tag-orange">Tag orange</span>
-        <span class="zr-tag-normal zr-tag-yellow">Tag yellow</span>
-        <span class="zr-tag-normal zr-tag-green">Tag green</span>
-        <span class="zr-tag-normal  zr-tag-cyan">Tag cyan</span>
-        <span class="zr-tag-normal zr-tag-geekblue">Tag geekblue</span>
-        <span class="zr-tag-normal  zr-tag-blue">Tag blue</span>
-        <span class="zr-tag-normal zr-tag-purple">Tag purple</span>
+        <span class="nv-tag-normal nv-tag-red">Tag red</span>
+        <span class="nv-tag-normal nv-tag-orange">Tag orange</span>
+        <span class="nv-tag-normal nv-tag-yellow">Tag yellow</span>
+        <span class="nv-tag-normal nv-tag-green">Tag green</span>
+        <span class="nv-tag-normal  nv-tag-cyan">Tag cyan</span>
+        <span class="nv-tag-normal nv-tag-geekblue">Tag geekblue</span>
+        <span class="nv-tag-normal  nv-tag-blue">Tag blue</span>
+        <span class="nv-tag-normal nv-tag-purple">Tag purple</span>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
 </article>
-<script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js"></script>
 <script type="text/javascript">
-    Zr.config({
+    Nv.config({
         baseUrl: "/js/plugin_modules/",
         requestTime: true
     })
-    Zr.ready(function () {
-        Zr.use("./js/quickMenu", "./js/code","./jquery/","./tag/", function (zr,a,b,$,tag) {
+    Nv.ready(function () {
+        Nv.use("tag", function (nv,tag) {
             tag.init();
         })
     })

@@ -741,6 +741,6 @@ Nv.add("./tabs/1.0.1/cdn_index",function(nv,$){
         init:tabs.init
     }
 },{
-    requires:["jquery","/tabs/css/cdn_index.css"],
+    requires:["jquery","./css/cdn_index.css"],
     alias:'tab'
 })

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1"/>
-    <link type="text/css" rel="stylesheet" href="//storage.jd.com/1.0.9/zr/css/cdn_zr.min.css">
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style>
         th, td {
             white-space: nowrap;
@@ -15,19 +16,19 @@
             margin: 0 auto;
         }
 
-        .zr-page {
+        .nv-page {
             text-align: right;
             margin-top: 16px;
         }
 
-        .zr-page a {
+        .nv-page a {
             vertical-align: top;
         }
 
         .c-demo .c-table-w-125 {
             width: 170px;
         }
-        .c-demo .zr-checkbox-module {
+        .c-demo .nv-checkbox-module {
             margin-right: 0;
         }
         .c-demo .dataTables_paginate{
@@ -41,8 +42,8 @@
         <p>Table 表格</p>
         <span>
             展示大量结构化数据，可以对这些数据进行排序、搜索、分页、自定义等操作
-            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/table.md"><b>API文档</b></a>
-            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/19"><b>组件问题反馈和讨论</b></a>
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/nv-source/blob/master/docs/inner/table.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/nv-source/issues/19"><b>组件问题反馈和讨论</b></a>
         </span>
     </section>
     <div class="c-line"></div>
@@ -59,12 +60,12 @@
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>基础样式 <a href="#">#</a></p>
-        <span> <i class="c-block-inline">zr-table-wrap</i> 为最基础简单的表格样式，在 <i class="c-block-inline">th</i> 或者 <i
-                class="c-block-inline">td</i> 上添加 <i class="c-block-inline">zr-table-text-right</i> 样式属性表示文字右对齐。</span>
+        <span> <i class="c-block-inline">nv-table-wrap</i> 为最基础简单的表格样式，在 <i class="c-block-inline">th</i> 或者 <i
+                class="c-block-inline">td</i> 上添加 <i class="c-block-inline">nv-table-text-right</i> 样式属性表示文字右对齐。</span>
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <div class="zr-table-wrap">
+            <div class="nv-table-wrap">
                 <table>
                     <thead>
                         <tr>
@@ -72,7 +73,7 @@
                             <th>Name</th>
                             <th>Age</th>
                             <th>Country</th>
-                            <th class="zr-table-text-right c-table-w-125">Price</th>
+                            <th class="nv-table-text-right c-table-w-125">Price</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -82,7 +83,7 @@
                             <td>Otto Clay</td>
                             <td>23</td>
                             <td>China</td>
-                            <td class="zr-table-text-right">23.00</td>
+                            <td class="nv-table-text-right">23.00</td>
                             <td><a>Edit</a><a>Delete</a></td>
                         </tr>
                         <tr>
@@ -90,7 +91,7 @@
                             <td>Connor Johnston</td>
                             <td>31</td>
                             <td>Unit States</td>
-                            <td class="zr-table-text-right">9.00</td>
+                            <td class="nv-table-text-right">9.00</td>
                             <td><a>Edit</a><a>Delete</a></td>
                         </tr>
                         <tr>
@@ -98,7 +99,7 @@
                             <td>Timothy Henson</td>
                             <td>65</td>
                             <td>Unit States</td>
-                            <td class="zr-table-text-right">100.00</td>
+                            <td class="nv-table-text-right">100.00</td>
                             <td><a>Edit</a><a>Delete</a></td>
                         </tr>
                     </tbody>
@@ -106,7 +107,7 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-table-wrap">
+    <div class="nv-table-wrap">
         <table>
         <thead>
         <tr>
@@ -114,7 +115,7 @@
             <th>Name</th>
             <th>Age</th>
             <th>Country</th>
-            <th class="zr-table-text-right">Price</th>
+            <th class="nv-table-text-right">Price</th>
             <th>Action</th>
         </tr>
         </thead>
@@ -124,7 +125,7 @@
             <td>Otto Clay</td>
             <td>23</td>
             <td>China</td>
-            <td class="zr-table-text-right">23.00</td>
+            <td class="nv-table-text-right">23.00</td>
             <td><a>Edit</a><a>Delete</a></td>
         </tr>
         <tr>
@@ -132,7 +133,7 @@
             <td>Connor Johnston</td>
             <td>31</td>
             <td>Unit States</td>
-            <td class="zr-table-text-right">9.00</td>
+            <td class="nv-table-text-right">9.00</td>
             <td><a>Edit</a><a>Delete</a></td>
         </tr>
         <tr>
@@ -140,71 +141,71 @@
             <td>Timothy Henson</td>
             <td>65</td>
             <td>Unit States</td>
-            <td class="zr-table-text-right">100.00</td>
+            <td class="nv-table-text-right">100.00</td>
             <td><a>Edit</a><a>Delete</a></td>
         </tr>
         </tbody>
 </table>
     </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>批量操作 <a href="#">#</a></p>
-        <span>用户可以进行批量操作，在 <i class="c-block-inline">zr-table-wrap</i> 后面添加 <i class="c-block-inline">zr-table-checkbox</i> 属性，首列添加 <i
+        <span>用户可以进行批量操作，在 <i class="c-block-inline">nv-table-wrap</i> 后面添加 <i class="c-block-inline">nv-table-checkbox</i> 属性，首列添加 <i
                 class="c-block-inline">Checkbox</i> 对应组件模块，<i class="c-block-inline">Checkbox</i> 使用详情见 <a
                 href="/docs?languageCode=CN&columnUid=40ad19be535e477596a033f9fea2bf7d&directoryUid=0a2ca6c293974779b65e9b9f6c35b962&directoryName=Checkbox%20复选框">Checkbox 复选框</a></span>
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <div class="zr-table-wrap zr-table-checkbox">
+            <div class="nv-table-wrap nv-table-checkbox">
                 <table>
                     <thead>
                     <tr>
                         <th>
-                            <input type="checkbox" name="" value="0" class="zr-checkbox">
+                            <input type="checkbox" name="" value="0" class="nv-checkbox">
                         </th>
                         <th>ID</th>
                         <th>Name</th>
                         <th>Age</th>
                         <th>Country</th>
-                        <th class="zr-table-text-right c-table-w-125">Price</th>
+                        <th class="nv-table-text-right c-table-w-125">Price</th>
                         <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td>
-                            <input type="checkbox" name="" value="0" class="zr-checkbox">
+                            <input type="checkbox" name="" value="0" class="nv-checkbox">
                         </td>
                         <td>001</td>
                         <td>Otto Clay</td>
                         <td>23</td>
                         <td>China</td>
-                        <td class="zr-table-text-right">23.00</td>
+                        <td class="nv-table-text-right">23.00</td>
                         <td><a>Edit</a><a>Delete</a></td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="checkbox" name="" value="0" class="zr-checkbox">
+                            <input type="checkbox" name="" value="0" class="nv-checkbox">
                         </td>
                         <td>002</td>
                         <td>Connor Johnston</td>
                         <td>31</td>
                         <td>Unit States</td>
-                        <td class="zr-table-text-right">9.00</td>
+                        <td class="nv-table-text-right">9.00</td>
                         <td><a>Edit</a><a>Delete</a></td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="checkbox" name="" value="0" class="zr-checkbox">
+                            <input type="checkbox" name="" value="0" class="nv-checkbox">
                         </td>
                         <td>003</td>
                         <td>Alexander</td>
                         <td>42</td>
                         <td>Unit States</td>
-                        <td class="zr-table-text-right">100.00</td>
+                        <td class="nv-table-text-right">100.00</td>
                         <td><a>Edit</a><a>Delete</a></td>
                     </tr>
                     </tbody>
@@ -212,60 +213,60 @@
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-table-wrap zr-table-checkbox">
+    <div class="nv-table-wrap nv-table-checkbox">
         <table>
             <thead>
             <tr>
                 <th>
-                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" class="nv-checkbox">
                 </th>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Country</th>
-                <th class="zr-table-text-right c-table-w-125">Price</th>
+                <th class="nv-table-text-right c-table-w-125">Price</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>
-                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" class="nv-checkbox">
                 </td>
                 <td>001</td>
                 <td>Otto Clay</td>
                 <td>23</td>
                 <td>China</td>
-                <td class="zr-table-text-right">23.00</td>
+                <td class="nv-table-text-right">23.00</td>
                 <td><a>Edit</a><a>Delete</a></td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" class="nv-checkbox">
                 </td>
                 <td>002</td>
                 <td>Connor Johnston</td>
                 <td>31</td>
                 <td>Unit States</td>
-                <td class="zr-table-text-right">9.00</td>
+                <td class="nv-table-text-right">9.00</td>
                 <td><a>Edit</a><a>Delete</a></td>
             </tr>
             <tr>
                 <td>
-                    <input type="checkbox" name="" value="0" class="zr-checkbox">
+                    <input type="checkbox" name="" value="0" class="nv-checkbox">
                 </td>
                 <td>003</td>
                 <td>Alexander</td>
                 <td>42</td>
                 <td>Unit States</td>
-                <td class="zr-table-text-right">100.00</td>
+                <td class="nv-table-text-right">100.00</td>
                 <td><a>Edit</a><a>Delete</a></td>
             </tr>
             </tbody>
         </table>
     </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -274,7 +275,7 @@
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <div class="zr-table-wrap zr-table-wrap-border zr-table-normal">
+            <div class="nv-table-wrap nv-table-wrap-border nv-table-normal">
                 <table id="example">
                     <thead>
                         <tr>
@@ -369,7 +370,7 @@
         </div>
         <div class="c-code-inner c-code-hide">
     <!--html代码-->
-    <div class="zr-table-wrap zr-table-wrap-border">
+    <div class="nv-table-wrap nv-table-wrap-border">
         <table id="example">
             <thead>
                 <tr>
@@ -462,8 +463,8 @@
         </table>
     </div>
     <!--javascript代码-->
-    Zr.ready(function(){
-        Zr.use("jquery", "./dataTables/fixedColumns",function ($,DataTable) {
+    Nv.ready(function(){
+        Nv.use("jquery", "./dataTables/fixedColumns",function ($,DataTable) {
             var table = $('#example').DataTable({
                 scrollY: "150px",
                 scrollCollapse: true,
@@ -471,8 +472,8 @@
                 bLengthChange:false,
                 oLanguage:{
                     oPaginate:{
-                        "sPrevious": "<i class='zricon-arrow-left'></i>",
-                        "sNext": "<i class='zricon-arrow-right'></i>",
+                        "sPrevious": "<i class='nvicon-arrow-left'></i>",
+                        "sNext": "<i class='nvicon-arrow-right'></i>",
                     }
                 },
                 columnDefs:[{
@@ -483,7 +484,7 @@
         }
     })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -492,7 +493,7 @@
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <div class="zr-table-wrap zr-table-wrap-border">
+            <div class="nv-table-wrap nv-table-wrap-border">
                 <table id="example1">
                     <thead>
                         <tr>
@@ -594,7 +595,7 @@
         </div>
         <div class="c-code-inner c-code-hide">
     <!--html代码-->
-    <div class="zr-table-wrap zr-table-wrap-border">
+    <div class="nv-table-wrap nv-table-wrap-border">
         <table id="example1">
             <thead>
             <tr>
@@ -694,8 +695,8 @@
         </table>
     </div>
     <!--javascript代码-->
-    Zr.ready(function(){
-        Zr.use("jquery", "./dataTables/fixedColumns",function ($,DataTable) {
+    Nv.ready(function(){
+        Nv.use("jquery", "./dataTables/fixedColumns",function ($,DataTable) {
             var table = $('#example').DataTable({
                 scrollX: true,
                 scrollCollapse: true,
@@ -707,8 +708,8 @@
                 },
                 oLanguage:{
                     oPaginate:{
-                        "sPrevious": "<i class='zricon-arrow-left'></i>",
-                        "sNext": "<i class='zricon-arrow-right'></i>",
+                        "sPrevious": "<i class='nvicon-arrow-left'></i>",
+                        "sNext": "<i class='nvicon-arrow-right'></i>",
                     }
                 },
                 columnDefs:[{
@@ -719,7 +720,7 @@
         })
     })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -731,7 +732,7 @@
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <div class="zr-table-wrap zr-table-wrap-border">
+            <div class="nv-table-wrap nv-table-wrap-border">
                 <table id="example2">
                     <thead>
                     <tr>
@@ -833,7 +834,7 @@
         </div>
         <div class="c-code-inner c-code-hide">
     <!--html代码-->
-    <div class="zr-table-wrap zr-table-wrap-border">
+    <div class="nv-table-wrap nv-table-wrap-border">
         <table id="example2">
             <thead>
                 <tr>
@@ -933,8 +934,8 @@
         </table>
     </div>
     <!--javascript代码-->
-    Zr.ready(function(){
-        Zr.use("jquery", "./dataTables/fixedColumns",function ($,DataTable) {
+    Nv.ready(function(){
+        Nv.use("jquery", "./dataTables/fixedColumns",function ($,DataTable) {
             var table = $('#example2').DataTable({
                 scrollY: "150px",
                 scrollX: true,
@@ -947,8 +948,8 @@
                     },
                 oLanguage:{
                     oPaginate:{
-                        "sPrevious": "<i class='zricon-arrow-left'></i>",
-                        "sNext": "<i class='zricon-arrow-right'></i>",
+                        "sPrevious": "<i class='nvicon-arrow-left'></i>",
+                        "sNext": "<i class='nvicon-arrow-right'></i>",
                     }
                 },
                 columnDefs:[{
@@ -959,18 +960,18 @@
         })
     })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
 </article>
-<!--<script type="text/javascript" src="//storage.jd.com/0.0.1/zr.min.js"></script>-->
-<script type="text/javascript" src="/js/zr.js?1"></script>
+<!--<script type="text/javascript" src="//storage.jd.com/0.0.1/nv.min.js"></script>-->
+<script type="text/javascript" src="/js/nv.js?1"></script>
 <script type="text/javascript">
-    Zr.config({
+    Nv.config({
         baseUrl: "/js/plugin_modules/",
         requestTime: true
     })
-    Zr.ready(function () {
-        Zr.use("./js/quickMenu", "./js/code", "jquery", "./dataTables/fixedColumns", "./zrModules/page", function (zr, quickMenu, code, $, DataTable, page) {
+    Nv.ready(function () {
+        Nv.use("./js/quickMenu", "./js/code", "jquery", "./dataTables/fixedColumns", "./nvModules/page", function (nv, quickMenu, code, $, DataTable, page) {
             var table = $('#example').DataTable({
                 scrollY: "150px",
                 scrollCollapse: true,
@@ -978,8 +979,8 @@
                 bLengthChange:false,
                 oLanguage:{
                     oPaginate:{
-                        "sPrevious": "<i class='zricon-arrow-left'></i>",
-                        "sNext": "<i class='zricon-arrow-right'></i>"
+                        "sPrevious": "<i class='nvicon-arrow-left'></i>",
+                        "sNext": "<i class='nvicon-arrow-right'></i>"
                     }
                 },
                 columnDefs:[{
@@ -998,8 +999,8 @@
                 },
                 oLanguage:{
                     oPaginate:{
-                        "sPrevious": "<i class='zricon-arrow-left'></i>",
-                        "sNext": "<i class='zricon-arrow-right'></i>"
+                        "sPrevious": "<i class='nvicon-arrow-left'></i>",
+                        "sNext": "<i class='nvicon-arrow-right'></i>"
                     }
                 },
                 columnDefs:[{
@@ -1019,8 +1020,8 @@
                 },
                 oLanguage:{
                     oPaginate:{
-                        "sPrevious": "<i class='zricon-arrow-left'></i>",
-                        "sNext": "<i class='zricon-arrow-right'></i>"
+                        "sPrevious": "<i class='nvicon-arrow-left'></i>",
+                        "sNext": "<i class='nvicon-arrow-right'></i>"
                     }
                 },
                 columnDefs:[{

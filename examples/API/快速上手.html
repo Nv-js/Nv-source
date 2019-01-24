@@ -6,14 +6,14 @@
     <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?11" />
     <!--注意此段js必须第一引入在开发模式下{-->
     <!--}-->
-    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript" src="/js/nv.min.js?1"></script>
     <script type="text/javascript">
-        Zr.config({
+        Nv.config({
             baseUrl:"/js/plugin_modules/",
             requestTime:true
         })
-        Zr.ready(function(){
-            Zr.use("./js/quickMenu","./js/code")
+        Nv.ready(function(){
+            Nv.use("./js/quickMenu","./js/code")
         })
     </script>
 </head>
@@ -30,17 +30,17 @@
         <p>准备工作 <a href="#">#</a></p>
     </section>
     <div class="c-block-20"></div>
-    <span class="c-title-3">第一步，引入CSS方式：直接引入<b>"//storage.jd.com/1.3.3/zr/css/cdn_zr.min.css"的样式文件</b></span>
+    <span class="c-title-3">第一步，引入CSS方式：直接引入<b>"//storage.jd.com/1.3.3/nv/css/cdn_nv.min.css"的样式文件</b></span>
     <div class="c-block-5"></div>
-    <span class="c-title-3">@注意：如果引入后字体图标不能正常显示，或者字体图标报错为跨域限制，请参考更改<a href="https://github.com/fontello/fontello/wiki/How-to-setup-server-to-serve-fonts" target="_blank">服务端设置</a>，或者下载css资源包放到本地运行，<a href="//storage.jd.com/1.3.3/zrstyles.zip" target="_blank">css下载</a></b></span>
+    <span class="c-title-3">@注意：如果引入后字体图标不能正常显示，或者字体图标报错为跨域限制，请参考更改<a href="https://github.com/fontello/fontello/wiki/How-to-setup-server-to-serve-fonts" target="_blank">服务端设置</a>，或者下载css资源包放到本地运行，<a href="//storage.jd.com/1.3.3/nvstyles.zip" target="_blank">css下载</a></b></span>
     <div class="c-block-5"></div>
-    <span class="c-title-3">第二步，页面适当位置引入，建议放到body节点之前，引入方式：直接引入<b>"//storage.jd.com/1.3.3/zr.min.js"的脚本文件</b></span>
+    <span class="c-title-3">第二步，页面适当位置引入，建议放到body节点之前，引入方式：直接引入<b>"//storage.jd.com/1.3.3/nv.min.js"的脚本文件</b></span>
     <div class="c-block-5"></div>
     <span class="c-title-3">还有另外一种通过CDN引入</span>
     <div class="c-block-5"></div>
-    <span class="c-title-3">"//storage.360buyimg.com/1.3.3/zr/css/cdn_zr.min.css"</span>
+    <span class="c-title-3">"//storage.360buyimg.com/1.3.3/nv/css/cdn_nv.min.css"</span>
     <div class="c-block-5"></div>
-    <span class="c-title-3">"//storage.360buyimg.com/1.3.3/zr.min.js"</span>
+    <span class="c-title-3">"//storage.360buyimg.com/1.3.3/nv.min.js"</span>
     <div class="c-block-5"></div>
     <span class="c-title-3"><b>CDN引入建议使用HTTPS方式，防止某些区域HTTP被挟持</b></span>
     <div class="c-block-5"></div>
@@ -51,16 +51,16 @@
         <div class="c-code-inner" style="border-top:0;">
             &lt;script type="text/javascript"&gt;
             //配置方法
-            Zr.config({
+            Nv.config({
                 //配置plugin_modules的目录；
                 baseUrl:"/js/plugin_modules/",
                 //开发模式，默认关闭；
                 requestTime:true
             })
-            //初始入口，Zr各个模块准备就绪后调用；
-            Zr.ready(function(){
+            //初始入口，Nv各个模块准备就绪后调用；
+            Nv.ready(function(){
                 //使用相应的模块；
-                Zr.use("jquery","./js/code",function(zr,$,code){
+                Nv.use("jquery","./js/code",function(nv,$,code){
                     //自动注入了jquery组件；
                     //自动注入了./js/code组件；
                 })
@@ -74,12 +74,12 @@
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>简要说明 <a href="#">#</a></p>
-        <span class="c-title-3">总体来说，Zr采用的是异步加载策略，当需要使用的时候才加载。下面来详细讲解常用方法 <i class="c-block-inline">Zr.use</i> 和 <i class="c-block-inline">Zr.add</i> 以及其他工具类方法</span>
+        <span class="c-title-3">总体来说，Nv采用的是异步加载策略，当需要使用的时候才加载。下面来详细讲解常用方法 <i class="c-block-inline">Nv.use</i> 和 <i class="c-block-inline">Nv.add</i> 以及其他工具类方法</span>
     </section>
     <div class="c-options-title">Method</div>
     <section class="c-sub-title">
-        <p>Zr.use <a href="#">#</a></p>
-        <span class="c-title-3">语法：Zr.use(param1,param2,[...],callback)</span>
+        <p>Nv.use <a href="#">#</a></p>
+        <span class="c-title-3">语法：Nv.use(param1,param2,[...],callback)</span>
     </section>
     <div class="c-block-20"></div>
     <section class="c-table">
@@ -111,7 +111,7 @@
                         <div class="c-cell c-table-w-150">String（必填）</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-700">入参参数，用逗号间隔，可以使用配置的别名与Zr.add(name,...)中的name名称即可</div>
+                        <div class="c-cell c-table-w-700">入参参数，用逗号间隔，可以使用配置的别名与Nv.add(name,...)中的name名称即可</div>
                     </td>
                 </tr>
                 <tr>
@@ -123,10 +123,10 @@
                     </td>
                     <td rowspan="3">
                         <div class="c-cell c-table-w-700">
-                            回调函数，e.g : [function(zr,callback1,callback2,[...])]
+                            回调函数，e.g : [function(nv,callback1,callback2,[...])]
                         </div>
                         <div class="c-cell c-table-w-700">
-                            1.回调函数第一参数为zr组件生态环境引用，可以直接访问属性并修改，请注意修改时候注意不要引起变量泛滥。
+                            1.回调函数第一参数为nv组件生态环境引用，可以直接访问属性并修改，请注意修改时候注意不要引起变量泛滥。
                         </div>
                         <div class="c-cell c-table-w-700">
                             2.callback1,callback2,[...]分别对应param1,param2,[...]返回的内容
@@ -146,7 +146,7 @@
     <section class="c-code" style="max-width: 1098px">
         <!--switch code show or hide-->
         <div class="c-code-inner c-code-hide">
-            Zr.use("jquery","page","./timer/theme.js",function(zr,$,page,theme)
+            Nv.use("jquery","page","./timer/theme.js",function(nv,$,page,theme)
             //todo something；
             $(function(){
             page.init({
@@ -156,12 +156,12 @@
             })
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
-        <p>Zr.add <a href="#">#</a></p>
-        <span class="c-title-3">语法：Zr.add(name,callback,options)</span>
+        <p>Nv.add <a href="#">#</a></p>
+        <span class="c-title-3">语法：Nv.add(name,callback,options)</span>
     </section>
     <div class="c-block-20"></div>
     <section class="c-table">
@@ -210,7 +210,7 @@
                     </td>
                     <td rowspan="3">
                         <div class="c-cell c-table-w-700">
-                            回调函数，第一个参数为zr的全局引用，之后的参数分别对应引用配置
+                            回调函数，第一个参数为nv的全局引用，之后的参数分别对应引用配置
                         </div>
                     </td>
                 </tr>
@@ -227,10 +227,10 @@
                     </td>
                     <td rowspan="3">
                         <div class="c-cell c-table-w-700">
-                            回调函数，e.g : [function(zr,callback1,callback2,[...])]
+                            回调函数，e.g : [function(nv,callback1,callback2,[...])]
                         </div>
                         <div class="c-cell c-table-w-700">
-                            1.回调函数第一参数为zr组件生态环境引用，可以直接访问属性并修改，请注意修改时候注意不要引起变量泛滥。
+                            1.回调函数第一参数为nv组件生态环境引用，可以直接访问属性并修改，请注意修改时候注意不要引起变量泛滥。
                         </div>
                         <div class="c-cell c-table-w-700">
                             2.callback1,callback2,[...]分别对应param1,param2,[...]返回的内容
@@ -249,54 +249,54 @@
     <section class="c-code" style="max-width: 1098px">
         <!--switch code show or hide-->
         <div class="c-code-inner c-code-hide">
-            //根据依赖，第一个参数永远为zr，之后都是根据依赖顺序注入；
-            Zr.add("./mobile/",function(zr,jquery,theme){
+            //根据依赖，第一个参数永远为nv，之后都是根据依赖顺序注入；
+            Nv.add("./mobile/",function(nv,jquery,theme){
             //todo something；
             },{
             //属性配置，依赖哪些模块；
             requires:["jquery","/map/theme"]
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
-        <p>Zr.document <a href="#">#</a></p>
-        <span class="c-title-3">语法：Zr.document，保证全局统一指向同一个document对象</span>
+        <p>Nv.document <a href="#">#</a></p>
+        <span class="c-title-3">语法：Nv.document，保证全局统一指向同一个document对象</span>
     </section>
     <div class="c-block-20"></div>
     <span class="c-title-3">Javascript:</span>
     <section class="c-code" style="max-width: 1098px">
         <!--switch code show or hide-->
         <div class="c-code-inner c-code-hide">
-            Zr.use("./mobile/",function(zr,mobile){
+            Nv.use("./mobile/",function(nv,mobile){
             //获取document对象
-            var doc = zr.document;
+            var doc = nv.document;
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
-        <p>Zr.window <a href="#">#</a></p>
-        <span class="c-title-3">语法：Zr.window，保证全局统一指向同一个window对象</span>
+        <p>Nv.window <a href="#">#</a></p>
+        <span class="c-title-3">语法：Nv.window，保证全局统一指向同一个window对象</span>
     </section>
     <div class="c-block-20"></div>
     <span class="c-title-3">Javascript:</span>
     <section class="c-code" style="max-width: 1098px">
         <!--switch code show or hide-->
         <div class="c-code-inner c-code-hide">
-            Zr.use("./mobile/",function(zr,mobile){
+            Nv.use("./mobile/",function(nv,mobile){
             //获取document对象
-            var window = zr.window;
+            var window = nv.window;
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
-        <p>Zr.config <a href="#">#</a></p>
-        <span class="c-title-3">语法：Zr.config(opt)，初始化配置方法,opt为初始化对象配置信息，为Object类型</span>
+        <p>Nv.config <a href="#">#</a></p>
+        <span class="c-title-3">语法：Nv.config(opt)，初始化配置方法,opt为初始化对象配置信息，为Object类型</span>
     </section>
     <div class="c-block-20"></div>
     <section class="c-table">
@@ -350,7 +350,7 @@
                         <div class="c-cell c-table-w-150">String（选填）</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-700">当前Zr的版本信息,目前最新版本0.0.1</div>
+                        <div class="c-cell c-table-w-700">当前Nv的版本信息,目前最新版本0.0.1</div>
                     </td>
                 </tr>
                 <tr>
@@ -373,7 +373,7 @@
                         <div class="c-cell c-table-w-150">String（选填）</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-700">用于更新线上环境所有Zr的异步组件当前版本信息，常用于发版清除缓存</div>
+                        <div class="c-cell c-table-w-700">用于更新线上环境所有Nv的异步组件当前版本信息，常用于发版清除缓存</div>
                     </td>
                 </tr>
                 <tr>
@@ -396,8 +396,8 @@
                     </td>
                     <td>
                         <div class="c-cell c-table-w-700" style="height:450px;">
-                            Zr.use使用时候对应的别名：name对应别名名称，value对应的别名相关配置<br/>
-                            Zr.config({<br/>
+                            Nv.use使用时候对应的别名：name对应别名名称，value对应的别名相关配置<br/>
+                            Nv.config({<br/>
                             "module":{<br/>
                             //模块别名名称<br/>
                             "jquery":{<br/>
@@ -425,7 +425,7 @@
     <section class="c-code" style="max-width: 1098px">
         <!--switch code show or hide-->
         <div class="c-code-inner c-code-hide">
-            Zr.config({
+            Nv.config({
             //根目录配置路径;
             "baseUrl":"/plugin_modules/",
             //文件请求是否添加后缀;
@@ -446,12 +446,12 @@
             }
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
-        <p>Zr.extend <a href="#">#</a></p>
-        <span class="c-title-3">语法：Zr.extend(boolean,object1,object2)，copy合并继承，不会影响原来对象，后者与前者某一个属性重复，后者则覆盖前者对象</span>
+        <p>Nv.extend <a href="#">#</a></p>
+        <span class="c-title-3">语法：Nv.extend(boolean,object1,object2)，copy合并继承，不会影响原来对象，后者与前者某一个属性重复，后者则覆盖前者对象</span>
     </section>
     <div class="c-block-20"></div>
     <section class="c-table">
@@ -534,7 +534,7 @@
             },
             c:2
             }
-            var opt = Zr.extend(defaults,options);
+            var opt = Nv.extend(defaults,options);
             console.log(opt);
             /**
             * 输出结果为
@@ -548,7 +548,7 @@
             * }
             *
             * */
-            opt = Zr.extend(true,defaults,options);
+            opt = Nv.extend(true,defaults,options);
             /**
             * 输出结果为
             * {
@@ -564,12 +564,12 @@
             *
             * */
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
-        <p>Zr.tools <a href="#">#</a></p>
-        <span class="c-title-3">语法：Zr.tools，对象Object类型，工具类，方便实用的小工具</span>
+        <p>Nv.tools <a href="#">#</a></p>
+        <span class="c-title-3">语法：Nv.tools，对象Object类型，工具类，方便实用的小工具</span>
     </section>
     <div class="c-block-20"></div>
     <section class="c-table">
@@ -710,7 +710,7 @@
                         <div class="c-cell c-table-w-300">isPlainObject(Object)</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-700">是否是Zr的对象</div>
+                        <div class="c-cell c-table-w-700">是否是Nv的对象</div>
                     </td>
                 </tr>
                 <tr>
@@ -924,8 +924,8 @@
     <section class="c-code" style="max-width: 1098px">
         <!--switch code show or hide-->
         <div class="c-code-inner c-code-hide">
-            Zr.use("jquery",function(zr,jquery){
-            var tools = zr.tools;
+            Nv.use("jquery",function(nv,jquery){
+            var tools = nv.tools;
             //公共方法如下；
             /**
             * {param} (func) [function] 被绑定的函数对象
@@ -948,7 +948,7 @@
             tools.each(object,callback)
             //判断参数一是否以参数二结尾。主要是针对文件路径的判断；
             tools.endWidth(str,suffix)
-            //同Zr.extend；
+            //同Nv.extend；
             tools.extend(boolean,object1,object2)
             //获取当前入参的路径别名；
             tools.extname(path)
@@ -1045,7 +1045,7 @@
             tools.transUrl(search)
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
 
 </article>

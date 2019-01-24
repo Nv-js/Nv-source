@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Tips</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1"/>
-    <link type="text/css" rel="stylesheet" href="/js/plugin_modules/zr/css/zr.min.css?1"/>
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style type="text/css">
-      .c-demo-btn .zr-btn {
+      .c-demo-btn .nv-btn {
           margin-right: 8px;
           vertical-align: bottom;
       }
@@ -14,21 +15,21 @@
             margin: 0 4px 8px 0;
             width: 78px;
         }
-        .c-demo .zr-tip-derection-top {
+        .c-demo .nv-tip-derection-top {
             margin-left: 226px;
             white-space: nowrap;
             margin-top: 8px;
         }
-        .c-demo .zr-tip-derection-left {
+        .c-demo .nv-tip-derection-left {
             width: 70px;
             float: left;
             margin-left: 137px;
         }
-        .c-demo .zr-tip-derection-right {
+        .c-demo .nv-tip-derection-right {
             width: 70px;
             margin-left: 488px;
         }
-        .c-demo .zr-tip-derection-bottom {
+        .c-demo .nv-tip-derection-bottom {
             margin-left: 226px;
             clear: both;
             white-space: nowrap;
@@ -36,14 +37,14 @@
     </style>
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/javascript" src="/frontPage/js/tip.js?1"></script>
-    <script type="text/javascript" src="http://storage.jd.com/1.3.3/zr.dev.min.js"></script>
+    <script type="text/javascript" src="http://storage.jd.com/1.3.3/nv.dev.min.js"></script>
     <script type="text/javascript">
-        Zr.config({
+        Nv.config({
             baseUrl: "/js/plugin_modules/",
             requestTime: true
         })
-        Zr.ready(function () {
-            Zr.use("./js/quickMenu", "./js/code")
+        Nv.ready(function () {
+            Nv.use("./js/quickMenu", "./js/code")
         })
     </script>
 </head>
@@ -53,29 +54,29 @@
         <p>Tooltip 文字提示</p>
         <span>
             文字提示气泡框，当鼠标悬浮时出现
-            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/tooltip.md"><b>API文档</b></a>
-            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/23"><b>组件问题反馈和讨论</b></a>
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/nv-source/blob/master/docs/inner/tooltip.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/nv-source/issues/23"><b>组件问题反馈和讨论</b></a>
         </span>
     </section>
     <div class="c-line"></div>
     <section class="c-sub-title">
         <p>基本样式 <a href="#">#</a></p>
-        <span>最基本的用法，只要将想要提示的节点添加class样式"zr-tooltip",同时添加对应提示文本属性data-tip-text='Here is the content...'，即可展现默认形式</span>
+        <span>最基本的用法，只要将想要提示的节点添加class样式"nv-tooltip",同时添加对应提示文本属性data-tip-text='Here is the content...'，即可展现默认形式</span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="zr-tip zr-tip-top" style="margin-left: 200px;">
-                <div class="zr-tip-inner">prompt text…</div>
-                <i class="zr-tip-arrow"></i>
+            <div class="nv-tip nv-tip-top" style="margin-left: 200px;">
+                <div class="nv-tip-inner">prompt text…</div>
+                <i class="nv-tip-arrow"></i>
             </div>
-            <p style="width:150px;" class="zr-tooltip" data-tip-text="Here is the content...">Mouseover Here...</p>
+            <p style="width:150px;" class="nv-tooltip" data-tip-text="Here is the content...">Mouseover Here...</p>
         </div>
         <div class="c-code-inner c-code-hide">
-    <p class="zr-tooltip" data-tip-text="Here is the content...">Mouseover Here...</p>
+    <p class="nv-tooltip" data-tip-text="Here is the content...">Mouseover Here...</p>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -86,44 +87,44 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="zr-tip-derection">
-                <div class="zr-tip-derection-top">
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position tl" data-tip-position="tl"><span>TL</span></button>
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position top"><span>Top</span></button>
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position tr" data-tip-position="tr"><span>TR</span></button>
+            <div class="nv-tip-derection">
+                <div class="nv-tip-derection-top">
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position tl" data-tip-position="tl"><span>TL</span></button>
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position top"><span>Top</span></button>
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position tr" data-tip-position="tr"><span>TR</span></button>
                 </div>
-                <div class="zr-tip-derection-left">
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position lt" data-tip-position="lt"><span>LT</span></button>
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position left" data-tip-position="left"><span>Left</span></button>
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position lb" data-tip-position="lb"><span>LB</span></button>
+                <div class="nv-tip-derection-left">
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position lt" data-tip-position="lt"><span>LT</span></button>
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position left" data-tip-position="left"><span>Left</span></button>
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position lb" data-tip-position="lb"><span>LB</span></button>
                 </div>
-                <div class="zr-tip-derection-right">
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position rt" data-tip-position="rt"><span>RT</span></button>
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position right" data-tip-position="right"><span>Right</span></button>
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position rb" data-tip-position="rb"><span>RB</span></button>
+                <div class="nv-tip-derection-right">
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position rt" data-tip-position="rt"><span>RT</span></button>
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position right" data-tip-position="right"><span>Right</span></button>
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position rb" data-tip-position="rb"><span>RB</span></button>
                 </div>
-                <div class="zr-tip-derection-bottom">
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position bl" data-tip-position="bl"><span>BL</span></button>
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position bottom" data-tip-position="bottom"><span>Bottom</span></button>
-                    <button type="button" class="zr-btn zr-btn-default zr-tooltip" data-tip-text="tip position br" data-tip-position="br"><span>BR</span></button>
+                <div class="nv-tip-derection-bottom">
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position bl" data-tip-position="bl"><span>BL</span></button>
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position bottom" data-tip-position="bottom"><span>Bottom</span></button>
+                    <button type="button" class="nv-btn nv-btn-default nv-tooltip" data-tip-text="tip position br" data-tip-position="br"><span>BR</span></button>
                 </div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <button type="button" class="zr-tooltip" data-tip-text="tip position tl" data-ip-position="tl"><span>TL</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position top"><span>Top</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position tr" data-tip-position="tr"><span>TR</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position lt" data-tip-position="lt"><span>LT</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position left" data-tip-position="left"><span>Left</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position lb" data-tip-position="lb"><span>LB</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position rt" data-tip-position="rt"><span>RT</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position right" data-tip-position="right"><span>Right</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position rb" data-tip-position="rb"><span>RB</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position bl" data-tip-position="bl"><span>BL</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position bottom" data-tip-position="bottom"><span>Bottom</span></button>
-    <button type="button" class="zr-tooltip" data-tip-text="tip position br" data-tip-position="br"><span>BR</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position tl" data-ip-position="tl"><span>TL</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position top"><span>Top</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position tr" data-tip-position="tr"><span>TR</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position lt" data-tip-position="lt"><span>LT</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position left" data-tip-position="left"><span>Left</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position lb" data-tip-position="lb"><span>LB</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position rt" data-tip-position="rt"><span>RT</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position right" data-tip-position="right"><span>Right</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position rb" data-tip-position="rb"><span>RB</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position bl" data-tip-position="bl"><span>BL</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position bottom" data-tip-position="bottom"><span>Bottom</span></button>
+    <button type="button" class="nv-tooltip" data-tip-text="tip position br" data-tip-position="br"><span>BR</span></button>
             </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -134,12 +135,12 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <p style="width:480px;" class="zr-tooltip" data-tip-text="Here is the content...Here is the content...Here is the content...">Here is the content...Here is the content...Here is the content...</p>
+            <p style="width:480px;" class="nv-tooltip" data-tip-text="Here is the content...Here is the content...Here is the content...">Here is the content...Here is the content...Here is the content...</p>
         </div>
         <div class="c-code-inner c-code-hide">
-    <p style="width:480px;" class="zr-tooltip" data-tip-text="Here is the content...Here is the content...Here is the content...">Here is the content...Here is the content...Here is the content...</p>
+    <p style="width:480px;" class="nv-tooltip" data-tip-text="Here is the content...Here is the content...Here is the content...">Here is the content...Here is the content...Here is the content...</p>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -150,18 +151,18 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <p style="width:180px;" class="zr-tooltip" data-tip-event="click" data-tip-text="Click 事件名称，点击后生效">Click 事件名称，点击后生效</p>
+            <p style="width:180px;" class="nv-tooltip" data-tip-event="click" data-tip-text="Click 事件名称，点击后生效">Click 事件名称，点击后生效</p>
         </div>
         <div class="c-code-inner c-code-hide">
-            <p class="zr-tooltip" data-tip-event="click" data-tip-text="Click 事件名称，点击后生效">Click 事件名称，点击后生效</p>
+            <p class="nv-tooltip" data-tip-event="click" data-tip-text="Click 事件名称，点击后生效">Click 事件名称，点击后生效</p>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-20"></div>
     <section class="c-sub-title">
         <p>节点属性 <a href="#">#</a></p>
         <span>
-            如下属性生效，请现在对应的节点添加样式"zr-tooltip",同时在节点上添加如下属性即可
+            如下属性生效，请现在对应的节点添加样式"nv-tooltip",同时在节点上添加如下属性即可
         </span>
     </section>
     <div class="c-block-20"></div>

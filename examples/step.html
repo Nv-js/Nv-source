@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css"/>
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style>
         .c-demo-btn {
             margin-top: 24px;
         }
     </style>
-    <script type="text/javascript" src="/js/zr.min.js?1"></script>
+    <script type="text/javascript" src="/js/nv.min.js?1"></script>
     <script type="text/javascript">
-        Zr.config({
+        Nv.config({
             baseUrl: "/js/plugin_modules/",
             requestTime: true
         })
-        Zr.ready(function () {
-            Zr.use("./js/quickMenu", "./js/code")
+        Nv.ready(function () {
+            Nv.use("./js/quickMenu", "./js/code")
         })
     </script>
 </head>
@@ -26,8 +28,8 @@
         <p>Step 步骤条</p>
         <span>
             引导用户按照流程完成任务的分步导航条
-            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/step.md"><b>API文档</b></a>
-            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/9"><b>组件问题反馈和讨论</b></a>
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/nv-source/blob/master/docs/inner/step.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/nv-source/issues/9"><b>组件问题反馈和讨论</b></a>
         </span>
     </section>
     <div class="c-line"></div>
@@ -43,366 +45,366 @@
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>基础样式 <a href="#">#</a></p>
-        <span>最基础简单的步骤条,默认状态加  <i class="c-block-inline">zr-step-item</i>  即为初始状态，表示全未完成，  <i class="c-block-inline">zr-step-finish</i>  表示已经完成，  <i class="c-block-inline">zr-step-progress</i>  表示正在进行</span>
+        <span>最基础简单的步骤条,默认状态加  <i class="c-block-inline">nv-step-item</i>  即为初始状态，表示全未完成，  <i class="c-block-inline">nv-step-finish</i>  表示已经完成，  <i class="c-block-inline">nv-step-progress</i>  表示正在进行</span>
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <div class="zr-step">
-                <div class="zr-step-item zr-step-finish">
-                    <div class="zr-step-icon">
+            <div class="nv-step">
+                <div class="nv-step-item nv-step-finish">
+                    <div class="nv-step-icon">
                         <span>1</span>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Finished</div>
-                        <div class="zr-step-description">This is a description.</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Finished</div>
+                        <div class="nv-step-description">This is a description.</div>
                     </div>
                 </div>
-                <div class="zr-step-item zr-step-progress">
-                    <div class="zr-step-icon">
+                <div class="nv-step-item nv-step-progress">
+                    <div class="nv-step-icon">
                         <span>2</span>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">In Progress</div>
-                        <div class="zr-step-description">This is a description.</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">In Progress</div>
+                        <div class="nv-step-description">This is a description.</div>
                     </div>
                 </div>
-                <div class="zr-step-item">
-                    <div class="zr-step-icon">
+                <div class="nv-step-item">
+                    <div class="nv-step-icon">
                         <span>3</span>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Waiting</div>
-                        <div class="zr-step-description">This is a description.</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Waiting</div>
+                        <div class="nv-step-description">This is a description.</div>
                     </div>
                 </div>
             </div>
             <p class="c-demo-btn">
-                <button type="button" class="zr-btn zr-btn-default">Previous</button>　　
-                <button type="button" class="zr-btn zr-btn-primary">Next</button>
+                <button type="button" class="nv-btn nv-btn-default">Previous</button>　　
+                <button type="button" class="nv-btn nv-btn-primary">Next</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-step">
-        <div class="zr-step-item zr-step-finish">
-            <div class="zr-step-icon">
+    <div class="nv-step">
+        <div class="nv-step-item nv-step-finish">
+            <div class="nv-step-icon">
                 <span>1</span>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Finished</div>
-                <div class="zr-step-description">This is a description.</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Finished</div>
+                <div class="nv-step-description">This is a description.</div>
             </div>
         </div>
-        <div class="zr-step-item zr-step-progress">
-            <div class="zr-step-icon">
+        <div class="nv-step-item nv-step-progress">
+            <div class="nv-step-icon">
                 <span>2</span>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">In Progress</div>
-                <div class="zr-step-description">This is a description.</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">In Progress</div>
+                <div class="nv-step-description">This is a description.</div>
             </div>
         </div>
-        <div class="zr-step-item">
-            <div class="zr-step-icon">
+        <div class="nv-step-item">
+            <div class="nv-step-icon">
                 <span>3</span>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Waiting</div>
-                <div class="zr-step-description">This is a description.</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Waiting</div>
+                <div class="nv-step-description">This is a description.</div>
             </div>
         </div>
     </div>
     <p class="c-demo-btn">
-        <button type="button" class="zr-btn zr-btn-default">Previous</button>
-        <button type="button" class="zr-btn zr-btn-primary">Next</button>
+        <button type="button" class="nv-btn nv-btn-default">Previous</button>
+        <button type="button" class="nv-btn nv-btn-primary">Next</button>
     </p>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>纵向排版样式 <a href="#">#</a></p>
-        <span>基于基础样式之上，在  <i class="c-block-inline">zr-step</i>  后面加  <i class="c-block-inline">zr-step-vertical</i>  属性即可纵向显示步骤条</span>
+        <span>基于基础样式之上，在  <i class="c-block-inline">nv-step</i>  后面加  <i class="c-block-inline">nv-step-vertical</i>  属性即可纵向显示步骤条</span>
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <div class="zr-step zr-step-vertical">
-                <div class="zr-step-item zr-step-finish">
-                    <div class="zr-step-icon">
+            <div class="nv-step nv-step-vertical">
+                <div class="nv-step-item nv-step-finish">
+                    <div class="nv-step-icon">
                         <span>1</span>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Finished</div>
-                        <div class="zr-step-description">This is a description.</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Finished</div>
+                        <div class="nv-step-description">This is a description.</div>
                     </div>
                 </div>
-                <div class="zr-step-item zr-step-progress">
-                    <div class="zr-step-icon">
+                <div class="nv-step-item nv-step-progress">
+                    <div class="nv-step-icon">
                         <span>2</span>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">In Progress</div>
-                        <div class="zr-step-description">This is a description.</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">In Progress</div>
+                        <div class="nv-step-description">This is a description.</div>
                     </div>
                 </div>
-                <div class="zr-step-item">
-                    <div class="zr-step-icon">
+                <div class="nv-step-item">
+                    <div class="nv-step-icon">
                         <span>3</span>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Waiting</div>
-                        <div class="zr-step-description">This is a description.</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Waiting</div>
+                        <div class="nv-step-description">This is a description.</div>
                     </div>
                 </div>
             </div>
             <p class="c-demo-btn">
-                <button type="button" class="zr-btn zr-btn-primary">Next</button>
+                <button type="button" class="nv-btn nv-btn-primary">Next</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-step zr-step-vertical">
-        <div class="zr-step-item zr-step-finish">
-            <div class="zr-step-icon">
+    <div class="nv-step nv-step-vertical">
+        <div class="nv-step-item nv-step-finish">
+            <div class="nv-step-icon">
                 <span>1</span>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Finished</div>
-                <div class="zr-step-description">This is a description.</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Finished</div>
+                <div class="nv-step-description">This is a description.</div>
             </div>
         </div>
-        <div class="zr-step-item zr-step-progress">
-            <div class="zr-step-icon">
+        <div class="nv-step-item nv-step-progress">
+            <div class="nv-step-icon">
                 <span>2</span>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">In Progress</div>
-                <div class="zr-step-description">This is a description.</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">In Progress</div>
+                <div class="nv-step-description">This is a description.</div>
             </div>
         </div>
-        <div class="zr-step-item">
-            <div class="zr-step-icon">
+        <div class="nv-step-item">
+            <div class="nv-step-icon">
                 <span>3</span>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Waiting</div>
-                <div class="zr-step-description">This is a description.</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Waiting</div>
+                <div class="nv-step-description">This is a description.</div>
             </div>
         </div>
     </div>
     <p class="c-demo-btn">
-        <button type="button" class="zr-btn zr-btn-primary">Next</button>
+        <button type="button" class="nv-btn nv-btn-primary">Next</button>
     </p>
 </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>MINI样式 <a href="#">#</a></p>
-        <span>基于基础样式之上，在  <i class="c-block-inline">zr-step</i>  后面加  <i class="c-block-inline">zr-step-small</i>  属性即可展示MINI版样式</span>
+        <span>基于基础样式之上，在  <i class="c-block-inline">nv-step</i>  后面加  <i class="c-block-inline">nv-step-small</i>  属性即可展示MINI版样式</span>
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <div class="zr-step zr-step-small">
-                <div class="zr-step-item zr-step-finish">
-                    <div class="zr-step-icon">
+            <div class="nv-step nv-step-small">
+                <div class="nv-step-item nv-step-finish">
+                    <div class="nv-step-icon">
                         <span>1</span>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Finished</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Finished</div>
                     </div>
                 </div>
-                <div class="zr-step-item zr-step-progress">
-                    <div class="zr-step-icon">
+                <div class="nv-step-item nv-step-progress">
+                    <div class="nv-step-icon">
                         <span>2</span>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">In Progress</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">In Progress</div>
                     </div>
                 </div>
-                <div class="zr-step-item">
-                    <div class="zr-step-icon">
+                <div class="nv-step-item">
+                    <div class="nv-step-icon">
                         <span>3</span>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Waiting</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Waiting</div>
                     </div>
                 </div>
             </div>
             <p class="c-demo-btn">
-                <button type="button" class="zr-btn zr-btn-primary">Next</button>
+                <button type="button" class="nv-btn nv-btn-primary">Next</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-step zr-step-small">
-        <div class="zr-step-item zr-step-finish">
-            <div class="zr-step-icon">
+    <div class="nv-step nv-step-small">
+        <div class="nv-step-item nv-step-finish">
+            <div class="nv-step-icon">
                 <span>1</span>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Finished</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Finished</div>
             </div>
         </div>
-        <div class="zr-step-item zr-step-finish zr-step-progress">
-            <div class="zr-step-icon">
+        <div class="nv-step-item nv-step-finish nv-step-progress">
+            <div class="nv-step-icon">
                 <span>2</span>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">In Progress</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">In Progress</div>
             </div>
         </div>
-        <div class="zr-step-item">
-            <div class="zr-step-icon">
+        <div class="nv-step-item">
+            <div class="nv-step-icon">
                 <span>3</span>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Waiting</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Waiting</div>
             </div>
         </div>
     </div>
     <p class="c-demo-btn">
-        <button type="button" class="zr-btn zr-btn-primary">Next</button>
+        <button type="button" class="nv-btn nv-btn-primary">Next</button>
     </p>
 </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>带图标的步骤条 <a href="#">#</a></p>
-        <span>基于基础样式之上，在  <i class="c-block-inline">zr-step</i>  后面加  <i class="c-block-inline">zr-step-icons</i>  属性即可展示图标版本的步骤条，  <i class="c-block-inline">icon</i>  使用方法详情见<a href="/docs?languageCode=CN&columnUid=40ad19be535e477596a033f9fea2bf7d&directoryUid=9d30d954caf544f4a60a496a2b854771">Icon 图标</a> </span>
+        <span>基于基础样式之上，在  <i class="c-block-inline">nv-step</i>  后面加  <i class="c-block-inline">nv-step-icons</i>  属性即可展示图标版本的步骤条，  <i class="c-block-inline">icon</i>  使用方法详情见<a href="/docs?languageCode=CN&columnUid=40ad19be535e477596a033f9fea2bf7d&directoryUid=9d30d954caf544f4a60a496a2b854771">Icon 图标</a> </span>
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <div class="zr-step zr-step-icons">
-                <div class="zr-step-item zr-step-finish">
-                    <div class="zr-step-icon">
-                        <i class="zricon-edit"></i>
+            <div class="nv-step nv-step-icons">
+                <div class="nv-step-item nv-step-finish">
+                    <div class="nv-step-icon">
+                        <i class="nvicon-edit"></i>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Information</div>
-                    </div>
-                </div>
-                <div class="zr-step-item zr-step-progress">
-                    <div class="zr-step-icon">
-                        <i class="zricon-user-empty"></i>
-                    </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Verification</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Information</div>
                     </div>
                 </div>
-                <div class="zr-step-item">
-                    <div class="zr-step-icon">
-                        <i class="zricon-down-circle-empty"></i>
+                <div class="nv-step-item nv-step-progress">
+                    <div class="nv-step-icon">
+                        <i class="nvicon-user-empty"></i>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Done</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Verification</div>
+                    </div>
+                </div>
+                <div class="nv-step-item">
+                    <div class="nv-step-icon">
+                        <i class="nvicon-down-circle-empty"></i>
+                    </div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Done</div>
                     </div>
                 </div>
             </div>
             <p class="c-demo-btn">
-                <button type="button" class="zr-btn zr-btn-primary">Next</button>
+                <button type="button" class="nv-btn nv-btn-primary">Next</button>
             </p>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-step zr-step-icons">
-        <div class="zr-step-item zr-step-finish">
-            <div class="zr-step-icon">
-                <i class="zricon-edit"></i>
+    <div class="nv-step nv-step-icons">
+        <div class="nv-step-item nv-step-finish">
+            <div class="nv-step-icon">
+                <i class="nvicon-edit"></i>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Information</div>
-            </div>
-        </div>
-        <div class="zr-step-item zr-step-progress">
-            <div class="zr-step-icon">
-                <i class="zricon-user-empty"></i>
-            </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Verification</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Information</div>
             </div>
         </div>
-        <div class="zr-step-item">
-            <div class="zr-step-icon">
-                <i class="zricon-down-circle-empty"></i>
+        <div class="nv-step-item nv-step-progress">
+            <div class="nv-step-icon">
+                <i class="nvicon-user-empty"></i>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Done</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Verification</div>
+            </div>
+        </div>
+        <div class="nv-step-item">
+            <div class="nv-step-icon">
+                <i class="nvicon-down-circle-empty"></i>
+            </div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Done</div>
             </div>
         </div>
     </div>
     <p class="c-demo-btn">
-        <button type="button" class="zr-btn zr-btn-primary">Next</button>
+        <button type="button" class="nv-btn nv-btn-primary">Next</button>
     </p>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>步骤运行错误 <a href="#">#</a></p>
-        <span>基于基础样式之上，在  <i class="c-block-inline">zr-step</i>  后面加  <i class="c-block-inline">zr-step-error</i>  属性即可，在  <i class="c-block-inline">zr-step-error</i>  下，  <i class="c-block-inline">zr-step-finish</i>  表示已完成，  <i class="c-block-inline">zr-step-progress</i>  表示出错状态</span>
+        <span>基于基础样式之上，在  <i class="c-block-inline">nv-step</i>  后面加  <i class="c-block-inline">nv-step-error</i>  属性即可，在  <i class="c-block-inline">nv-step-error</i>  下，  <i class="c-block-inline">nv-step-finish</i>  表示已完成，  <i class="c-block-inline">nv-step-progress</i>  表示出错状态</span>
     </section>
     <section class="c-code">
         <div class="c-demo">
-            <div class="zr-step zr-step-error">
-                <div class="zr-step-item zr-step-finish">
-                    <div class="zr-step-icon">
-                        <i class="zricon-down-circle-empty"></i>
+            <div class="nv-step nv-step-error">
+                <div class="nv-step-item nv-step-finish">
+                    <div class="nv-step-icon">
+                        <i class="nvicon-down-circle-empty"></i>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Finished</div>
-                        <div class="zr-step-description">This is a description.</div>
-                    </div>
-                </div>
-                <div class="zr-step-item zr-step-progress">
-                    <div class="zr-step-icon">
-                        <i class="zricon-close-circle-empty"></i>
-                    </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">In Progress</div>
-                        <div class="zr-step-description">This is a description.</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Finished</div>
+                        <div class="nv-step-description">This is a description.</div>
                     </div>
                 </div>
-                <div class="zr-step-item">
-                    <div class="zr-step-icon">
+                <div class="nv-step-item nv-step-progress">
+                    <div class="nv-step-icon">
+                        <i class="nvicon-close-circle-empty"></i>
+                    </div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">In Progress</div>
+                        <div class="nv-step-description">This is a description.</div>
+                    </div>
+                </div>
+                <div class="nv-step-item">
+                    <div class="nv-step-icon">
                         <span>3</span>
                     </div>
-                    <div class="zr-step-content">
-                        <div class="zr-step-title">Waiting</div>
-                        <div class="zr-step-description">This is a description.</div>
+                    <div class="nv-step-content">
+                        <div class="nv-step-title">Waiting</div>
+                        <div class="nv-step-description">This is a description.</div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-    <div class="zr-step zr-step-error">
-        <div class="zr-step-item zr-step-finish">
-            <div class="zr-step-icon">
-                <i class="zricon-down-circle-empty"></i>
+    <div class="nv-step nv-step-error">
+        <div class="nv-step-item nv-step-finish">
+            <div class="nv-step-icon">
+                <i class="nvicon-down-circle-empty"></i>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Finished</div>
-                <div class="zr-step-description">This is a description.</div>
-            </div>
-        </div>
-        <div class="zr-step-item zr-step-progress">
-            <div class="zr-step-icon">
-                <i class="zricon-close-circle-empty"></i>
-            </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">In Progress</div>
-                <div class="zr-step-description">This is a description.</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Finished</div>
+                <div class="nv-step-description">This is a description.</div>
             </div>
         </div>
-        <div class="zr-step-item">
-            <div class="zr-step-icon">
+        <div class="nv-step-item nv-step-progress">
+            <div class="nv-step-icon">
+                <i class="nvicon-close-circle-empty"></i>
+            </div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">In Progress</div>
+                <div class="nv-step-description">This is a description.</div>
+            </div>
+        </div>
+        <div class="nv-step-item">
+            <div class="nv-step-icon">
                 <span>3</span>
             </div>
-            <div class="zr-step-content">
-                <div class="zr-step-title">Waiting</div>
-                <div class="zr-step-description">This is a description.</div>
+            <div class="nv-step-content">
+                <div class="nv-step-title">Waiting</div>
+                <div class="nv-step-description">This is a description.</div>
             </div>
         </div>
     </div>
 </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
 </article>
 </body>

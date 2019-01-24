@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
-    <link rel="stylesheet" href="//storage.jd.com/0.0.1/zr/css/cdn_zr.min.css">
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style>
         .c-demo .c-top-introduce{
             color: rgba(0,0,0,0.65);
@@ -20,8 +21,8 @@
         <p>Back top 返回顶部</p>
         <span>
             返回页面顶部的操作
-            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/top.md"><b>API文档</b></a>
-            <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/25"><b>组件问题反馈和讨论</b></a>
+            <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/nv-source/blob/master/docs/inner/top.md"><b>API文档</b></a>
+            <a style="font-size: 16px" href="//github.com/guguaihaha/nv-source/issues/25"><b>组件问题反馈和讨论</b></a>
         </span>
     </section>
     <div class="c-line"></div>
@@ -34,21 +35,21 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <span class="c-top-introduce">Scroll down to see the bottom-right</span>
-            <div class="zr-top">
-                <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+            <div class="nv-top">
+                <button class="nv-btn nv-btn-primary nv-btn-lg"><i class="nvicon-up"></i></button>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
     <!--HTML-->
-    <div class="zr-top-wrap" data-position = "auto 20px 100px auto">
-        <div class="zr-top">
-            <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+    <div class="nv-top-wrap" data-position = "auto 20px 100px auto">
+        <div class="nv-top">
+            <button class="nv-btn nv-btn-primary nv-btn-lg"><i class="nvicon-up"></i></button>
         </div>
     </div>
     <!--HTML-->
 
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -60,20 +61,20 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <span class="c-top-introduce">Scroll down to see the bottom-right</span>
-            <div class="zr-top zr-top-custom">
-                <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+            <div class="nv-top nv-top-custom">
+                <button class="nv-btn nv-btn-primary nv-btn-lg"><i class="nvicon-up"></i></button>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
     <!--HTML-->
-    <div class="zr-top-wrap" data-position = "auto 20px 100px auto">
-        <div class="zr-top zr-top-custom">
-            <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+    <div class="nv-top-wrap" data-position = "auto 20px 100px auto">
+        <div class="nv-top nv-top-custom">
+            <button class="nv-btn nv-btn-primary nv-btn-lg"><i class="nvicon-up"></i></button>
         </div>
     </div>
     <!--HTML-->
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <!---->
     <div class="c-block-20"></div>
@@ -119,21 +120,21 @@
     </section>
     <div style="width:100%;height:1000px;"></div>
 </article>
-<div class="zr-top-wrap" data-position="auto 20px 100px auto">
-    <div class="zr-top">
-        <button class="zr-btn zr-btn-primary zr-btn-lg"><i class="zricon-up"></i></button>
+<div class="nv-top-wrap" data-position="auto 20px 100px auto">
+    <div class="nv-top">
+        <button class="nv-btn nv-btn-primary nv-btn-lg"><i class="nvicon-up"></i></button>
     </div>
 </div>
 
 <script type="text/javascript" src="/frontPage/js/top.js?1"></script>
-<script type="text/javascript" src="/js/zr.min.js?1"></script>
+<script type="text/javascript" src="/js/nv.min.js?1"></script>
 <script type="text/javascript">
-    Zr.config({
+    Nv.config({
         baseUrl: "/js/plugin_modules/",
         requestTime:true
     })
-    Zr.ready(function(){
-        Zr.use("./js/quickMenu","./js/code")
+    Nv.ready(function(){
+        Nv.use("./js/quickMenu","./js/code")
     })
 </script>
 </body>

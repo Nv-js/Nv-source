@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?123432" />
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style>
         body .row{
             margin-bottom: 16px;
@@ -28,14 +30,13 @@
             height:100px;
         }
     </style>
-    <script type="text/javascript" src="/js/zr.min.js?1"></script>
     <script type="text/javascript">
-        Zr.config({
+        Nv.config({
             baseUrl:"/js/plugin_modules/",
             requestTime:true
         })
-        Zr.ready(function(){
-            Zr.use("./js/quickMenu","./js/code");
+        Nv.ready(function(){
+            Nv.use("./js/quickMenu","./js/code");
         })
     </script>
 </head>
@@ -44,8 +45,8 @@
     <section class="c-title">
         <p>Grid 栅格</p>
         <span>最基础的列表展示，可承载文字、列表、图片、段落。常用语后台数据展示页面。</span>
-        <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/grid.md"><b>API文档</b></a>
-        <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/4"><b>组件问题反馈和讨论</b></a>
+        <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/nv-source/blob/master/docs/inner/grid.md"><b>API文档</b></a>
+        <a style="font-size: 16px" href="//github.com/guguaihaha/nv-source/issues/4"><b>组件问题反馈和讨论</b></a>
     </section>
     <div class="c-line"></div>
     <section class="c-thin-title">
@@ -63,7 +64,7 @@
     <section class="c-sub-title">
         <p>设计思路 <a href="#">#</a></p>
         <span>
-            经过实践，Zr重新设计栅格，在原来的12个栅格拓展到24个栅格，更能适应更多应用场景。<br/>
+            经过实践，Nv重新设计栅格，在原来的12个栅格拓展到24个栅格，更能适应更多应用场景。<br/>
             建议横向排列的栅格单位最多4个，最少一个。栅格布局如上图所示。
         </span>
     </section>
@@ -71,54 +72,54 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="zr-row row">
-                <div class="zr-col-24 pd"><div class="dd">zr-col-24（100%）</div></div>
+            <div class="nv-row row">
+                <div class="nv-col-24 pd"><div class="dd">nv-col-24（100%）</div></div>
             </div>
-            <div class="zr-row row">
-                <div class="zr-col-12 pd"><div class="dd">zr-col-12 (50%)</div></div>
-                <div class="zr-col-12 pd"><div class="dd">zr-col-12 (50%)</div></div>
+            <div class="nv-row row">
+                <div class="nv-col-12 pd"><div class="dd">nv-col-12 (50%)</div></div>
+                <div class="nv-col-12 pd"><div class="dd">nv-col-12 (50%)</div></div>
             </div>
-            <div class="zr-row row">
-                <div class="zr-col-16 pd"><div class="dd">zr-col-16 (66.66%)</div></div>
-                <div class="zr-col-8 pd"><div class="dd">zr-col-8 (33.33%)</div></div>
+            <div class="nv-row row">
+                <div class="nv-col-16 pd"><div class="dd">nv-col-16 (66.66%)</div></div>
+                <div class="nv-col-8 pd"><div class="dd">nv-col-8 (33.33%)</div></div>
             </div>
-            <div class="zr-row row">
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6 (25%)</div></div>
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6 (25%)</div></div>
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6 (25%)</div></div>
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6 (25%)</div></div>
+            <div class="nv-row row">
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6 (25%)</div></div>
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6 (25%)</div></div>
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6 (25%)</div></div>
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6 (25%)</div></div>
             </div>
-            <div class="zr-row row">
-                <div class="zr-col-8 pd"><div class="dd">zr-col-8 (33.33%)</div></div>
-                <div class="zr-col-8 pd"><div class="dd">zr-col-8 (33.33%)</div></div>
-                <div class="zr-col-8 pd"><div class="dd">zr-col-8 (33.33%)</div></div>
+            <div class="nv-row row">
+                <div class="nv-col-8 pd"><div class="dd">nv-col-8 (33.33%)</div></div>
+                <div class="nv-col-8 pd"><div class="dd">nv-col-8 (33.33%)</div></div>
+                <div class="nv-col-8 pd"><div class="dd">nv-col-8 (33.33%)</div></div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-            <div class="zr-row">
-                <div class="zr-col-24">zr-col-24（100%)</div>
+            <div class="nv-row">
+                <div class="nv-col-24">nv-col-24（100%)</div>
             </div>
-            <div class="zr-row">
-                <div class="zr-col-12">zr-col-12 (50%)</div>
-                <div class="zr-col-12">zr-col-12 (50%)</div>
+            <div class="nv-row">
+                <div class="nv-col-12">nv-col-12 (50%)</div>
+                <div class="nv-col-12">nv-col-12 (50%)</div>
             </div>
-            <div class="zr-row">
-                <div class="zr-col-16">zr-col-16 (66.66%)</div>
-                <div class="zr-col-8">zr-col-8 (33.33%)</div>
+            <div class="nv-row">
+                <div class="nv-col-16">nv-col-16 (66.66%)</div>
+                <div class="nv-col-8">nv-col-8 (33.33%)</div>
             </div>
-            <div class="zr-row">
-                <div class="zr-col-6">zr-col-6 (25%)</div>
-                <div class="zr-col-6">zr-col-6 (25%)</div>
-                <div class="zr-col-6">zr-col-6 (25%)</div>
-                <div class="zr-col-6">zr-col-6 (25%)</div>
+            <div class="nv-row">
+                <div class="nv-col-6">nv-col-6 (25%)</div>
+                <div class="nv-col-6">nv-col-6 (25%)</div>
+                <div class="nv-col-6">nv-col-6 (25%)</div>
+                <div class="nv-col-6">nv-col-6 (25%)</div>
             </div>
-            <div class="zr-row row">
-                <div class="zr-col-8">zr-col-8 (33.33%)</div>
-                <div class="zr-col-8">zr-col-8 (33.33%)</div>
-                <div class="zr-col-8">zr-col-8 (33.33%)</div>
+            <div class="nv-row row">
+                <div class="nv-col-8">nv-col-8 (33.33%)</div>
+                <div class="nv-col-8">nv-col-8 (33.33%)</div>
+                <div class="nv-col-8">nv-col-8 (33.33%)</div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -130,386 +131,386 @@
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-demo">
-            <div class="zr-row row">
-                <div class="zr-col-12 pd"><div class="dd">zr-col-12</div></div>
-                <div class="zr-col-12 pd"><div class="dd">zr-col-12</div></div>
+            <div class="nv-row row">
+                <div class="nv-col-12 pd"><div class="dd">nv-col-12</div></div>
+                <div class="nv-col-12 pd"><div class="dd">nv-col-12</div></div>
             </div>
-            <div class="zr-row row">
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6</div></div>
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6</div></div>
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6</div></div>
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6</div></div>
+            <div class="nv-row row">
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6</div></div>
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6</div></div>
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6</div></div>
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6</div></div>
             </div>
-            <div class="zr-row row">
-                <div class="zr-col-8 pd"><div class="dd">zr-col-8</div></div>
-                <div class="zr-col-8 pd"><div class="dd">zr-col-8</div></div>
-                <div class="zr-col-8 pd"><div class="dd">zr-col-8</div></div>
+            <div class="nv-row row">
+                <div class="nv-col-8 pd"><div class="dd">nv-col-8</div></div>
+                <div class="nv-col-8 pd"><div class="dd">nv-col-8</div></div>
+                <div class="nv-col-8 pd"><div class="dd">nv-col-8</div></div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-            <div class="zr-row">
-                <div class="zr-col-12">zr-col-12</div>
-                <div class="zr-col-12">zr-col-12</div>
+            <div class="nv-row">
+                <div class="nv-col-12">nv-col-12</div>
+                <div class="nv-col-12">nv-col-12</div>
             </div>
-            <div class="zr-row">
-                <div class="zr-col-6">zr-col-6</div>
-                <div class="zr-col-6">zr-col-6</div>
-                <div class="zr-col-6">zr-col-6</div>
-                <div class="zr-col-6">zr-col-6</div>
+            <div class="nv-row">
+                <div class="nv-col-6">nv-col-6</div>
+                <div class="nv-col-6">nv-col-6</div>
+                <div class="nv-col-6">nv-col-6</div>
+                <div class="nv-col-6">nv-col-6</div>
             </div>
-            <div class="zr-row">
-                <div class="zr-col-8">zr-col-8</div>
-                <div class="zr-col-8">zr-col-8</div>
-                <div class="zr-col-8">zr-col-8</div>
+            <div class="nv-row">
+                <div class="nv-col-8">nv-col-8</div>
+                <div class="nv-col-8">nv-col-8</div>
+                <div class="nv-col-8">nv-col-8</div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>间隔布局<a href="#">#</a></p>
         <span>
-            间隔布局需要在在<i class="c-block-inline">zr-row</i>的样式上添加<i class="c-block-inline">zr-row-space</i></i>
+            间隔布局需要在在<i class="c-block-inline">nv-row</i>的样式上添加<i class="c-block-inline">nv-row-space</i></i>
         </span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-demo">
-            <div class="zr-row zr-row-space row">
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6</div></div>
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6</div></div>
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6</div></div>
-                <div class="zr-col-6 pd"><div class="dd">zr-col-6</div></div>
+            <div class="nv-row nv-row-space row">
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6</div></div>
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6</div></div>
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6</div></div>
+                <div class="nv-col-6 pd"><div class="dd">nv-col-6</div></div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-            <div class="zr-row zr-row-space">
-                <div class="zr-col-6">zr-col-6</div>
-                <div class="zr-col-6">zr-col-6</div>
-                <div class="zr-col-6">zr-col-6</div>
-                <div class="zr-col-6">zr-col-6</div>
+            <div class="nv-row nv-row-space">
+                <div class="nv-col-6">nv-col-6</div>
+                <div class="nv-col-6">nv-col-6</div>
+                <div class="nv-col-6">nv-col-6</div>
+                <div class="nv-col-6">nv-col-6</div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>栅格偏移 <a href="#">#</a></p>
         <span>
-            栅格中需要间隔布局，在 <i class="c-block-inline">zr-col</i>  中增加  <i class="c-block-inline">zr-col-offset-x</i> 即可
+            栅格中需要间隔布局，在 <i class="c-block-inline">nv-col</i>  中增加  <i class="c-block-inline">nv-col-offset-x</i> 即可
         </span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-demo">
-            <div class="zr-row zr-row-space row">
-                <div class="zr-col-6 zr-col-offset-3 pd"><div class="dd">zr-col-offset-3</div></div>
-                <div class="zr-col-6 zr-col-offset-6 pd"><div class="dd">zr-col-offset-6</div></div>
+            <div class="nv-row nv-row-space row">
+                <div class="nv-col-6 nv-col-offset-3 pd"><div class="dd">nv-col-offset-3</div></div>
+                <div class="nv-col-6 nv-col-offset-6 pd"><div class="dd">nv-col-offset-6</div></div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-            <div class="zr-row zr-row-space">
-                <div class="zr-col-6 zr-col-offset-3">zr-col-offset-3</div>
-                <div class="zr-col-6 zr-col-offset-6">zr-col-offset-6</div>
+            <div class="nv-row nv-row-space">
+                <div class="nv-col-6 nv-col-offset-3">nv-col-offset-3</div>
+                <div class="nv-col-6 nv-col-offset-6">nv-col-offset-6</div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>Flex布局 <a href="#">#</a></p>
         <span>
-            其实用flex布局就是直接替换掉样式  <i class="c-block-inline">zr-row</i>  为  <i class="c-block-inline">zr-row-flex</i>  即可。如果有其他布局需求就可以使用以下附带属性
+            其实用flex布局就是直接替换掉样式  <i class="c-block-inline">nv-row</i>  为  <i class="c-block-inline">nv-row-flex</i>  即可。如果有其他布局需求就可以使用以下附带属性
         </span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-demo">
             <p>居左</p>
-            <div class="zr-row-flex zr-row-flex-start row h80">
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
+            <div class="nv-row-flex nv-row-flex-start row h80">
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
             </div>
             <p>居中</p>
-            <div class="zr-row-flex zr-row-flex-center row h80">
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
+            <div class="nv-row-flex nv-row-flex-center row h80">
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
             </div>
             <p>居右</p>
-            <div class="zr-row-flex zr-row-flex-end row h80">
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
+            <div class="nv-row-flex nv-row-flex-end row h80">
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
             </div>
             <p>两边对齐</p>
-            <div class="zr-row-flex zr-row-flex-between row h80">
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
+            <div class="nv-row-flex nv-row-flex-between row h80">
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
             </div>
             <p>左右均等对齐</p>
-            <div class="zr-row-flex zr-row-flex-around row h80">
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
+            <div class="nv-row-flex nv-row-flex-around row h80">
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
             <p>居左</p>
-            <div class="zr-row-flex zr-row-flex-start">
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
+            <div class="nv-row-flex nv-row-flex-start">
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
             </div>
             <p>居中</p>
-            <div class="zr-row-flex zr-row-flex-center">
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
+            <div class="nv-row-flex nv-row-flex-center">
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
             </div>
             <p>居右</p>
-            <div class="zr-row-flex zr-row-flex-end row h80">
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
+            <div class="nv-row-flex nv-row-flex-end row h80">
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
             </div>
             <p>两边对齐</p>
-            <div class="zr-row-flex zr-row-flex-between row h80">
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
+            <div class="nv-row-flex nv-row-flex-between row h80">
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
             </div>
             <p>左右均等对齐</p>
-            <div class="zr-row-flex zr-row-flex-around row h80">
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
-                <div class="zr-col-4 pd">zr-col-4</div>
+            <div class="nv-row-flex nv-row-flex-around row h80">
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
+                <div class="nv-col-4 pd">nv-col-4</div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>Flex对齐 <a href="#">#</a></p>
         <span>
-            垂直布局同横向布局，在flex基础上增加额外样式即可，  <i class="c-block-inline">zr-row-flex-top</i>  ，  <i class="c-block-inline">zr-row-flex-middle</i>  ，  <i class="c-block-inline">zr-row-flex-end</i>
+            垂直布局同横向布局，在flex基础上增加额外样式即可，  <i class="c-block-inline">nv-row-flex-top</i>  ，  <i class="c-block-inline">nv-row-flex-middle</i>  ，  <i class="c-block-inline">nv-row-flex-end</i>
         </span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-demo">
             <p>垂直顶部</p>
-            <div class="zr-row-flex zr-row-flex-around zr-row-flex-top row h180">
-                <div class="zr-col-4  pd h100"><div class="dd h100">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd h100"><div class="dd h100">zr-col-4</div></div>
+            <div class="nv-row-flex nv-row-flex-around nv-row-flex-top row h180">
+                <div class="nv-col-4  pd h100"><div class="dd h100">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd h100"><div class="dd h100">nv-col-4</div></div>
             </div>
             <p>垂直居中</p>
-            <div class="zr-row-flex zr-row-flex-around zr-row-flex-middle row h180">
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd h100"><div class="dd h100">zr-col-4</div></div>
-                <div class="zr-col-4 pd h100"><div class="dd h100">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
+            <div class="nv-row-flex nv-row-flex-around nv-row-flex-middle row h180">
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd h100"><div class="dd h100">nv-col-4</div></div>
+                <div class="nv-col-4 pd h100"><div class="dd h100">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
             </div>
             <p>垂直底部</p>
-            <div class="zr-row-flex zr-row-flex-around zr-row-flex-bottom row h180">
-                <div class="zr-col-4 pd h100"><div class="dd h100">zr-col-4</div></div>
-                <div class="zr-col-4 pd "><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd"><div class="dd">zr-col-4</div></div>
+            <div class="nv-row-flex nv-row-flex-around nv-row-flex-bottom row h180">
+                <div class="nv-col-4 pd h100"><div class="dd h100">nv-col-4</div></div>
+                <div class="nv-col-4 pd "><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd"><div class="dd">nv-col-4</div></div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
             <p>垂直顶部</p>
-            <div class="zr-row-flex zr-row-flex-around zr-row-flex-top">
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
+            <div class="nv-row-flex nv-row-flex-around nv-row-flex-top">
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
             </div>
             <p>垂直居中</p>
-            <div class="zr-row-flex zr-row-flex-around zr-row-flex-middle">
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
+            <div class="nv-row-flex nv-row-flex-around nv-row-flex-middle">
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
             </div>
             <p>垂直底部</p>
-            <div class="zr-row-flex zr-row-flex-around zr-row-flex-bottom">
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
-                <div class="zr-col-4">zr-col-4</div>
+            <div class="nv-row-flex nv-row-flex-around nv-row-flex-bottom">
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
+                <div class="nv-col-4">nv-col-4</div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>Flex单元格垂直位置 <a href="#">#</a></p>
         <span>
-            垂直布局可以单独控制一个单元格的位置，非常好用，分别为：  <i class="c-block-inline">zr-col-flex-top</i>  ，  <i class="c-block-inline">zr-col-flex-middle</i>  ，  <i class="c-block-inline">zr-col-flex-bottom</i>  ，与行内撑满高度样式：  <i class="c-block-inline">zr-col-flex-stretch</i>
+            垂直布局可以单独控制一个单元格的位置，非常好用，分别为：  <i class="c-block-inline">nv-col-flex-top</i>  ，  <i class="c-block-inline">nv-col-flex-middle</i>  ，  <i class="c-block-inline">nv-col-flex-bottom</i>  ，与行内撑满高度样式：  <i class="c-block-inline">nv-col-flex-stretch</i>
         </span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-demo">
-            <p>居上 (zr-col-flex-top)</p>
-            <div class="zr-row-flex zr-row-flex-around row h180">
-                <div class="zr-col-4 zr-col-flex-top pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd zr-col-flex-middle"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 zr-col-flex-top pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 pd zr-col-flex-middle"><div class="dd">zr-col-4</div></div>
+            <p>居上 (nv-col-flex-top)</p>
+            <div class="nv-row-flex nv-row-flex-around row h180">
+                <div class="nv-col-4 nv-col-flex-top pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd nv-col-flex-middle"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 nv-col-flex-top pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 pd nv-col-flex-middle"><div class="dd">nv-col-4</div></div>
             </div>
-            <p>居中 (zr-col-flex-middle)</p>
-            <div class="zr-row-flex zr-row-flex-around row h180">
-                <div class="zr-col-4 zr-col-flex-middle pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 zr-col-flex-middle pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 zr-col-flex-middle pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 zr-col-flex-middle pd"><div class="dd">zr-col-4</div></div>
+            <p>居中 (nv-col-flex-middle)</p>
+            <div class="nv-row-flex nv-row-flex-around row h180">
+                <div class="nv-col-4 nv-col-flex-middle pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 nv-col-flex-middle pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 nv-col-flex-middle pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 nv-col-flex-middle pd"><div class="dd">nv-col-4</div></div>
             </div>
-            <p>底部 (zr-col-flex-bottom)</p>
-            <div class="zr-row-flex zr-row-flex-around row h180">
-                <div class="zr-col-4 zr-col-flex-bottom pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 zr-col-flex-bottom pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 zr-col-flex-middle pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 zr-col-flex-middle pd"><div class="dd">zr-col-4</div></div>
+            <p>底部 (nv-col-flex-bottom)</p>
+            <div class="nv-row-flex nv-row-flex-around row h180">
+                <div class="nv-col-4 nv-col-flex-bottom pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 nv-col-flex-bottom pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 nv-col-flex-middle pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 nv-col-flex-middle pd"><div class="dd">nv-col-4</div></div>
             </div>
-            <p>垂直占满 (zr-col-flex-stretch)</p>
-            <div class="zr-row-flex zr-row-flex-around row h180">
-                <div class="zr-col-4 zr-col-flex-stretch pd"><div class="dd" style="height: 100%">zr-col-4</div></div>
-                <div class="zr-col-4 zr-col-flex-stretch pd"><div class="dd" style="height: 100%">zr-col-4</div></div>
-                <div class="zr-col-4 zr-col-flex-middle pd"><div class="dd">zr-col-4</div></div>
-                <div class="zr-col-4 zr-col-flex-middle pd"><div class="dd">zr-col-4</div></div>
+            <p>垂直占满 (nv-col-flex-stretch)</p>
+            <div class="nv-row-flex nv-row-flex-around row h180">
+                <div class="nv-col-4 nv-col-flex-stretch pd"><div class="dd" style="height: 100%">nv-col-4</div></div>
+                <div class="nv-col-4 nv-col-flex-stretch pd"><div class="dd" style="height: 100%">nv-col-4</div></div>
+                <div class="nv-col-4 nv-col-flex-middle pd"><div class="dd">nv-col-4</div></div>
+                <div class="nv-col-4 nv-col-flex-middle pd"><div class="dd">nv-col-4</div></div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-            <p>居上 (zr-col-flex-top)</p>
-            <div class="zr-row-flex zr-row-flex-around">
-                <div class="zr-col-4 zr-col-flex-top">zr-col-4</div>
-                <div class="zr-col-4 pd zr-col-flex-middle">zr-col-4</div>
-                <div class="zr-col-4 zr-col-flex-top">zr-col-4</div>
-                <div class="zr-col-4 pd zr-col-flex-middle">zr-col-4</div>
+            <p>居上 (nv-col-flex-top)</p>
+            <div class="nv-row-flex nv-row-flex-around">
+                <div class="nv-col-4 nv-col-flex-top">nv-col-4</div>
+                <div class="nv-col-4 pd nv-col-flex-middle">nv-col-4</div>
+                <div class="nv-col-4 nv-col-flex-top">nv-col-4</div>
+                <div class="nv-col-4 pd nv-col-flex-middle">nv-col-4</div>
             </div>
-            <p>居中 (zr-col-flex-middle)</p>
-            <div class="zr-row-flex zr-row-flex-around">
-                <div class="zr-col-4 zr-col-flex-middle">zr-col-4</div>
-                <div class="zr-col-4 zr-col-flex-middle">zr-col-4</div>
-                <div class="zr-col-4 zr-col-flex-middle">zr-col-4</div>
-                <div class="zr-col-4 zr-col-flex-middle">zr-col-4</div>
+            <p>居中 (nv-col-flex-middle)</p>
+            <div class="nv-row-flex nv-row-flex-around">
+                <div class="nv-col-4 nv-col-flex-middle">nv-col-4</div>
+                <div class="nv-col-4 nv-col-flex-middle">nv-col-4</div>
+                <div class="nv-col-4 nv-col-flex-middle">nv-col-4</div>
+                <div class="nv-col-4 nv-col-flex-middle">nv-col-4</div>
             </div>
-            <p>底部 (zr-col-flex-bottom)</p>
-            <div class="zr-row-flex zr-row-flex-around">
-                <div class="zr-col-4 zr-col-flex-bottom">zr-col-4</div>
-                <div class="zr-col-4 zr-col-flex-bottom">zr-col-4</div>
-                <div class="zr-col-4 zr-col-flex-middle">zr-col-4</div>
-                <div class="zr-col-4 zr-col-flex-middle">zr-col-4</div>
+            <p>底部 (nv-col-flex-bottom)</p>
+            <div class="nv-row-flex nv-row-flex-around">
+                <div class="nv-col-4 nv-col-flex-bottom">nv-col-4</div>
+                <div class="nv-col-4 nv-col-flex-bottom">nv-col-4</div>
+                <div class="nv-col-4 nv-col-flex-middle">nv-col-4</div>
+                <div class="nv-col-4 nv-col-flex-middle">nv-col-4</div>
             </div>
-            <p>垂直占满 (zr-col-flex-stretch)</p>
-            <div class="zr-row-flex zr-row-flex-around">
-                <div class="zr-col-4 zr-col-flex-stretch">zr-col-4</div>
-                <div class="zr-col-4 zr-col-flex-stretch">zr-col-4</div>
-                <div class="zr-col-4 zr-col-flex-middle">zr-col-4</div>
-                <div class="zr-col-4 zr-col-flex-middle">zr-col-4</div>
+            <p>垂直占满 (nv-col-flex-stretch)</p>
+            <div class="nv-row-flex nv-row-flex-around">
+                <div class="nv-col-4 nv-col-flex-stretch">nv-col-4</div>
+                <div class="nv-col-4 nv-col-flex-stretch">nv-col-4</div>
+                <div class="nv-col-4 nv-col-flex-middle">nv-col-4</div>
+                <div class="nv-col-4 nv-col-flex-middle">nv-col-4</div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>Flex排序: <a href="#">#</a></p>
         <span>
-            flex排序是根据1—24序号顺序进行排序，  <i class="c-block-inline">zr-col-flex-order-1</i>  至  <i class="c-block-inline">zr-col-flex-order-24</i>
+            flex排序是根据1—24序号顺序进行排序，  <i class="c-block-inline">nv-col-flex-order-1</i>  至  <i class="c-block-inline">nv-col-flex-order-24</i>
         </span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-demo">
             <p>排序前</p>
-            <div class="zr-row-flex zr-row-flex-around zr-row-flex-top row h80">
-                <div class="zr-col-4 pd"><div class="dd">元素第1个</div></div>
-                <div class="zr-col-4 pd"><div class="dd">元素第2个</div></div>
-                <div class="zr-col-4 pd"><div class="dd">元素第3个</div></div>
-                <div class="zr-col-4 pd"><div class="dd">元素第4个</div></div>
+            <div class="nv-row-flex nv-row-flex-around nv-row-flex-top row h80">
+                <div class="nv-col-4 pd"><div class="dd">元素第1个</div></div>
+                <div class="nv-col-4 pd"><div class="dd">元素第2个</div></div>
+                <div class="nv-col-4 pd"><div class="dd">元素第3个</div></div>
+                <div class="nv-col-4 pd"><div class="dd">元素第4个</div></div>
             </div>
             <p>排序后</p>
-            <div class="zr-row-flex zr-row-flex-around zr-row-flex-top row h80">
-                <div class="zr-col-4 pd zr-col-flex-order-4"><div class="dd">元素第1个</div></div>
-                <div class="zr-col-4 pd zr-col-flex-order-1"><div class="dd">元素第2个</div></div>
-                <div class="zr-col-4 pd zr-col-flex-order-3"><div class="dd">元素第3个</div></div>
-                <div class="zr-col-4 pd zr-col-flex-order-2"><div class="dd">元素第4个</div></div>
+            <div class="nv-row-flex nv-row-flex-around nv-row-flex-top row h80">
+                <div class="nv-col-4 pd nv-col-flex-order-4"><div class="dd">元素第1个</div></div>
+                <div class="nv-col-4 pd nv-col-flex-order-1"><div class="dd">元素第2个</div></div>
+                <div class="nv-col-4 pd nv-col-flex-order-3"><div class="dd">元素第3个</div></div>
+                <div class="nv-col-4 pd nv-col-flex-order-2"><div class="dd">元素第4个</div></div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
             <p>排序前</p>
-            <div class="zr-row-flex zr-row-flex-around zr-row-flex-top">
-                <div class="zr-col-4">元素第1个</div>
-                <div class="zr-col-4">元素第2个</div>
-                <div class="zr-col-4">元素第3个</div>
-                <div class="zr-col-4">元素第4个</div>
+            <div class="nv-row-flex nv-row-flex-around nv-row-flex-top">
+                <div class="nv-col-4">元素第1个</div>
+                <div class="nv-col-4">元素第2个</div>
+                <div class="nv-col-4">元素第3个</div>
+                <div class="nv-col-4">元素第4个</div>
             </div>
             <p>排序后</p>
-            <div class="zr-row-flex zr-row-flex-around zr-row-flex-top">
-                <div class="zr-col-4 pd zr-col-flex-order-4">元素第1个</div>
-                <div class="zr-col-4 pd zr-col-flex-order-1">元素第2个</div>
-                <div class="zr-col-4 pd zr-col-flex-order-3">元素第3个</div>
-                <div class="zr-col-4 pd zr-col-flex-order-2">元素第4个</div>
+            <div class="nv-row-flex nv-row-flex-around nv-row-flex-top">
+                <div class="nv-col-4 pd nv-col-flex-order-4">元素第1个</div>
+                <div class="nv-col-4 pd nv-col-flex-order-1">元素第2个</div>
+                <div class="nv-col-4 pd nv-col-flex-order-3">元素第3个</div>
+                <div class="nv-col-4 pd nv-col-flex-order-2">元素第4个</div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>响应式布局: <a href="#">#</a></p>
         <span>
-            参照了BootStrap的响应式设计，Zr预设了五个相应尺寸：<br/><br/>
-手机尺寸：  <i class="c-block-inline">zr-col-xs-?</i>  <br/>
+            参照了BootStrap的响应式设计，Nv预设了五个相应尺寸：<br/><br/>
+手机尺寸：  <i class="c-block-inline">nv-col-xs-?</i>  <br/>
 <br/>
-平板尺寸：  <i class="c-block-inline">zr-col-sm-?</i>  <br/>
+平板尺寸：  <i class="c-block-inline">nv-col-sm-?</i>  <br/>
 <br/>
-桌面显示器尺寸：  <i class="c-block-inline">zr-col-md-?</i>  <br/>
+桌面显示器尺寸：  <i class="c-block-inline">nv-col-md-?</i>  <br/>
 <br/>
-大桌面显示器尺寸：  <i class="c-block-inline">zr-col-lg-?</i>  <br/>
+大桌面显示器尺寸：  <i class="c-block-inline">nv-col-lg-?</i>  <br/>
             <br/>
-大屏慕显示器尺寸：  <i class="c-block-inline">zr-col-xl-?</i>  <br/>
+大屏慕显示器尺寸：  <i class="c-block-inline">nv-col-xl-?</i>  <br/>
         </span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-demo">
-            <div class="zr-row-flex row h80">
-                <div class="zr-col-xs-24 zr-col-sm-12 zr-col-md-6 zr-col-lg-8 pd">
+            <div class="nv-row-flex row h80">
+                <div class="nv-col-xs-24 nv-col-sm-12 nv-col-md-6 nv-col-lg-8 pd">
                     <div class="dd">1</div>
                 </div>
-                <div class="zr-col-xs-24 zr-col-sm-12 zr-col-md-6 zr-col-lg-8 pd">
+                <div class="nv-col-xs-24 nv-col-sm-12 nv-col-md-6 nv-col-lg-8 pd">
                     <div class="dd">2</div>
                 </div>
-                <div class="zr-col-xs-24 zr-col-sm-12 zr-col-md-6 zr-col-lg-8 pd">
+                <div class="nv-col-xs-24 nv-col-sm-12 nv-col-md-6 nv-col-lg-8 pd">
                     <div class="dd">3</div>
                 </div>
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
-            <div class="zr-row-flex row">
-                <div class="zr-col-xs-24 zr-col-sm-12 zr-col-md-6 zr-col-lg-8">1</div>
-                <div class="zr-col-xs-24 zr-col-sm-12 zr-col-md-6 zr-col-lg-8">2</div>
-                <div class="zr-col-xs-24 zr-col-sm-12 zr-col-md-6 zr-col-lg-8">3</div>
+            <div class="nv-row-flex row">
+                <div class="nv-col-xs-24 nv-col-sm-12 nv-col-md-6 nv-col-lg-8">1</div>
+                <div class="nv-col-xs-24 nv-col-sm-12 nv-col-md-6 nv-col-lg-8">2</div>
+                <div class="nv-col-xs-24 nv-col-sm-12 nv-col-md-6 nv-col-lg-8">3</div>
             </div>
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
 </article>
 </body>

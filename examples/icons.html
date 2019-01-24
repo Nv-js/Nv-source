@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>ICONS</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?111" />
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
     <style type="text/css">
         .icon-ul li{
             height:120px;
@@ -39,14 +41,13 @@
             display: none;
         }
     </style>
-    <script type="text/javascript" src="/js/zr.min.js?1"></script>
     <script type="text/javascript">
-        Zr.config({
+        Nv.config({
             baseUrl:"/js/plugin_modules/",
             requestTime:true
         })
-        Zr.ready(function(){
-            Zr.use("jquery","./js/quickMenu","./js/code",function(zr,$){
+        Nv.ready(function(){
+            Nv.use("jquery","./js/quickMenu","./js/code",function(nv,$){
                 var text,html,$s;
                 $(".icon-ul li").each(function(){
                     $s = $(this).find("p")
@@ -73,8 +74,8 @@
     <section class="c-title">
         <p>Icon 图标</p>
         <span>字体图标，用法简便，直接使用样式名称即可</span>
-        <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/zr-source/blob/master/docs/inner/icon.md"><b>API文档</b></a>
-        <a style="font-size: 16px" href="//github.com/guguaihaha/zr-source/issues/3"><b>组件问题反馈和讨论</b></a>
+        <a style="font-size: 16px; margin-right: 15px;" href="//github.com/guguaihaha/nv-source/blob/master/docs/inner/icon.md"><b>API文档</b></a>
+        <a style="font-size: 16px" href="//github.com/guguaihaha/nv-source/issues/3"><b>组件问题反馈和讨论</b></a>
     </section>
     <div class="c-line"></div>
 
@@ -84,8 +85,8 @@
             图标有一定的命名规则，规则如下：
             <ul>
                 <li><div>只允许出现字母、数字并且字母为小写</div></li>
-                <li><div>实现和描线图标保持同命名，用-e来区分，例如：zricon-search(实心)和zricon-search-e(空心)</div></li>
-                <li><div>命名顺序：[zricon]-[图标名]-[图标状态*]-[方向*]-[附加区分状态*]</div></li>
+                <li><div>实现和描线图标保持同命名，用-e来区分，例如：nvicon-search(实心)和nvicon-search-e(空心)</div></li>
+                <li><div>命名顺序：[nvicon]-[图标名]-[图标状态*]-[方向*]-[附加区分状态*]</div></li>
             </ul>
         </span>
     </section>
@@ -100,18 +101,18 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <i class="zricon-search-empty"></i>
-            <i class="zricon-seting"></i>
-            <i class="zricon-classify-empty"></i>
-            <i class="zricon-toggle-on"></i>
+            <i class="nvicon-search-empty"></i>
+            <i class="nvicon-seting"></i>
+            <i class="nvicon-classify-empty"></i>
+            <i class="nvicon-toggle-on"></i>
         </div>
     <div class="c-code-inner c-code-hide">
-    <i class="zricon-search-empty"></i>
-    <i class="zricon-seting"></i>
-    <i class="zricon-classify-empty"></i>
-    <i class="zricon-toggle-on"></i>
+    <i class="nvicon-search-empty"></i>
+    <i class="nvicon-seting"></i>
+    <i class="nvicon-classify-empty"></i>
+    <i class="nvicon-toggle-on"></i>
     </div>
-    <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
+    <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
@@ -122,474 +123,474 @@
     </section>
     <div class="c-block-24"></div>
     <section class="mw">
-        <ul class="zr-row-flex icon-ul">
-            <li class="zr-col-4">
-                <i class="zricon-heart"></i>
-                <p>zricon-heart</p>
+        <ul class="nv-row-flex icon-ul">
+            <li class="nv-col-4">
+                <i class="nvicon-heart"></i>
+                <p>nvicon-heart</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-heart-empty"></i>
-                <p>zricon-heart-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-heart-empty"></i>
+                <p>nvicon-heart-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-star"></i>
-                <p>zricon-star</p>
+            <li class="nv-col-4">
+                <i class="nvicon-star"></i>
+                <p>nvicon-star</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-star-empty"></i>
-                <p>zricon-star-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-star-empty"></i>
+                <p>nvicon-star-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-seting"></i>
-                <p>zricon-seting</p>
+            <li class="nv-col-4">
+                <i class="nvicon-seting"></i>
+                <p>nvicon-seting</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-seting-empty"></i>
-                <p>zricon-seting-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-seting-empty"></i>
+                <p>nvicon-seting-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-home"></i>
-                <p>zricon-home</p>
+            <li class="nv-col-4">
+                <i class="nvicon-home"></i>
+                <p>nvicon-home</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-home-empty"></i>
-                <p>zricon-home-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-home-empty"></i>
+                <p>nvicon-home-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-trash"></i>
-                <p>zricon-trash</p>
+            <li class="nv-col-4">
+                <i class="nvicon-trash"></i>
+                <p>nvicon-trash</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-trash-empty"></i>
-                <p>zricon-trash-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-trash-empty"></i>
+                <p>nvicon-trash-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-folder"></i>
-                <p>zricon-folder</p>
+            <li class="nv-col-4">
+                <i class="nvicon-folder"></i>
+                <p>nvicon-folder</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-folder-empty"></i>
-                <p>zricon-folder-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-folder-empty"></i>
+                <p>nvicon-folder-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-folder-open"></i>
-                <p>zricon-folder-open</p>
+            <li class="nv-col-4">
+                <i class="nvicon-folder-open"></i>
+                <p>nvicon-folder-open</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-folder-open-empty"></i>
-                <p>zricon-folder-open-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-folder-open-empty"></i>
+                <p>nvicon-folder-open-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-doc"></i>
-                <p>zricon-doc</p>
+            <li class="nv-col-4">
+                <i class="nvicon-doc"></i>
+                <p>nvicon-doc</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-doc-empty"></i>
-                <p>zricon-doc-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-doc-empty"></i>
+                <p>nvicon-doc-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-copy"></i>
-                <p>zricon-copy</p>
+            <li class="nv-col-4">
+                <i class="nvicon-copy"></i>
+                <p>nvicon-copy</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-copy-empty"></i>
-                <p>zricon-copy-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-copy-empty"></i>
+                <p>nvicon-copy-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-search"></i>
-                <p>zricon-search</p>
+            <li class="nv-col-4">
+                <i class="nvicon-search"></i>
+                <p>nvicon-search</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-search-empty"></i>
-                <p>zricon-search-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-search-empty"></i>
+                <p>nvicon-search-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-comment"></i>
-                <p>zricon-comment</p>
+            <li class="nv-col-4">
+                <i class="nvicon-comment"></i>
+                <p>nvicon-comment</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-comment-empty"></i>
-                <p>zricon-comment-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-comment-empty"></i>
+                <p>nvicon-comment-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-chat"></i>
-                <p>zricon-chat</p>
+            <li class="nv-col-4">
+                <i class="nvicon-chat"></i>
+                <p>nvicon-chat</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-chat-empty"></i>
-                <p>zricon-chat-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-chat-empty"></i>
+                <p>nvicon-chat-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-check"></i>
-                <p>zricon-check</p>
+            <li class="nv-col-4">
+                <i class="nvicon-check"></i>
+                <p>nvicon-check</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-check-empty"></i>
-                <p>zricon-check-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-check-empty"></i>
+                <p>nvicon-check-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-bookmark"></i>
-                <p>zricon-bookmark</p>
+            <li class="nv-col-4">
+                <i class="nvicon-bookmark"></i>
+                <p>nvicon-bookmark</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-bookmark-empty"></i>
-                <p>zricon-bookmark-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-bookmark-empty"></i>
+                <p>nvicon-bookmark-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-classify"></i>
-                <p>zricon-classify</p>
+            <li class="nv-col-4">
+                <i class="nvicon-classify"></i>
+                <p>nvicon-classify</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-classify-empty"></i>
-                <p>zricon-classify-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-classify-empty"></i>
+                <p>nvicon-classify-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-user"></i>
-                <p>zricon-user</p>
+            <li class="nv-col-4">
+                <i class="nvicon-user"></i>
+                <p>nvicon-user</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-user-empty"></i>
-                <p>zricon-user-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-user-empty"></i>
+                <p>nvicon-user-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-close-circle"></i>
-                <p>zricon-close-circle</p>
+            <li class="nv-col-4">
+                <i class="nvicon-close-circle"></i>
+                <p>nvicon-close-circle</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-close-circle-empty"></i>
-                <p>zricon-close-circle-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-close-circle-empty"></i>
+                <p>nvicon-close-circle-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-calendar"></i>
-                <p>zricon-calendar</p>
+            <li class="nv-col-4">
+                <i class="nvicon-calendar"></i>
+                <p>nvicon-calendar</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-calendar-empty"></i>
-                <p>zricon-calendar-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-calendar-empty"></i>
+                <p>nvicon-calendar-empty</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-help"></i>
-                <p>zricon-help</p>
+            <li class="nv-col-4">
+                <i class="nvicon-help"></i>
+                <p>nvicon-help</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-help-empty"></i>
-                <p>zricon-help-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-help-empty"></i>
+                <p>nvicon-help-empty</p>
             </li>
-            <!--<li class="zr-col-4">-->
-                <!--<i class="zricon-help-circled"></i>-->
-                <!--<p>zricon-help-circled</p>-->
+            <!--<li class="nv-col-4">-->
+                <!--<i class="nvicon-help-circled"></i>-->
+                <!--<p>nvicon-help-circled</p>-->
             <!--</li>-->
-            <li class="zr-col-4">
-                <i class="zricon-mail"></i>
-                <p>zricon-mail</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-mail-empty"></i>
-                <p>zricon-mail-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-edit"></i>
-                <p>zricon-edit</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-edit-empty"></i>
-                <p>zricon-edit-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-toggle-on"></i>
-                <p>zricon-toggle-on</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-toggle-off"></i>
-                <p>zricon-toggle-off</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-add-square"></i>
-                <p>zricon-add-square</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-add-square-empty"></i>
-                <p>zricon-add-square-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-add"></i>
-                <p>zricon-add</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-close"></i>
-                <p>zricon-close</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-add-circle"></i>
-                <p>zricon-add-circle</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-add-circle-empty"></i>
-                <p>zricon-add-circle-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-left-circle"></i>
-                <p>zricon-left-circle</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-right-circle"></i>
-                <p>zricon-right-circle</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-up-circle"></i>
-                <p>zricon-up-circle</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-down-circle"></i>
-                <p>zricon-down-circle</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-left-circle-empty"></i>
-                <p>zricon-left-circle-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-right-circle-empty"></i>
-                <p>zricon-right-circle-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-up-circle-empty"></i>
-                <p>zricon-up-circle-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-down-circle-empty"></i>
-                <p>zricon-down-circle-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-ok-circle"></i>
-                <p>zricon-ok-circle</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-ok-circle-empty"></i>
-                <p>zricon-ok-circle-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-ok"></i>
-                <p>zricon-ok</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-download"></i>
-                <p>zricon-download</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-up"></i>
-                <p>zricon-up</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-down"></i>
-                <p>zricon-down</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-left"></i>
-                <p>zricon-left</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-right"></i>
-                <p>zricon-right</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-arrow-up"></i>
-                <p>zricon-arrow-up</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-arrow-down"></i>
-                <p>zricon-arrow-down</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-arrow-left"></i>
-                <p>zricon-arrow-left</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-arrow-right"></i>
-                <p>zricon-arrow-right</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-triangle-up"></i>
-                <p>zricon-triangle-up</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-triangle-down"></i>
-                <p>zricon-triangle-down</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-triangle-left"></i>
-                <p>zricon-triangle-left</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-triangle-right"></i>
-                <p>zricon-triangle-right</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-triangle-up-empty"></i>
-                <p>zricon-triangle-up-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-triangle-down-empty"></i>
-                <p>zricon-triangle-down-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-triangle-left-empty"></i>
-                <p>zricon-triangle-left-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-triangle-right-empty"></i>
-                <p>zricon-triangle-right-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-error-square"></i>
-                <p>zricon-error-square</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-error-square-empty"></i>
-                <p>zricon-error-square-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-password"></i>
-                <p>zricon-password</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-password-empty"></i>
-                <p>zricon-password-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-info"></i>
-                <p>zricon-info</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-info-empty"></i>
-                <p>zricon-info-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-invisible"></i>
-                <p>zricon-invisible</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-invisible-empty"></i>
-                <p>zricon-invisible-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-visible"></i>
-                <p>zricon-visible</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-visible-empty"></i>
-                <p>zricon-visible-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-warning"></i>
-                <p>zricon-warning</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-warning-empty"></i>
-                <p>zricon-warning-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-upload-1"></i>
-                <p>zricon-upload-1</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-next-empty"></i>
-                <p>zricon-next-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-previous-empty"></i>
-                <p>zricon-previous-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-dimission"></i>
-                <p>zricon-dimission</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-dimission-empty"></i>
-                <p>zricon-dimission-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-transaction"></i>
-                <p>zricon-transaction</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-transaction-empty"></i>
-                <p>zricon-transaction-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-upload"></i>
-                <p>zricon-upload</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-upload-empty"></i>
-                <p>zricon-upload-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-rank"></i>
-                <p>zricon-rank</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-rank-empty"></i>
-                <p>zricon-rank-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-prohibit"></i>
-                <p>zricon-prohibit</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-prohibit-empty"></i>
-                <p>zricon-prohibit-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-minus-square"></i>
-                <p>zricon-minus-square</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-minus-square-empty"></i>
-                <p>zricon-minus-square-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-minus-empty"></i>
-                <p>zricon-minus-minus-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-menu-empty"></i>
-                <p>zricon-menu-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-filter-empty"></i>
-                <p>zricon-filter-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-accessory-empty"></i>
-                <p>zricon-accessory-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-exit-empty"></i>
-                <p>zricon-exit-empty</p>
-            </li>
-            <li class="zr-col-4">
-                <i class="zricon-save-empty"></i>
-                <p>zricon-save-empty</p>
+            <li class="nv-col-4">
+                <i class="nvicon-mail"></i>
+                <p>nvicon-mail</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-mail-empty"></i>
+                <p>nvicon-mail-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-edit"></i>
+                <p>nvicon-edit</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-edit-empty"></i>
+                <p>nvicon-edit-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-toggle-on"></i>
+                <p>nvicon-toggle-on</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-toggle-off"></i>
+                <p>nvicon-toggle-off</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-add-square"></i>
+                <p>nvicon-add-square</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-add-square-empty"></i>
+                <p>nvicon-add-square-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-add"></i>
+                <p>nvicon-add</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-close"></i>
+                <p>nvicon-close</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-add-circle"></i>
+                <p>nvicon-add-circle</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-add-circle-empty"></i>
+                <p>nvicon-add-circle-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-left-circle"></i>
+                <p>nvicon-left-circle</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-right-circle"></i>
+                <p>nvicon-right-circle</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-up-circle"></i>
+                <p>nvicon-up-circle</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-down-circle"></i>
+                <p>nvicon-down-circle</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-left-circle-empty"></i>
+                <p>nvicon-left-circle-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-right-circle-empty"></i>
+                <p>nvicon-right-circle-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-up-circle-empty"></i>
+                <p>nvicon-up-circle-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-down-circle-empty"></i>
+                <p>nvicon-down-circle-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-ok-circle"></i>
+                <p>nvicon-ok-circle</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-ok-circle-empty"></i>
+                <p>nvicon-ok-circle-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-ok"></i>
+                <p>nvicon-ok</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-download"></i>
+                <p>nvicon-download</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-up"></i>
+                <p>nvicon-up</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-down"></i>
+                <p>nvicon-down</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-left"></i>
+                <p>nvicon-left</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-right"></i>
+                <p>nvicon-right</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-arrow-up"></i>
+                <p>nvicon-arrow-up</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-arrow-down"></i>
+                <p>nvicon-arrow-down</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-arrow-left"></i>
+                <p>nvicon-arrow-left</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-arrow-right"></i>
+                <p>nvicon-arrow-right</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-triangle-up"></i>
+                <p>nvicon-triangle-up</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-triangle-down"></i>
+                <p>nvicon-triangle-down</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-triangle-left"></i>
+                <p>nvicon-triangle-left</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-triangle-right"></i>
+                <p>nvicon-triangle-right</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-triangle-up-empty"></i>
+                <p>nvicon-triangle-up-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-triangle-down-empty"></i>
+                <p>nvicon-triangle-down-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-triangle-left-empty"></i>
+                <p>nvicon-triangle-left-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-triangle-right-empty"></i>
+                <p>nvicon-triangle-right-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-error-square"></i>
+                <p>nvicon-error-square</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-error-square-empty"></i>
+                <p>nvicon-error-square-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-password"></i>
+                <p>nvicon-password</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-password-empty"></i>
+                <p>nvicon-password-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-info"></i>
+                <p>nvicon-info</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-info-empty"></i>
+                <p>nvicon-info-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-invisible"></i>
+                <p>nvicon-invisible</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-invisible-empty"></i>
+                <p>nvicon-invisible-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-visible"></i>
+                <p>nvicon-visible</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-visible-empty"></i>
+                <p>nvicon-visible-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-warning"></i>
+                <p>nvicon-warning</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-warning-empty"></i>
+                <p>nvicon-warning-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-upload-1"></i>
+                <p>nvicon-upload-1</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-next-empty"></i>
+                <p>nvicon-next-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-previous-empty"></i>
+                <p>nvicon-previous-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-dimission"></i>
+                <p>nvicon-dimission</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-dimission-empty"></i>
+                <p>nvicon-dimission-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-transaction"></i>
+                <p>nvicon-transaction</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-transaction-empty"></i>
+                <p>nvicon-transaction-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-upload"></i>
+                <p>nvicon-upload</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-upload-empty"></i>
+                <p>nvicon-upload-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-rank"></i>
+                <p>nvicon-rank</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-rank-empty"></i>
+                <p>nvicon-rank-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-prohibit"></i>
+                <p>nvicon-prohibit</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-prohibit-empty"></i>
+                <p>nvicon-prohibit-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-minus-square"></i>
+                <p>nvicon-minus-square</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-minus-square-empty"></i>
+                <p>nvicon-minus-square-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-minus-empty"></i>
+                <p>nvicon-minus-minus-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-menu-empty"></i>
+                <p>nvicon-menu-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-filter-empty"></i>
+                <p>nvicon-filter-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-accessory-empty"></i>
+                <p>nvicon-accessory-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-exit-empty"></i>
+                <p>nvicon-exit-empty</p>
+            </li>
+            <li class="nv-col-4">
+                <i class="nvicon-save-empty"></i>
+                <p>nvicon-save-empty</p>
             </li>
 
 
         </ul>
-        <ul class="zr-row-flex icon-ul">
-            <li class="zr-col-4">
-                <i class="zricon-spin2 animate-spin"></i>
-                <p>zricon-spin2 animate-spin</p>
+        <ul class="nv-row-flex icon-ul">
+            <li class="nv-col-4">
+                <i class="nvicon-spin2 animate-spin"></i>
+                <p>nvicon-spin2 animate-spin</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-spin3 animate-spin"></i>
-                <p>zricon-spin3 animate-spin</p>
+            <li class="nv-col-4">
+                <i class="nvicon-spin3 animate-spin"></i>
+                <p>nvicon-spin3 animate-spin</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-spin5 animate-spin"></i>
-                <p>zricon-spin5 animate-spin</p>
+            <li class="nv-col-4">
+                <i class="nvicon-spin5 animate-spin"></i>
+                <p>nvicon-spin5 animate-spin</p>
             </li>
-            <li class="zr-col-4">
-                <i class="zricon-spin6 animate-spin"></i>
-                <p>zricon-spin6 animate-spin</p>
+            <li class="nv-col-4">
+                <i class="nvicon-spin6 animate-spin"></i>
+                <p>nvicon-spin6 animate-spin</p>
             </li>
         </ul>
     </section>
