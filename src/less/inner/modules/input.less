@@ -11,7 +11,6 @@
     border: @border-width-base @border-style-base @primary-color;
   }
 }
-
 .@{nv-prefix}-input{
   width: 100%;
   height: @input-height-base;
@@ -26,7 +25,7 @@
   .focus();
 }
 .@{nv-prefix}-input[disabled=disabled]{
-    .inputDisable()
+  .inputDisable()
 }
 .@{nv-prefix}-input-lg{
   height: @input-height-lg;
@@ -38,8 +37,12 @@
 }
 .@{nv-prefix}-input-group{
   position: relative;
-  .@{nv-prefix}-input{
+  .@{nv-prefix}-input:first-child{
     padding-right: 30px;
+  }
+  .@{nv-prefix}-input:last-child{
+    padding-left: 30px;
+    padding-right: 0px;
   }
   [class=nvicon-close-circle]{
     display: none;
@@ -53,6 +56,7 @@
     }
   }
 }
+// default right
 .@{nv-prefix}-input-addon{
   position: absolute;
   display: inline-block;
@@ -62,6 +66,10 @@
   opacity: .45;
   line-height: @input-height-base;
 }
+.@{nv-prefix}-input-addon:first-child{
+  left: 8px;
+  width: 14px;
+}
 .@{nv-prefix}-input-addon.@{nv-prefix}-input-sm{
   height: @input-height-sm;
   line-height: @input-height-sm;
@@ -69,16 +77,6 @@
 .@{nv-prefix}-input-addon.@{nv-prefix}-input-lg{
   height: @input-height-lg;
   line-height: @input-height-lg;
-}
-.@{nv-prefix}-input-left{
-  .@{nv-prefix}-input{
-    padding-left: 30px;
-    padding-right: 0px;
-  }
-  .@{nv-prefix}-input-addon{
-    left: 8px;
-    width: 14px;
-  }
 }
 .@{nv-prefix}-textarea{
   width: 100%;
@@ -99,24 +97,26 @@
   bottom: 8px;
   color: @normal-color;
 }
+
+// todo 完成select组件后重写
 .@{nv-prefix}-input-wapper{
-  .@{nv-prefix}-unselect{
+  .@{nv-prefix}-simulation{
     width: 20%;
     margin: 0;
     display: inline-block;
-    .@{nv-prefix}-input{
+    vertical-align: middle;
+    .@{nv-prefix}-select-reception{
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
     }
   }
   >.@{nv-prefix}-input{
     display: inline-block;
-    width: 79%;
-    margin-left: -4px;
-    //border-left: none;
-    border-left: @border-width-base @border-style-base rgba(255, 255, 255, 0);
+    width: 80%;
+    border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    vertical-align: middle;
     &:focus{
       border-left: @border-width-base @border-style-base @primary-color;
     }
@@ -124,24 +124,22 @@
 }
 .@{nv-prefix}-input-btn{
   position: relative;
-  .@{nv-prefix}-unselect{
-    .@{nv-prefix}-select-title{
-      .@{nv-prefix}-input{
-        background: #fafafa;
-      }
-    }
+  .@{nv-prefix}-simulation{
+    background: #fafafa;
+    vertical-align: middle;
   }
   >.@{nv-prefix}-input{
     width: 70%;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
+    vertical-align: middle;
   }
   >.@{nv-prefix}-input-addon{
     position: relative;
     right: 0;
-    top: 1px;
-    margin-left: -4px;
-    width: 9%;
+    top: 0px;
+    //margin-left: -4px;
+    width: 10%;
     background: #fafafa;
     border: @border-width-base @border-style-base @border-color-base;
     border-bottom-right-radius: 4px;
@@ -151,6 +149,7 @@
     opacity: 1;
     height: 32px;
     text-align: center;
+    vertical-align: middle;
     .@{nv-prefix}icon-search-empty{
       opacity: .45;
       &:hover{
@@ -160,17 +159,21 @@
   }
 }
 .@{nv-prefix}-input-wapper-left{
-  .@{nv-prefix}-unselect{
-    .@{nv-prefix}-input{
+  .@{nv-prefix}-simulation{
+    width: 20%;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    .@{nv-prefix}-select-reception{
       border-radius: 4px;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
     }
   }
   >.@{nv-prefix}-input{
-    width: 79%;
-    margin-right: -4px;
-    margin-left: 0px;
+    width: 80%;
+    //margin-right: -4px;
+    margin-left: 0;
     border-right: @border-width-base @border-style-base rgba(255, 255, 255, 0);
     border-left: @border-width-base @border-style-base @border-color-base;
     border-radius: 4px;
@@ -195,9 +198,6 @@
     .placeholder(@disabled-color,@font-size-base);
   }
 }
-
-
-
 
 .mixin(@name,@type) when (@name = @xs-name) and (@type = @screen-name-input) {
   //默认手机
