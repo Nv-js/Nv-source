@@ -1,6 +1,5 @@
 Nv.add("./page/1.0.1/cdn_index",function(nv,$){
     var language = nv.baseConfig.language;
-    var _this = this;
     var _pagination = {
         init: function (config) {
             var defOptions = {
@@ -38,7 +37,6 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
         options: {},
         eventsFn: {
             init: function () {
-                // this.constructor = _this;
                 var $element = $('#' + _pagination.options.id);
                 var html = '<ul class="nv-pagination-list">' +
                     '<li class="nv-pagination-pre nv-pagination-disable"><a href="javascript:;"></a></li>' +
@@ -82,7 +80,7 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
     
                 var initDropdown = function () {
                     //初始化下拉组件
-                    $element.find('.nv-dropdown').each(function (index, element) {
+                    $element.find('.nv-pagination-dropdown').each(function (index, element) {
                         var $element = $(element),
                             $link = $element.children('.nv-dropdown-link'),
                             $menu = $element.children('.nv-dropdown-menu');
@@ -330,7 +328,7 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                 var initSize = function () {
                     //每页条数 complete/simple/mini
                     if (opt.type === 'complete') {
-                        SIZE_M = '<div class="nv-dropdown nv-dropdown-btn" data-type="click">' +
+                        SIZE_M = '<div class="nv-pagination-dropdown nv-dropdown-btn" data-type="click">' +
                             '<a class="nv-dropdown-link" href="javascript:;">' +
                             _pageSize + '<i style="padding:0 2px">/</i>' + opt.language.page + '</a><div class="nv-dropdown-menu">';
                     } else if (opt.type === 'mini') {

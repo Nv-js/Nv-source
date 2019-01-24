@@ -1,11 +1,281 @@
-@nv-page-color: #4363f4;
+
 @import "../../../../../less/inner/theme/default";
+@page-base: #4363f4;
+@page-base-hover: #4363f4;
+
 .@{nv-prefix}-pagination {
     font-size: 14px;
+
     //下拉
-    .@{nv-prefix}-dropdown {
+    .@{nv-prefix}-pagination-dropdown {
+        padding: 0 4px;
+        position: relative;
+        display: inline-block;
         margin: 0 5px;
+
+        &.open {
+            .@{nv-prefix}-dropdown-link {
+                .@{nv-prefix}-icon-angle {
+                    transform: rotate(225deg);
+                }
+            }
+
+            .@{nv-prefix}-dropdown-menu {
+                opacity: 1;
+                transform: scale(1, 1);
+            }
+
+            &.@{nv-prefix}-dropdown-up {
+                .@{nv-prefix}-dropdown-link {
+                    .@{nv-prefix}-icon-angle {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+
+        //按钮样式
+        &.@{nv-prefix}-dropdown-btn {
+            display: inline-block;
+            height: 32px;
+            padding: 0 15px;
+            border: 1px solid #d9d9d9;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            line-height: 32px;
+            font-size: 14px;
+            font-weight: 400;
+            transition: border-color .3s ease;
+            cursor: pointer;
+
+            .@{nv-prefix}-dropdown-link {
+                color: rgba(0, 0, 0, 0.65);
+            }
+
+            &:hover {
+                border-color: @page-base-hover;
+
+                .@{nv-prefix}-dropdown-link {
+                    color: @page-base-hover;
+                }
+            }
+
+            //向上展开&按钮样式
+            &.@{nv-prefix}-dropdown-up {
+                .@{nv-prefix}-dropdown-menu {
+                    bottom: 34px;
+                    top: auto;
+                    transform-origin: center bottom 0px;
+                }
+            }
+
+            .@{nv-prefix}-dropdown-menu {
+                top: 34px;
+                transform-origin: center top 0px;
+            }
+        }
+
+        //向上展开
+        &.@{nv-prefix}-dropdown-up {
+            .@{nv-prefix}-dropdown-link {
+                .@{nv-prefix}-icon-angle {
+                    transform: rotate(225deg);
+                }
+            }
+
+            .@{nv-prefix}-dropdown-menu {
+                top: auto;
+                bottom: 20px;
+                transform-origin: center bottom 0px;
+                margin-bottom: 0;
+            }
+        }
+
+        //下拉右对齐
+        &.@{nv-prefix}-dropdown-right {
+            .@{nv-prefix}-dropdown-menu {
+                right: 0;
+                left: auto;
+            }
+        }
+
+        //等宽度-内容不能超出宽度
+        &.@{nv-prefix}-dropdown-equal {
+            .@{nv-prefix}-dropdown-menu {
+                right: 0;
+                left: 0;
+
+                .@{nv-prefix}-dropdown-item {
+                    a {
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+
+        //禁用
+        &.@{nv-prefix}-dropdown-disabled {
+            background-color: #f5f5f5;
+            border-color: #d9d9d9;
+
+            .@{nv-prefix}-dropdown-link {
+                color: rgba(0, 0, 0, 0.25);
+
+                &:hover {
+                    color: rgba(0, 0, 0, 0.25);
+                }
+            }
+
+            .@{nv-prefix}-dropdown-menu {
+                display: none;
+            }
+        }
+
+        ////
+        .@{nv-prefix}-dropdown-link {
+            text-decoration: none;
+            font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
+            color: rgba(0, 0, 0, 0.65);
+            font-size: 14px;
+            transition: color .3s ease;
+            white-space: nowrap;
+
+            &:hover {
+                color: @page-base-hover;
+            }
+
+            .@{nv-prefix}-icon-angle {
+                position: relative;
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                vertical-align: middle;
+                transition: transform .3s;
+                transform: rotate(45deg);
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    width: 6px;
+                    height: 6px;
+                    display: inline-block;
+                    border: 1px solid;
+                    border-top: 0;
+                    border-left: 0;
+                    vertical-align: middle;
+                    transform-origin: center;
+                }
+            }
+        }
+
+        .@{nv-prefix}-dropdown-menu {
+            position: absolute;
+            top: 22px;
+            left: 0;
+            transform-origin: center top 0px;
+            transform: scale(1, 0);
+            opacity: 0;
+            outline: none;
+            list-style-type: none;
+            list-style: none;
+            padding: 4px 0;
+            margin: 0;
+            text-align: left;
+            background-color: #fff;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            background-clip: padding-box;
+            transition: all .3s;
+            z-index: 2;
+            margin-bottom: 6px;
+
+            &:before {
+                position: absolute;
+                top: -7px;
+                left: -7px;
+                right: 0;
+                bottom: -7px;
+                content: ' ';
+                opacity: .0001;
+            }
+
+            .@{nv-prefix}-dropdown-item {
+                &:hover {
+                    background-color: #e6f7ff;
+
+                    >.@{nv-prefix}-dropdown-child-menu {
+                        display: block;
+                    }
+                }
+
+                &.@{nv-prefix}-dropdown-item-disabled {
+                    background: rgba(255, 255, 255, .35);
+
+                    a {
+                        color: rgba(0, 0, 0, .25);
+                        cursor: not-allowed;
+                    }
+                }
+
+                position: relative;
+                padding: 5px 12px;
+                margin: 0;
+                clear: both;
+                font-size: 14px;
+                font-weight: normal;
+                color: rgba(0, 0, 0, 0.65);
+                white-space: nowrap;
+                transition: all .3s;
+                line-height: 22px;
+                box-sizing: border-box;
+                cursor: pointer;
+
+                a {
+                    color: rgba(0, 0, 0, 0.65);
+                    display: block;
+                    padding: 0;
+                    margin: 0;
+                    transition: all .3s;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                .@{nv-prefix}-dropdown-child-menu {
+                    position: absolute;
+                    left: 100%;
+                    top: 0;
+                    list-style: none;
+                    padding: 4px 0;
+                    margin: 0;
+                    outline: none;
+                    text-align: left;
+                    background-color: #fff;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                    background-clip: padding-box;
+                    transition: all .3s;
+                    z-index: 2;
+                    margin-bottom: 6px;
+                    display: none;
+                }
+            }
+
+            .@{nv-prefix}-dropdown-item-divider {
+                height: 1px;
+                overflow: hidden;
+                background-color: #e8e8e8;
+                line-height: 0;
+                margin: 4px 0;
+            }
+        }
     }
+
     //完整版
     .@{nv-prefix}-pagination-list {
         margin: 0;
@@ -55,11 +325,11 @@
             }
 
             &:hover {
-                border-color: @nv-page-color;
+                border-color: @page-base;
 
                 a {
                     &::after {
-                        border-color: @nv-page-color !important;
+                        border-color: @page-base !important;
                     }
                 }
             }
@@ -102,10 +372,10 @@
                 }
 
                 &:hover {
-                    border-color: @nv-page-color;
+                    border-color: @page-base;
 
                     a {
-                        color: @nv-page-color;
+                        color: @page-base;
                     }
                 }
 
@@ -167,11 +437,11 @@
             }
 
             &:hover {
-                border-color: @nv-page-color;
+                border-color: @page-base;
 
                 a {
                     &::after {
-                        border-color: @nv-page-color !important;
+                        border-color: @page-base !important;
                     }
                 }
             }
@@ -214,10 +484,10 @@
                 }
 
                 &:hover {
-                    border-color: @nv-page-color;
+                    border-color: @page-base;
 
                     a {
-                        color: @nv-page-color;
+                        color: @page-base;
                     }
                 }
 
@@ -291,11 +561,13 @@
             }
 
             &.active {
-                border-color: @nv-page-color;
-                background-color: @nv-page-color;
+                border-color: @page-base;
+                background-color: @page-base;
+
                 a {
                     color: white;
                 }
+
                 &:hover {
                     a {
                         color: white;
@@ -304,14 +576,15 @@
             }
 
             &:hover {
-                border-color: @nv-page-color;
+                border-color: @page-base;
+
                 a {
-                    color: @nv-page-color;
+                    color: @page-base;
                 }
             }
         }
 
-        
+
 
         .@{nv-prefix}-pagination-total-text {
             display: inline-block;
@@ -360,7 +633,7 @@
                     outline: none;
 
                     &:hover {
-                        border-color: @nv-page-color;
+                        border-color: @page-base;
                     }
                 }
             }
@@ -374,6 +647,7 @@
             display: block;
         }
     }
+
     //mini版
     .@{nv-prefix}-pagination-mini-list {
         margin: 0;
@@ -418,10 +692,11 @@
             }
 
             &:hover {
-                border-color: @nv-page-color;
+                border-color: @page-base;
+
                 a {
                     &::after {
-                        border-color: @nv-page-color !important;
+                        border-color: @page-base !important;
                     }
                 }
             }
@@ -464,10 +739,10 @@
                 }
 
                 &:hover {
-                    border-color: @nv-page-color;
+                    border-color: @page-base;
 
                     a {
-                        color: @nv-page-color;
+                        color: @page-base;
                     }
                 }
 
@@ -524,11 +799,11 @@
             }
 
             &:hover {
-                border-color: @nv-page-color;
+                border-color: @page-base;
 
                 a {
                     &::after {
-                        border-color: @nv-page-color !important;
+                        border-color: @page-base !important;
                     }
                 }
             }
@@ -571,10 +846,10 @@
                 }
 
                 &:hover {
-                    border-color: @nv-page-color;
+                    border-color: @page-base;
 
                     a {
-                        color: @nv-page-color;
+                        color: @page-base;
                     }
                 }
 
@@ -641,23 +916,24 @@
 
             &.active {
                 a {
-                    color: @nv-page-color;
+                    color: @page-base;
                 }
+
                 &:hover {
                     a {
-                        color: @nv-page-color;
+                        color: @page-base;
                     }
                 }
             }
 
             &:hover {
                 a {
-                    color: @nv-page-color;
+                    color: @page-base;
                 }
             }
         }
 
-        
+
 
         .@{nv-prefix}-pagination-total-text {
             display: inline-block;
@@ -704,7 +980,7 @@
                     outline: none;
 
                     &:hover {
-                        border-color: @nv-page-color;
+                        border-color: @page-base;
                     }
                 }
             }
