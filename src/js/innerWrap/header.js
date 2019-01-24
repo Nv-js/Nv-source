@@ -43,7 +43,7 @@
             "version":"1.0.1"
         },
         "compress":{
-            "path":"./compress/@1.0.1/cdn_index",
+            "path":"./compress/@version/cdn_index",
             "version":"1.0.1"
         },
         "dragFloat":{
