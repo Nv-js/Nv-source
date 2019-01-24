@@ -37,11 +37,12 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
         options: {},
         eventsFn: {
             init: function () {
+                var PREFIX = 'nv'; 
                 var $element = $('#' + _pagination.options.id);
-                var html = '<ul class="nv-pagination-list">' +
-                    '<li class="nv-pagination-pre nv-pagination-disable"><a href="javascript:;"></a></li>' +
-                    '<li class="nv-pagination-item active"><a href="javascript:;">1</a></li>' +
-                    '<li class="nv-pagination-next nv-pagination-disable"><a href="javascript:;"></a></li>' +
+                var html = '<ul class="'+PREFIX+'-pagination-list">' +
+                    '<li class="'+PREFIX+'-pagination-pre '+PREFIX+'-pagination-disable"><a href="javascript:;"></a></li>' +
+                    '<li class="'+PREFIX+'-pagination-item active"><a href="javascript:;">1</a></li>' +
+                    '<li class="'+PREFIX+'-pagination-next '+PREFIX+'-pagination-disable"><a href="javascript:;"></a></li>' +
                     '</ul>';
                 $element.html(html);
                 var $list = $element.children('ul');
@@ -49,7 +50,7 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                 var opt = _pagination.options;
     
                 if (opt.type === 'mini') {
-                    $list.removeClass('nv-pagination-list').addClass('nv-pagination-mini-list');
+                    $list.removeClass(PREFIX+'-pagination-list').addClass(PREFIX+'-pagination-mini-list');
                 }
                 // 可选模块
                 var BAR,
@@ -80,10 +81,10 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
     
                 var initDropdown = function () {
                     //初始化下拉组件
-                    $element.find('.nv-pagination-dropdown').each(function (index, element) {
+                    $element.find('.'+PREFIX+'-pagination-dropdown').each(function (index, element) {
                         var $element = $(element),
-                            $link = $element.children('.nv-dropdown-link'),
-                            $menu = $element.children('.nv-dropdown-menu');
+                            $link = $element.children('.'+PREFIX+'-dropdown-link'),
+                            $menu = $element.children('.'+PREFIX+'-dropdown-menu');
     
                         var type = $element.attr('data-type'),
                             menuwidth = $element.attr('data-menuwidth'),
@@ -93,16 +94,16 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                             closeresize = $element.attr('data-close-resize');
     
                         //整体禁用
-                        if ($element.hasClass('nv-dropdown-disabled')) {
+                        if ($element.hasClass(PREFIX+'-dropdown-disabled')) {
                             return;
                         }
     
                         //事件委托 阻止冒泡
-                        $element.on('click', '.nv-dropdown-item-disabled', function (ev) {
+                        $element.on('click', '.'+PREFIX+'-dropdown-item-disabled', function (ev) {
                             ev.stopPropagation();
                             return false;
                         })
-                        $element.on('click', '.nv-dropdown-item', function (ev) {
+                        $element.on('click', '.'+PREFIX+'-dropdown-item', function (ev) {
                             var num = $(this).children('a').html();
                             //重新计算页数
                             _currentPage = 1;
@@ -139,11 +140,11 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                                 top_h = window_h - bottom_h - element_h;
     
                             if (menu_h < bottom_h) {
-                                $element.removeClass('nv-dropdown-up'); //down
+                                $element.removeClass(PREFIX+'-dropdown-up'); //down
                             } else if (menu_h < top_h) {
-                                $element.addClass('nv-dropdown-up'); //up
+                                $element.addClass(PREFIX+'-dropdown-up'); //up
                             } else {
-                                $element.removeClass('nv-dropdown-up'); //down
+                                $element.removeClass(PREFIX+'-dropdown-up'); //down
                             }
                         }
                         $(window).scroll(function () {
@@ -175,14 +176,14 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                     })
                     //全局
                     $(document).on('click', function () {
-                        $('.nv-dropdown').each(function (index, element) {
+                        $('.'+PREFIX+'-dropdown').each(function (index, element) {
                             var $element = $(element);
                             $element.removeClass('open');
                         })
                     })
                 };
                 var bindListener = function () {
-                    $list.on('click', '.nv-pagination-item', function () {
+                    $list.on('click', '.'+PREFIX+'-pagination-item', function () {
                         var $li = $(this),
                             pageNo = $li.children('a').text();
     
@@ -197,7 +198,7 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                             'end': _end
                         }); //执行回调
                     });
-                    $list.on('click', '.nv-pagination-pre', function () {
+                    $list.on('click', '.'+PREFIX+'-pagination-pre', function () {
                         if (_currentPage > 1) {
                             _currentPage--;
                             reloadBar(); //计算分页;
@@ -211,18 +212,18 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                             }); //执行回调   
                         }
                     });
-                    $list.on('click', '.nv-pagination-next', function () {
+                    $list.on('click', '.'+PREFIX+'-pagination-next', function () {
                         if (_currentPage < _page) {
                             _currentPage++;
                             reloadBar(); //计算分页;
                             opt.onChange(_currentPage); //执行回调
                         }
                     });
-                    $element.on('input', '.nv-pagination-options-jump input', function (ev) {
+                    $element.on('input', '.'+PREFIX+'-pagination-options-jump input', function (ev) {
                         var value = ev.target.value;
                         $(this).val(value.replace(/[^\d]/g, ''));
                     })
-                    $element.on('keyup', '.nv-pagination-options-jump input', function (ev) {
+                    $element.on('keyup', '.'+PREFIX+'-pagination-options-jump input', function (ev) {
                         if (ev.keyCode == 13) {
                             var pageNo = parseInt(ev.target.value);
                             if (pageNo === _currentPage) return;
@@ -270,11 +271,11 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                     BAR = '';
                     for (var i = 0; i < _pageList.length; i++) {
                         if (_currentPage == _pageList[i]) {
-                            BAR += '<li class="nv-pagination-item active"><a href="javascript:;">' + _pageList[i] + '</a></li>'
+                            BAR += '<li class="'+PREFIX+'-pagination-item active"><a href="javascript:;">' + _pageList[i] + '</a></li>'
                         } else if (_pageList[i] === '...') {
-                            BAR += '<li class="nv-pagination-ellipsis"><a href="javascript:;">' + _pageList[i] + '</a></li>'
+                            BAR += '<li class="'+PREFIX+'-pagination-ellipsis"><a href="javascript:;">' + _pageList[i] + '</a></li>'
                         } else {
-                            BAR += '<li class="nv-pagination-item"><a href="javascript:;">' + _pageList[i] + '</a></li>'
+                            BAR += '<li class="'+PREFIX+'-pagination-item"><a href="javascript:;">' + _pageList[i] + '</a></li>'
                         }
                     }
                 };
@@ -283,42 +284,42 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                     //上一页
                     if (_currentPage === 1) {
                         if (opt.showTextBtn) {
-                            PRE_M = '<li class="nv-pagination-pre nv-pagination-text nv-pagination-disable"><a href="javascript:;">' + opt.language.pre + '</a></li>';
+                            PRE_M = '<li class="'+PREFIX+'-pagination-pre '+PREFIX+'-pagination-text '+PREFIX+'-pagination-disable"><a href="javascript:;">' + opt.language.pre + '</a></li>';
                         } else {
-                            PRE_M = '<li class="nv-pagination-pre nv-pagination-disable"><a href="javascript:;"></a></li>';
+                            PRE_M = '<li class="'+PREFIX+'-pagination-pre '+PREFIX+'-pagination-disable"><a href="javascript:;"></a></li>';
                         }
                     } else {
                         if (opt.showTextBtn) {
-                            PRE_M = '<li class="nv-pagination-pre nv-pagination-text"><a href="javascript:;">' + opt.language.pre + '</a></li>';
+                            PRE_M = '<li class="'+PREFIX+'-pagination-pre '+PREFIX+'-pagination-text"><a href="javascript:;">' + opt.language.pre + '</a></li>';
                         } else {
-                            PRE_M = '<li class="nv-pagination-pre"><a href="javascript:;"></a></li>';
+                            PRE_M = '<li class="'+PREFIX+'-pagination-pre"><a href="javascript:;"></a></li>';
                         }
                     }
                     //下一页
                     if (_currentPage === _page) {
                         if (opt.showTextBtn) {
-                            NEXT_M = '<li class="nv-pagination-next nv-pagination-text nv-pagination-disable"><a href="javascript:;">' + opt.language.next + '</a></li>';
+                            NEXT_M = '<li class="'+PREFIX+'-pagination-next '+PREFIX+'-pagination-text '+PREFIX+'-pagination-disable"><a href="javascript:;">' + opt.language.next + '</a></li>';
                         } else {
-                            NEXT_M = '<li class="nv-pagination-next nv-pagination-disable"><a href="javascript:;"></a></li>';
+                            NEXT_M = '<li class="'+PREFIX+'-pagination-next '+PREFIX+'-pagination-disable"><a href="javascript:;"></a></li>';
                         }
                     } else {
                         if (opt.showTextBtn) {
-                            NEXT_M = '<li class="nv-pagination-next nv-pagination-text"><a href="javascript:;">' + opt.language.next + '</a></li>';
+                            NEXT_M = '<li class="'+PREFIX+'-pagination-next '+PREFIX+'-pagination-text"><a href="javascript:;">' + opt.language.next + '</a></li>';
                         } else {
-                            NEXT_M = '<li class="nv-pagination-next"><a href="javascript:;"></a></li>';
+                            NEXT_M = '<li class="'+PREFIX+'-pagination-next"><a href="javascript:;"></a></li>';
                         }
                     }
     
                     //跳转
-                    JUMP_M = '<li class="nv-pagination-options">' +
-                        '<div class="nv-pagination-options-jump">' + opt.language.jump +
+                    JUMP_M = '<li class="'+PREFIX+'-pagination-options">' +
+                        '<div class="'+PREFIX+'-pagination-options-jump">' + opt.language.jump +
                         '<input type="text" value="' + _currentPage + '">' + opt.language.page +
                         '</div>' +
                         '</li>';
                     //总页数
-                    PAGE_M = '<li class="nv-pagination-total-page">' + opt.language.total + _page + opt.language.page + '</li>';
+                    PAGE_M = '<li class="'+PREFIX+'-pagination-total-page">' + opt.language.total + _page + opt.language.page + '</li>';
                     //总条数
-                    TOTAL_M = '<li class="nv-pagination-total-text">' + opt.language.total + _total + opt.language.item + '</li>';
+                    TOTAL_M = '<li class="'+PREFIX+'-pagination-total-text">' + opt.language.total + _total + opt.language.item + '</li>';
                     //信息
                     INFO_M = '';
                     //分页下拉
@@ -328,18 +329,18 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                 var initSize = function () {
                     //每页条数 complete/simple/mini
                     if (opt.type === 'complete') {
-                        SIZE_M = '<div class="nv-pagination-dropdown nv-dropdown-btn" data-type="click">' +
-                            '<a class="nv-dropdown-link" href="javascript:;">' +
-                            _pageSize + '<i style="padding:0 2px">/</i>' + opt.language.page + '</a><div class="nv-dropdown-menu">';
+                        SIZE_M = '<div class="'+PREFIX+'-pagination-dropdown '+PREFIX+'-dropdown-btn" data-type="click">' +
+                            '<a class="'+PREFIX+'-dropdown-link" href="javascript:;">' +
+                            _pageSize + '<i style="padding:0 2px">/</i>' + opt.language.page + '</a><div class="'+PREFIX+'-dropdown-menu">';
                     } else if (opt.type === 'mini') {
-                        SIZE_M = '<div class="nv-pagination-dropdown" data-type="click" style="vertical-align: middle;">' +
-                            '<a class="nv-dropdown-link" href="javascript:;">' +
-                            _pageSize + '<i style="padding:0 2px">/</i>' + opt.language.page + '</a><div class="nv-dropdown-menu">';
+                        SIZE_M = '<div class="'+PREFIX+'-pagination-dropdown" data-type="click" style="vertical-align: middle;">' +
+                            '<a class="'+PREFIX+'-dropdown-link" href="javascript:;">' +
+                            _pageSize + '<i style="padding:0 2px">/</i>' + opt.language.page + '</a><div class="'+PREFIX+'-dropdown-menu">';
                     }
     
                     var html_li = '';
                     opt.pageSizeOptions.map(function (item) {
-                        html_li += '<li class="nv-dropdown-item"><a href="javascript:;">' + parseInt(item) + '</a></li>';
+                        html_li += '<li class="'+PREFIX+'-dropdown-item"><a href="javascript:;">' + parseInt(item) + '</a></li>';
                     })
                     SIZE_M += html_li;
                     SIZE_M += '</div></div>';
