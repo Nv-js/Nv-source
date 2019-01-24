@@ -332,7 +332,7 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                             '<a class="nv-dropdown-link" href="javascript:;">' +
                             _pageSize + '<i style="padding:0 2px">/</i>' + opt.language.page + '</a><div class="nv-dropdown-menu">';
                     } else if (opt.type === 'mini') {
-                        SIZE_M = '<div class="nv-dropdown" style="vertical-align: middle;" data-type="click">' +
+                        SIZE_M = '<div class="nv-pagination-dropdown" data-type="click" style="vertical-align: middle;">' +
                             '<a class="nv-dropdown-link" href="javascript:;">' +
                             _pageSize + '<i style="padding:0 2px">/</i>' + opt.language.page + '</a><div class="nv-dropdown-menu">';
                     }
