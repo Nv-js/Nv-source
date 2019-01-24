@@ -3,14 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>组件平台显示内容</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?4"/>
-    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
-
-    <style>
-        .c-demo div{
-            margin-bottom: 8px;
-        }
-    </style>
+    <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
 </head>
 <body>
 <article class="c-content">
@@ -30,74 +25,73 @@
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>基础样式 <a href="#">#</a></p>
-        <span>最基本的分页样式，当分页小于5页时，全部展示(通过 <i class="c-block-inline">items_per_page</i> 参数控制每页显示条数)。</span>
+        <span>最基本的分页样式，当分页小于7页时，全部展示</span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="nv-page basis-page"></div>
+            <div class="nv-pagination" id="page1"></div>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--HTML代码-->
-            <div class="nv-page basis-page"></div>
+            <div class="nv-pagination" id="page1-demo"></div>
             <!--jQuery-->
-            Nv.ready(function(){
-                Nv.use("./nvModules/page",function(nv,page){
-                    page.init(200,{
-                        items_per_page:40
-                    },document.getElementsByClassName("basis-page")[0]);
-                })
+            page.init({
+                'id': 'page1',
+                'total': 30,
+                'pageSize': 5
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>更多分页 <a href="#">#</a></p>
-        <span>当分页大于5页时，部分页码隐藏(参数 <i class="c-block-inline">items_per_page</i> 默认为10条/页)</span>
+        <span>当分页大于6页时，部分页码隐藏</span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="nv-page more-page"></div>
+            <div class="nv-pagination" id="page2"></div>
         </div>
         <div class="c-code-inner c-code-hide">
-            <!--HTML-->
-            <div class="nv-page more-page"></div>
+            <!--HTML代码-->
+            <div class="nv-pagination" id="page2-demo"></div>
             <!--jQuery-->
-            Nv.use("./nvModules/page",function(nv,page){
-                    page.init(200,{
-                        items_per_page:10
-                    },document.getElementsByClassName("more-page")[0]);
+            page.init({
+                'id': 'page2',
+                'total': 35,
+                'pageSize': 5
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
 
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>可选择每页数量 <a href="#">#</a></p>
-        <span>可以选择每页显示列表数量(通过 <i class="c-block-inline">select_page</i> 参数进行控制，默认为false不显示)</span>
+        <span>可以选择每页显示列表数量</span>
     </section>
     <section class="c-code">
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="nv-page select-page"></div>
+            <div class="nv-pagination" id="page3"></div>
         </div>
         <div class="c-code-inner c-code-hide">
-            <!--HTML-->
-            <div class="nv-page select-page"></div>
+            <!--HTML代码-->
+            <div class="nv-pagination" id="page3-demo"></div>
             <!--jQuery-->
-            Nv.use("./nvModules/page",function(nv,page){
-                    page.init(200,{
-                        select_page:true
-                },document.getElementsByClassName("select-page")[0]);
+            page.init({
+                'id': 'page3',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
 
     <div class="c-block-50"></div>
@@ -109,46 +103,48 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="nv-page jump-page"></div>
+            <div class="nv-pagination" id="page4"></div>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--HTML-->
-            <div class="nv-page jump-page"></div>
+            <div class="nv-pagination" id="page4-demo"></div>
             <!--jQuery-->
-            Nv.use("./nvModules/page",function(nv,page){
-                    page.init(200,{
-                        select_page:true,
-                        jump:true
-                },document.getElementsByClassName("jump-page")[0]);
+            page.init({
+                'id': 'page4',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true,
+                'showJump': true,
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
 
     <div class="c-block-50"></div>
     <section class="c-sub-title">
         <p>显示总数 <a href="#">#</a></p>
-        <span>可选择是否显示总数(通过 <i class="c-block-inline">total</i> 参数进行配置，默认为false不显示)</span>
+        <span>可选择是否显示总数</span>
     </section>
     <section class="c-code ">
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="nv-page total-page"></div>
+            <div class="nv-pagination" id="page5"></div>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--HTML-->
-            <div class="nv-page total-page"></div>
+            <div class="nv-pagination" id="page5-demo"></div>
             <!--jQuery-->
-            Nv.use("./nvModules/page",function(nv,page){
-                    page.init(200,{
-                        select_page:true,
-                        jump:true,
-                        total:true
-                },document.getElementsByClassName("total-page")[0]);
+            page.init({
+                'id': 'page5',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true,
+                'showJump': true,
+                'showTotal': true
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
 
     <div class="c-block-50"></div>
@@ -160,56 +156,31 @@
         <!--switch code show or hide-->
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
-            <div class="nv-page simple-page"></div>
+            <div class="nv-pagination" id="page6"></div>
         </div>
         <div class="c-code-inner c-code-hide">
             <!--HTML-->
-            <div class="nv-page simple-page"></div>
+            <div class="nv-pagination" id="page6-demo"></div>
             <!--jQuery-->
-            Nv.use("./nvModules/page",function(nv,quickMenu,code,page){
-                    page.init(200,{
-                        select_page:true,
-                        jump:true,
-                        total:true,
-                        simple:true
-                },document.getElementsByClassName("simple-page")[0]);
+            page.init({
+                'id': 'page6',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true,
+                'showJump': true,
+                'showTotal': true,
+                'type': 'mini'
             })
         </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
+        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="zricon-arrow-down"></i></a>
     </section>
 
     <div class="c-block-50"></div>
-    <section class="c-sub-title">
-        <p>简版翻页 <a href="#">#</a></p>
-        <span>只显示跳转输入框和上下页按钮的简单翻页。</span>
-    </section>
-    <section class="c-code">
-        <!--switch code show or hide-->
-        <div class="c-code-switch">&lt;code&gt;</div>
-        <div class="c-demo">
-            <div class="nv-page mini-page"></div>
-        </div>
-        <div class="c-code-inner c-code-hide">
-            <!--HTML-->
-            <div class="nv-page mini-page"></div>
-            <!--jQuery-->
-            Nv.use("./nvModules/page",function(nv,page){
-            page.init(200,{
-                mini:true
-            },document.getElementsByClassName("mini-page")[0]);
-            })
-        </div>
-        <a href="javascript:void(0);" class="c-toggle"><span>显示代码</span><i class="nvicon-arrow-down"></i></a>
-    </section>
-    <div class="c-block-50"></div>
-    <section class="c-sub-title">
-        <p>配置 <a href="#">#</a></p>
-        <span class="c-title-3">page组件可以通过传递不同的参数来配置你所需要的翻页功能(不传递参数则显示默认page样式)</span>
-    </section>
+    
     <div class="c-options-title"></div>
     <section class="c-sub-title">
         <p>参数配置 <a href="#">#</a></p>
-        <span class="c-title-3">page.init(total_number,{},dom)</span>
+        <span class="c-title-3"></span>
     </section>
     <div class="c-block-20"></div>
     <section class="c-table">
@@ -235,167 +206,24 @@
                 <tbody>
                 <tr>
                     <td>
-                        <div class="c-cell c-table-w-125">items_per_page</div>
+                        <div class="c-cell c-table-w-125">current</div>
                     </td>
                     <td>
                         <div class="c-cell c-table-w-125">Number（选填）</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-700">每页显示多少条数据，默认是10条</div>
+                        <div class="c-cell c-table-w-700">当前页码</div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <div class="c-cell c-table-w-125">num_display_entries</div>
+                        <div class="c-cell c-table-w-125">pageSize</div>
                     </td>
                     <td>
                         <div class="c-cell c-table-w-125">Number（选填）</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-700">显示多少个翻页按钮，默认是6个</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">current_page</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">Number（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">初始化插件从第几页开始，默认从第一页开始</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">link_to</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">String（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">翻页按钮的a表现指向，默认为"javascript:;"</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">first_text</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">String（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">首页按钮，文字可自定义，当为空时字符串不显示首页</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">last_text</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">String（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">尾页按钮，文字可自定义，当为空时字符串不显示首页</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">prev_text</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">String（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">尾页按钮，文字可自定义，初始默认为<</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">next_text</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">String（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">尾页按钮，文字可自定义，初始默认为></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">ellipse_text.</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">String（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">分页中间的分割按钮，初始默认是...</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">prev_show_always</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">是否显示上一页,初始默认显示</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">next_show_always</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">是否显示上一页,初始默认显示</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">page_callback</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">Function（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">触发翻页按钮的回调函数，返回页数和翻页指向的dom节点</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">selected_page_callback</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">Function（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">触发页数下拉框的回调函数，返回每页多少条数据和当前dom节点</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">select_page</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">是否出现页数下拉框，默认出现</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">jump</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">是否出现跳转，默认出现</div>
+                        <div class="c-cell c-table-w-700">每页条数默认10条</div>
                     </td>
                 </tr>
                 <tr>
@@ -403,43 +231,142 @@
                         <div class="c-cell c-table-w-125">total</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
+                        <div class="c-cell c-table-w-125">Number（必填）</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-700">是否显示总页数，默认出现</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="c-cell c-table-w-125">complete</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
-                    </td>
-                    <td>
-                        <div class="c-cell c-table-w-700">是否出现完整版分页，默认是true</div>
+                        <div class="c-cell c-table-w-700">总条数</div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <div class="c-cell c-table-w-125">simple</div>
+                        <div class="c-cell c-table-w-125">pageSizeOptions</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
+                        <div class="c-cell c-table-w-125">Array（选填）</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-700">是否出现简单版分页，默认是false</div>
+                        <div class="c-cell c-table-w-700">下拉条数数组[10, 20, 50, 100]</div>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <div class="c-cell c-table-w-125">mini</div>
+                        <div class="c-cell c-table-w-125">showPageSize</div>
                     </td>
                     <td>
                         <div class="c-cell c-table-w-125">Boolean（选填）</div>
                     </td>
                     <td>
-                        <div class="c-cell c-table-w-700">是否出现mini版分页，默认是false</div>
+                        <div class="c-cell c-table-w-700">是否显示分页切换,默认false</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">showTotal</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否显示总条数,默认false</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">showTotalPage</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否显示总页数,默认false</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">showJump</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否显示跳转框,默认false</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">onChange</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Function（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">分页点击回调函数</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">onShowSizeChange</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Function（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">每页下拉回调函数</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">type</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">分页类型默认complete,可选mini</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">errNotice</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">String（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">错误提示文案</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">language</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Object（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">多语言</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">showTextBtn</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否使用文字替换上下页箭头</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="c-cell c-table-w-125">showInfo</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-125">Boolean（选填）</div>
+                    </td>
+                    <td>
+                        <div class="c-cell c-table-w-700">是否显示分页信息(待更新)</div>
                     </td>
                 </tr>
                 </tbody>
@@ -448,42 +375,53 @@
     </section>
     </section>
 </article>
-<!--注意此段js必须第一引入在开发模式下{-->
-<script type="text/javascript" language="javascript" src="//storage.360buyimg.com/0.0.1/nv.min.js"></script>
 <script type="text/javascript">
     Nv.config({
-        baseUrl: "/js/plugin_modules/",
+        cdnUrl: "/dist/cdn/",
         "requestTime":true
     })
     Nv.ready(function () {
-        Nv.use("./js/quickMenu", "./js/code","./nvModules/page",function(nv,quickMenu,code,page){
-            var page=page.init;
-            page(200,{
-                items_per_page:40
-            },".basis-page");
-            page(200,{},".more-page");
-            page(200,{
-                items_per_page:5,
-                select_page:true
-            },".select-page");
-            page(200,{
-                select_page:true,
-                jump:true
-            },".jump-page");
-            page(200,{
-                select_page:true,
-                jump:true,
-                total:true
-            },".total-page");
-            page(200,{
-                select_page:true,
-                jump:true,
-                total:true,
-                simple:true
-            },".simple-page");
-            page(200,{
-                mini:true
-            },".mini-page");
+        Nv.use("page",function(nv,page){
+            var page1 = page.init({
+                'id': 'page1',
+                'total': 30,
+                'pageSize': 5
+            })
+            var page1 = page.init({
+                'id': 'page2',
+                'total': 35,
+                'pageSize': 5
+            })
+            page.init({
+                'id': 'page3',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true
+            })
+            page.init({
+                'id': 'page4',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true,
+                'showJump': true,
+            })
+            page.init({
+                'id': 'page5',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true,
+                'showJump': true,
+                'showTotal': true
+            })
+            page.init({
+                'id': 'page6',
+                'total': 100,
+                'pageSize': 5,
+                'showPageSize': true,
+                'showJump': true,
+                'showTotal': true,
+                'type': 'mini'
+            })
         })
     })
 </script>
