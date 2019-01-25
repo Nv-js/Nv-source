@@ -1173,7 +1173,7 @@ a.nv-btn-sm {
 .nv-dropdown .nv-dropdown-link {
   text-decoration: none;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, SimSun, sans-serif;
-  color: #4363f4;
+  color: rgba(0, 0, 0, 0.65);
   font-size: 14px;
   -webkit-transition: color .3s ease;
   -o-transition: color .3s ease;
@@ -1380,8 +1380,12 @@ a.nv-btn-sm {
 .nv-input-group {
   position: relative;
 }
-.nv-input-group .nv-input {
+.nv-input-group .nv-input:first-child {
   padding-right: 30px;
+}
+.nv-input-group .nv-input:last-child {
+  padding-left: 30px;
+  padding-right: 0px;
 }
 .nv-input-group [class=nvicon-close-circle] {
   display: none;
@@ -1403,6 +1407,10 @@ a.nv-btn-sm {
   opacity: .45;
   line-height: 32px;
 }
+.nv-input-addon:first-child {
+  left: 8px;
+  width: 14px;
+}
 .nv-input-addon.nv-input-sm {
   height: 24px;
   line-height: 24px;
@@ -1410,14 +1418,6 @@ a.nv-btn-sm {
 .nv-input-addon.nv-input-lg {
   height: 40px;
   line-height: 40px;
-}
-.nv-input-left .nv-input {
-  padding-left: 30px;
-  padding-right: 0px;
-}
-.nv-input-left .nv-input-addon {
-  left: 8px;
-  width: 14px;
 }
 .nv-textarea {
   width: 100%;
@@ -1456,12 +1456,13 @@ a.nv-btn-sm {
   bottom: 8px;
   color: #d9d9d9;
 }
-.nv-input-wapper .nv-unselect {
+.nv-input-wapper .nv-simulation {
   width: 20%;
   margin: 0;
   display: inline-block;
+  vertical-align: middle;
 }
-.nv-input-wapper .nv-unselect .nv-input {
+.nv-input-wapper .nv-simulation .nv-select-reception {
   -webkit-border-bottom-right-radius: 0;
           border-bottom-right-radius: 0;
   -webkit-border-top-right-radius: 0;
@@ -1469,13 +1470,13 @@ a.nv-btn-sm {
 }
 .nv-input-wapper > .nv-input {
   display: inline-block;
-  width: 79%;
-  margin-left: -4px;
-  border-left: 1px solid rgba(255, 255, 255, 0);
+  width: 80%;
+  border-left: none;
   -webkit-border-top-left-radius: 0;
           border-top-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;
           border-bottom-left-radius: 0;
+  vertical-align: middle;
 }
 .nv-input-wapper > .nv-input:focus {
   border-left: 1px solid #4363f4;
@@ -1483,8 +1484,9 @@ a.nv-btn-sm {
 .nv-input-btn {
   position: relative;
 }
-.nv-input-btn .nv-unselect .nv-select-title .nv-input {
+.nv-input-btn .nv-simulation {
   background: #fafafa;
+  vertical-align: middle;
 }
 .nv-input-btn > .nv-input {
   width: 70%;
@@ -1492,13 +1494,13 @@ a.nv-btn-sm {
           border-bottom-right-radius: 0;
   -webkit-border-top-right-radius: 0;
           border-top-right-radius: 0;
+  vertical-align: middle;
 }
 .nv-input-btn > .nv-input-addon {
   position: relative;
   right: 0;
-  top: 1px;
-  margin-left: -4px;
-  width: 9%;
+  top: 0px;
+  width: 10%;
   background: #fafafa;
   border: 1px solid #d9d9d9;
   -webkit-border-bottom-right-radius: 4px;
@@ -1510,6 +1512,7 @@ a.nv-btn-sm {
   opacity: 1;
   height: 32px;
   text-align: center;
+  vertical-align: middle;
 }
 .nv-input-btn > .nv-input-addon .nvicon-search-empty {
   opacity: .45;
@@ -1517,7 +1520,13 @@ a.nv-btn-sm {
 .nv-input-btn > .nv-input-addon .nvicon-search-empty:hover {
   opacity: .65;
 }
-.nv-input-wapper-left .nv-unselect .nv-input {
+.nv-input-wapper-left .nv-simulation {
+  width: 20%;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.nv-input-wapper-left .nv-simulation .nv-select-reception {
   -webkit-border-radius: 4px;
           border-radius: 4px;
   -webkit-border-bottom-left-radius: 0;
@@ -1526,9 +1535,8 @@ a.nv-btn-sm {
           border-top-left-radius: 0;
 }
 .nv-input-wapper-left > .nv-input {
-  width: 79%;
-  margin-right: -4px;
-  margin-left: 0px;
+  width: 80%;
+  margin-left: 0;
   border-right: 1px solid rgba(255, 255, 255, 0);
   border-left: 1px solid #d9d9d9;
   -webkit-border-radius: 4px;
@@ -3085,13 +3093,53 @@ a.nv-btn-sm {
 .nv-select {
   display: none;
 }
-.nv-unselect {
+.nv-simulation {
   position: relative;
   display: inline-block;
   color: rgba(0, 0, 0, 0.65);
   width: 100%;
 }
-.nv-unselect .nv-select-content {
+.nv-simulation .nv-select-reception {
+  position: relative;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  min-height: 32px;
+  vertical-align: middle;
+  padding-right: 30px;
+  padding-left: 8px;
+  line-height: 30px;
+  display: inline-block;
+}
+.nv-simulation .nv-select-reception:hover {
+  border: 1px solid #4363f4;
+}
+.nv-simulation .nv-select-reception span {
+  display: inline-block;
+  background: #f5f5f5;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  margin: 3px;
+  line-height: 24px;
+}
+.nv-simulation .nv-select-reception span i {
+  opacity: .65;
+  margin-left: 4px;
+}
+.nv-simulation .nv-select-reception span i:hover {
+  opacity: .85;
+}
+.nv-simulation .nv-select-reception > i {
+  opacity: .25;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -9.5px;
+  right: 8px;
+  line-height: normal;
+}
+.nv-simulation .nv-select-menu {
   width: 100%;
   font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -3106,35 +3154,25 @@ a.nv-btn-sm {
   max-height: 150px;
   overflow: auto;
 }
-.nv-unselect .nv-select-content dd,
-.nv-unselect .nv-select-content dt {
+.nv-simulation .nv-select-menu dd,
+.nv-simulation .nv-select-menu dt {
   height: 32px;
   line-height: 32px;
   padding: 0 16px;
-}
-.nv-unselect .nv-select-content dd:hover,
-.nv-unselect .nv-select-content dt:hover {
-  background: #f0f5ff;
-}
-.nv-unselect .nv-select-content dd {
-  overflow: hidden;
-  white-space: nowrap;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-}
-.nv-unselect .nv-select-content .nv-select-tips {
-  color: rgba(0, 0, 0, 0.25);
-}
-.nv-unselect .nv-select-content .nv-select-checkbox {
   cursor: pointer;
   font-size: 14px;
-  opacity: 0.65;
   color: #000000;
 }
-.nv-unselect .nv-select-content .nv-select-checkbox:hover .nv-select-checkbox-normal {
+.nv-simulation .nv-select-menu dd:hover,
+.nv-simulation .nv-select-menu dt:hover {
+  background: #f0f5ff;
+}
+.nv-simulation .nv-select-menu dd:hover .nv-select-checkbox-normal,
+.nv-simulation .nv-select-menu dt:hover .nv-select-checkbox-normal {
   border-color: #4363F4;
 }
-.nv-unselect .nv-select-content .nv-select-checkbox .nv-select-checkbox-normal {
+.nv-simulation .nv-select-menu dd .nv-select-checkbox-normal,
+.nv-simulation .nv-select-menu dt .nv-select-checkbox-normal {
   display: inline-block;
   width: 14px;
   height: 14px;
@@ -3146,7 +3184,8 @@ a.nv-btn-sm {
   margin-right: 8px;
   margin-top: -3px;
 }
-.nv-unselect .nv-select-content .nv-select-checkbox .nv-select-checkbox-normal span {
+.nv-simulation .nv-select-menu dd .nv-select-checkbox-normal span,
+.nv-simulation .nv-select-menu dt .nv-select-checkbox-normal span {
   position: absolute;
   display: inline-block;
   top: 50%;
@@ -3164,7 +3203,8 @@ a.nv-btn-sm {
           transform: rotate(135deg);
   visibility: hidden;
 }
-.nv-unselect .nv-select-content .nv-select-checkbox .nv-select-checkbox-normal .nv-select-checkbox-uncheck {
+.nv-simulation .nv-select-menu dd .nv-select-checkbox-normal .nv-select-checkbox-uncheck,
+.nv-simulation .nv-select-menu dt .nv-select-checkbox-normal .nv-select-checkbox-uncheck {
   border: transparent;
   height: 0;
   width: 8px;
@@ -3176,29 +3216,65 @@ a.nv-btn-sm {
   margin-top: 0;
   margin-left: -4px;
 }
-.nv-unselect .nv-select-content .nv-select-checkbox .nv-select-checkbox-text {
+.nv-simulation .nv-select-menu dd > span:last-child,
+.nv-simulation .nv-select-menu dt > span:last-child {
   display: inline-block;
   height: 14px;
   line-height: 14px;
 }
-.nv-unselect .nv-select-content .nv-select-checkbox.nv-select-checkbox-checked .nv-select-checkbox-normal {
+.nv-simulation .nv-select-menu dd {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.nv-simulation .nv-select-menu .nv-select-checkbox-checked .nv-select-checkbox-normal {
   border: none;
   background: #4363F4;
 }
-.nv-unselect .nv-select-content .nv-select-checkbox.nv-select-checkbox-checked .nv-select-checkbox-normal span {
+.nv-simulation .nv-select-menu .nv-select-checkbox-checked .nv-select-checkbox-normal span {
   visibility: visible;
 }
-.nv-unselect .nv-select-content-lg {
+.nv-simulation .nv-select-multiple {
+  padding-left: 0;
+}
+.nv-simulation .nv-select-multiple dd,
+.nv-simulation .nv-select-multiple dt {
+  opacity: 0.65;
+}
+.nv-simulation .nv-select-multiple dd:hover,
+.nv-simulation .nv-select-multiple dt:hover {
+  background: transparent;
+}
+.nv-select-disable {
+  background-color: #f5f5f5;
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+.nv-select-disable .nv-select-reception:hover {
+  border: 1px solid #d9d9d9;
+}
+.nv-select-lg .nv-select-reception,
+.nv-select-lg .nv-select-menu {
+  line-height: 38px;
+  min-height: 38px;
+}
+.nv-select-lg .nv-select-menu {
   top: 44px;
 }
-.nv-unselect .nv-select-content-lg dd {
+.nv-select-lg .nv-select-menu dd {
   height: 40px;
   line-height: 40px;
 }
-.nv-unselect .nv-select-content-sm {
+.nv-select-sm .nv-select-reception,
+.nv-select-sm .nv-select-menu {
+  line-height: 22px;
+  min-height: 22px;
+}
+.nv-select-sm .nv-select-menu {
   top: 28px;
 }
-.nv-unselect .nv-select-content-sm dd {
+.nv-select-sm .nv-select-menu dd {
   height: 24px;
   line-height: 24px;
 }
@@ -3207,41 +3283,6 @@ a.nv-btn-sm {
 }
 .nv-select-show {
   display: block;
-}
-.nv-select-values {
-  position: relative;
-  width: 100%;
-  border: 1px solid #d9d9d9;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  min-height: 32px;
-  vertical-align: middle;
-}
-.nv-select-values:hover {
-  border: 1px solid #4363f4;
-}
-.nv-select-values span {
-  display: inline-block;
-  padding: 3px 4px;
-  background: #f5f5f5;
-  -webkit-border-radius: 4px;
-          border-radius: 4px;
-  margin: 4px;
-}
-.nv-select-values span i {
-  opacity: .65;
-  margin-left: 4px;
-}
-.nv-select-values span i:hover {
-  opacity: .85;
-}
-.nv-select-values > i {
-  opacity: .25;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  margin-top: -9.5px;
-  right: 8px;
 }
 /*
  * step
