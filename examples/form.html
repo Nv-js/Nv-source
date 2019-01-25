@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Form</title>
-    <link type="text/css" rel="stylesheet" href="/frontPage/css/content.min.css?1" />
+    <link type="text/css" rel="stylesheet" href="/dist/local/css/content/content.min.css" />
     <style type="text/css">
         .c-demo-form{
             width: 50%;
         }
     </style>
-    <script type="text/javascript" src="/js/nv.min.js?1"></script>
+    <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.min.js"></script>
     <script type="text/javascript">
         Nv.config({
-            baseUrl:"/js/plugin_modules/",
-            requestTime:true
-        })
-        Nv.ready(function(){
-            Nv.use("./js/quickMenu","./js/code")
-        })
+            cdnUrl: "/dist/cdn/",
+            requestTime: true,
+        });
     </script>
 </head>
 <body>
