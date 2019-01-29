@@ -82,7 +82,7 @@ var _input = {
                         maxLength = parseInt($this.attr('maxLength'));
 
                     if (defaultStr.length < maxLength + 1) {
-                        $this.val(`${defaultStr}${option.inserted}`);
+                        $this.val(defaultStr + option.inserted);
                         // 改变字数，绑定this
                         _input.eventFn.inputNumFn.call(this);
                     }
@@ -138,4 +138,4 @@ var _input = {
         }
     },
     ajax: {}
-};
+}

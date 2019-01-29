@@ -5,6 +5,7 @@
      * @Date: Created in 2018/1/28 下午9:00
      * @Description:默认模块配置
      */
+
     var config = {
         "jquery":{
             "path":"./jqplugins/jquery/@version/cdn_index",
