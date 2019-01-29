@@ -219,7 +219,7 @@ var _select = {
                 }
 
                 if (option.selected) {
-                    let $selector = $simulation.find('dd[data-value=' + option.selected + ']');
+                    var $selector = $simulation.find('dd[data-value=' + option.selected + ']');
                     if ($selector.length !== 0) {
                         $selector.click();
                     } else {
@@ -228,7 +228,7 @@ var _select = {
                 }
 
                 if (option.remove) {
-                    let $selector = $simulation.find('dd[data-value=' + option.remove + ']');
+                    var $selector = $simulation.find('dd[data-value=' + option.remove + ']');
                     if ($selector.length !== 0) {
                         $selector.remove();
                     } else {

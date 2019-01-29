@@ -78,7 +78,7 @@ var _input = {
                 option.beforeFn();
 
                 if (option.inserted) {
-                    let defaultStr = $this.val(),
+                    var defaultStr = $this.val(),
                         maxLength = parseInt($this.attr('maxLength'));
 
                     if (defaultStr.length < maxLength + 1) {
