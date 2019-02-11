@@ -3,12 +3,12 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
     var _pagination = {
         init: function (config) {
             var defOptions = {
-                'current': 1, //当前页数
+                'pageNo': 1, //当前页数
                 'pageSize': 10, //每页条数
                 'total': 0, //总数
                 'defaultCurrent': 1, //默认的当前页数
                 'defaultPageSize': 10, //默认的每页条数
-                'pageSizeOptions': [10, 20, 50, 100], //[10,20,50,100]
+                'pageSizeOptions': [50], //[10,20,50,100]
                 'showPageSize': false, //是否显示分页切换
                 'showTotal': false, //是否显示总条数
                 'showTotalPage': false, //是否显示总页数
@@ -71,7 +71,7 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                     return;
                 }
                 var _total = opt.total,
-                    _currentPage = opt.current,
+                    _currentPage = opt.pageNo,
                     _pageSize = opt.pageSize || opt.defaultPageSize,
                     _page = Math.ceil(_total / _pageSize),
                     _pageList = [],
@@ -216,7 +216,14 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                         if (_currentPage < _page) {
                             _currentPage++;
                             reloadBar(); //计算分页;
-                            opt.onChange(_currentPage); //执行回调
+                            opt.onChange({
+                                'total': _total,
+                                'pageNo': _currentPage,
+                                'pageSize': _pageSize,
+                                'totalPage': _page,
+                                'start': _start,
+                                'end': _end
+                            }); //执行回调
                         }
                     });
                     $element.on('input', '.'+PREFIX+'-pagination-options-jump input', function (ev) {
