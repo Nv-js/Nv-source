@@ -280,9 +280,23 @@
 | 属性名称  | 类型（是否必要）   |  描述  |
 | --------    | :----- | :----:  |
 | date-type  | string(选填)   | (默认hover,可选 "click") eg: data-type="click"   |
+| data-menuwidth  | string(选填)   | 下拉菜单宽度 eg: data-menuwidth="50px"  |
+| data-menuheight  | string(选填)   | 下拉菜单高度 eg: data-menuheight="50px"  |
+| data-close-auto | Boolean (选填)   | true 开启时将关闭,自动计算向上或向下翻折叠 eg: data-close-auto="true"  |
+
++ 自定义属性
+
+| 类型  | 位置   |  描述  |
+| --------    | :----- | :----:  |
+| nv-dropdown-btn  | 最外层   | 是否展示为按钮样式   |
+| nv-dropdown-up  | 最外层   | 向上翻折 |
+| nv-dropdown-right  | 最外层  | 下拉窗体右对齐 |
+| nv-dropdown-equal | 最外层   | 下拉窗体与父级等宽 |
+| nv-dropdown-disabled | 最外层   | 下拉整体禁用 |
+| nv-dropdown-item-disabled | 下拉列表项   | 某一条下拉项禁用 |
 
 
 
-[DEMO展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=1ef74d93a52d4ae8b58dd8489db71393&directoryName=Breadcrumb%20%E9%9D%A2%E5%8C%85%E5%B1%91)
+[DEMO展示](http://nv.zhangjinglin.cn/api?type=dropdown)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/6)
