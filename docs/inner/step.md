@@ -217,7 +217,7 @@
     </div>
 ```
 
-[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=a200ec6480234568bcce5253e72bf7b1&directoryName=Step%20%E6%AD%A5%E9%AA%A4%E6%9D%A1)
+[Demo展示](http://nv.zhangjinglin.cn/api?type=step)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/9)
 

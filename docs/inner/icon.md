@@ -28,7 +28,7 @@
 
 ```
 
-[查看所有可用图标样式](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=8fd3459c5ba04cf681494941b2db31e2&directoryName=Icon%20%E5%9B%BE%E6%A0%87)
+[查看所有可用图标样式](http://nv.zhangjinglin.cn/api?type=icons)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/3)
 

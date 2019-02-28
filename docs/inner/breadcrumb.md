@@ -61,7 +61,6 @@ s
         <em class="nv-breadcrumb-normal nv-breadcrumb-current">Balabala</em>
     </div>
 ```
-
 <br/>
 
 首级只有图标代码结构：
@@ -81,6 +80,6 @@ s
     </div>
 ```
 
-[DEMO展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=1ef74d93a52d4ae8b58dd8489db71393&directoryName=Breadcrumb%20%E9%9D%A2%E5%8C%85%E5%B1%91)
+[DEMO展示](http://nv.zhangjinglin.cn/api?type=breadcrumb)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/6)

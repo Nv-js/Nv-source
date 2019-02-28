@@ -265,6 +265,6 @@
 
 <br/>
 
-[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=7915ee1a3cf147a6b193513bba302b4b&directoryName=Nav%20%E5%AF%BC%E8%88%AA%E5%92%8C%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95)
+[Demo展示](http://nv.zhangjinglin.cn/api?type=nav)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/8)

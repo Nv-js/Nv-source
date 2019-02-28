@@ -89,7 +89,7 @@
     </div>
 ```
 
-[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=d6ffabab29694e338a2e9aba2e3ea3d0&directoryName=Button%20%E6%8C%89%E9%92%AE)
+[Demo展示](http://nv.zhangjinglin.cn/api?type=buttons)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/2)
 
