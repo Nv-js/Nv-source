@@ -10,10 +10,10 @@
 
 + 网站层级较多（2层级以上）
 
-+ 左侧导航的宽度尺寸计算范围：200+8n
++ 用户对网站不熟悉，需要知道自己在哪里
 
-[点击了解栅格系统](https://github.com/guguaihaha/nv-source/blob/master/docs/inner/grid.md)
-
++ 用户有返回上级导航的需求
+s
 <br/>
 
 ### 基本用法

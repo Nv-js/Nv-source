@@ -72,7 +72,7 @@ G.task('combineJs',function(){
         target = 'dist/cdn/init/1.0.1'
     G.src(input)
         .pipe(concat('cdn_index.js'))
-        // .pipe(minifyJs())
+        .pipe(minifyJs())
         .pipe(G.dest(target))
 })
 
