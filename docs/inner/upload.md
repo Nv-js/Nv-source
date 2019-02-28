@@ -177,7 +177,7 @@
 ### API
 
 | 属性名称  | 类型（是否必要）   |  描述  |  默认值 |
-| --------    | :----- | :----:  | |
+| --------    | :----- | :----:  | :----: |
 | title  | String   | 上传按钮的名称 | Click to Upload（基础上传）、Select File（手动上传）|
 | alt  | String   | 上传要求描述文字 | The file size is no more than 500kb and the file format is JPG/PNG |
 
