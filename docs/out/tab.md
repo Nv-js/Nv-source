@@ -307,11 +307,11 @@
 | --------    | :----- | :----  |
 | language  | String (选填)  | 目前支持zh-CN(默认)和EN两种选择，可以拓展，不设置读取默认组件库配置 |
 | target  | String(选填)   | 选择器，支持class、id、element,@注意：type模式为edit时候只能是id |
-| type  | string (选填)  | <p>可选参数:</p>'base'(默认)基础类型，需要Dom结构已存在，否则无法初始化<p>'iframe' 需要初始化在iframe节点上添加data-src完成初始化配置，优化加载效率</p>'edit' 支持初始化节点和动态添加节点，同时支持iframe加载，要保证结构统一 |
+| type  | string (选填)  | 可选参数:<br/>'base'(默认)基础类型，需要Dom结构已存在，否则无法初始化<br/>'iframe' 需要初始化在iframe节点上添加data-src完成初始化配置，优化加载效率<br/>'edit' 支持初始化节点和动态添加节点，同时支持iframe加载，要保证结构统一 |
 | eventName  | String(选填)   | 事件名称，默认是click |
 | isClose  | boolean (选填)   | 是否开启关闭选项卡模式，此模式只有在type为edit状态才会生效，默认是false |
 | isMenu  | String(选填)   | 是否开启菜单选项卡模式，此模式只有在type为edit状态才会生效，默认是false|
-| onChange  | Function(选填)   |当发生tab选项卡切换的时候触发<p>回调参数Function(options)<p>默认里面指针指向选中tab选项卡，options为初始化配置|
+| onChange  | Function(选填)   |当发生tab选项卡切换的时候触发<br/>回调参数Function(options)<br/>默认里面指针指向选中tab选项卡，options为初始化配置|
 
 
 [Demo展示](http://nv.zhangjinglin.cn/api?type=tabs)
