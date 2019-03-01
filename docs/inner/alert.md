@@ -181,7 +181,7 @@
     </div>
 ```
 
-[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=3b984ea2722a425eaf1be196d4777b64&directoryName=Alert%20%E8%AD%A6%E5%91%8A%E6%8F%90%E7%A4%BA)
+[Demo展示](http://nv.zhangjinglin.cn/api?type=alert)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/16)
 

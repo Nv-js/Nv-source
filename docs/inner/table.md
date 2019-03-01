@@ -544,10 +544,10 @@
     })
 ```
 
-[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=8363128789b44e26b9cae7714bd3a950&directoryName=Table%20%E8%A1%A8%E6%A0%BC)
+[Demo展示](http://nv.zhangjinglin.cn/api?type=table)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/19)
 
-[常见第三方组件列表](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=d6d307bb15ab4f3c8814dc552088ad2b&directoryName=%E5%B8%B8%E8%A7%81%E7%BB%84%E4%BB%B6%E5%88%97%E8%A1%A8)
+[常见第三方组件列表](http://nv.zhangjinglin.cn/api?type=others/plugins)
 
     

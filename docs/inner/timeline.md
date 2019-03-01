@@ -190,7 +190,7 @@
     </ul>
 ```
 
-[Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=1608e3f56a864772b61d62ff32a89afc&directoryName=Timeline%20%E6%97%B6%E9%97%B4%E8%BD%B4)
+[Demo展示](http://nv.zhangjinglin.cn/api?type=timeline)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/17)
 
