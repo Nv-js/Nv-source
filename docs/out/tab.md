@@ -301,7 +301,7 @@
 
 ### API
 
-+ `tab.init(options)`的配置选项
++ `tab.init(options)`的`options`配置选项
 
 | 属性名称  | 类型（是否必要）   |  描述  |
 | --------    | :----- | :----  |
