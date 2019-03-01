@@ -304,7 +304,7 @@
 + `tab.init(options)`的配置选项
 
 | 属性名称  | 类型（是否必要）   |  描述  |
-| --------    | :----- | :----:  |
+| --------    | :----- | :----  |
 | language  | String (选填)  | 目前支持zh-CN(默认)和EN两种选择，可以拓展，不设置读取默认组件库配置 |
 | target  | String(选填)   | 选择器，支持class、id、element,@注意：type模式为edit时候只能是id |
 | type  | string (选填)  | <p>可选参数:</p>'base'(默认)基础类型，需要Dom结构已存在，否则无法初始化<p>'iframe' 需要初始化在iframe节点上添加data-src完成初始化配置，优化加载效率</p>'edit' 支持初始化节点和动态添加节点，同时支持iframe加载，要保证结构统一 |
