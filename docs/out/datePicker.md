@@ -123,14 +123,7 @@
  | --------    | :----- | :----  |
  | language | String(选填)  | 目前支持zh-CN(默认)和EN两种选择，可以拓展，不设置读取默认组件库配置,[语言列表](https://github.com/guguaihaha/Nv-engine/blob/master/docs/language.md) |
  | target  | String(选填)    | 选择器，可以不填写直接调取，填写后自动绑定关系，支持class、id、element |
- | type | String(选填)   | 可选参数:
-                         'month'
-                         'year'
-                         'time'
-                         'week'
-                         'normal'
-                         'range'
-                         'datetime'(默认) |
+ | type | String(选填)   | 可选参数:<br/> 'month'<br/>'year'<br/>'time'<br/>'week'<br/>'normal'<br/>'range'<br/>'datetime'(默认) |
  | autoClose  | Boolean(选填)  | 警告信息提示，可单独配置相关信息 |
  | showBtnTools  | Boolean(选填)   | 错误信息提示，可单独配置相关信息 |
  | format  | String(选填)    | 加载信息提示，可单独配置相关信息 |
