@@ -316,6 +316,6 @@
 
 [Demo展示](http://nv.zhangjinglin.cn/api?type=tabs)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/22)
+[留言和讨论](https://github.com/guguaihaha/nv-source/issues/26)
 
     

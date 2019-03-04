@@ -710,6 +710,6 @@ modal.init(selector,options)
 
 [Demo展示](http://nv.zhangjinglin.cn/api?type=modal)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/23)
+[留言和讨论](https://github.com/guguaihaha/nv-source/issues/27)
 
     
