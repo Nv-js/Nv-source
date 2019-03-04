@@ -160,7 +160,7 @@
 <br/>
 
 ### 环形进度条
-``
+
 环形进度条 `nv-progress-circle` 。环形进度条有大（默认）、小 `nv-progress-circle-sm` 两种尺寸，颜色有蓝色 `nv-progress-circle-primary` 红色 `nv-progress-circle-danger` 绿色 `nv-progress-circle-success`
 
 
@@ -265,13 +265,13 @@
 | options.percent  | String (选填)   | 设置进度条的进度，例如：0.1，0.8（设置了此属性将会覆盖节点属性data-percent设置的值） |
 | options.content  | String（必填）  | 进度条显示的内容，默认显示百分比，例如：10%，80%。可设置显示图标，例如：<i class="nvicon-ok"></i>|
 
-初始化progress.init后返回的对象pro，可以调用change方法
+> 初始化progress.init后返回的对象pro，可以调用change方法
 
 | 属性名称  | 类型（是否必要）   |  描述  |
 | --------    | :----- | :----  |
 | pro.change  | Object config  | 修改进度条的进度和显示内容。|
 
-以上入参的Object config的参数配置
+> 以上入参的Object config的参数配置
 
 
  属性名称  | 类型（是否必要）   |  描述  |
