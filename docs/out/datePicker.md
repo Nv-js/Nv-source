@@ -115,40 +115,12 @@
 
 > 综上，datePicker.init(options)配置项目如下：
 
-### API
-
-+ options
- 
- | 方法  | 入参（是否必要）   |  描述  |
- | --------    | :----- | :----  |
- | language | String(选填)  | 目前支持zh-CN(默认)和EN两种选择，可以拓展，不设置读取默认组件库配置。[语言列表](https://github.com/guguaihaha/Nv-engine/blob/master/docs/language.md)|
- | target  | String(选填)    | 选择器，可以不填写直接调取，填写后自动绑定关系，支持class、id、element |
- | type | String(选填)   | 可选参数:
-                         'month'（1.1.3+）修复了确定按钮没值问题
-                         'year'
-                         'time'
-                         'week'（1.1.3+）新增类型
-                         'normal'
-                         'range'(1.3.3+) 区间选择
-                         'datetime'(默认) |
- | autoClose  | Boolean(选填)  | 警告信息提示，可单独配置相关信息 |
- | showBtnTools  | Boolean(选填)   | 错误信息提示，可单独配置相关信息 |
- | format  | String(选填)    | 加载信息提示，可单独配置相关信息 |
- | isTabSwitch | Boolean(选填)  | 加载隐藏 |
- | autoOffset  |Object (选填)  | 信息警告提示框，content为信息内容|
- | initialDate  | Date String (选填)  | 信息确认提示框，content为信息内容 |
- | minDate  | Date String (选填)  | 信息确认提示框，content为信息内容 |
- | maxDate  | Date String (选填)  | 信息确认提示框，content为信息内容 |
- | onOpen(time)  | Function (选填)  | 信息确认提示框，content为信息内容 |
- | onSelect(time)  | Function (选填)  | 信息确认提示框，content为信息内容 |
- | onSure(time)  | Function (选填) | 信息确认提示框，content为信息内容 |
- | onClose(time)  | Function (选填)  | 信息确认提示框，content为信息内容 |
- | onClear(time)  | Function (选填) | 信息确认提示框，content为信息内容 |
+[配置参数详见demo中options配置文档](http://nv.zhangjinglin.cn/api?type=datePicker)
 
 
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=message)
+[Demo展示](http://nv.zhangjinglin.cn/api?type=datePicker)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/29)
+[留言和讨论](https://github.com/guguaihaha/nv-source/issues/30)
 
     
