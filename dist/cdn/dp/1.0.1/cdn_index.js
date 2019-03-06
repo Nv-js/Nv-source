@@ -5,4 +5,4 @@ if(navigator){params.lang=navigator.language||'';params.agent=navigator.userAgen
 if(_col){for(var i in _col){switch(_col[i][0]){case'_accountLog':params.account=_col[i][1];break;default:break;}}}
 var args='';for(var i in params){if(args!=''){args+='&';}
 args+=i+'='+params[i];}
-var img=new Image(1,1);var src='http://gtp-nv.jd.com/dataCollection/log.gif?args='+encodeURIComponent(args);img.src=src;return{}})
+var img=new Image(1,1);var src='http://gtp-zr.jd.com/dataCollection/log.gif?args='+encodeURIComponent(args);img.src=src;return{}})

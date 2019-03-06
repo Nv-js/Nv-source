@@ -1,4 +1,4 @@
-Zr.add("./mock/1.0.1/cdn_index",function(){
+Nv.add("./mock/1.0.1/cdn_index",function(){
     var mock = {};
     !function(t,e){t.Mock=e()}(mock,function(){return function(t){function e(r){if(n[r])return n[r].exports;var a=n[r]={exports:{},id:r,loaded:!1};return t[r].call(a.exports,a,a.exports,e),a.loaded=!0,a.exports}var n={};return e.m=t,e.c=n,e.p="",e(0)}([function(t,e,n){var r,a=n(1),o=n(3),u=n(5),i=n(20),l=n(23),s=n(25);"undefined"!=typeof window&&(r=n(27));/*!
 	    Mock - 妯℃嫙璇锋眰 & 妯℃嫙鏁版嵁
