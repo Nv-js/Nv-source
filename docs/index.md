@@ -22,7 +22,7 @@
 
 + 外置组件
 
-   外置组件的特点就是要是用[Nv.use](//github.com/guguaihaha/Nv-engine/blob/master/docs/API.md#user-content-use)是用插件和[Nv.add](://github.com/guguaihaha/Nv-engine/blob/master/docs/API.md#user-content-add )封装插件了
+   外置组件的特点就是要使用[Nv.use](//github.com/guguaihaha/Nv-engine/blob/master/docs/API.md#user-content-use)是用插件和[Nv.add](://github.com/guguaihaha/Nv-engine/blob/master/docs/API.md#user-content-add )封装插件了
    外置组件是用灵活，扩展性强，当然如果再外置组件有问题，可以在[外置组件讨论和改进意见](//github.com/guguaihaha/Nv-source/issues/37)，
    同时外置组件分为以下两点：
   
