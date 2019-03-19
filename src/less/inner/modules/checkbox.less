@@ -5,7 +5,6 @@ input[type='checkbox']{
   display: none;
 }
 
-@radio-new-color: #4363f4;
 input[type='checkbox'][disabled],
 input[type='checkbox'].disabled {
     cursor: not-allowed
@@ -39,15 +38,15 @@ input[type='checkbox'].disabled {
     &:hover {
         .@{nv-prefix}-checkbox-style {
             .@{nv-prefix}-checkbox-inner {
-                border-color: @radio-new-color;
+                border-color: @check-color-border;
             }
         }
     }
     .@{nv-prefix}-checkbox-clone {
         &.@{nv-prefix}-checkbox-checked {
             .@{nv-prefix}-checkbox-inner {
-                border-color: @radio-new-color;
-                background-color: @radio-new-color;
+                border-color: @check-color-border;
+                background-color: @check-color-border;
                 &:after {
                     transform: rotate(45deg) scale(1);
                     opacity: 1;
@@ -57,8 +56,8 @@ input[type='checkbox'].disabled {
         }
         &.@{nv-prefix}-checkbox-mid-checked {
             .@{nv-prefix}-checkbox-inner {
-                border-color: @radio-new-color;
-                background-color: @radio-new-color;
+                border-color: @check-color-border;
+                background-color: @check-color-border;
                 &:after {
                     transform: rotate(90deg) scale(1);
                     opacity: 1;
@@ -79,7 +78,7 @@ input[type='checkbox'].disabled {
         }
         &:hover {
             .@{nv-prefix}-checkbox-inner {
-                border-color: @radio-new-color;
+                border-color: @check-color-border;
             }
         }
         position: relative;

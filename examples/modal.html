@@ -5,7 +5,7 @@
     <title>组件平台显示内容</title>
     <!--开发阶段引用jq-->
     <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
-    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <link type="text/css" rel="stylesheet" href="/dist/cdn/nv.min.css" />
     <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
 </head>
 <body>
@@ -1111,6 +1111,7 @@
 <script type="text/javascript">
     Nv.config({
         baseUrl: "/js/plugin_modules/",
+        cdnUrl:"/dist/cdn/",
         requestTime:true
     })
     Nv.ready(function(){
@@ -1178,7 +1179,6 @@
                 modal10.show();
             })
         })
-        Nv.use("./js/quickMenu","./js/code")
     })
 
 </script>

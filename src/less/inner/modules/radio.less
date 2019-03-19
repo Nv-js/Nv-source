@@ -7,7 +7,7 @@ input[type='radio']{
 
 
 
-@radio-new-color: #4363f4;
+
 input[type='radio'][disabled],
 input[type='radio'].disabled {
     cursor: not-allowed
@@ -41,14 +41,15 @@ input[type='radio'].disabled {
     &:hover {
         .@{nv-prefix}-radio-clone {
             .@{nv-prefix}-radio-inner {
-                border-color: @radio-new-color;
+                border-color: @radio-color-border;
             }
         }
     }
+
     .@{nv-prefix}-radio-clone {
         &.@{nv-prefix}-radio-checked {
             .@{nv-prefix}-radio-inner {
-                border-color: @radio-new-color;
+                border-color: @radio-color-border;
                 &:after {
                     // transform: scale(1);
                     transform: translate(-50%,-50%) scale(1);
@@ -69,7 +70,7 @@ input[type='radio'].disabled {
         }
         &:hover {
             .@{nv-prefix}-radio-inner {
-                border-color: @radio-new-color;
+                border-color: @radio-color-border;
             }
         }
         position: relative;
@@ -115,13 +116,13 @@ input[type='radio'].disabled {
                 display: table;
                 border-radius: 100%;
                 border-radius: 8px;
-                background-color: @radio-new-color;
-                content: ' '; 
+                background-color: @radio-color-border;
+                content: ' ';
                 transform: translate(-50%,-50%) scale(0);
                 transition: all .3s ease-in;
                 opacity: 0;
-                border-top: 0; 
-                border-left: 0; 
+                border-top: 0;
+                border-left: 0;
             }
         }
         // 源生

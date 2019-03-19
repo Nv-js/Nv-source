@@ -2,7 +2,6 @@
 @import "../color/colors";
 
 @nv-prefix             : nv;
-
 // -------- Colors -----------
 @primary-color          : @geekblue-6;
 @info-color             : @geekblue-6;
@@ -27,7 +26,6 @@
 @primary-8: color(~`colorPalette("@{primary-color}", 8)`);  // unused
 @primary-9: color(~`colorPalette("@{primary-color}", 9)`);  // unused
 @primary-10: color(~`colorPalette("@{primary-color}", 10)`);  // unused
-
 //font-weight
 @font-normal: 400;
 @font-weight: 600;
@@ -189,16 +187,28 @@
 @dropdown-text-color         : @text-color;
 @dropdown-line-height        : 2;
 @dropdown-arrow-size         : 10px;
+@dropdown-color              : @primary-6;
+@dropdown-hover-color        : @primary-5;
+@dropdown-bg-hover-color     : @primary-2;
+
 // Checkbox
 @checkbox-size          : 16px;
 
 // Radio
 @radio-size             : 16px;
+@radio-color-border     : @primary-6;
 
 // Radio buttons
 @radio-button-bg        : @btn-default-bg;
 @radio-button-color     : @btn-default-color;
 
+//checkbox
+
+
+//select
+@select-checkbox-bg      : @primary-4;
+
+@check-color-border     : @primary-6;
 // Media queries breakpoints
 // Extra small screen / phone
 @screen-xs              : 480px;
@@ -523,12 +533,13 @@
 @nav-color-menu         : @grey-1;          //menu color
 @nav-color-menu-item    : @text-color;       //menu text color
 @nav-color-current      : @grey-1;          //selected color
-@nav-color-active       : @geekblue-6;     //item active color
+@nav-color-active       : @primary-6;     //item active color
 @nav-color-item-hover   : @item-hover-bg;  //menu item hover color
+@nav-color-bg           : @primary-6;
 //nav tree color
 @nav-text-color         : @text-color;      //text color
-@nav-text-active-color  : @geekblue-6;     //item active color
-@nav-text-current-color : @geekblue-6;          //selected color
+@nav-text-active-color  : @primary-6;     //item active color
+@nav-text-current-color : @primary-6;          //selected color
 @nav-disabled-color     : @disabled-color;  //disabled color
 @nav-item-normal-bg     : @grey-2;          //bg color
 @nav-item-hover-bg      : @primary-1;   //menu item hover color
@@ -540,8 +551,8 @@
 @nav-collapsed-item-hover    : @item-hover-bg;   //menu item hover color
 @nav-collapsed-menu-text     : @text-color;           //menu text color
 @nav-collapsed-text-color    : @grey-1;               //text color
-@nav-collapsed-acitve-text   : @geekblue-6;          //selected text color
-@nav-collapsed-current-bg    : @geekblue-6;          //selected bg color
+@nav-collapsed-acitve-text   : @primary-6;          //selected text color
+@nav-collapsed-current-bg    : @primary-6;          //selected bg color
 
 
 

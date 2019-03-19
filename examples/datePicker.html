@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>DatePicker</title>
     <link type="text/css" rel="stylesheet" href="//storage.jd.com/v2.0.0/content.min.css" />
-    <link type="text/css" rel="stylesheet" href="//storage.360buyimg.com/v2.0.0/nv.min.css" />
+    <link type="text/css" rel="stylesheet" href="/dist/cdn/nv.min.css" />
     <script type="text/javascript" src="//storage.360buyimg.com/v2.0.0/nv.js"></script>
 
 </head>
@@ -204,6 +204,9 @@
     <div class="c-block-50"></div>
 
     <script type="text/javascript">
+        Nv.config({
+            cdnUrl:"/dist/cdn/",
+        })
         Nv.ready(function(){
             Nv.use("datePicker",function(nv,picker){
                 picker.init({

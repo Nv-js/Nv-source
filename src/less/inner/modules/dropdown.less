@@ -1,10 +1,6 @@
 /*
  * dropdown
  */
-
-@dropdown-color: #4363f4;
-@dropdown-hover-color: #40a9ff;
-
 .@{nv-prefix}-dropdown {
     padding: 0 4px;
     position: relative;
@@ -180,7 +176,7 @@
         }
         .@{nv-prefix}-dropdown-item {
             &:hover {
-                background-color: #e6f7ff;
+                background-color:@dropdown-bg-hover-color;
                 >.@{nv-prefix}-dropdown-child-menu {
                     display: block;
                 }
