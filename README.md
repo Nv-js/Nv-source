@@ -34,7 +34,7 @@ $ gulp
 
 > 快捷入口
 
-+ [官网](http://nv.jd.com)
++ [官网](http://www.nv-js.com)
 
 + [引擎](https://github.com/Nv-js/Nv-engine)
 
