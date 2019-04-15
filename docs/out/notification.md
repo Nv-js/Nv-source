@@ -118,6 +118,6 @@ notification.init(options)
 
 [Demo展示](http://www.nv-js.com/api?type=notification)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/34)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/34)
 
     

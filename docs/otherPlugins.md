@@ -1,6 +1,6 @@
 ### 常见组件列表
 
-展示为市场上常用的组件，如果以下没有或者自行封装第三方组件，请参考[Nv.add](//github.com/guguaihaha/nv-engine/issues/5)示例即可
+展示为市场上常用的组件，如果以下没有或者自行封装第三方组件，请参考[Nv.add](//github.com/Nv-js/nv-engine/issues/5)示例即可
 
 > jQuery类的插件
 
@@ -36,6 +36,6 @@
 | echarts        | 版本号：4.0.4 ,包含所有图表组件，大约是706KB左右    |   [API地址](http://echarts.baidu.com/api.html#echarts) [官网地址](http://echarts.baidu.com/)  |
 | echartsSimple        | 版本号：4.0.4，只包含基础图表：折、柱、饼，大约是283KB左右   |   [API地址](http://echarts.baidu.com/api.html#echarts) [官网地址](http://echarts.baidu.com/)  |
 | echartsNormal        | 版本号为：4.0.4,包含常用图表：折、柱、饼、散点、图例等大约是444KB左右  |   [API地址](http://echarts.baidu.com/api.html#echarts) [官网地址](http://echarts.baidu.com/)  |
-| compress        | 图片压缩  |   [API地址](//github.com/guguaihaha/compress) |
+| compress        | 图片压缩  |   [API地址](//github.com/Nv-js/compress) |
 
 

@@ -12,7 +12,7 @@
 
 + 左侧导航的宽度尺寸计算范围：200+8n
 
-[点击了解栅格系统](https://github.com/guguaihaha/nv-source/blob/master/docs/inner/grid.md)
+[点击了解栅格系统](https://github.com/Nv-js/nv-source/blob/master/docs/inner/grid.md)
 
 <br/>
 
@@ -81,4 +81,4 @@
 
 [点击了解更多Demo和案例](http://www.nv-js.com/api?type=layout)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/5)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/5)

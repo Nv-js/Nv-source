@@ -310,6 +310,6 @@ flex排序是根据1—24序号顺序进行排序，在 `nv-row-flex` 中的 `nv
 
 [查看所有DEMO](http://www.nv-js.com/api?type=grid)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/4)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/4)
 
 

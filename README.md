@@ -36,9 +36,9 @@ $ gulp
 
 + [官网](http://nv.jd.com)
 
-+ [引擎](https://github.com/guguaihaha/Nv-engine)
++ [引擎](https://github.com/Nv-js/Nv-engine)
 
-+ [PRO](https://github.com/guguaihaha/Nv-pro)
++ [PRO](https://github.com/Nv-js/Nv-pro)
 
 + [组件快捷入口](docs/index.md)
 

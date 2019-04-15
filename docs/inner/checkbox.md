@@ -120,6 +120,6 @@ checkbox内置了一个名为nvonchange的事件，只需要调用该事件就�
 
 [Demo展示](http://www.nv-js.com/api?type=checkbox)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/12)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/12)
 
     

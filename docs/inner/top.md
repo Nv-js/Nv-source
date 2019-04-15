@@ -54,6 +54,6 @@
 
 [Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=31be0fd339b241d08956341d7ef7efc3&directoryName=Top%20%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/25)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/25)
 
     

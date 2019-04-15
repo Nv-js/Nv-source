@@ -44,6 +44,6 @@
 
 [Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=96ce09c82c0c4a859580db435d93a5b6&directoryName=Divide%20%E5%88%86%E5%89%B2%E7%BA%BF)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/21)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/21)
 
     

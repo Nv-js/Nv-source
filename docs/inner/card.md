@@ -143,6 +143,6 @@
 
 [Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=32756a152cb54d1aa8ed1567944350e3&directoryName=Card%20%E5%8D%A1%E7%89%87)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/20)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/20)
 
     

@@ -16,14 +16,14 @@
    
    当然如果需要控制具体回调事件的操作，每个内置组件基本都会在文档中说明是否嵌入了onnvchange，具体详细参考各个内置模块的api[了解更多](http://nv.jd.com)
    
-   [内置组件讨论和改进意见](//github.com/guguaihaha/Nv-source/issues/36)
+   [内置组件讨论和改进意见](//github.com/Nv-js/Nv-source/issues/36)
    
    
 
 + 外置组件
 
-   外置组件的特点就是要是用[Nv.use](//github.com/guguaihaha/Nv-engine/blob/master/docs/API.md#user-content-use)是用插件和[Nv.add](://github.com/guguaihaha/Nv-engine/blob/master/docs/API.md#user-content-add )封装插件了
-   外置组件是用灵活，扩展性强，当然如果再外置组件有问题，可以在[外置组件讨论和改进意见](//github.com/guguaihaha/Nv-source/issues/37)，
+   外置组件的特点就是要是用[Nv.use](//github.com/Nv-js/Nv-engine/blob/master/docs/API.md#user-content-use)是用插件和[Nv.add](://github.com/Nv-js/Nv-engine/blob/master/docs/API.md#user-content-add )封装插件了
+   外置组件是用灵活，扩展性强，当然如果再外置组件有问题，可以在[外置组件讨论和改进意见](//github.com/Nv-js/Nv-source/issues/37)，
    同时外置组件分为以下两点：
   
   * 外置平台件 
@@ -45,43 +45,43 @@
 
 | 组件名称     | Demo地址   |  API地址  |  讨论地址  |
 | --------    | :----- | :----:  | :----:  |
-| Nv的API  |    | [API](//github.com/guguaihaha/Nv-engine/blob/master/docs/API.md)    |  |
-| 快速使用  |    | [API](//github.com/guguaihaha/Nv-engine/blob/master/docs/quick.md)    | [讨论](//github.com/guguaihaha/Nv-engine/issues/3) |
-| 组件封装技巧  |    | [API](//github.com/guguaihaha/Nv-engine/blob/master/docs/API.md#user-content-add)    | [讨论](//github.com/guguaihaha/Nv-engine/issues/5) |
-| PRO的使用  |    | [API](//github.com/guguaihaha/Nv-pro)    | [讨论](//github.com/guguaihaha/Nv-pro/issues) |
-| 主题修改  |    | [API](theme.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/38) |
+| Nv的API  |    | [API](//github.com/Nv-js/Nv-engine/blob/master/docs/API.md)    |  |
+| 快速使用  |    | [API](//github.com/Nv-js/Nv-engine/blob/master/docs/quick.md)    | [讨论](//github.com/Nv-js/Nv-engine/issues/3) |
+| 组件封装技巧  |    | [API](//github.com/Nv-js/Nv-engine/blob/master/docs/API.md#user-content-add)    | [讨论](//github.com/Nv-js/Nv-engine/issues/5) |
+| PRO的使用  |    | [API](//github.com/Nv-js/Nv-pro)    | [讨论](//github.com/Nv-js/Nv-pro/issues) |
+| 主题修改  |    | [API](theme.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/38) |
 |   |    |    |  |
-| button 按钮  | [DEMO](http://www.nv-js.com/api?type=buttons)   | [API](./inner/button.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/2) |
-| icon 图标  | [DEMO](http://www.nv-js.com/api?type=icons)   | [API](./inner/icon.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/3) |
-| grid 栅格  | [DEMO](http://www.nv-js.com/api?type=grid)   | [API](./inner/grid.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/4) |
-| layout 布局  | [DEMO](http://www.nv-js.com/api?type=layout)   | [API](./inner/layout.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/5) |
-| breadcrumb 面包屑  | [DEMO](http://www.nv-js.com/api?type=breadcrumb)   | [API](./inner/breadcrumb.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/6) |
-| dropdown 下拉菜单  | [DEMO](http://www.nv-js.com/api?type=dropdown)   | [API](./inner/dropdown.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/7) |
-| nav 导航和导航菜单  | [DEMO](http://www.nv-js.com/api?type=nav)   | [API](./inner/nav.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/8) |
-| step 步骤条  | [DEMO](http://www.nv-js.com/api?type=step)   | [API](./inner/step.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/9) |
-| input 输入框  | [DEMO](http://www.nv-js.com/api?type=input)   | [API](./inner/input.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/10) |
-| radio 单选框  | [DEMO](http://www.nv-js.com/api?type=radio)   | [API](./inner/radio.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/11) |
-| checkbox 复选框  | [DEMO](http://www.nv-js.com/api?type=checkbox)   | [API](./inner/checkbox.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/12) |
-| select 下拉选择  | [DEMO](http://www.nv-js.com/api?type=select)   | [API](./inner/select.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/13) |
-| upload 上传  | [DEMO](http://www.nv-js.com/api?type=upload)   | [API](./inner/upload.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/14) |
-| form 表单  | [DEMO](http://www.nv-js.com/api?type=form)   | [API](./inner/form.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/15) |
-| alert 警告提示  | [DEMO](http://www.nv-js.com/api?type=alert)   | [API](./inner/alert.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/16) |
-| timeline 时间轴  | [DEMO](http://www.nv-js.com/api?type=timeline)   | [API](./inner/timeline.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/17) |
-| list 列表  | [DEMO](http://www.nv-js.com/api?type=list)   | [API](./inner/list.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/18) |
-| table 表格  | [DEMO](http://www.nv-js.com/api?type=table)   | [API](./inner/table.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/19) |
-| card 卡片  | [DEMO](http://www.nv-js.com/api?type=card)   | [API](./inner/card.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/20) |
-| divide 分割线  | [DEMO](http://www.nv-js.com/api?type=divide)   | [API](./inner/divide.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/21) |
-| photo 头像  | [DEMO](http://www.nv-js.com/api?type=photo)   | [API](./inner/photo.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/22) |
-| tooltip 文字提示  | [DEMO](http://www.nv-js.com/api?type=tip)   | [API](./inner/tooltip.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/23) |
-| badge 徽标  | [DEMO](http://www.nv-js.com/api?type=badge)   | [API](./inner/badge.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/24) |
-| top 返回顶部  | [DEMO](http://www.nv-js.com/api?type=top)   | [API](./inner/top.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/25) |
-| tab 选项卡  | [DEMO](http://www.nv-js.com/api?type=tabs)   | [API](./out/tab.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/26) |
-| modal 弹框  | [DEMO](http://www.nv-js.com/api?type=modal)   | [API](./out/modal.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/27) |
-| page 分页  | [DEMO](http://www.nv-js.com/api?type=page)   | [API](./out/page.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/28) |
-| message 全局提示  | [DEMO](http://www.nv-js.com/api?type=message)   | [API](./out/message.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/29) |
-| datePicker 日期控件  | [DEMO](http://www.nv-js.com/api?type=datePicker)   | [API](./out/datePicker.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/30) |
-| popover 气泡卡片  | [DEMO](http://www.nv-js.com/api?type=popover)   | [API](./out/popover.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/31) |
-| affix 固钉  | [DEMO](http://www.nv-js.com/api?type=affix)   | [API](./out/affix.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/32) |
-| tag 标签  | [DEMO](http://www.nv-js.com/api?type=tag)   | [API](./out/tag.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/33) |
-| notification 通知提醒  | [DEMO](http://www.nv-js.com/api?type=notification)   | [API](./out/notification.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/34) |
-| progress 进度条  | [DEMO](http://www.nv-js.com/api?type=progress)   | [API](./out/progress.md)    | [讨论](//github.com/guguaihaha/Nv-source/issues/35) |
+| button 按钮  | [DEMO](http://www.nv-js.com/api?type=buttons)   | [API](./inner/button.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/2) |
+| icon 图标  | [DEMO](http://www.nv-js.com/api?type=icons)   | [API](./inner/icon.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/3) |
+| grid 栅格  | [DEMO](http://www.nv-js.com/api?type=grid)   | [API](./inner/grid.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/4) |
+| layout 布局  | [DEMO](http://www.nv-js.com/api?type=layout)   | [API](./inner/layout.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/5) |
+| breadcrumb 面包屑  | [DEMO](http://www.nv-js.com/api?type=breadcrumb)   | [API](./inner/breadcrumb.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/6) |
+| dropdown 下拉菜单  | [DEMO](http://www.nv-js.com/api?type=dropdown)   | [API](./inner/dropdown.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/7) |
+| nav 导航和导航菜单  | [DEMO](http://www.nv-js.com/api?type=nav)   | [API](./inner/nav.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/8) |
+| step 步骤条  | [DEMO](http://www.nv-js.com/api?type=step)   | [API](./inner/step.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/9) |
+| input 输入框  | [DEMO](http://www.nv-js.com/api?type=input)   | [API](./inner/input.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/10) |
+| radio 单选框  | [DEMO](http://www.nv-js.com/api?type=radio)   | [API](./inner/radio.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/11) |
+| checkbox 复选框  | [DEMO](http://www.nv-js.com/api?type=checkbox)   | [API](./inner/checkbox.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/12) |
+| select 下拉选择  | [DEMO](http://www.nv-js.com/api?type=select)   | [API](./inner/select.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/13) |
+| upload 上传  | [DEMO](http://www.nv-js.com/api?type=upload)   | [API](./inner/upload.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/14) |
+| form 表单  | [DEMO](http://www.nv-js.com/api?type=form)   | [API](./inner/form.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/15) |
+| alert 警告提示  | [DEMO](http://www.nv-js.com/api?type=alert)   | [API](./inner/alert.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/16) |
+| timeline 时间轴  | [DEMO](http://www.nv-js.com/api?type=timeline)   | [API](./inner/timeline.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/17) |
+| list 列表  | [DEMO](http://www.nv-js.com/api?type=list)   | [API](./inner/list.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/18) |
+| table 表格  | [DEMO](http://www.nv-js.com/api?type=table)   | [API](./inner/table.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/19) |
+| card 卡片  | [DEMO](http://www.nv-js.com/api?type=card)   | [API](./inner/card.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/20) |
+| divide 分割线  | [DEMO](http://www.nv-js.com/api?type=divide)   | [API](./inner/divide.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/21) |
+| photo 头像  | [DEMO](http://www.nv-js.com/api?type=photo)   | [API](./inner/photo.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/22) |
+| tooltip 文字提示  | [DEMO](http://www.nv-js.com/api?type=tip)   | [API](./inner/tooltip.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/23) |
+| badge 徽标  | [DEMO](http://www.nv-js.com/api?type=badge)   | [API](./inner/badge.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/24) |
+| top 返回顶部  | [DEMO](http://www.nv-js.com/api?type=top)   | [API](./inner/top.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/25) |
+| tab 选项卡  | [DEMO](http://www.nv-js.com/api?type=tabs)   | [API](./out/tab.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/26) |
+| modal 弹框  | [DEMO](http://www.nv-js.com/api?type=modal)   | [API](./out/modal.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/27) |
+| page 分页  | [DEMO](http://www.nv-js.com/api?type=page)   | [API](./out/page.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/28) |
+| message 全局提示  | [DEMO](http://www.nv-js.com/api?type=message)   | [API](./out/message.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/29) |
+| datePicker 日期控件  | [DEMO](http://www.nv-js.com/api?type=datePicker)   | [API](./out/datePicker.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/30) |
+| popover 气泡卡片  | [DEMO](http://www.nv-js.com/api?type=popover)   | [API](./out/popover.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/31) |
+| affix 固钉  | [DEMO](http://www.nv-js.com/api?type=affix)   | [API](./out/affix.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/32) |
+| tag 标签  | [DEMO](http://www.nv-js.com/api?type=tag)   | [API](./out/tag.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/33) |
+| notification 通知提醒  | [DEMO](http://www.nv-js.com/api?type=notification)   | [API](./out/notification.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/34) |
+| progress 进度条  | [DEMO](http://www.nv-js.com/api?type=progress)   | [API](./out/progress.md)    | [讨论](//github.com/Nv-js/Nv-source/issues/35) |

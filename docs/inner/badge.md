@@ -91,6 +91,6 @@
 
 [Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=6beaa733cf904e398dadffca48a49954&directoryName=Badge%20%E5%BE%BD%E6%A0%87)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/24)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/24)
 
     

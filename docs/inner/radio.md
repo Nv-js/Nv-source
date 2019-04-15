@@ -117,6 +117,6 @@ radio组件只需要调用该事件就可以动态配置radio的选中和禁用�
 
 [Demo展示](http://www.nv-js.com/api?type=radio)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/11)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/11)
 
     

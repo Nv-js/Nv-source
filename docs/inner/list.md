@@ -165,6 +165,6 @@
 
 [Demo展示](http://www.nv-js.com/api?type=list)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/18)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/18)
 
     

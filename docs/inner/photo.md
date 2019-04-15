@@ -113,6 +113,6 @@
 
 [Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=ef23ab31b4a241e6b10fd2a3ac5ef85c&directoryName=Photo%20%E5%A4%B4%E5%83%8F)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/22)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/22)
 
     
