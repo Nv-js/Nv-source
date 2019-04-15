@@ -1,3 +1,8 @@
+var theme = Nv.baseConfig.theme,
+    _css = './css/cdn_index.css';
+if(theme){
+    _css = './css/cdn_'+theme+"_index.css";
+}
 Nv.add("./page/1.0.1/cdn_index",function(nv,$){
     var language = nv.baseConfig.language;
     var _pagination = {
@@ -61,13 +66,12 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                     JUMP_M,
                     PRE_M,
                     NEXT_M;
-    
                 //有条数再做操作
                 if (typeof opt.total === 'number' && !isNaN(opt.total) && opt.total > 0) {
-                    console.log('总条数=> ', opt.total);
+                    // console.log('总条数=> ', opt.total);
                 } else {
                     //请传入分页条数
-                    console.log('total no data');
+                    // console.log('total no data');
                     return;
                 }
                 var _total = opt.total,
@@ -77,8 +81,7 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
                     _pageList = [],
                     _start = 0,
                     _end = 0;
-    
-    
+
                 var initDropdown = function () {
                     //初始化下拉组件
                     $element.find('.'+PREFIX+'-pagination-dropdown').each(function (index, element) {
@@ -390,4 +393,4 @@ Nv.add("./page/1.0.1/cdn_index",function(nv,$){
     return {
        init: _pagination.init
     }
-},{requires:["jquery","./css/cdn_index.css"],alias:'page'})
+},{requires:["jquery",_css],alias:'page'})

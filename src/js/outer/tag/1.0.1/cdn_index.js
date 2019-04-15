@@ -1,3 +1,8 @@
+var theme = Nv.baseConfig.theme,
+    _css = './css/cdn_index.css';
+if(theme){
+    _css = './css/cdn_'+theme+"_index.css";
+}
 Nv.add("./tag/1.0.1/cdn_index", function (nv, $) {
     var _tag = {
         init: function () {
@@ -40,6 +45,6 @@ Nv.add("./tag/1.0.1/cdn_index", function (nv, $) {
             _tag.init();
         }
     }
-}, {requires: ["jquery","./css/cdn_index.css"],alias:'tag'})
+}, {requires: ["jquery",_css],alias:'tag'})
 
 

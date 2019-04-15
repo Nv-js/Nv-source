@@ -148,7 +148,7 @@
 
 ### 带图标
 
-基于基础样式之上，在`nv-tab`后面加`nv-tab-icon`属性即可展示图标版本的步骤条，icon使用方法详情见Icon [图标](http://nv.zhangjinglin.cn/api?type=icons)
+基于基础样式之上，在`nv-tab`后面加`nv-tab-icon`属性即可展示图标版本的步骤条，icon使用方法详情见Icon [图标](http://www.nv-js.com/api?type=icons)
 
 ```html
     <!--HTML-->
@@ -314,7 +314,7 @@
 | onChange  | Function(选填)   |当发生tab选项卡切换的时候触发<br/>回调参数Function(options)<br/>默认里面指针指向选中tab选项卡，options为初始化配置|
 
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=tabs)
+[Demo展示](http://www.nv-js.com/api?type=tabs)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/26)
 

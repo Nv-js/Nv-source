@@ -8,6 +8,7 @@ const G = require('gulp'),
       webserver = require('gulp-webserver'),
       gclone = require('gulp-clone'),
       runSequence = require('run-sequence'),
+      through = require('through2'),
       watch = require('gulp-watch');
 
 const prefix = 'nv'      
@@ -106,6 +107,36 @@ function lessMine(path, T){
         let input = path.replace(/[/|\\]less[/|\\].+/,'/static')
         other(input,target.replace(/[/|\\]css[/|\\].*/,'/static'))
 }
+G.task('outerLessAll',function(){
+    let theme = ''
+    let name = ''
+    if(theme){
+        name = 'cdn_' + theme + '_index'
+    }else{
+        name = 'cdn_index'
+    }
+    G.src('src/js/outer/**/*.less')
+        .pipe(less())
+        .pipe(autoprefixer({
+            browsers: ['last 5 versions','Safari >0', 'Explorer >0', 'Edge >0', 'Opera >0', 'Firefox >=20'],//last 2 versions- 主流浏览器的最新两个版本
+            cascade: true, //是否美化属性值 默认：true 像这样：
+            //-webkit-transform: rotate(45deg);
+            //        transform: rotate(45deg);
+            remove:true //是否去掉不必要的前缀 默认：true
+        }))
+        .pipe(minifyCss())
+        .pipe(rename({
+            basename: name,
+            extname: ".css"
+
+        }))
+        .pipe(through.obj(function(file, encode, cb){
+            file.path = file.path.replace(/\/less\//,'/css/')
+            this.push(file)
+            cb()
+        }))
+        .pipe(G.dest('dist/cdn'))
+})
 
 function other(path,T){
     console.log('如果有静态资源，目前正在clone...')

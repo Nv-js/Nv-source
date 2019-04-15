@@ -308,7 +308,7 @@ flex排序是根据1—24序号顺序进行排序，在 `nv-row-flex` 中的 `nv
 ```
 <br/>
 
-[查看所有DEMO](http://nv.zhangjinglin.cn/api?type=grid)
+[查看所有DEMO](http://www.nv-js.com/api?type=grid)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/4)
 

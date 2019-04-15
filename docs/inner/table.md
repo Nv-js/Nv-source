@@ -544,10 +544,10 @@
     })
 ```
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=table)
+[Demo展示](http://www.nv-js.com/api?type=table)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/19)
 
-[常见第三方组件列表](http://nv.zhangjinglin.cn/api?type=others/plugins)
+[常见第三方组件列表](http://www.nv-js.com/api?type=others/plugins)
 
     

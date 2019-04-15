@@ -1,4 +1,5 @@
 
+var theme=Nv.baseConfig.theme,_css='./css/cdn_index.css';if(theme){_css='./css/cdn_'+theme+"_index.css";}
 Nv.add("./popover/1.0.1/cdn_index",function(Nv,$){var popover={uid:40600000,init:function(config){if(/^\./.test(config.target)){var classObj=$(config.target);$.each(classObj,function(i){$.extend(config,{classObjIndex:i});var pop=new Pop(config);if(pop.popFn()){pop.popInnerWidthFn();pop.popContPosFn();pop.popBtnFn();}else{}})}else{var pop=new Pop(config);if(pop.popFn()){pop.popInnerWidthFn();pop.popContPosFn();pop.popBtnFn();}else{}}
 $(".nv-popover-content").off('click').on('click',function(ev){ev.stopPropagation();})},options:{},events:{},eventFn:{}}
 function Pop(config){this.width=config.width||240;this.position=config.position||'top';this.event=config.event||'hover';this.target=config.target||"";this.onOpen=config.onOpen||function(){return false};this.onClose=config.onClose||function(){return false};if(parseInt(config.classObjIndex)>=0){this.optTarget=$(this.target).eq(parseInt(config.classObjIndex));}else{this.optTarget=$(this.target);}
@@ -16,4 +17,4 @@ _this.optCont.stop().fadeIn(300);_this.onOpen&&_this.onOpen(_this.optTarget[0])}
 if(eventName=='mouseenter'){_this.optTarget.off('mouseleave').on('mouseleave',function(){_this.optCont.stop().fadeOut(300);_this.onClose&&_this.onClose(_this.optTarget[0]);})
 _this.optBtn.off('click').on('click',function(ev){ev.stopPropagation();})}}
 Pop.prototype.onCloseFn=function(){this.onClose&&this.onClose(this.optTarget[0]);}
-return{init:popover.init};},{requires:["jquery","./css/cdn_index.css"],alias:'popover'})
+return{init:popover.init};},{requires:["jquery",_css],alias:'popover'})

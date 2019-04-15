@@ -1,3 +1,8 @@
+var theme = Nv.baseConfig.theme,
+    _css = './css/cdn_index.css';
+if(theme){
+    _css = './css/cdn_'+theme+"_index.css";
+}
 Nv.add("./message/1.0.1/cdn_index",function(nv,$){
     var tools = nv.tools,
         dom = nv.dom;
@@ -11,6 +16,8 @@ Nv.add("./message/1.0.1/cdn_index",function(nv,$){
         //是否显示icons,默认是显示
         iconsShowStatus:1
     }
+
+
 
     function init(rets){
 
@@ -284,4 +291,4 @@ Nv.add("./message/1.0.1/cdn_index",function(nv,$){
         alert:_alert,
         confirm:_confirm
     }
-},{requires:["jquery","./css/cdn_index.css"],alias:'message'})
+},{requires:["jquery",_css],alias:'message'})

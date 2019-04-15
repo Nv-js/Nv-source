@@ -79,6 +79,6 @@
 ```
 <br/>
 
-[点击了解更多Demo和案例](http://nv.zhangjinglin.cn/api?type=layout)
+[点击了解更多Demo和案例](http://www.nv-js.com/api?type=layout)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/5)

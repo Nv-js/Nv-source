@@ -80,6 +80,6 @@
     </div>
 ```
 
-[DEMO展示](http://nv.zhangjinglin.cn/api?type=breadcrumb)
+[DEMO展示](http://www.nv-js.com/api?type=breadcrumb)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/6)

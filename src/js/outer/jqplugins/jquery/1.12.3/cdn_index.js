@@ -13,7 +13,6 @@ Nv.add('./jqplugins/jquery/1.12.3/cdn_index',function(){
  * Date: 2016-04-05T19:16Z
  */
 
-
 // Support: Firefox 18+
 // Can't be in strict mode, several libs including ASP.NET trace
 // the stack via arguments.caller.callee and Firefox dies if

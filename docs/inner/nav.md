@@ -265,6 +265,6 @@
 
 <br/>
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=nav)
+[Demo展示](http://www.nv-js.com/api?type=nav)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/8)

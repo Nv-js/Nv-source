@@ -163,7 +163,7 @@
 
 
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=form)
+[Demo展示](http://www.nv-js.com/api?type=form)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/15)
 

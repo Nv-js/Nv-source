@@ -1,4 +1,4 @@
-Zr.add("./jqplugins/ztree/1.0.1/cdn_index",function(zr,jQuery){
+Nv.add("./jqplugins/ztree/1.0.1/cdn_index",function(nv,jQuery){
 
     /*
      * JQuery zTree core v3.5.35

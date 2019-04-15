@@ -1,3 +1,8 @@
+var theme = Nv.baseConfig.theme,
+    _css = './css/cdn_index.css';
+if(theme){
+    _css = './css/cdn_'+theme+"_index.css";
+}
 Nv.add("./tabs/1.0.1/cdn_index",function(nv,$){
     var language = nv.baseConfig.language;
     nv.fn = nv.fn ? nv.fn :{};
@@ -741,6 +746,6 @@ Nv.add("./tabs/1.0.1/cdn_index",function(nv,$){
         init:tabs.init
     }
 },{
-    requires:["jquery","./css/cdn_index.css"],
+    requires:["jquery",_css],
     alias:'tab'
 })

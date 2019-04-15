@@ -708,7 +708,7 @@ modal.init(selector,options)
 | move  | Boolean(选填)   | 配置move属性为true时，开启模态框的拖拽，默认为false不不开启 |
 
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=modal)
+[Demo展示](http://www.nv-js.com/api?type=modal)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/27)
 

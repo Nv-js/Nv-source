@@ -280,7 +280,7 @@
 | config.percent  | String (选填)   | 修改进度条的显示内容，默认显示百分比，例如：10%，80%。可设置显示图标，例如：<i class="nvicon-ok"></i> |
 
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=progress)
+[Demo展示](http://www.nv-js.com/api?type=progress)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/35)
 

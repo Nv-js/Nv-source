@@ -151,7 +151,7 @@
 | config.okText  | String（可选）  | 确认按钮文案，默认是中文 |
 | config.closeText  | String（可选）   | 关闭按钮文案，默认是中文 |
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=message)
+[Demo展示](http://www.nv-js.com/api?type=message)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/29)
 

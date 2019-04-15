@@ -1,4 +1,4 @@
-Zr.add("./jqplugins/jstree/3.3.5/cdn_index",function(zr,$){(function(factory){"use strict";factory($);}(function($,undefined){"use strict";/*!
+Nv.add("./jqplugins/jstree/3.3.5/cdn_index",function(nv,$){(function(factory){"use strict";factory($);}(function($,undefined){"use strict";/*!
   jsTree 3.3.5
   http://jstree.com/
 

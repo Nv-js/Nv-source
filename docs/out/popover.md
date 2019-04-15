@@ -411,7 +411,7 @@ popover.init(options)
 
 
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=popover)
+[Demo展示](http://www.nv-js.com/api?type=popover)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/31)
 

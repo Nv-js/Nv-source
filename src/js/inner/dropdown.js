@@ -11,7 +11,6 @@ var _dropdown = {
     events: {
         eventList: function (array) {
             var PREFIX = _dropdown.options._obj.prefix;
-            console.log(PREFIX);
             //自动计算高度
             var autoHeight = function (element) {
                 var $element = $(element),

@@ -1,3 +1,8 @@
+var theme = Nv.baseConfig.theme,
+    _css = './css/cdn_index.css';
+if(theme){
+    _css = './css/cdn_'+theme+"_index.css";
+}
 Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
     var language = nv.baseConfig.language;
     nv.fn = nv.fn ? nv.fn :{};
@@ -1368,9 +1373,8 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                     min = moment(options.minDate),
                     minYear = min.format("YYYY"),
                     minMonth = parseInt(min.format("MM"));
-                var m = moment(),
-                    nowMonth = parseInt(m.format("MM")),
-                    nowYear = m.format("YYYY");
+                var nowMonth = parseInt(_moment.format("MM")),
+                    nowYear = _moment.format("YYYY");
 
                 var $contentMonth = $(this).find(".nv-datepicker-content-month");
                 choose = parseInt(month);
@@ -1389,9 +1393,15 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                     if(nowYear < minYear || nowYear > maxYear){
                         className += "nv-datepicker-unchoose ";
                     }
-                    if((nowYear >= minYear && nowYear <= maxYear)&&(_index > maxMonth || _index < minMonth) ){
-                        className += "nv-datepicker-unchoose "
+
+                    if(nowYear == minYear && _index < minMonth){
+                        className += "nv-datepicker-unchoose ";
                     }
+
+                    if(nowYear == maxYear && _index > maxMonth){
+                        className += "nv-datepicker-unchoose ";
+                    }
+
                     //
                     html += "<div class='"+className+"' data-month='"+i+"'>"
                     if(_index < 10){
@@ -3002,4 +3012,5 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
     return {
        init:datePicker.init
     }
-},{requires:["jquery","./static/js/cdn_moment","./css/cdn_index.css"],alias:'dataPicker'})
+},{requires:["jquery","./static/js/cdn_moment",_css],alias:'dataPicker'})
+

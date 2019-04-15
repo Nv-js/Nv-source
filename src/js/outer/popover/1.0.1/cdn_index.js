@@ -1,3 +1,8 @@
+var theme = Nv.baseConfig.theme,
+    _css = './css/cdn_index.css';
+if(theme){
+    _css = './css/cdn_'+theme+"_index.css";
+}
 Nv.add("./popover/1.0.1/cdn_index",function(Nv,$){
     var popover = {
         uid: 40600000,
@@ -184,4 +189,4 @@ Nv.add("./popover/1.0.1/cdn_index",function(Nv,$){
     }
 
     return {init: popover.init};
-},{requires:["jquery","./css/cdn_index.css"],alias:'popover'})
+},{requires:["jquery",_css],alias:'popover'})

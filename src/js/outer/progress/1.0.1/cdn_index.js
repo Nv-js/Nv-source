@@ -1,3 +1,8 @@
+var theme = Nv.baseConfig.theme,
+    _css = './css/cdn_index.css';
+if(theme){
+    _css = './css/cdn_'+theme+"_index.css";
+}
 Nv.add('./progress/1.0.1/cdn_index',function(Nv,$){
     var progress = {
         uid: 31000000,
@@ -62,4 +67,4 @@ Nv.add('./progress/1.0.1/cdn_index',function(Nv,$){
         }
     }
     return {init:progress.init}
-},{requires:['jquery','./css/cdn_index.css'],alias:'progress'})
+},{requires:['jquery',_css],alias:'progress'})

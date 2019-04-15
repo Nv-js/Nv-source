@@ -89,7 +89,7 @@
     </div>
 ```
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=buttons)
+[Demo展示](http://www.nv-js.com/api?type=buttons)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/2)
 

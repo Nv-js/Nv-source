@@ -81,7 +81,7 @@
 
 
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=tag)
+[Demo展示](http://www.nv-js.com/api?type=tag)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/33)
 

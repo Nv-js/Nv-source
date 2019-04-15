@@ -1,3 +1,8 @@
+var theme = Nv.baseConfig.theme,
+    _css = './css/cdn_index.css';
+if(theme){
+    _css = './css/cdn_'+theme+"_index.css";
+}
 Nv.add("./notification/1.0.1/cdn_index",function(nv,$){
     var defaults = {
         time:4000,
@@ -216,4 +221,4 @@ Nv.add("./notification/1.0.1/cdn_index",function(nv,$){
         warning:_warning,
         alert:_alert
     }
-},{requires:["jquery","./css/cdn_index.css"]})
+},{requires:["jquery",_css]})

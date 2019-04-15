@@ -28,7 +28,7 @@
 
 ```
 
-[查看所有可用图标样式](http://nv.zhangjinglin.cn/api?type=icons)
+[查看所有可用图标样式](http://www.nv-js.com/api?type=icons)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/3)
 

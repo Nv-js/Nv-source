@@ -1,4 +1,5 @@
 
+var theme=Nv.baseConfig.theme,_css='./css/cdn_index.css';if(theme){_css='./css/cdn_'+theme+"_index.css";}
 Nv.add("./notification/1.0.1/cdn_index",function(nv,$){var defaults={time:4000,title:"",content:"",iconsClassName:"",iconsShowStatus:1}
 var tools=nv.tools;function _args(){var _s,_o;$.each(this,function(i,n){if(tools.isString(n)){_s=n;}
 if(tools.isObject(n)){_o=n;}})
@@ -22,4 +23,4 @@ function _success(){var args=_args.call(arguments);args=$.extend({},defaults,arg
 function _error(){var args=_args.call(arguments);args=$.extend({},defaults,args);_rebuildHTML("error",args);}
 function _warning(){var args=_args.call(arguments);args=$.extend({},defaults,args);_rebuildHTML("warning",args);}
 function _alert(){var args=_args.call(arguments);args=$.extend({},defaults,args);_rebuildHTML("title",args);}
-return{config:_config,info:_info,success:_success,error:_error,warning:_warning,alert:_alert}},{requires:["jquery","./css/cdn_index.css"],alias:'notification'})
+return{config:_config,info:_info,success:_success,error:_error,warning:_warning,alert:_alert}},{requires:["jquery",_css]})

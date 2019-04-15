@@ -148,7 +148,7 @@ page.init(config)
 | showInfo  | String (选填)  | 是否显示分页信息(待更新) |
 
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=page)
+[Demo展示](http://www.nv-js.com/api?type=page)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/28)
 

@@ -115,11 +115,11 @@
 
 > 综上，datePicker.init(options)配置项目如下：
 
-[配置参数详见demo中options配置文档](http://nv.zhangjinglin.cn/api?type=datePicker)
+[配置参数详见demo中options配置文档](http://www.nv-js.com/api?type=datePicker)
 
 
 
-[Demo展示](http://nv.zhangjinglin.cn/api?type=datePicker)
+[Demo展示](http://www.nv-js.com/api?type=datePicker)
 
 [留言和讨论](https://github.com/guguaihaha/nv-source/issues/30)
 

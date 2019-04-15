@@ -1,3 +1,8 @@
+var theme = Nv.baseConfig.theme,
+    _css = './css/cdn_index.css';
+if(theme){
+    _css = './css/cdn_'+theme+"_index.css";
+}
 Nv.add("./modal/1.0.1/cdn_index",function(nv,$){
     //第一个参数是需要调用的模态框class或者id，第二个是参数配置
     var modal={
@@ -162,4 +167,5 @@ Nv.add("./modal/1.0.1/cdn_index",function(nv,$){
     return {
         init:modal.init
     }
-},{requires:["jquery","./css/cdn_index.css"],alias:'modal'})
+},{requires:["jquery",_css],alias:'modal'})
+
