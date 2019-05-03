@@ -108,7 +108,7 @@ function lessMine(path, T){
         other(input,target.replace(/[/|\\]css[/|\\].*/,'/static'))
 }
 G.task('outerLessAll',function(){
-    let theme = ''
+    let theme = 'grey'
     let name = ''
     if(theme){
         name = 'cdn_' + theme + '_index'

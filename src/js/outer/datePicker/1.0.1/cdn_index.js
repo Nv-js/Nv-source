@@ -2400,21 +2400,60 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                 //
                 // console.log(obj.rets[1].moment.format("YYYY-MM-DD"));
                 //
-                $.each(dateArray,function(i,n){
-                    // console.log(n.moment.format("YYYY-MM-DD"))
+                function _recallWeek(n){
                     var _week = n.moment.format("YYYY-WW"),
                         nowWeek = parseInt(n.moment.format("WW")),
                         nowYear = parseInt(n.moment.format("YYYY"));
+                    if(nowWeek < 10){
+                        nowWeek = '0' + nowWeek;
+                    }
+                    nowWeek = parseInt(nowYear+''+nowWeek);
                     var max = moment(config.maxDate),
                         maxYear = parseInt(max.format("YYYY")),
                         maxWeek = parseInt(max.format("WW")),
                         min = moment(config.minDate),
                         minYear = parseInt(min.format("YYYY")),
                         minWeek = parseInt(min.format("WW"));
-                    //
+                    if(maxWeek < 10){
+                        maxWeek = '0' + maxWeek;
+                    }
+                    if(minWeek < 10){
+                        minWeek = '0' + minWeek;
+                    }
+                    maxWeek = parseInt(maxYear+''+maxWeek);
+                    minWeek = parseInt(minYear+''+minWeek);
+                    return{
+                        _week:_week,
+                        nowYear:nowYear,
+                        nowWeek:nowWeek,
+                        maxYear:maxYear,
+                        maxWeek:maxWeek,
+                        minYear:minYear,
+                        minWeek:minWeek
+                    }
+                }
+                var _o;
 
+                $.each(dateArray,function(i,n){
+                    // console.log(n.moment.format("YYYY-MM-DD"))
+                    //fix one year of first day is last year and new week problem
+                    if(i == 0 || i % 8 ==0){
+                        _o = _recallWeek(dateArray[i + 6]);
+                    }else{
+                        _o = _recallWeek(n);
+                    }
+
+                    var _week = _o._week,
+                        nowYear = _o.nowYear,
+                        nowWeek = _o.nowWeek,
+                        maxYear = _o.maxYear,
+                        maxWeek = _o.maxWeek,
+                        minYear = _o.minYear,
+                        minWeek = _o.minWeek;
+                    //
                     //
                     if(i == 0 && config.type == "week"){
+
                         var className = "";
                         if(_week == chooseWeek){
                             className = "nv-datepicker-row nv-datepicker-line-choose ";
@@ -2427,6 +2466,8 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                         }
                         html += "<div class=\""+className+"\">";
                     }
+                    //
+
                     //
                     if(i % 8 === 0 && i !== 0 && config.type == "week"){
                         var className = "";
@@ -2544,15 +2585,17 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                         _startDay -= 1;
                     }
                     maxMoment = 40;
-
                     for(var i = _startDay ; i > 0; i--){
                         var nowDay = 0;
                         _start = moment(options.time).startOf("month");
                         _startDay = _start.day();
+                        // console.log(_startDay+'==='+_start.format("YYYY-WW")+'==='+i)
+                        // console.log(_start.day(2).format('YYYY-WW'))
                         var _loopDay = _start.day(_startDay-i);
                         if(moment(new Date()).format("YYYY-MM-DD") == _loopDay.format("YYYY-MM-DD")){
                             nowDay = 1;
                         }
+
                         rets.push({
                             moment:_loopDay,
                             //是否是本月范围时间

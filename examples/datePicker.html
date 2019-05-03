@@ -206,6 +206,7 @@
     <script type="text/javascript">
         Nv.config({
             cdnUrl:"/dist/cdn/",
+            theme:'grey'
         })
         Nv.ready(function(){
             Nv.use("datePicker",function(nv,picker){
@@ -242,6 +243,8 @@
                 picker.init({
                     target:"#date-6",
                     type:"week",
+                    maxDate:"2019-08-20",
+                    minDate:"2018-08-30",
                     onselect:function(time,array){
                         console.log(array[0].format("YYYY-MM-DD"))
                         console.log(array[array.length - 1].format("YYYY-MM-DD"))
