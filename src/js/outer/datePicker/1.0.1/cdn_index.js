@@ -1006,7 +1006,6 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                         _time = _y + "-" + _m + "-" + _d + " " + _last;
                     _moment = moment(_time);
                     $picker.data("moment",_moment);
-                    console.log(datePicker.options.rangeDefaultChoose)
                     if(datePicker.options.rangeDefaultChoose == 2){
                         $wrap.find(".nv-datepicker-col").removeClass("nv-datepicker-range-default");
                         datePicker.options.rangeDefaultChoose = 1;
@@ -1157,7 +1156,6 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                     })
                 }
                 //
-                // console.log(h)
                 //
             },
             //重新计算头部区间
@@ -2394,11 +2392,6 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                     chooseWeek = config._moment.format("YYYY-WW");
                 }
                 //
-                // console.log(obj.rets[0].moment.day());
-                //
-                // console.log(obj.rets[1].moment.format("YYYY-MM-DD"));
-                //
-                // console.log(obj.rets[1].moment.format("YYYY-MM-DD"));
                 //
                 function _recallWeek(n){
                     var _week = n.moment.format("YYYY-WW"),
@@ -2432,13 +2425,13 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                         minWeek:minWeek
                     }
                 }
-                var _o;
-
+                var _o,_n;
                 $.each(dateArray,function(i,n){
-                    // console.log(n.moment.format("YYYY-MM-DD"))
+
                     //fix one year of first day is last year and new week problem
                     if(i == 0 || i % 8 ==0){
-                        _o = _recallWeek(dateArray[i + 6]);
+                        _n = dateArray[i + 6] ? dateArray[i + 6] :dateArray[i]
+                        _o = _recallWeek(_n);
                     }else{
                         _o = _recallWeek(n);
                     }
@@ -2517,14 +2510,8 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                     dateArray = obj.rets;
                 var html = "";
                 //
-                // console.log(obj.rets[0].moment.day());
-                //
-                // console.log(obj.rets[1].moment.format("YYYY-MM-DD"));
-                //
-                // console.log(obj.rets[1].moment.format("YYYY-MM-DD"));
                 //
                 $.each(dateArray,function(i,n){
-                    // console.log(n.moment.format("YYYY-MM-DD"))
                     var _week = n.moment.format("YYYY-WW");
                     var className = "nv-datepicker-col ";
                     if(!n.rangeStatus){
@@ -2589,8 +2576,6 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                         var nowDay = 0;
                         _start = moment(options.time).startOf("month");
                         _startDay = _start.day();
-                        // console.log(_startDay+'==='+_start.format("YYYY-WW")+'==='+i)
-                        // console.log(_start.day(2).format('YYYY-WW'))
                         var _loopDay = _start.day(_startDay-i);
                         if(moment(new Date()).format("YYYY-MM-DD") == _loopDay.format("YYYY-MM-DD")){
                             nowDay = 1;
@@ -2749,7 +2734,6 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                     var lastDate = rets[rets.length - 1],
                         time = lastDate.moment.format("YYYY-MM-DD HH:mm:ss");
                     time = moment(time);
-                    // console.log(time.set('date', 2).format("YYYY-MM-DD"))
 
                     //
                     //
@@ -2788,7 +2772,6 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                     //
 
                     //
-                    // console.log(rets[rets.length - 1].moment.format("YYYY-MM-DD"))
 
 
                 }
@@ -2972,7 +2955,6 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                     var lastDate = rets[rets.length - 1],
                         time = lastDate.moment.format("YYYY-MM-DD HH:mm:ss");
                     time = moment(time);
-                    // console.log(time.set('date', 2).format("YYYY-MM-DD"))
                     //
                     //
                     for(var index = 1; index <= rl_fix; index++){
