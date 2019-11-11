@@ -118,6 +118,6 @@
 
 [Demo展示](http://gtp-nv.jd.com/docs?languageCode=CN&columnUid=41c513f9dd334a1ebb0fbbd76d71e973&directoryUid=606e2519dda948c2bf214fd62182a157&directoryName=Tooltip%20%E6%96%87%E5%AD%97%E6%8F%90%E7%A4%BA)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/23)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/23)
 
     

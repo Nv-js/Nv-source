@@ -32,19 +32,19 @@ All components in code and build
 $ gulp
 ```
 
-> 快捷入口
+### 快速导航
 
-+ [官网](http://nv.jd.com)
++ [官网](http://www.nv-js.com)
 
-+ [引擎](https://github.com/guguaihaha/Nv-engine)
++ [引擎常用方法](https://github.com/Nv-js/Nv-engine/blob/master/docs/API.md)
 
-+ [PRO](https://github.com/guguaihaha/Nv-pro)
++ [快速导航](https://github.com/Nv-js/Nv-engine/blob/master/docs/quick.md)
 
-+ [组件快捷入口](docs/index.md)
++ [多语言支持](https://github.com/Nv-js/Nv-engine/blob/master/docs/language.md)
 
-+ [第三方组件库入口](docs/otherPlugins.md)
++ [组件库常用方法](https://github.com/Nv-js/Nv-source)
 
-+ [主题](docs/theme.md)
++ [PRO系统解决方案](https://github.com/Nv-js/Nv-pro)
 
 
 

@@ -10,7 +10,7 @@
 
 + 点击或移入触点，会出现一个下拉菜单
 
-+ 适用于导航或者点击后跳出的操作，不适合表单类提交，可以选择[Select](https://github.com/guguaihaha/Nv-source/blob/master/docs/inner/select.md)
++ 适用于导航或者点击后跳出的操作，不适合表单类提交，可以选择[Select](https://github.com/Nv-js/Nv-source/blob/master/docs/inner/select.md)
 
 <br/>
 
@@ -299,4 +299,4 @@
 
 [DEMO展示](http://www.nv-js.com/api?type=dropdown)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/7)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/7)

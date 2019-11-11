@@ -30,5 +30,5 @@
 
 [查看所有可用图标样式](http://www.nv-js.com/api?type=icons)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/3)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/3)
 

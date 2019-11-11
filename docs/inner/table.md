@@ -69,7 +69,7 @@
 
 ### 批量操作
 
-用户可以进行批量操作，在 `nv-table-wrap` 后面添加 `nv-table-checkbox` 属性，首列添加 `Checkbox` 对应组件模块，`Checkbox` 使用详情见 [Checkbox 复选框](https://github.com/guguaihaha/nv-source/blob/master/docs/inner/checkbox.md)
+用户可以进行批量操作，在 `nv-table-wrap` 后面添加 `nv-table-checkbox` 属性，首列添加 `Checkbox` 对应组件模块，`Checkbox` 使用详情见 [Checkbox 复选框](https://github.com/Nv-js/nv-source/blob/master/docs/inner/checkbox.md)
 
 ```html
     <div class="nv-table-wrap nv-table-checkbox">
@@ -233,7 +233,7 @@
 ```
 对应的javascript代码如下，因为是 `jQuery` 插件，所以需要使用 `jQuery` 语法：
 
-以下代码仅供示意，最好将此代码片段封装于[Nv.add](https://github.com/guguaihaha/nv-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
+以下代码仅供示意，最好将此代码片段封装于[Nv.add](https://github.com/Nv-js/nv-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
 
 ```javascript
     Nv.ready(function(){
@@ -373,7 +373,7 @@
 
 然后再调用javascript代码，因为是 `jQuery` 插件，所以需要使用 `jQuery` 语法：：
 
-以下代码仅供示意，最好将此代码片段封装于[Nv.add](https://github.com/guguaihaha/nv-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
+以下代码仅供示意，最好将此代码片段封装于[Nv.add](https://github.com/Nv-js/nv-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
 
 ```javascript
     Nv.ready(function(){
@@ -514,7 +514,7 @@
 
 然后再调用javascript代码，因为是 `jQuery` 插件，所以需要使用 `jQuery` 语法：：
 
-以下代码仅供示意，最好将此代码片段封装于[Nv.add](https://github.com/guguaihaha/nv-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
+以下代码仅供示意，最好将此代码片段封装于[Nv.add](https://github.com/Nv-js/nv-engine/blob/master/docs/API.md#user-content-add)方法中，然后再页面调用一个公共方法来引用，减少页面维护成本。
 
 ```javascript
     Nv.ready(function(){
@@ -546,7 +546,7 @@
 
 [Demo展示](http://www.nv-js.com/api?type=table)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/19)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/19)
 
 [常见第三方组件列表](http://www.nv-js.com/api?type=others/plugins)
 

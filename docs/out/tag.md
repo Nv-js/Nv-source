@@ -83,6 +83,6 @@
 
 [Demo展示](http://www.nv-js.com/api?type=tag)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/33)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/33)
 
     

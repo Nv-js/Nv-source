@@ -192,6 +192,6 @@
 
 [Demo展示](http://www.nv-js.com/api?type=timeline)
 
-[留言和讨论](https://github.com/guguaihaha/nv-source/issues/17)
+[留言和讨论](https://github.com/Nv-js/nv-source/issues/17)
 
     
