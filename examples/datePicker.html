@@ -234,17 +234,22 @@
                 picker.init({
                     target:"#date-4",
                     type:"month",
-                    onselect:function(time,array){
-                        console.log(array[0].format("YYYY-MM-DD"))
-                        console.log(array[array.length - 1].format("YYYY-MM-DD"))
+                    onSure:function (time,array) {
+                        console.log("sure",array)
+                    },
+                    onSelect:function(time,array){
+                        console.log(array)
                     }
+
                 });
                 picker.init({
                     target:"#date-6",
                     type:"week",
-                    onselect:function(time,array){
-                        console.log(array[0].format("YYYY-MM-DD"))
-                        console.log(array[array.length - 1].format("YYYY-MM-DD"))
+                    onSure:function (time,array) {
+                        console.log("sure",array)
+                    },
+                    onSelect:function(time,array){
+                        console.log("select",array)
                     }
                 });
                 picker.init({

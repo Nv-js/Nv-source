@@ -621,13 +621,12 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                         datePicker.eventsFn.insertTextFn($target,time);
                     }else if(options.type == "month"){
                         var time = _moment.format("YYYY-MM");
-                        options.onSure.call(options,time);
-                        //
+                        options.onSure.call(options,time,datePicker.eventsFn.getAllMounthMomentFn(_moment));
                         datePicker.eventsFn.insertTextFn($target,time);
                     }else if(options.type == "week"){
+
                         var time = _moment.format("YYYY-WW"+options.languageConfig.weekText);
-                        options.onSure.call(options,time);
-                        //
+                        options.onSure.call(options,time,datePicker.eventsFn.getAllWeekMomentFn($picker));
                         datePicker.eventsFn.insertTextFn($target,time);
                     }
                     //自动关闭
@@ -642,8 +641,19 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                     var _moment = moment(new Date());
                     //
                     var time = _moment.format(options.format);
+                    var rets = []
+                    if(options.type == "datetime" || options.type == "normal"){
+
+                    }else if(options.type == "year"){
+
+                    }else if(options.type == "month"){
+                        rets = datePicker.eventsFn.getAllMounthMomentFn(_moment)
+
+                    }else if(options.type == "week"){
+                       rets = datePicker.eventsFn.getAllWeekMomentFn($picker)
+                    }
                     //调用确认回调
-                    options.onSure.call(options,_moment.format("YYYY-MM-DD HH:mm:ss"));
+                    options.onSure.call(options,_moment.format("YYYY-MM-DD HH:mm:ss"),rets);
                     //
                     datePicker.eventsFn.insertTextFn($target,time);
                     //自动关闭
@@ -1006,7 +1016,6 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
                         _time = _y + "-" + _m + "-" + _d + " " + _last;
                     _moment = moment(_time);
                     $picker.data("moment",_moment);
-                    console.log(datePicker.options.rangeDefaultChoose)
                     if(datePicker.options.rangeDefaultChoose == 2){
                         $wrap.find(".nv-datepicker-col").removeClass("nv-datepicker-range-default");
                         datePicker.options.rangeDefaultChoose = 1;
@@ -1124,6 +1133,30 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
 
         },
         eventsFn:{
+            //获取月的所有数
+            getAllMounthMomentFn:function (_moment) {
+                var time = _moment.format("YYYY-MM"),
+                    rets = [],
+                    maxDays = parseInt(_moment.endOf("month").format("DD"));
+                for(var ids = 1; ids <= maxDays; ids++){
+                    rets.push(moment(time+"-"+ids))
+                }
+                return rets;
+            },
+            getAllWeekMomentFn:function ($picker) {
+                var $cols = $picker.find(".nv-datepicker-line-choose > .nv-datepicker-col");
+                var rets = [];
+                $cols.each(function(i){
+                    if(i>0){
+                        var $col = $cols.eq(i),
+                            _index = $col.attr("data-index"),
+                            _time = $col.attr("data-time");
+                        var weekMoment = nv.fn.datePicker.month[_time][_index];
+                        rets.push(weekMoment.moment)
+                    }
+                })
+                return rets;
+            },
             //重新计算位置
             resetPosition:function(options){
                 //this对象是日期控件对象
@@ -3012,5 +3045,6 @@ Nv.add("./datePicker/1.0.1/cdn_index",function(nv,$,moment,c){
     return {
        init:datePicker.init
     }
-},{requires:["jquery","./static/js/cdn_moment",_css],alias:'dataPicker'})
+},{requires:["jquery","./static/js/cdn_moment",_css],alias:'datePicker'})
+
 
