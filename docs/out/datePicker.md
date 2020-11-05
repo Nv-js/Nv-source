@@ -76,7 +76,7 @@
        </div>
    </div>
 <script type="text/javascript">
-    Nv.use("dataPicker",function(nv,picker){
+    Nv.use("datePicker",function(nv,picker){
            picker.init({
                target:"#date-1",
                type:"normal"
