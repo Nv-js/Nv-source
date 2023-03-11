@@ -5,9 +5,12 @@
     <title>组件平台显示内容</title>
     <!--开发阶段引用jq-->
     <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.10.1/jquery.min.js"></script>
-    <link type="text/css" rel="stylesheet" href="/dist/local/css/content/content.min.css" />
-    <link type="text/css" rel="stylesheet" href="/dist/cdn/nv.min.css" />
 
+    <!-- <link type="text/css" rel="stylesheet" href="/dist/local/css/content/content.min.css" />
+    <link type="text/css" rel="stylesheet" href="/dist/cdn/nv.min.css" /> -->
+
+    <link rel="stylesheet" type="text/css" href="//storage.360buyimg.com/v2.0.0/content.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//storage.360buyimg.com/v2.0.0/nv.min.css"/>
     <style>
         .c-demo > div {
             margin-bottom: 8px;
@@ -17,7 +20,7 @@
 <body>
 <article class="c-content">
     <section class="c-title">
-        <p>Input 输入框</p>
+        <p>Input 输入框1</p>
         <span>通过鼠标或键盘输入内容，可组合使用，常用于查询条件、表单、新建或修改等场景。</span>
     </section>
     <div class="c-line"></div>
@@ -97,7 +100,7 @@
         <div class="c-code-switch">&lt;code&gt;</div>
         <div class="c-demo">
             <div style="width: 240px">
-                <input type="text" placeholder="Please input text" class="nv-input nv-input-clear">
+                <input id="demo1" type="text" placeholder="Please input text" class="nv-input nv-input-clear" value="112">
             </div>
         </div>
         <div class="c-code-inner c-code-hide">
@@ -352,6 +355,11 @@
                     inserted: '我是新添加的内容'
                 });
             });
+
+            setTimeout(function(){
+                console.log('动态赋值1')
+                $("#demo1").val('5555')
+            }, 2000)
         });
     })
 </script>
